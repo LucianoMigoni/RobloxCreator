@@ -1,0 +1,25 @@
+# Enlace local a skills/ (junction de Windows): se recrea en cada máquina
+.claude/skills
+.claude/settings.local.json
+CLAUDE.local.md
+
+# Obsidian: estado personal del vault
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.trash/
+
+# Roblox / Rojo
+*.rbxl
+*.rbxlx
+*.rbxl.lock
+*.rbxlx.lock
+sourcemap.json
+
+# Python
+__pycache__/
+*.pyc
+
+# Sistema
+.DS_Store
+Thumbs.db

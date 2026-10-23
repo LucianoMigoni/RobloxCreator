@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "fields": {
+    "id": "único, kebab-case (ej. 'tree-pine-lowpoly-01')",
+    "path": "relativo a assets/ (ej. '3d/nature/tree-pine-01.fbx')",
+    "type": "model3d | icon | button | panel | font | texture | image | sound",
+    "tags": "{ style: [...], genre: [...], theme: [...] }",
+    "polycount": "int, obligatorio si type=model3d (triángulos)",
+    "robloxAssetId": "string con el ID si ya se subió a Roblox, si no null",
+    "source": "blender-generated | studio-generated | creator-store | user | third-party",
+    "sourceUrl": "URL de origen o null",
+    "license": "nombre de la licencia (ej. 'CC0-1.0', 'propio', 'Roblox Creator Store')",
+    "commercialUse": "bool: true solo si la licencia permite uso en juegos monetizados",
+    "author": "autor o 'RobloxCreator'",
+    "notes": "opcional: escala, pivote, variantes"
+  },
+  "assets": []
+}
