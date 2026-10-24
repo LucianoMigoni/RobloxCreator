@@ -4,7 +4,8 @@ Centro para crear juegos de Roblox rápido y con buenas probabilidades de éxito
 
 ## Reglas generales
 
-- **No inventes APIs.** Toda API de Roblox que uses o menciones se verifica en https://create.roblox.com/docs (WebFetch de la página `.md`, o `http_get` del MCP de Studio). Si no se pudo verificar, dilo.
+- **No inventes APIs.** Toda API de Roblox que uses o menciones se verifica en https://create.roblox.com/docs (WebFetch de la página `.md`, o `http_get` del MCP de Studio). Si ese sitio no es accesible (p. ej. en sesiones en la nube), la misma documentación está en el repo oficial `Roblox/creator-docs`: guías en `content/en-us/<ruta>.md` y referencia de la API en `content/en-us/reference/engine/classes/<Clase>.yaml` (vía `raw.githubusercontent.com`). Si no se pudo verificar, dilo.
+- **Diseñar para el algoritmo.** Home recomienda según lo que hacen los jugadores que llegan desde ahí: si juegan tras ver el juego, si rebotan antes de 60 o 180 s, y cuánto vuelven, juegan, juegan con amigos y gastan en D1, D2–7 y D8–28. Castiga la metadata engañosa y los juegos no únicos. Resumen verificado y qué implica en cada fase: `skills/_shared/algoritmo-descubrimiento.md`.
 - **No inventes herramientas MCP.** Detecta qué hay instalado y usa los nombres exactos: `skills/_shared/mcp-tools.md`.
 - **Servidor autoritativo.** Monedas, daño, compras, inventario y progreso se calculan y validan en el servidor. El cliente solo pide y muestra.
 - **Móvil primero.** La mayoría juega en teléfono: toda UI y todo control se diseña para dedo y pantallas chicas.

@@ -97,19 +97,19 @@ Plantilla (`template/src/`), todo lo sensible en el servidor:
 - **Hecho cuando:** un juego copiado de `template/` corre en Studio con datos persistentes, monedas, tienda e inventario; los autotests pasan; la auditoría de seguridad no marca errores.
 
 ### B2. `roblox-game-cloner` + `roblox-ideation` (paso 4)
-- Cloner: análisis → RE opcional con REA (tools reales de `mcp-tools.md`) → `docs/spec.md` (plantilla en `references/`) → adaptación a Roblox → assets (Blender MCP: escala, pivote, export FBX para Studio; o catálogo) → construcción con MCP de Studio → llamada a `roblox-ui-designer` → verificación mecánica por mecánica contra la spec.
-- Ideation: géneros en crecimiento, huecos, gancho, matriz de puntuación, recomendación en `docs/concepto.md`. Indicar fuentes de datos verificables (charts de Roblox, Creator Hub) y no inventar cifras.
+- Cloner (tomar mecánicas, nunca título, thumbnails, mapa ni place file: un clon reconocible es "no único" y Roblox le baja la exposición): análisis → RE opcional con REA (tools reales de `mcp-tools.md`) → `docs/spec.md` (plantilla en `references/`) → adaptación a Roblox → assets (Blender MCP: escala, pivote, export FBX para Studio; o catálogo) → construcción con MCP de Studio → llamada a `roblox-ui-designer` → verificación mecánica por mecánica contra la spec.
+- Ideation: géneros en crecimiento, huecos, gancho, matriz de puntuación, recomendación en `docs/concepto.md`. Indicar fuentes de datos verificables (charts de Roblox, Creator Hub) y no inventar cifras. La matriz puntúa también lo que mide el algoritmo (`skills/_shared/algoritmo-descubrimiento.md`): primer minuto jugable, motivo para volver en D2–7 y D8–28, juego con amigos.
 - **Hecho cuando:** ambos skills producen sus documentos para un juego de prueba y la spec es construible.
 
 ### B3. `roblox-monetization` + `roblox-metrics-growth` (paso 5)
 - Monetization: tácticas honestas (pack de inicio único, ofertas en el momento justo, anclaje con ahorro real, cosméticos visibles, pase de temporada con pista gratis, pases que ahorran tiempo), auditoría de tienda que marque escasez falsa, cuentas regresivas que se reinician y cajas pagas sin probabilidades. Verificar las políticas vigentes de monetización de Roblox (incluidas las de ítems aleatorios pagos y `PolicyService`).
-- Metrics-growth: modo mejora (CTR, D1, D7/D30, sesión, conversión) y modo análisis (exports o capturas del Creator Dashboard; verificar si hay API oficial). Instrumentación con `AnalyticsService` (embudos, economía, eventos propios) en la plantilla.
+- Metrics-growth: modo mejora con las señales del algoritmo (PTR, bounce < 60 s y 61–180 s, play days y playtime en D1/D2–7/D8–28, co-play, spend days; ver `skills/_shared/algoritmo-descubrimiento.md`) más retención D1/D7/D30 y conversión y modo análisis (exports o capturas del Creator Dashboard; verificar si hay API oficial). Instrumentación con `AnalyticsService` (embudos, economía, eventos propios) en la plantilla.
 - **Hecho cuando:** la tienda de la plantilla pasa la auditoría ética y la plantilla registra embudo de onboarding y eventos de economía.
 
 ### B4. `roblox-qa-performance`, `roblox-compliance`, `roblox-publishing`, `roblox-liveops` (paso 6)
 - QA: pruebas en móvil de gama baja (memoria, partes, `StreamingEnabled`, scripts costosos), checklist antes de cada update, uso de `start_stop_play`, `get_console_output` e input simulado.
 - Compliance: cuestionario de madurez, filtrado con `TextService`, revisión contra las políticas de la comunidad antes de publicar.
-- Publishing: icono, miniaturas, título, descripción, plan de lanzamiento (ads de Roblox, TikTok, Discord); coordina CTR con metrics-growth.
+- Publishing: icono, miniaturas, título, descripción, plan de lanzamiento (ads de Roblox, TikTok, Discord); thumbnail propio (sin él no hay impresiones de Home) y metadata sin promesas de Robux; coordina PTR con metrics-growth.
 - Liveops: cadencia de updates, eventos temporales, changelogs, planificación de contenido.
 - **Hecho cuando:** los cuatro skills existen y están enlazados desde el pipeline de `CLAUDE.md`.
 
