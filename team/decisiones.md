@@ -4,6 +4,7 @@ Una fila por decisión, la más nueva arriba. Las decisiones de un juego van en 
 
 | Fecha | Decisión | Por qué | Quién |
 |---|---|---|---|
+| 2026-10-24 | Se agrega B0 al plan: chequeo automático en cada PR (`rojo build`, `luau-lsp analyze` con tipos de Roblox, catálogo). En el progreso, "Implementado" y "Hecho" se distinguen: "Hecho" exige cumplir el criterio del paso, incluida la prueba humana. | En la revisión, esas herramientas encontraron y descartaron errores sin Studio; y varios pasos figuraban como hechos sin haber pasado su propio criterio. | leonel (con Claude) |
 | 2026-10-24 | `CLAUDE.md` aclara que hoy solo existe el skill `roblox-ui-designer`; para las demás fases se avisa y se trabaja con las reglas generales. | El pipeline nombraba 10 skills como si existieran: una IA podía inventar el contenido de uno que falta. | leonel (con Claude) |
 | 2026-10-24 | `UIKit.sideBar` va arriba a la izquierda (desde el 4.º botón, segunda columna) y no centrado. | La guía oficial reserva en móvil la esquina inferior izquierda (joystick) y la inferior derecha (salto); centrada, la barra invadía la zona del joystick. | leonel (con Claude) |
 | 2026-10-24 | Se quita `template/.gitignore`. | Con el monorepo, el `.gitignore` de la raíz ya cubre `*.rbxl*` y `sourcemap.json` en cualquier carpeta. | leonel (con Claude) |

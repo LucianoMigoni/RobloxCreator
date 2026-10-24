@@ -11,8 +11,10 @@ Formato y flujo: `team/README.md`. Detalle de cada paso del hub: `ROADMAP.md`.
 - [ ] A2: proteger `main` en GitHub (Settings → Rules; en repo privado puede pedir plan pago) — hub · @luciano · rama — · juego: hub
 - [ ] A4: completar el paso 6 de `SETUP.md` con el comando del MCP de Blender (`claude mcp get Blender`) — docs · @luciano · rama — · juego: hub
 - [ ] A3/A4: instalar desde cero siguiendo `SETUP.md` y correr `setup.ps1` en Windows hasta "Todo listo" — hub · @leonel · rama — · juego: hub
+- [ ] A7: probar que la IA del compañero (Codex, Gemini u otra) sigue `CLAUDE.md` vía `AGENTS.md` — hub · @leonel · rama — · juego: hub
 - [ ] A5: probar Obsidian entre los dos (un cambio de uno le llega al otro tras el merge) — hub · @luciano @leonel · rama — · juego: hub
 - [ ] UI: probar en Studio el nuevo `UIKit.sideBar` (emulador: teléfono chico horizontal y tablet), correr `UIKit.selfTest()` y `audit_ui.luau` — ui · @luciano · rama — · juego: hub
+- [ ] B0: verificación automática en cada PR (rojo build + luau-lsp + catálogo) — hub · @nadie · rama — · juego: hub
 - [ ] B1: plantilla de código base + skill `roblox-security` — servidor · @nadie · rama — · juego: hub
 - [ ] B2: skills `roblox-game-cloner` + `roblox-ideation` — hub · @nadie · rama — · juego: hub
 - [ ] B3: skills `roblox-monetization` + `roblox-metrics-growth` — hub · @nadie · rama — · juego: hub
