@@ -4,6 +4,9 @@ Una fila por decisión, la más nueva arriba. Las decisiones de un juego van en 
 
 | Fecha | Decisión | Por qué | Quién |
 |---|---|---|---|
+| 2026-10-24 | `CLAUDE.md` aclara que hoy solo existe el skill `roblox-ui-designer`; para las demás fases se avisa y se trabaja con las reglas generales. | El pipeline nombraba 10 skills como si existieran: una IA podía inventar el contenido de uno que falta. | leonel (con Claude) |
+| 2026-10-24 | `UIKit.sideBar` va arriba a la izquierda (desde el 4.º botón, segunda columna) y no centrado. | La guía oficial reserva en móvil la esquina inferior izquierda (joystick) y la inferior derecha (salto); centrada, la barra invadía la zona del joystick. | leonel (con Claude) |
+| 2026-10-24 | Se quita `template/.gitignore`. | Con el monorepo, el `.gitignore` de la raíz ya cubre `*.rbxl*` y `sourcemap.json` en cualquier carpeta. | leonel (con Claude) |
 | 2026-10-24 | Las señales del algoritmo de Home (PTR, bounce < 60 s y 61–180 s, D1/D2–7/D8–28, co-play) son criterio de diseño en todas las fases. Referencia: `skills/_shared/algoritmo-descubrimiento.md`. | Desde el 2026-06-15 Roblox recomienda por retención a largo plazo de quienes llegan desde Home, y desde el 2026-10-20 exige thumbnail propio. | leonel (con Claude) |
 | 2026-10-24 | Si create.roblox.com no es accesible, las APIs se verifican en el repo `Roblox/creator-docs`. | Las sesiones en la nube lo tienen bloqueado; ese repo es la fuente de las mismas páginas. | leonel (con Claude) |
 | 2026-10-24 | REA se documenta con `npx -y rea-agents@6.7.0 setup`, sin el `doctor` de la hoja de ruta. | El README actual del paquete solo documenta `setup`. | leonel (con Claude) |

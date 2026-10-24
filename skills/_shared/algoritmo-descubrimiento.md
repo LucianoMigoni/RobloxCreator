@@ -13,7 +13,7 @@ Comparando el historial de `discovery.md` en `Roblox/creator-docs` (versión del
 | 2026-06-15 | **Se reemplazan las señales de entrada.** Salen *qualified play through rate (qPTR)* y *deep play through rate*; entran *play through rate (PTR)* y *first play bounce rate*, una señal **negativa** medida a < 60 s y a 61–180 s. |
 | 2026-06-15 | **De 7 días a 28.** Antes todas las señales eran "últimos 7 días" (playtime, play days, spend days, Robux, co-play, qualified sessions). Ahora cada una se mide en tres ventanas: D1, D2–7 y D8–28. |
 | 2026-06-15 | **Las señales tienen prioridad.** Antes eran una lista plana ("cuando mejoran todas juntas"). Ahora hay "más importantes" (PTR, bounce, play days, playtime) e "importantes" (co-play, qualified sessions, spend days, Robux), y el objetivo declarado es premiar la **retención a largo plazo**. |
-| 2026-06-15 | El ranking excluye también la **retención** (no solo engagement y monetización) de jugadores llegados por otras fuentes, y suma "curación" a esa lista. Se documentan estacionalidad y competencia como causas de cambios en impresiones. |
+| 2026-06-15 | El ranking excluye también la **retención** (no solo engagement y monetización) de jugadores llegados por otras fuentes, y suma "curación" a esa lista. Retrieval deja de nombrar "friend plays" entre sus señales. Se documentan estacionalidad y competencia como causas de cambios en impresiones. |
 | 2026-10-02 | Se publica el FAQ: no hay que esperar 28 días, no hay castigo por mal arranque, el género no es señal, los juegos finitos o de historia no se penalizan, los ads no penalizan pero sus jugadores no cuentan, y Home muestra unos 100 juegos por usuario. |
 | 2026-10-20 | **Thumbnail propio obligatorio** para recibir impresiones de Home. |
 
@@ -22,7 +22,7 @@ No cambió: las dos etapas (retrieval y ranking), *explore and expand*, el tope 
 ## Cómo decide
 
 - **Dos etapas.** *Retrieval*: elige candidatos por engagement, retención y monetización; alcanza con muy pocas visitas de cualquier fuente (ads, búsqueda, amigos, redes, notificaciones). *Ranking*: ordena de forma personalizada usando **solo** el comportamiento de quienes llegaron orgánicamente desde Recommended for You (RFY).
-- **Otras fuentes no cuentan para el ranking.** Lo que hacen los jugadores traídos por ads, curación, amigos, búsqueda o redes no entra en las señales de RFY. Los ads no penalizan, pero a un jugador adquirido por ad el algoritmo lo da por adquirido y ya no le muestra el juego en RFY (las impresiones de RFY pueden bajar aunque suban las visitas totales).
+- **Otras fuentes no cuentan para el ranking.** Lo que hacen los jugadores traídos por ads, curación, amigos, búsqueda o redes no entra en las señales de RFY. Los ads no penalizan, pero a un jugador adquirido por ad el algoritmo lo da por adquirido y, en general, ya no le muestra el juego en RFY (las impresiones de RFY pueden bajar aunque suban las visitas totales).
 - **Promedios por usuario, no totales.** Un juego chico con jugadores muy enganchados no queda en desventaja.
 - **Explore y expand.** Tras un update prueba el juego con una cohorte nueva; si esa cohorte retiene y gasta, lo muestra a más cohortes parecidas.
 - **Ventana móvil, sin castigo por mal arranque.** El juego se prueba a diario; si se arregla el onboarding, vuelve a ganar impresiones.

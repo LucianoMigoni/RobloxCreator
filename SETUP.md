@@ -1,6 +1,6 @@
 # Instalación para cada integrante
 
-Lo que hay que tener en una máquina **Windows** para trabajar en RobloxCreator. Los pasos 2 a 4, 8 y 9 los hace o verifica `setup.ps1`. El resto es una vez por máquina.
+Lo que hay que tener en una máquina **Windows** para trabajar en RobloxCreator. `setup.ps1` hace los pasos 3, 4 y 8 y verifica los pasos 1, 2, 5 y 9. El resto se hace a mano, una vez por máquina.
 
 Comandos verificados el 2026-10-24 en la documentación o el código de cada herramienta. Si alguno cambió, actualizar este archivo en el mismo PR.
 
@@ -25,6 +25,8 @@ powershell -ExecutionPolicy Bypass -File .\setup.ps1
 | Claude Code | La IA del hub | PowerShell: `irm https://claude.ai/install.ps1 \| iex` (o `winget install Anthropic.ClaudeCode`) |
 | Obsidian | Leer y editar las notas del repo | https://obsidian.md/download (ver **Obsidian** abajo) |
 | Blender (opcional) | Modelos 3D propios | https://www.blender.org/download/ |
+
+Después de instalar Git, una vez: `git config --global user.name "Tu Nombre"` y `git config --global user.email "tu@mail"` (el mail de tu cuenta de GitHub), para que los commits salgan a tu nombre.
 
 Si `python` abre la Microsoft Store, falta instalar Python: ese `python` es solo un alias de Windows.
 
@@ -59,7 +61,7 @@ Lo hace `setup.ps1`. A mano, dentro de `template/`: `rojo plugin install`. Deja 
 Permite que Claude Code lea y construya dentro de Studio. Fuente: https://create.roblox.com/docs/studio/mcp
 
 1. En Studio: **Assistant** → **…** → **Manage MCP Servers** → activar **Enable Studio as MCP server**. Sin esto, `list_roblox_studios` devuelve una lista vacía.
-2. Registrarlo en Claude Code **una sola vez**, desde **CMD** (no PowerShell):
+2. Registrarlo en Claude Code **una sola vez**, desde **CMD** (así PowerShell no reinterpreta `--` ni `%LOCALAPPDATA%`):
    ```bat
    claude mcp add Roblox_Studio --scope user -- cmd.exe /c %LOCALAPPDATA%\Roblox\mcp.bat
    ```

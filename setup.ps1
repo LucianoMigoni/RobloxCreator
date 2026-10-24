@@ -13,7 +13,8 @@ param(
 
 $ErrorActionPreference = 'Stop'
 # catalog.py escribe UTF-8; sin esto la consola muestra los acentos rotos.
-[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+# En PowerShell ISE no hay consola real y la asignacion falla: ahi solo se ven mal los acentos.
+try { [Console]::OutputEncoding = [System.Text.Encoding]::UTF8 } catch { }
 $root = $PSScriptRoot
 $script:faltas = 0
 # $IsWindows no existe en Windows PowerShell 5.1, que solo corre en Windows.
@@ -33,6 +34,9 @@ function Invoke-Probe([string]$cmd, [string[]]$cmdArgs) {
     $ErrorActionPreference = 'Continue'
     $out = @(& $cmd @cmdArgs 2>&1)
     if ($LASTEXITCODE -ne 0) { return $null }
+    # Mostrar stdout si hay: una advertencia en stderr no es la version.
+    $stdout = @($out | Where-Object { $_ -isnot [System.Management.Automation.ErrorRecord] })
+    if ($stdout.Count -gt 0) { $out = $stdout }
     $first = "$($out | Select-Object -First 1)".Trim()
     if ($first) { return $first }
     return 'ok'
@@ -147,7 +151,7 @@ if (-not $mcpServer) {
         if (Invoke-Probe claude @('mcp', 'get', 'Roblox_Studio')) {
             Write-Ok 'Roblox_Studio registrado en Claude Code'
         } else {
-            Write-Missing "Roblox_Studio no esta registrado. Correr (una sola vez): $addCommand"
+            Write-Missing "Roblox_Studio no esta registrado. Correr una sola vez (en Windows, desde CMD): $addCommand"
         }
     }
 }
@@ -173,5 +177,5 @@ if ($script:faltas -eq 0) {
     Write-Host 'Todo listo. Ultima prueba (a mano): con Studio abierto, pedirle a Claude Code que llame a list_roblox_studios.' -ForegroundColor Green
     exit 0
 }
-Write-Host "Quedan $($script:faltas) cosas por resolver: ver los [falta] de arriba y SETUP.md." -ForegroundColor Yellow
+Write-Host "Pendientes: $($script:faltas). Ver los [falta] de arriba y SETUP.md." -ForegroundColor Yellow
 exit 1
