@@ -1,0 +1,14 @@
+# Decisiones del hub
+
+Una fila por decisión, la más nueva arriba. Las decisiones de un juego van en `games/<juego>/docs/decisiones.md`.
+
+| Fecha | Decisión | Por qué | Quién |
+|---|---|---|---|
+| 2026-10-24 | Las señales del algoritmo de Home (PTR, bounce < 60 s y 61–180 s, D1/D2–7/D8–28, co-play) son criterio de diseño en todas las fases. Referencia: `skills/_shared/algoritmo-descubrimiento.md`. | Desde el 2026-06-15 Roblox recomienda por retención a largo plazo de quienes llegan desde Home, y desde el 2026-10-20 exige thumbnail propio. | leonel (con Claude) |
+| 2026-10-24 | Si create.roblox.com no es accesible, las APIs se verifican en el repo `Roblox/creator-docs`. | Las sesiones en la nube lo tienen bloqueado; ese repo es la fuente de las mismas páginas. | leonel (con Claude) |
+| 2026-10-24 | REA se documenta con `npx -y rea-agents@6.7.0 setup`, sin el `doctor` de la hoja de ruta. | El README actual del paquete solo documenta `setup`. | leonel (con Claude) |
+| 2026-10-24 | Obsidian Git sin auto-commit ni auto-push; solo pull al abrir. | Commitea en la rama activa: en automático podría subir notas directo a `main`. Las notas viajan en el PR de la tarea. | leonel (con Claude) |
+| 2026-10-24 | De `.obsidian/` se versionan solo `app.json`, `community-plugins.json` y `plugins/*/data.json` (lista blanca en `.gitignore`). | Workspace, tema, caché y código de plugins son de cada máquina y generarían conflictos. | leonel (con Claude) |
+| 2026-10-24 | El MCP de Studio se registra en scope usuario con el nombre `Roblox_Studio`; no hay `.mcp.json` en el repo. | El comando cambia entre Windows y macOS, y un `.mcp.json` duplicaría el registro que ya tiene cada uno. | leonel (con Claude) |
+| 2026-10-24 | `setup.ps1` crea `.claude/skills` como junction hacia `skills/`, y el script es solo ASCII. | Se mantiene `skills/` en la raíz. La junction no pide permisos de administrador. Windows PowerShell 5.1 lee los `.ps1` sin BOM como ANSI. | leonel (con Claude) |
+| 2026-10-24 | Monorepo: los juegos son carpetas de este repo, ramas `<persona>/<tarea>` y PR aprobado por el otro integrante. | Con dos personas, un repo por juego crea repos anidados que no viajan. El PR es la puerta de revisión del pipeline. | leonel (con Claude), propuesto en `ROADMAP.md` A2 |

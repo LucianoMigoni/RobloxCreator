@@ -101,6 +101,7 @@ games/<juego>/
 - Comentarios solo para el *por qué*.
 
 **Git y trabajo en equipo** (monorepo)
+- **Antes de empezar, leer `team/tareas.md`; al terminar, mover la tarea y anotar las decisiones** (`team/decisiones.md`, o `games/<juego>/docs/decisiones.md` si son de un juego). Flujo completo: `team/README.md`.
 - Todo vive en este repo: hub, plantilla y juegos. Nunca `git init` dentro de `games/<juego>/`: un repo anidado no viaja con el resto.
 - Nunca trabajar directo en `main`. Una rama por tarea, `<persona>/<tarea>` (ej. `luciano/tienda`, `leonel/ui-inventario`), creada desde `main` actualizado.
 - Se integra por Pull Request y lo aprueba el otro integrante antes del merge. El PR es la puerta de revisión: su descripción lleva el resultado de la fase (qué se hizo, cómo se probó, capturas si hay UI).
