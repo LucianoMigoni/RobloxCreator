@@ -141,20 +141,21 @@ function UIKit.setText(button: GuiButton, text: string)
 	(button:FindFirstChild("Label") :: TextLabel).Text = text
 end
 
--- Columna fija de botones a la izquierda, centrada; deja libre el pulgar derecho.
+-- Columna de botones arriba a la izquierda. En móvil Roblox reserva las esquinas inferiores
+-- (joystick dinámico abajo a la izquierda, desde ~43 % del alto; salto abajo a la derecha).
 function UIKit.sideBar(parent: Instance): Frame
 	local bar = new("Frame", {
 		Name = "SideBar",
 		BackgroundTransparency = 1,
-		AnchorPoint = Vector2.new(0, 0.5),
-		Position = UDim2.fromScale(0.01, 0.5),
-		Size = UDim2.fromScale(0.13, 0.7),
+		Position = UDim2.fromScale(0.01, 0.02),
+		Size = UDim2.fromScale(0.12, 0.4),
 		SizeConstraint = Enum.SizeConstraint.RelativeYY, -- mismo tamaño en 19.5:9 y en 4:3
 	}, parent)
 	new("UIListLayout", {
 		Padding = UDim.new(0.03, 0),
 		SortOrder = Enum.SortOrder.LayoutOrder,
-		VerticalAlignment = Enum.VerticalAlignment.Center,
+		VerticalAlignment = Enum.VerticalAlignment.Top,
+		Wraps = true, -- desde el 4.º botón abre otra columna en vez de bajar hacia el joystick
 	}, bar)
 	return bar
 end

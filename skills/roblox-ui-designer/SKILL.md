@@ -47,7 +47,7 @@ Detalle y fuentes en `references/technical-rules.md`.
 - [ ] Todo asset usado está en `assets/index.json` con licencia; ninguno copiado de otro juego.
 - [ ] `audit_ui.luau` sin ERROR.
 - [ ] Verde = comprar/aceptar, rojo = cerrar, dorado = premium, en todas las pantallas.
-- [ ] Monedas arriba, botones laterales fijos, ningún botón bajo el notch ni la barra de Roblox.
+- [ ] Monedas arriba, botones de menú arriba a la izquierda, ningún botón bajo el notch, la barra de Roblox ni en las zonas del joystick (abajo izquierda) y del salto (abajo derecha).
 - [ ] Probado en teléfono chico horizontal y tablet: todo legible, nada se superpone, todo tocable con el pulgar.
 - [ ] Popups abren escalando desde el centro, tienen botón cerrar rojo y se cierra uno al abrir otro.
 - [ ] Ningún botón modifica monedas/inventario en el cliente; los remotes pasaron por `roblox-security`.

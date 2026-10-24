@@ -26,7 +26,7 @@ Nunca reutilizar un color para otro significado: el jugador aprende el código e
 | Componente | Forma | Detalles |
 |---|---|---|
 | Botón | `UICorner` 0.25 (Scale), borde 3 px, gradiente vertical | Texto `TextScaled`, rebote al presionar |
-| Botón lateral | Cuadrado, ~12 % del alto de pantalla, mín. 48 px | Icono arriba + palabra corta abajo |
+| Botón lateral | Cuadrado, ~12 % del alto de pantalla, mín. 44 px | Icono arriba + palabra corta abajo |
 | Contador de moneda | Píldora (`UICorner` 0.5), relación 3:1 | Icono de la moneda a la izquierda, número abreviado (1.2K, 3.4M) |
 | Popup | Panel neutral, `UICorner` 0.08, borde 4 px, relación ~1.4:1 | Título arriba, cerrar rojo en la esquina superior derecha, sobresaliendo |
 | Notificación | Píldora arriba al centro | Entra deslizando, se va sola en 2–3 s |
@@ -35,20 +35,21 @@ Nunca reutilizar un color para otro significado: el jugador aprende el código e
 ## Layout del HUD (horizontal)
 
 ```
-┌─────────────────────────────────────────────┐
-│ [barra Roblox]   (💰 1.2K) (💎 35)           │  ← monedas arriba, bajo la barra
-│                                             │
-│ [Tienda]                                    │
-│ [Mochila]                        zona libre │
-│ [Pases ]                         para jugar │
-│ [Ajustes]                                   │
-│                                [joystick / salto de Roblox abajo] │
-└─────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────┐
+│ [barra Roblox]      (💰 1.2K) (💎 35)             │  ← monedas arriba, bajo la barra
+│ [Tienda] [Pases]                                 │
+│ [Mochila]                           zona libre   │  ← botones arriba a la izquierda
+│ [Ajustes]                           para jugar   │
+│┌────────────────┐                                │
+││ zona joystick  │              [acción] (salto)  │  ← acciones frecuentes junto al salto
+│└────────────────┘                                │
+└──────────────────────────────────────────────────┘
 ```
 
-- Botones laterales a la izquierda, centrados verticalmente; el pulgar derecho queda libre para saltar/acción.
-- Nada interactivo en la franja inferior derecha (controles táctiles de Roblox) ni bajo la barra superior.
-- Máximo 5–6 botones laterales. Lo demás va dentro de popups.
+- **Zonas reservadas (móvil):** Roblox ocupa las dos esquinas inferiores: el joystick dinámico abajo a la izquierda (más o menos el 40 % izquierdo de la pantalla desde ~43 % del alto hacia abajo) y el botón de salto abajo a la derecha. Nada interactivo ahí ni bajo la barra superior. Fuente: https://create.roblox.com/docs/ui/position-and-size (Reserved zones).
+- Botones de menú (tienda, mochila, ajustes) arriba a la izquierda, en columna desde arriba; con más de 3, segunda columna (`UIKit.sideBar` lo hace solo).
+- Acciones frecuentes del juego (atacar, recolectar) cerca del botón de salto, posicionadas en relación con `JumpButton` (ejemplo en la misma página oficial), para alcanzarlas con el pulgar derecho.
+- Máximo 5–6 botones de menú. Lo demás va dentro de popups.
 
 ## Animaciones (TweenService)
 

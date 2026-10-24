@@ -1,7 +1,8 @@
-# Reglas técnicas (verificadas en create.roblox.com/docs, 2026-10-21)
+# Reglas técnicas (verificadas en create.roblox.com/docs el 2026-10-21; revisadas contra Roblox/creator-docs el 2026-10-24)
 
 | Regla | API | Fuente |
 |---|---|---|
+| Zonas reservadas táctiles | En móvil, los controles por defecto ocupan las esquinas inferiores: joystick dinámico abajo a la izquierda, salto abajo a la derecha. No poner botones ni información importante ahí. Para botones de acción, posicionarlos relativos a `JumpButton` (en `PlayerGui`, esperar `IsLoaded`). | /ui/position-and-size (Reserved zones, Thumb zones) |
 | Zona segura para notch y barra de Roblox | `ScreenGui.ScreenInsets = Enum.ScreenInsets.CoreUISafeInsets` (recomendado para UI interactiva; es el valor por defecto). `None` solo para fondos no interactivos. `ClipToDeviceSafeArea` recorta al área segura. `GuiService.TopbarInset` (Rect) da el espacio libre en la barra superior. | /reference/engine/enums/ScreenInsets, /reference/engine/classes/ScreenGui, /reference/engine/classes/GuiService |
 | Bordes redondeados | `UICorner.CornerRadius` (UDim). Scale se mide contra el lado más corto: ≥ 0.5 da píldora. | /ui/appearance-modifiers |
 | Borde grueso / contorno de texto | `UIStroke`. En objetos de texto, `ApplyStrokeMode.Contextual` contornea las letras y `Border` dibuja el borde del objeto; se pueden poner dos `UIStroke` (uno de cada modo). `Thickness` en píxeles salvo `StrokeSizingMode.ScaledSize`. `BorderStrokePosition`: Center, Inner, Outer. | /ui/appearance-modifiers, /reference/engine/classes/UIStroke |

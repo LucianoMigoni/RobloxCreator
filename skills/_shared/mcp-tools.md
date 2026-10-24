@@ -10,7 +10,7 @@ Verificado el 2026-10-21. Si una herramienta no aparece en la sesión, **no la i
 
 ## Roblox Studio — servidor MCP integrado (oficial)
 
-Fuentes: https://create.roblox.com/docs/studio/mcp y la lista real del servidor (28 tools, consultada con `tools/list` el 2026-10-21). Esquemas exactos de parámetros en `studio-mcp-tools.json`; si una tool falla por parámetros, consultarlo ahí.
+Fuentes: https://create.roblox.com/docs/studio/mcp y la lista real del servidor (28 tools, consultada con `tools/list` el 2026-10-21). Esquemas exactos de parámetros en `studio-mcp-tools.json`; si una tool falla por parámetros, consultarlo ahí. `generate_texture` y `segment_mesh` están en el servidor real pero no en la página oficial (revisado el 2026-10-24).
 
 - Registrado en esta máquina como `Roblox_Studio` (scope usuario): `claude mcp add Roblox_Studio --scope user -- cmd.exe /c %LOCALAPPDATA%\Roblox\mcp.bat`. Prefijo de tools: `mcp__Roblox_Studio__`.
 - Activar en Studio (cada instalación): Assistant → `…` → Manage MCP Servers → **Enable Studio as MCP server**. Sin esto, `list_roblox_studios` devuelve `{"studios":[]}`.
