@@ -127,7 +127,8 @@ Plantilla (`template/src/`), todo lo sensible en el servidor:
 |---|---|---|
 | A1 | Pendiente | |
 | A2 | Hecho: `CLAUDE.md` con monorepo, ramas y PR. Falta (opcional, en GitHub): proteger `main` | leonel (IA) |
-| A3–A7 | Pendiente | |
+| A3 | Hecho: `setup.ps1` crea `.claude\skills` (junction) y verifica el entorno. Probado con PowerShell 7 en Linux; falta correrlo en Windows | leonel (IA) |
+| A4–A7 | Pendiente | |
 | B1 | Pendiente | |
 | B2 | Pendiente | |
 | B3 | Pendiente | |
