@@ -131,7 +131,7 @@ Plantilla (`template/src/`), todo lo sensible en el servidor:
 | A4 | Hecho: `SETUP.md` (pasos 1–9, comandos verificados). Falta: Luciano documenta el MCP de Blender (paso 6) y el compañero lo prueba en Windows | leonel (IA) |
 | A5 | Preparado: config común de Obsidian (`.obsidian/`, exclusiones, Obsidian Git) y pasos en `SETUP.md`. Falta la prueba entre los dos: un cambio de uno le llega al otro | leonel (IA) |
 | A6 | Hecho: `team/` (flujo diario, tablero, decisiones) y regla en `CLAUDE.md` | leonel (IA) |
-| A7 | Pendiente | |
+| A7 | Hecho: `AGENTS.md` y `GEMINI.md` remiten a `CLAUDE.md`; `CLAUDE.local.md` explicado en `SETUP.md`. Falta que el compañero lo pruebe con su IA | leonel (IA) |
 | B1 | Pendiente | |
 | B2 | Pendiente | |
 | B3 | Pendiente | |

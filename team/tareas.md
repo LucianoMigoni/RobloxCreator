@@ -4,7 +4,7 @@ Formato y flujo: `team/README.md`. Detalle de cada paso del hub: `ROADMAP.md`.
 
 ## En curso
 
-- [ ] Fase A — entorno compartido (A6–A7) — hub · @leonel · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub
+- [ ] Fase A — revisión y merge del PR de la rama leonelblumberg/quirky-dijkstra-2kxnwz — hub · @luciano · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub
 
 ## Pendiente
 
@@ -27,4 +27,6 @@ Formato y flujo: `team/README.md`. Detalle de cada paso del hub: `ROADMAP.md`.
 - [x] A3: `setup.ps1` crea el enlace de skills y verifica el entorno — hub · @leonel · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub · 2026-10-24
 - [x] A4: `SETUP.md` — docs · @leonel · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub · 2026-10-24
 - [x] A5: config común de Obsidian — hub · @leonel · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub · 2026-10-24
+- [x] A6: carpeta `team/` (flujo, tablero, decisiones) — docs · @leonel · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub · 2026-10-24
+- [x] A7: `AGENTS.md` y `GEMINI.md` remiten a `CLAUDE.md` — docs · @leonel · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub · 2026-10-24
 - [x] Referencia del algoritmo de descubrimiento 2026 (`skills/_shared/algoritmo-descubrimiento.md`) — docs · @leonel · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub · 2026-10-24
