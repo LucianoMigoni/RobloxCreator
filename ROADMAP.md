@@ -128,7 +128,8 @@ Plantilla (`template/src/`), todo lo sensible en el servidor:
 | A1 | Pendiente | |
 | A2 | Hecho: `CLAUDE.md` con monorepo, ramas y PR. Falta (opcional, en GitHub): proteger `main` | leonel (IA) |
 | A3 | Hecho: `setup.ps1` crea `.claude\skills` (junction) y verifica el entorno. Probado con PowerShell 7 en Linux; falta correrlo en Windows | leonel (IA) |
-| A4–A7 | Pendiente | |
+| A4 | Hecho: `SETUP.md` (pasos 1–9, comandos verificados). Falta: Luciano documenta el MCP de Blender (paso 6) y el compañero lo prueba en Windows | leonel (IA) |
+| A5–A7 | Pendiente | |
 | B1 | Pendiente | |
 | B2 | Pendiente | |
 | B3 | Pendiente | |

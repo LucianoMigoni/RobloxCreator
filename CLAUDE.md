@@ -31,7 +31,7 @@ Saltos permitidos: un juego existente puede entrar en la fase 9 (modo mejora). `
 
 ### Cómo invocar un skill
 
-Los skills están en `skills/` (y enlazados en `.claude/skills/` para que Claude Code los descubra solo). Si no se cargan automáticamente: leer `skills/<skill>/SKILL.md` y seguir su flujo. Leer `references/` solo cuando el SKILL.md lo indique.
+Los skills están en `skills/` (y enlazados en `.claude/skills/` por `setup.ps1` para que Claude Code los descubra solo). Si no se cargan automáticamente: leer `skills/<skill>/SKILL.md` y seguir su flujo. Leer `references/` solo cuando el SKILL.md lo indique.
 
 ## Empezar un juego nuevo
 
@@ -50,7 +50,8 @@ El juego es una carpeta dentro de este repo, no un repo aparte (ver **Git y trab
 7. Commit, `git push -u origin <rama>` y Pull Request a `main` para que el otro integrante lo revise.
 8. Arrancar el pipeline en la fase 1 (o 2 si el concepto ya está decidido), cada fase en su rama y su PR.
 
-### Herramientas instaladas
+### Herramientas
+Instalación en cada máquina: `SETUP.md` (y `setup.ps1`, que crea el enlace de skills y verifica todo). Versiones del equipo:
 - **Rokit 1.2.0** en `~/.rokit/bin` (en el PATH de usuario). Gestiona versiones de herramientas por proyecto.
 - **Rojo 7.7.1**: global (`~/.rokit/rokit.toml`) y fijado en `template/rokit.toml`. Actualizar: `rokit update rojo` en el proyecto.
 - **Plugin de Rojo** en `%LOCALAPPDATA%\Roblox\Plugins\RojoManagedPlugin.rbxm` (reinstalar tras actualizar Rojo: `rojo plugin install`).
