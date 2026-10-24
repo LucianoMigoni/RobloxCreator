@@ -1,0 +1,11 @@
+{
+  "commitMessage": "notas: {{numFiles}} archivo(s) desde {{hostname}}",
+  "autoCommitMessage": "notas: {{numFiles}} archivo(s) desde {{hostname}}",
+  "autoPullOnBoot": true,
+  "autoSaveInterval": 0,
+  "autoPushInterval": 0,
+  "autoPullInterval": 0,
+  "pullBeforePush": true,
+  "syncMethod": "merge",
+  "disablePush": false
+}

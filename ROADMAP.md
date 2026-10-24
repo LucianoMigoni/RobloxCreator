@@ -129,7 +129,8 @@ Plantilla (`template/src/`), todo lo sensible en el servidor:
 | A2 | Hecho: `CLAUDE.md` con monorepo, ramas y PR. Falta (opcional, en GitHub): proteger `main` | leonel (IA) |
 | A3 | Hecho: `setup.ps1` crea `.claude\skills` (junction) y verifica el entorno. Probado con PowerShell 7 en Linux; falta correrlo en Windows | leonel (IA) |
 | A4 | Hecho: `SETUP.md` (pasos 1–9, comandos verificados). Falta: Luciano documenta el MCP de Blender (paso 6) y el compañero lo prueba en Windows | leonel (IA) |
-| A5–A7 | Pendiente | |
+| A5 | Preparado: config común de Obsidian (`.obsidian/`, exclusiones, Obsidian Git) y pasos en `SETUP.md`. Falta la prueba entre los dos: un cambio de uno le llega al otro | leonel (IA) |
+| A6–A7 | Pendiente | |
 | B1 | Pendiente | |
 | B2 | Pendiente | |
 | B3 | Pendiente | |

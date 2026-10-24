@@ -97,6 +97,21 @@ En macOS o Linux: `mkdir -p .claude && ln -s ../skills .claude/skills`. Reinicia
 2. En Claude Code, desde la raíz del repo, escribir `/roblox` debe sugerir los skills del hub (p. ej. `/roblox-ui-designer`).
 3. Con Studio abierto y el paso 5 hecho, pedirle a Claude Code: "llamá a `list_roblox_studios`". Debe devolver el Studio abierto con su `studio_id`.
 
+## Obsidian (notas compartidas)
+
+El repo entero es el vault: `CLAUDE.md`, `ROADMAP.md`, `team/` y los `docs/` de cada juego se leen y editan desde Obsidian. La configuración común ya viene en el repo. Lo personal (workspace, tema, caché y el código de los plugins) no se sube.
+
+- `.obsidian/app.json` excluye de búsqueda y grafo el código y los binarios: `template/src/`, `games/<juego>/src/` (con una expresión regular), `assets/3d/` y `.claude/`.
+- `.obsidian/plugins/obsidian-git/data.json` hace pull al abrir el vault. Commit y push son manuales, con el mensaje `notas: N archivo(s) desde <equipo>`.
+
+Una vez por máquina:
+
+1. Obsidian → **Open folder as vault** → la carpeta `RobloxCreator`.
+2. Settings → **Community plugins** → **Turn on community plugins** → **Browse** → instalar **Git** (de Vinzent03) y activarlo. Toma la configuración que ya está en el repo.
+3. Settings → **Files and links** → **Excluded files**: comprobar que aparecen las 4 exclusiones. Si la de `games` no filtra, reemplazarla por una por juego (`games/<juego>/src/`).
+
+Al trabajar: Obsidian hace commit en la rama que esté activa. **Editar notas estando en tu rama de tarea**, nunca en `main`. Los cambios de notas viajan en el PR de la tarea, y al otro le llegan cuando hace pull de `main` después del merge.
+
 ## Preferencias personales
 
 Lo que es solo tuyo (idioma de respuesta, nivel de detalle, atajos) va en `CLAUDE.local.md` en la raíz del repo. Git lo ignora y Claude Code lo lee junto con `CLAUDE.md`. Las reglas comunes van siempre en `CLAUDE.md`, por PR.

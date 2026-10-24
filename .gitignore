@@ -3,10 +3,14 @@
 .claude/settings.local.json
 CLAUDE.local.md
 
-# Obsidian: estado personal del vault
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
-.obsidian/cache
+# Obsidian: solo se comparte la config común (app.json, plugins activos y su data.json);
+# workspace, tema, caché y el código de los plugins son de cada máquina.
+.obsidian/*
+!.obsidian/app.json
+!.obsidian/community-plugins.json
+!.obsidian/plugins/
+.obsidian/plugins/*/*
+!.obsidian/plugins/*/data.json
 .trash/
 
 # Roblox / Rojo

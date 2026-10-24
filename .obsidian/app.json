@@ -1,0 +1,8 @@
+{
+  "userIgnoreFilters": [
+    "template/src/",
+    "/^games\\/[^/]+\\/src\\//",
+    "assets/3d/",
+    ".claude/"
+  ]
+}
