@@ -125,7 +125,9 @@ Plantilla (`template/src/`), todo lo sensible en el servidor:
 
 | Paso | Estado | Responsable |
 |---|---|---|
-| A1–A7 | Pendiente | |
+| A1 | Pendiente | |
+| A2 | Hecho: `CLAUDE.md` con monorepo, ramas y PR. Falta (opcional, en GitHub): proteger `main` | leonel (IA) |
+| A3–A7 | Pendiente | |
 | B1 | Pendiente | |
 | B2 | Pendiente | |
 | B3 | Pendiente | |

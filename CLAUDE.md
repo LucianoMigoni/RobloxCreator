@@ -34,17 +34,20 @@ Los skills están en `skills/` (y enlazados en `.claude/skills/` para que Claude
 
 ## Empezar un juego nuevo
 
-1. Nombre en kebab-case: `games/<nombre-juego>/` (ej. `games/pet-tycoon`).
-2. Copiar la plantilla:
+El juego es una carpeta dentro de este repo, no un repo aparte (ver **Git y trabajo en equipo**).
+
+1. Rama desde `main` actualizado: `git switch main && git pull && git switch -c <persona>/<nombre-juego>`.
+2. Nombre en kebab-case: `games/<nombre-juego>/` (ej. `games/pet-tycoon`).
+3. Copiar la plantilla:
    ```bash
    cp -r template games/<nombre-juego>
    mkdir -p games/<nombre-juego>/docs
    ```
-3. Inicializar Git dentro del juego: `git init` y primer commit.
 4. Cambiar `name` en `default.project.json`.
-5. `rokit install` en la carpeta del juego (instala la versión de Rojo fijada en `rokit.toml`).
+5. `rokit install` en la carpeta del juego (instala la versión de Rojo fijada en `rokit.toml`; la primera vez pide confiar en `rojo-rbx/rojo`).
 6. Conectar: `rojo serve` en la carpeta del juego → en Studio, pestaña Plugins → Rojo → **Connect** (localhost:34872). Activar el MCP de Studio (ver `skills/_shared/mcp-tools.md`).
-7. Arrancar el pipeline en la fase 1 (o 2 si el concepto ya está decidido).
+7. Commit, `git push -u origin <rama>` y Pull Request a `main` para que el otro integrante lo revise.
+8. Arrancar el pipeline en la fase 1 (o 2 si el concepto ya está decidido), cada fase en su rama y su PR.
 
 ### Herramientas instaladas
 - **Rokit 1.2.0** en `~/.rokit/bin` (en el PATH de usuario). Gestiona versiones de herramientas por proyecto.
@@ -95,5 +98,9 @@ games/<juego>/
 - `pcall` alrededor de toda llamada que pueda fallar por red: DataStores, MarketplaceService, HttpService, TextService.
 - Comentarios solo para el *por qué*.
 
-**Git**
-- Un repo por juego. Commits pequeños y descriptivos. Nunca subir claves ni cookies.
+**Git y trabajo en equipo** (monorepo)
+- Todo vive en este repo: hub, plantilla y juegos. Nunca `git init` dentro de `games/<juego>/`: un repo anidado no viaja con el resto.
+- Nunca trabajar directo en `main`. Una rama por tarea, `<persona>/<tarea>` (ej. `luciano/tienda`, `leonel/ui-inventario`), creada desde `main` actualizado.
+- Se integra por Pull Request y lo aprueba el otro integrante antes del merge. El PR es la puerta de revisión: su descripción lleva el resultado de la fase (qué se hizo, cómo se probó, capturas si hay UI).
+- Ramas cortas: un PR por tarea. Si `main` avanzó, `git merge main` en la rama antes de pedir revisión.
+- Commits pequeños y descriptivos. Nunca subir claves, cookies ni `.ROBLOSECURITY`.
