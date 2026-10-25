@@ -132,6 +132,16 @@ SOURCE_RULES = [
      re.compile(r"(?<![\w.:])(wait|spawn|delay)\s*\("), ()),
 ]
 
+# Guía oficial de monetización (/production/monetization, Guidelines): con menores, nada de presión ni
+# urgencia falsa. Si la urgencia es real (un evento con fecha de fin verdadera), marcar la línea con
+# `-- monetization-ok: <motivo>` para que quede revisado a mano.
+PRESSURE = re.compile(
+    r'"[^"]*\b(get it now|buy now|act now|last chance|before it.?s gone|hurry|limited time|only \d+ left|'
+    r"don.?t miss|ends soon|compra ya|comprá ya|última oportunidad|ultima oportunidad|apurate|apúrate|"
+    r'antes de que se acabe|solo hoy|tiempo limitado|quedan pocos|no te lo pierdas)\b[^"]*"',
+    re.IGNORECASE,
+)
+
 
 def check_source_rules() -> list:
     errors = []
@@ -144,15 +154,18 @@ def check_source_rules() -> list:
                 for message, pattern, allowed in SOURCE_RULES:
                     if pattern.search(code) and not rel.endswith(allowed or ("\0",)):
                         errors.append(f"{rel}:{number}: {message}")
+                if PRESSURE.search(code) and "monetization-ok:" not in line:
+                    errors.append(f"{rel}:{number}: texto de presión o urgencia (guía oficial de monetización): "
+                                  "usar \"View Item\"/\"Open Shop\" o marcar `-- monetization-ok: <motivo>` si es real")
     return errors
 
 
-def check_catalog() -> list:
+def check_python_tools() -> list:
     errors = []
-    for cmd in ("selftest", "validate"):
-        ok, out = run([sys.executable, "assets/catalog.py", cmd])
+    for script, cmd in (("assets/catalog.py", "selftest"), ("assets/catalog.py", "validate"), ("tools/analytics.py", "selftest")):
+        ok, out = run([sys.executable, script, cmd])
         if not ok:
-            errors.append(f"catalog.py {cmd}: {out}")
+            errors.append(f"{script} {cmd}: {out}")
     return errors
 
 
@@ -194,7 +207,7 @@ def main() -> int:
         ("Luau (rojo build + luau-lsp)", lambda: check_luau(roblox_definitions(tools["luau-lsp"]))),
         ("tests de Luau", lambda: check_tests(roblox_definitions(tools["luau-lsp"]))),
         ("reglas de seguridad y estilo", check_source_rules),
-        ("catálogo de assets", check_catalog),
+        ("catálogo y herramientas Python", check_python_tools),
         ("JSON", check_json),
         ("PowerShell", check_powershell),
     ]

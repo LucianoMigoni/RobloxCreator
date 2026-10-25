@@ -27,7 +27,7 @@ Centro para crear juegos de Roblox rápido y con buenas probabilidades de éxito
 | 9 | Métricas | `roblox-metrics-growth` | Juego publicado (o pre-lanzamiento en modo mejora) | `metricas.md` |
 | 10 | Live ops | `roblox-liveops` | Métricas + roadmap | `liveops.md`, changelogs |
 
-**Skills que existen hoy:** `roblox-ideation`, `roblox-game-cloner`, `roblox-ui-designer` y `roblox-security`. Los demás están planificados en `ROADMAP.md` (Fase B). Si una fase todavía no tiene skill, avisarlo al usuario y trabajar con las reglas de este archivo y `skills/_shared/` (no inventar el contenido del skill que falta).
+**Skills que existen hoy:** `roblox-ideation`, `roblox-game-cloner`, `roblox-ui-designer`, `roblox-monetization`, `roblox-security` y `roblox-metrics-growth`. Los demás están planificados en `ROADMAP.md` (Fase B). Si una fase todavía no tiene skill, avisarlo al usuario y trabajar con las reglas de este archivo y `skills/_shared/` (no inventar el contenido del skill que falta).
 
 Saltos permitidos: un juego existente puede entrar en la fase 9 (modo mejora). `roblox-ui-designer` y `roblox-security` se vuelven a llamar cada vez que otra fase cree UI o RemoteEvents nuevos.
 
@@ -113,4 +113,4 @@ Qué trae la plantilla y cómo extenderla (un remote nuevo, un campo de datos, u
 - Se integra por Pull Request y lo aprueba el otro integrante antes del merge. El PR es la puerta de revisión: su descripción lleva el resultado de la fase (qué se hizo, cómo se probó, capturas si hay UI).
 - Ramas cortas: un PR por tarea. Si `main` avanzó, `git merge main` en la rama antes de pedir revisión.
 - Antes de pedir revisión, `python tools/check.py` sin errores (rojo build, tipos de Luau con luau-lsp, tests de Luau, reglas de seguridad, catálogo, JSON, PowerShell). GitHub Actions lo corre en cada push: un PR con el chequeo en rojo no se aprueba.
-- Commits pequeños y descriptivos. Nunca subir claves, cookies ni `.ROBLOSECURITY`.
+- Commits pequeños y descriptivos. Nunca subir claves, cookies ni `.ROBLOSECURITY` (la API key de analíticas va solo en la variable de entorno `ROBLOX_ANALYTICS_API_KEY`).
