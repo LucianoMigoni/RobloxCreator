@@ -55,7 +55,7 @@ El juego es una carpeta dentro de este repo, no un repo aparte (ver **Git y trab
 ### Herramientas
 Instalación en cada máquina: `SETUP.md` (y `setup.ps1`, que crea el enlace de skills y verifica todo). Versiones del equipo:
 - **Rokit 1.2.0** en `~/.rokit/bin` (en el PATH de usuario). Gestiona versiones de herramientas por proyecto.
-- **Rojo 7.7.1** y **luau-lsp 1.70.1** (análisis de tipos de Luau): fijados en `rokit.toml` de la raíz; Rojo también en `template/rokit.toml` (y en cada juego). Para actualizar, cambiar la versión en todos a la vez: `tools/check.py` exige que coincidan.
+- **Rojo 7.7.1**, **luau-lsp 1.70.1** (análisis de tipos) y **Luau 0.742** (intérprete para los tests de `template/tests/`): fijados en `rokit.toml` de la raíz; Rojo también en `template/rokit.toml` (y en cada juego). Para actualizar, cambiar la versión en todos a la vez: `tools/check.py` exige que coincidan.
 - **Plugin de Rojo** en `%LOCALAPPDATA%\Roblox\Plugins\RojoManagedPlugin.rbxm` (reinstalar tras actualizar Rojo: `rojo plugin install`).
 - **MCP de Roblox Studio** registrado como `Roblox_Studio` (scope usuario).
 
@@ -108,5 +108,5 @@ games/<juego>/
 - Nunca trabajar directo en `main`. Una rama por tarea, `<persona>/<tarea>` (ej. `luciano/tienda`, `leonel/ui-inventario`), creada desde `main` actualizado.
 - Se integra por Pull Request y lo aprueba el otro integrante antes del merge. El PR es la puerta de revisión: su descripción lleva el resultado de la fase (qué se hizo, cómo se probó, capturas si hay UI).
 - Ramas cortas: un PR por tarea. Si `main` avanzó, `git merge main` en la rama antes de pedir revisión.
-- Antes de pedir revisión, `python tools/check.py` sin errores (rojo build, tipos de Luau con luau-lsp, catálogo, JSON, PowerShell). GitHub Actions lo corre en cada push: un PR con el chequeo en rojo no se aprueba.
+- Antes de pedir revisión, `python tools/check.py` sin errores (rojo build, tipos de Luau con luau-lsp, tests de Luau, reglas de seguridad, catálogo, JSON, PowerShell). GitHub Actions lo corre en cada push: un PR con el chequeo en rojo no se aprueba.
 - Commits pequeños y descriptivos. Nunca subir claves, cookies ni `.ROBLOSECURITY`.

@@ -2,7 +2,7 @@
 
   python tools/check.py
 
-Necesita `rojo` y `luau-lsp` en el PATH: `rokit install` en la raíz los instala con las
+Necesita `rojo`, `luau-lsp` y `luau` en el PATH: `rokit install` en la raíz los instala con las
 versiones de rokit.toml. Las definiciones de tipos de Roblox se descargan una vez a .cache/.
 """
 import json
@@ -49,13 +49,14 @@ def rojo_projects() -> list:
 
 def check_tools(tools: dict) -> list:
     errors = []
-    for name, flag in (("rojo", "--version"), ("luau-lsp", "--version")):
+    # El CLI de luau no informa su versión: solo se verifica que esté.
+    for name, flag, versioned in (("rojo", "--version", True), ("luau-lsp", "--version", True), ("luau", "--help", False)):
         if not shutil.which(name):
             errors.append(f"{name} no está en el PATH: correr `rokit install` en la raíz del repo")
             continue
         ok, out = run([name, flag])
-        if not ok or tools.get(name, "?") not in out:
-            errors.append(f"{name} responde '{out}', pero rokit.toml fija {tools.get(name)}")
+        if not ok or (versioned and tools.get(name, "?") not in out):
+            errors.append(f"{name} responde '{out[:80]}', pero rokit.toml fija {tools.get(name)}")
     for project in rojo_projects():
         manifest = project / "rokit.toml"
         if manifest.exists() and pinned_tools(manifest).get("rojo") != tools.get("rojo"):
@@ -97,6 +98,52 @@ def check_luau(definitions: Path) -> list:
     ok, out = run(base + ["skills"])
     if not ok:
         errors.append(f"skills: errores de Luau\n{out}")
+    return errors
+
+
+def check_tests(definitions: Path) -> list:
+    """Corre tests/*.spec.luau de cada proyecto con el CLI de luau y los analiza con luau-lsp."""
+    errors = []
+    for project in rojo_projects():
+        rel = project.relative_to(ROOT).as_posix()
+        specs = sorted((project / "tests").glob("*.spec.luau"))
+        if not specs:
+            continue
+        # Con los tipos de Roblox porque el código que prueban los usa; si un test usara algo que el
+        # CLI de luau no tiene, falla al correrlo.
+        ok, out = run(["luau-lsp", "analyze", "--platform", "roblox", f"--definitions=@roblox={definitions}", "tests"],
+                      cwd=project)
+        if not ok:
+            errors.append(f"{rel}/tests: errores de Luau\n{out}")
+        for spec in specs:
+            ok, out = run(["luau", spec.relative_to(project).as_posix()], cwd=project)
+            if not ok:
+                errors.append(f"{rel}/tests/{spec.name} falló\n{out}")
+    return errors
+
+
+# (regla, expresión, archivos permitidos): reglas de CLAUDE.md y de roblox-security que se pueden ver en el texto.
+SOURCE_RULES = [
+    ("remote escuchado fuera de server/Net/Remotes.luau: registrarlo con Remotes.onEvent/onInvoke",
+     re.compile(r"\.OnServer(Event|Invoke)\b"), ("server/Net/Remotes.luau",)),
+    ("remote creado fuera de server/Net/Remotes.luau",
+     re.compile(r'Instance\.new\(\s*"(Unreliable)?Remote(Event|Function)"'), ("server/Net/Remotes.luau",)),
+    ("wait/spawn/delay heredados: usar task.wait/task.spawn/task.delay",
+     re.compile(r"(?<![\w.:])(wait|spawn|delay)\s*\("), ()),
+]
+
+
+def check_source_rules() -> list:
+    errors = []
+    roots = [p / "src" for p in rojo_projects()] + sorted((ROOT / "skills").glob("*/scripts"))
+    for base in roots:
+        for path in sorted(base.rglob("*.luau")):
+            rel = path.relative_to(ROOT).as_posix()
+            for number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+                code = line.split("--", 1)[0]
+                for message, pattern, allowed in SOURCE_RULES:
+                    if pattern.search(code) and not rel.endswith(allowed or ("\0",)):
+                        errors.append(f"{rel}:{number}: {message}")
     return errors
 
 
@@ -145,6 +192,8 @@ def main() -> int:
     steps = [
         ("herramientas y versiones", lambda: check_tools(tools)),
         ("Luau (rojo build + luau-lsp)", lambda: check_luau(roblox_definitions(tools["luau-lsp"]))),
+        ("tests de Luau", lambda: check_tests(roblox_definitions(tools["luau-lsp"]))),
+        ("reglas de seguridad y estilo", check_source_rules),
         ("catálogo de assets", check_catalog),
         ("JSON", check_json),
         ("PowerShell", check_powershell),

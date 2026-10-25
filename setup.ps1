@@ -90,10 +90,10 @@ if (Test-Path (Join-Path $link '_shared/mcp-tools.md')) {
 }
 
 # ---------------------------------------------------------------------------
-Write-Step '3. Rokit, Rojo, luau-lsp y plugin de Rojo (SETUP.md, pasos 2 a 4)'
+Write-Step '3. Rokit, Rojo, luau-lsp, Luau y plugin de Rojo (SETUP.md, pasos 2 a 4)'
 
 if (Test-Program rokit @('--version') 'paso 2') {
-    # rokit.toml de la raiz (Rojo + luau-lsp), el de template/ y el de cada juego.
+    # rokit.toml de la raiz (Rojo, luau-lsp y Luau), el de template/ y el de cada juego.
     $projects = @($root, (Join-Path $root 'template'))
     $gamesDir = Join-Path $root 'games'
     if (Test-Path $gamesDir) {
@@ -104,7 +104,7 @@ if (Test-Program rokit @('--version') 'paso 2') {
     Push-Location $root
     try {
         if (-not $CheckOnly) {
-            & rokit trust rojo-rbx/rojo JohnnyMorganz/luau-lsp
+            & rokit trust rojo-rbx/rojo JohnnyMorganz/luau-lsp luau-lang/luau
             foreach ($project in $projects) {
                 Write-Host "  rokit install en $project"
                 Push-Location $project
@@ -112,6 +112,7 @@ if (Test-Program rokit @('--version') 'paso 2') {
             }
         }
         Test-Program luau-lsp @('--version') 'pasos 2-3' | Out-Null
+        Test-Program luau @('--help') 'pasos 2-3' | Out-Null
         if (Test-Program rojo @('--version') 'pasos 2-3') {
             if (-not ($onWindows -or $IsMacOS)) {
                 Write-Host '  plugin de Rojo: Roblox Studio no existe para este sistema, se omite.'

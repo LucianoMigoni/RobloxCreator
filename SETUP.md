@@ -40,16 +40,17 @@ Invoke-RestMethod https://raw.githubusercontent.com/rojo-rbx/rokit/main/scripts/
 
 Alternativa: bajar `rokit-<versión>-windows-x86_64.zip` del [último release](https://github.com/rojo-rbx/rokit/releases/latest) y correr `rokit.exe self-install`. **Cerrar y reabrir la terminal** para que tome el PATH nuevo.
 
-## 3. Rojo y luau-lsp
+## 3. Rojo, luau-lsp y Luau
 
-Lo hace `setup.ps1`. Las versiones están fijadas en `rokit.toml` de la raíz (Rojo y luau-lsp, el analizador de tipos de Luau) y en `template/rokit.toml` (Rojo, que copia cada juego). A mano:
+Lo hace `setup.ps1`. Las versiones están fijadas en `rokit.toml` de la raíz (Rojo; luau-lsp, el analizador de tipos; y Luau, el intérprete que corre los tests de `template/tests/`) y en `template/rokit.toml` (Rojo, que copia cada juego). A mano:
 
 ```powershell
-rokit trust rojo-rbx/rojo JohnnyMorganz/luau-lsp
+rokit trust rojo-rbx/rojo JohnnyMorganz/luau-lsp luau-lang/luau
 rokit install                      # en la raíz del repo
 cd template; rokit install; cd ..  # y en cada games/<juego>/
 rojo --version                     # 7.7.1
 luau-lsp --version                 # 1.70.1
+luau --help                        # intérprete de Luau 0.742 (no informa versión)
 ```
 
 ## 4. Plugin de Rojo para Studio
