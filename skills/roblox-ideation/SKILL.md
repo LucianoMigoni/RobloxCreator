@@ -10,7 +10,7 @@ Elegir un concepto con buenas probabilidades: que enganche en el primer minuto, 
 
 ## Cuándo usarlo
 - Fase 1 del pipeline: hay una idea suelta, un género o nada.
-- Para reevaluar un juego que no retiene (con `roblox-metrics-growth`, cuando exista).
+- Para reevaluar un juego que no retiene (con `roblox-metrics-growth`).
 
 **Lo llaman:** el usuario al empezar un juego (ver `CLAUDE.md` → Empezar un juego nuevo).
 **Llama a:** `roblox-game-cloner` con el concepto aprobado (fase 2).

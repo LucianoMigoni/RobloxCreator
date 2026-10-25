@@ -16,9 +16,10 @@ Formato y flujo: `team/README.md`. Detalle de cada paso del hub: `ROADMAP.md`.
 - [ ] UI: probar en Studio el nuevo `UIKit.sideBar` (emulador: teléfono chico horizontal y tablet), correr `UIKit.selfTest()` y `audit_ui.luau` — ui · @luciano · rama — · juego: hub
 - [ ] B1a/B1b: probar la plantilla en Studio con una copia publicada de prueba (acceso a API activado): persistencia, bloqueo con dos ventanas, comprar un ítem con monedas, `audit_remotes.luau`, `abuse_test.luau` y `audit_ui.luau` sobre el HUD y los popups (teléfono chico y tablet) — servidor · @luciano · rama — · juego: hub
 - [ ] B3: crear una API key de analíticas de prueba (permiso `universe.analytics:read`) y correr `tools/analytics.py summary` contra un juego publicado — hub · @luciano · rama — · juego: hub
-- [ ] B4: skills `roblox-qa-performance`, `roblox-compliance`, `roblox-publishing`, `roblox-liveops` — hub · @nadie · rama — · juego: hub
+- [ ] B4: correr en Studio `perf_snapshot.luau` (Client y Server) sobre la plantilla y anotar la primera foto de rendimiento; elegir el teléfono base del equipo — qa · @luciano · rama — · juego: hub
+- [ ] Cuenta dueña de los juegos: decidir si publican desde una cuenta personal o un grupo, y que esa cuenta (o el dueño del grupo) cumpla lo que pide Roblox para llegar a menores de 16: verificación, 2FA y Plus/Premium 2 meses o la tarifa de 1000 Robux por juego (ver `skills/roblox-compliance`) — hub · @luciano @leonel · rama — · juego: hub
 - [ ] C1: primer asset real en el catálogo — mapa · @nadie · rama — · juego: hub
-- [ ] C2: juego de prueba de punta a punta en `games/prueba/` (arranca con `roblox-ideation` usando datos reales de Charts aportados por ustedes) — hub · @luciano @leonel · rama — · juego: prueba
+- [ ] C2: juego de prueba de punta a punta en `games/prueba/` (arranca con `roblox-ideation` usando datos reales de Charts aportados por ustedes; se lanza primero a 16+) — hub · @luciano @leonel · rama — · juego: prueba
 - [ ] C3: repasar `CLAUDE.md` con lo aprendido en C2 y cerrar `ROADMAP.md` — docs · @nadie · rama — · juego: hub
 
 ## Hecho
@@ -36,3 +37,4 @@ Formato y flujo: `team/README.md`. Detalle de cada paso del hub: `ROADMAP.md`.
 - [x] B1b: economía, tienda y cliente (Currency, Inventory, Shop con ProcessReceipt, Onboarding, HUD/tienda/inventario con UIKit) — servidor · @leonel · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub · 2026-10-25
 - [x] B2: skills `roblox-ideation` y `roblox-game-cloner` — hub · @leonel · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub · 2026-10-25
 - [x] B3: skills `roblox-monetization` y `roblox-metrics-growth`, `tools/analytics.py` y regla contra textos de presión — hub · @leonel · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub · 2026-10-25
+- [x] B4: skills `roblox-qa-performance`, `roblox-compliance`, `roblox-publishing` y `roblox-liveops`; reglas de público alcanzable (Kids/Select) en ideación, spec, algoritmo y `CLAUDE.md` — hub · @leonel · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub · 2026-10-25

@@ -9,7 +9,7 @@ Centro para crear juegos de Roblox rápido y con buenas probabilidades de éxito
 - **No inventes herramientas MCP.** Detecta qué hay instalado y usa los nombres exactos: `skills/_shared/mcp-tools.md`.
 - **Servidor autoritativo.** Monedas, daño, compras, inventario y progreso se calculan y validan en el servidor. El cliente solo pide y muestra.
 - **Móvil primero.** La mayoría juega en teléfono: toda UI y todo control se diseña para dedo y pantallas chicas.
-- **Público menor de edad.** Monetización honesta (ver `roblox-monetization`), contenido apto (ver `roblox-compliance`).
+- **Público menor de edad.** Monetización honesta (ver `roblox-monetization`), contenido apto (ver `roblox-compliance`). Todo juego nuevo sale primero solo para 16+; llegar a menores de 16 exige cuestionario de madurez completo, requisitos en la cuenta dueña y una evaluación con jugadores 16+ (`roblox-compliance`): decidir el público desde la fase 1.
 - **Puerta de revisión:** al terminar cada fase, mostrar el resultado al usuario y esperar su visto bueno antes de seguir.
 
 ## Pipeline: qué skill usar y cuándo
@@ -27,7 +27,7 @@ Centro para crear juegos de Roblox rápido y con buenas probabilidades de éxito
 | 9 | Métricas | `roblox-metrics-growth` | Juego publicado (o pre-lanzamiento en modo mejora) | `metricas.md` |
 | 10 | Live ops | `roblox-liveops` | Métricas + roadmap | `liveops.md`, changelogs |
 
-**Skills que existen hoy:** `roblox-ideation`, `roblox-game-cloner`, `roblox-ui-designer`, `roblox-monetization`, `roblox-security` y `roblox-metrics-growth`. Los demás están planificados en `ROADMAP.md` (Fase B). Si una fase todavía no tiene skill, avisarlo al usuario y trabajar con las reglas de este archivo y `skills/_shared/` (no inventar el contenido del skill que falta).
+Las diez fases tienen su skill. Los skills citan la documentación oficial con la fecha en que se verificó: antes de una decisión grande (concepto, lanzamiento), volver a verificar lo que cambió.
 
 Saltos permitidos: un juego existente puede entrar en la fase 9 (modo mejora). `roblox-ui-designer` y `roblox-security` se vuelven a llamar cada vez que otra fase cree UI o RemoteEvents nuevos.
 

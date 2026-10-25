@@ -13,7 +13,7 @@ Pasar de "un juego como X" o de `docs/concepto.md` a `docs/spec.md` y a un juego
 - Cuando el usuario trae un juego de referencia.
 
 **Lo llaman:** `roblox-ideation` (concepto aprobado) o el usuario.
-**Llama a:** `roblox-ui-designer` (pantallas), `roblox-security` (cada remote nuevo), `roblox-monetization` (precios y productos, cuando exista).
+**Llama a:** `roblox-ui-designer` (pantallas), `roblox-security` (cada remote nuevo), `roblox-monetization` (precios y productos), `roblox-compliance` (público alcanzable).
 
 ## Flujo
 

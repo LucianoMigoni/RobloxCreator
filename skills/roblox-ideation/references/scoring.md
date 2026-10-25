@@ -19,4 +19,5 @@ Puntaje = Σ (puntos / 5 × peso).
 Reglas:
 - **Corte duro:** un 0 en los criterios 1, 5 o 7 descarta el concepto, aunque el total sea alto.
 - **Evidencia:** sin fuente, el criterio 6 vale como mucho 2 y el concepto se marca "hipótesis por validar".
+- **Público alcanzable** (`roblox-compliance`): si el público objetivo incluye menores de 16 y el núcleo del concepto los deja afuera (social hangout como actividad principal, creación libre, tema sensible principal, alcohol, temas románticos, lenguaje fuerte, violencia o sangre realista fuerte), el concepto se descarta o se cambia el público. Todo juego nuevo sale primero solo para 16+ y llega a menores de 16 recién después de una evaluación con jugadores 16+: anotarlo como riesgo si el concepto solo atrae a chicos chicos **(hub)**.
 - **Desempate:** gana el de mejor criterio 3 (retención a largo plazo, que es lo que más premia el algoritmo desde junio de 2026).

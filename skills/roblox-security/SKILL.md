@@ -23,7 +23,7 @@ Que ningún cliente pueda dar monedas, ítems, daño ni progreso que el servidor
 - Al revisar un PR que toca `src/server` o agrega remotes.
 
 **Lo llaman:** `roblox-ui-designer` (cada botón que dispara un remote), `roblox-monetization` (compras), `roblox-game-cloner` (mecánicas nuevas).
-**Llama a:** `roblox-qa-performance` para la prueba en Studio en móvil (cuando exista).
+**Llama a:** `roblox-qa-performance` para la prueba en Studio en móvil.
 
 ## Flujo
 

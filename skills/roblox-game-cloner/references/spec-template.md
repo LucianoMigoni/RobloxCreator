@@ -55,5 +55,5 @@ Pasos del embudo a medir, señales del algoritmo a vigilar (PTR, bounce, play da
 Hitos en orden, cada uno jugable: 1) loop central con cubos grises, 2) progresión, 3) UI, 4) monetización, 5) pulido y mapa.
 
 ## Riesgos y cumplimiento
-Contenido para el cuestionario de madurez, texto de jugadores (filtrado), rendimiento en móvil.
+Contenido para el cuestionario de madurez y etiqueta esperada (`roblox-compliance`), texto de jugadores (filtrado), productos con `PolicyService`, rendimiento en móvil.
 ```

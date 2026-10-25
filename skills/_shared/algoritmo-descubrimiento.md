@@ -58,6 +58,7 @@ No confundir con el panel de **Retention** de Creator Analytics, que muestra D1/
   - **juegos no únicos**: título, imágenes o place file muy parecidos a juegos existentes.
 - Si el juego tiene exposición reducida, el Creator Dashboard muestra un banner que se actualiza a diario.
 - Ayuda: un video de gameplay fiel en la página del juego.
+- **Público alcanzable** (verificado el 2026-10-25, `/production/publishing/kids-and-select`): todo juego nuevo sale solo para jugadores de 16+ con verificación de edad. Para llegar a Roblox Kids (5–8) y Select (9–15) hace falta el cuestionario de madurez completo con etiqueta Minimal, Mild o Moderate, requisitos en la cuenta dueña y una evaluación de 250 jugadas únicas de jugadores 16+ muy comprometidos en 60 días. Detalle en `roblox-compliance`.
 
 ## Qué implica en cada fase del hub
 

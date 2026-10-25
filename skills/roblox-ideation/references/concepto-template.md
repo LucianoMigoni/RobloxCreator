@@ -26,6 +26,7 @@ Lo que no se pudo verificar: listado aparte, marcado como hipótesis.
 - **Diferenciación:** qué lo hace distinto de las referencias.
 - **Monetización honesta:** qué se vende (sin cajas pagas sin probabilidades ni ventajas injustas).
 - **Género / subgénero oficial:** (de `references/genres.md`).
+- **Público y etiqueta esperada:** edades objetivo y etiqueta de madurez probable (`roblox-compliance`). Si incluye menores de 16, nada en el núcleo que los deje afuera.
 - **Alcance:** qué agrega a la plantilla y estimación del MVP.
 - **Riesgos:** técnicos, de cumplimiento, de mercado.
 
