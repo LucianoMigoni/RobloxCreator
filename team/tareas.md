@@ -15,11 +15,10 @@ Formato y flujo: `team/README.md`. Detalle de cada paso del hub: `ROADMAP.md`.
 - [ ] A5: probar Obsidian entre los dos (un cambio de uno le llega al otro tras el merge) — hub · @luciano @leonel · rama — · juego: hub
 - [ ] UI: probar en Studio el nuevo `UIKit.sideBar` (emulador: teléfono chico horizontal y tablet), correr `UIKit.selfTest()` y `audit_ui.luau` — ui · @luciano · rama — · juego: hub
 - [ ] B1a/B1b: probar la plantilla en Studio con una copia publicada de prueba (acceso a API activado): persistencia, bloqueo con dos ventanas, comprar un ítem con monedas, `audit_remotes.luau`, `abuse_test.luau` y `audit_ui.luau` sobre el HUD y los popups (teléfono chico y tablet) — servidor · @luciano · rama — · juego: hub
-- [ ] B2: skills `roblox-game-cloner` + `roblox-ideation` — hub · @nadie · rama — · juego: hub
 - [ ] B3: skills `roblox-monetization` + `roblox-metrics-growth` — hub · @nadie · rama — · juego: hub
 - [ ] B4: skills `roblox-qa-performance`, `roblox-compliance`, `roblox-publishing`, `roblox-liveops` — hub · @nadie · rama — · juego: hub
 - [ ] C1: primer asset real en el catálogo — mapa · @nadie · rama — · juego: hub
-- [ ] C2: juego de prueba de punta a punta en `games/prueba/` — hub · @luciano @leonel · rama — · juego: prueba
+- [ ] C2: juego de prueba de punta a punta en `games/prueba/` (arranca con `roblox-ideation` usando datos reales de Charts aportados por ustedes) — hub · @luciano @leonel · rama — · juego: prueba
 - [ ] C3: repasar `CLAUDE.md` con lo aprendido en C2 y cerrar `ROADMAP.md` — docs · @nadie · rama — · juego: hub
 
 ## Hecho
@@ -35,3 +34,4 @@ Formato y flujo: `team/README.md`. Detalle de cada paso del hub: `ROADMAP.md`.
 - [x] B0: chequeo automático (`tools/check.py` + GitHub Actions + `rokit.toml` en la raíz) — hub · @leonel · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub · 2026-10-25
 - [x] B1a: datos y seguridad (`DataService` con bloqueo de sesión, `Remotes` con validación y límite, skill `roblox-security`, tests de Luau) — servidor · @leonel · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub · 2026-10-25
 - [x] B1b: economía, tienda y cliente (Currency, Inventory, Shop con ProcessReceipt, Onboarding, HUD/tienda/inventario con UIKit) — servidor · @leonel · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub · 2026-10-25
+- [x] B2: skills `roblox-ideation` y `roblox-game-cloner` — hub · @leonel · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub · 2026-10-25

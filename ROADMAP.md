@@ -151,7 +151,7 @@ APIs (existencia verificada el 2026-10-24 en la referencia oficial, ninguna depr
 | B0 | Hecho: `tools/check.py`, `.github/workflows/check.yml` y `rokit.toml` en la raíz. Pasa en GitHub Actions (primer run en verde, ~12 s); el caso de falla se verificó con el mismo script y versiones en una copia con 6 errores inyectados | leonel (IA) |
 | B1a | Implementado: `DataService` + `SessionLock` + `Reconcile`, `Remotes` + `Validate` + `RateLimiter`, `shared/Net`, skill `roblox-security` (auditoría y prueba de abuso para Studio), 26 tests de Luau en el chequeo. Falta la prueba en Studio: persistencia, bloqueo con dos sesiones, `audit_remotes` y `abuse_test` | leonel (IA) |
 | B1b | Implementado: `PlayerStateService`, `CurrencyService` + `Balance`, `InventoryService`, `ShopService` (RequestPurchase, ProcessReceipt sin otorgar dos veces, Game Passes) + `Receipts`, `OnboardingService` + `Steps`; cliente con HUD, tienda e inventario sobre `UIKit` (movido a la plantilla); 39 tests de Luau. Falta la prueba en Studio | leonel (IA) |
-| B2 | Pendiente | |
+| B2 | Implementado: `roblox-ideation` (reglas de evidencia, matriz de puntuación con los pesos del algoritmo, plantilla de `concepto.md`, géneros oficiales) y `roblox-game-cloner` (análisis sin exploits, plantilla de `spec.md`, mapeo a la plantilla, export de Blender verificado, verificación por mecánica). Falta usarlos en `games/prueba/` (C2) con datos reales de Charts | leonel (IA) |
 | B3 | Pendiente | |
 | B4 | Pendiente | |
 | C1–C3 | Pendiente | |
