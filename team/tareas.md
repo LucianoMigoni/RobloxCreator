@@ -14,7 +14,7 @@ Formato y flujo: `team/README.md`. Detalle de cada paso del hub: `ROADMAP.md`.
 - [ ] A7: probar que la IA del compañero (Codex, Gemini u otra) sigue `CLAUDE.md` vía `AGENTS.md` — hub · @leonel · rama — · juego: hub
 - [ ] A5: probar Obsidian entre los dos (un cambio de uno le llega al otro tras el merge) — hub · @luciano @leonel · rama — · juego: hub
 - [ ] UI: probar en Studio el nuevo `UIKit.sideBar` (emulador: teléfono chico horizontal y tablet), correr `UIKit.selfTest()` y `audit_ui.luau` — ui · @luciano · rama — · juego: hub
-- [ ] B1a: datos y seguridad (`DataService` con bloqueo de sesión, `Remotes`, skill `roblox-security`) — servidor · @nadie · rama — · juego: hub
+- [ ] B1a: probar en Studio (copia publicada de prueba con acceso a API): persistencia, bloqueo con dos ventanas, `audit_remotes.luau` y `abuse_test.luau` — servidor · @luciano · rama — · juego: hub
 - [ ] B1b: economía, tienda y cliente (Currency, Shop, Inventory, Onboarding, controladores) — servidor · @nadie · rama — · juego: hub
 - [ ] B2: skills `roblox-game-cloner` + `roblox-ideation` — hub · @nadie · rama — · juego: hub
 - [ ] B3: skills `roblox-monetization` + `roblox-metrics-growth` — hub · @nadie · rama — · juego: hub
@@ -34,3 +34,4 @@ Formato y flujo: `team/README.md`. Detalle de cada paso del hub: `ROADMAP.md`.
 - [x] A7: `AGENTS.md` y `GEMINI.md` remiten a `CLAUDE.md` — docs · @leonel · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub · 2026-10-24
 - [x] Referencia del algoritmo de descubrimiento 2026 (`skills/_shared/algoritmo-descubrimiento.md`) — docs · @leonel · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub · 2026-10-24
 - [x] B0: chequeo automático (`tools/check.py` + GitHub Actions + `rokit.toml` en la raíz) — hub · @leonel · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub · 2026-10-25
+- [x] B1a: datos y seguridad (`DataService` con bloqueo de sesión, `Remotes` con validación y límite, skill `roblox-security`, tests de Luau) — servidor · @leonel · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub · 2026-10-25

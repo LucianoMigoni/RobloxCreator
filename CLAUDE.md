@@ -27,7 +27,7 @@ Centro para crear juegos de Roblox rápido y con buenas probabilidades de éxito
 | 9 | Métricas | `roblox-metrics-growth` | Juego publicado (o pre-lanzamiento en modo mejora) | `metricas.md` |
 | 10 | Live ops | `roblox-liveops` | Métricas + roadmap | `liveops.md`, changelogs |
 
-**Skills que existen hoy:** `roblox-ui-designer`. Los demás están planificados en `ROADMAP.md` (Fase B). Si una fase todavía no tiene skill, avisarlo al usuario y trabajar con las reglas de este archivo y `skills/_shared/` (no inventar el contenido del skill que falta).
+**Skills que existen hoy:** `roblox-ui-designer` y `roblox-security`. Los demás están planificados en `ROADMAP.md` (Fase B). Si una fase todavía no tiene skill, avisarlo al usuario y trabajar con las reglas de este archivo y `skills/_shared/` (no inventar el contenido del skill que falta).
 
 Saltos permitidos: un juego existente puede entrar en la fase 9 (modo mejora). `roblox-ui-designer` y `roblox-security` se vuelven a llamar cada vez que otra fase cree UI o RemoteEvents nuevos.
 

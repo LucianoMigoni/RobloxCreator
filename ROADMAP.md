@@ -103,7 +103,7 @@ APIs (existencia verificada el 2026-10-24 en la referencia oficial, ninguna depr
 - `server/DataService`: bloqueo de sesión escrito en la metadata de la clave dentro del mismo `UpdateAsync`, cola y reintentos con backoff, liberar el bloqueo en el guardado final de `PlayerRemoving` y de `BindToClose`. Seguir la guía oficial "Implement player data and purchasing systems" (`/cloud-services/data-stores/player-data-purchasing`).
 - `server/Remotes`: crea `ReplicatedStorage.Remotes`; cada remote declara la forma de sus argumentos y su límite de frecuencia.
 - Skill `roblox-security`: reglas (nunca confiar en el cliente), módulo de validación de argumentos, rate limiter por jugador y remote, checklist de auditoría, script de auditoría que liste remotes y sus validaciones.
-- Autotests ejecutables vía `execute_luau` (como `UIKit.selfTest`), con la lógica pura separada para que también se pueda probar sin Studio.
+- Autotests: la lógica pura (validación, límite, reglas del bloqueo) en módulos sin Roblox, probada con el CLI de Luau en `template/tests/` dentro de `tools/check.py`; lo que necesita Roblox, con scripts para `execute_luau` (auditoría y prueba de abuso del skill).
 - **Hecho cuando:** pasa el chequeo de B0; en Studio, los datos persisten entre sesiones y un segundo servidor no puede tomar una clave bloqueada; los autotests pasan; la auditoría de seguridad no marca errores.
 
 #### B1b. Economía, tienda y cliente
@@ -149,8 +149,8 @@ APIs (existencia verificada el 2026-10-24 en la referencia oficial, ninguna depr
 | A6 | Implementado: `team/` (flujo, tablero, decisiones) y regla en `CLAUDE.md`. Se valida con la primera tarea que una IA tome del tablero | leonel (IA) |
 | A7 | Implementado: `AGENTS.md` y `GEMINI.md` remiten a `CLAUDE.md`; `CLAUDE.local.md` explicado en `SETUP.md`. Falta probarlo con la IA del compañero | leonel (IA) |
 | B0 | Hecho: `tools/check.py`, `.github/workflows/check.yml` y `rokit.toml` en la raíz. Pasa en GitHub Actions (primer run en verde, ~12 s); el caso de falla se verificó con el mismo script y versiones en una copia con 6 errores inyectados | leonel (IA) |
-| B1a | Pendiente (siguiente) | |
-| B1b | Pendiente | |
+| B1a | Implementado: `DataService` + `SessionLock` + `Reconcile`, `Remotes` + `Validate` + `RateLimiter`, `shared/Net`, skill `roblox-security` (auditoría y prueba de abuso para Studio), 26 tests de Luau en el chequeo. Falta la prueba en Studio: persistencia, bloqueo con dos sesiones, `audit_remotes` y `abuse_test` | leonel (IA) |
+| B1b | Pendiente (siguiente) | |
 | B2 | Pendiente | |
 | B3 | Pendiente | |
 | B4 | Pendiente | |
