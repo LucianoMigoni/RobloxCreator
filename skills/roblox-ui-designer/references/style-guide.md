@@ -1,6 +1,6 @@
 # Guía de estilo
 
-El estilo de los simuladores y tycoons grandes de Roblox: formas redondas y gordas, borde oscuro grueso, color saturado con brillo arriba, texto blanco con contorno, todo rebota. Los valores por defecto están en `scripts/UIKit.luau`; si el usuario trae paleta propia, se cambia ahí.
+El estilo de los simuladores y tycoons grandes de Roblox: formas redondas y gordas, borde oscuro grueso, color saturado con brillo arriba, texto blanco con contorno, todo rebota. Los valores por defecto están en `template/src/shared/UIKit.luau`; si el usuario trae paleta propia, se cambia ahí.
 
 ## Colores con significado fijo
 

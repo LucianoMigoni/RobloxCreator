@@ -23,6 +23,8 @@ local DataConfig = {
 	DEFAULT_DATA = {
 		coins = 0,
 		inventory = {} :: { string },
+		onboardingStep = 0, -- último paso del embudo completado (OnboardingConfig.STEPS)
+		processedReceipts = {} :: { [string]: number }, -- PurchaseId → hora: compras de Robux ya otorgadas
 	},
 }
 

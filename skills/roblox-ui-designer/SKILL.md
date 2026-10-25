@@ -6,7 +6,7 @@ description: Diseña y construye la interfaz de un juego de Roblox al estilo de 
 # roblox-ui-designer
 
 ## Objetivo
-UI legible, táctil y con estilo de juego grande, construida con el kit `scripts/UIKit.luau`, sin copiar iconos, logos ni pantallas de juegos existentes.
+UI legible, táctil y con estilo de juego grande, construida con el kit `UIKit` (`template/src/shared/UIKit.luau`, que cada juego trae al copiar la plantilla), sin copiar iconos, logos ni pantallas de juegos existentes.
 
 ## Cuándo usarlo
 - Fase 3 del pipeline, o cuando otro skill necesite UI nueva (lista abajo).
@@ -26,7 +26,7 @@ UI legible, táctil y con estilo de juego grande, construida con el kit `scripts
    - No → buscar en el catálogo: `python assets/catalog.py search --type icon --commercial`. Si no hay, usar componentes nativos del kit (texto + color) y anotar qué iconos faltan.
 2. **Listar pantallas** a partir de `games/<juego>/docs/spec.md`: HUD (monedas arriba, botones laterales), popups (tienda, inventario, ajustes, ofertas), notificaciones. Escribir el inventario en `docs/ui.md` (pantalla, propósito, botones, RemoteEvent que dispara cada botón).
 3. **Aplicar el estilo** según `references/style-guide.md`: colores con significado fijo, fuente gruesa, contorno de texto, botones grandes, animaciones de rebote y escala.
-4. **Construir en código** (preferido, versionado con Rojo): copiar `scripts/UIKit.luau` a `src/shared/UIKit.luau` del juego y crear un controlador por pantalla en `src/client/` (`ShopController.client.luau`, etc.) que use `UIKit.screen`, `UIKit.sideBar`, `UIKit.currencyBar`, `UIKit.button`, `UIKit.popup`, `UIKit.open/close`.
+4. **Construir en código** (preferido, versionado con Rojo): `UIKit` ya está en `src/shared/UIKit.luau` del juego (viene de la plantilla, que es la fuente única: los cambios al kit se hacen ahí). Crear un controlador por pantalla en `src/client/Controllers/` (como `ShopController.luau` de la plantilla), arrancado desde `Main.client.luau`, que use `UIKit.screen`, `UIKit.sideBar`, `UIKit.currencyBar`, `UIKit.button`, `UIKit.popup`, `UIKit.open/close`.
    - Construir en Studio con el MCP (`execute_luau` en datamodel Edit sobre `StarterGui`) solo para prototipos rápidos; si se conserva, pasarlo a código.
 5. **Conectar con el servidor:** cada botón de acción llama a un RemoteEvent de `ReplicatedStorage.Remotes`; la UI se actualiza con lo que el servidor confirma (nunca restar monedas en el cliente). Llamar a `roblox-security` para revisar esos remotes.
 6. **Probar** con el MCP de Studio (nombres exactos en `skills/_shared/mcp-tools.md`): `list_roblox_studios` → `start_stop_play` → `user_mouse_input` para abrir/cerrar popups → `get_console_output` sin errores. `screen_capture` solo captura la vista 3D, **no la UI 2D**: para revisar la UI visualmente, pedir al usuario una captura del playtest (o usar computer-use sobre la ventana de Studio). Revisar en el emulador de dispositivos de Studio un teléfono chico en horizontal y una tablet (la tool `skill` del MCP tiene referencia de simulación de dispositivos).

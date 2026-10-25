@@ -12,7 +12,7 @@ Marcar `[x]` al completar. La IA que trabaje en un paso lo marca en el mismo com
 - [x] `CLAUDE.md` orquestador: pipeline de 10 fases, convenciones, cómo empezar un juego, catálogo.
 - [x] Catálogo de assets: `assets/index.json` (formato), `assets/LICENSES.md`, `assets/catalog.py` (search / validate / selftest).
 - [x] Referencia de MCPs con nombres reales: `skills/_shared/mcp-tools.md` + `studio-mcp-tools.json` (28 tools del MCP de Studio, lista real del servidor).
-- [x] Skill `roblox-ui-designer` (SKILL.md, references, `UIKit.luau`, `audit_ui.luau`). `UIKit.selfTest()` y la auditoría probados en Studio. El 2026-10-24 cambió el layout de `UIKit.sideBar` (zonas táctiles reservadas): verificado con `luau-lsp`, falta re-probarlo en Studio.
+- [x] Skill `roblox-ui-designer` (SKILL.md, references, `audit_ui.luau`; `UIKit.luau` vive en `template/src/shared/` desde B1b). `UIKit.selfTest()` y la auditoría probados en Studio. El 2026-10-24 cambió el layout de `UIKit.sideBar` (zonas táctiles reservadas): verificado con `luau-lsp`, falta re-probarlo en Studio.
 - [x] Entorno local de Luciano: Rokit 1.2.0, Rojo 7.7.1 (global + `template/rokit.toml`), plugin de Rojo, MCP de Studio registrado como `Roblox_Studio`.
 - [x] `template/default.project.json` (Rojo compila: `.server.luau`/`.client.luau`/`.luau` verificados).
 - [x] Repo privado en GitHub con todo el hub.
@@ -150,7 +150,7 @@ APIs (existencia verificada el 2026-10-24 en la referencia oficial, ninguna depr
 | A7 | Implementado: `AGENTS.md` y `GEMINI.md` remiten a `CLAUDE.md`; `CLAUDE.local.md` explicado en `SETUP.md`. Falta probarlo con la IA del compañero | leonel (IA) |
 | B0 | Hecho: `tools/check.py`, `.github/workflows/check.yml` y `rokit.toml` en la raíz. Pasa en GitHub Actions (primer run en verde, ~12 s); el caso de falla se verificó con el mismo script y versiones en una copia con 6 errores inyectados | leonel (IA) |
 | B1a | Implementado: `DataService` + `SessionLock` + `Reconcile`, `Remotes` + `Validate` + `RateLimiter`, `shared/Net`, skill `roblox-security` (auditoría y prueba de abuso para Studio), 26 tests de Luau en el chequeo. Falta la prueba en Studio: persistencia, bloqueo con dos sesiones, `audit_remotes` y `abuse_test` | leonel (IA) |
-| B1b | Pendiente (siguiente) | |
+| B1b | Implementado: `PlayerStateService`, `CurrencyService` + `Balance`, `InventoryService`, `ShopService` (RequestPurchase, ProcessReceipt sin otorgar dos veces, Game Passes) + `Receipts`, `OnboardingService` + `Steps`; cliente con HUD, tienda e inventario sobre `UIKit` (movido a la plantilla); 39 tests de Luau. Falta la prueba en Studio | leonel (IA) |
 | B2 | Pendiente | |
 | B3 | Pendiente | |
 | B4 | Pendiente | |

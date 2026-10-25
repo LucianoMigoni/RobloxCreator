@@ -18,7 +18,7 @@ El supuesto de partida: un exploiter puede disparar **cualquier** RemoteEvent o 
 | Contexto falso | Pide comprar lejos de la tienda, abrir una puerta sin llave, actuar muerto | El handler verifica permiso, distancia, estado y saldo **en el servidor** | Cada handler (el validador no sabe de reglas del juego) |
 | Remote solo servidor→cliente disparado por el cliente | Prueba remotes para ver qué acepta | Se rechaza y se registra (la guía lo usa también como trampa) | `Remotes.toClient` |
 | Rutas o instancias arbitrarias | Pide al servidor cargar o `require` algo que el cliente eligió | No aceptar rutas ni referencias libres; solo ids de una lista | `Validate.oneOf` |
-| Compra falsa | Dispara `PromptProductPurchaseFinished` u otra señal del cliente | Otorgar solo en `MarketplaceService.ProcessReceipt`, en el servidor | B1b (`ShopService`) |
+| Compra falsa | Dispara `PromptProductPurchaseFinished` u otra señal del cliente | Otorgar solo en `MarketplaceService.ProcessReceipt`, en el servidor | `server/Shop/ShopService.luau` |
 | Duplicación por cambio de servidor | Sale y entra rápido (o teletransporta) para que dos servidores tengan sus datos | Bloqueo de sesión en la metadata de la clave | `DataService` + `SessionLock` |
 | Datos que fallaron al cargar | Si se guardaran los valores por defecto, borraría el progreso real | Estado "errored": juega con defaults que nunca se guardan; sin compras | `DataService.canSave` |
 | ProximityPrompt / ClickDetector | Los dispara desde lejos o deshabilitados; ClickDetector no tiene ningún chequeo en el servidor | En el handler: ¿está habilitado?, ¿el personaje existe y está cerca?, límite de frecuencia | A cargo de cada juego (ver checklist) |

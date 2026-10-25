@@ -76,18 +76,22 @@ Mapeo de Rojo en la plantilla: `src/shared` → `ReplicatedStorage.Shared`, `src
 ```
 games/<juego>/
 ├── default.project.json      # Rojo
+├── rokit.toml                # versión de Rojo (igual a la de la raíz)
 ├── src/
-│   ├── server/               # ServerScriptService: datos, economía, tienda, validación
-│   ├── client/               # StarterPlayerScripts: UI, input, cámara
-│   └── shared/               # ReplicatedStorage: config, tipos, utilidades
+│   ├── server/               # ServerScriptService: Main.server.luau arranca Data, Net, Economy, Shop, Onboarding
+│   ├── client/               # StarterPlayerScripts: Main.client.luau + Controllers/ (UI, input, cámara)
+│   └── shared/               # ReplicatedStorage: Config/, UIKit, Net, Types
+├── tests/                    # lógica pura probada con el CLI de Luau (la corre tools/check.py)
 └── docs/                     # spec.md, decisiones.md, métricas, auditorías
 ```
+
+Qué trae la plantilla y cómo extenderla (un remote nuevo, un campo de datos, una moneda): `template/README.md`.
 
 ## Convenciones
 
 **Nombres**
 - Carpetas de juego y skills: `kebab-case`.
-- Módulos y scripts Luau: `PascalCase` (`DataService.luau`, `ShopController.client.luau`).
+- Módulos y scripts Luau: `PascalCase` (`DataService.luau`, `ShopController.luau`). Un solo `Main.server.luau` y un solo `Main.client.luau` arrancan los módulos.
 - Servicios del servidor terminan en `Service`; controladores del cliente en `Controller`.
 - Variables y funciones: `camelCase`. Constantes: `UPPER_SNAKE_CASE`.
 - RemoteEvents/Functions: verbo + objeto (`RequestPurchase`, `EquipItem`), creados por el servidor dentro de `ReplicatedStorage.Remotes`.
