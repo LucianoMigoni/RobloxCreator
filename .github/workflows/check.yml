@@ -1,0 +1,35 @@
+# Corre tools/check.py en cada push: rojo build, luau-lsp con los tipos de Roblox,
+# catálogo de assets, JSON y PowerShell. Las versiones salen de rokit.toml.
+name: Chequeo
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar Rojo y luau-lsp (versiones de rokit.toml)
+        run: |
+          set -euo pipefail
+          rojo=$(sed -nE 's/^rojo *= *"rojo-rbx\/rojo@([^"]+)".*/\1/p' rokit.toml)
+          lsp=$(sed -nE 's/^luau-lsp *= *"JohnnyMorganz\/luau-lsp@([^"]+)".*/\1/p' rokit.toml)
+          test -n "$rojo" && test -n "$lsp"
+          bin="$RUNNER_TEMP/bin"
+          mkdir -p "$bin"
+          curl -fsSL -o "$RUNNER_TEMP/rojo.zip" "https://github.com/rojo-rbx/rojo/releases/download/v$rojo/rojo-$rojo-linux-x86_64.zip"
+          curl -fsSL -o "$RUNNER_TEMP/luau-lsp.zip" "https://github.com/JohnnyMorganz/luau-lsp/releases/download/$lsp/luau-lsp-linux-x86_64.zip"
+          unzip -o -q "$RUNNER_TEMP/rojo.zip" -d "$bin"
+          unzip -o -q "$RUNNER_TEMP/luau-lsp.zip" -d "$bin"
+          chmod +x "$bin/rojo" "$bin/luau-lsp"
+          echo "$bin" >> "$GITHUB_PATH"
+
+      - name: Chequeo
+        run: python3 tools/check.py

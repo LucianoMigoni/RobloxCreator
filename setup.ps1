@@ -90,29 +90,32 @@ if (Test-Path (Join-Path $link '_shared/mcp-tools.md')) {
 }
 
 # ---------------------------------------------------------------------------
-Write-Step '3. Rokit, Rojo y plugin de Rojo (SETUP.md, pasos 2 a 4)'
+Write-Step '3. Rokit, Rojo, luau-lsp y plugin de Rojo (SETUP.md, pasos 2 a 4)'
 
 if (Test-Program rokit @('--version') 'paso 2') {
-    $projects = @(Join-Path $root 'template')
+    # rokit.toml de la raiz (Rojo + luau-lsp), el de template/ y el de cada juego.
+    $projects = @($root, (Join-Path $root 'template'))
     $gamesDir = Join-Path $root 'games'
     if (Test-Path $gamesDir) {
         $projects += Get-ChildItem $gamesDir -Directory |
             Where-Object { Test-Path (Join-Path $_.FullName 'rokit.toml') } |
             ForEach-Object { $_.FullName }
     }
-    Push-Location (Join-Path $root 'template')
+    Push-Location $root
     try {
         if (-not $CheckOnly) {
-            & rokit trust rojo-rbx/rojo
+            & rokit trust rojo-rbx/rojo JohnnyMorganz/luau-lsp
             foreach ($project in $projects) {
                 Write-Host "  rokit install en $project"
                 Push-Location $project
                 try { & rokit install } finally { Pop-Location }
             }
         }
-        # Rojo se resuelve por el rokit.toml de la carpeta actual: en la raiz del repo no hay.
+        Test-Program luau-lsp @('--version') 'pasos 2-3' | Out-Null
         if (Test-Program rojo @('--version') 'pasos 2-3') {
-            if (-not $CheckOnly) {
+            if (-not ($onWindows -or $IsMacOS)) {
+                Write-Host '  plugin de Rojo: Roblox Studio no existe para este sistema, se omite.'
+            } elseif (-not $CheckOnly) {
                 # Reinstalar siempre deja el plugin en la misma version que el Rojo fijado.
                 & rojo plugin install
                 if ($LASTEXITCODE -eq 0) { Write-Ok 'plugin de Rojo instalado (reiniciar Studio si estaba abierto)' }
@@ -157,16 +160,14 @@ if (-not $mcpServer) {
 }
 
 # ---------------------------------------------------------------------------
-Write-Step '5. Verificacion del hub (SETUP.md, paso 9)'
+Write-Step '5. Chequeo del hub: tools/check.py, el mismo que corre GitHub (SETUP.md, paso 9)'
 
 if ($python) {
     Push-Location $root
     try {
-        foreach ($catalogCmd in @('selftest', 'validate')) {
-            $result = Invoke-Probe $python @('assets/catalog.py', $catalogCmd)
-            if ($result) { Write-Ok "catalog.py ${catalogCmd}: $result" }
-            else { Write-Missing "catalog.py $catalogCmd fallo: correr '$python assets/catalog.py $catalogCmd' para ver el error" }
-        }
+        & $python tools/check.py
+        if ($LASTEXITCODE -eq 0) { Write-Ok 'tools/check.py sin errores' }
+        else { Write-Missing 'tools/check.py marco errores (ver arriba)' }
     } finally {
         Pop-Location
     }

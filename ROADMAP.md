@@ -90,8 +90,8 @@ Quién prueba qué: el código se puede escribir y verificar estáticamente desd
 ### B0. Verificación automática en cada PR (nuevo, antes de B1)
 Lo que se usó para revisar el hub el 2026-10-24, convertido en un chequeo que corre solo:
 - GitHub Action en cada PR: `rojo build` de `template/` y de cada `games/<juego>/`, `luau-lsp analyze` con las definiciones de tipos de Roblox sobre `template/src`, `games/*/src` y `skills/*/scripts`, y `python assets/catalog.py selftest` + `validate`.
-- El mismo chequeo para correr a mano antes del PR (script en la raíz, p. ej. `check.ps1`).
-- Fijar versiones: Rojo de `template/rokit.toml`; `luau-lsp` y sus definiciones con versión explícita.
+- El mismo chequeo para correr a mano antes del PR: `python tools/check.py` (Python, que ya es requisito: corre igual en Windows y en Linux).
+- Fijar versiones: Rojo y `luau-lsp` en `rokit.toml` de la raíz (fuente única para la PC de cada uno y para GitHub); las definiciones de tipos, del tag de esa versión de `luau-lsp`.
 - **Hecho cuando:** un PR con un error de tipos o una propiedad inexistente falla el chequeo, y uno correcto pasa.
 
 ### B1. Plantilla de código base + `roblox-security` (paso 3)
@@ -141,7 +141,7 @@ Plantilla (`template/src/`), todo lo sensible en el servidor:
 | A5 | Implementado: config común de Obsidian y pasos en `SETUP.md`. Falta la prueba entre los dos | leonel (IA) |
 | A6 | Implementado: `team/` (flujo, tablero, decisiones) y regla en `CLAUDE.md`. Se valida con la primera tarea que una IA tome del tablero | leonel (IA) |
 | A7 | Implementado: `AGENTS.md` y `GEMINI.md` remiten a `CLAUDE.md`; `CLAUDE.local.md` explicado en `SETUP.md`. Falta probarlo con la IA del compañero | leonel (IA) |
-| B0 | Pendiente (nuevo) | |
+| B0 | Implementado: `tools/check.py`, `.github/workflows/check.yml` y `rokit.toml` en la raíz. Verificado localmente: falla con 6 errores inyectados (incluido un `require` mal usado) y pasa en el repo. Falta ver el primer run en GitHub | leonel (IA) |
 | B1 | Pendiente | |
 | B2 | Pendiente | |
 | B3 | Pendiente | |

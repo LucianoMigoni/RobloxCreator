@@ -20,6 +20,9 @@ CLAUDE.local.md
 *.rbxlx.lock
 sourcemap.json
 
+# Descargas de tools/check.py (definiciones de tipos de Roblox)
+.cache/
+
 # Python
 __pycache__/
 *.pyc

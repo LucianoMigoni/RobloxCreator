@@ -40,21 +40,21 @@ Invoke-RestMethod https://raw.githubusercontent.com/rojo-rbx/rokit/main/scripts/
 
 Alternativa: bajar `rokit-<versión>-windows-x86_64.zip` del [último release](https://github.com/rojo-rbx/rokit/releases/latest) y correr `rokit.exe self-install`. **Cerrar y reabrir la terminal** para que tome el PATH nuevo.
 
-## 3. Rojo
+## 3. Rojo y luau-lsp
 
-Lo hace `setup.ps1`. A mano, dentro de `template/` (y de cada `games/<juego>/`):
+Lo hace `setup.ps1`. Las versiones están fijadas en `rokit.toml` de la raíz (Rojo y luau-lsp, el analizador de tipos de Luau) y en `template/rokit.toml` (Rojo, que copia cada juego). A mano:
 
 ```powershell
-rokit trust rojo-rbx/rojo
-rokit install
-rojo --version   # 7.7.1, la fijada en rokit.toml
+rokit trust rojo-rbx/rojo JohnnyMorganz/luau-lsp
+rokit install                      # en la raíz del repo
+cd template; rokit install; cd ..  # y en cada games/<juego>/
+rojo --version                     # 7.7.1
+luau-lsp --version                 # 1.70.1
 ```
-
-`rojo` responde según el `rokit.toml` de la carpeta actual: en la raíz del repo no hay, así que ahí puede fallar. Es normal.
 
 ## 4. Plugin de Rojo para Studio
 
-Lo hace `setup.ps1`. A mano, dentro de `template/`: `rojo plugin install`. Deja `RojoManagedPlugin.rbxm` en `%LOCALAPPDATA%\Roblox\Plugins`. Reiniciar Studio. Repetir cada vez que se actualice Rojo, para que el plugin y Rojo tengan la misma versión.
+Lo hace `setup.ps1`. A mano: `rojo plugin install`. Deja `RojoManagedPlugin.rbxm` en `%LOCALAPPDATA%\Roblox\Plugins`. Reiniciar Studio. Repetir cada vez que se actualice Rojo, para que el plugin y Rojo tengan la misma versión.
 
 ## 5. MCP de Roblox Studio
 
@@ -95,7 +95,7 @@ En macOS o Linux: `mkdir -p .claude && ln -s ../skills .claude/skills`. Reinicia
 
 ## 9. Verificación
 
-1. `powershell -ExecutionPolicy Bypass -File .\setup.ps1 -CheckOnly` termina en **Todo listo**.
+1. `powershell -ExecutionPolicy Bypass -File .\setup.ps1 -CheckOnly` termina en **Todo listo**. Incluye `python tools/check.py`, el mismo chequeo que corre GitHub en cada push: se puede correr solo, en cualquier momento.
 2. En Claude Code, desde la raíz del repo, escribir `/roblox` debe sugerir los skills del hub (p. ej. `/roblox-ui-designer`).
 3. Con Studio abierto y el paso 5 hecho, pedirle a Claude Code: "llamá a `list_roblox_studios`". Debe devolver el Studio abierto con su `studio_id`.
 

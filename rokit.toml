@@ -1,0 +1,7 @@
+# Herramientas del hub, fijadas para todos (y para el chequeo de GitHub Actions).
+# `rokit install` en la raíz las instala; `tools/check.py` verifica que template/ y
+# cada juego fijen la misma versión de Rojo.
+
+[tools]
+rojo = "rojo-rbx/rojo@7.7.1"
+luau-lsp = "JohnnyMorganz/luau-lsp@1.70.1"

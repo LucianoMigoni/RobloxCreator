@@ -4,7 +4,7 @@ Formato y flujo: `team/README.md`. Detalle de cada paso del hub: `ROADMAP.md`.
 
 ## En curso
 
-- [ ] Fase A — revisión y merge del PR de la rama leonelblumberg/quirky-dijkstra-2kxnwz — hub · @luciano · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub
+- [ ] Fase A + B0 — abrir el PR de la rama (@leonel) y revisarlo/mergearlo (@luciano) — hub · @leonel @luciano · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub
 
 ## Pendiente
 
@@ -14,7 +14,6 @@ Formato y flujo: `team/README.md`. Detalle de cada paso del hub: `ROADMAP.md`.
 - [ ] A7: probar que la IA del compañero (Codex, Gemini u otra) sigue `CLAUDE.md` vía `AGENTS.md` — hub · @leonel · rama — · juego: hub
 - [ ] A5: probar Obsidian entre los dos (un cambio de uno le llega al otro tras el merge) — hub · @luciano @leonel · rama — · juego: hub
 - [ ] UI: probar en Studio el nuevo `UIKit.sideBar` (emulador: teléfono chico horizontal y tablet), correr `UIKit.selfTest()` y `audit_ui.luau` — ui · @luciano · rama — · juego: hub
-- [ ] B0: verificación automática en cada PR (rojo build + luau-lsp + catálogo) — hub · @nadie · rama — · juego: hub
 - [ ] B1: plantilla de código base + skill `roblox-security` — servidor · @nadie · rama — · juego: hub
 - [ ] B2: skills `roblox-game-cloner` + `roblox-ideation` — hub · @nadie · rama — · juego: hub
 - [ ] B3: skills `roblox-monetization` + `roblox-metrics-growth` — hub · @nadie · rama — · juego: hub
@@ -33,3 +32,4 @@ Formato y flujo: `team/README.md`. Detalle de cada paso del hub: `ROADMAP.md`.
 - [x] A6: carpeta `team/` (flujo, tablero, decisiones) — docs · @leonel · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub · 2026-10-24
 - [x] A7: `AGENTS.md` y `GEMINI.md` remiten a `CLAUDE.md` — docs · @leonel · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub · 2026-10-24
 - [x] Referencia del algoritmo de descubrimiento 2026 (`skills/_shared/algoritmo-descubrimiento.md`) — docs · @leonel · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub · 2026-10-24
+- [x] B0: chequeo automático (`tools/check.py` + GitHub Actions + `rokit.toml` en la raíz) — hub · @leonel · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub · 2026-10-25
