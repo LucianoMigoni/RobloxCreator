@@ -95,15 +95,22 @@ Lo que se usó para revisar el hub el 2026-10-24, convertido en un chequeo que c
 - **Hecho cuando:** un PR con un error de tipos o una propiedad inexistente falla el chequeo, y uno correcto pasa.
 
 ### B1. Plantilla de código base + `roblox-security` (paso 3)
-Plantilla (`template/src/`), todo lo sensible en el servidor:
-- `server/`: `DataService` (bloqueo de sesión escrito en la metadata de la clave dentro del mismo `UpdateAsync`, cola y reintentos con backoff, liberar el bloqueo en el guardado final de `PlayerRemoving` y de `BindToClose`; seguir la guía oficial "Implement player data and purchasing systems", `/cloud-services/data-stores/player-data-purchasing`), `CurrencyService`, `ShopService` (compras con monedas del juego + `MarketplaceService.ProcessReceipt` idempotente para Developer Products, verificación de Game Passes), `InventoryService`, `OnboardingService` (primer minuto jugable; registra cada paso con `AnalyticsService:LogOnboardingFunnelStepEvent` para medir dónde rebotan), `Remotes` (crea `ReplicatedStorage.Remotes`, validación de argumentos y rate limiting).
-- `shared/`: `Config/` (precios, economía, productos), `UIKit.luau` (mover desde el skill de UI), tipos comunes.
-- `client/`: controladores de HUD, tienda e inventario usando `UIKit`; input.
-- Autotests ejecutables vía `execute_luau` (como `UIKit.selfTest`).
-- APIs (existencia verificada el 2026-10-24 en la referencia oficial, ninguna deprecada; revisar firmas y límites al implementar): `DataStoreService:GetDataStore`, `GlobalDataStore:UpdateAsync`, `DataStoreService:GetRequestBudgetForRequestType` y los límites de DataStores, `MarketplaceService.ProcessReceipt`, `MarketplaceService:UserOwnsGamePassAsync`, `MarketplaceService:PromptGamePassPurchase`, `MarketplaceService:PromptProductPurchase`, `Players.PlayerRemoving`, `DataModel:BindToClose`, `AnalyticsService:LogOnboardingFunnelStepEvent`. `MemoryStoreService` solo si hace falta algo que la guía oficial no cubre.
+Todo lo sensible en el servidor. Se divide en dos PRs porque B1b depende de B1a (datos y remotes seguros) y un solo PR sería demasiado grande para revisar.
 
-`roblox-security`: reglas (nunca confiar en el cliente), módulo de validación de argumentos, rate limiter por jugador y remote, checklist de auditoría, script de auditoría que liste remotes y sus validaciones.
-- **Hecho cuando:** un juego copiado de `template/` pasa el chequeo de B0 y corre en Studio con datos persistentes, monedas, tienda e inventario; los autotests pasan; la auditoría de seguridad no marca errores.
+APIs (existencia verificada el 2026-10-24 en la referencia oficial, ninguna deprecada; revisar firmas y límites al implementar): `DataStoreService:GetDataStore`, `GlobalDataStore:UpdateAsync`, `DataStoreService:GetRequestBudgetForRequestType` y los límites de DataStores, `MarketplaceService.ProcessReceipt`, `MarketplaceService:UserOwnsGamePassAsync`, `MarketplaceService:PromptGamePassPurchase`, `MarketplaceService:PromptProductPurchase`, `Players.PlayerRemoving`, `DataModel:BindToClose`, `AnalyticsService:LogOnboardingFunnelStepEvent`. `MemoryStoreService` solo si hace falta algo que la guía oficial no cubre.
+
+#### B1a. Datos y seguridad
+- `server/DataService`: bloqueo de sesión escrito en la metadata de la clave dentro del mismo `UpdateAsync`, cola y reintentos con backoff, liberar el bloqueo en el guardado final de `PlayerRemoving` y de `BindToClose`. Seguir la guía oficial "Implement player data and purchasing systems" (`/cloud-services/data-stores/player-data-purchasing`).
+- `server/Remotes`: crea `ReplicatedStorage.Remotes`; cada remote declara la forma de sus argumentos y su límite de frecuencia.
+- Skill `roblox-security`: reglas (nunca confiar en el cliente), módulo de validación de argumentos, rate limiter por jugador y remote, checklist de auditoría, script de auditoría que liste remotes y sus validaciones.
+- Autotests ejecutables vía `execute_luau` (como `UIKit.selfTest`), con la lógica pura separada para que también se pueda probar sin Studio.
+- **Hecho cuando:** pasa el chequeo de B0; en Studio, los datos persisten entre sesiones y un segundo servidor no puede tomar una clave bloqueada; los autotests pasan; la auditoría de seguridad no marca errores.
+
+#### B1b. Economía, tienda y cliente
+- `server/`: `CurrencyService`, `ShopService` (compras con monedas del juego + `MarketplaceService.ProcessReceipt` idempotente para Developer Products, verificación de Game Passes), `InventoryService`, `OnboardingService` (primer minuto jugable; registra cada paso con `AnalyticsService:LogOnboardingFunnelStepEvent` para medir dónde rebotan).
+- `shared/`: `Config/` (precios, economía, productos), tipos comunes y `UIKit.luau`. La fuente pasa a ser `template/src/shared/UIKit.luau`, y el skill de UI apunta ahí, para no mantener dos copias.
+- `client/`: controladores de HUD, tienda e inventario usando `UIKit`; input.
+- **Hecho cuando:** un juego copiado de `template/` pasa el chequeo de B0 y corre en Studio con datos persistentes, monedas, tienda e inventario; los autotests pasan; `roblox-security` audita sus remotes sin errores.
 
 ### B2. `roblox-game-cloner` + `roblox-ideation` (paso 4)
 - Cloner (tomar mecánicas, nunca título, thumbnails, mapa ni place file: un clon reconocible es "no único" y Roblox le baja la exposición): análisis → RE opcional con REA (tools reales de `mcp-tools.md`) → `docs/spec.md` (plantilla en `references/`) → adaptación a Roblox → assets (Blender MCP: escala, pivote, export FBX para Studio; o catálogo) → construcción con MCP de Studio → llamada a `roblox-ui-designer` → verificación mecánica por mecánica contra la spec.
@@ -141,8 +148,9 @@ Plantilla (`template/src/`), todo lo sensible en el servidor:
 | A5 | Implementado: config común de Obsidian y pasos en `SETUP.md`. Falta la prueba entre los dos | leonel (IA) |
 | A6 | Implementado: `team/` (flujo, tablero, decisiones) y regla en `CLAUDE.md`. Se valida con la primera tarea que una IA tome del tablero | leonel (IA) |
 | A7 | Implementado: `AGENTS.md` y `GEMINI.md` remiten a `CLAUDE.md`; `CLAUDE.local.md` explicado en `SETUP.md`. Falta probarlo con la IA del compañero | leonel (IA) |
-| B0 | Implementado: `tools/check.py`, `.github/workflows/check.yml` y `rokit.toml` en la raíz. Verificado localmente: falla con 6 errores inyectados (incluido un `require` mal usado) y pasa en el repo. Falta ver el primer run en GitHub | leonel (IA) |
-| B1 | Pendiente | |
+| B0 | Hecho: `tools/check.py`, `.github/workflows/check.yml` y `rokit.toml` en la raíz. Pasa en GitHub Actions (primer run en verde, ~12 s); el caso de falla se verificó con el mismo script y versiones en una copia con 6 errores inyectados | leonel (IA) |
+| B1a | Pendiente (siguiente) | |
+| B1b | Pendiente | |
 | B2 | Pendiente | |
 | B3 | Pendiente | |
 | B4 | Pendiente | |

@@ -14,7 +14,8 @@ Formato y flujo: `team/README.md`. Detalle de cada paso del hub: `ROADMAP.md`.
 - [ ] A7: probar que la IA del compañero (Codex, Gemini u otra) sigue `CLAUDE.md` vía `AGENTS.md` — hub · @leonel · rama — · juego: hub
 - [ ] A5: probar Obsidian entre los dos (un cambio de uno le llega al otro tras el merge) — hub · @luciano @leonel · rama — · juego: hub
 - [ ] UI: probar en Studio el nuevo `UIKit.sideBar` (emulador: teléfono chico horizontal y tablet), correr `UIKit.selfTest()` y `audit_ui.luau` — ui · @luciano · rama — · juego: hub
-- [ ] B1: plantilla de código base + skill `roblox-security` — servidor · @nadie · rama — · juego: hub
+- [ ] B1a: datos y seguridad (`DataService` con bloqueo de sesión, `Remotes`, skill `roblox-security`) — servidor · @nadie · rama — · juego: hub
+- [ ] B1b: economía, tienda y cliente (Currency, Shop, Inventory, Onboarding, controladores) — servidor · @nadie · rama — · juego: hub
 - [ ] B2: skills `roblox-game-cloner` + `roblox-ideation` — hub · @nadie · rama — · juego: hub
 - [ ] B3: skills `roblox-monetization` + `roblox-metrics-growth` — hub · @nadie · rama — · juego: hub
 - [ ] B4: skills `roblox-qa-performance`, `roblox-compliance`, `roblox-publishing`, `roblox-liveops` — hub · @nadie · rama — · juego: hub
