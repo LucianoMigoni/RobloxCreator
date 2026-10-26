@@ -148,15 +148,19 @@ function UIKit.sideBar(parent: Instance): Frame
 		Name = "SideBar",
 		BackgroundTransparency = 1,
 		Position = UDim2.fromScale(0.01, 0.02),
-		Size = UDim2.fromScale(0.12, 0.4),
+		Size = UDim2.fromScale(0.11, 0.4), -- 3 botones de 11 % + 2 huecos de 3 % caben en el 40 %
 		SizeConstraint = Enum.SizeConstraint.RelativeYY, -- mismo tamaño en 19.5:9 y en 4:3
 	}, parent)
 	new("UIListLayout", {
-		Padding = UDim.new(0.03, 0),
+		Padding = UDim.new(0.075, 0), -- relativo a la barra (0.4): 3 % del alto de pantalla
 		SortOrder = Enum.SortOrder.LayoutOrder,
 		VerticalAlignment = Enum.VerticalAlignment.Top,
 		Wraps = true, -- desde el 4.º botón abre otra columna en vez de bajar hacia el joystick
 	}, bar)
+	-- El MinSize de cada botón no alcanza: junto al UIAspectRatioConstraint y la lista, Roblox lo
+	-- respeta solo en el ancho (44x30 en un Galaxy A06). Con la barra a 44 px de ancho mínimo, el
+	-- botón cuadrado ocupa todo el ancho y mide 44x44.
+	new("UISizeConstraint", { MinSize = Vector2.new(UIKit.MIN_TOUCH_PX, 0) }, bar)
 	return bar
 end
 
@@ -194,6 +198,7 @@ function UIKit.currencyBar(parent: Instance): Frame
 		AnchorPoint = Vector2.new(0.5, 0),
 		Position = UDim2.fromScale(0.5, 0.01),
 		Size = UDim2.fromScale(0.6, 0.1),
+		ZIndex = 10, -- por encima de los popups: el saldo se ve mientras se compra
 	}, parent)
 	new("UIListLayout", {
 		FillDirection = Enum.FillDirection.Horizontal,

@@ -28,7 +28,7 @@ Fuentes: https://create.roblox.com/docs/studio/mcp y la lista real del servidor 
 | `multi_edit` | Editar o crear scripts (crea el script si la ruta no existe). |
 | `start_stop_play` | Iniciar/detener playtest. |
 | `get_console_output` | Leer la salida (errores, prints de autotest). |
-| `screen_capture` | Captura del viewport 3D (mapas, modelos). No incluye la UI 2D (comprobado 2026-10-22). |
+| `screen_capture` | Captura del viewport. En playtest incluye la UI del `PlayerGui` (comprobado 2026-10-26); en modo edición no muestra UI puesta en `CoreGui`. Con el simulador de dispositivos, captura la pantalla del dispositivo elegido. |
 | `character_navigation` / `user_keyboard_input` / `user_mouse_input` | Simular jugador en playtest. |
 | `search_asset` / `insert_asset` | Creator Store / inventario; insertar por asset ID. |
 | `generate_mesh` / `generate_material` / `generate_procedural_model` / `wait_job_finished` | Generación nativa de Roblox (alternativa a Blender). |

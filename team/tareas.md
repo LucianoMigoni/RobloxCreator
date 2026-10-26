@@ -4,8 +4,6 @@ Formato y flujo: `team/README.md`. Detalle de cada paso del hub: `ROADMAP.md`.
 
 ## En curso
 
-- [ ] UI: probar en Studio el nuevo `UIKit.sideBar` (emulador: teléfono chico horizontal y tablet), correr `UIKit.selfTest()` y `audit_ui.luau` — ui · @luciano · rama luciano/fase-c · juego: hub
-- [ ] B4: correr en Studio `perf_snapshot.luau` (Client y Server) sobre la plantilla y anotar la primera foto de rendimiento; elegir el teléfono base del equipo — qa · @luciano · rama luciano/fase-c · juego: hub
 - [ ] C1: primer asset real en el catálogo — mapa · @luciano · rama luciano/fase-c · juego: hub
 - [ ] C2: juego de prueba de punta a punta en `games/prueba/` (arranca con `roblox-ideation` usando datos reales de Charts aportados por ustedes; se lanza primero a 16+) — fase 1 (ideación) en curso — hub · @luciano @leonel · rama luciano/fase-c · juego: prueba
 - [ ] Fase A + B0 — abrir el PR de la rama (@leonel) y revisarlo/mergearlo (@luciano) — hub · @leonel @luciano · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub
@@ -24,6 +22,8 @@ Formato y flujo: `team/README.md`. Detalle de cada paso del hub: `ROADMAP.md`.
 
 ## Hecho
 
+- [x] UI: probar en Studio el nuevo `UIKit.sideBar` (emulador: teléfono chico horizontal y tablet), correr `UIKit.selfTest()` y `audit_ui.luau` — ui · @luciano · rama luciano/fase-c · juego: hub · 2026-10-26
+- [x] B4: correr en Studio `perf_snapshot.luau` (Client y Server) sobre la plantilla y anotar la primera foto de rendimiento; elegir el teléfono base del equipo — qa · @luciano · rama luciano/fase-c · juego: hub · 2026-10-26
 - [x] A1: el compañero tiene acceso de escritura al repo — hub · @luciano · rama — · juego: hub · 2026-10-24
 - [x] A2: monorepo con ramas y PR en `CLAUDE.md` — docs · @leonel · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub · 2026-10-24
 - [x] A3: `setup.ps1` crea el enlace de skills y verifica el entorno — hub · @leonel · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub · 2026-10-24

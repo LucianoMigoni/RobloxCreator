@@ -26,7 +26,7 @@ Nunca reutilizar un color para otro significado: el jugador aprende el código e
 | Componente | Forma | Detalles |
 |---|---|---|
 | Botón | `UICorner` 0.25 (Scale), borde 3 px, gradiente vertical | Texto `TextScaled`, rebote al presionar |
-| Botón lateral | Cuadrado, ~12 % del alto de pantalla, mín. 44 px | Icono arriba + palabra corta abajo |
+| Botón lateral | Cuadrado, ~11 % del alto de pantalla, mín. 44 px, separados 3 % del alto | Icono arriba + palabra corta abajo |
 | Contador de moneda | Píldora (`UICorner` 0.5), relación 3:1 | Icono de la moneda a la izquierda, número abreviado (1.2K, 3.4M) |
 | Popup | Panel neutral, `UICorner` 0.08, borde 4 px, relación ~1.4:1 | Título arriba, cerrar rojo en la esquina superior derecha, sobresaliendo |
 | Notificación | Píldora arriba al centro | Entra deslizando, se va sola en 2–3 s |

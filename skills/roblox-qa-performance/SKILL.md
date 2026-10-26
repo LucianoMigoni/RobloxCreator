@@ -28,7 +28,7 @@ Que el juego cargue rápido, no se caiga en un teléfono modesto y no tenga erro
 1. **Chequeo estático:** `python tools/check.py` en verde.
 2. **Playtest con el MCP** (nombres en `skills/_shared/mcp-tools.md`): `list_roblox_studios` → `start_stop_play` → jugar el primer minuto con `character_navigation`, `user_mouse_input` y `user_keyboard_input` → `get_console_output` **sin errores ni warnings nuevos**.
 3. **Foto de rendimiento:** `execute_luau` con `scripts/perf_snapshot.luau`, en Client y en Server. Comparar con la foto anterior en `docs/qa.md`: memoria, instancias, draw calls. Cualquier salto se explica o se corrige.
-4. **Auditorías:** `audit_ui.luau` (`roblox-ui-designer`) en teléfono chico y tablet con el emulador; `audit_remotes.luau` y `abuse_test.luau` (`roblox-security`).
+4. **Auditorías:** `audit_ui.luau` (`roblox-ui-designer`) en teléfono chico y tablet con el emulador (cómo manejarlo con el MCP: paso 6 de `roblox-ui-designer`); `audit_remotes.luau` y `abuse_test.luau` (`roblox-security`).
 5. **Dispositivo real** (persona): abrir el juego publicado en el teléfono base y medir el tiempo hasta poder jugar, la memoria en la Developer Console, los controles táctiles (zonas reservadas) y si los textos se leen.
 6. **Escribir `docs/qa.md`** con la checklist, las fotos de rendimiento y los problemas encontrados (cada uno con su dueño), y mostrarlo.
 

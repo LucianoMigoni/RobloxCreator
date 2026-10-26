@@ -68,12 +68,14 @@ for _, inst in root:GetDescendants() do
 		if inst:IsA("GuiButton") then
 			local c = inst:FindFirstChildOfClass("UISizeConstraint")
 			local hasFloor = c ~= nil and c.MinSize.X >= MIN_TOUCH_PX and c.MinSize.Y >= MIN_TOUCH_PX
+			-- Se mide siempre: un MinSize junto a UIAspectRatioConstraint y layouts no garantiza el
+			-- tamaño (en un Galaxy A06 dio 44x30 con MinSize 44x44).
 			local k = effectiveScale(inst)
-			if not hasFloor and k > 0 then
+			if k > 0 then
 				local abs = inst.AbsoluteSize / k
 				if abs.X < MIN_TOUCH_PX or abs.Y < MIN_TOUCH_PX then
 					add("ERROR", inst, string.format("botón de %dx%d px, menor a %d px para dedo", abs.X, abs.Y, MIN_TOUCH_PX))
-				else
+				elseif not hasFloor then
 					add("WARN", inst, "sin UISizeConstraint.MinSize: puede quedar chico en teléfonos")
 				end
 			end
