@@ -56,12 +56,17 @@ Fuentes, todas vistas el **2026-10-26**:
 - Cuántos jugadores tienen menos de 16.
 
 ## Reglas para no ser un clon
-- **Criaturas, arte, nombres y mapa propios.** No usar personajes "brainrot" de memes de internet: tienen autores y son propiedad intelectual ajena (`roblox-compliance`).
+- **Criaturas, arte, nombres y mapa propios.** En este juego no se usan personajes "brainrot": decisión de Luciano (2026-10-26) para diferenciarse. Existen packs de brainrots gratis o con licencia comercial; si otro juego los quiere usar, entran como cualquier asset de terceros, con su licencia en `assets/LICENSES.md`.
 - **Título propio.** Puede usar el patrón "Roba un…", que los jugadores ya entienden, pero no el nombre ni las imágenes de un juego existente.
 - **Al menos una mecánica central que las referencias no tengan.**
-- **Monetización honesta** (`roblox-monetization`):
-  - Nada de suerte paga sin probabilidades visibles; en el MVP directamente no se vende suerte.
-  - Las reposiciones de la tienda del juego son con moneda del juego y no se aceleran con Robux.
+
+## Monetización: como los juegos del estilo, dentro de las reglas
+Pagar **da ventajas importantes**, como en las referencias: multiplicadores, más espacios, velocidad, suerte, protección y compra directa (decisión del 2026-10-26, `roblox-monetization`). Lo que sigue prohibido son las reglas oficiales de Roblox:
+- Suerte o resultados aleatorios pagados con Robux: mostrar **todos** los resultados y sus **probabilidades** (con y sin el impulso), y bloquearlos con `PolicyService` a quien tenga `ArePaidRandomItemsRestricted`.
+- Ninguna urgencia falsa ni cuenta regresiva que se reinicia. Si la tienda del juego se repone cada X minutos, el temporizador es real y no se reinicia al entrar.
+- Cada producto dice su efecto exacto, y el servidor da exactamente eso.
+
+Criterio del hub: el que no paga sigue pudiendo jugar y progresar; si se va, cae la retención, que es lo que más pesa en el algoritmo.
 
 ## Conceptos
 
@@ -83,16 +88,15 @@ Fuentes, todas vistas el **2026-10-26**:
   - Robar y defender: entrás a otra base, agarrás un bicho y volvés más lento mientras lo llevás; el dueño puede empujarte para que lo sueltes.
   - Los amigos se defienden entre ellos.
   - Servidores de 8.
-- **Anti-frustración:**
+- **Anti-frustración (gratis para todos):**
   - Los jugadores nuevos no pueden ser robados durante los primeros minutos.
-  - La base tiene una traba de un rato.
+  - La base tiene una traba de 60 s.
   - El bicho más valioso de cada jugador no se puede robar.
-- **Monetización honesta:**
-  - Cosméticos de base y de cinta, que los demás ven.
-  - Un pase de cobro automático, que ahorra tiempo.
-  - Un pack de inicio único.
-  - Compra directa de un bicho concreto con precio a la vista.
-  - Sin cajas pagas.
+- **Monetización:**
+  - *Game Passes:* x2 monedas; +4 pedestales en la base; traba de base de 120 s en vez de 60; x1,5 de velocidad al llevar un bicho robado; VIP (cinta propia con bichos un nivel más alto y x1,5 monedas).
+  - *Developer Products:* packs de monedas; compra directa de un bicho de nivel alto con precio a la vista; escudo de 15 min (nadie te roba); "fusión con suerte", que sube la probabilidad de mutación y muestra los porcentajes con y sin el impulso, con `PolicyService`.
+  - *Cosméticos:* skins de base y de cinta, que los demás ven.
+  - *Pack de inicio:* una sola vez.
 - **Género / subgénero oficial:** Simulation / Tycoon.
 - **Público y etiqueta esperada:** todas las edades. El robo es un juego de atrapar, sin violencia; el "empujón" es cómico.
 - **Alcance:**
@@ -113,7 +117,11 @@ Fuentes, todas vistas el **2026-10-26**:
 - **Primer minuto:** a los 10 s plantás; la primera semilla está hecha para crecer en 20 s y el primer bicho nace antes del minuto.
 - **Volver D2–7 / D8–28:** lo que crece en tiempo real hace volver al día siguiente; además, climas raros, álbum y temporadas.
 - **Con amigos:** regar el jardín de un amigo acelera su crecimiento, y se pueden visitar y mostrar los jardines. Servidores de 4–6.
-- **Monetización honesta:** cosméticos de jardín, un pase de regadera automática que ahorra tiempo, pack de inicio. Las reposiciones no se pagan.
+- **Monetización:**
+  - *Game Passes:* x2 velocidad de crecimiento; +6 parcelas; regadera automática; VIP con semillas exclusivas.
+  - *Developer Products:* semilla rara concreta con precio a la vista; reponer la tienda de semillas ya (el temporizador es real); abono de suerte con las probabilidades de clima o mutación visibles y `PolicyService`; packs de monedas.
+  - *Cosméticos:* decoración de jardín.
+  - *Pack de inicio:* una sola vez.
 - **Género / subgénero oficial:** Simulation / Tycoon.
 - **Público y etiqueta esperada:** todas las edades.
 - **Alcance:** parcelas, temporizadores de crecimiento, clima por servidor y bichos. No necesita la física de robar. MVP de 3 semanas.
@@ -126,7 +134,12 @@ Fuentes, todas vistas el **2026-10-26**:
 - **Primer minuto:** a los 5 s excavás y antes de 30 s tenés el primer hueso; el primer esqueleto chico se completa en el primer minuto.
 - **Volver D2–7 / D8–28:** completar especies, dinosaurios de temporada y el museo como vitrina.
 - **Con amigos:** excavar juntos en zonas grandes, visitar museos, regalar piezas repetidas.
-- **Monetización honesta:** cosméticos de museo, pase de pala doble que ahorra tiempo, pack de inicio.
+- **Monetización:**
+  - *Game Passes:* pala x2; zona de excavación VIP con más piezas raras; +espacio en el museo.
+  - *Developer Products:* comprar la pieza exacta que te falta; suerte de pieza rara con probabilidades visibles y `PolicyService`.
+  - *Cosméticos:* cosméticos de museo.
+  - *Pack de inicio:* una sola vez.
+  - Sin robo hay menos motivo social para pagar.
 - **Género / subgénero oficial:** Simulation / Tycoon.
 - **Público y etiqueta esperada:** todas las edades.
 - **Alcance:** excavación (puntos de excavación, no terreno libre), piezas en el inventario de la plantilla, armado y museo. MVP de 3–4 semanas.
@@ -139,7 +152,11 @@ Fuentes, todas vistas el **2026-10-26**:
 - **Primer minuto:** a los 10 s lanzás y antes de 30 s sale el primer pez.
 - **Volver D2–7 / D8–28:** colección por rareza, peces de temporada y ganancias sin estar conectado.
 - **Con amigos:** robar y defender, pescar en el mismo lago.
-- **Monetización honesta:** cañas y acuarios cosméticos, pase de cebo que ahorra tiempo, pack de inicio.
+- **Monetización:**
+  - *Game Passes:* x2 monedas; caña de suerte, con las probabilidades de rareza visibles; +espacio en el acuario; traba de acuario más larga.
+  - *Developer Products:* cebo raro con probabilidades visibles y `PolicyService`; packs de monedas.
+  - *Cosméticos:* cañas y acuarios cosméticos.
+  - *Pack de inicio:* una sola vez.
 - **Género / subgénero oficial:** Simulation / Tycoon.
 - **Público y etiqueta esperada:** todas las edades.
 - **Alcance:** dos sistemas grandes (pesca y robo). MVP de 4 semanas o más.
@@ -156,17 +173,17 @@ Pesos de `skills/roblox-ideation/references/scoring.md`. Puntos de 0 a 5; aporte
 | 4 Con amigos (10) | 4 — robar y defender juntos | 3 — regar y visitar | 3 — excavar juntos y visitar | 4 — robar y defender |
 | 5 Diferenciación (10) | 3 — la fusión es nueva en la fórmula, pero la fórmula está muy usada | 3 — bichos en vez de frutas, y el clima | 4 — armar colecciones de esqueletos | 2 — mezcla dos fórmulas muy cubiertas |
 | 6 Evidencia (10) | 5 — los dos primeros de "Más jugadas" son de robar, y sigue habiendo nuevos que crecen | 4 — el pico más grande, pero hoy con menos jugadores | 4 — Dig & Clean y Monta un dinosaurio con datos | 5 — Fish It! y los de robar con datos |
-| 7 Monetización honesta (10) | 4 — cosméticos visibles, cobro automático, compra directa | 4 — cosméticos y regadera automática | 4 — cosméticos y pala doble | 4 — cosméticos y cebo |
+| 7 Monetización (10) | 5 — multiplicadores, espacios, traba y escudo, suerte con probabilidades, VIP y compra directa | 5 — crecimiento x2, parcelas, reposición, suerte con probabilidades | 4 — pala, zona VIP y piezas, pero sin robo hay menos motivo social para pagar | 5 — multiplicadores, suerte, espacio y traba |
 | 8 Alcance (10) | 3 — robo, fusión y bases nuevos | 4 — sin física de robo | 3 — excavación y armado | 2 — dos sistemas grandes |
 | 9 Móvil (5) | 4 — tocar para comprar y fusionar; perseguir es simple | 5 — todo con toques | 5 — todo con toques | 5 — pesca con un toque |
-| **Total /100** | **84** | **83** | **77** | **78** |
+| **Total /100** | **86** | **85** | **77** | **80** |
 
 Cortes duros (0 en primer minuto, diferenciación o monetización): ninguno. Ningún concepto tiene en su núcleo algo que deje afuera a menores de 16.
 
 ## Recomendación
-**Concepto 1, Roba y Fusiona (84/100).** Es el estilo que hoy tiene más jugadores (tendencia 1), con un giro propio (la fusión) y con reglas anti-frustración y de monetización que las referencias no garantizan.
+**Concepto 1, Roba y Fusiona (86/100).** Es el estilo que hoy tiene más jugadores (tendencia 1) y tiene un giro propio, la fusión. Además es el que más formas tiene de venderse: el robo le da al jugador motivos para querer protegerse, defender su base y apurar su progreso.
 
-Queda casi empatado con **Jardín de Bichos (83)**. Este es más fácil de construir y retiene mejor, pero apuesta a un estilo que hoy juega menos gente. Si el prototipo del 1 falla, es el plan B.
+Queda casi empatado con **Jardín de Bichos (85)**. Este es más fácil de construir y retiene mejor, pero apuesta a un estilo que hoy juega menos gente. Si el prototipo del 1 falla, es el plan B.
 
 **Hipótesis a validar primero en el prototipo** (guía oficial *Prototyping*): ¿la fusión se entiende sola en el primer minuto y hace que la sesión dure más que solo comprar y robar? ¿Y que te roben no hace irse a los nuevos?
 

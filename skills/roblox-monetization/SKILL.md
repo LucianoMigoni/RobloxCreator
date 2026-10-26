@@ -1,12 +1,12 @@
 ---
 name: roblox-monetization
-description: Diseña y audita la monetización de un juego de Roblox con tácticas honestas para un público con menores (pack de inicio, compras contextuales, pase de temporada con pista gratis, pases que ahorran tiempo, cosméticos) y las reglas oficiales (descuentos genuinos, sin urgencia falsa, probabilidades visibles, PolicyService). Usar en la fase 4 del pipeline, al agregar productos o precios y antes de publicar.
+description: Diseña y audita la monetización de un juego de Roblox, incluidas ventajas pagas fuertes como en los simuladores grandes (multiplicadores, espacios extra, velocidad, suerte con probabilidades visibles, protección de base), packs, pases y cosméticos, dentro de las reglas oficiales (descuentos genuinos, sin urgencia falsa, probabilidades visibles, PolicyService). Usar en la fase 4 del pipeline, al agregar productos o precios y antes de publicar.
 ---
 
 # roblox-monetization
 
 ## Objetivo
-Que el juego gane dinero sin engañar ni presionar a nadie. Cada producto tiene un propósito claro y se ofrece cuando sirve, y la tienda pasa la auditoría ética. Sale `games/<juego>/docs/monetizacion.md`.
+Que el juego gane dinero sin engañar ni presionar a nadie. Pagar **puede dar ventajas importantes** (decisión del 2026-10-26, `team/decisiones.md`): es lo que hacen los simuladores que más recaudan. Cada producto dice exactamente qué da y se ofrece cuando sirve, y la tienda pasa la auditoría de reglas oficiales. Sale `games/<juego>/docs/monetizacion.md`.
 
 ## Cuándo usarlo
 - Fase 4 del pipeline (con la spec y la economía definidas).
@@ -35,7 +35,8 @@ Que el juego gane dinero sin engañar ni presionar a nadie. Cada producto tiene 
 
 ## Checklist
 - [ ] Cada producto tiene un propósito claro y visible en el juego.
-- [ ] Nada que bloquee el contenido principal detrás de un pago; las ventajas no rompen el juego para quien no paga.
+- [ ] Cada ventaja paga dice su efecto exacto (x2, +3 espacios, +20 % de suerte) y el servidor da exactamente eso.
+- [ ] El que no paga sigue pudiendo jugar y progresar: si no, se va, y la retención es lo que más pesa en el algoritmo.
 - [ ] Ofertas genuinas y justas; sin escasez ni urgencia falsas; ninguna cuenta regresiva que se reinicia.
 - [ ] Textos sin presión (`tools/check.py` en verde).
 - [ ] Aleatorios pagos con todos los resultados y probabilidades, y con `PolicyService`.

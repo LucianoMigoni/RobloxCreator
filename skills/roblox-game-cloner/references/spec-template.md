@@ -42,7 +42,7 @@ Pasos del embudo (`Config/OnboardingConfig.STEPS`): nombre, fuente (server/clien
 Pantallas, botones y el remote que dispara cada uno.
 
 ## Monetización (para `roblox-monetization`)
-Qué se vende y por qué es honesto. Ids pendientes de crear en el Creator Dashboard.
+Qué se vende, qué ventaja da exactamente y qué regla oficial cumple (`roblox-monetization`). Ids pendientes de crear en el Creator Dashboard.
 
 ## Assets
 | Asset | Fuente (catálogo, Blender, generate_mesh, Creator Store) | Triángulos | Licencia |

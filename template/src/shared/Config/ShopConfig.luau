@@ -1,7 +1,7 @@
 --!strict
 -- Tienda: ítems con monedas del juego, Developer Products y Game Passes.
 -- Los ids de productos y pases se crean en el Creator Dashboard; 0 = todavía sin crear (se ignora).
--- Precios y ofertas los decide roblox-monetization (tácticas honestas): estos son de ejemplo.
+-- Precios y ofertas los decide roblox-monetization: estos son de ejemplo.
 
 export type Item = { name: string, price: number }
 export type Product = { productId: number, name: string, coins: number }

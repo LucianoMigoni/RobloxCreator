@@ -1,4 +1,4 @@
-# Tácticas honestas
+# Tácticas de monetización
 
 Cada táctica dice en qué se apoya. Las marcadas **(hub)** son criterio nuestro y no texto de Roblox. Antes de monetizar fuerte, **retención primero**: el FAQ del algoritmo dice que, con retención baja, primero se arregla el gameplay; con retención sólida, mejorar la monetización suma impresiones de Home (`skills/_shared/algoritmo-descubrimiento.md`).
 
@@ -23,13 +23,21 @@ Para cada ítem: **qué** se vende, **dónde** y **cómo**. Cada ítem tiene que
 | Anuncios inmersivos | Ingreso por anuncios | Requiere el cuestionario de madurez aprobado; los no elegibles no ven el anuncio |
 | Optimización y precios regionales | Encontrar el precio y ajustarlo por región | Herramientas oficiales; preferirlas a adivinar precios |
 
-## Tácticas del hub, con su límite ético
+## Tácticas del hub, con su límite
+Pagar puede dar ventajas importantes (decisión del 2026-10-26). El límite son las reglas oficiales y no engañar sobre lo que se compra.
+
 | Táctica | Hacerlo así | Nunca así |
 |---|---|---|
+| Multiplicadores (x2 dinero, x2 velocidad) | Game Pass con el efecto exacto en la descripción, aplicado en el servidor con `ShopService.hasPass` | Prometer un efecto que no se da, o uno que se apila de forma distinta a la anunciada |
+| Más capacidad (espacios de base, inventario) | Pase o producto con el número exacto de espacios | Bajar a propósito la capacidad gratis de un juego ya publicado para empujar la compra |
+| Suerte paga (más probabilidad de rarezas o mutaciones) | Mostrar las probabilidades con y sin el impulso; si el resultado es aleatorio y se paga con Robux, aplicar las reglas 6 y 7 de la auditoría | Suerte paga sin probabilidades visibles, o ofrecida a jugadores con `ArePaidRandomItemsRestricted` |
+| Protección (traba de base más larga, escudo) | Efecto y duración exactos; el juego gratis conserva su protección mínima | Quitar la protección gratis para vender la paga |
+| Compra directa de una criatura o ítem concreto | Precio a la vista y qué se recibe exactamente | Venderlo como "sorpresa" sin mostrar las probabilidades |
+| VIP | Lista exacta de beneficios | Beneficios vagos ("¡ventajas exclusivas!") |
 | Pack de inicio | Una sola vez por jugador, con valor real comparado con comprar por separado | Con cuenta regresiva que se reinicia o "solo hoy" falso |
 | Oferta en el momento justo | Cuando el jugador la necesita (contextual) | Interrumpiendo el juego ni con lenguaje de presión |
 | Anclaje con ahorro real | Mostrar el pack junto al precio suelto, con el ahorro real | Inflar el precio de referencia o tener el mismo ítem "en oferta" siempre |
 | Cosméticos visibles | Que se vean en el avatar o en el mundo (otros los ven) | Vender ventajas competitivas disfrazadas de cosmético |
-| Pases que ahorran tiempo | Acelerar lo que igual se puede lograr jugando | Bloquear el contenido principal detrás de un pago |
+| Pases que ahorran tiempo | Acelerar lo que igual se puede lograr jugando | Esconder el efecto real del pase |
 | Pase de temporada | Pista gratis real y premium opcional | Pista gratis vacía para empujar a la premium |
 | Cajas o sorteos | Mostrar todos los resultados y sus probabilidades; `PolicyService` | Sin probabilidades, o pagables con Robux sin bloqueo regional |

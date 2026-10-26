@@ -10,7 +10,7 @@ Cada criterio se puntúa de 0 a 5 con una frase que lo justifique. Puntaje = sum
 | 4 | **Juego con amigos** (co-play intencional) | 10 | Se juega igual solo | Es mejor con amigos: cooperar, competir, comerciar, servidores privados |
 | 5 | **Diferenciación** (algoritmo: juegos "no únicos" pierden exposición) | 10 | Igual a un juego existente | Un giro propio claro en mecánica, tema o formato |
 | 6 | **Evidencia de demanda** (fuentes verificables) | 10 | Ninguna | Varios juegos del mismo género o tema en Charts con datos citados, con un hueco identificado |
-| 7 | **Monetización honesta** (ver `roblox-monetization`) | 10 | Solo funciona con cajas pagas o ventajas pagas injustas | Cosméticos, pases que ahorran tiempo, packs con valor real |
+| 7 | **Monetización** (ver `roblox-monetization`; ventajas pagas permitidas, reglas oficiales obligatorias) | 10 | Nada atractivo que vender, o solo funciona con algo prohibido (aleatorios pagos sin probabilidades, urgencia falsa) | Varias fuentes: ventajas pagas fuertes (multiplicadores, espacios, suerte con probabilidades visibles, protección), pases, packs y cosméticos visibles |
 | 8 | **Alcance para el equipo** (la plantilla ya trae datos, tienda, inventario, onboarding y UI) | 10 | Meses de sistemas nuevos o física compleja | Un MVP en 2–3 semanas sobre la plantilla |
 | 9 | **Móvil y gama baja** (la mayoría juega en móvil, guía oficial *Design for Roblox*) | 5 | Precisión fina, muchas partes, UI densa | Controles de un dedo, pocas partes, UI grande |
 

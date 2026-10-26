@@ -21,6 +21,6 @@ Marca en `src/` los textos de presión o urgencia ("GET IT NOW", "LAST CHANCE", 
 | 9 | Developer Products otorgados solo en `ProcessReceipt` en el servidor; nunca por una señal del cliente | `ShopService.luau` (la plantilla ya lo hace) | |
 | 10 | Nada que valga Robux si los datos no se pueden guardar (`DataService.canSave`) | `ShopService.luau` (la plantilla ya lo hace) | |
 | 11 | Cada ítem vendido tiene un propósito claro y visible en el juego (guía *Monetization foundations*) | Descripción en la tienda | |
-| 12 | Ventajas pagas que no rompen el juego para quien no paga (criterio del hub) | Revisión de balance con `roblox-metrics-growth` | |
+| 12 | Cada ventaja paga declara su efecto exacto y el servidor da exactamente eso; el que no paga sigue pudiendo progresar (criterio del hub; las ventajas pagas están permitidas desde el 2026-10-26) | Descripción del producto contra el código del servidor; balance con `roblox-metrics-growth` | |
 
 **Pasa** cuando las filas 1 a 11 están en OK (o "no aplica" con motivo) y `tools/check.py` está en verde.
