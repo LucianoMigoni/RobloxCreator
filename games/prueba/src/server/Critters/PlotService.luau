@@ -63,6 +63,14 @@ local function build(index: number, parent: Instance): Model
 	prompt.RequiresLineOfSight = false
 	prompt.Parent = fuser
 
+	-- Se ve solo mientras la base está trabada. No choca: la traba la hace cumplir el servidor
+	-- apagando los prompts de robo, no una pared.
+	local barrier = part("Barrier", Vector3.new(size, 12, size), origin * CFrame.new(0, 6.5, 0), Color3.fromRGB(255, 70, 70), plot)
+	barrier.Transparency = 1
+	barrier.CanCollide = false
+	barrier.CanQuery = false
+	barrier.CanTouch = false
+
 	local spawnPoint = Instance.new("Attachment")
 	spawnPoint.Name = "Spawn"
 	spawnPoint.CFrame = CFrame.new(0, 4, -11)
@@ -140,6 +148,10 @@ local function onPlayerRemoving(player: Player)
 	byPlayer[player] = nil
 	owners[plot] = nil
 	plot:SetAttribute("OwnerUserId", nil)
+	for _, attribute in { "LockedUntil", "LockReadyAt", "ProtectedUntil" } do
+		plot:SetAttribute(attribute, nil)
+	end
+	(plot:FindFirstChild("Barrier") :: BasePart).Transparency = 1
 	setSign(plot, "Free base")
 	local critters = plot:FindFirstChild("Critters") :: Folder
 	critters:ClearAllChildren()

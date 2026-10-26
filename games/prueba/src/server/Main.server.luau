@@ -9,12 +9,15 @@ local ShopService = require("./Shop/ShopService")
 local BeltService = require("./Critters/BeltService")
 local CritterService = require("./Critters/CritterService")
 local PlotService = require("./Critters/PlotService")
+local StealService = require("./Critters/StealService")
 
 Remotes.start()
 DataService.start()
 PlayerStateService.start()
 OnboardingService.start()
 ShopService.start()
-CritterService.start() -- antes de PlotService: escucha las bases que se asignan al arrancar
+-- Antes de PlotService: escuchan las bases que se asignan al arrancar.
+CritterService.start()
+StealService.start()
 PlotService.start()
 BeltService.start()

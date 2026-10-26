@@ -28,8 +28,24 @@ end
 local pending: { [Player]: { [number]: number } } = {}
 local displays: { [Player]: { [string]: Model } } = {}
 
+local shown = Instance.new("BindableEvent")
+-- (player, critter, model) cada vez que un critter aparece en un pedestal.
+CritterService.Shown = shown.Event
+local changed = Instance.new("BindableEvent")
+-- (player) cuando cambian los critters de una base (comprar, fusionar, robar).
+CritterService.Changed = changed.Event
+
 local function multiplier(_player: Player): number
 	return 1 -- renacer y pases se suman en los hitos 3 y 5
+end
+
+function CritterService.income(player: Player, critter: Types.Critter): number
+	return CritterRules.income(INCOME_BY_TIER, GameplayConfig.MUTATIONS, critter, multiplier(player)) or 0
+end
+
+function CritterService.display(player: Player, uid: string): Model?
+	local byUid = displays[player]
+	return byUid and byUid[uid]
 end
 
 local function show(player: Player, critter: Types.Critter)
@@ -42,6 +58,7 @@ local function show(player: Player, critter: Types.Critter)
 	model:PivotTo(pedestal.CFrame * CFrame.new(0, pedestal.Size.Y / 2 + model:GetExtentsSize().Y / 2, 0))
 	model.Parent = plot:FindFirstChild("Critters")
 	displays[player][critter.uid] = model
+	shown:Fire(player, critter, model)
 end
 
 local function hide(player: Player, uid: string)
@@ -52,21 +69,40 @@ local function hide(player: Player, uid: string)
 	end
 end
 
--- Agrega un critter en el primer pedestal libre. false si no hay lugar o los datos no cargaron.
-function CritterService.add(player: Player, tier: number, mutation: string): boolean
+-- Agrega un critter en el primer pedestal libre. nil si no hay lugar o los datos no cargaron.
+function CritterService.add(player: Player, tier: number, mutation: string): Types.Critter?
 	local data = DataService.get(player)
 	if not data or not displays[player] then
-		return false
+		return nil
 	end
 	local pedestal = CritterRules.freePedestal(data.critters, GameplayConfig.PEDESTALS)
 	if not pedestal then
-		return false
+		return nil
 	end
 	local critter: Types.Critter = { uid = HttpService:GenerateGUID(false), tier = tier, mutation = mutation, pedestal = pedestal }
 	table.insert(data.critters, critter)
 	show(player, critter)
 	PlayerStateService.push(player)
-	return true
+	changed:Fire(player)
+	return critter
+end
+
+-- Saca un critter de la base (para el robo). Las monedas sin juntar de su pedestal quedan para el dueño.
+function CritterService.remove(player: Player, uid: string): Types.Critter?
+	local data = DataService.get(player)
+	if not data or not displays[player] then
+		return nil
+	end
+	for index, critter in data.critters do
+		if critter.uid == uid then
+			table.remove(data.critters, index)
+			hide(player, uid)
+			PlayerStateService.push(player)
+			changed:Fire(player)
+			return critter
+		end
+	end
+	return nil
 end
 
 function CritterService.hasFreePedestal(player: Player): boolean
@@ -122,6 +158,7 @@ local function fuse(player: Player)
 	pending[player][result.pedestal] = carried
 	show(player, result)
 	PlayerStateService.push(player)
+	changed:Fire(player)
 	OnboardingService.complete(player, "FirstFuse")
 end
 
@@ -133,8 +170,7 @@ local function tick()
 			continue
 		end
 		for _, critter in data.critters do
-			local income = CritterRules.income(INCOME_BY_TIER, GameplayConfig.MUTATIONS, critter, multiplier(player)) or 0
-			local amount = (perPedestal[critter.pedestal] or 0) + income * GameplayConfig.INCOME_TICK_SECONDS
+			local amount = (perPedestal[critter.pedestal] or 0) + CritterService.income(player, critter) * GameplayConfig.INCOME_TICK_SECONDS
 			perPedestal[critter.pedestal] = amount
 			local model = displays[player][critter.uid]
 			if model then

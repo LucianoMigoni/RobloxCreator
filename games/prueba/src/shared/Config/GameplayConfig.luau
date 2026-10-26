@@ -40,4 +40,18 @@ return {
 	BUY_DISTANCE_TOLERANCE = 4,
 
 	INCOME_TICK_SECONDS = 1,
+
+	-- Robo (M7–M10)
+	STEAL_HOLD_SECONDS = 1.5,
+	STEAL_DISTANCE = 8,
+	STEAL_DISTANCE_TOLERANCE = 2, -- el critter está quieto: solo la latencia del personaje
+	CARRY_SPEED_MULTIPLIER = 0.7,
+	CARRY_CHECK_SECONDS = 0.2, -- cada cuánto se mira si el ladrón llegó a su base
+	NEW_PLAYER_PROTECTION_SECONDS = 300, -- primeros minutos de un jugador nuevo
+	RECENTLY_STOLEN_SECONDS = 30,
+	PUSH_RANGE = 10,
+	PUSH_RATE = { count = 1, perSeconds = 2 },
+	LOCK_SECONDS = 60,
+	LOCK_COOLDOWN_SECONDS = 90, -- desde que termina la traba
+	LOCK_RATE = { count = 1, perSeconds = 1 },
 }

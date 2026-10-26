@@ -25,6 +25,7 @@ local DataConfig = {
 	DEFAULT_DATA = {
 		coins = 10, -- alcanza para el primer Pebble Pup (docs/spec.md, primeros 10 s)
 		critters = {} :: { Types.Critter },
+		firstPlayedAt = 0, -- os.time() de la primera sesión: protección de jugador nuevo contra robos
 		inventory = {} :: { string },
 		onboardingStep = 0, -- último paso del embudo completado (OnboardingConfig.STEPS)
 		processedReceipts = {} :: { [string]: number }, -- PurchaseId → hora: compras de Robux ya otorgadas

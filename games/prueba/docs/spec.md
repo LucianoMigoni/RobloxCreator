@@ -1,6 +1,6 @@
 # Spec: Steal & Fuse Critters (games/prueba)
 
-Fecha: 2026-10-26 · Autor: Luciano (con Claude) · Concepto de origen: `docs/concepto.md` (Roba y Fusiona, 86/100) · Estado: **aprobada** por Luciano (2026-10-26) · Hito 1 hecho
+Fecha: 2026-10-26 · Autor: Luciano (con Claude) · Concepto de origen: `docs/concepto.md` (Roba y Fusiona, 86/100) · Estado: **aprobada** por Luciano (2026-10-26) · Hitos 1 y 2 hechos
 
 Los nombres y textos que ve el jugador están en inglés, tal cual van a verse (entre comillas o en `código`). El resto es interno, en español.
 
@@ -73,9 +73,9 @@ Todos los números viven en `src/shared/Config/GameplayConfig.luau`, que se crea
 | M5 | Juntar | Pisar el *collect pad* de tu base pasa lo acumulado a tu saldo | `Touched` en el servidor: dueño del pad, monto | — | `coins` |
 | M6 | Fusionar | En el fusionador (`ProximityPrompt`) eliges un nivel con al menos 2 *critters*; se consumen 2 (los "Normal" primero) y sale 1 del siguiente nivel con tirada de mutación | Que tenga el par, nivel < 8, estar en su base, tirada | Hito 1: `ProximityPrompt` "Fuse" en el servidor, que fusiona el par de nivel más bajo. Hito 4: elegir nivel con `FuseCritters(tier)`: `Validate.number{min=1,max=7,integer=true}`, 2/s | `critters`, `album` |
 | M7 | Robar | En una base ajena sin traba, mantienes 1,5 s el `ProximityPrompt` de un pedestal → cargas el *critter* (velocidad ×0,7, 1 a la vez) → si tocas tu base, va a un pedestal libre; si no tienes lugar, el prompt no aparece | Que la base no esté trabada ni protegida, que no sea el *critter* más valioso del dueño, distancia (la valida el prompt y se repite en el servidor), pedestal libre | — (`ProximityPrompt.Triggered` se maneja en el servidor) | `critters` de los dos jugadores |
-| M8 | Empujar | El dueño o un amigo presente toca "Push" a ≤ 10 studs de quien carga un *critter* robado → se cae y vuelve a su pedestal. Enfriamiento de 2 s. Empuje cómico, sin daño | Distancia, que el objetivo cargue algo robado de esa base | `Push()`: sin argumentos, 1 cada 2 s | — |
-| M9 | Traba de base | "Lock" cierra la barrera 60 s; después hay 90 s de enfriamiento | Enfriamiento y duración (con pase: 120 s) | `LockBase()`: sin argumentos, 1/s | — |
-| M10 | Protecciones gratis | Un jugador nuevo no puede ser robado sus primeros 300 s. El *critter* más valioso de cada jugador no se puede robar. Un *critter* recién robado no se puede volver a robar por 30 s | Todo | — | — |
+| M8 | Empujar | Cualquier jugador (el dueño, un amigo o un tercero) toca "Push" a ≤ 10 studs de quien carga un *critter* robado → vuelve a la base de su dueño. Enfriamiento de 2 s. Empuje cómico, sin daño | Distancia, que el objetivo cargue algo robado de esa base | `Push()`: sin argumentos, 1 cada 2 s | — |
+| M9 | Traba de base | "Lock" traba la base 60 s (barrera roja visible que no choca: lo que impide robar es que el servidor apaga los prompts); después hay 90 s de enfriamiento | Enfriamiento y duración (con pase: 120 s) | `LockBase()`: sin argumentos, 1/s | — |
+| M10 | Protecciones gratis | Un jugador nuevo no puede ser robado durante los 300 s siguientes a su primera sesión (`firstPlayedAt`). El *critter* más valioso de cada jugador no se puede robar. Un *critter* recién robado no se puede volver a robar por 30 s | Todo | — | — |
 | M11 | Ganancias sin conexión | Al volver: 50 % del ingreso por segundo × el tiempo ausente, con tope de 2 h. Se cobra en el *collect pad* | Cálculo con `os.time()` del servidor, nunca la hora del cliente | — | `lastSeen` |
 | M12 | Renacer | Requiere tener un "Lava Lizard" (nivel 6). Reinicia monedas y *critters*, y suma +50 % de ingreso permanente por renacimiento | Requisito, reinicio, multiplicador | `Rebirth()`: invoke sin argumentos, 1 cada 5 s | `rebirths` |
 | M13 | Álbum | Registra cada nivel × mutación que conseguiste (24 entradas) | Al comprar, fusionar o robar | — (viaja en el estado) | `album` |
@@ -191,6 +191,12 @@ El hito 1 usa cubos grises: los modelos llegan en el hito 6. Todo asset nuevo se
 | M5 Juntar | OK | 2026-10-26 | Pisar el pad pasa lo acumulado al saldo y deja el pedestal en cero |
 | M6 Fusionar | OK (versión del hito 1) | 2026-10-26 | 2 Pebble Pup → Mossling +3/s; lo no juntado pasa al pedestal del resultado. Elegir nivel: hito 4 |
 | Onboarding | OK | 2026-10-26 | Joined → BoughtFirstCritter → CollectedCoins → FirstFuse, con +100 al completar (saldo 116) |
-| M7–M13 | pendiente (hitos 2 y 3) | | |
+| M7 Robar | OK | 2026-10-26 | Con 2 jugadores (Test → Clients and Servers): Player2 mantuvo E sobre un Pebble Pup de Player1 → lo cargó sobre la cabeza a 11,2 de velocidad (16 × 0,7); el Mossling de Player1 (su más valioso) no tenía prompt |
+| M7 Entregar | OK | 2026-10-26 | Al entrar a su base, el critter pasó a un pedestal de Player2, se registró "FirstSteal" y la velocidad volvió a 16 |
+| M8 Empujar | OK (probado por Luciano en la ventana del cliente) | 2026-10-26 | El botón "Push" apareció cerca del ladrón y el critter volvió a Player1; el MCP no llega a las ventanas de los clientes, así que esta prueba la hizo una persona |
+| M9 Traba | OK | 2026-10-26 | Botón "Locked 59", atributos de 60 s + 90 s y barrera visible. No se probó con dos jugadores intentar robar en una base trabada: se apoya en el apagado de prompts, igual que M10 |
+| M10 Protecciones | OK | 2026-10-26 | Jugador nuevo protegido (288 s restantes al entrar); más valioso y recién robado sin prompt, comprobado en el servidor |
+| Seguridad | OK | 2026-10-26 | `audit_remotes`: 0 ERROR, 7 OK (`Push` 1/2 s, `LockBase` 1/s, `Notify` servidor→cliente). `abuse_test`: 0 ERROR; `LockBase` con argumentos basura rechazado y la base no se trabó |
+| M11–M13 | pendiente (hito 3) | | |
 
 Prueba del hito 1: Studio con `rojo serve` de `games/prueba` en un lugar sin publicar (los datos no se guardan), playtest con el MCP: `character_navigation` + tecla E, estado leído desde `execute_luau` Server, consola sin errores de script. Está la cinta compartida, pero solo se probó con un jugador.

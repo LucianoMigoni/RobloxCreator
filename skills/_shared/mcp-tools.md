@@ -15,6 +15,8 @@ Fuentes: https://create.roblox.com/docs/studio/mcp y la lista real del servidor 
 - Registrado en esta máquina como `Roblox_Studio` (scope usuario): `claude mcp add Roblox_Studio --scope user -- cmd.exe /c %LOCALAPPDATA%\Roblox\mcp.bat`. Prefijo de tools: `mcp__Roblox_Studio__`.
 - Activar en Studio (cada instalación): Assistant → `…` → Manage MCP Servers → **Enable Studio as MCP server**. Sin esto, `list_roblox_studios` devuelve `{"studios":[]}`.
 - **Toda llamada lleva `studio_id`**. Obtenerlo primero con `list_roblox_studios` (devuelve nombre, `studio_id`, Place ID). `set_active_studio` ya no existe.
+- `execute_luau` no comparte los módulos del juego: un `require` desde ahí da una copia nueva, sin el estado del juego en curso (comprobado 2026-10-26). Para leer el estado, usar instancias y atributos del DataModel.
+- Pruebas con varios jugadores (Test → Clients and Servers): la sesión aparece como otra instancia en `list_roblox_studios` y el MCP llega a su datamodel **Server**, pero no a las ventanas de los clientes ("Target is not reachable"). Las acciones de cada cliente las hace una persona y el MCP verifica el estado desde el servidor (comprobado 2026-10-26).
 - `execute_luau` corre en el hilo principal de Studio y lo congela hasta que termina: dividir trabajos pesados (creación masiva de instancias, terreno, bucles grandes) en varias llamadas.
 
 | Herramienta | Uso en este hub |

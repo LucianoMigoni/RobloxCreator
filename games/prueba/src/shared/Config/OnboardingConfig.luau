@@ -12,7 +12,7 @@ return {
 		{ name = "BoughtFirstCritter", source = "server" },
 		{ name = "CollectedCoins", source = "server" },
 		{ name = "FirstFuse", source = "server" },
-		-- "FirstSteal" se suma en el hito 2, cuando exista el robo.
+		{ name = "FirstSteal", source = "server" },
 	} :: { Step },
 	-- Monedas al completar el último paso, solo si ese paso es de servidor.
 	COMPLETION_REWARD = 100,
