@@ -4,6 +4,10 @@ Formato y flujo: `team/README.md`. Detalle de cada paso del hub: `ROADMAP.md`.
 
 ## En curso
 
+- [ ] UI: probar en Studio el nuevo `UIKit.sideBar` (emulador: teléfono chico horizontal y tablet), correr `UIKit.selfTest()` y `audit_ui.luau` — ui · @luciano · rama luciano/fase-c · juego: hub
+- [ ] B4: correr en Studio `perf_snapshot.luau` (Client y Server) sobre la plantilla y anotar la primera foto de rendimiento; elegir el teléfono base del equipo — qa · @luciano · rama luciano/fase-c · juego: hub
+- [ ] C1: primer asset real en el catálogo — mapa · @luciano · rama luciano/fase-c · juego: hub
+- [ ] C2: juego de prueba de punta a punta en `games/prueba/` (arranca con `roblox-ideation` usando datos reales de Charts aportados por ustedes; se lanza primero a 16+) — fase 1 (ideación) en curso — hub · @luciano @leonel · rama luciano/fase-c · juego: prueba
 - [ ] Fase A + B0 — abrir el PR de la rama (@leonel) y revisarlo/mergearlo (@luciano) — hub · @leonel @luciano · rama leonelblumberg/quirky-dijkstra-2kxnwz · juego: hub
 
 ## Pendiente
@@ -13,13 +17,9 @@ Formato y flujo: `team/README.md`. Detalle de cada paso del hub: `ROADMAP.md`.
 - [ ] A3/A4: instalar desde cero siguiendo `SETUP.md` y correr `setup.ps1` en Windows hasta "Todo listo" — hub · @leonel · rama — · juego: hub
 - [ ] A7: probar que la IA del compañero (Codex, Gemini u otra) sigue `CLAUDE.md` vía `AGENTS.md` — hub · @leonel · rama — · juego: hub
 - [ ] A5: probar Obsidian entre los dos (un cambio de uno le llega al otro tras el merge) — hub · @luciano @leonel · rama — · juego: hub
-- [ ] UI: probar en Studio el nuevo `UIKit.sideBar` (emulador: teléfono chico horizontal y tablet), correr `UIKit.selfTest()` y `audit_ui.luau` — ui · @luciano · rama — · juego: hub
 - [ ] B1a/B1b: probar la plantilla en Studio con una copia publicada de prueba (acceso a API activado): persistencia, bloqueo con dos ventanas, comprar un ítem con monedas, `audit_remotes.luau`, `abuse_test.luau` y `audit_ui.luau` sobre el HUD y los popups (teléfono chico y tablet) — servidor · @luciano · rama — · juego: hub
 - [ ] B3: crear una API key de analíticas de prueba (permiso `universe.analytics:read`) y correr `tools/analytics.py summary` contra un juego publicado — hub · @luciano · rama — · juego: hub
-- [ ] B4: correr en Studio `perf_snapshot.luau` (Client y Server) sobre la plantilla y anotar la primera foto de rendimiento; elegir el teléfono base del equipo — qa · @luciano · rama — · juego: hub
 - [ ] Cuenta dueña de los juegos: decidir si publican desde una cuenta personal o un grupo, y que esa cuenta (o el dueño del grupo) cumpla lo que pide Roblox para llegar a menores de 16: verificación, 2FA y Plus/Premium 2 meses o la tarifa de 1000 Robux por juego (ver `skills/roblox-compliance`) — hub · @luciano @leonel · rama — · juego: hub
-- [ ] C1: primer asset real en el catálogo — mapa · @nadie · rama — · juego: hub
-- [ ] C2: juego de prueba de punta a punta en `games/prueba/` (arranca con `roblox-ideation` usando datos reales de Charts aportados por ustedes; se lanza primero a 16+) — hub · @luciano @leonel · rama — · juego: prueba
 - [ ] C3: repasar `CLAUDE.md` con lo aprendido en C2 y cerrar `ROADMAP.md` — docs · @nadie · rama — · juego: hub
 
 ## Hecho
