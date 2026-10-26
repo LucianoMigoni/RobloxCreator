@@ -35,7 +35,6 @@ end
 function ShopController.start(screen: ScreenGui, sideBar: Frame)
 	local player = Players.LocalPlayer
 	local requestPurchase = Net.func("RequestPurchase")
-	local reportStep = Net.event("ReportOnboardingStep")
 
 	-- Con muchos productos, pasar `content` a un ScrollingFrame.
 	local popup, content = UIKit.popup(screen, "ShopPopup", UiText.SHOP_TITLE)
@@ -102,13 +101,8 @@ function ShopController.start(screen: ScreenGui, sideBar: Frame)
 
 	local openButton = UIKit.sideButton(sideBar, "ShopButton", UiText.SHOP, "Info")
 	openButton.LayoutOrder = 1
-	local reported = false
 	openButton.Activated:Connect(function()
 		UIKit.toggle(popup)
-		if not reported then
-			reported = true
-			reportStep:FireServer("OpenedShop")
-		end
 	end)
 end
 

@@ -9,5 +9,13 @@ export type PlayerSnapshot = {
 	savesProgress: boolean,
 }
 
+-- Un critter del jugador, tal como se guarda (DataConfig.DEFAULT_DATA.critters).
+export type Critter = {
+	uid: string,
+	tier: number, -- índice en GameplayConfig.TIERS
+	mutation: string, -- clave de GameplayConfig.MUTATIONS
+	pedestal: number, -- 1..pedestales de la base
+}
+
 -- Un ModuleScript tiene que devolver exactamente un valor.
 return {}

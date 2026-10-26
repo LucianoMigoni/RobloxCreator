@@ -9,10 +9,12 @@ export type Step = { name: string, source: "server" | "client" }
 return {
 	STEPS = {
 		{ name = "Joined", source = "server" },
-		{ name = "OpenedShop", source = "client" },
-		{ name = "BoughtFirstItem", source = "server" },
+		{ name = "BoughtFirstCritter", source = "server" },
+		{ name = "CollectedCoins", source = "server" },
+		{ name = "FirstFuse", source = "server" },
+		-- "FirstSteal" se suma en el hito 2, cuando exista el robo.
 	} :: { Step },
 	-- Monedas al completar el último paso, solo si ese paso es de servidor.
-	COMPLETION_REWARD = 50,
+	COMPLETION_REWARD = 100,
 	REPORT_RATE = { count = 3, perSeconds = 1 },
 }

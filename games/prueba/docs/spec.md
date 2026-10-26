@@ -1,6 +1,6 @@
 # Spec: Steal & Fuse Critters (games/prueba)
 
-Fecha: 2026-10-26 · Autor: Luciano (con Claude) · Concepto de origen: `docs/concepto.md` (Roba y Fusiona, 86/100) · Estado: **borrador** (falta el visto bueno para construir)
+Fecha: 2026-10-26 · Autor: Luciano (con Claude) · Concepto de origen: `docs/concepto.md` (Roba y Fusiona, 86/100) · Estado: **aprobada** por Luciano (2026-10-26) · Hito 1 hecho
 
 Los nombres y textos que ve el jugador están en inglés, tal cual van a verse (entre comillas o en `código`). El resto es interno, en español.
 
@@ -67,11 +67,11 @@ Todos los números viven en `src/shared/Config/GameplayConfig.luau`, que se crea
 | Id | Mecánica | Reglas y números (→ `GameplayConfig`) | Decide el servidor | Remote (validadores, límite) | Datos guardados |
 |---|---|---|---|---|---|
 | M1 | Asignación de base | 8 bases por servidor. Al entrar se te asigna una libre y apareces en ella. Cada base tiene 8 pedestales, un *collect pad*, un fusionador y una barrera de traba | Qué base; nada lo pide el cliente | — | — |
-| M2 | Cinta compartida | Aparece un *critter* cada 4 s según los pesos de la tabla; camina 20 s y desaparece. Todos ven la misma cinta y gana el primero que compra | Spawn, nivel (al azar con los pesos; se juega con monedas, no con Robux), quién compra | `BuyCritter(slotId)`: `Validate.string{maxLength=16}`, 3/s | — |
+| M2 | Cinta compartida | Aparece un *critter* cada 4 s según los pesos de la tabla; camina 20 s y desaparece. Todos ven la misma cinta y gana el primero que compra | Spawn, nivel (al azar con los pesos; se juega con monedas, no con Robux), quién compra | — (`ProximityPrompt` "Buy" en cada critter, manejado en el servidor; implementado así en el hito 1) | — |
 | M3 | Comprar | Precio de la tabla. Requiere pedestal libre y estar a ≤ 14 studs de la cinta. El *critter* camina a tu base y se coloca solo | Saldo (`CurrencyService.spend`), pedestal libre, distancia, que el slot exista y siga libre | (M2) | `critters` |
 | M4 | Ingreso | Cada pedestal acumula `monedas/s × mutación × multiplicador` (renacer, pases) en su contador | Todo el cálculo; tick de 1 s | — | — |
 | M5 | Juntar | Pisar el *collect pad* de tu base pasa lo acumulado a tu saldo | `Touched` en el servidor: dueño del pad, monto | — | `coins` |
-| M6 | Fusionar | En el fusionador (`ProximityPrompt`) eliges un nivel con al menos 2 *critters*; se consumen 2 (los "Normal" primero) y sale 1 del siguiente nivel con tirada de mutación | Que tenga el par, nivel < 8, estar en su base, tirada | `FuseCritters(tier)`: `Validate.number{min=1,max=7,integer=true}`, 2/s | `critters`, `album` |
+| M6 | Fusionar | En el fusionador (`ProximityPrompt`) eliges un nivel con al menos 2 *critters*; se consumen 2 (los "Normal" primero) y sale 1 del siguiente nivel con tirada de mutación | Que tenga el par, nivel < 8, estar en su base, tirada | Hito 1: `ProximityPrompt` "Fuse" en el servidor, que fusiona el par de nivel más bajo. Hito 4: elegir nivel con `FuseCritters(tier)`: `Validate.number{min=1,max=7,integer=true}`, 2/s | `critters`, `album` |
 | M7 | Robar | En una base ajena sin traba, mantienes 1,5 s el `ProximityPrompt` de un pedestal → cargas el *critter* (velocidad ×0,7, 1 a la vez) → si tocas tu base, va a un pedestal libre; si no tienes lugar, el prompt no aparece | Que la base no esté trabada ni protegida, que no sea el *critter* más valioso del dueño, distancia (la valida el prompt y se repite en el servidor), pedestal libre | — (`ProximityPrompt.Triggered` se maneja en el servidor) | `critters` de los dos jugadores |
 | M8 | Empujar | El dueño o un amigo presente toca "Push" a ≤ 10 studs de quien carga un *critter* robado → se cae y vuelve a su pedestal. Enfriamiento de 2 s. Empuje cómico, sin daño | Distancia, que el objetivo cargue algo robado de esa base | `Push()`: sin argumentos, 1 cada 2 s | — |
 | M9 | Traba de base | "Lock" cierra la barrera 60 s; después hay 90 s de enfriamiento | Enfriamiento y duración (con pase: 120 s) | `LockBase()`: sin argumentos, 1/s | — |
@@ -184,4 +184,13 @@ El hito 1 usa cubos grises: los modelos llegan en el hito 6. Todo asset nuevo se
 ## Verificación por mecánica (se completa en el playtest de cada hito)
 | Id | Resultado | Fecha | Nota |
 |---|---|---|---|
-| M1–M13 | pendiente | | |
+| M1 Asignación de base | OK | 2026-10-26 | 8 bases de cubos grises en anillo; apareces en la tuya, mirando a la cinta |
+| M2 Cinta compartida | OK | 2026-10-26 | Un critter cada 4 s; cruza en 20 s y desaparece |
+| M3 Comprar | OK | 2026-10-26 | Con E en el prompt: cobra 10, coloca en el primer pedestal libre; sin saldo no compra. Falta que el critter camine hasta la base (pulido, hito 6) |
+| M4 Ingreso | OK | 2026-10-26 | El pedestal muestra lo acumulado ("15 coins" a los ~15 s con un Pebble Pup) |
+| M5 Juntar | OK | 2026-10-26 | Pisar el pad pasa lo acumulado al saldo y deja el pedestal en cero |
+| M6 Fusionar | OK (versión del hito 1) | 2026-10-26 | 2 Pebble Pup → Mossling +3/s; lo no juntado pasa al pedestal del resultado. Elegir nivel: hito 4 |
+| Onboarding | OK | 2026-10-26 | Joined → BoughtFirstCritter → CollectedCoins → FirstFuse, con +100 al completar (saldo 116) |
+| M7–M13 | pendiente (hitos 2 y 3) | | |
+
+Prueba del hito 1: Studio con `rojo serve` de `games/prueba` en un lugar sin publicar (los datos no se guardan), playtest con el MCP: `character_navigation` + tecla E, estado leído desde `execute_luau` Server, consola sin errores de script. Está la cinta compartida, pero solo se probó con un jugador.

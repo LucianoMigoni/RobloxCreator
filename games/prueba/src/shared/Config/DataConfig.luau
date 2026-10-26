@@ -1,6 +1,8 @@
 --!strict
 -- Configuración de DataService (server/Data/DataService.luau).
 
+local Types = require("../Types")
+
 local DataConfig = {
 	-- Cambiarlo empieza todos los datos desde cero: solo para cambios incompatibles de formato.
 	STORE_NAME = "PlayerData_v1",
@@ -21,7 +23,8 @@ local DataConfig = {
 
 	-- Datos de un jugador nuevo. Agregar campos acá es seguro: Reconcile los completa en jugadores existentes.
 	DEFAULT_DATA = {
-		coins = 0,
+		coins = 10, -- alcanza para el primer Pebble Pup (docs/spec.md, primeros 10 s)
+		critters = {} :: { Types.Critter },
 		inventory = {} :: { string },
 		onboardingStep = 0, -- último paso del embudo completado (OnboardingConfig.STEPS)
 		processedReceipts = {} :: { [string]: number }, -- PurchaseId → hora: compras de Robux ya otorgadas

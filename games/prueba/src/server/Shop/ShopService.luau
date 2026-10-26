@@ -16,7 +16,6 @@ local CurrencyService = require("../Economy/CurrencyService")
 local InventoryService = require("../Economy/InventoryService")
 local Remotes = require("../Net/Remotes")
 local Validate = require("../Net/Validate")
-local OnboardingService = require("../Onboarding/OnboardingService")
 local Receipts = require("./Receipts")
 
 local ShopService = {}
@@ -41,7 +40,6 @@ local function buyItem(player: Player, itemId: string): (boolean, string?)
 		return false, "NOT_ENOUGH"
 	end
 	InventoryService.add(player, itemId)
-	OnboardingService.complete(player, "BoughtFirstItem")
 	return true
 end
 
