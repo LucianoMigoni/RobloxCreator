@@ -10,3 +10,4 @@ Reglas:
 
 | id | origen | licencia | uso comercial | autor | URL / asset ID | fecha |
 |---|---|---|---|---|---|---|
+| coin-gold-lowpoly-01 | Blender (MCP), hecho para el hub | propio | sí | RobloxCreator (Luciano con Claude) | — (sin subir) | 2026-10-26 |

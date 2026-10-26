@@ -133,7 +133,7 @@ APIs (existencia verificada el 2026-10-24 en la referencia oficial, ninguna depr
 
 ## Fase C — Cierre
 
-- [ ] C1. Primer asset real en el catálogo (modelo low-poly hecho con Blender MCP, exportado, registrado en `index.json` + `LICENSES.md`, `catalog.py validate` OK).
+- [x] C1. Primer asset real en el catálogo (modelo low-poly hecho con Blender MCP, exportado, registrado en `index.json` + `LICENSES.md`, `catalog.py validate` OK).
 - [ ] C2. Juego de prueba de punta a punta en `games/prueba/` recorriendo las 10 fases con los dos integrantes (uno en servidor, otro en cliente/mapa), integrando por PR.
 - [ ] C3. Repasar `CLAUDE.md` con lo aprendido en C2 y cerrar esta hoja de ruta.
 
@@ -154,4 +154,6 @@ APIs (existencia verificada el 2026-10-24 en la referencia oficial, ninguna depr
 | B2 | Implementado: `roblox-ideation` (reglas de evidencia, matriz de puntuación con los pesos del algoritmo, plantilla de `concepto.md`, géneros oficiales) y `roblox-game-cloner` (análisis sin exploits, plantilla de `spec.md`, mapeo a la plantilla, export de Blender verificado, verificación por mecánica). Falta usarlos en `games/prueba/` (C2) con datos reales de Charts | leonel (IA) |
 | B3 | Hecho en lo que se puede verificar sin Studio: `roblox-monetization` (tácticas honestas con base oficial, auditoría ética de 12 reglas, regla automática contra textos de presión en `tools/check.py`) y `roblox-metrics-growth` (fuentes, diagnóstico síntoma→acción, `tools/analytics.py` contra la API oficial, probado con autotest y con la API real respondiendo 401 a una key falsa). La tienda de la plantilla pasa la auditoría automática y ya registra embudo de onboarding y eventos de economía (B1b) | leonel (IA) |
 | B4 | Implementado: `roblox-qa-performance` (checklist con bloqueantes, `perf_snapshot.luau` con APIs de `Stats` verificadas), `roblox-compliance` (cuestionario por categoría, Kids/Select, `PolicyService`, filtrado de texto), `roblox-publishing` (metadata, icono, miniaturas, plan de lanzamiento) y `roblox-liveops` (calendario, eventos, changelog), enlazados desde `CLAUDE.md`. Se sumó la regla de público alcanzable en ideación, spec y `CLAUDE.md`. `perf_snapshot.luau` corrido en Studio el 2026-10-26 (primera foto en `team/pruebas/`; teléfono base: Galaxy A06). Falta usarlos en `games/prueba/` (C2) | leonel (IA), luciano |
-| C1–C3 | Pendiente | |
+| C1 | Hecho: `coin-gold-lowpoly-01` (Blender MCP, 288 triángulos, cerrada, sin N-gons), exportada con los ajustes oficiales y validada en el catálogo. Falta importarla y subirla desde Studio (tarea en el tablero) | luciano (con Claude) |
+| C2 | En curso: fase 1 hecha (`games/prueba/docs/concepto.md`, 4 conceptos con datos de Charts del 2026-10-26; recomendado Cocina en Cadena, 80/100). Falta el visto bueno de los dos | luciano (con Claude) |
+| C3 | Pendiente | |

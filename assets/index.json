@@ -14,5 +14,37 @@
     "author": "autor o 'RobloxCreator'",
     "notes": "opcional: escala, pivote, variantes"
   },
-  "assets": []
+  "assets": [
+    {
+      "id": "coin-gold-lowpoly-01",
+      "path": "3d/props/coin-gold-lowpoly-01.fbx",
+      "type": "model3d",
+      "tags": {
+        "style": [
+          "lowpoly",
+          "cartoon"
+        ],
+        "genre": [
+          "simulation",
+          "tycoon",
+          "obby",
+          "any"
+        ],
+        "theme": [
+          "coin",
+          "currency",
+          "pickup",
+          "gold"
+        ]
+      },
+      "polycount": 288,
+      "robloxAssetId": null,
+      "source": "blender-generated",
+      "sourceUrl": null,
+      "license": "propio",
+      "commercialUse": true,
+      "author": "RobloxCreator",
+      "notes": "Moneda de 2 x 0.28 x 2 studs (1 unidad de Blender = 1 stud), de canto sobre el eje Y, pivote en el centro, escala 1 y rotación 0. Malla cerrada, sin N-gons. Material dorado básico sin textura: en Studio poner Color dorado y Material Metal o SmoothPlastic. Exportado con los ajustes de /art/modeling/export-requirements. Falta importarla en Studio (3D Importer, Scale Unit: Studs) y confirmar que mide 2 studs."
+    }
+  ]
 }

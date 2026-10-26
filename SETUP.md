@@ -71,7 +71,16 @@ Permite que Claude Code lea y construya dentro de Studio. Fuente: https://create
 
 ## 6. MCP de Blender (opcional)
 
-> **Pendiente (Luciano):** documentar acá qué add-on de Blender MCP está instalado y el comando exacto con que se registró. En tu máquina, la salida de `claude mcp get Blender` lo muestra. Los skills esperan el prefijo `mcp__Blender__` (`skills/_shared/mcp-tools.md`).
+Se usa el MCP oficial de **Blender Lab** (https://www.blender.org/lab/mcp-server/, código en https://projects.blender.org/lab/blender_mcp). Pide **Blender 5.1 o más nuevo**. Son dos piezas:
+
+1. **Add-on en Blender:** desde esa página, bajar `mcp-<versión>.zip`. Hay dos formas de instalarlo:
+   - Arrastrar el zip a la ventana de Blender **dos veces**: la primera agrega el repositorio de Blender Lab y la segunda instala el add-on.
+   - En *Preferences → Get Extensions*, usar *Install from Disk*.
+
+   Una vez instalado, activar el add-on e iniciar su servidor; escucha en `localhost:9876`.
+2. **Servidor MCP en Claude:** en la máquina de Luciano está instalado como **extensión de la app de escritorio de Claude** ("Blender", de Blender Lab, v1.0.1), no con `claude mcp add`. Por eso `claude mcp get Blender` no lo encuentra. La app se lo pasa a las sesiones de Claude Code que corren dentro de ella. La página oficial ofrece además un paquete `.mcpb` en sus releases para otros clientes.
+
+Verificación: con Blender abierto y el servidor del add-on iniciado, la tool `mcp__Blender__get_objects_summary` devuelve la escena. Si responde `Cannot connect to Blender at localhost:9876`, falta iniciar el servidor del add-on. Los skills esperan el prefijo `mcp__Blender__` (`skills/_shared/mcp-tools.md`).
 
 ## 7. REA (opcional, para analizar juegos de referencia)
 
