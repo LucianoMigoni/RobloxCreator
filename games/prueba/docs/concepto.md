@@ -1,6 +1,6 @@
 # Concepto: juego de prueba (C2)
 
-Fecha: 2026-10-26 · Autor: Luciano (con Claude) · Estado: **propuesta** (falta el visto bueno de Luciano y Leonel)
+Fecha: 2026-10-26 · Autor: Luciano (con Claude) · Estado: **aprobado por Luciano** (2026-10-26): Roba y Fusiona; falta el visto bueno de Leonel
 
 ## Pedido
 Juego de prueba de punta a punta para la fase C2 del hub (`ROADMAP.md`).
@@ -11,6 +11,8 @@ Restricciones del hub:
 - se construye sobre la plantilla (datos, monedas, tienda, inventario, onboarding y UI);
 - equipo de dos, MVP en 3–4 semanas;
 - sale primero solo para 16+, pero el núcleo no debe dejar afuera a menores de 16.
+
+**Idioma y público:** el juego va enteramente en inglés y apunta a jugadores de todo el mundo (regla del hub, `CLAUDE.md`). Este documento es interno y está en español; los nombres y textos que ve el jugador se escriben en inglés.
 
 ## El estilo, en una línea
 **Conseguí algo rápido → ponelo en tu base → te paga por segundo → buscá rarezas y mutaciones → mostrálo o defendelo → mejorá y renacé.** Los servidores son chicos para que todos vean las bases de todos, y hay updates semanales con criaturas y eventos nuevos.
@@ -70,8 +72,9 @@ Criterio del hub: el que no paga sigue pudiendo jugar y progresar; si se va, cae
 
 ## Conceptos
 
-### 1. Roba y Fusiona (nombre de trabajo)
-- **Gancho:** "Robá bichos, fusioná dos iguales y sacá uno más raro". Thumbnail: dos bichos chocando en una máquina y saliendo uno dorado.
+### 1. Roba y Fusiona
+- **Nombre de trabajo en inglés:** *Steal & Fuse Critters*. El título final se decide en `roblox-publishing`; los bichos se llaman *critters* en el juego.
+- **Gancho:** "Steal critters, fuse two of a kind, get a rarer one!" (robá bichos, fusioná dos iguales y sacá uno más raro). Thumbnail: dos bichos chocando en una máquina y saliendo uno dorado.
 - **Loop central:**
   - Pasan bichos por una cinta; comprás uno con monedas.
   - Lo ponés en tu base y genera monedas por segundo.
@@ -111,7 +114,8 @@ Criterio del hub: el que no paga sigue pudiendo jugar y progresar; si se va, cae
   - Hace falta mucho contenido semanal.
 
 ### 2. Jardín de Bichos
-- **Gancho:** "Plantá semillas que se convierten en bichos y te pagan".
+- **Nombre de trabajo en inglés:** *Critter Garden*.
+- **Gancho:** "Plant seeds that hatch into critters that pay you!"
 - **Loop central:** comprar semillas en la tienda del juego (se reponen cada pocos minutos, solo con moneda del juego) → plantarlas → crecen en tiempo real y nace el bicho → el bicho genera monedas → mejores semillas.
 - **El giro propio:** de la planta **nace una criatura**. El clima del servidor cambia cómo nace (bicho de lluvia, de tormenta), y eso se ve en el álbum.
 - **Primer minuto:** a los 10 s plantás; la primera semilla está hecha para crecer en 20 s y el primer bicho nace antes del minuto.
@@ -128,7 +132,8 @@ Criterio del hub: el que no paga sigue pudiendo jugar y progresar; si se va, cae
 - **Riesgos:** la demanda del cultivo bajó (tendencia 2); hay que esperar a que crezca y eso puede hacer rebotar; puede parecerse demasiado a Grow a Garden si el giro no se nota en el thumbnail.
 
 ### 3. Excava un Fósil
-- **Gancho:** "Excavá huesos, armá dinosaurios y llená tu museo".
+- **Nombre de trabajo en inglés:** *Dig a Fossil*.
+- **Gancho:** "Dig up bones, build dinosaurs, fill your museum!"
 - **Loop central:** excavar en tu zona → limpiar la pieza → armar el esqueleto → el dinosaurio completo se exhibe en tu museo y paga por segundo (completo paga mucho más que las piezas sueltas) → mejores palas y zonas.
 - **El giro propio:** **armar colecciones**: cada dinosaurio necesita sus piezas, y una pieza rara cambia la variante.
 - **Primer minuto:** a los 5 s excavás y antes de 30 s tenés el primer hueso; el primer esqueleto chico se completa en el primer minuto.
@@ -146,7 +151,8 @@ Criterio del hub: el que no paga sigue pudiendo jugar y progresar; si se va, cae
 - **Riesgos:** menos evidencia de demanda que robar o cultivar; armar puede ser confuso en el teléfono.
 
 ### 4. Roba un Pez
-- **Gancho:** "Pescá peces raros, llenalos en tu acuario… y cuidá que no te los roben".
+- **Nombre de trabajo en inglés:** *Steal a Fish*.
+- **Gancho:** "Catch rare fish, fill your aquarium… and guard it from thieves!"
 - **Loop central:** pescar con un toque → poner el pez en el acuario → paga por segundo → mejor caña → robar peces de otros acuarios.
 - **El giro propio:** juntar pesca y robo; en las referencias van por separado.
 - **Primer minuto:** a los 10 s lanzás y antes de 30 s sale el primer pez.

@@ -18,7 +18,8 @@ Lo que no se pudo verificar: listado aparte, marcado como hipótesis.
 
 ## Conceptos
 ### 1. <nombre>
-- **Gancho** (una frase, cómo se vería en el thumbnail):
+- **Nombre de trabajo en inglés** (los juegos del hub son en inglés, para público internacional):
+- **Gancho** (una frase en inglés, cómo se vería en el thumbnail):
 - **Loop central:** acción minuto a minuto → progresión.
 - **Primer minuto:** qué hace el jugador en los primeros 10, 30 y 60 s.
 - **Volver D2–7 / D8–28:** por qué vuelve mañana y en tres semanas.

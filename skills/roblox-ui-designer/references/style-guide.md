@@ -19,7 +19,8 @@ Nunca reutilizar un color para otro significado: el jugador aprende el código e
 ## Tipografía
 - Principal: **Fredoka One** (`Enum.Font.FredokaOne`). Títulos llamativos: **Luckiest Guy** (`Enum.Font.LuckiestGuy`). Alternativas gruesas: `GothamBlack`, `Bangers`.
 - Texto siempre con `UIStroke` en modo `Contextual` (contorno de letra), grosor 2.
-- Máximo 2 fuentes por juego. Textos cortos: "¡COMPRAR!" mejor que "Haz clic aquí para comprar".
+- Máximo 2 fuentes por juego. Textos cortos y **en inglés** (regla del hub, `CLAUDE.md`): "BUY!" mejor que "Click here to buy this item".
+- Nada de texto dentro de imágenes o iconos: la traducción automática de Roblox no lo traduce. El texto va en `TextLabel` con `AutoLocalize = true` (`UIKit.text` lo activa).
 
 ## Componentes
 

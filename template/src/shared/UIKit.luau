@@ -74,6 +74,7 @@ function UIKit.text(label: GuiObject, text: string, maxSize: number?)
 	t.FontFace = UIKit.Font
 	t.TextColor3 = UIKit.TEXT_COLOR
 	t.TextScaled = true
+	t.AutoLocalize = true -- la traducción automática de Roblox solo captura texto con AutoLocalize
 	new("UITextSizeConstraint", { MinTextSize = 9, MaxTextSize = maxSize or 48 }, label)
 	new("UIStroke", {
 		Thickness = 2,

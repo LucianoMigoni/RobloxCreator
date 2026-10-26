@@ -9,6 +9,16 @@ Centro para crear juegos de Roblox rápido y con buenas probabilidades de éxito
 - **No inventes herramientas MCP.** Detecta qué hay instalado y usa los nombres exactos: `skills/_shared/mcp-tools.md`.
 - **Servidor autoritativo.** Monedas, daño, compras, inventario y progreso se calculan y validan en el servidor. El cliente solo pide y muestra.
 - **Móvil primero.** La mayoría juega en teléfono: toda UI y todo control se diseña para dedo y pantallas chicas.
+- **Juegos en inglés, para público internacional.** Todo lo que ve el jugador está en inglés:
+  - nombre, descripción, icono y miniaturas;
+  - textos de UI (`Config/UiText.luau`), nombres de criaturas, ítems, Game Passes, Developer Products y badges;
+  - notificaciones, anuncios y notas de update.
+
+  Además:
+  - Los conceptos se piensan para jugadores de todo el mundo, sin chistes ni referencias locales, y se investigan con los Charts de "Todas las ubicaciones".
+  - Para llegar a otros idiomas, el idioma de origen es inglés y se activa la traducción automática de Roblox (18 idiomas; `roblox-publishing`).
+  - Por eso: nada de texto dentro de imágenes (no se traduce), y `AutoLocalize` activado en la UI.
+  - La documentación y la comunicación del equipo siguen en español.
 - **Público menor de edad.** Monetización dentro de las reglas oficiales de Roblox (ver `roblox-monetization`): pagar puede dar ventajas importantes, pero nada de urgencia falsa ni de aleatorios pagos sin probabilidades. Contenido apto (ver `roblox-compliance`). Todo juego nuevo sale primero solo para 16+; llegar a menores de 16 exige cuestionario de madurez completo, requisitos en la cuenta dueña y una evaluación con jugadores 16+ (`roblox-compliance`): decidir el público desde la fase 1.
 - **Puerta de revisión:** al terminar cada fase, mostrar el resultado al usuario y esperar su visto bueno antes de seguir.
 

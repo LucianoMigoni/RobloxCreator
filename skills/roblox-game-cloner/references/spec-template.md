@@ -13,6 +13,9 @@ Fecha · Autor · Concepto de origen: `docs/concepto.md` · Estado: borrador | a
 - **No se toma:** título, logo, thumbnails, mapa, modelos, place file, nombres de personajes (un clon reconocible es "no único" y pierde exposición; además, propiedad intelectual).
 - **Giro propio:** qué lo diferencia.
 
+## Idioma y público
+Todo lo que ve el jugador va en inglés (nombres de criaturas, ítems, productos, textos de UI, onboarding), para público internacional (`CLAUDE.md`). La spec puede estar en español, pero cada nombre y texto que aparezca en el juego se escribe en inglés tal cual va a verse.
+
 ## Loop central
 - Minuto a minuto (acción más repetida):
 - Progresión (qué crece y para qué):

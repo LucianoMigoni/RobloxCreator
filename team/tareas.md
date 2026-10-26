@@ -8,7 +8,7 @@ Formato y flujo: `team/README.md`. Detalle de cada paso del hub: `ROADMAP.md`.
 
 ## Pendiente
 
-- [ ] C2: juego de prueba de punta a punta en `games/prueba/` (arranca con `roblox-ideation` usando datos reales de Charts aportados por ustedes; se lanza primero a 16+) — fase 1 hecha: `games/prueba/docs/concepto.md` propone Roba y Fusiona (86/100), estilo Steal a Brainrot / Grow a Garden con giro propio; plan B Jardín de Bichos (85); falta el visto bueno de los dos para pasar a `roblox-game-cloner` — hub · @luciano @leonel · rama — · juego: prueba
+- [ ] C2: juego de prueba de punta a punta en `games/prueba/` (arranca con `roblox-ideation` usando datos reales de Charts aportados por ustedes; se lanza primero a 16+) — fase 1 hecha: `games/prueba/docs/concepto.md` propone Roba y Fusiona (86/100), estilo Steal a Brainrot / Grow a Garden con giro propio; plan B Jardín de Bichos (85); aprobado por Luciano el 2026-10-26 (*Steal & Fuse Critters*, en inglés y para público internacional); falta el visto bueno de Leonel para pasar a `roblox-game-cloner` — hub · @luciano @leonel · rama — · juego: prueba
 - [ ] C1: importar `assets/3d/props/coin-gold-lowpoly-01.fbx` en Studio (3D Importer, Scale Unit: Studs), confirmar que mide 2 studs, subirla y anotar el `robloxAssetId` en `assets/index.json` — mapa · @luciano · rama — · juego: hub
 - [ ] A2: proteger `main` en GitHub (Settings → Rules; en repo privado puede pedir plan pago) — hub · @luciano · rama — · juego: hub
 - [ ] A3/A4: instalar desde cero siguiendo `SETUP.md` y correr `setup.ps1` en Windows hasta "Todo listo" — hub · @leonel · rama — · juego: hub

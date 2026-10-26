@@ -4,6 +4,13 @@ Copiar en `games/<juego>/docs/lanzamiento.md` y completar. Lo marcado **(hub)** 
 
 ## 1. Metadata
 
+**Idioma:** todo en **inglés**, para público internacional (regla del hub, `CLAUDE.md`). En el Creator Dashboard → Localization:
+- idioma de origen inglés;
+- *Use Translated Content* activado, con los idiomas elegidos en la pestaña Languages (Roblox traduce automáticamente a 18 idiomas el nombre, la descripción y los textos del juego);
+- *Capture text from experience UI while users play* activado.
+
+La traducción automática **no** cubre el texto dentro de imágenes (icono, miniaturas) ni los nombres y descripciones de badges y pases (fuente: `/production/localization/automatic-translations`, verificado el 2026-10-26). Por eso el icono y las miniaturas van sin texto o con muy poco.
+
 **Nombre:** …
 - Estable: no se piensa renombrar después del lanzamiento.
 - Sin palabras repetidas; como mucho uno o dos emojis bien ubicados.
