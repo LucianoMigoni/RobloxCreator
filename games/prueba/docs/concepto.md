@@ -3,144 +3,177 @@
 Fecha: 2026-10-26 · Autor: Luciano (con Claude) · Estado: **propuesta** (falta el visto bueno de Luciano y Leonel)
 
 ## Pedido
-Juego de prueba de punta a punta para la fase C2 del hub (`ROADMAP.md`). El usuario no trajo idea ni género ("proponé vos"). Restricciones del hub:
-- se construye sobre la plantilla (datos, monedas, tienda, inventario, onboarding y UI ya hechos);
-- equipo de dos personas, MVP en 2–3 semanas;
-- sale primero solo para 16+ (`team/decisiones.md`, 2026-10-25), pero el núcleo no debe dejar afuera a menores de 16 para poder abrirlo después.
+Juego de prueba de punta a punta para la fase C2 del hub (`ROADMAP.md`).
+
+Luciano pidió (2026-10-26) el **estilo** de *Steal a Brainrot*, *Grow a Garden* y los simuladores sencillos que atraen a muchos jugadores. **No un clon:** el mismo tipo de juego, con mecánica, tema y arte propios. Este documento reemplaza la propuesta anterior ("Cocina en Cadena"), que iba por los tycoons de cooperación.
+
+Restricciones del hub:
+- se construye sobre la plantilla (datos, monedas, tienda, inventario, onboarding y UI);
+- equipo de dos, MVP en 3–4 semanas;
+- sale primero solo para 16+, pero el núcleo no debe dejar afuera a menores de 16.
+
+## El estilo, en una línea
+**Conseguí algo rápido → ponelo en tu base → te paga por segundo → buscá rarezas y mutaciones → mostrálo o defendelo → mejorá y renacé.** Los servidores son chicos para que todos vean las bases de todos, y hay updates semanales con criaturas y eventos nuevos.
 
 ## Investigación
 
 Fuentes, todas vistas el **2026-10-26**:
-- **Charts:** https://www.roblox.com/charts con los filtros "PC · Todas las ubicaciones" y "PC · Argentina". En los Charts, el % es la valoración positiva y la cifra con K son los jugadores conectados en ese momento. El filtro de teléfono no se pudo fijar desde la sesión: el sitio volvía a PC.
-- **Página del juego:** https://www.roblox.com/games/<id>. Las visitas, favoritos, fechas, género y máximo de jugadores salen de la API pública que usa esa página (`games.roblox.com/v1/games`).
+- **Charts:** https://www.roblox.com/charts con el filtro "PC · Todas las ubicaciones". El filtro de teléfono no se pudo fijar desde la sesión.
+- **Página del juego:** https://www.roblox.com/games/<id>. Visitas, favoritos, jugadores en ese momento, fechas, género y máximo por servidor salen de la API pública que usa esa página (`games.roblox.com/v1/games`). Los nombres se buscaron con el buscador de roblox.com.
 
 | Juego de referencia | Género / subgénero | Dato observado | Fuente | Fecha |
 |---|---|---|---|---|
-| Robar un huevo | Simulation / Tycoon | 1.º en "Más jugadas ahora" con 692,3K jugadores y 91 % de valoración; 9 562 M de visitas desde que se creó, el 2026-07-25 | [juego](https://www.roblox.com/games/107778070777162), Charts | 2026-10-26 |
-| Roba un Brainrot | Simulation / Tycoon | 250K jugadores, 85 %; 74 176 M de visitas desde 2025-05-16 | [juego](https://www.roblox.com/games/109983668079237), Charts | 2026-10-26 |
-| Monta un dinosaurio | Simulation / Tycoon | En tendencia, 97 %, 25,6K jugadores; 20,8 M de visitas desde 2026-08-24 | [juego](https://www.roblox.com/games/93523763376122), Charts | 2026-10-26 |
-| Escala para conseguir huevos de animales | Simulation / Tycoon | En tendencia, 98 %, 17,2K jugadores; 56,9 M de visitas desde 2026-09-06; sus animales dan ingresos aunque el jugador no esté conectado | [juego](https://www.roblox.com/games/85738654635245), Charts | 2026-10-26 |
-| Lavar el coche | Simulation / Tycoon | En tendencia, 88 %, 12,9K jugadores; 18,5 M de visitas y 653K favoritos desde 2026-08-16; servidores de 6 | [juego](https://www.roblox.com/games/70733580049633), Charts | 2026-10-26 |
-| ¡Haz alfombras! | Simulation / Tycoon | En tendencia, 94 %, 7,3K jugadores; 6,5 M de visitas en 19 días (creado el 2026-10-07); fabricar, vender, contratar empleados | [juego](https://www.roblox.com/games/123184865562509), Charts | 2026-10-26 |
-| Construye un imperio de teléfonos | Simulation / Tycoon | En tendencia, 87 %, 12,6K jugadores; 11,3 M de visitas desde 2026-09-22; los amigos aparecen como empleados | [juego](https://www.roblox.com/games/101914705206759), Charts | 2026-10-26 |
-| Vender Limones | Simulation / Tycoon | En tendencia, 94 %, 10,4K jugadores; 490 M de visitas desde 2025-03-17; ingresos aunque el jugador no esté conectado | [juego](https://www.roblox.com/games/79268393072444), Charts | 2026-10-26 |
-| +1 Evolución de Veneno | Simulation / Incremental Simulator | En tendencia, 96 %, 18,1K jugadores; 15,1 M de visitas desde 2026-10-05 | [juego](https://www.roblox.com/games/116448925875915), Charts | 2026-10-26 |
-| Tap Simulator REBORN | Simulation / Incremental Simulator | En tendencia, 94 %, 46K jugadores; 21,8 M de visitas desde 2026-08-04 | [juego](https://www.roblox.com/games/72858262610964), Charts | 2026-10-26 |
-| Hospital de Animales (anomalía) | Survival | 93 %, 21,6K jugadores; 2 472 M de visitas desde 2026-05-10 | [juego](https://www.roblox.com/games/78515283254292), Charts | 2026-10-26 |
-| ¡Vende papas fritas! (anomalía) | Survival | 83 %, 30,4K jugadores; 74 M de visitas desde 2026-09-21 | [juego](https://www.roblox.com/games/94891079210424), Charts | 2026-10-26 |
-| Seguridad del aeropuerto (anomalía) | Survival | En tendencia, 92 %, 9,6K jugadores; 3,5 M de visitas desde 2026-09-30 | [juego](https://www.roblox.com/games/108334808788078), Charts | 2026-10-26 |
-| Solo en casa: Anomalías | Survival | En tendencia, 94 %, 16,3K jugadores; 222 M de visitas desde 2026-05-04 | [juego](https://www.roblox.com/games/87468080405188), Charts | 2026-10-26 |
-| Pedos Juntos [OBBY de 1-4 jugadores] | Obby & platformer | En tendencia y "Prometedoras", 95 %, 6K jugadores; 1,3 M de visitas en 14 días (creado el 2026-10-12); obby cooperativo con física compartida | [juego](https://www.roblox.com/games/100047964036957), Charts | 2026-10-26 |
-| ¡Lleva el cristal juntos! [Obby de 2 jugadores] | Obby & platformer | En "Diversión con amigos", 89 %, 4,6K jugadores; 35,9 M de visitas desde 2026-06-29 | [juego](https://www.roblox.com/games/81734857983173), Charts | 2026-10-26 |
+| Steal An Egg (Robar un huevo) | Simulation / Tycoon | 1.º en "Más jugadas ahora": 696K jugadores; 9 563 M de visitas desde 2026-07-25; servidores de 7 | [juego](https://www.roblox.com/games/107778070777162) | 2026-10-26 |
+| Steal a Brainrot | Simulation / Tycoon | 209K jugadores; 74 177 M de visitas y 29,6 M de favoritos desde 2025-05-16; servidores de 8 | [juego](https://www.roblox.com/games/109983668079237) | 2026-10-26 |
+| Grow a Garden | Simulation / Tycoon | 14,8K jugadores; 35 992 M de visitas y 11,5 M de favoritos desde 2025-03-25; servidores de 4 | [juego](https://www.roblox.com/games/126884695634066) | 2026-10-26 |
+| Steal A Pet And Ride It! | Simulation / Tycoon | En "Prometedoras", 93 %, 10,3K jugadores; 2,6 M de visitas en 22 días (creado el 2026-10-04) | [juego](https://www.roblox.com/games/95168737547508) | 2026-10-26 |
+| Escala para conseguir huevos de animales | Simulation / Tycoon | En tendencia, 98 %, 17K jugadores; 56,9 M de visitas desde 2026-09-06 | [juego](https://www.roblox.com/games/85738654635245) | 2026-10-26 |
+| Monta un dinosaurio | Simulation / Tycoon | En tendencia, 97 %, 25,6K jugadores; 20,8 M de visitas desde 2026-08-24 | [juego](https://www.roblox.com/games/93523763376122) | 2026-10-26 |
+| Fish It! | Simulation / Incremental Simulator | 71,2K jugadores; 4 801 M de visitas desde 2024-10-21 | [juego](https://www.roblox.com/games/121864768012064) | 2026-10-26 |
+| Dig & Clean | Simulation / Tycoon | 1,1K jugadores; 128,8 M de visitas y 1,77 M de favoritos desde 2026-07-09 (excavar, limpiar, museo propio) | [juego](https://www.roblox.com/games/83038462357724) | 2026-10-26 |
+| Build a Zoo | Simulation / Tycoon | 1,2K jugadores; 531,6 M de visitas desde 2025-07-04 | [juego](https://www.roblox.com/games/105555311806207) | 2026-10-26 |
+| Plants & Brainrots | Simulation / Tycoon | 2,1K jugadores; 4 720 M de visitas desde 2025-08-01 | [juego](https://www.roblox.com/games/127742093697776) | 2026-10-26 |
+| Grow a Garden 2 | Simulation / Tycoon | 976 jugadores; 1 680 M de visitas desde 2026-05-21 (suma robo de noche a la fórmula de cultivo) | [juego](https://www.roblox.com/games/97598239454123) | 2026-10-26 |
+| Plant Brainrot Simulator | Simulation / Incremental Simulator | 31 jugadores; 41,9 M de visitas desde 2025-11-28 | [juego](https://www.roblox.com/games/92814019058536) | 2026-10-26 |
+| Drill Blocks for Brainrots | Simulation | 652 jugadores; 66,6 M de visitas desde 2026-05-12 | [juego](https://www.roblox.com/games/78177131121429) | 2026-10-26 |
+| Break a Lucky Block! | Simulation / Tycoon | 605 jugadores; 591,7 M de visitas desde 2025-12-12; última actualización 2026-05-09 | [juego](https://www.roblox.com/games/124311897657957) | 2026-10-26 |
 
 ### Tendencias
-1. **"Hacé X y vendelo".** Simuladores-tycoon de una tarea satisfactoria: lavar coches, hacer alfombras, armar teléfonos, vender limones. Crecen rápido, por ejemplo 6,5 M de visitas en 19 días. Todos son Simulation / Tycoon, con servidores chicos de 6 a 10 jugadores.
-2. **Juntar y colocar para ganar ingresos.** Robar o eclosionar criaturas, ponerlas en la base, ganar aunque no estés conectado y coleccionar. Es lo más jugado ahora (Robar un huevo, Roba un Brainrot), pero también lo más saturado.
-3. **Trabajo con anomalías (Survival).** Revisar, detectar lo raro y decidir. Atrae mucho (2 472 M de visitas en Hospital de Animales), aunque casi todos tienen tono de terror.
-4. **Obbies cooperativos de 1 a 4 jugadores con un truco físico compartido.** Valoración alta (89–95 %) y crecimiento rápido, pero se terminan.
-5. **Incrementales "+1".** Valoración alta, pero muy parecidos entre sí.
+1. **"Roba un X" es lo más jugado hoy.** Los dos primeros de "Más jugadas ahora" son de robar (Steal An Egg y Steal a Brainrot), y siguen saliendo nuevos que crecen (Steal A Pet And Ride It!).
+2. **El cultivo tuvo el pico más grande, pero hoy juega menos gente.** Grow a Garden tiene 36 000 M de visitas y hoy 14,8K jugadores; sus derivados también bajaron (Grow a Garden 2: 976; Plants & Brainrots: 2,1K).
+3. **Las copias casi literales se vacían.** Plant Brainrot Simulator (31), Drill Blocks for Brainrots (652) y Break a Lucky Block! (605, sin update desde mayo) consiguieron visitas, pero hoy casi no tienen jugadores. Coincide con lo que dice la guía oficial: el algoritmo baja la exposición de los juegos "no únicos" (`skills/_shared/algoritmo-descubrimiento.md`).
+4. **Los que siguen arriba actualizan seguido.** Todos los grandes tienen update entre el 2026-10-21 y el 2026-10-26, con eventos de Halloween.
+5. **Variantes que funcionan:** montar lo que robaste (Steal A Pet And Ride It!), escalar para conseguir huevos, excavar y exhibir en un museo (Dig & Clean), pescar (Fish It!).
 
 ### Huecos
-- **Producción en equipo dentro de un tycoon de tarea satisfactoria.** En las referencias de la tendencia 1, los amigos están presentes como empleados o compartiendo servidor, pero el trabajo es de uno solo (fila "Construye un imperio de teléfonos"). Un taller donde los amigos realmente se reparten los pasos no aparece en los Charts revisados.
-- **Anomalías sin terror,** aptas para cualquier edad. Las cuatro de la tabla usan el miedo como gancho.
+- **Combinar criaturas** dentro de la fórmula de robar: en las referencias, las criaturas se compran, roban, eclosionan o mutan, pero no se fusionan entre sí.
+- **Coleccionar armando** (piezas que juntas valen más) en vez de solo sumar unidades sueltas.
 
 ### Hipótesis (sin verificar; no suman en el criterio de evidencia)
-- Que no exista ya un tycoon cooperativo de cocina o fabricación muy jugado. Solo se revisaron las listas de Charts del 2026-10-26, no la búsqueda.
-- Que las tendencias se mantengan igual en teléfono. No se pudo fijar el filtro de dispositivo.
-- Que existan juegos de "escalada atados con cuerda" en Roblox (concepto 2). Es un formato conocido fuera de Roblox; no se buscó.
-- Cuántos jugadores tienen menos de 16. Las cifras de Charts no dan edades.
+- Cuál fue el máximo histórico de jugadores de cada juego; solo se ve la cifra de hoy.
+- Que las tendencias sean iguales en teléfono.
+- Que no exista ya un juego de robar con fusión de criaturas muy jugado; solo se revisaron los Charts y la búsqueda por nombre.
+- Cuántos jugadores tienen menos de 16.
+
+## Reglas para no ser un clon
+- **Criaturas, arte, nombres y mapa propios.** No usar personajes "brainrot" de memes de internet: tienen autores y son propiedad intelectual ajena (`roblox-compliance`).
+- **Título propio.** Puede usar el patrón "Roba un…", que los jugadores ya entienden, pero no el nombre ni las imágenes de un juego existente.
+- **Al menos una mecánica central que las referencias no tengan.**
+- **Monetización honesta** (`roblox-monetization`):
+  - Nada de suerte paga sin probabilidades visibles; en el MVP directamente no se vende suerte.
+  - Las reposiciones de la tienda del juego son con moneda del juego y no se aceleran con Robux.
 
 ## Conceptos
 
-### 1. Cocina en Cadena (nombre de trabajo)
-- **Gancho:** "Tu puesto de comida con amigos: cada uno hace un paso y los pedidos vuelan". Thumbnail: tres avatares pasándose una pizza humeante en una cinta.
-- **Loop central:** tocar una estación (amasar, hornear, decorar, entregar) → el plato avanza → el cliente paga → con las monedas se mejoran estaciones y se desbloquean recetas.
+### 1. Roba y Fusiona (nombre de trabajo)
+- **Gancho:** "Robá bichos, fusioná dos iguales y sacá uno más raro". Thumbnail: dos bichos chocando en una máquina y saliendo uno dorado.
+- **Loop central:**
+  - Pasan bichos por una cinta; comprás uno con monedas.
+  - Lo ponés en tu base y genera monedas por segundo.
+  - Con dos iguales en el fusionador sale el del nivel siguiente.
+  - Con más monedas, mejores bichos.
+  - Renacer multiplica las ganancias.
+- **El giro propio:** la **fusión**. Dos del mismo nivel dan uno superior. Al fusionar hay probabilidad de mutación (dorado, arcoíris), con el porcentaje **siempre visible en pantalla**. Robar ayuda a juntar el par que te falta.
 - **Primer minuto:**
-  - 10 s: ya hay un pedido y una estación brillando; un toque, y la masa sale.
-  - 30 s: primer plato entregado y monedas.
-  - 60 s: primera mejora comprada.
-- **Volver D2–7 / D8–28:** recetas nuevas por nivel del puesto, un libro de recetas para completar, pedidos especiales diarios y ganancias del puesto aunque no estés conectado (con tope).
+  - 10 s: comprás el primer bicho, que ya va hacia tu base.
+  - 30 s: está generando monedas.
+  - 60 s: primera fusión, guiada por el onboarding.
+- **Volver D2–7 / D8–28:** un álbum de bichos por nivel y mutación, ganancias aunque no estés conectado (con tope), un bicho nuevo cada semana y renacer.
 - **Con amigos:**
-  - Cada amigo toma una estación y la producción se multiplica.
-  - El puesto es del dueño, pero los amigos ganan lo mismo por pedido.
-  - Se puede jugar solo: las estaciones libres se usan en orden.
-- **Diferenciación:** las referencias de la tendencia 1 (lavar coches, alfombras, teléfonos) son de un solo jugador; acá la cadena de producción es el juego en equipo.
+  - Robar y defender: entrás a otra base, agarrás un bicho y volvés más lento mientras lo llevás; el dueño puede empujarte para que lo sueltes.
+  - Los amigos se defienden entre ellos.
+  - Servidores de 8.
+- **Anti-frustración:**
+  - Los jugadores nuevos no pueden ser robados durante los primeros minutos.
+  - La base tiene una traba de un rato.
+  - El bicho más valioso de cada jugador no se puede robar.
 - **Monetización honesta:**
-  - Cosméticos del puesto y gorros de cocinero, que los demás ven.
-  - Un pase que ahorra tiempo: una estación que trabaja sola.
+  - Cosméticos de base y de cinta, que los demás ven.
+  - Un pase de cobro automático, que ahorra tiempo.
   - Un pack de inicio único.
+  - Compra directa de un bicho concreto con precio a la vista.
   - Sin cajas pagas.
 - **Género / subgénero oficial:** Simulation / Tycoon.
-- **Público y etiqueta esperada:** todas las edades (comida, sin violencia ni terror). Sale primero a 16+ y puede abrirse después sin cambiar el núcleo.
+- **Público y etiqueta esperada:** todas las edades. El robo es un juego de atrapar, sin violencia; el "empujón" es cómico.
 - **Alcance:**
-  - Ya está en la plantilla: monedas, tienda, inventario (recetas y cosméticos), onboarding y HUD.
-  - Hay que construir: estaciones con ProximityPrompt validadas en el servidor, cola de pedidos, puesto por jugador y reparto de ganancias.
-  - MVP estimado: 3 semanas.
+  - Ya está en la plantilla: monedas, tienda (compras validadas en el servidor), inventario, onboarding y HUD.
+  - Hay que construir: bases por jugador, cinta de bichos, ganancia por segundo, fusión, robar y llevar con validación de distancia en el servidor, traba de base y renacer.
+  - Los bichos son modelos low-poly propios hechos con Blender MCP (el pipeline de C1).
+  - MVP estimado: 3–4 semanas.
 - **Riesgos:**
-  - Que coordinarse en el teléfono sea confuso.
-  - Que solo sea aburrido (la mayoría llega sola).
-  - Que la ganancia sin estar conectado inflacione la economía.
+  - Es la fórmula más competida.
+  - Que te roben puede hacer rebotar a los nuevos (de ahí las reglas anti-frustración).
+  - La economía puede inflacionarse con las ganancias sin conexión.
+  - Hace falta mucho contenido semanal.
 
-### 2. Escalada Encordada
-- **Gancho:** "2 a 4 amigos atados con una cuerda: si uno cae, tira a todos".
-- **Loop central:** saltar juntos → checkpoint → más altura → récord del grupo.
-- **Primer minuto:** se salta en 5 s; la primera caída compartida llega antes de los 30 s.
-- **Volver D2–7 / D8–28:** tramos nuevos por update y récords semanales. Se termina rápido.
-- **Con amigos:** es el núcleo; solo casi no tiene sentido.
-- **Diferenciación:** baja, porque el formato existe fuera de Roblox y en la tendencia 4 ya hay "llevar algo juntos".
-- **Monetización honesta:** solo cosméticos. Un "saltar tramo" pago sería una ventaja injusta, así que no se hace.
-- **Género / subgénero oficial:** Obby & platformer / Tower Obby.
+### 2. Jardín de Bichos
+- **Gancho:** "Plantá semillas que se convierten en bichos y te pagan".
+- **Loop central:** comprar semillas en la tienda del juego (se reponen cada pocos minutos, solo con moneda del juego) → plantarlas → crecen en tiempo real y nace el bicho → el bicho genera monedas → mejores semillas.
+- **El giro propio:** de la planta **nace una criatura**. El clima del servidor cambia cómo nace (bicho de lluvia, de tormenta), y eso se ve en el álbum.
+- **Primer minuto:** a los 10 s plantás; la primera semilla está hecha para crecer en 20 s y el primer bicho nace antes del minuto.
+- **Volver D2–7 / D8–28:** lo que crece en tiempo real hace volver al día siguiente; además, climas raros, álbum y temporadas.
+- **Con amigos:** regar el jardín de un amigo acelera su crecimiento, y se pueden visitar y mostrar los jardines. Servidores de 4–6.
+- **Monetización honesta:** cosméticos de jardín, un pase de regadera automática que ahorra tiempo, pack de inicio. Las reposiciones no se pagan.
+- **Género / subgénero oficial:** Simulation / Tycoon.
 - **Público y etiqueta esperada:** todas las edades.
-- **Alcance:** física de cuerda entre jugadores, nueva y difícil de que se sienta bien con lag. La plantilla aporta poco.
-- **Riesgos:** física en móvil de gama baja, poco motivo para volver e ingresos bajos.
+- **Alcance:** parcelas, temporizadores de crecimiento, clima por servidor y bichos. No necesita la física de robar. MVP de 3 semanas.
+- **Riesgos:** la demanda del cultivo bajó (tendencia 2); hay que esperar a que crezca y eso puede hacer rebotar; puede parecerse demasiado a Grow a Garden si el giro no se nota en el thumbnail.
 
-### 3. Aduana de Mascotas (anomalías sin terror)
-- **Gancho:** "Revisá los pasaportes de las mascotas: ¿es un perro… o algo que se hace pasar por perro?".
-- **Loop central:** revisar a la mascota que llega y sus papeles → aprobar o rechazar → paga por acierto → mejorar el puesto y el escáner.
-- **Primer minuto:** la primera mascota llega en 10 s y una tarjeta muestra una regla; la primera decisión, antes de 30 s.
-- **Volver D2–7 / D8–28:** un turno diario con anomalías nuevas, rangos de inspector y un álbum de anomalías encontradas.
-- **Con amigos:** dos cabinas en paralelo con una fila compartida. Es un co-op leve.
-- **Diferenciación:** el formato de anomalías existe (4 referencias); el giro es sin terror y con mascotas.
-- **Monetización honesta:** cosméticos de uniforme y cabina, y un pase de "lupa rápida" que ahorra tiempo sin dar respuestas.
-- **Género / subgénero oficial:** Survival es el que usan las referencias, aunque sin terror quizás encaje mejor en Simulation; decidirlo con el prototipo.
-- **Público y etiqueta esperada:** todas las edades si las anomalías son graciosas y no dan miedo.
-- **Alcance:** mucho contenido (variantes de mascota, papeles, reglas) y mucho arte. La plantilla aporta monedas y tienda.
-- **Riesgos:** sin el miedo puede perder el gancho que hace funcionar a las referencias; además, el contenido se agota.
-
-### 4. Pesca de Acuario
-- **Gancho:** "Pescá peces raros y llená tu acuario: cada pez te paga".
-- **Loop central:** lanzar y recoger con un minijuego de un toque → poner el pez en el acuario → ingresos → mejor caña y nuevas zonas.
-- **Primer minuto:** se lanza en menos de 10 s y el primer pez sale antes de 30 s.
-- **Volver D2–7 / D8–28:** colección por rareza, peces de temporada e ingresos aunque no estés conectado (con tope).
-- **Con amigos:** visitar acuarios y pescar en el mismo lago. Sin intercambio en el MVP, por el riesgo de estafas.
-- **Diferenciación:** media o baja; en "Más jugadas ahora" ya están ¡Atrapa peces! (71,4K) y Pez (63,5K).
-- **Monetización honesta:** acuarios y cañas cosméticas, y un pase de cebo que ahorra tiempo.
-- **Género / subgénero oficial:** Simulation / Incremental Simulator.
+### 3. Excava un Fósil
+- **Gancho:** "Excavá huesos, armá dinosaurios y llená tu museo".
+- **Loop central:** excavar en tu zona → limpiar la pieza → armar el esqueleto → el dinosaurio completo se exhibe en tu museo y paga por segundo (completo paga mucho más que las piezas sueltas) → mejores palas y zonas.
+- **El giro propio:** **armar colecciones**: cada dinosaurio necesita sus piezas, y una pieza rara cambia la variante.
+- **Primer minuto:** a los 5 s excavás y antes de 30 s tenés el primer hueso; el primer esqueleto chico se completa en el primer minuto.
+- **Volver D2–7 / D8–28:** completar especies, dinosaurios de temporada y el museo como vitrina.
+- **Con amigos:** excavar juntos en zonas grandes, visitar museos, regalar piezas repetidas.
+- **Monetización honesta:** cosméticos de museo, pase de pala doble que ahorra tiempo, pack de inicio.
+- **Género / subgénero oficial:** Simulation / Tycoon.
 - **Público y etiqueta esperada:** todas las edades.
-- **Alcance:** encaja perfecto con el inventario de la plantilla, y el minijuego es simple. MVP de 2 a 3 semanas.
-- **Riesgos:** competir con juegos de pesca grandes y ya instalados.
+- **Alcance:** excavación (puntos de excavación, no terreno libre), piezas en el inventario de la plantilla, armado y museo. MVP de 3–4 semanas.
+- **Riesgos:** menos evidencia de demanda que robar o cultivar; armar puede ser confuso en el teléfono.
+
+### 4. Roba un Pez
+- **Gancho:** "Pescá peces raros, llenalos en tu acuario… y cuidá que no te los roben".
+- **Loop central:** pescar con un toque → poner el pez en el acuario → paga por segundo → mejor caña → robar peces de otros acuarios.
+- **El giro propio:** juntar pesca y robo; en las referencias van por separado.
+- **Primer minuto:** a los 10 s lanzás y antes de 30 s sale el primer pez.
+- **Volver D2–7 / D8–28:** colección por rareza, peces de temporada y ganancias sin estar conectado.
+- **Con amigos:** robar y defender, pescar en el mismo lago.
+- **Monetización honesta:** cañas y acuarios cosméticos, pase de cebo que ahorra tiempo, pack de inicio.
+- **Género / subgénero oficial:** Simulation / Tycoon.
+- **Público y etiqueta esperada:** todas las edades.
+- **Alcance:** dos sistemas grandes (pesca y robo). MVP de 4 semanas o más.
+- **Riesgos:** compite con Fish It! (71K jugadores) y con los juegos de robar a la vez, y es el de mayor alcance.
 
 ## Puntuación
 Pesos de `skills/roblox-ideation/references/scoring.md`. Puntos de 0 a 5; aporte = puntos / 5 × peso.
 
-| Criterio (peso) | 1 Cocina en Cadena | 2 Escalada Encordada | 3 Aduana de Mascotas | 4 Pesca de Acuario |
+| Criterio (peso) | 1 Roba y Fusiona | 2 Jardín de Bichos | 3 Excava un Fósil | 4 Roba un Pez |
 |---|---|---|---|---|
-| 1 Primer minuto (15) | 4 — un toque a los 10 s, aunque hay que caminar a la estación | 4 — se salta enseguida | 3 — hay que leer una regla antes de decidir | 4 — lanzar es inmediato |
-| 2 Loop central (15) | 5 — cocinar, cobrar y mejorar, con progreso visible | 3 — la altura es el único motor | 4 — revisar, cobrar y mejorar el escáner | 5 — pescar, colocar, cobrar y mejorar |
-| 3 Volver D2–7 / D8–28 (15) | 3 — recetas, libro, pedidos diarios | 2 — se termina | 4 — turnos diarios, álbum, rangos | 4 — colección y temporadas |
-| 4 Con amigos (10) | 5 — la cadena es mejor con amigos | 5 — es el núcleo | 3 — cabinas en paralelo | 3 — visitar y pescar juntos |
-| 5 Diferenciación (10) | 4 — tycoon de tarea en cooperación | 2 — formato conocido | 4 — anomalías sin terror | 2 — pesca muy cubierta |
-| 6 Evidencia (10) | 4 — 4 referencias de la tendencia 1 con datos | 4 — 2 referencias cooperativas con datos | 5 — 4 referencias con datos fuertes | 4 — 2 juegos de pesca en el top con datos |
-| 7 Monetización honesta (10) | 4 — cosméticos visibles y un pase que ahorra tiempo | 2 — solo cosméticos | 4 — cosméticos y pase de tiempo | 4 — cosméticos y pase de cebo |
-| 8 Alcance (10) | 3 — estaciones, pedidos y reparto nuevos | 3 — física de cuerda riesgosa | 2 — mucho contenido y arte | 4 — encaja con la plantilla |
-| 9 Móvil (5) | 4 — un toque por estación | 2 — saltos precisos y física | 4 — toques y UI grande | 5 — un toque |
-| **Total /100** | **80** | **61** | **73** | **78** |
+| 1 Primer minuto (15) | 5 — compra a los 10 s y monedas a los 30 s | 4 — plantás enseguida, pero hay espera | 4 — primer hueso antes de 30 s | 4 — primer pez antes de 30 s |
+| 2 Loop central (15) | 5 — comprar, colocar, cobrar y fusionar | 5 — plantar, nacer y cobrar | 4 — excavar, armar y exhibir | 5 — pescar, colocar y cobrar |
+| 3 Volver D2–7 / D8–28 (15) | 4 — álbum, bicho semanal, renacer | 5 — el crecimiento en tiempo real trae de vuelta | 4 — completar especies | 4 — colección y temporadas |
+| 4 Con amigos (10) | 4 — robar y defender juntos | 3 — regar y visitar | 3 — excavar juntos y visitar | 4 — robar y defender |
+| 5 Diferenciación (10) | 3 — la fusión es nueva en la fórmula, pero la fórmula está muy usada | 3 — bichos en vez de frutas, y el clima | 4 — armar colecciones de esqueletos | 2 — mezcla dos fórmulas muy cubiertas |
+| 6 Evidencia (10) | 5 — los dos primeros de "Más jugadas" son de robar, y sigue habiendo nuevos que crecen | 4 — el pico más grande, pero hoy con menos jugadores | 4 — Dig & Clean y Monta un dinosaurio con datos | 5 — Fish It! y los de robar con datos |
+| 7 Monetización honesta (10) | 4 — cosméticos visibles, cobro automático, compra directa | 4 — cosméticos y regadera automática | 4 — cosméticos y pala doble | 4 — cosméticos y cebo |
+| 8 Alcance (10) | 3 — robo, fusión y bases nuevos | 4 — sin física de robo | 3 — excavación y armado | 2 — dos sistemas grandes |
+| 9 Móvil (5) | 4 — tocar para comprar y fusionar; perseguir es simple | 5 — todo con toques | 5 — todo con toques | 5 — pesca con un toque |
+| **Total /100** | **84** | **83** | **77** | **78** |
 
 Cortes duros (0 en primer minuto, diferenciación o monetización): ninguno. Ningún concepto tiene en su núcleo algo que deje afuera a menores de 16.
 
 ## Recomendación
-**Concepto 1, Cocina en Cadena (80/100).** Es el que mejor combina la tendencia que crece más rápido (tycoons de tarea satisfactoria) con un hueco claro: hacerlo en equipo. Además suma co-play, que el algoritmo mide desde junio de 2026. Le sigue Pesca de Acuario (78), que es más fácil de construir pero se diferencia menos.
+**Concepto 1, Roba y Fusiona (84/100).** Es el estilo que hoy tiene más jugadores (tendencia 1), con un giro propio (la fusión) y con reglas anti-frustración y de monetización que las referencias no garantizan.
 
-**Hipótesis a validar primero en el prototipo** (guía oficial *Prototyping*): ¿la cadena de estaciones es divertida **solo** en los primeros 60 s, y se nota que es mejor con un amigo? Prototipo mínimo: 3 estaciones, 1 receta, pedidos que llegan solos y dos cuentas de prueba en Studio. Si solo aburre, el concepto 4 pasa a ser el plan B.
+Queda casi empatado con **Jardín de Bichos (83)**. Este es más fácil de construir y retiene mejor, pero apuesta a un estilo que hoy juega menos gente. Si el prototipo del 1 falla, es el plan B.
 
-Siguiente paso, si se aprueba: `roblox-game-cloner` escribe `games/prueba/docs/spec.md` y copia la plantilla en `games/prueba/`.
+**Hipótesis a validar primero en el prototipo** (guía oficial *Prototyping*): ¿la fusión se entiende sola en el primer minuto y hace que la sesión dure más que solo comprar y robar? ¿Y que te roben no hace irse a los nuevos?
+
+Prototipo mínimo:
+- cinta con 3 bichos y 2 niveles;
+- fusionador;
+- robo entre dos cuentas de prueba en Studio;
+- medir con el embudo de onboarding de la plantilla cuántos llegan a la primera fusión.
+
+Siguiente paso, si se aprueba: `roblox-game-cloner` escribe `games/prueba/docs/spec.md`, que toma el estilo y las mecánicas sin copiar título, arte ni mapa, y copia la plantilla en `games/prueba/`.
