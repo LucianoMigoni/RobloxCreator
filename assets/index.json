@@ -1080,6 +1080,220 @@
       "commercialUse": true,
       "author": "Roblox",
       "notes": "Sonidos de la cuenta oficial Roblox (id 1), públicos y gratis: se usan con su rbxassetid sin subir nada. Roles elegidos en template/src/shared/Config/SoundConfig.luau. Repetir la búsqueda: el filtro creatorTargetId=1 de la API del Creator Store."
+    },
+    {
+      "id": "kenney-ui-audio",
+      "path": "audio/kenney/ui-audio",
+      "type": "pack",
+      "packType": "sound",
+      "count": 51,
+      "tags": {
+        "style": [
+          "lowpoly",
+          "cartoon",
+          "kenney"
+        ],
+        "genre": [],
+        "theme": [
+          "ui",
+          "audio"
+        ]
+      },
+      "robloxAssetId": null,
+      "source": "third-party",
+      "sourceUrl": "https://kenney.nl/assets/ui-audio",
+      "license": "CC0-1.0",
+      "commercialUse": true,
+      "author": "Kenney (www.kenney.nl)",
+      "notes": "51 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
+    },
+    {
+      "id": "kenney-digital-audio",
+      "path": "audio/kenney/digital-audio",
+      "type": "pack",
+      "packType": "sound",
+      "count": 62,
+      "tags": {
+        "style": [
+          "lowpoly",
+          "cartoon",
+          "kenney"
+        ],
+        "genre": [],
+        "theme": [
+          "digital",
+          "audio"
+        ]
+      },
+      "robloxAssetId": null,
+      "source": "third-party",
+      "sourceUrl": "https://kenney.nl/assets/digital-audio",
+      "license": "CC0-1.0",
+      "commercialUse": true,
+      "author": "Kenney (www.kenney.nl)",
+      "notes": "62 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
+    },
+    {
+      "id": "kenney-impact-sounds",
+      "path": "audio/kenney/impact-sounds",
+      "type": "pack",
+      "packType": "sound",
+      "count": 130,
+      "tags": {
+        "style": [
+          "lowpoly",
+          "cartoon",
+          "kenney"
+        ],
+        "genre": [],
+        "theme": [
+          "impact",
+          "sounds"
+        ]
+      },
+      "robloxAssetId": null,
+      "source": "third-party",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "license": "CC0-1.0",
+      "commercialUse": true,
+      "author": "Kenney (www.kenney.nl)",
+      "notes": "130 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
+    },
+    {
+      "id": "kenney-rpg-audio",
+      "path": "audio/kenney/rpg-audio",
+      "type": "pack",
+      "packType": "sound",
+      "count": 51,
+      "tags": {
+        "style": [
+          "lowpoly",
+          "cartoon",
+          "kenney"
+        ],
+        "genre": [],
+        "theme": [
+          "rpg",
+          "audio"
+        ]
+      },
+      "robloxAssetId": null,
+      "source": "third-party",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "license": "CC0-1.0",
+      "commercialUse": true,
+      "author": "Kenney (www.kenney.nl)",
+      "notes": "51 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
+    },
+    {
+      "id": "kenney-voiceover-pack",
+      "path": "audio/kenney/voiceover-pack",
+      "type": "pack",
+      "packType": "sound",
+      "count": 50,
+      "tags": {
+        "style": [
+          "lowpoly",
+          "cartoon",
+          "kenney"
+        ],
+        "genre": [],
+        "theme": [
+          "voiceover",
+          "pack"
+        ]
+      },
+      "robloxAssetId": null,
+      "source": "third-party",
+      "sourceUrl": "https://kenney.nl/assets/voiceover-pack",
+      "license": "CC0-1.0",
+      "commercialUse": true,
+      "author": "Kenney (www.kenney.nl)",
+      "notes": "50 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
+    },
+    {
+      "id": "kenney-voiceover-pack-fighter",
+      "path": "audio/kenney/voiceover-pack-fighter",
+      "type": "pack",
+      "packType": "sound",
+      "count": 46,
+      "tags": {
+        "style": [
+          "lowpoly",
+          "cartoon",
+          "kenney"
+        ],
+        "genre": [],
+        "theme": [
+          "voiceover",
+          "pack",
+          "fighter"
+        ]
+      },
+      "robloxAssetId": null,
+      "source": "third-party",
+      "sourceUrl": "https://kenney.nl/assets/voiceover-pack-fighter",
+      "license": "CC0-1.0",
+      "commercialUse": true,
+      "author": "Kenney (www.kenney.nl)",
+      "notes": "46 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
+    },
+    {
+      "id": "kenney-sci-fi-sounds",
+      "path": "audio/kenney/sci-fi-sounds",
+      "type": "pack",
+      "packType": "sound",
+      "count": 73,
+      "tags": {
+        "style": [
+          "lowpoly",
+          "cartoon",
+          "kenney"
+        ],
+        "genre": [],
+        "theme": [
+          "sci",
+          "fi",
+          "sounds"
+        ]
+      },
+      "robloxAssetId": null,
+      "source": "third-party",
+      "sourceUrl": "https://kenney.nl/assets/sci-fi-sounds",
+      "license": "CC0-1.0",
+      "commercialUse": true,
+      "author": "Kenney (www.kenney.nl)",
+      "notes": "73 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
+    },
+    {
+      "id": "roblox-music-library",
+      "path": "audio/roblox-music",
+      "type": "pack",
+      "packType": "sound",
+      "count": 497,
+      "tags": {
+        "style": [
+          "music"
+        ],
+        "genre": [
+          "any"
+        ],
+        "theme": [
+          "lobby",
+          "happy",
+          "halloween",
+          "christmas",
+          "boss",
+          "chiptune"
+        ]
+      },
+      "robloxAssetId": null,
+      "source": "creator-store",
+      "sourceUrl": "https://create.roblox.com/store/audio",
+      "license": "Música con licencia de Roblox (APM / DistroKid)",
+      "commercialUse": true,
+      "author": "APM Music / DistroKid (vía Roblox)",
+      "notes": "Temas de los socios oficiales de música de Roblox, públicos y gratis para usar en experiencias con su rbxassetid. La palabra clave de cada tema dice para qué sirve (lobby, Halloween, jefe...)."
     }
   ]
 }

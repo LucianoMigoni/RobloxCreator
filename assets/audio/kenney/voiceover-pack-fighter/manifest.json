@@ -1,0 +1,241 @@
+{
+ "pack": "kenney-voiceover-pack-fighter",
+ "kind": "sound",
+ "source": "https://kenney.nl/assets/voiceover-pack-fighter",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 46,
+ "items": [
+  {
+   "name": "1",
+   "file": "1.ogg",
+   "kb": 15
+  },
+  {
+   "name": "10",
+   "file": "10.ogg",
+   "kb": 14
+  },
+  {
+   "name": "2",
+   "file": "2.ogg",
+   "kb": 13
+  },
+  {
+   "name": "3",
+   "file": "3.ogg",
+   "kb": 16
+  },
+  {
+   "name": "4",
+   "file": "4.ogg",
+   "kb": 16
+  },
+  {
+   "name": "5",
+   "file": "5.ogg",
+   "kb": 15
+  },
+  {
+   "name": "6",
+   "file": "6.ogg",
+   "kb": 15
+  },
+  {
+   "name": "7",
+   "file": "7.ogg",
+   "kb": 16
+  },
+  {
+   "name": "8",
+   "file": "8.ogg",
+   "kb": 12
+  },
+  {
+   "name": "9",
+   "file": "9.ogg",
+   "kb": 17
+  },
+  {
+   "name": "arcade_mode",
+   "file": "arcade_mode.ogg",
+   "kb": 23
+  },
+  {
+   "name": "battle_mode",
+   "file": "battle_mode.ogg",
+   "kb": 21
+  },
+  {
+   "name": "begin",
+   "file": "begin.ogg",
+   "kb": 17
+  },
+  {
+   "name": "championship_mode",
+   "file": "championship_mode.ogg",
+   "kb": 23
+  },
+  {
+   "name": "choose_your_character",
+   "file": "choose_your_character.ogg",
+   "kb": 26
+  },
+  {
+   "name": "combo",
+   "file": "combo.ogg",
+   "kb": 16
+  },
+  {
+   "name": "combo_breaker",
+   "file": "combo_breaker.ogg",
+   "kb": 21
+  },
+  {
+   "name": "deathmatch",
+   "file": "deathmatch.ogg",
+   "kb": 18
+  },
+  {
+   "name": "fight",
+   "file": "fight.ogg",
+   "kb": 14
+  },
+  {
+   "name": "final_round",
+   "file": "final_round.ogg",
+   "kb": 23
+  },
+  {
+   "name": "flawless_victory",
+   "file": "flawless_victory.ogg",
+   "kb": 24
+  },
+  {
+   "name": "game_over",
+   "file": "game_over.ogg",
+   "kb": 22
+  },
+  {
+   "name": "it's_a_tie",
+   "file": "it's_a_tie.ogg",
+   "kb": 19
+  },
+  {
+   "name": "kill_her",
+   "file": "kill_her.ogg",
+   "kb": 16
+  },
+  {
+   "name": "kill_him",
+   "file": "kill_him.ogg",
+   "kb": 15
+  },
+  {
+   "name": "kill_it",
+   "file": "kill_it.ogg",
+   "kb": 14
+  },
+  {
+   "name": "loser",
+   "file": "loser.ogg",
+   "kb": 21
+  },
+  {
+   "name": "multi_kill",
+   "file": "multi_kill.ogg",
+   "kb": 18
+  },
+  {
+   "name": "player_1",
+   "file": "player_1.ogg",
+   "kb": 21
+  },
+  {
+   "name": "player_2",
+   "file": "player_2.ogg",
+   "kb": 17
+  },
+  {
+   "name": "prepare_yourself",
+   "file": "prepare_yourself.ogg",
+   "kb": 23
+  },
+  {
+   "name": "ready",
+   "file": "ready.ogg",
+   "kb": 16
+  },
+  {
+   "name": "round_1",
+   "file": "round_1.ogg",
+   "kb": 21
+  },
+  {
+   "name": "round_2",
+   "file": "round_2.ogg",
+   "kb": 21
+  },
+  {
+   "name": "round_3",
+   "file": "round_3.ogg",
+   "kb": 22
+  },
+  {
+   "name": "round_4",
+   "file": "round_4.ogg",
+   "kb": 21
+  },
+  {
+   "name": "round_5",
+   "file": "round_5.ogg",
+   "kb": 22
+  },
+  {
+   "name": "story_mode",
+   "file": "story_mode.ogg",
+   "kb": 25
+  },
+  {
+   "name": "sudden_death",
+   "file": "sudden_death.ogg",
+   "kb": 20
+  },
+  {
+   "name": "survival_mode",
+   "file": "survival_mode.ogg",
+   "kb": 24
+  },
+  {
+   "name": "tie",
+   "file": "tie.ogg",
+   "kb": 15
+  },
+  {
+   "name": "tie_breaker",
+   "file": "tie_breaker.ogg",
+   "kb": 18
+  },
+  {
+   "name": "time",
+   "file": "time.ogg",
+   "kb": 15
+  },
+  {
+   "name": "winner",
+   "file": "winner.ogg",
+   "kb": 21
+  },
+  {
+   "name": "you_lose",
+   "file": "you_lose.ogg",
+   "kb": 20
+  },
+  {
+   "name": "you_win",
+   "file": "you_win.ogg",
+   "kb": 16
+  }
+ ]
+}

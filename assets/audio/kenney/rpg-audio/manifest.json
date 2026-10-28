@@ -1,0 +1,266 @@
+{
+ "pack": "kenney-rpg-audio",
+ "kind": "sound",
+ "source": "https://kenney.nl/assets/rpg-audio",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 51,
+ "items": [
+  {
+   "name": "beltHandle1",
+   "file": "beltHandle1.ogg",
+   "kb": 10
+  },
+  {
+   "name": "beltHandle2",
+   "file": "beltHandle2.ogg",
+   "kb": 15
+  },
+  {
+   "name": "bookClose",
+   "file": "bookClose.ogg",
+   "kb": 9
+  },
+  {
+   "name": "bookFlip1",
+   "file": "bookFlip1.ogg",
+   "kb": 17
+  },
+  {
+   "name": "bookFlip2",
+   "file": "bookFlip2.ogg",
+   "kb": 12
+  },
+  {
+   "name": "bookFlip3",
+   "file": "bookFlip3.ogg",
+   "kb": 8
+  },
+  {
+   "name": "bookOpen",
+   "file": "bookOpen.ogg",
+   "kb": 8
+  },
+  {
+   "name": "bookPlace1",
+   "file": "bookPlace1.ogg",
+   "kb": 9
+  },
+  {
+   "name": "bookPlace2",
+   "file": "bookPlace2.ogg",
+   "kb": 10
+  },
+  {
+   "name": "bookPlace3",
+   "file": "bookPlace3.ogg",
+   "kb": 9
+  },
+  {
+   "name": "chop",
+   "file": "chop.ogg",
+   "kb": 9
+  },
+  {
+   "name": "cloth1",
+   "file": "cloth1.ogg",
+   "kb": 16
+  },
+  {
+   "name": "cloth2",
+   "file": "cloth2.ogg",
+   "kb": 11
+  },
+  {
+   "name": "cloth3",
+   "file": "cloth3.ogg",
+   "kb": 12
+  },
+  {
+   "name": "cloth4",
+   "file": "cloth4.ogg",
+   "kb": 10
+  },
+  {
+   "name": "clothBelt",
+   "file": "clothBelt.ogg",
+   "kb": 20
+  },
+  {
+   "name": "clothBelt2",
+   "file": "clothBelt2.ogg",
+   "kb": 19
+  },
+  {
+   "name": "creak1",
+   "file": "creak1.ogg",
+   "kb": 15
+  },
+  {
+   "name": "creak2",
+   "file": "creak2.ogg",
+   "kb": 18
+  },
+  {
+   "name": "creak3",
+   "file": "creak3.ogg",
+   "kb": 10
+  },
+  {
+   "name": "doorClose_1",
+   "file": "doorClose_1.ogg",
+   "kb": 18
+  },
+  {
+   "name": "doorClose_2",
+   "file": "doorClose_2.ogg",
+   "kb": 17
+  },
+  {
+   "name": "doorClose_3",
+   "file": "doorClose_3.ogg",
+   "kb": 20
+  },
+  {
+   "name": "doorClose_4",
+   "file": "doorClose_4.ogg",
+   "kb": 16
+  },
+  {
+   "name": "doorOpen_1",
+   "file": "doorOpen_1.ogg",
+   "kb": 22
+  },
+  {
+   "name": "doorOpen_2",
+   "file": "doorOpen_2.ogg",
+   "kb": 29
+  },
+  {
+   "name": "drawKnife1",
+   "file": "drawKnife1.ogg",
+   "kb": 10
+  },
+  {
+   "name": "drawKnife2",
+   "file": "drawKnife2.ogg",
+   "kb": 12
+  },
+  {
+   "name": "drawKnife3",
+   "file": "drawKnife3.ogg",
+   "kb": 12
+  },
+  {
+   "name": "dropLeather",
+   "file": "dropLeather.ogg",
+   "kb": 11
+  },
+  {
+   "name": "footstep00",
+   "file": "footstep00.ogg",
+   "kb": 9
+  },
+  {
+   "name": "footstep01",
+   "file": "footstep01.ogg",
+   "kb": 9
+  },
+  {
+   "name": "footstep02",
+   "file": "footstep02.ogg",
+   "kb": 9
+  },
+  {
+   "name": "footstep03",
+   "file": "footstep03.ogg",
+   "kb": 10
+  },
+  {
+   "name": "footstep04",
+   "file": "footstep04.ogg",
+   "kb": 11
+  },
+  {
+   "name": "footstep05",
+   "file": "footstep05.ogg",
+   "kb": 10
+  },
+  {
+   "name": "footstep06",
+   "file": "footstep06.ogg",
+   "kb": 9
+  },
+  {
+   "name": "footstep07",
+   "file": "footstep07.ogg",
+   "kb": 10
+  },
+  {
+   "name": "footstep08",
+   "file": "footstep08.ogg",
+   "kb": 9
+  },
+  {
+   "name": "footstep09",
+   "file": "footstep09.ogg",
+   "kb": 9
+  },
+  {
+   "name": "handleCoins",
+   "file": "handleCoins.ogg",
+   "kb": 24
+  },
+  {
+   "name": "handleCoins2",
+   "file": "handleCoins2.ogg",
+   "kb": 12
+  },
+  {
+   "name": "handleSmallLeather",
+   "file": "handleSmallLeather.ogg",
+   "kb": 10
+  },
+  {
+   "name": "handleSmallLeather2",
+   "file": "handleSmallLeather2.ogg",
+   "kb": 9
+  },
+  {
+   "name": "knifeSlice",
+   "file": "knifeSlice.ogg",
+   "kb": 15
+  },
+  {
+   "name": "knifeSlice2",
+   "file": "knifeSlice2.ogg",
+   "kb": 14
+  },
+  {
+   "name": "metalClick",
+   "file": "metalClick.ogg",
+   "kb": 13
+  },
+  {
+   "name": "metalLatch",
+   "file": "metalLatch.ogg",
+   "kb": 9
+  },
+  {
+   "name": "metalPot1",
+   "file": "metalPot1.ogg",
+   "kb": 30
+  },
+  {
+   "name": "metalPot2",
+   "file": "metalPot2.ogg",
+   "kb": 21
+  },
+  {
+   "name": "metalPot3",
+   "file": "metalPot3.ogg",
+   "kb": 22
+  }
+ ]
+}

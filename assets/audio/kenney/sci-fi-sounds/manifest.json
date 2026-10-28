@@ -1,0 +1,376 @@
+{
+ "pack": "kenney-sci-fi-sounds",
+ "kind": "sound",
+ "source": "https://kenney.nl/assets/sci-fi-sounds",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 73,
+ "items": [
+  {
+   "name": "computerNoise_000",
+   "file": "computerNoise_000.ogg",
+   "kb": 116
+  },
+  {
+   "name": "computerNoise_001",
+   "file": "computerNoise_001.ogg",
+   "kb": 117
+  },
+  {
+   "name": "computerNoise_002",
+   "file": "computerNoise_002.ogg",
+   "kb": 127
+  },
+  {
+   "name": "computerNoise_003",
+   "file": "computerNoise_003.ogg",
+   "kb": 120
+  },
+  {
+   "name": "doorClose_000",
+   "file": "doorClose_000.ogg",
+   "kb": 19
+  },
+  {
+   "name": "doorClose_001",
+   "file": "doorClose_001.ogg",
+   "kb": 21
+  },
+  {
+   "name": "doorClose_002",
+   "file": "doorClose_002.ogg",
+   "kb": 20
+  },
+  {
+   "name": "doorOpen_000",
+   "file": "doorOpen_000.ogg",
+   "kb": 19
+  },
+  {
+   "name": "doorOpen_001",
+   "file": "doorOpen_001.ogg",
+   "kb": 20
+  },
+  {
+   "name": "doorOpen_002",
+   "file": "doorOpen_002.ogg",
+   "kb": 19
+  },
+  {
+   "name": "engineCircular_000",
+   "file": "engineCircular_000.ogg",
+   "kb": 173
+  },
+  {
+   "name": "engineCircular_001",
+   "file": "engineCircular_001.ogg",
+   "kb": 194
+  },
+  {
+   "name": "engineCircular_002",
+   "file": "engineCircular_002.ogg",
+   "kb": 184
+  },
+  {
+   "name": "engineCircular_003",
+   "file": "engineCircular_003.ogg",
+   "kb": 179
+  },
+  {
+   "name": "engineCircular_004",
+   "file": "engineCircular_004.ogg",
+   "kb": 176
+  },
+  {
+   "name": "explosionCrunch_000",
+   "file": "explosionCrunch_000.ogg",
+   "kb": 27
+  },
+  {
+   "name": "explosionCrunch_001",
+   "file": "explosionCrunch_001.ogg",
+   "kb": 46
+  },
+  {
+   "name": "explosionCrunch_002",
+   "file": "explosionCrunch_002.ogg",
+   "kb": 46
+  },
+  {
+   "name": "explosionCrunch_003",
+   "file": "explosionCrunch_003.ogg",
+   "kb": 53
+  },
+  {
+   "name": "explosionCrunch_004",
+   "file": "explosionCrunch_004.ogg",
+   "kb": 77
+  },
+  {
+   "name": "forceField_000",
+   "file": "forceField_000.ogg",
+   "kb": 25
+  },
+  {
+   "name": "forceField_001",
+   "file": "forceField_001.ogg",
+   "kb": 28
+  },
+  {
+   "name": "forceField_002",
+   "file": "forceField_002.ogg",
+   "kb": 26
+  },
+  {
+   "name": "forceField_003",
+   "file": "forceField_003.ogg",
+   "kb": 23
+  },
+  {
+   "name": "forceField_004",
+   "file": "forceField_004.ogg",
+   "kb": 26
+  },
+  {
+   "name": "impactMetal_000",
+   "file": "impactMetal_000.ogg",
+   "kb": 15
+  },
+  {
+   "name": "impactMetal_001",
+   "file": "impactMetal_001.ogg",
+   "kb": 14
+  },
+  {
+   "name": "impactMetal_002",
+   "file": "impactMetal_002.ogg",
+   "kb": 12
+  },
+  {
+   "name": "impactMetal_003",
+   "file": "impactMetal_003.ogg",
+   "kb": 16
+  },
+  {
+   "name": "impactMetal_004",
+   "file": "impactMetal_004.ogg",
+   "kb": 11
+  },
+  {
+   "name": "laserLarge_000",
+   "file": "laserLarge_000.ogg",
+   "kb": 24
+  },
+  {
+   "name": "laserLarge_001",
+   "file": "laserLarge_001.ogg",
+   "kb": 25
+  },
+  {
+   "name": "laserLarge_002",
+   "file": "laserLarge_002.ogg",
+   "kb": 26
+  },
+  {
+   "name": "laserLarge_003",
+   "file": "laserLarge_003.ogg",
+   "kb": 25
+  },
+  {
+   "name": "laserLarge_004",
+   "file": "laserLarge_004.ogg",
+   "kb": 25
+  },
+  {
+   "name": "laserRetro_000",
+   "file": "laserRetro_000.ogg",
+   "kb": 12
+  },
+  {
+   "name": "laserRetro_001",
+   "file": "laserRetro_001.ogg",
+   "kb": 12
+  },
+  {
+   "name": "laserRetro_002",
+   "file": "laserRetro_002.ogg",
+   "kb": 12
+  },
+  {
+   "name": "laserRetro_003",
+   "file": "laserRetro_003.ogg",
+   "kb": 13
+  },
+  {
+   "name": "laserRetro_004",
+   "file": "laserRetro_004.ogg",
+   "kb": 12
+  },
+  {
+   "name": "laserSmall_000",
+   "file": "laserSmall_000.ogg",
+   "kb": 7
+  },
+  {
+   "name": "laserSmall_001",
+   "file": "laserSmall_001.ogg",
+   "kb": 7
+  },
+  {
+   "name": "laserSmall_002",
+   "file": "laserSmall_002.ogg",
+   "kb": 8
+  },
+  {
+   "name": "laserSmall_003",
+   "file": "laserSmall_003.ogg",
+   "kb": 7
+  },
+  {
+   "name": "laserSmall_004",
+   "file": "laserSmall_004.ogg",
+   "kb": 8
+  },
+  {
+   "name": "lowFrequency_explosion_000",
+   "file": "lowFrequency_explosion_000.ogg",
+   "kb": 13
+  },
+  {
+   "name": "lowFrequency_explosion_001",
+   "file": "lowFrequency_explosion_001.ogg",
+   "kb": 9
+  },
+  {
+   "name": "slime_000",
+   "file": "slime_000.ogg",
+   "kb": 20
+  },
+  {
+   "name": "slime_001",
+   "file": "slime_001.ogg",
+   "kb": 155
+  },
+  {
+   "name": "spaceEngineLarge_000",
+   "file": "spaceEngineLarge_000.ogg",
+   "kb": 185
+  },
+  {
+   "name": "spaceEngineLarge_001",
+   "file": "spaceEngineLarge_001.ogg",
+   "kb": 207
+  },
+  {
+   "name": "spaceEngineLarge_002",
+   "file": "spaceEngineLarge_002.ogg",
+   "kb": 209
+  },
+  {
+   "name": "spaceEngineLarge_003",
+   "file": "spaceEngineLarge_003.ogg",
+   "kb": 209
+  },
+  {
+   "name": "spaceEngineLarge_004",
+   "file": "spaceEngineLarge_004.ogg",
+   "kb": 205
+  },
+  {
+   "name": "spaceEngineLow_000",
+   "file": "spaceEngineLow_000.ogg",
+   "kb": 97
+  },
+  {
+   "name": "spaceEngineLow_001",
+   "file": "spaceEngineLow_001.ogg",
+   "kb": 96
+  },
+  {
+   "name": "spaceEngineLow_002",
+   "file": "spaceEngineLow_002.ogg",
+   "kb": 70
+  },
+  {
+   "name": "spaceEngineLow_003",
+   "file": "spaceEngineLow_003.ogg",
+   "kb": 83
+  },
+  {
+   "name": "spaceEngineLow_004",
+   "file": "spaceEngineLow_004.ogg",
+   "kb": 98
+  },
+  {
+   "name": "spaceEngineSmall_000",
+   "file": "spaceEngineSmall_000.ogg",
+   "kb": 114
+  },
+  {
+   "name": "spaceEngineSmall_001",
+   "file": "spaceEngineSmall_001.ogg",
+   "kb": 130
+  },
+  {
+   "name": "spaceEngineSmall_002",
+   "file": "spaceEngineSmall_002.ogg",
+   "kb": 117
+  },
+  {
+   "name": "spaceEngineSmall_003",
+   "file": "spaceEngineSmall_003.ogg",
+   "kb": 126
+  },
+  {
+   "name": "spaceEngineSmall_004",
+   "file": "spaceEngineSmall_004.ogg",
+   "kb": 127
+  },
+  {
+   "name": "spaceEngine_000",
+   "file": "spaceEngine_000.ogg",
+   "kb": 106
+  },
+  {
+   "name": "spaceEngine_001",
+   "file": "spaceEngine_001.ogg",
+   "kb": 118
+  },
+  {
+   "name": "spaceEngine_002",
+   "file": "spaceEngine_002.ogg",
+   "kb": 108
+  },
+  {
+   "name": "spaceEngine_003",
+   "file": "spaceEngine_003.ogg",
+   "kb": 65
+  },
+  {
+   "name": "thrusterFire_000",
+   "file": "thrusterFire_000.ogg",
+   "kb": 196
+  },
+  {
+   "name": "thrusterFire_001",
+   "file": "thrusterFire_001.ogg",
+   "kb": 199
+  },
+  {
+   "name": "thrusterFire_002",
+   "file": "thrusterFire_002.ogg",
+   "kb": 200
+  },
+  {
+   "name": "thrusterFire_003",
+   "file": "thrusterFire_003.ogg",
+   "kb": 191
+  },
+  {
+   "name": "thrusterFire_004",
+   "file": "thrusterFire_004.ogg",
+   "kb": 204
+  }
+ ]
+}

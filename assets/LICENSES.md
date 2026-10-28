@@ -50,3 +50,11 @@ Reglas:
 | fluent-emoji-3d | Fluent Emoji 3D (Microsoft) | MIT (Copyright (c) Microsoft Corporation) | sí, con el aviso de copyright | Microsoft | https://github.com/microsoft/fluentui-emoji | 2026-10-28 |
 | kenney-fish-pack | Kenney, paquete "fish-pack" | CC0 1.0 (dominio público) | sí | Kenney (www.kenney.nl) | https://kenney.nl/assets/fish-pack | 2026-10-28 |
 | roblox-audio-library | Creator Store de Roblox, sonidos publicados por la cuenta Roblox | Audio de Roblox para experiencias | sí, dentro de Roblox | Roblox | https://create.roblox.com/store/audio | 2026-10-28 |
+| kenney-ui-audio | Kenney, paquete "ui-audio" | CC0 1.0 (dominio público) | sí | Kenney (www.kenney.nl) | https://kenney.nl/assets/ui-audio | 2026-10-28 |
+| kenney-digital-audio | Kenney, paquete "digital-audio" | CC0 1.0 (dominio público) | sí | Kenney (www.kenney.nl) | https://kenney.nl/assets/digital-audio | 2026-10-28 |
+| kenney-impact-sounds | Kenney, paquete "impact-sounds" | CC0 1.0 (dominio público) | sí | Kenney (www.kenney.nl) | https://kenney.nl/assets/impact-sounds | 2026-10-28 |
+| kenney-rpg-audio | Kenney, paquete "rpg-audio" | CC0 1.0 (dominio público) | sí | Kenney (www.kenney.nl) | https://kenney.nl/assets/rpg-audio | 2026-10-28 |
+| kenney-voiceover-pack | Kenney, paquete "voiceover-pack" | CC0 1.0 (dominio público) | sí | Kenney (www.kenney.nl) | https://kenney.nl/assets/voiceover-pack | 2026-10-28 |
+| kenney-voiceover-pack-fighter | Kenney, paquete "voiceover-pack-fighter" | CC0 1.0 (dominio público) | sí | Kenney (www.kenney.nl) | https://kenney.nl/assets/voiceover-pack-fighter | 2026-10-28 |
+| kenney-sci-fi-sounds | Kenney, paquete "sci-fi-sounds" | CC0 1.0 (dominio público) | sí | Kenney (www.kenney.nl) | https://kenney.nl/assets/sci-fi-sounds | 2026-10-28 |
+| roblox-music-library | Creator Store de Roblox, música de APMOfficial y DistrokidOfficial | Música con licencia de Roblox para experiencias | sí, dentro de Roblox | APM Music / DistroKid | https://create.roblox.com/store/audio | 2026-10-28 |

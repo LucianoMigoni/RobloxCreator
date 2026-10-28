@@ -1,0 +1,4981 @@
+{
+ "pack": "roblox-music-library",
+ "kind": "sound",
+ "source": "Creator Store de Roblox: música con licencia de APM Music y DistroKid (cuentas APMOfficial y DistrokidOfficial)",
+ "license": "Música con licencia de Roblox para usar dentro de experiencias",
+ "author": "APM Music / DistroKid (vía Roblox)",
+ "imported": "2026-10-28",
+ "count": 497,
+ "items": [
+  {
+   "name": "8 Bit Boss Battle",
+   "file": "rbxassetid://81329998466828",
+   "id": 81329998466828,
+   "seconds": 145,
+   "audioType": "Music",
+   "keyword": "8 bit",
+   "artist": "Neuro Art",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "8 Bitty Kitty - Underscore",
+   "file": "rbxassetid://9039445224",
+   "id": 9039445224,
+   "seconds": 119,
+   "audioType": "Music",
+   "keyword": "8 bit",
+   "artist": "Hard",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "8-Bit Dreams",
+   "file": "rbxassetid://129980770908809",
+   "id": 129980770908809,
+   "seconds": 158,
+   "audioType": "Music",
+   "keyword": "8 bit",
+   "artist": "Headphone Hero",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "8-Bit Echo Receipt",
+   "file": "rbxassetid://138594740290675",
+   "id": 138594740290675,
+   "seconds": 207,
+   "audioType": "Music",
+   "keyword": "8 bit",
+   "artist": "CTRL + Chill",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Action",
+   "file": "rbxassetid://130366303895413",
+   "id": 130366303895413,
+   "seconds": 126,
+   "audioType": "Music",
+   "keyword": "8 bit",
+   "artist": "Patte",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "All 8 Bit Now",
+   "file": "rbxassetid://9048376021",
+   "id": 9048376021,
+   "seconds": 121,
+   "audioType": "Music",
+   "keyword": "8 bit",
+   "artist": "Jim Condelli",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "All Dropping 8 Bit Beats",
+   "file": "rbxassetid://9048375035",
+   "id": 9048375035,
+   "seconds": 126,
+   "audioType": "Music",
+   "keyword": "8 bit",
+   "artist": "Jim Condelli",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Boss Battle Burnout",
+   "file": "rbxassetid://139997523791273",
+   "id": 139997523791273,
+   "seconds": 172,
+   "audioType": "Music",
+   "keyword": "8 bit",
+   "artist": "Workout & Wellness Zone",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Boss Fight Cue (Violin x 8-Bit)",
+   "file": "rbxassetid://74585894669741",
+   "id": 74585894669741,
+   "seconds": 137,
+   "audioType": "Music",
+   "keyword": "8 bit",
+   "artist": "Marketpedia",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "CITY BUNCH",
+   "file": "rbxassetid://138682282241619",
+   "id": 138682282241619,
+   "seconds": 108,
+   "audioType": "Music",
+   "keyword": "8 bit",
+   "artist": "Pix3l",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Cloud",
+   "file": "rbxassetid://133277396867640",
+   "id": 133277396867640,
+   "seconds": 198,
+   "audioType": "Music",
+   "keyword": "8 bit",
+   "artist": "BobaByte Lofi",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Forest Explorer’s Journey",
+   "file": "rbxassetid://103529274376153",
+   "id": 103529274376153,
+   "seconds": 161,
+   "audioType": "Music",
+   "keyword": "8 bit",
+   "artist": "Joejoe Chow",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Jungle’s Lost Secrets",
+   "file": "rbxassetid://139511913811960",
+   "id": 139511913811960,
+   "seconds": 150,
+   "audioType": "Music",
+   "keyword": "8 bit",
+   "artist": "Joejoe Chow",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "On the 8 bit Vibe",
+   "file": "rbxassetid://9048378262",
+   "id": 9048378262,
+   "seconds": 130,
+   "audioType": "Music",
+   "keyword": "8 bit",
+   "artist": "Jim Condelli",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Retro",
+   "file": "rbxassetid://104397245316246",
+   "id": 104397245316246,
+   "seconds": 212,
+   "audioType": "Music",
+   "keyword": "8 bit",
+   "artist": "BobaByte Lofi",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Slow Waves of Incoming Pixels",
+   "file": "rbxassetid://138934492920017",
+   "id": 138934492920017,
+   "seconds": 145,
+   "audioType": "Music",
+   "keyword": "8 bit",
+   "artist": "8bit Lofi Labs",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Town Music: Orcshire Market (8bit)",
+   "file": "rbxassetid://140233474289874",
+   "id": 140233474289874,
+   "seconds": 70,
+   "audioType": "Music",
+   "keyword": "8 bit",
+   "artist": "DistrokidOfficial",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Carney Vell",
+   "file": "rbxassetid://113391157629607",
+   "id": 113391157629607,
+   "seconds": 12,
+   "audioType": "Music",
+   "keyword": "adventure upbeat",
+   "artist": "SO87",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Cloak and Dagger (a 15)",
+   "file": "rbxassetid://9041912631",
+   "id": 9041912631,
+   "seconds": 15,
+   "audioType": "Music",
+   "keyword": "adventure upbeat",
+   "artist": "Ded Good",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Everything Works Out - 15",
+   "file": "rbxassetid://1848281788",
+   "id": 1848281788,
+   "seconds": 16,
+   "audioType": "Music",
+   "keyword": "adventure upbeat",
+   "artist": "Spot On",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Fantastical Waltz (a 15)",
+   "file": "rbxassetid://9041913241",
+   "id": 9041913241,
+   "seconds": 15,
+   "audioType": "Music",
+   "keyword": "adventure upbeat",
+   "artist": "Ded Good",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Hitch A Different Ride - 15A",
+   "file": "rbxassetid://9040467672",
+   "id": 9040467672,
+   "seconds": 17,
+   "audioType": "Music",
+   "keyword": "adventure upbeat",
+   "artist": "Spot On",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Hitch A Different Ride - 15A, Alt",
+   "file": "rbxassetid://9040467783",
+   "id": 9040467783,
+   "seconds": 17,
+   "audioType": "Music",
+   "keyword": "adventure upbeat",
+   "artist": "Spot On",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Political Tactic",
+   "file": "rbxassetid://9045225069",
+   "id": 9045225069,
+   "seconds": 14,
+   "audioType": "Music",
+   "keyword": "adventure upbeat",
+   "artist": "Patrick Chartol",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Spoonful Of Cheer - 15",
+   "file": "rbxassetid://9040483702",
+   "id": 9040483702,
+   "seconds": 17,
+   "audioType": "Music",
+   "keyword": "adventure upbeat",
+   "artist": "Spot On",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Spoonful Of Cheer - 15, Alt",
+   "file": "rbxassetid://9040483592",
+   "id": 9040483592,
+   "seconds": 17,
+   "audioType": "Music",
+   "keyword": "adventure upbeat",
+   "artist": "Spot On",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "The Bedouin D",
+   "file": "rbxassetid://1845964094",
+   "id": 1845964094,
+   "seconds": 16,
+   "audioType": "Music",
+   "keyword": "adventure upbeat",
+   "artist": "Jad Mhanna",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "A Walk In The Park",
+   "file": "rbxassetid://99563014184071",
+   "id": 99563014184071,
+   "seconds": 174,
+   "audioType": "Music",
+   "keyword": "arcade",
+   "artist": "Purple Prosperity",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Adrenaline Arcade Synthwave",
+   "file": "rbxassetid://138551890276730",
+   "id": 138551890276730,
+   "seconds": 208,
+   "audioType": "Music",
+   "keyword": "arcade",
+   "artist": "The Love Archetype",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Arcade Dream",
+   "file": "rbxassetid://1840985393",
+   "id": 1840985393,
+   "seconds": 157,
+   "audioType": "Music",
+   "keyword": "arcade",
+   "artist": "Alistair Hawkins",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Arcade Glow (No Copyright Music)",
+   "file": "rbxassetid://132987806306050",
+   "id": 132987806306050,
+   "seconds": 195,
+   "audioType": "Music",
+   "keyword": "arcade",
+   "artist": "Rajiv",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Arcade Love Song",
+   "file": "rbxassetid://93076503930097",
+   "id": 93076503930097,
+   "seconds": 155,
+   "audioType": "Music",
+   "keyword": "arcade",
+   "artist": "Retro Replay",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Arcade Weekend",
+   "file": "rbxassetid://1842976958",
+   "id": 1842976958,
+   "seconds": 141,
+   "audioType": "Music",
+   "keyword": "arcade",
+   "artist": "Alec Lee Justice",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Arcade Weekend (Underscore Version)",
+   "file": "rbxassetid://1842977007",
+   "id": 1842977007,
+   "seconds": 141,
+   "audioType": "Music",
+   "keyword": "arcade",
+   "artist": "Alec Lee Justice",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Boost Jump to Sector 6",
+   "file": "rbxassetid://138675252823149",
+   "id": 138675252823149,
+   "seconds": 145,
+   "audioType": "Music",
+   "keyword": "arcade",
+   "artist": "Jennii Galaxy",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "FNAF SB Theme Arcade",
+   "file": "rbxassetid://70882069356936",
+   "id": 70882069356936,
+   "seconds": 202,
+   "audioType": "Music",
+   "keyword": "arcade",
+   "artist": "Monster Music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Game Over Restart",
+   "file": "rbxassetid://130130829171288",
+   "id": 130130829171288,
+   "seconds": 263,
+   "audioType": "Music",
+   "keyword": "arcade",
+   "artist": "Headphone Hero",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Hologram Dreams – Chill 80s Retrowave Vibes",
+   "file": "rbxassetid://133998356068434",
+   "id": 133998356068434,
+   "seconds": 345,
+   "audioType": "Music",
+   "keyword": "arcade",
+   "artist": "Arcade Pulse",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Insert Coin",
+   "file": "rbxassetid://140486290054589",
+   "id": 140486290054589,
+   "seconds": 199,
+   "audioType": "Music",
+   "keyword": "arcade",
+   "artist": "Headphone Hero",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Intermission Arcade",
+   "file": "rbxassetid://78049654615205",
+   "id": 78049654615205,
+   "seconds": 43,
+   "audioType": "Music",
+   "keyword": "arcade",
+   "artist": "Octobers Ashes",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Midnight Arcade",
+   "file": "rbxassetid://118038510431692",
+   "id": 118038510431692,
+   "seconds": 237,
+   "audioType": "Music",
+   "keyword": "arcade",
+   "artist": "Headphone Hero",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Pixel Perfect",
+   "file": "rbxassetid://98334096366477",
+   "id": 98334096366477,
+   "seconds": 144,
+   "audioType": "Music",
+   "keyword": "arcade",
+   "artist": "Headphone Hero",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Retro Arcade Games",
+   "file": "rbxassetid://139556245377384",
+   "id": 139556245377384,
+   "seconds": 85,
+   "audioType": "Music",
+   "keyword": "arcade",
+   "artist": "Mahdi Chishty",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "BOSS BATTLE (OR MOVIE) CHASE SEQUENCE THEME MUSIC",
+   "file": "rbxassetid://98757689536447",
+   "id": 98757689536447,
+   "seconds": 199,
+   "audioType": "Music",
+   "keyword": "boss battle",
+   "artist": "Tenashi",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Boss Battle",
+   "file": "rbxassetid://139732156978834",
+   "id": 139732156978834,
+   "seconds": 110,
+   "audioType": "Music",
+   "keyword": "boss battle",
+   "artist": "Animeneax Lofi Oasis",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Boss Battle",
+   "file": "rbxassetid://132746955787604",
+   "id": 132746955787604,
+   "seconds": 134,
+   "audioType": "Music",
+   "keyword": "boss battle",
+   "artist": "Computers Dream in AI",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Boss Battle",
+   "file": "rbxassetid://117051223265396",
+   "id": 117051223265396,
+   "seconds": 284,
+   "audioType": "Music",
+   "keyword": "boss battle",
+   "artist": "Maison Wunderland",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Boss Battle ENCOUNTER (8-Beat) 1",
+   "file": "rbxassetid://129915709941550",
+   "id": 129915709941550,
+   "seconds": 240,
+   "audioType": "Music",
+   "keyword": "boss battle",
+   "artist": "3STAR SOUND official",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Boss Battle ING (8-Beat) 5",
+   "file": "rbxassetid://128275798992793",
+   "id": 128275798992793,
+   "seconds": 240,
+   "audioType": "Music",
+   "keyword": "boss battle",
+   "artist": "3STAR SOUND official",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Boss Battle NORMAL (8-Beat) 2",
+   "file": "rbxassetid://82279754681950",
+   "id": 82279754681950,
+   "seconds": 240,
+   "audioType": "Music",
+   "keyword": "boss battle",
+   "artist": "3STAR SOUND official",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Boss Fight!",
+   "file": "rbxassetid://132347366936691",
+   "id": 132347366936691,
+   "seconds": 174,
+   "audioType": "Music",
+   "keyword": "boss battle",
+   "artist": "M4Gi",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Chaotic 8-Bit Boss Battle Music",
+   "file": "rbxassetid://71096548712027",
+   "id": 71096548712027,
+   "seconds": 92,
+   "audioType": "Music",
+   "keyword": "boss battle",
+   "artist": "Horrarchive",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Epic Boss Battle",
+   "file": "rbxassetid://128007000574959",
+   "id": 128007000574959,
+   "seconds": 151,
+   "audioType": "Music",
+   "keyword": "boss battle",
+   "artist": "Midnight Jazz Blues Chill Out",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Epic Sonic Boss Battle Sonic 3 x Advance 3",
+   "file": "rbxassetid://116723113985378",
+   "id": 116723113985378,
+   "seconds": 164,
+   "audioType": "Music",
+   "keyword": "boss battle",
+   "artist": "Remix protocol",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Final Boss Battle",
+   "file": "rbxassetid://131261408639976",
+   "id": 131261408639976,
+   "seconds": 170,
+   "audioType": "Music",
+   "keyword": "boss battle",
+   "artist": "Giorgiost",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Final Boss Battle",
+   "file": "rbxassetid://105590948274658",
+   "id": 105590948274658,
+   "seconds": 173,
+   "audioType": "Music",
+   "keyword": "boss battle",
+   "artist": "Horror Music Archives",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Final Warning",
+   "file": "rbxassetid://71453513240124",
+   "id": 71453513240124,
+   "seconds": 75,
+   "audioType": "Music",
+   "keyword": "boss battle",
+   "artist": "Bocah Nusa",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "I Stand Alone (Stryker Dawson's Theme)",
+   "file": "rbxassetid://139823506634817",
+   "id": 139823506634817,
+   "seconds": 90,
+   "audioType": "Music",
+   "keyword": "boss battle",
+   "artist": "M4Gi",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Midnight Boss Battle",
+   "file": "rbxassetid://139072908844086",
+   "id": 139072908844086,
+   "seconds": 172,
+   "audioType": "Music",
+   "keyword": "boss battle",
+   "artist": "Retro Replay",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Moonlit Sayonara (Lakota Murakami's Theme)",
+   "file": "rbxassetid://136341071155543",
+   "id": 136341071155543,
+   "seconds": 166,
+   "audioType": "Music",
+   "keyword": "boss battle",
+   "artist": "M4Gi",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "OVERCLOCKED BLADES (Battle _ Boss Rush Bangers)",
+   "file": "rbxassetid://107167631563388",
+   "id": 107167631563388,
+   "seconds": 203,
+   "audioType": "Music",
+   "keyword": "boss battle",
+   "artist": "Ciro Irmici",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Out of the Shadows! (Derek Dawson's Theme)",
+   "file": "rbxassetid://139209943680802",
+   "id": 139209943680802,
+   "seconds": 168,
+   "audioType": "Music",
+   "keyword": "boss battle",
+   "artist": "M4Gi",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Pumpkin Boss Battle Theme",
+   "file": "rbxassetid://71449990401313",
+   "id": 71449990401313,
+   "seconds": 99,
+   "audioType": "Music",
+   "keyword": "boss battle",
+   "artist": "Sebastian Komor",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Radio Killer (Mako's Theme)",
+   "file": "rbxassetid://120345557181456",
+   "id": 120345557181456,
+   "seconds": 113,
+   "audioType": "Music",
+   "keyword": "boss battle",
+   "artist": "M4Gi",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Secret Level",
+   "file": "rbxassetid://140527216603879",
+   "id": 140527216603879,
+   "seconds": 57,
+   "audioType": "Music",
+   "keyword": "boss battle",
+   "artist": "M4Gi",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "The End Of Darkness",
+   "file": "rbxassetid://74490212606369",
+   "id": 74490212606369,
+   "seconds": 127,
+   "audioType": "Music",
+   "keyword": "boss battle",
+   "artist": "Bocah Nusa",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Ultimate Battle",
+   "file": "rbxassetid://78682881927243",
+   "id": 78682881927243,
+   "seconds": 129,
+   "audioType": "Music",
+   "keyword": "boss battle",
+   "artist": "Bocah Nusa",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "8-Bit Heartbeat",
+   "file": "rbxassetid://105386431475048",
+   "id": 105386431475048,
+   "seconds": 151,
+   "audioType": "Music",
+   "keyword": "bouncy",
+   "artist": "PAPERWIZ",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "8-Bit Heartbeat_Ver2",
+   "file": "rbxassetid://127295191983450",
+   "id": 127295191983450,
+   "seconds": 156,
+   "audioType": "Music",
+   "keyword": "bouncy",
+   "artist": "PAPERWIZ",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Baby Duck's Little Walk_Ver2",
+   "file": "rbxassetid://140221126137713",
+   "id": 140221126137713,
+   "seconds": 85,
+   "audioType": "Music",
+   "keyword": "bouncy",
+   "artist": "PAPERWIZ",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Bnrl Calculation (Audiophile-Isolated Mix)",
+   "file": "rbxassetid://92158085505852",
+   "id": 92158085505852,
+   "seconds": 241,
+   "audioType": "Music",
+   "keyword": "bouncy",
+   "artist": "CARAPAX sound",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Bonus Stage (Level Up!)",
+   "file": "rbxassetid://92329441848709",
+   "id": 92329441848709,
+   "seconds": 135,
+   "audioType": "Music",
+   "keyword": "bouncy",
+   "artist": "PAPERWIZ",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Bouncy Calculator (Micro-Electronic Proto-Techno)",
+   "file": "rbxassetid://120665158452604",
+   "id": 120665158452604,
+   "seconds": 242,
+   "audioType": "Music",
+   "keyword": "bouncy",
+   "artist": "CARAPAX sound",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Bouncy Funk",
+   "file": "rbxassetid://1839802242",
+   "id": 1839802242,
+   "seconds": 128,
+   "audioType": "Music",
+   "keyword": "bouncy",
+   "artist": "Bruno Luc Pilloix",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Bouncy Way",
+   "file": "rbxassetid://1836039989",
+   "id": 1836039989,
+   "seconds": 71,
+   "audioType": "Music",
+   "keyword": "bouncy",
+   "artist": "Sylvain Michel Ott",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Cotton Candy Cloud",
+   "file": "rbxassetid://107169139332595",
+   "id": 107169139332595,
+   "seconds": 257,
+   "audioType": "Music",
+   "keyword": "bouncy",
+   "artist": "PAPERWIZ",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Entertainment Soup",
+   "file": "rbxassetid://9047358509",
+   "id": 9047358509,
+   "seconds": 118,
+   "audioType": "Music",
+   "keyword": "bouncy",
+   "artist": "Leigh Frankley",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Ice Tag (Crispy Day)",
+   "file": "rbxassetid://132844974892259",
+   "id": 132844974892259,
+   "seconds": 135,
+   "audioType": "Music",
+   "keyword": "bouncy",
+   "artist": "PAPERWIZ",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Ice Tag (Crispy Day)_Ver2",
+   "file": "rbxassetid://140515449493843",
+   "id": 140515449493843,
+   "seconds": 123,
+   "audioType": "Music",
+   "keyword": "bouncy",
+   "artist": "PAPERWIZ",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Isolated Logic (Holographic Localization)",
+   "file": "rbxassetid://70523341388011",
+   "id": 70523341388011,
+   "seconds": 257,
+   "audioType": "Music",
+   "keyword": "bouncy",
+   "artist": "CARAPAX sound",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "LCD Resonance (Extreme Bnrl Panning)",
+   "file": "rbxassetid://95791849556292",
+   "id": 95791849556292,
+   "seconds": 193,
+   "audioType": "Music",
+   "keyword": "bouncy",
+   "artist": "CARAPAX sound",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Micro-Circuit Bounce (Bouncy Synthetic Bass)",
+   "file": "rbxassetid://121247530967602",
+   "id": 121247530967602,
+   "seconds": 205,
+   "audioType": "Music",
+   "keyword": "bouncy",
+   "artist": "CARAPAX sound",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Rainbow Marshmallow",
+   "file": "rbxassetid://116735063411720",
+   "id": 116735063411720,
+   "seconds": 56,
+   "audioType": "Music",
+   "keyword": "bouncy",
+   "artist": "PAPERWIZ",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Rainbow Slide",
+   "file": "rbxassetid://133710918293530",
+   "id": 133710918293530,
+   "seconds": 100,
+   "audioType": "Music",
+   "keyword": "bouncy",
+   "artist": "PAPERWIZ",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Strawberry Macaron_Ver2",
+   "file": "rbxassetid://118183687648237",
+   "id": 118183687648237,
+   "seconds": 160,
+   "audioType": "Music",
+   "keyword": "bouncy",
+   "artist": "PAPERWIZ",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Syncopated Keypad (Rhythmic Calculator Foley)",
+   "file": "rbxassetid://117427892878625",
+   "id": 117427892878625,
+   "seconds": 260,
+   "audioType": "Music",
+   "keyword": "bouncy",
+   "artist": "CARAPAX sound",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Synthetic Elastic (Midtempo Machine Groove)",
+   "file": "rbxassetid://110456500622464",
+   "id": 110456500622464,
+   "seconds": 245,
+   "audioType": "Music",
+   "keyword": "bouncy",
+   "artist": "CARAPAX sound",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Tactile Typing (Audiophile Foley Techno)",
+   "file": "rbxassetid://114100299285256",
+   "id": 114100299285256,
+   "seconds": 148,
+   "audioType": "Music",
+   "keyword": "bouncy",
+   "artist": "CARAPAX sound",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "playful bouncy funny upbeat kids pets",
+   "file": "rbxassetid://80191016555521",
+   "id": 80191016555521,
+   "seconds": 76,
+   "audioType": "Music",
+   "keyword": "bouncy",
+   "artist": "Kitty Kids Music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Candy Apple Knife Shine (Sinister Fairground Beat)",
+   "file": "rbxassetid://121656992867436",
+   "id": 121656992867436,
+   "seconds": 198,
+   "audioType": "Music",
+   "keyword": "candy",
+   "artist": "Runaway Audio",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Candy Bowl Chill",
+   "file": "rbxassetid://137882999321695",
+   "id": 137882999321695,
+   "seconds": 120,
+   "audioType": "Music",
+   "keyword": "candy",
+   "artist": "Lofi Silhouette",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Candy Moonlight",
+   "file": "rbxassetid://138980610882909",
+   "id": 138980610882909,
+   "seconds": 195,
+   "audioType": "Music",
+   "keyword": "candy",
+   "artist": "Strawberry Muu",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Candyland",
+   "file": "rbxassetid://112791021679473",
+   "id": 112791021679473,
+   "seconds": 207,
+   "audioType": "Music",
+   "keyword": "candy",
+   "artist": "Tobu",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Candyland",
+   "file": "rbxassetid://102584369464759",
+   "id": 102584369464759,
+   "seconds": 182,
+   "audioType": "Music",
+   "keyword": "candy",
+   "artist": "Tobu",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Candyland",
+   "file": "rbxassetid://83883067006795",
+   "id": 83883067006795,
+   "seconds": 225,
+   "audioType": "Music",
+   "keyword": "candy",
+   "artist": "Tobu",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Candyland",
+   "file": "rbxassetid://135910734681977",
+   "id": 135910734681977,
+   "seconds": 199,
+   "audioType": "Music",
+   "keyword": "candy",
+   "artist": "Daniel Cresher",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Candyland",
+   "file": "rbxassetid://97402642335090",
+   "id": 97402642335090,
+   "seconds": 160,
+   "audioType": "Music",
+   "keyword": "candy",
+   "artist": "Tobu",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Candyland",
+   "file": "rbxassetid://80601665186308",
+   "id": 80601665186308,
+   "seconds": 215,
+   "audioType": "Music",
+   "keyword": "candy",
+   "artist": "Tobu",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Candyland",
+   "file": "rbxassetid://84577195904346",
+   "id": 84577195904346,
+   "seconds": 227,
+   "audioType": "Music",
+   "keyword": "candy",
+   "artist": "Tobu",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Candyland",
+   "file": "rbxassetid://75050110754455",
+   "id": 75050110754455,
+   "seconds": 150,
+   "audioType": "Music",
+   "keyword": "candy",
+   "artist": "Tobu",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Candyland Pt. II",
+   "file": "rbxassetid://84431822033869",
+   "id": 84431822033869,
+   "seconds": 214,
+   "audioType": "Music",
+   "keyword": "candy",
+   "artist": "Tobu",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Electronic Candy",
+   "file": "rbxassetid://139367353722759",
+   "id": 139367353722759,
+   "seconds": 208,
+   "audioType": "Music",
+   "keyword": "candy",
+   "artist": "PoPi",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "My Little Sticker Book",
+   "file": "rbxassetid://134430114268365",
+   "id": 134430114268365,
+   "seconds": 132,
+   "audioType": "Music",
+   "keyword": "candy",
+   "artist": "AI PLAY ON",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Apartment Windows with Modern Chill Jazz",
+   "file": "rbxassetid://136228570470406",
+   "id": 136228570470406,
+   "seconds": 138,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "Spa Fox",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Cant",
+   "file": "rbxassetid://140653878167561",
+   "id": 140653878167561,
+   "seconds": 139,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "Neuro4typical",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "City Lights",
+   "file": "rbxassetid://9046863579",
+   "id": 9046863579,
+   "seconds": 120,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "Inside Tracks",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Deadlines",
+   "file": "rbxassetid://140628387917926",
+   "id": 140628387917926,
+   "seconds": 109,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "Neuro4typical",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Dreamy Synthesizer Loop",
+   "file": "rbxassetid://127192096430283",
+   "id": 127192096430283,
+   "seconds": 166,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "XiXuGi",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Dusk Conversations",
+   "file": "rbxassetid://138091858243432",
+   "id": 138091858243432,
+   "seconds": 199,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "JAGAK",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Glowing Light (Bed Version)",
+   "file": "rbxassetid://9046865270",
+   "id": 9046865270,
+   "seconds": 189,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "Max Cameron Concors",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "I Don’t Trust Love Like Before",
+   "file": "rbxassetid://136258720865759",
+   "id": 136258720865759,
+   "seconds": 233,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "SleepySkies",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "I Love Still You",
+   "file": "rbxassetid://133844122544081",
+   "id": 133844122544081,
+   "seconds": 118,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "Chilled Monkey LoFi",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Infinite Focus Loop",
+   "file": "rbxassetid://136419664364400",
+   "id": 136419664364400,
+   "seconds": 121,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "XiXuGi",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Lofi (Rainy Window Reflections)",
+   "file": "rbxassetid://140195496777664",
+   "id": 140195496777664,
+   "seconds": 276,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "Wiltiz Got The Beat",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Lofi Jazz Hip Hop Abstract Chill Beat",
+   "file": "rbxassetid://100001805913571",
+   "id": 100001805913571,
+   "seconds": 212,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "Jerome Kyng",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Lofi Synthwave Chill 80s Night Drive",
+   "file": "rbxassetid://70551940079407",
+   "id": 70551940079407,
+   "seconds": 187,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "Love Sleep Repeat",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Midnight Coffee with You",
+   "file": "rbxassetid://138693920798127",
+   "id": 138693920798127,
+   "seconds": 105,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "Chill LoFi Relax music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Morning",
+   "file": "rbxassetid://140722099430139",
+   "id": 140722099430139,
+   "seconds": 143,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "Neuro4typical",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Neon Sidewalks with Chillhop and Midnight Lofi",
+   "file": "rbxassetid://119721983234750",
+   "id": 119721983234750,
+   "seconds": 164,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "Spa Fox",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Pastel Corner Life",
+   "file": "rbxassetid://89402602954424",
+   "id": 89402602954424,
+   "seconds": 199,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "Cat arch music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Poolside",
+   "file": "rbxassetid://9046863253",
+   "id": 9046863253,
+   "seconds": 165,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "Max Cameron Concors",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Shadows of What Could Have Been",
+   "file": "rbxassetid://139563998613132",
+   "id": 139563998613132,
+   "seconds": 184,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "Chilled Monkey LoFi",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Silent mornings",
+   "file": "rbxassetid://140453344966932",
+   "id": 140453344966932,
+   "seconds": 229,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "Neuro4typical",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Sunset Chill (Bed Version)",
+   "file": "rbxassetid://9046862941",
+   "id": 9046862941,
+   "seconds": 134,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "Queens Road",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "The Loneliest Hour",
+   "file": "rbxassetid://114213622974713",
+   "id": 114213622974713,
+   "seconds": 240,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "Chilled Monkey LoFi",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "The amazing Spider-man",
+   "file": "rbxassetid://95181074764554",
+   "id": 95181074764554,
+   "seconds": 201,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "Dave J",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Time",
+   "file": "rbxassetid://140658234151287",
+   "id": 140658234151287,
+   "seconds": 192,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "Neuro4typical",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Understand",
+   "file": "rbxassetid://140131279666968",
+   "id": 140131279666968,
+   "seconds": 125,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "Neuro4typical",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Violet Clouds",
+   "file": "rbxassetid://9046864489",
+   "id": 9046864489,
+   "seconds": 135,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "Fabian Graetz",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Zzz",
+   "file": "rbxassetid://139953457093910",
+   "id": 139953457093910,
+   "seconds": 185,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "Neuro4typical",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "aesthetic lofi sad girl boy pov",
+   "file": "rbxassetid://119543588185580",
+   "id": 119543588185580,
+   "seconds": 108,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "GØDA",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "crying lofi aesthetic sad vibes",
+   "file": "rbxassetid://137725832809622",
+   "id": 137725832809622,
+   "seconds": 129,
+   "audioType": "Music",
+   "keyword": "chill lofi",
+   "artist": "GØDA",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "8 Bit Retro Game Music",
+   "file": "rbxassetid://110429634722289",
+   "id": 110429634722289,
+   "seconds": 200,
+   "audioType": "Music",
+   "keyword": "chiptune",
+   "artist": "Love Sleep Repeat",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "8-Bit Nostalgia Arcade Dreams",
+   "file": "rbxassetid://110771740389598",
+   "id": 110771740389598,
+   "seconds": 125,
+   "audioType": "Music",
+   "keyword": "chiptune",
+   "artist": "Love Sleep Repeat",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "8bit March (chiptune)",
+   "file": "rbxassetid://140438462073303",
+   "id": 140438462073303,
+   "seconds": 88,
+   "audioType": "Music",
+   "keyword": "chiptune",
+   "artist": "sidetilt",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Action Blazer (8-Bit Chiptune Soundtrack)",
+   "file": "rbxassetid://132548007287814",
+   "id": 132548007287814,
+   "seconds": 194,
+   "audioType": "Music",
+   "keyword": "chiptune",
+   "artist": "David Auchampach",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "An Enemy Appears (Northern Lights: Battle I)",
+   "file": "rbxassetid://137856050318156",
+   "id": 137856050318156,
+   "seconds": 198,
+   "audioType": "Music",
+   "keyword": "chiptune",
+   "artist": "Digital Life",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Angel's Scorn (Fallen Angel: Battle I)",
+   "file": "rbxassetid://138244292110150",
+   "id": 138244292110150,
+   "seconds": 130,
+   "audioType": "Music",
+   "keyword": "chiptune",
+   "artist": "Digital Life",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Battle Hero (a)",
+   "file": "rbxassetid://1837768494",
+   "id": 1837768494,
+   "seconds": 119,
+   "audioType": "Music",
+   "keyword": "chiptune",
+   "artist": "Skip Armstrong",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Bossa Me (60)",
+   "file": "rbxassetid://1837769108",
+   "id": 1837769108,
+   "seconds": 60,
+   "audioType": "Music",
+   "keyword": "chiptune",
+   "artist": "Peter Christiansen",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Bossa Me (a)",
+   "file": "rbxassetid://1837768517",
+   "id": 1837768517,
+   "seconds": 142,
+   "audioType": "Music",
+   "keyword": "chiptune",
+   "artist": "Peter Christiansen",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Bossa Me (b)",
+   "file": "rbxassetid://1837768745",
+   "id": 1837768745,
+   "seconds": 142,
+   "audioType": "Music",
+   "keyword": "chiptune",
+   "artist": "Peter Christiansen",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Crazy Daisy",
+   "file": "rbxassetid://1845556724",
+   "id": 1845556724,
+   "seconds": 111,
+   "audioType": "Music",
+   "keyword": "chiptune",
+   "artist": "Maike Watson",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Don't Give In (no time for glory: Boss Battle)",
+   "file": "rbxassetid://72203686695361",
+   "id": 72203686695361,
+   "seconds": 246,
+   "audioType": "Music",
+   "keyword": "chiptune",
+   "artist": "Digital Life",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Fealty (Fallen Angel: Boss Battle IV)",
+   "file": "rbxassetid://137578574800255",
+   "id": 137578574800255,
+   "seconds": 120,
+   "audioType": "Music",
+   "keyword": "chiptune",
+   "artist": "Digital Life",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Fealty (Fallen Angel: Boss Battle IV)",
+   "file": "rbxassetid://82553270401929",
+   "id": 82553270401929,
+   "seconds": 120,
+   "audioType": "Music",
+   "keyword": "chiptune",
+   "artist": "Digital Life",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Final Boss (a)",
+   "file": "rbxassetid://1837768323",
+   "id": 1837768323,
+   "seconds": 131,
+   "audioType": "Music",
+   "keyword": "chiptune",
+   "artist": "Skip Armstrong",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Funky Stars",
+   "file": "rbxassetid://108455695281684",
+   "id": 108455695281684,
+   "seconds": 230,
+   "audioType": "Music",
+   "keyword": "chiptune",
+   "artist": "McKlain",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Gaming Background Music – Retro 8 Bit Style",
+   "file": "rbxassetid://129336706957643",
+   "id": 129336706957643,
+   "seconds": 161,
+   "audioType": "Music",
+   "keyword": "chiptune",
+   "artist": "Love Sleep Repeat",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "NES Video Game Music",
+   "file": "rbxassetid://115529896467923",
+   "id": 115529896467923,
+   "seconds": 166,
+   "audioType": "Music",
+   "keyword": "chiptune",
+   "artist": "Love Sleep Repeat",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Nostalgic Arcade Soundtrack 8-Bit Energy",
+   "file": "rbxassetid://140177751731624",
+   "id": 140177751731624,
+   "seconds": 190,
+   "audioType": "Music",
+   "keyword": "chiptune",
+   "artist": "Love Sleep Repeat",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Nostalgic Old Games Music",
+   "file": "rbxassetid://124924086293582",
+   "id": 124924086293582,
+   "seconds": 168,
+   "audioType": "Music",
+   "keyword": "chiptune",
+   "artist": "Love Sleep Repeat",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Nyan Cat Song",
+   "file": "rbxassetid://83935061868935",
+   "id": 83935061868935,
+   "seconds": 164,
+   "audioType": "Music",
+   "keyword": "chiptune",
+   "artist": "McKlain",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Pixel Art Aesthetic Soundtrack",
+   "file": "rbxassetid://135353806282218",
+   "id": 135353806282218,
+   "seconds": 166,
+   "audioType": "Music",
+   "keyword": "chiptune",
+   "artist": "Love Sleep Repeat",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Retro Chiptune Pixel Adventure Theme",
+   "file": "rbxassetid://92749078845627",
+   "id": 92749078845627,
+   "seconds": 136,
+   "audioType": "Music",
+   "keyword": "chiptune",
+   "artist": "Love Sleep Repeat",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Retro Gamer (60)",
+   "file": "rbxassetid://1837769001",
+   "id": 1837769001,
+   "seconds": 60,
+   "audioType": "Music",
+   "keyword": "chiptune",
+   "artist": "Skip Armstrong",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Retro Pixel World Chiptune Escape",
+   "file": "rbxassetid://136649315745141",
+   "id": 136649315745141,
+   "seconds": 145,
+   "audioType": "Music",
+   "keyword": "chiptune",
+   "artist": "Love Sleep Repeat",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Retro Sounds Inspired Game Music",
+   "file": "rbxassetid://91293507178415",
+   "id": 91293507178415,
+   "seconds": 133,
+   "audioType": "Music",
+   "keyword": "chiptune",
+   "artist": "Love Sleep Repeat",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Rival Encounter",
+   "file": "rbxassetid://113587362452954",
+   "id": 113587362452954,
+   "seconds": 119,
+   "audioType": "Music",
+   "keyword": "chiptune",
+   "artist": "David Auchampach",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "3 AM Christmas Eve",
+   "file": "rbxassetid://130154964917297",
+   "id": 130154964917297,
+   "seconds": 190,
+   "audioType": "Music",
+   "keyword": "christmas",
+   "artist": "Taoufik3",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Brainrot Gang Rap",
+   "file": "rbxassetid://137248948744544",
+   "id": 137248948744544,
+   "seconds": 67,
+   "audioType": "Music",
+   "keyword": "christmas",
+   "artist": "Radio Meow Ai",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Carefree Christmas",
+   "file": "rbxassetid://9038463810",
+   "id": 9038463810,
+   "seconds": 36,
+   "audioType": "Music",
+   "keyword": "christmas",
+   "artist": "Kosinus",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Christmas Café Swing",
+   "file": "rbxassetid://140633727133993",
+   "id": 140633727133993,
+   "seconds": 190,
+   "audioType": "Music",
+   "keyword": "christmas",
+   "artist": "GØDA",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Christmas Morning Magic",
+   "file": "rbxassetid://140596895991475",
+   "id": 140596895991475,
+   "seconds": 102,
+   "audioType": "Music",
+   "keyword": "christmas",
+   "artist": "Holiday Tunes",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Christmas Tree",
+   "file": "rbxassetid://1838667764",
+   "id": 1838667764,
+   "seconds": 73,
+   "audioType": "Music",
+   "keyword": "christmas",
+   "artist": "Alain Mouysset",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Cozy Future Christmas Lights",
+   "file": "rbxassetid://140732695067309",
+   "id": 140732695067309,
+   "seconds": 211,
+   "audioType": "Music",
+   "keyword": "christmas",
+   "artist": "Valen Vone",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Deck The Halls 3",
+   "file": "rbxassetid://1845653124",
+   "id": 1845653124,
+   "seconds": 31,
+   "audioType": "Music",
+   "keyword": "christmas",
+   "artist": "Stephan North",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Jingle Bells",
+   "file": "rbxassetid://1839945406",
+   "id": 1839945406,
+   "seconds": 117,
+   "audioType": "Music",
+   "keyword": "christmas",
+   "artist": "Juice Music",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Jingle Bells",
+   "file": "rbxassetid://1846489582",
+   "id": 1846489582,
+   "seconds": 161,
+   "audioType": "Music",
+   "keyword": "christmas",
+   "artist": "Sammy Burdson",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Jingle Bells Christmas Song",
+   "file": "rbxassetid://127289995073222",
+   "id": 127289995073222,
+   "seconds": 108,
+   "audioType": "Music",
+   "keyword": "christmas",
+   "artist": "ShalBeats",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Lebron James 'Sprite Cranberry' Commercial",
+   "file": "rbxassetid://92529668771990",
+   "id": 92529668771990,
+   "seconds": 30,
+   "audioType": "Music",
+   "keyword": "christmas",
+   "artist": "dababy2015murder",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Merry Holidays",
+   "file": "rbxassetid://9038469492",
+   "id": 9038469492,
+   "seconds": 37,
+   "audioType": "Music",
+   "keyword": "christmas",
+   "artist": "Kosinus",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Relaxing Christmas Soft Piano",
+   "file": "rbxassetid://140563191369825",
+   "id": 140563191369825,
+   "seconds": 90,
+   "audioType": "Music",
+   "keyword": "christmas",
+   "artist": "Relaxing Piano Sounds",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Santa Claus is Coming",
+   "file": "rbxassetid://1841342574",
+   "id": 1841342574,
+   "seconds": 140,
+   "audioType": "Music",
+   "keyword": "christmas",
+   "artist": "KPM Main Series",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Santa's Sleigh",
+   "file": "rbxassetid://9038470580",
+   "id": 9038470580,
+   "seconds": 27,
+   "audioType": "Music",
+   "keyword": "christmas",
+   "artist": "Kosinus",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Silent Night Terror",
+   "file": "rbxassetid://111198694307041",
+   "id": 111198694307041,
+   "seconds": 171,
+   "audioType": "Music",
+   "keyword": "christmas",
+   "artist": "Horrarchive",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Tender Reunion",
+   "file": "rbxassetid://9038472426",
+   "id": 9038472426,
+   "seconds": 34,
+   "audioType": "Music",
+   "keyword": "christmas",
+   "artist": "Kosinus",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Tender Reunion",
+   "file": "rbxassetid://9038472141",
+   "id": 9038472141,
+   "seconds": 34,
+   "audioType": "Music",
+   "keyword": "christmas",
+   "artist": "Kosinus",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "The Ghost of Christmas Never",
+   "file": "rbxassetid://140493866652836",
+   "id": 140493866652836,
+   "seconds": 197,
+   "audioType": "Music",
+   "keyword": "christmas",
+   "artist": "Horror Music Archives",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "We Wish You A Merry Christmas (Instrumental)",
+   "file": "rbxassetid://1838667168",
+   "id": 1838667168,
+   "seconds": 133,
+   "audioType": "Music",
+   "keyword": "christmas",
+   "artist": "Thomas Parisch",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Winter Glow",
+   "file": "rbxassetid://140347288034746",
+   "id": 140347288034746,
+   "seconds": 233,
+   "audioType": "Music",
+   "keyword": "christmas",
+   "artist": "Dragonsphere Epic Fantasy Music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Winter Holidays",
+   "file": "rbxassetid://9046740461",
+   "id": 9046740461,
+   "seconds": 140,
+   "audioType": "Music",
+   "keyword": "christmas",
+   "artist": "Kosinus",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Winter Sunshine",
+   "file": "rbxassetid://1838091800",
+   "id": 1838091800,
+   "seconds": 180,
+   "audioType": "Music",
+   "keyword": "christmas",
+   "artist": "Anthony Mawer",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Wrapping Gifts",
+   "file": "rbxassetid://9046741231",
+   "id": 9046741231,
+   "seconds": 119,
+   "audioType": "Music",
+   "keyword": "christmas",
+   "artist": "Kosinus",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Xmas Winter",
+   "file": "rbxassetid://1836686862",
+   "id": 1836686862,
+   "seconds": 120,
+   "audioType": "Music",
+   "keyword": "christmas",
+   "artist": "John Cacavas",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "frutiger aero",
+   "file": "rbxassetid://114301748111206",
+   "id": 114301748111206,
+   "seconds": 122,
+   "audioType": "Music",
+   "keyword": "christmas",
+   "artist": "Dinosaur Christmas",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Arch Enemies (A)",
+   "file": "rbxassetid://9044583639",
+   "id": 9044583639,
+   "seconds": 274,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Epic Score",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Arch Enemies (B)",
+   "file": "rbxassetid://9044583956",
+   "id": 9044583956,
+   "seconds": 274,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Epic Score",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Attack Formation (A)",
+   "file": "rbxassetid://9044581775",
+   "id": 9044581775,
+   "seconds": 231,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Epic Score",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Attack Formation (END)",
+   "file": "rbxassetid://9044580204",
+   "id": 9044580204,
+   "seconds": 113,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Epic Score",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Battlefront Echoes (Action Movie Drum Sounds)",
+   "file": "rbxassetid://110184030258486",
+   "id": 110184030258486,
+   "seconds": 30,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Wizmusic Amapiano",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Broken Chains",
+   "file": "rbxassetid://91943644150609",
+   "id": 91943644150609,
+   "seconds": 103,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Pulse Horizon",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Creator of Worlds (a)",
+   "file": "rbxassetid://1837822799",
+   "id": 1837822799,
+   "seconds": 208,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Tarek Mansur",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Dark Alliance",
+   "file": "rbxassetid://124154866800941",
+   "id": 124154866800941,
+   "seconds": 105,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Pulse Horizon",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "End Of The World (a)",
+   "file": "rbxassetid://1837808628",
+   "id": 1837808628,
+   "seconds": 85,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Gabriel Shadid",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Epic Battle Momentum – Orchestra, Choirs and Brass",
+   "file": "rbxassetid://93280557270748",
+   "id": 93280557270748,
+   "seconds": 218,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Love Sleep Repeat",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Epic Orchestral Metal Action Music",
+   "file": "rbxassetid://72887189458782",
+   "id": 72887189458782,
+   "seconds": 162,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Love Sleep Repeat",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Evil Overlord (A)",
+   "file": "rbxassetid://9044584201",
+   "id": 9044584201,
+   "seconds": 199,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Epic Score",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Fight To the Last Ship (B)",
+   "file": "rbxassetid://9044582869",
+   "id": 9044582869,
+   "seconds": 197,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Epic Score",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Final Showdown",
+   "file": "rbxassetid://110273956847640",
+   "id": 110273956847640,
+   "seconds": 116,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Pulse Horizon",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Ghost Protocol",
+   "file": "rbxassetid://140658568629873",
+   "id": 140658568629873,
+   "seconds": 147,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Pulse Horizon",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Graveyard Shift",
+   "file": "rbxassetid://73756605168372",
+   "id": 73756605168372,
+   "seconds": 126,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Pulse Horizon",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Iron Horizon (Action Movie Drum Sounds)",
+   "file": "rbxassetid://137653609245859",
+   "id": 137653609245859,
+   "seconds": 30,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Wizmusic Amapiano",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "March of Fire (Action Movie Drum Sounds)",
+   "file": "rbxassetid://138261575271157",
+   "id": 138261575271157,
+   "seconds": 30,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Wizmusic Amapiano",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Pirate Battle",
+   "file": "rbxassetid://1842925663",
+   "id": 1842925663,
+   "seconds": 71,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Inside Tracks",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Pirate Battle (Alternate Version)",
+   "file": "rbxassetid://1842925732",
+   "id": 1842925732,
+   "seconds": 71,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Inside Tracks",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Reckless Pursuit",
+   "file": "rbxassetid://129205470734076",
+   "id": 129205470734076,
+   "seconds": 159,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Pulse Horizon",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Shadows of War (Action Movie Drum Sounds)",
+   "file": "rbxassetid://109760532419410",
+   "id": 109760532419410,
+   "seconds": 30,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Wizmusic Amapiano",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Supermassive Destruction (A)",
+   "file": "rbxassetid://1837821702",
+   "id": 1837821702,
+   "seconds": 193,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Tarek Mansur",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Tactical Evasion – Dramatic Cinematic Action Score",
+   "file": "rbxassetid://115729305181235",
+   "id": 115729305181235,
+   "seconds": 187,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Love Sleep Repeat",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "The Last Fortress (Action Movie Drum Sounds)",
+   "file": "rbxassetid://113048132327224",
+   "id": 113048132327224,
+   "seconds": 30,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Wizmusic Amapiano",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Ultimate Travesty (A)",
+   "file": "rbxassetid://1837824826",
+   "id": 1837824826,
+   "seconds": 97,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Epic Score",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Urban Pursuit Sequence – Modern Action Film Music",
+   "file": "rbxassetid://136977425799420",
+   "id": 136977425799420,
+   "seconds": 175,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Love Sleep Repeat",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "War Scars",
+   "file": "rbxassetid://1842943255",
+   "id": 1842943255,
+   "seconds": 141,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Nathan Harrison Rightnour",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "You Were Born for This (A)",
+   "file": "rbxassetid://1837823897",
+   "id": 1837823897,
+   "seconds": 138,
+   "audioType": "Music",
+   "keyword": "epic action",
+   "artist": "Aaron Sapp",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Alligator Swamp",
+   "file": "rbxassetid://1844758976",
+   "id": 1844758976,
+   "seconds": 112,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Banjo And Fiddle",
+   "file": "rbxassetid://1844758917",
+   "id": 1844758917,
+   "seconds": 89,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Bavarian Mountain",
+   "file": "rbxassetid://1844849253",
+   "id": 1844849253,
+   "seconds": 71,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Camel Caravan",
+   "file": "rbxassetid://1844848981",
+   "id": 1844848981,
+   "seconds": 78,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Campfire And Beans",
+   "file": "rbxassetid://1844849141",
+   "id": 1844849141,
+   "seconds": 120,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Chicken Picnic",
+   "file": "rbxassetid://1844848941",
+   "id": 1844848941,
+   "seconds": 84,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Climbing Trees",
+   "file": "rbxassetid://1844849160",
+   "id": 1844849160,
+   "seconds": 80,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Dancing In The Street",
+   "file": "rbxassetid://1844780533",
+   "id": 1844780533,
+   "seconds": 56,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Duck Meets Frog",
+   "file": "rbxassetid://1844974839",
+   "id": 1844974839,
+   "seconds": 66,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Duck On The Run",
+   "file": "rbxassetid://1844848896",
+   "id": 1844848896,
+   "seconds": 57,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Duck Walk",
+   "file": "rbxassetid://1844974866",
+   "id": 1844974866,
+   "seconds": 70,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Funny Waltz",
+   "file": "rbxassetid://1844849167",
+   "id": 1844849167,
+   "seconds": 111,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Good Morning",
+   "file": "rbxassetid://1844780619",
+   "id": 1844780619,
+   "seconds": 81,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Happy Girl",
+   "file": "rbxassetid://1844805383",
+   "id": 1844805383,
+   "seconds": 87,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Happy Jake",
+   "file": "rbxassetid://1844789209",
+   "id": 1844789209,
+   "seconds": 132,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Happy Vacation",
+   "file": "rbxassetid://1844760529",
+   "id": 1844760529,
+   "seconds": 167,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Lazy Dog",
+   "file": "rbxassetid://1844849084",
+   "id": 1844849084,
+   "seconds": 83,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Little Shepherd March",
+   "file": "rbxassetid://1844849193",
+   "id": 1844849193,
+   "seconds": 76,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Lonesome Cowboy",
+   "file": "rbxassetid://1844758878",
+   "id": 1844758878,
+   "seconds": 126,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Mermaides",
+   "file": "rbxassetid://1844780004",
+   "id": 1844780004,
+   "seconds": 62,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Music Box",
+   "file": "rbxassetid://1844780626",
+   "id": 1844780626,
+   "seconds": 43,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Mystery Dream",
+   "file": "rbxassetid://1844780633",
+   "id": 1844780633,
+   "seconds": 55,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Puppet On A String",
+   "file": "rbxassetid://1844789162",
+   "id": 1844789162,
+   "seconds": 64,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Saloon",
+   "file": "rbxassetid://1844758867",
+   "id": 1844758867,
+   "seconds": 66,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Slap",
+   "file": "rbxassetid://1844749635",
+   "id": 1844749635,
+   "seconds": 132,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Wild Horses",
+   "file": "rbxassetid://1844780033",
+   "id": 1844780033,
+   "seconds": 64,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Wildcat",
+   "file": "rbxassetid://1844768182",
+   "id": 1844768182,
+   "seconds": 93,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Yeepy",
+   "file": "rbxassetid://1844848964",
+   "id": 1844848964,
+   "seconds": 61,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Yokel",
+   "file": "rbxassetid://1844849134",
+   "id": 1844849134,
+   "seconds": 61,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Zydeco Shuffle",
+   "file": "rbxassetid://1844759717",
+   "id": 1844759717,
+   "seconds": 88,
+   "audioType": "Music",
+   "keyword": "fun cartoon",
+   "artist": "Pete Dunn",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Bouncy Trap House",
+   "file": "rbxassetid://140158652733698",
+   "id": 140158652733698,
+   "seconds": 104,
+   "audioType": "Music",
+   "keyword": "funny",
+   "artist": "Oro Loco",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Funny Dance",
+   "file": "rbxassetid://138915681911522",
+   "id": 138915681911522,
+   "seconds": 107,
+   "audioType": "Music",
+   "keyword": "funny",
+   "artist": "Oro Loco",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Funny Puppy",
+   "file": "rbxassetid://139410493395489",
+   "id": 139410493395489,
+   "seconds": 93,
+   "audioType": "Music",
+   "keyword": "funny",
+   "artist": "Kitty Kids Music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Goofy Song",
+   "file": "rbxassetid://128598190743578",
+   "id": 128598190743578,
+   "seconds": 125,
+   "audioType": "Music",
+   "keyword": "funny",
+   "artist": "Oro Loco",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "The Football Freestyler (Latin Soccer Tricks)",
+   "file": "rbxassetid://136774397148813",
+   "id": 136774397148813,
+   "seconds": 150,
+   "audioType": "Music",
+   "keyword": "funny",
+   "artist": "Midnight Jazz Society",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Very Funny",
+   "file": "rbxassetid://127678698714970",
+   "id": 127678698714970,
+   "seconds": 62,
+   "audioType": "Music",
+   "keyword": "funny",
+   "artist": "Funny Songs",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Baking Cookies",
+   "file": "rbxassetid://9046742475",
+   "id": 9046742475,
+   "seconds": 29,
+   "audioType": "Music",
+   "keyword": "game lobby",
+   "artist": "Remi Koudenov",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Elf On The Shelf",
+   "file": "rbxassetid://9046744955",
+   "id": 9046744955,
+   "seconds": 31,
+   "audioType": "Music",
+   "keyword": "game lobby",
+   "artist": "Remi Koudenov",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Everlasting Tradition",
+   "file": "rbxassetid://9038465993",
+   "id": 9038465993,
+   "seconds": 25,
+   "audioType": "Music",
+   "keyword": "game lobby",
+   "artist": "Kosinus",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Feeling Festive",
+   "file": "rbxassetid://9046747300",
+   "id": 9046747300,
+   "seconds": 36,
+   "audioType": "Music",
+   "keyword": "game lobby",
+   "artist": "Remi Koudenov",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "FindExit",
+   "file": "rbxassetid://71186345039796",
+   "id": 71186345039796,
+   "seconds": 137,
+   "audioType": "Music",
+   "keyword": "game lobby",
+   "artist": "TeaLow",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Game Lobby",
+   "file": "rbxassetid://80257380636383",
+   "id": 80257380636383,
+   "seconds": 182,
+   "audioType": "Music",
+   "keyword": "game lobby",
+   "artist": "Samy Ponsar",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Game Lobby Alternate",
+   "file": "rbxassetid://140228184971194",
+   "id": 140228184971194,
+   "seconds": 203,
+   "audioType": "Music",
+   "keyword": "game lobby",
+   "artist": "Samy Ponsar",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Gifts Of Nature",
+   "file": "rbxassetid://1845422063",
+   "id": 1845422063,
+   "seconds": 31,
+   "audioType": "Music",
+   "keyword": "game lobby",
+   "artist": "Kevin Edward Jarvis",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Holiday Bliss",
+   "file": "rbxassetid://9046748008",
+   "id": 9046748008,
+   "seconds": 70,
+   "audioType": "Music",
+   "keyword": "game lobby",
+   "artist": "Remi Koudenov",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Holiday Bliss",
+   "file": "rbxassetid://9046748749",
+   "id": 9046748749,
+   "seconds": 38,
+   "audioType": "Music",
+   "keyword": "game lobby",
+   "artist": "Remi Koudenov",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Hymn to Nature Sting c",
+   "file": "rbxassetid://1841608435",
+   "id": 1841608435,
+   "seconds": 18,
+   "audioType": "Music",
+   "keyword": "game lobby",
+   "artist": "KPM Main Series",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Magic Carpet Ride (a 30)",
+   "file": "rbxassetid://1838006114",
+   "id": 1838006114,
+   "seconds": 29,
+   "audioType": "Music",
+   "keyword": "game lobby",
+   "artist": "Thomas Howe",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Make A Promise",
+   "file": "rbxassetid://1838838883",
+   "id": 1838838883,
+   "seconds": 25,
+   "audioType": "Music",
+   "keyword": "game lobby",
+   "artist": "Kosinus Arts",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Merry Holidays",
+   "file": "rbxassetid://9038469957",
+   "id": 9038469957,
+   "seconds": 35,
+   "audioType": "Music",
+   "keyword": "game lobby",
+   "artist": "Kosinus",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Silence Of The Nights",
+   "file": "rbxassetid://1845192604",
+   "id": 1845192604,
+   "seconds": 29,
+   "audioType": "Music",
+   "keyword": "game lobby",
+   "artist": "Unknown",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Slow Build (a)",
+   "file": "rbxassetid://1840470145",
+   "id": 1840470145,
+   "seconds": 68,
+   "audioType": "Music",
+   "keyword": "game lobby",
+   "artist": "Robert Henry Peter White",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "The Ghost Of Christmas Past",
+   "file": "rbxassetid://1845306971",
+   "id": 1845306971,
+   "seconds": 16,
+   "audioType": "Music",
+   "keyword": "game lobby",
+   "artist": "Bosworth",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Tis The Season",
+   "file": "rbxassetid://9046754957",
+   "id": 9046754957,
+   "seconds": 106,
+   "audioType": "Music",
+   "keyword": "game lobby",
+   "artist": "Remi Koudenov",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Uplift - Hook 1",
+   "file": "rbxassetid://9046019442",
+   "id": 9046019442,
+   "seconds": 13,
+   "audioType": "Music",
+   "keyword": "game lobby",
+   "artist": "Mpath",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "repeating memories",
+   "file": "rbxassetid://127032334305190",
+   "id": 127032334305190,
+   "seconds": 143,
+   "audioType": "Music",
+   "keyword": "game lobby",
+   "artist": "cobbb",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Bouncing Halloween",
+   "file": "rbxassetid://1836009584",
+   "id": 1836009584,
+   "seconds": 89,
+   "audioType": "Music",
+   "keyword": "halloween",
+   "artist": "Sylvain Michel Ott",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Fast Paced Halloween",
+   "file": "rbxassetid://1836009678",
+   "id": 1836009678,
+   "seconds": 122,
+   "audioType": "Music",
+   "keyword": "halloween",
+   "artist": "Sylvain Michel Ott",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Forever Halloween c",
+   "file": "rbxassetid://1841602884",
+   "id": 1841602884,
+   "seconds": 77,
+   "audioType": "Music",
+   "keyword": "halloween",
+   "artist": "Magnum Opus",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Ghost Stalker",
+   "file": "rbxassetid://94597327890629",
+   "id": 94597327890629,
+   "seconds": 115,
+   "audioType": "Music",
+   "keyword": "halloween",
+   "artist": "Matreya",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Ghost Train",
+   "file": "rbxassetid://92839756706535",
+   "id": 92839756706535,
+   "seconds": 60,
+   "audioType": "Music",
+   "keyword": "halloween",
+   "artist": "Jean-Philippe Ichard",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Ghostly Masquerade Ball (Halloween Ambient)",
+   "file": "rbxassetid://130935065570387",
+   "id": 130935065570387,
+   "seconds": 159,
+   "audioType": "Music",
+   "keyword": "halloween",
+   "artist": "Horrarchive",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Halloween Apparition",
+   "file": "rbxassetid://136749442046310",
+   "id": 136749442046310,
+   "seconds": 216,
+   "audioType": "Music",
+   "keyword": "halloween",
+   "artist": "Band of Legends",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Halloween Horrors Waltz",
+   "file": "rbxassetid://1836009626",
+   "id": 1836009626,
+   "seconds": 114,
+   "audioType": "Music",
+   "keyword": "halloween",
+   "artist": "Sylvain Michel Ott",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Halloween March",
+   "file": "rbxassetid://1838591268",
+   "id": 1838591268,
+   "seconds": 97,
+   "audioType": "Music",
+   "keyword": "halloween",
+   "artist": "Xavier Berthelot",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Halloween Music Box",
+   "file": "rbxassetid://139190190976686",
+   "id": 139190190976686,
+   "seconds": 110,
+   "audioType": "Music",
+   "keyword": "halloween",
+   "artist": "Marc Dall'Anese",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Halloween Night",
+   "file": "rbxassetid://1838592691",
+   "id": 1838592691,
+   "seconds": 95,
+   "audioType": "Music",
+   "keyword": "halloween",
+   "artist": "Xavier Berthelot",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Halloween haunted house, Pt. 2",
+   "file": "rbxassetid://138856055860898",
+   "id": 138856055860898,
+   "seconds": 142,
+   "audioType": "Music",
+   "keyword": "halloween",
+   "artist": "Holiday Kidz",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Halloween skeleton dance",
+   "file": "rbxassetid://132339469996629",
+   "id": 132339469996629,
+   "seconds": 113,
+   "audioType": "Music",
+   "keyword": "halloween",
+   "artist": "Holiday Kidz",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Impending Doom",
+   "file": "rbxassetid://137155625155644",
+   "id": 137155625155644,
+   "seconds": 144,
+   "audioType": "Music",
+   "keyword": "halloween",
+   "artist": "Matreya",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Night of the Ghouls",
+   "file": "rbxassetid://1837467198",
+   "id": 1837467198,
+   "seconds": 150,
+   "audioType": "Music",
+   "keyword": "halloween",
+   "artist": "The Box",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Rising Fear",
+   "file": "rbxassetid://135888560895946",
+   "id": 135888560895946,
+   "seconds": 138,
+   "audioType": "Music",
+   "keyword": "halloween",
+   "artist": "Matreya",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Spooky LoFi",
+   "file": "rbxassetid://119338609842850",
+   "id": 119338609842850,
+   "seconds": 145,
+   "audioType": "Music",
+   "keyword": "halloween",
+   "artist": "NojikoFM",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Spooky Scary Skeletons (Halloween Sound)",
+   "file": "rbxassetid://107914377354444",
+   "id": 107914377354444,
+   "seconds": 108,
+   "audioType": "Music",
+   "keyword": "halloween",
+   "artist": "ANGRYHED",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Sweet Scare",
+   "file": "rbxassetid://139960241205796",
+   "id": 139960241205796,
+   "seconds": 192,
+   "audioType": "Music",
+   "keyword": "halloween",
+   "artist": "ねおちくん",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "The Blood Moon Rising",
+   "file": "rbxassetid://127648968320882",
+   "id": 127648968320882,
+   "seconds": 168,
+   "audioType": "Music",
+   "keyword": "halloween",
+   "artist": "Band of Legends",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Whispers of the Ancient Willow",
+   "file": "rbxassetid://137954899587949",
+   "id": 137954899587949,
+   "seconds": 206,
+   "audioType": "Music",
+   "keyword": "halloween",
+   "artist": "Fairia Studio Orchestra",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Blissful Leap Fiesta",
+   "file": "rbxassetid://71612604315412",
+   "id": 71612604315412,
+   "seconds": 137,
+   "audioType": "Music",
+   "keyword": "happy upbeat",
+   "artist": "Jagleb",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Blissful Steps Embrace",
+   "file": "rbxassetid://93478033976110",
+   "id": 93478033976110,
+   "seconds": 180,
+   "audioType": "Music",
+   "keyword": "happy upbeat",
+   "artist": "Jagleb",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Bright Heart House",
+   "file": "rbxassetid://104439502290763",
+   "id": 104439502290763,
+   "seconds": 142,
+   "audioType": "Music",
+   "keyword": "happy upbeat",
+   "artist": "House Uplift Pulse",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Dancing House Lights",
+   "file": "rbxassetid://100892436157886",
+   "id": 100892436157886,
+   "seconds": 184,
+   "audioType": "Music",
+   "keyword": "happy upbeat",
+   "artist": "House Uplift Pulse",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Ecstatic Vow Groove",
+   "file": "rbxassetid://135378670250070",
+   "id": 135378670250070,
+   "seconds": 149,
+   "audioType": "Music",
+   "keyword": "happy upbeat",
+   "artist": "Jagleb",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Endless House Journey",
+   "file": "rbxassetid://128140909088087",
+   "id": 128140909088087,
+   "seconds": 315,
+   "audioType": "Music",
+   "keyword": "happy upbeat",
+   "artist": "House Uplift Pulse",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Euphoric Twirl Union",
+   "file": "rbxassetid://120828665667679",
+   "id": 120828665667679,
+   "seconds": 155,
+   "audioType": "Music",
+   "keyword": "happy upbeat",
+   "artist": "Jagleb",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Glitter House Nights",
+   "file": "rbxassetid://77606254392247",
+   "id": 77606254392247,
+   "seconds": 202,
+   "audioType": "Music",
+   "keyword": "happy upbeat",
+   "artist": "House Uplift Pulse",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Happy Barista Upbeat Tunes",
+   "file": "rbxassetid://75248355463133",
+   "id": 75248355463133,
+   "seconds": 158,
+   "audioType": "Music",
+   "keyword": "happy upbeat",
+   "artist": "Music for coffee shop atmosphere",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Happy Echo Lights",
+   "file": "rbxassetid://105004054582098",
+   "id": 105004054582098,
+   "seconds": 277,
+   "audioType": "Music",
+   "keyword": "happy upbeat",
+   "artist": "House Uplift Pulse",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Happy Heart Waltz",
+   "file": "rbxassetid://135188714592358",
+   "id": 135188714592358,
+   "seconds": 139,
+   "audioType": "Music",
+   "keyword": "happy upbeat",
+   "artist": "Jagleb",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Happy Orbit Dance",
+   "file": "rbxassetid://99021166463188",
+   "id": 99021166463188,
+   "seconds": 359,
+   "audioType": "Music",
+   "keyword": "happy upbeat",
+   "artist": "House Uplift Pulse",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Joyful Vows Whirl",
+   "file": "rbxassetid://94544748717434",
+   "id": 94544748717434,
+   "seconds": 207,
+   "audioType": "Music",
+   "keyword": "happy upbeat",
+   "artist": "Jagleb",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Ocean Breeze House",
+   "file": "rbxassetid://82324276416201",
+   "id": 82324276416201,
+   "seconds": 354,
+   "audioType": "Music",
+   "keyword": "happy upbeat",
+   "artist": "House Uplift Pulse",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Radiant Heart Spin",
+   "file": "rbxassetid://74984229263889",
+   "id": 74984229263889,
+   "seconds": 130,
+   "audioType": "Music",
+   "keyword": "happy upbeat",
+   "artist": "Jagleb",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Skyline House Motion",
+   "file": "rbxassetid://113417387518325",
+   "id": 113417387518325,
+   "seconds": 327,
+   "audioType": "Music",
+   "keyword": "happy upbeat",
+   "artist": "House Uplift Pulse",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Sparkling Clean - 15, v2",
+   "file": "rbxassetid://9039448494",
+   "id": 9039448494,
+   "seconds": 15,
+   "audioType": "Music",
+   "keyword": "happy upbeat",
+   "artist": "Hard",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Sunny Vows Dance",
+   "file": "rbxassetid://99028236719946",
+   "id": 99028236719946,
+   "seconds": 160,
+   "audioType": "Music",
+   "keyword": "happy upbeat",
+   "artist": "Jagleb",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Sweet Motion House",
+   "file": "rbxassetid://88507516042948",
+   "id": 88507516042948,
+   "seconds": 220,
+   "audioType": "Music",
+   "keyword": "happy upbeat",
+   "artist": "House Uplift Pulse",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Vibrant Love Jive",
+   "file": "rbxassetid://104100796969522",
+   "id": 104100796969522,
+   "seconds": 165,
+   "audioType": "Music",
+   "keyword": "happy upbeat",
+   "artist": "Jagleb",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Warm House Frequencies",
+   "file": "rbxassetid://78375591198139",
+   "id": 78375591198139,
+   "seconds": 363,
+   "audioType": "Music",
+   "keyword": "happy upbeat",
+   "artist": "House Uplift Pulse",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "happy cheerful silly upbeat positive",
+   "file": "rbxassetid://71404756480273",
+   "id": 71404756480273,
+   "seconds": 55,
+   "audioType": "Music",
+   "keyword": "happy upbeat",
+   "artist": "Kitty Kids Music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Capybara Holiday (Whistling Song)",
+   "file": "rbxassetid://134129382082255",
+   "id": 134129382082255,
+   "seconds": 75,
+   "audioType": "Music",
+   "keyword": "kids happy",
+   "artist": "KOKSU Mk",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Flight of the Bumblebee (Fast Xylophone Jazz)",
+   "file": "rbxassetid://116304492884496",
+   "id": 116304492884496,
+   "seconds": 122,
+   "audioType": "Music",
+   "keyword": "kids happy",
+   "artist": "Midnight Jazz Society",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Funny Banjo",
+   "file": "rbxassetid://1839803729",
+   "id": 1839803729,
+   "seconds": 101,
+   "audioType": "Music",
+   "keyword": "kids happy",
+   "artist": "Kosinus",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Goofy Funny Clumsy",
+   "file": "rbxassetid://131911681104322",
+   "id": 131911681104322,
+   "seconds": 127,
+   "audioType": "Music",
+   "keyword": "kids happy",
+   "artist": "Kitty Kids Music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Grandpa’s Old Car (Quirky Bassoon Comedy)",
+   "file": "rbxassetid://85282447345072",
+   "id": 85282447345072,
+   "seconds": 73,
+   "audioType": "Music",
+   "keyword": "kids happy",
+   "artist": "Midnight Jazz Society",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Happy Kids",
+   "file": "rbxassetid://129430937148103",
+   "id": 129430937148103,
+   "seconds": 88,
+   "audioType": "Music",
+   "keyword": "kids happy",
+   "artist": "Kitty Kids Music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Happy Kids",
+   "file": "rbxassetid://1844855647",
+   "id": 1844855647,
+   "seconds": 28,
+   "audioType": "Music",
+   "keyword": "kids happy",
+   "artist": "Hermann Skibbe",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Husky Drama Opera (Funny Cry Trombone)",
+   "file": "rbxassetid://106437809954256",
+   "id": 106437809954256,
+   "seconds": 118,
+   "audioType": "Music",
+   "keyword": "kids happy",
+   "artist": "KOKSU Mk",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Pedro Raccoon Spinner (Circus Loop)",
+   "file": "rbxassetid://84581036643604",
+   "id": 84581036643604,
+   "seconds": 76,
+   "audioType": "Music",
+   "keyword": "kids happy",
+   "artist": "KOKSU Mk",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Puppy at the Park (Happy Ragtime Piano)",
+   "file": "rbxassetid://133242793708937",
+   "id": 133242793708937,
+   "seconds": 85,
+   "audioType": "Music",
+   "keyword": "kids happy",
+   "artist": "Midnight Jazz Society",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Rainbow Friends v2",
+   "file": "rbxassetid://139000764670964",
+   "id": 139000764670964,
+   "seconds": 106,
+   "audioType": "Music",
+   "keyword": "kids happy",
+   "artist": "Healing Flow Kids EN",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Sneaky Kitten (Tiptoe Marimba)",
+   "file": "rbxassetid://133622392487696",
+   "id": 133622392487696,
+   "seconds": 65,
+   "audioType": "Music",
+   "keyword": "kids happy",
+   "artist": "KOKSU Mk",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Sneaky Little Mouse (Funny Bassoon Mystery)",
+   "file": "rbxassetid://124070251933909",
+   "id": 124070251933909,
+   "seconds": 148,
+   "audioType": "Music",
+   "keyword": "kids happy",
+   "artist": "Midnight Jazz Society",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "TORNADO ATTACK TWIRL",
+   "file": "rbxassetid://127048516245168",
+   "id": 127048516245168,
+   "seconds": 155,
+   "audioType": "Music",
+   "keyword": "kids happy",
+   "artist": "KIDS MUSIK",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "The Big Red Fire Truck Song",
+   "file": "rbxassetid://137105816763459",
+   "id": 137105816763459,
+   "seconds": 153,
+   "audioType": "Music",
+   "keyword": "kids happy",
+   "artist": "Kitty Kids Music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "The Clockwork Toys (Funny Mechanical Dance)",
+   "file": "rbxassetid://139295136111973",
+   "id": 139295136111973,
+   "seconds": 119,
+   "audioType": "Music",
+   "keyword": "kids happy",
+   "artist": "Midnight Jazz Society",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "The Dancing Elephant (Happy New Orleans Jazz)",
+   "file": "rbxassetid://130964662600647",
+   "id": 130964662600647,
+   "seconds": 135,
+   "audioType": "Music",
+   "keyword": "kids happy",
+   "artist": "Midnight Jazz Society",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "brainrot funny trend",
+   "file": "rbxassetid://79686578045356",
+   "id": 79686578045356,
+   "seconds": 70,
+   "audioType": "Music",
+   "keyword": "kids happy",
+   "artist": "Kitty Kids Music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "funny bouncy upbeat sunny positive",
+   "file": "rbxassetid://105930077937035",
+   "id": 105930077937035,
+   "seconds": 79,
+   "audioType": "Music",
+   "keyword": "kids happy",
+   "artist": "Kitty Kids Music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "funny comedy playful goofy background",
+   "file": "rbxassetid://115435923195263",
+   "id": 115435923195263,
+   "seconds": 41,
+   "audioType": "Music",
+   "keyword": "kids happy",
+   "artist": "Kitty Kids Music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "funny goofy clumsy pet fails",
+   "file": "rbxassetid://137551458756083",
+   "id": 137551458756083,
+   "seconds": 84,
+   "audioType": "Music",
+   "keyword": "kids happy",
+   "artist": "Kitty Kids Music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "funny sneaky playful kids",
+   "file": "rbxassetid://130307421986536",
+   "id": 130307421986536,
+   "seconds": 137,
+   "audioType": "Music",
+   "keyword": "kids happy",
+   "artist": "Kitty Kids Music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "goofy super funny",
+   "file": "rbxassetid://99959214406803",
+   "id": 99959214406803,
+   "seconds": 44,
+   "audioType": "Music",
+   "keyword": "kids happy",
+   "artist": "Kitty Kids Music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "goofy weird meme sound",
+   "file": "rbxassetid://117159592662271",
+   "id": 117159592662271,
+   "seconds": 73,
+   "audioType": "Music",
+   "keyword": "kids happy",
+   "artist": "Kitty Kids Music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "meme viral trending background",
+   "file": "rbxassetid://70829366728380",
+   "id": 70829366728380,
+   "seconds": 56,
+   "audioType": "Music",
+   "keyword": "kids happy",
+   "artist": "Kitty Kids Music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "silly happy energetic playful background",
+   "file": "rbxassetid://131975785801529",
+   "id": 131975785801529,
+   "seconds": 79,
+   "audioType": "Music",
+   "keyword": "kids happy",
+   "artist": "Kitty Kids Music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "skibidi brainrot sigma energy",
+   "file": "rbxassetid://79719353007065",
+   "id": 79719353007065,
+   "seconds": 94,
+   "audioType": "Music",
+   "keyword": "kids happy",
+   "artist": "Kitty Kids Music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "super funny goofy",
+   "file": "rbxassetid://139091984477785",
+   "id": 139091984477785,
+   "seconds": 66,
+   "audioType": "Music",
+   "keyword": "kids happy",
+   "artist": "Kitty Kids Music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Silly Cat Cartoon Chase I",
+   "file": "rbxassetid://85911230012042",
+   "id": 85911230012042,
+   "seconds": 95,
+   "audioType": "Music",
+   "keyword": "silly",
+   "artist": "One Eyed Men",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Silly Cat Cartoon Chase III",
+   "file": "rbxassetid://89213608260887",
+   "id": 89213608260887,
+   "seconds": 94,
+   "audioType": "Music",
+   "keyword": "silly",
+   "artist": "One Eyed Men",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Silly Cat Vibes",
+   "file": "rbxassetid://137296865428573",
+   "id": 137296865428573,
+   "seconds": 120,
+   "audioType": "Music",
+   "keyword": "silly",
+   "artist": "Oro Loco",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Silly Chase",
+   "file": "rbxassetid://1836675698",
+   "id": 1836675698,
+   "seconds": 145,
+   "audioType": "Music",
+   "keyword": "silly",
+   "artist": "Trevor Bastow",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Silly Chase",
+   "file": "rbxassetid://1836289689",
+   "id": 1836289689,
+   "seconds": 145,
+   "audioType": "Music",
+   "keyword": "silly",
+   "artist": "Trevor Bastow",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Silly Comedy",
+   "file": "rbxassetid://1839311958",
+   "id": 1839311958,
+   "seconds": 96,
+   "audioType": "Music",
+   "keyword": "silly",
+   "artist": "Yannick Kalfayan",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Silly Dance Meme XXI",
+   "file": "rbxassetid://139413640343848",
+   "id": 139413640343848,
+   "seconds": 25,
+   "audioType": "Music",
+   "keyword": "silly",
+   "artist": "One Eyed Men",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Silly Song",
+   "file": "rbxassetid://1842265674",
+   "id": 1842265674,
+   "seconds": 176,
+   "audioType": "Music",
+   "keyword": "silly",
+   "artist": "KPM 1000 LP Series",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "cheerful jolly funny entertainment",
+   "file": "rbxassetid://136954056039597",
+   "id": 136954056039597,
+   "seconds": 82,
+   "audioType": "Music",
+   "keyword": "silly",
+   "artist": "Kitty Kids Music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "happy funny goofy silly cat",
+   "file": "rbxassetid://128349135892088",
+   "id": 128349135892088,
+   "seconds": 165,
+   "audioType": "Music",
+   "keyword": "silly",
+   "artist": "Kitty Kids Music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "innocent soft funny",
+   "file": "rbxassetid://140517328454242",
+   "id": 140517328454242,
+   "seconds": 162,
+   "audioType": "Music",
+   "keyword": "silly",
+   "artist": "Kitty Kids Music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "mischievous funny sneaky prank kids",
+   "file": "rbxassetid://137163917079966",
+   "id": 137163917079966,
+   "seconds": 84,
+   "audioType": "Music",
+   "keyword": "silly",
+   "artist": "Kitty Kids Music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "surprise funny wow amazing kids pets",
+   "file": "rbxassetid://135857884360794",
+   "id": 135857884360794,
+   "seconds": 93,
+   "audioType": "Music",
+   "keyword": "silly",
+   "artist": "Kitty Kids Music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Adventure",
+   "file": "rbxassetid://70839347323892",
+   "id": 70839347323892,
+   "seconds": 151,
+   "audioType": "Music",
+   "keyword": "space",
+   "artist": "Willbe",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Cosmic Cafe",
+   "file": "rbxassetid://136898642923218",
+   "id": 136898642923218,
+   "seconds": 219,
+   "audioType": "Music",
+   "keyword": "space",
+   "artist": "QTB RaDiO",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Cyber Space",
+   "file": "rbxassetid://9046476113",
+   "id": 9046476113,
+   "seconds": 220,
+   "audioType": "Music",
+   "keyword": "space",
+   "artist": "Cezame",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Deep Space",
+   "file": "rbxassetid://87430596091033",
+   "id": 87430596091033,
+   "seconds": 419,
+   "audioType": "Music",
+   "keyword": "space",
+   "artist": "Cat arch music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Galactic Market",
+   "file": "rbxassetid://85922328966318",
+   "id": 85922328966318,
+   "seconds": 203,
+   "audioType": "Music",
+   "keyword": "space",
+   "artist": "QTB RaDiO",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Galaxy Sound Sleep Meditation",
+   "file": "rbxassetid://82959795326580",
+   "id": 82959795326580,
+   "seconds": 294,
+   "audioType": "Music",
+   "keyword": "space",
+   "artist": "Infinite music for meditation",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Liminal Space (Interlude)",
+   "file": "rbxassetid://135137686536515",
+   "id": 135137686536515,
+   "seconds": 90,
+   "audioType": "Music",
+   "keyword": "space",
+   "artist": "Quirio",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Liminal Space : Weirdcore Dreams",
+   "file": "rbxassetid://120427975224881",
+   "id": 120427975224881,
+   "seconds": 61,
+   "audioType": "Music",
+   "keyword": "space",
+   "artist": "am.i_normal",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Liminal Space Creepy Music",
+   "file": "rbxassetid://134959834418523",
+   "id": 134959834418523,
+   "seconds": 153,
+   "audioType": "Music",
+   "keyword": "space",
+   "artist": "GØDA",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Liminal Spaces Between Tides",
+   "file": "rbxassetid://101375319268585",
+   "id": 101375319268585,
+   "seconds": 185,
+   "audioType": "Music",
+   "keyword": "space",
+   "artist": "SPG Music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Liminal space aesthetic",
+   "file": "rbxassetid://86481683367589",
+   "id": 86481683367589,
+   "seconds": 140,
+   "audioType": "Music",
+   "keyword": "space",
+   "artist": "GØDA",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Massive Black Hole",
+   "file": "rbxassetid://9045936046",
+   "id": 9045936046,
+   "seconds": 154,
+   "audioType": "Music",
+   "keyword": "space",
+   "artist": "Lemoncake",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Moonlit Cabin Space",
+   "file": "rbxassetid://102678913950464",
+   "id": 102678913950464,
+   "seconds": 158,
+   "audioType": "Music",
+   "keyword": "space",
+   "artist": "Cat arch music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Return Signal Hopeful Future Ambient Music",
+   "file": "rbxassetid://134433077845062",
+   "id": 134433077845062,
+   "seconds": 337,
+   "audioType": "Music",
+   "keyword": "space",
+   "artist": "Lana Nord Ambient Fusion",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Slow Breathing Aurora (Space Ambient)",
+   "file": "rbxassetid://140041908508788",
+   "id": 140041908508788,
+   "seconds": 187,
+   "audioType": "Music",
+   "keyword": "space",
+   "artist": "Love Sleep Repeat",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Space",
+   "file": "rbxassetid://119540755571209",
+   "id": 119540755571209,
+   "seconds": 263,
+   "audioType": "Music",
+   "keyword": "space",
+   "artist": "KELLOW",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Space Ambient",
+   "file": "rbxassetid://140533822783920",
+   "id": 140533822783920,
+   "seconds": 195,
+   "audioType": "Music",
+   "keyword": "space",
+   "artist": "Silence Between Stars",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Space Disco",
+   "file": "rbxassetid://121621005771265",
+   "id": 121621005771265,
+   "seconds": 243,
+   "audioType": "Music",
+   "keyword": "space",
+   "artist": "Mimi Ray",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Space Race",
+   "file": "rbxassetid://1842597135",
+   "id": 1842597135,
+   "seconds": 158,
+   "audioType": "Music",
+   "keyword": "space",
+   "artist": "Voodoo Don",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Spin in a Firefly",
+   "file": "rbxassetid://139212412544387",
+   "id": 139212412544387,
+   "seconds": 274,
+   "audioType": "Music",
+   "keyword": "space",
+   "artist": "Tommy Spooky and the Creepy Cats",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "The Great Strategy",
+   "file": "rbxassetid://78834066924790",
+   "id": 78834066924790,
+   "seconds": 206,
+   "audioType": "Music",
+   "keyword": "space",
+   "artist": "Femcel Bassment Dweller",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "The Night Sky - Underscore",
+   "file": "rbxassetid://9045934037",
+   "id": 9045934037,
+   "seconds": 174,
+   "audioType": "Music",
+   "keyword": "space",
+   "artist": "Lemoncake",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Candy Quest on Halloween",
+   "file": "rbxassetid://89785992214997",
+   "id": 89785992214997,
+   "seconds": 177,
+   "audioType": "Music",
+   "keyword": "spooky fun",
+   "artist": "Nessa's PlayHouse",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Ghosts are hiding everywhere",
+   "file": "rbxassetid://125715384804291",
+   "id": 125715384804291,
+   "seconds": 138,
+   "audioType": "Music",
+   "keyword": "spooky fun",
+   "artist": "infoFeed",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Halloween Bat Tag",
+   "file": "rbxassetid://125675395753612",
+   "id": 125675395753612,
+   "seconds": 85,
+   "audioType": "Music",
+   "keyword": "spooky fun",
+   "artist": "Holiday Kidz",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Halloween Ride: The Spooky Bus Adventure",
+   "file": "rbxassetid://106823005678207",
+   "id": 106823005678207,
+   "seconds": 177,
+   "audioType": "Music",
+   "keyword": "spooky fun",
+   "artist": "Nessa's PlayHouse",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Halloween creepy clown",
+   "file": "rbxassetid://125214931311098",
+   "id": 125214931311098,
+   "seconds": 69,
+   "audioType": "Music",
+   "keyword": "spooky fun",
+   "artist": "Holiday Kidz",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Halloween creepy clown, Pt. 2",
+   "file": "rbxassetid://79651956285475",
+   "id": 79651956285475,
+   "seconds": 83,
+   "audioType": "Music",
+   "keyword": "spooky fun",
+   "artist": "Holiday Kidz",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Halloween haunted house",
+   "file": "rbxassetid://81619776169562",
+   "id": 81619776169562,
+   "seconds": 77,
+   "audioType": "Music",
+   "keyword": "spooky fun",
+   "artist": "Holiday Kidz",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Halloween in Hawaii",
+   "file": "rbxassetid://79487858278514",
+   "id": 79487858278514,
+   "seconds": 70,
+   "audioType": "Music",
+   "keyword": "spooky fun",
+   "artist": "Holiday Kidz",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Halloween skeleton dance, Pt. 2",
+   "file": "rbxassetid://120032869536494",
+   "id": 120032869536494,
+   "seconds": 89,
+   "audioType": "Music",
+   "keyword": "spooky fun",
+   "artist": "Holiday Kidz",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Halloween spider mania, Pt. 2",
+   "file": "rbxassetid://121853486303767",
+   "id": 121853486303767,
+   "seconds": 62,
+   "audioType": "Music",
+   "keyword": "spooky fun",
+   "artist": "Holiday Kidz",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Halloween treat or trick",
+   "file": "rbxassetid://114127149892924",
+   "id": 114127149892924,
+   "seconds": 94,
+   "audioType": "Music",
+   "keyword": "spooky fun",
+   "artist": "Holiday Kidz",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Halloween, Pt. 2",
+   "file": "rbxassetid://138852308346207",
+   "id": 138852308346207,
+   "seconds": 90,
+   "audioType": "Music",
+   "keyword": "spooky fun",
+   "artist": "Holiday Kidz",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Monsters creeping in the night",
+   "file": "rbxassetid://91689069957211",
+   "id": 91689069957211,
+   "seconds": 90,
+   "audioType": "Music",
+   "keyword": "spooky fun",
+   "artist": "infoFeed",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Pick a Costume",
+   "file": "rbxassetid://88429357517434",
+   "id": 88429357517434,
+   "seconds": 254,
+   "audioType": "Music",
+   "keyword": "spooky fun",
+   "artist": "Nessa's PlayHouse",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Spooksville",
+   "file": "rbxassetid://74910520938989",
+   "id": 74910520938989,
+   "seconds": 87,
+   "audioType": "Music",
+   "keyword": "spooky fun",
+   "artist": "Holiday Kidz",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Spooky Fun Tonight",
+   "file": "rbxassetid://98850319570266",
+   "id": 98850319570266,
+   "seconds": 100,
+   "audioType": "Music",
+   "keyword": "spooky fun",
+   "artist": "ET Crew",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Spooky Funk",
+   "file": "rbxassetid://91582813416502",
+   "id": 91582813416502,
+   "seconds": 153,
+   "audioType": "Music",
+   "keyword": "spooky fun",
+   "artist": "Beyond Bassline",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Spooky Funkadelic, Pt. 1",
+   "file": "rbxassetid://110879931573249",
+   "id": 110879931573249,
+   "seconds": 105,
+   "audioType": "Music",
+   "keyword": "spooky fun",
+   "artist": "Funkadelic Spacegrooves",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Spooky cartoon music",
+   "file": "rbxassetid://111631783838916",
+   "id": 111631783838916,
+   "seconds": 164,
+   "audioType": "Music",
+   "keyword": "spooky fun",
+   "artist": "Holiday Kidz",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Spooky cartoon music, Pt. 2",
+   "file": "rbxassetid://123634209022739",
+   "id": 123634209022739,
+   "seconds": 54,
+   "audioType": "Music",
+   "keyword": "spooky fun",
+   "artist": "Holiday Kidz",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Spooky cartoon music, Pt. 3",
+   "file": "rbxassetid://101206861008794",
+   "id": 101206861008794,
+   "seconds": 240,
+   "audioType": "Music",
+   "keyword": "spooky fun",
+   "artist": "Holiday Kidz",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Spooky cartoon music, Pt. 4",
+   "file": "rbxassetid://115585877205328",
+   "id": 115585877205328,
+   "seconds": 66,
+   "audioType": "Music",
+   "keyword": "spooky fun",
+   "artist": "Holiday Kidz",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Spooky cartoon music, Pt. 5",
+   "file": "rbxassetid://123383267796300",
+   "id": 123383267796300,
+   "seconds": 71,
+   "audioType": "Music",
+   "keyword": "spooky fun",
+   "artist": "Holiday Kidz",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "The Ghosts Go Marching",
+   "file": "rbxassetid://120865805787560",
+   "id": 120865805787560,
+   "seconds": 233,
+   "audioType": "Music",
+   "keyword": "spooky fun",
+   "artist": "Nessa's PlayHouse",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "The Halloween Spirit and the Spirit of Halloween",
+   "file": "rbxassetid://82767690476926",
+   "id": 82767690476926,
+   "seconds": 199,
+   "audioType": "Music",
+   "keyword": "spooky fun",
+   "artist": "Holiday Kidz",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "What Should I Be for Halloween?",
+   "file": "rbxassetid://114865649838888",
+   "id": 114865649838888,
+   "seconds": 245,
+   "audioType": "Music",
+   "keyword": "spooky fun",
+   "artist": "Nessa's PlayHouse",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Witches are flying on their brooms",
+   "file": "rbxassetid://90005766303012",
+   "id": 90005766303012,
+   "seconds": 156,
+   "audioType": "Music",
+   "keyword": "spooky fun",
+   "artist": "infoFeed",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Zombies shuffle in a groove",
+   "file": "rbxassetid://119460871389880",
+   "id": 119460871389880,
+   "seconds": 201,
+   "audioType": "Music",
+   "keyword": "spooky fun",
+   "artist": "infoFeed",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Blue Horizons",
+   "file": "rbxassetid://9042466902",
+   "id": 9042466902,
+   "seconds": 11,
+   "audioType": "Music",
+   "keyword": "summer",
+   "artist": "Soho",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "By The Sea",
+   "file": "rbxassetid://81431480827880",
+   "id": 81431480827880,
+   "seconds": 175,
+   "audioType": "Music",
+   "keyword": "summer",
+   "artist": "Just Listen Darling",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Cherry Bicycle",
+   "file": "rbxassetid://140522140523060",
+   "id": 140522140523060,
+   "seconds": 170,
+   "audioType": "Music",
+   "keyword": "summer",
+   "artist": "Jazzy Sons",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Cozy Chilled",
+   "file": "rbxassetid://87428820725843",
+   "id": 87428820725843,
+   "seconds": 154,
+   "audioType": "Music",
+   "keyword": "summer",
+   "artist": "Cat arch music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Distant Summer Street",
+   "file": "rbxassetid://87366491843331",
+   "id": 87366491843331,
+   "seconds": 231,
+   "audioType": "Music",
+   "keyword": "summer",
+   "artist": "Kagayaki Frequency",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Floating on Summer Melodies",
+   "file": "rbxassetid://140265142715258",
+   "id": 140265142715258,
+   "seconds": 138,
+   "audioType": "Music",
+   "keyword": "summer",
+   "artist": "PARTY MUSIC NATION",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "For the Summer (Instrumental)",
+   "file": "rbxassetid://1837111764",
+   "id": 1837111764,
+   "seconds": 234,
+   "audioType": "Music",
+   "keyword": "summer",
+   "artist": "Bibliotheque",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Four Seasons No.2-the Summer, The @ Presto",
+   "file": "rbxassetid://1848052142",
+   "id": 1848052142,
+   "seconds": 181,
+   "audioType": "Music",
+   "keyword": "summer",
+   "artist": "Public Domain",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Funky Beach Party Vibes",
+   "file": "rbxassetid://137105458548171",
+   "id": 137105458548171,
+   "seconds": 170,
+   "audioType": "Music",
+   "keyword": "summer",
+   "artist": "Love Sleep Repeat",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Glass Louvers",
+   "file": "rbxassetid://86355858980579",
+   "id": 86355858980579,
+   "seconds": 153,
+   "audioType": "Music",
+   "keyword": "summer",
+   "artist": "Cat arch music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Grid Shadow",
+   "file": "rbxassetid://73583615362476",
+   "id": 73583615362476,
+   "seconds": 147,
+   "audioType": "Music",
+   "keyword": "summer",
+   "artist": "Cat arch music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Ibiza Sunset Deep House 2026",
+   "file": "rbxassetid://128285936198049",
+   "id": 128285936198049,
+   "seconds": 251,
+   "audioType": "Music",
+   "keyword": "summer",
+   "artist": "Deep Vocallo",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Island Smooth Waves",
+   "file": "rbxassetid://138532985066732",
+   "id": 138532985066732,
+   "seconds": 154,
+   "audioType": "Music",
+   "keyword": "summer",
+   "artist": "Smooth Jazz Vinyl",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Lounge Lofi",
+   "file": "rbxassetid://96286085515878",
+   "id": 96286085515878,
+   "seconds": 168,
+   "audioType": "Music",
+   "keyword": "summer",
+   "artist": "Cat arch music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Miami Overdrive",
+   "file": "rbxassetid://140194102765399",
+   "id": 140194102765399,
+   "seconds": 163,
+   "audioType": "Music",
+   "keyword": "summer",
+   "artist": "Just Listen Darling",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Nice Summer",
+   "file": "rbxassetid://1839732638",
+   "id": 1839732638,
+   "seconds": 151,
+   "audioType": "Music",
+   "keyword": "summer",
+   "artist": "Samson Robin Penot",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Ocean Breeze Ambient",
+   "file": "rbxassetid://115687028036824",
+   "id": 115687028036824,
+   "seconds": 164,
+   "audioType": "Music",
+   "keyword": "summer",
+   "artist": "Rest'n'Sleep",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Paradise Lost",
+   "file": "rbxassetid://137274776259444",
+   "id": 137274776259444,
+   "seconds": 247,
+   "audioType": "Music",
+   "keyword": "summer",
+   "artist": "Synthwave Music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Slow Pause",
+   "file": "rbxassetid://81104848041752",
+   "id": 81104848041752,
+   "seconds": 167,
+   "audioType": "Music",
+   "keyword": "summer",
+   "artist": "Cat arch music",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Summer Afro House Party (Vibrant Vocal Grooves)",
+   "file": "rbxassetid://75572650043316",
+   "id": 75572650043316,
+   "seconds": 134,
+   "audioType": "Music",
+   "keyword": "summer",
+   "artist": "Twysco Phunk Fonk",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Summer Breeze Study Session",
+   "file": "rbxassetid://138197655562277",
+   "id": 138197655562277,
+   "seconds": 143,
+   "audioType": "Music",
+   "keyword": "summer",
+   "artist": "Universe of Music for Good Mood",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Summer Nights",
+   "file": "rbxassetid://134985092052325",
+   "id": 134985092052325,
+   "seconds": 200,
+   "audioType": "Music",
+   "keyword": "summer",
+   "artist": "Lunar Boom",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Sunset Fever",
+   "file": "rbxassetid://1843382567",
+   "id": 1843382567,
+   "seconds": 160,
+   "audioType": "Music",
+   "keyword": "summer",
+   "artist": "Vermair",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Wonderful Day",
+   "file": "rbxassetid://1843382633",
+   "id": 1843382633,
+   "seconds": 211,
+   "audioType": "Music",
+   "keyword": "summer",
+   "artist": "Vermair",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "summer chill darkness",
+   "file": "rbxassetid://124321587092109",
+   "id": 124321587092109,
+   "seconds": 136,
+   "audioType": "Music",
+   "keyword": "summer",
+   "artist": "Ryan Kubo",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Cozumel Waves\tLo-Fi Tropical Chill Sound",
+   "file": "rbxassetid://139915816319200",
+   "id": 139915816319200,
+   "seconds": 133,
+   "audioType": "Music",
+   "keyword": "tropical",
+   "artist": "ZwandererX",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Driving",
+   "file": "rbxassetid://91574242532662",
+   "id": 91574242532662,
+   "seconds": 164,
+   "audioType": "Music",
+   "keyword": "tropical",
+   "artist": "Leith Music Productions",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Golden Beach Jazz",
+   "file": "rbxassetid://125114204214284",
+   "id": 125114204214284,
+   "seconds": 152,
+   "audioType": "Music",
+   "keyword": "tropical",
+   "artist": "V.O. Tropical Island Bossa",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Golden Coast Beats",
+   "file": "rbxassetid://138639987563324",
+   "id": 138639987563324,
+   "seconds": 180,
+   "audioType": "Music",
+   "keyword": "tropical",
+   "artist": "WHALES CLUB SOUND",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "ISLAND BREEZE",
+   "file": "rbxassetid://131960181231031",
+   "id": 131960181231031,
+   "seconds": 118,
+   "audioType": "Music",
+   "keyword": "tropical",
+   "artist": "Strima",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Light Feet on Warm Sand",
+   "file": "rbxassetid://133433568376018",
+   "id": 133433568376018,
+   "seconds": 115,
+   "audioType": "Music",
+   "keyword": "tropical",
+   "artist": "V.O. Tropical Island Bossa",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Marimba Paradise",
+   "file": "rbxassetid://1837465056",
+   "id": 1837465056,
+   "seconds": 161,
+   "audioType": "Music",
+   "keyword": "tropical",
+   "artist": "The Box",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Marimba Paradise (alternate no woodwind)",
+   "file": "rbxassetid://1837465295",
+   "id": 1837465295,
+   "seconds": 161,
+   "audioType": "Music",
+   "keyword": "tropical",
+   "artist": "The Box",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Our Place",
+   "file": "rbxassetid://115693258049077",
+   "id": 115693258049077,
+   "seconds": 161,
+   "audioType": "Music",
+   "keyword": "tropical",
+   "artist": "Leith Music Productions",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "PALM BEACH VIBES",
+   "file": "rbxassetid://123516194124949",
+   "id": 123516194124949,
+   "seconds": 160,
+   "audioType": "Music",
+   "keyword": "tropical",
+   "artist": "Strima",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Paradise Falls",
+   "file": "rbxassetid://1837879082",
+   "id": 1837879082,
+   "seconds": 162,
+   "audioType": "Music",
+   "keyword": "tropical",
+   "artist": "Craig McConnell",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Paradise Falls - Alt1",
+   "file": "rbxassetid://1837879134",
+   "id": 1837879134,
+   "seconds": 162,
+   "audioType": "Music",
+   "keyword": "tropical",
+   "artist": "Craig McConnell",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Paradise Falls - Alt2",
+   "file": "rbxassetid://1837879143",
+   "id": 1837879143,
+   "seconds": 163,
+   "audioType": "Music",
+   "keyword": "tropical",
+   "artist": "Craig McConnell",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "SUNNY PARADISE",
+   "file": "rbxassetid://137874806490784",
+   "id": 137874806490784,
+   "seconds": 148,
+   "audioType": "Music",
+   "keyword": "tropical",
+   "artist": "Strima",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Samba Tropical",
+   "file": "rbxassetid://1838888607",
+   "id": 1838888607,
+   "seconds": 116,
+   "audioType": "Music",
+   "keyword": "tropical",
+   "artist": "Yannick Kalfayan",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Seaside Smile",
+   "file": "rbxassetid://120416151765277",
+   "id": 120416151765277,
+   "seconds": 134,
+   "audioType": "Music",
+   "keyword": "tropical",
+   "artist": "V.O. Tropical Island Bossa",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Soft Island Path",
+   "file": "rbxassetid://132913849361340",
+   "id": 132913849361340,
+   "seconds": 119,
+   "audioType": "Music",
+   "keyword": "tropical",
+   "artist": "V.O. Tropical Island Bossa",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Summer Air Chill House",
+   "file": "rbxassetid://73182362541595",
+   "id": 73182362541595,
+   "seconds": 194,
+   "audioType": "Music",
+   "keyword": "tropical",
+   "artist": "Deep Vocallo",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Tender Tropical House",
+   "file": "rbxassetid://1836105293",
+   "id": 1836105293,
+   "seconds": 151,
+   "audioType": "Music",
+   "keyword": "tropical",
+   "artist": "AXS",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Tropical",
+   "file": "rbxassetid://1848227887",
+   "id": 1848227887,
+   "seconds": 227,
+   "audioType": "Music",
+   "keyword": "tropical",
+   "artist": "Joost G A Joost Weiss",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Tropical Breeze A",
+   "file": "rbxassetid://9047134387",
+   "id": 9047134387,
+   "seconds": 169,
+   "audioType": "Music",
+   "keyword": "tropical",
+   "artist": "Charles Michael Brotman",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Tropical Breeze D",
+   "file": "rbxassetid://9047134822",
+   "id": 9047134822,
+   "seconds": 169,
+   "audioType": "Music",
+   "keyword": "tropical",
+   "artist": "Charles Michael Brotman",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Tropical Holiday Dancefloor",
+   "file": "rbxassetid://129790346145677",
+   "id": 129790346145677,
+   "seconds": 225,
+   "audioType": "Music",
+   "keyword": "tropical",
+   "artist": "PARTY MUSIC NATION",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Tropical Jazz",
+   "file": "rbxassetid://1839198616",
+   "id": 1839198616,
+   "seconds": 107,
+   "audioType": "Music",
+   "keyword": "tropical",
+   "artist": "Ilan Moshe Abou",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Tropical Night",
+   "file": "rbxassetid://136984059275458",
+   "id": 136984059275458,
+   "seconds": 305,
+   "audioType": "Music",
+   "keyword": "tropical",
+   "artist": "Bossa Nova Maré",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Tropical Summer",
+   "file": "rbxassetid://1839744286",
+   "id": 1839744286,
+   "seconds": 130,
+   "audioType": "Music",
+   "keyword": "tropical",
+   "artist": "Samson Robin Penot",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Warm Sand",
+   "file": "rbxassetid://72371756544118",
+   "id": 72371756544118,
+   "seconds": 146,
+   "audioType": "Music",
+   "keyword": "tropical",
+   "artist": "Leith Music Productions",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Cosmic Dust",
+   "file": "rbxassetid://1844477817",
+   "id": 1844477817,
+   "seconds": 114,
+   "audioType": "Music",
+   "keyword": "underwater",
+   "artist": "Milan Pilar",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Dangerous Deep Sea 2",
+   "file": "rbxassetid://9043111968",
+   "id": 9043111968,
+   "seconds": 151,
+   "audioType": "Music",
+   "keyword": "underwater",
+   "artist": "Sonoton Vinyl",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Frozen Planet",
+   "file": "rbxassetid://1844634116",
+   "id": 1844634116,
+   "seconds": 158,
+   "audioType": "Music",
+   "keyword": "underwater",
+   "artist": "Andreas Brunnmeier",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Underwater (Calm)",
+   "file": "rbxassetid://109259675282369",
+   "id": 109259675282369,
+   "seconds": 256,
+   "audioType": "Music",
+   "keyword": "underwater",
+   "artist": "Nasheedio Calm",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Underwater Lobby",
+   "file": "rbxassetid://101161933894674",
+   "id": 101161933894674,
+   "seconds": 96,
+   "audioType": "Music",
+   "keyword": "underwater",
+   "artist": "The Northern Divide",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Underwater Ruins",
+   "file": "rbxassetid://123150573629544",
+   "id": 123150573629544,
+   "seconds": 259,
+   "audioType": "Music",
+   "keyword": "underwater",
+   "artist": "Terra Fantasy",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Underwater Theme",
+   "file": "rbxassetid://135578433689667",
+   "id": 135578433689667,
+   "seconds": 127,
+   "audioType": "Music",
+   "keyword": "underwater",
+   "artist": "Video Game Music Reimagined",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Combat Music",
+   "file": "rbxassetid://120253911116633",
+   "id": 120253911116633,
+   "seconds": 258,
+   "audioType": "Music",
+   "keyword": "victory",
+   "artist": "הפרויקט של רננו",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Pet Simulator 99",
+   "file": "rbxassetid://101349704387181",
+   "id": 101349704387181,
+   "seconds": 189,
+   "audioType": "Music",
+   "keyword": "victory",
+   "artist": "Plotting Paths to Victory",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Ultimate Victory Soundtrack",
+   "file": "rbxassetid://127348322119521",
+   "id": 127348322119521,
+   "seconds": 158,
+   "audioType": "Music",
+   "keyword": "victory",
+   "artist": "GØDA",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Victory",
+   "file": "rbxassetid://127835274148335",
+   "id": 127835274148335,
+   "seconds": 100,
+   "audioType": "Music",
+   "keyword": "victory",
+   "artist": "Wildemar Doomgriever",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Victory Podium",
+   "file": "rbxassetid://122087211247387",
+   "id": 122087211247387,
+   "seconds": 19,
+   "audioType": "Music",
+   "keyword": "victory",
+   "artist": "ONEstudio",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "12月のやわらかな光",
+   "file": "rbxassetid://76129961168399",
+   "id": 76129961168399,
+   "seconds": 237,
+   "audioType": "Music",
+   "keyword": "winter holiday",
+   "artist": "Neon City Grooves",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "A Waltz Beneath Falling Stars",
+   "file": "rbxassetid://119026872022879",
+   "id": 119026872022879,
+   "seconds": 223,
+   "audioType": "Music",
+   "keyword": "winter holiday",
+   "artist": "FreeBeatsRoom FBR",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Bright Holiday Swing",
+   "file": "rbxassetid://100764064159201",
+   "id": 100764064159201,
+   "seconds": 216,
+   "audioType": "Music",
+   "keyword": "winter holiday",
+   "artist": "Instrumental Music Spectrum",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Chonky Dog Winter Walk Xmas Unboxing",
+   "file": "rbxassetid://121515419633382",
+   "id": 121515419633382,
+   "seconds": 90,
+   "audioType": "Music",
+   "keyword": "winter holiday",
+   "artist": "KOKSU Mk",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Christmas Chill Background Magic",
+   "file": "rbxassetid://90064253110599",
+   "id": 90064253110599,
+   "seconds": 205,
+   "audioType": "Music",
+   "keyword": "winter holiday",
+   "artist": "Soft Instrumental Stories",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Cozy Cabin Party",
+   "file": "rbxassetid://113906548632662",
+   "id": 113906548632662,
+   "seconds": 174,
+   "audioType": "Music",
+   "keyword": "winter holiday",
+   "artist": "GØDA",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Creative Jazz",
+   "file": "rbxassetid://116348486408636",
+   "id": 116348486408636,
+   "seconds": 213,
+   "audioType": "Music",
+   "keyword": "winter holiday",
+   "artist": "Instrumental Music Spectrum",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Cute Kitten Mittens Xmas",
+   "file": "rbxassetid://138394917360648",
+   "id": 138394917360648,
+   "seconds": 61,
+   "audioType": "Music",
+   "keyword": "winter holiday",
+   "artist": "KOKSU Mk",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "December's Hazy Memory",
+   "file": "rbxassetid://119960693887660",
+   "id": 119960693887660,
+   "seconds": 180,
+   "audioType": "Music",
+   "keyword": "winter holiday",
+   "artist": "Polo jazz for chilling",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Festive Winter Chill Parade",
+   "file": "rbxassetid://135339925629749",
+   "id": 135339925629749,
+   "seconds": 88,
+   "audioType": "Music",
+   "keyword": "winter holiday",
+   "artist": "Soft Instrumental Stories",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Funny Cat Tree Chaos Destroy",
+   "file": "rbxassetid://131180011970862",
+   "id": 131180011970862,
+   "seconds": 78,
+   "audioType": "Music",
+   "keyword": "winter holiday",
+   "artist": "KOKSU Mk",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Happy Thanksgiving",
+   "file": "rbxassetid://132299317339224",
+   "id": 132299317339224,
+   "seconds": 263,
+   "audioType": "Music",
+   "keyword": "winter holiday",
+   "artist": "Angelique Sido",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Holiday Jazz Sparkle",
+   "file": "rbxassetid://105231667567761",
+   "id": 105231667567761,
+   "seconds": 188,
+   "audioType": "Music",
+   "keyword": "winter holiday",
+   "artist": "Instrumental Music Spectrum",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Jingle Bells Toy Piano Xmas",
+   "file": "rbxassetid://102076265341373",
+   "id": 102076265341373,
+   "seconds": 69,
+   "audioType": "Music",
+   "keyword": "winter holiday",
+   "artist": "KOKSU Mk",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Snowfall Jazz Mood",
+   "file": "rbxassetid://132515049116690",
+   "id": 132515049116690,
+   "seconds": 152,
+   "audioType": "Music",
+   "keyword": "winter holiday",
+   "artist": "Instrumental Music Spectrum",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Snowy Holiday Swing",
+   "file": "rbxassetid://134619213041196",
+   "id": 134619213041196,
+   "seconds": 159,
+   "audioType": "Music",
+   "keyword": "winter holiday",
+   "artist": "Instrumental Music Spectrum",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Snowy Night Chill Pop",
+   "file": "rbxassetid://77381489550094",
+   "id": 77381489550094,
+   "seconds": 67,
+   "audioType": "Music",
+   "keyword": "winter holiday",
+   "artist": "Soft Instrumental Stories",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "The Wait for the New Year",
+   "file": "rbxassetid://138557585951386",
+   "id": 138557585951386,
+   "seconds": 176,
+   "audioType": "Music",
+   "keyword": "winter holiday",
+   "artist": "Polo jazz for chilling",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Tiptoe Marimba Elves Xmas",
+   "file": "rbxassetid://109810915196826",
+   "id": 109810915196826,
+   "seconds": 69,
+   "audioType": "Music",
+   "keyword": "winter holiday",
+   "artist": "KOKSU Mk",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Upbeat Winter Nights",
+   "file": "rbxassetid://75952146015172",
+   "id": 75952146015172,
+   "seconds": 197,
+   "audioType": "Music",
+   "keyword": "winter holiday",
+   "artist": "Instrumental Music Spectrum",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Winter Holiday b 30",
+   "file": "rbxassetid://1841591463",
+   "id": 1841591463,
+   "seconds": 32,
+   "audioType": "Music",
+   "keyword": "winter holiday",
+   "artist": "Alexander Paul Rudd",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Winter Holidays",
+   "file": "rbxassetid://9046740751",
+   "id": 9046740751,
+   "seconds": 131,
+   "audioType": "Music",
+   "keyword": "winter holiday",
+   "artist": "Kosinus",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Winter Holidays",
+   "file": "rbxassetid://9046740497",
+   "id": 9046740497,
+   "seconds": 138,
+   "audioType": "Music",
+   "keyword": "winter holiday",
+   "artist": "Kosinus",
+   "creator": "APMOfficial"
+  },
+  {
+   "name": "Winter Holidays Time (Christmas Music Rock)",
+   "file": "rbxassetid://139712133125866",
+   "id": 139712133125866,
+   "seconds": 139,
+   "audioType": "Music",
+   "keyword": "winter holiday",
+   "artist": "Alex Mrin",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Winter Jazz Stroll",
+   "file": "rbxassetid://75067465606273",
+   "id": 75067465606273,
+   "seconds": 159,
+   "audioType": "Music",
+   "keyword": "winter holiday",
+   "artist": "Instrumental Music Spectrum",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "Winter's Whisper",
+   "file": "rbxassetid://98410414993029",
+   "id": 98410414993029,
+   "seconds": 159,
+   "audioType": "Music",
+   "keyword": "winter holiday",
+   "artist": "Cappuccino Music Café",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "coffee mistletoe",
+   "file": "rbxassetid://103592770429525",
+   "id": 103592770429525,
+   "seconds": 218,
+   "audioType": "Music",
+   "keyword": "winter holiday",
+   "artist": "KG original",
+   "creator": "DistrokidOfficial"
+  },
+  {
+   "name": "クールデイズ・ホリデー",
+   "file": "rbxassetid://137727410863911",
+   "id": 137727410863911,
+   "seconds": 188,
+   "audioType": "Music",
+   "keyword": "winter holiday",
+   "artist": "Neon City Grooves",
+   "creator": "DistrokidOfficial"
+  }
+ ]
+}

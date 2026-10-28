@@ -1,0 +1,321 @@
+{
+ "pack": "kenney-digital-audio",
+ "kind": "sound",
+ "source": "https://kenney.nl/assets/digital-audio",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 62,
+ "items": [
+  {
+   "name": "highDown",
+   "file": "highDown.ogg",
+   "kb": 5
+  },
+  {
+   "name": "highUp",
+   "file": "highUp.ogg",
+   "kb": 5
+  },
+  {
+   "name": "laser1",
+   "file": "laser1.ogg",
+   "kb": 9
+  },
+  {
+   "name": "laser2",
+   "file": "laser2.ogg",
+   "kb": 8
+  },
+  {
+   "name": "laser3",
+   "file": "laser3.ogg",
+   "kb": 8
+  },
+  {
+   "name": "laser4",
+   "file": "laser4.ogg",
+   "kb": 8
+  },
+  {
+   "name": "laser5",
+   "file": "laser5.ogg",
+   "kb": 8
+  },
+  {
+   "name": "laser6",
+   "file": "laser6.ogg",
+   "kb": 8
+  },
+  {
+   "name": "laser7",
+   "file": "laser7.ogg",
+   "kb": 8
+  },
+  {
+   "name": "laser8",
+   "file": "laser8.ogg",
+   "kb": 9
+  },
+  {
+   "name": "laser9",
+   "file": "laser9.ogg",
+   "kb": 9
+  },
+  {
+   "name": "lowDown",
+   "file": "lowDown.ogg",
+   "kb": 5
+  },
+  {
+   "name": "lowRandom",
+   "file": "lowRandom.ogg",
+   "kb": 5
+  },
+  {
+   "name": "lowThreeTone",
+   "file": "lowThreeTone.ogg",
+   "kb": 6
+  },
+  {
+   "name": "pepSound1",
+   "file": "pepSound1.ogg",
+   "kb": 5
+  },
+  {
+   "name": "pepSound2",
+   "file": "pepSound2.ogg",
+   "kb": 5
+  },
+  {
+   "name": "pepSound3",
+   "file": "pepSound3.ogg",
+   "kb": 5
+  },
+  {
+   "name": "pepSound4",
+   "file": "pepSound4.ogg",
+   "kb": 5
+  },
+  {
+   "name": "pepSound5",
+   "file": "pepSound5.ogg",
+   "kb": 6
+  },
+  {
+   "name": "phaseJump1",
+   "file": "phaseJump1.ogg",
+   "kb": 6
+  },
+  {
+   "name": "phaseJump2",
+   "file": "phaseJump2.ogg",
+   "kb": 6
+  },
+  {
+   "name": "phaseJump3",
+   "file": "phaseJump3.ogg",
+   "kb": 6
+  },
+  {
+   "name": "phaseJump4",
+   "file": "phaseJump4.ogg",
+   "kb": 6
+  },
+  {
+   "name": "phaseJump5",
+   "file": "phaseJump5.ogg",
+   "kb": 6
+  },
+  {
+   "name": "phaserDown1",
+   "file": "phaserDown1.ogg",
+   "kb": 6
+  },
+  {
+   "name": "phaserDown2",
+   "file": "phaserDown2.ogg",
+   "kb": 5
+  },
+  {
+   "name": "phaserDown3",
+   "file": "phaserDown3.ogg",
+   "kb": 7
+  },
+  {
+   "name": "phaserUp1",
+   "file": "phaserUp1.ogg",
+   "kb": 7
+  },
+  {
+   "name": "phaserUp2",
+   "file": "phaserUp2.ogg",
+   "kb": 6
+  },
+  {
+   "name": "phaserUp3",
+   "file": "phaserUp3.ogg",
+   "kb": 7
+  },
+  {
+   "name": "phaserUp4",
+   "file": "phaserUp4.ogg",
+   "kb": 6
+  },
+  {
+   "name": "phaserUp5",
+   "file": "phaserUp5.ogg",
+   "kb": 6
+  },
+  {
+   "name": "phaserUp6",
+   "file": "phaserUp6.ogg",
+   "kb": 6
+  },
+  {
+   "name": "phaserUp7",
+   "file": "phaserUp7.ogg",
+   "kb": 6
+  },
+  {
+   "name": "powerUp1",
+   "file": "powerUp1.ogg",
+   "kb": 8
+  },
+  {
+   "name": "powerUp10",
+   "file": "powerUp10.ogg",
+   "kb": 6
+  },
+  {
+   "name": "powerUp11",
+   "file": "powerUp11.ogg",
+   "kb": 6
+  },
+  {
+   "name": "powerUp12",
+   "file": "powerUp12.ogg",
+   "kb": 7
+  },
+  {
+   "name": "powerUp2",
+   "file": "powerUp2.ogg",
+   "kb": 5
+  },
+  {
+   "name": "powerUp3",
+   "file": "powerUp3.ogg",
+   "kb": 8
+  },
+  {
+   "name": "powerUp4",
+   "file": "powerUp4.ogg",
+   "kb": 6
+  },
+  {
+   "name": "powerUp5",
+   "file": "powerUp5.ogg",
+   "kb": 5
+  },
+  {
+   "name": "powerUp6",
+   "file": "powerUp6.ogg",
+   "kb": 5
+  },
+  {
+   "name": "powerUp7",
+   "file": "powerUp7.ogg",
+   "kb": 5
+  },
+  {
+   "name": "powerUp8",
+   "file": "powerUp8.ogg",
+   "kb": 6
+  },
+  {
+   "name": "powerUp9",
+   "file": "powerUp9.ogg",
+   "kb": 5
+  },
+  {
+   "name": "spaceTrash1",
+   "file": "spaceTrash1.ogg",
+   "kb": 11
+  },
+  {
+   "name": "spaceTrash2",
+   "file": "spaceTrash2.ogg",
+   "kb": 12
+  },
+  {
+   "name": "spaceTrash3",
+   "file": "spaceTrash3.ogg",
+   "kb": 12
+  },
+  {
+   "name": "spaceTrash4",
+   "file": "spaceTrash4.ogg",
+   "kb": 12
+  },
+  {
+   "name": "spaceTrash5",
+   "file": "spaceTrash5.ogg",
+   "kb": 11
+  },
+  {
+   "name": "threeTone1",
+   "file": "threeTone1.ogg",
+   "kb": 7
+  },
+  {
+   "name": "threeTone2",
+   "file": "threeTone2.ogg",
+   "kb": 7
+  },
+  {
+   "name": "tone1",
+   "file": "tone1.ogg",
+   "kb": 6
+  },
+  {
+   "name": "twoTone1",
+   "file": "twoTone1.ogg",
+   "kb": 7
+  },
+  {
+   "name": "twoTone2",
+   "file": "twoTone2.ogg",
+   "kb": 7
+  },
+  {
+   "name": "zap1",
+   "file": "zap1.ogg",
+   "kb": 7
+  },
+  {
+   "name": "zap2",
+   "file": "zap2.ogg",
+   "kb": 9
+  },
+  {
+   "name": "zapThreeToneDown",
+   "file": "zapThreeToneDown.ogg",
+   "kb": 9
+  },
+  {
+   "name": "zapThreeToneUp",
+   "file": "zapThreeToneUp.ogg",
+   "kb": 9
+  },
+  {
+   "name": "zapTwoTone",
+   "file": "zapTwoTone.ogg",
+   "kb": 9
+  },
+  {
+   "name": "zapTwoTone2",
+   "file": "zapTwoTone2.ogg",
+   "kb": 8
+  }
+ ]
+}

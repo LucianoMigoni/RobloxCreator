@@ -1,0 +1,266 @@
+{
+ "pack": "kenney-ui-audio",
+ "kind": "sound",
+ "source": "https://kenney.nl/assets/ui-audio",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 51,
+ "items": [
+  {
+   "name": "click1",
+   "file": "click1.ogg",
+   "kb": 4
+  },
+  {
+   "name": "click2",
+   "file": "click2.ogg",
+   "kb": 4
+  },
+  {
+   "name": "click3",
+   "file": "click3.ogg",
+   "kb": 4
+  },
+  {
+   "name": "click4",
+   "file": "click4.ogg",
+   "kb": 4
+  },
+  {
+   "name": "click5",
+   "file": "click5.ogg",
+   "kb": 4
+  },
+  {
+   "name": "mouseclick1",
+   "file": "mouseclick1.ogg",
+   "kb": 4
+  },
+  {
+   "name": "mouserelease1",
+   "file": "mouserelease1.ogg",
+   "kb": 4
+  },
+  {
+   "name": "rollover1",
+   "file": "rollover1.ogg",
+   "kb": 5
+  },
+  {
+   "name": "rollover2",
+   "file": "rollover2.ogg",
+   "kb": 4
+  },
+  {
+   "name": "rollover3",
+   "file": "rollover3.ogg",
+   "kb": 4
+  },
+  {
+   "name": "rollover4",
+   "file": "rollover4.ogg",
+   "kb": 5
+  },
+  {
+   "name": "rollover5",
+   "file": "rollover5.ogg",
+   "kb": 5
+  },
+  {
+   "name": "rollover6",
+   "file": "rollover6.ogg",
+   "kb": 5
+  },
+  {
+   "name": "switch1",
+   "file": "switch1.ogg",
+   "kb": 5
+  },
+  {
+   "name": "switch10",
+   "file": "switch10.ogg",
+   "kb": 6
+  },
+  {
+   "name": "switch11",
+   "file": "switch11.ogg",
+   "kb": 6
+  },
+  {
+   "name": "switch12",
+   "file": "switch12.ogg",
+   "kb": 4
+  },
+  {
+   "name": "switch13",
+   "file": "switch13.ogg",
+   "kb": 4
+  },
+  {
+   "name": "switch14",
+   "file": "switch14.ogg",
+   "kb": 4
+  },
+  {
+   "name": "switch15",
+   "file": "switch15.ogg",
+   "kb": 6
+  },
+  {
+   "name": "switch16",
+   "file": "switch16.ogg",
+   "kb": 6
+  },
+  {
+   "name": "switch17",
+   "file": "switch17.ogg",
+   "kb": 6
+  },
+  {
+   "name": "switch18",
+   "file": "switch18.ogg",
+   "kb": 7
+  },
+  {
+   "name": "switch19",
+   "file": "switch19.ogg",
+   "kb": 7
+  },
+  {
+   "name": "switch2",
+   "file": "switch2.ogg",
+   "kb": 5
+  },
+  {
+   "name": "switch20",
+   "file": "switch20.ogg",
+   "kb": 6
+  },
+  {
+   "name": "switch21",
+   "file": "switch21.ogg",
+   "kb": 7
+  },
+  {
+   "name": "switch22",
+   "file": "switch22.ogg",
+   "kb": 6
+  },
+  {
+   "name": "switch23",
+   "file": "switch23.ogg",
+   "kb": 7
+  },
+  {
+   "name": "switch24",
+   "file": "switch24.ogg",
+   "kb": 6
+  },
+  {
+   "name": "switch25",
+   "file": "switch25.ogg",
+   "kb": 6
+  },
+  {
+   "name": "switch26",
+   "file": "switch26.ogg",
+   "kb": 5
+  },
+  {
+   "name": "switch27",
+   "file": "switch27.ogg",
+   "kb": 6
+  },
+  {
+   "name": "switch28",
+   "file": "switch28.ogg",
+   "kb": 5
+  },
+  {
+   "name": "switch29",
+   "file": "switch29.ogg",
+   "kb": 6
+  },
+  {
+   "name": "switch3",
+   "file": "switch3.ogg",
+   "kb": 6
+  },
+  {
+   "name": "switch30",
+   "file": "switch30.ogg",
+   "kb": 6
+  },
+  {
+   "name": "switch31",
+   "file": "switch31.ogg",
+   "kb": 7
+  },
+  {
+   "name": "switch32",
+   "file": "switch32.ogg",
+   "kb": 7
+  },
+  {
+   "name": "switch33",
+   "file": "switch33.ogg",
+   "kb": 8
+  },
+  {
+   "name": "switch34",
+   "file": "switch34.ogg",
+   "kb": 7
+  },
+  {
+   "name": "switch35",
+   "file": "switch35.ogg",
+   "kb": 6
+  },
+  {
+   "name": "switch36",
+   "file": "switch36.ogg",
+   "kb": 6
+  },
+  {
+   "name": "switch37",
+   "file": "switch37.ogg",
+   "kb": 6
+  },
+  {
+   "name": "switch38",
+   "file": "switch38.ogg",
+   "kb": 7
+  },
+  {
+   "name": "switch4",
+   "file": "switch4.ogg",
+   "kb": 6
+  },
+  {
+   "name": "switch5",
+   "file": "switch5.ogg",
+   "kb": 6
+  },
+  {
+   "name": "switch6",
+   "file": "switch6.ogg",
+   "kb": 6
+  },
+  {
+   "name": "switch7",
+   "file": "switch7.ogg",
+   "kb": 5
+  },
+  {
+   "name": "switch8",
+   "file": "switch8.ogg",
+   "kb": 6
+  },
+  {
+   "name": "switch9",
+   "file": "switch9.ogg",
+   "kb": 5
+  }
+ ]
+}

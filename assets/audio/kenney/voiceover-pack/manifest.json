@@ -1,0 +1,261 @@
+{
+ "pack": "kenney-voiceover-pack",
+ "kind": "sound",
+ "source": "https://kenney.nl/assets/voiceover-pack",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 50,
+ "items": [
+  {
+   "name": "1",
+   "file": "1.ogg",
+   "kb": 7
+  },
+  {
+   "name": "10",
+   "file": "10.ogg",
+   "kb": 7
+  },
+  {
+   "name": "2",
+   "file": "2.ogg",
+   "kb": 7
+  },
+  {
+   "name": "3",
+   "file": "3.ogg",
+   "kb": 8
+  },
+  {
+   "name": "4",
+   "file": "4.ogg",
+   "kb": 7
+  },
+  {
+   "name": "5",
+   "file": "5.ogg",
+   "kb": 8
+  },
+  {
+   "name": "6",
+   "file": "6.ogg",
+   "kb": 8
+  },
+  {
+   "name": "7",
+   "file": "7.ogg",
+   "kb": 8
+  },
+  {
+   "name": "8",
+   "file": "8.ogg",
+   "kb": 7
+  },
+  {
+   "name": "9",
+   "file": "9.ogg",
+   "kb": 7
+  },
+  {
+   "name": "Preview (Female)",
+   "file": "Preview (Female).ogg",
+   "kb": 572
+  },
+  {
+   "name": "Preview (Male)",
+   "file": "Preview (Male).ogg",
+   "kb": 433
+  },
+  {
+   "name": "congratulations",
+   "file": "congratulations.ogg",
+   "kb": 12
+  },
+  {
+   "name": "correct",
+   "file": "correct.ogg",
+   "kb": 7
+  },
+  {
+   "name": "final_round",
+   "file": "final_round.ogg",
+   "kb": 9
+  },
+  {
+   "name": "game_over",
+   "file": "game_over.ogg",
+   "kb": 11
+  },
+  {
+   "name": "go",
+   "file": "go.ogg",
+   "kb": 7
+  },
+  {
+   "name": "hold",
+   "file": "hold.ogg",
+   "kb": 7
+  },
+  {
+   "name": "hurry_up",
+   "file": "hurry_up.ogg",
+   "kb": 7
+  },
+  {
+   "name": "its_a_tie",
+   "file": "its_a_tie.ogg",
+   "kb": 9
+  },
+  {
+   "name": "level",
+   "file": "level.ogg",
+   "kb": 7
+  },
+  {
+   "name": "level_up",
+   "file": "level_up.ogg",
+   "kb": 8
+  },
+  {
+   "name": "mission_completed",
+   "file": "mission_completed.ogg",
+   "kb": 11
+  },
+  {
+   "name": "mission_failed",
+   "file": "mission_failed.ogg",
+   "kb": 9
+  },
+  {
+   "name": "new_highscore",
+   "file": "new_highscore.ogg",
+   "kb": 10
+  },
+  {
+   "name": "objective_achieved",
+   "file": "objective_achieved.ogg",
+   "kb": 12
+  },
+  {
+   "name": "power_up",
+   "file": "power_up.ogg",
+   "kb": 8
+  },
+  {
+   "name": "ready",
+   "file": "ready.ogg",
+   "kb": 7
+  },
+  {
+   "name": "round",
+   "file": "round.ogg",
+   "kb": 7
+  },
+  {
+   "name": "set",
+   "file": "set.ogg",
+   "kb": 6
+  },
+  {
+   "name": "time_over",
+   "file": "time_over.ogg",
+   "kb": 9
+  },
+  {
+   "name": "war_call_for_backup",
+   "file": "war_call_for_backup.ogg",
+   "kb": 9
+  },
+  {
+   "name": "war_cover_me",
+   "file": "war_cover_me.ogg",
+   "kb": 7
+  },
+  {
+   "name": "war_fire_in_the_hole",
+   "file": "war_fire_in_the_hole.ogg",
+   "kb": 11
+  },
+  {
+   "name": "war_get_down",
+   "file": "war_get_down.ogg",
+   "kb": 8
+  },
+  {
+   "name": "war_go_go_go",
+   "file": "war_go_go_go.ogg",
+   "kb": 9
+  },
+  {
+   "name": "war_hold",
+   "file": "war_hold.ogg",
+   "kb": 7
+  },
+  {
+   "name": "war_look_out",
+   "file": "war_look_out.ogg",
+   "kb": 7
+  },
+  {
+   "name": "war_medic",
+   "file": "war_medic.ogg",
+   "kb": 7
+  },
+  {
+   "name": "war_reloading",
+   "file": "war_reloading.ogg",
+   "kb": 8
+  },
+  {
+   "name": "war_rpg",
+   "file": "war_rpg.ogg",
+   "kb": 9
+  },
+  {
+   "name": "war_sniper",
+   "file": "war_sniper.ogg",
+   "kb": 8
+  },
+  {
+   "name": "war_suppressing_fire",
+   "file": "war_suppressing_fire.ogg",
+   "kb": 10
+  },
+  {
+   "name": "war_supressing_fire",
+   "file": "war_supressing_fire.ogg",
+   "kb": 12
+  },
+  {
+   "name": "war_target_destroyed",
+   "file": "war_target_destroyed.ogg",
+   "kb": 11
+  },
+  {
+   "name": "war_target_engaged",
+   "file": "war_target_engaged.ogg",
+   "kb": 10
+  },
+  {
+   "name": "war_watch_my_back",
+   "file": "war_watch_my_back.ogg",
+   "kb": 8
+  },
+  {
+   "name": "wrong",
+   "file": "wrong.ogg",
+   "kb": 7
+  },
+  {
+   "name": "you_lose",
+   "file": "you_lose.ogg",
+   "kb": 11
+  },
+  {
+   "name": "you_win",
+   "file": "you_win.ogg",
+   "kb": 9
+  }
+ ]
+}
