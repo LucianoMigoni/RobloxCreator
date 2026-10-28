@@ -1,6 +1,8 @@
 # MCPs: detección y nombres reales de herramientas
 
-Verificado el 2026-10-21. Si una herramienta no aparece en la sesión, **no la inventes**: vuelve a detectar y adapta.
+Verificado el 2026-10-21 (Blender y Meshy: 2026-10-28). Si una herramienta no aparece en la sesión, **no la inventes**: vuelve a detectar y adapta.
+
+Qué conector se usa para qué, costos, licencias y por qué ForgeGUI no se conecta: `skills/_shared/conectores.md`.
 
 ## Cómo detectar qué hay instalado
 
@@ -46,7 +48,7 @@ Con Rojo activo, el código fuente vive en archivos: edita `.luau` en disco, no 
 
 ## Blender MCP
 
-Herramientas presentes en esta máquina (prefijo `mcp__Blender__`):
+MCP oficial de Blender Lab, v1.0.3 (`readme_tools.rst` del repo oficial). Herramientas (prefijo `mcp__Blender__`):
 
 | Herramienta | Uso |
 |---|---|
@@ -57,7 +59,27 @@ Herramientas presentes en esta máquina (prefijo `mcp__Blender__`):
 | `search_api_docs` / `get_python_api_docs` / `search_manual_docs` | Verificar API de `bpy` antes de escribir código. |
 | `get_blendfile_summary_*` | Revisar archivos .blend (datablocks, archivos faltantes, librerías). |
 
+| `get_screenshot_of_window_as_json` | Distribución de la ventana, objeto activo y selección (más barato que una imagen). |
+| `jump_to_tab_by_name` / `jump_to_tab_by_space_type` / `jump_to_view3d_object_by_name` / `jump_to_view3d_object_data_by_name` | Llevar la vista al objeto o espacio de trabajo antes de una captura. |
+
 Las variantes `*_for_cli` son para Blender en modo línea de comandos.
+
+## Meshy MCP
+
+Servidor oficial `@meshy-ai/meshy-mcp-server` 0.6.6, declarado en `.mcp.json` como `meshy` (prefijo `mcp__meshy__`). Necesita `MESHY_API_KEY` (plan Pro). Todo cuesta créditos: antes de una tanda, `meshy_check_balance`, y nunca reenviar una creación que tardó (el servidor ya evita duplicarla).
+
+| Herramienta | Uso en este hub |
+|---|---|
+| `meshy_text_to_3d` (+ `meshy_text_to_3d_refine`) | Mascota, huevo o ítem desde texto. Para Roblox: `model_type: "smart-topology"`, `ai_model: "meshy-t2.5"`, `target_polycount` 2 000–6 000 (5 créditos; 15 con textura). |
+| `meshy_image_to_3d` / `meshy_multi_image_to_3d` | Desde un boceto o una imagen propia (nunca arte de otro juego). |
+| `meshy_remesh` / `meshy_resize` / `meshy_convert` / `meshy_uv_unwrap` | Bajar caras (máximo de Roblox: 20 000 triángulos por malla), escala, formato (FBX/GLB). |
+| `meshy_retexture` | Misma malla con otra textura: variantes de rareza (Gold, Diamond, Rainbow). |
+| `meshy_rig` / `meshy_animate` / `meshy_list_animations` / `meshy_text_to_motion` | Rig y animaciones de personajes humanoides (5 + 3 por acción). Las mascotas de cuatro patas van con el animador procedural. |
+| `meshy_text_to_image` / `meshy_image_to_image` | Íconos de ítems, pases y productos con `remove_background` (fondo transparente). Sin texto dentro. |
+| `meshy_get_task_status` / `meshy_list_tasks` / `meshy_cancel_task` / `meshy_download_model` / `meshy_list_models` | Seguir tareas y bajar resultados (quedan en `meshy_output/`, ignorado por Git). |
+| `meshy_check_balance` / `meshy_list_usage` | Créditos disponibles y gastados. |
+
+Lo elegido se copia a `assets/3d/meshy/<nombre>/` y se registra en `assets/index.json` y `assets/LICENSES.md` (`license: "Meshy Pro (propio)"`, `commercialUse: true`) en el mismo cambio.
 
 ## REA (Reverse Engineer Anything)
 

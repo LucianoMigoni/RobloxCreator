@@ -22,6 +22,7 @@ $onWindows = ($PSVersionTable.PSEdition -eq 'Desktop') -or $IsWindows
 
 function Write-Step([string]$msg) { Write-Host "`n$msg" -ForegroundColor Cyan }
 function Write-Ok([string]$msg) { Write-Host "  [ok]    $msg" -ForegroundColor Green }
+function Write-Info([string]$msg) { Write-Host "  [info]  $msg" -ForegroundColor Gray }
 function Write-Missing([string]$msg) {
     Write-Host "  [falta] $msg" -ForegroundColor Yellow
     $script:faltas++
@@ -71,7 +72,7 @@ foreach ($candidate in @('python', 'py', 'python3')) {
 if (-not $python) { Write-Missing 'Python 3 no esta instalado (paso 1)' }
 
 # ---------------------------------------------------------------------------
-Write-Step '2. Enlace .claude\skills -> skills (SETUP.md, paso 8)'
+Write-Step '2. Enlace .claude\skills -> skills (SETUP.md, paso 11)'
 
 $link = Join-Path $root '.claude/skills'
 $existing = Get-Item -LiteralPath $link -Force -ErrorAction SilentlyContinue
@@ -161,7 +162,37 @@ if (-not $mcpServer) {
 }
 
 # ---------------------------------------------------------------------------
-Write-Step '5. Chequeo del hub: tools/check.py, el mismo que corre GitHub (SETUP.md, paso 9)'
+Write-Step '5. Blender, Meshy y Open Cloud (SETUP.md, pasos 6 a 8)'
+
+# Variables de entorno: setx las guarda en el usuario, pero la terminal abierta no las ve hasta reabrirla.
+function Test-EnvVar([string]$name) {
+    $value = [Environment]::GetEnvironmentVariable($name, 'Process')
+    if (-not $value) { $value = [Environment]::GetEnvironmentVariable($name, 'User') }
+    return [bool]$value
+}
+
+if (Get-Command claude -ErrorAction SilentlyContinue) {
+    # La forma A (extension de la app de escritorio) no se ve desde la terminal: por eso solo se informa.
+    if (Invoke-Probe claude @('mcp', 'get', 'Blender')) {
+        Write-Ok 'Blender registrado en Claude Code (forma B)'
+    } else {
+        Write-Info 'Blender no esta registrado en la terminal. Con la extension de la app de escritorio (forma A) esta bien; si no, SETUP.md paso 6.'
+        if (-not (Invoke-Probe uv @('--version'))) { Write-Info 'uv no esta instalado: lo pide la forma B (SETUP.md paso 1).' }
+    }
+}
+
+Test-Program node @('--version') 'paso 1: lo usa el MCP de Meshy' | Out-Null
+if (-not (Test-Path (Join-Path $root '.mcp.json'))) { Write-Missing 'falta .mcp.json en la raiz del repo (hacer git pull)' }
+if (Test-EnvVar 'MESHY_API_KEY') { Write-Ok 'MESHY_API_KEY definida' }
+else { Write-Missing 'MESHY_API_KEY no esta definida: plan Pro de Meshy y setx (SETUP.md paso 7)' }
+
+if (Test-EnvVar 'ROBLOX_OPEN_CLOUD_API_KEY') { Write-Ok 'ROBLOX_OPEN_CLOUD_API_KEY definida' }
+else { Write-Missing 'ROBLOX_OPEN_CLOUD_API_KEY no esta definida (SETUP.md paso 8)' }
+if ((Test-EnvVar 'ROBLOX_CREATOR_GROUP_ID') -or (Test-EnvVar 'ROBLOX_CREATOR_USER_ID')) { Write-Ok 'dueno de los assets definido' }
+else { Write-Missing 'falta ROBLOX_CREATOR_GROUP_ID (o ROBLOX_CREATOR_USER_ID) para subir assets (SETUP.md paso 8)' }
+
+# ---------------------------------------------------------------------------
+Write-Step '6. Chequeo del hub: tools/check.py, el mismo que corre GitHub (SETUP.md, paso 12)'
 
 if ($python) {
     Push-Location $root
@@ -176,7 +207,8 @@ if ($python) {
 
 Write-Host ''
 if ($script:faltas -eq 0) {
-    Write-Host 'Todo listo. Ultima prueba (a mano): con Studio abierto, pedirle a Claude Code que llame a list_roblox_studios.' -ForegroundColor Green
+    Write-Host 'Todo listo. Ultimas pruebas (a mano, SETUP.md paso 12): list_roblox_studios con Studio abierto,' -ForegroundColor Green
+    Write-Host 'get_objects_summary con Blender abierto y /mcp con meshy conectado.' -ForegroundColor Green
     exit 0
 }
 Write-Host "Pendientes: $($script:faltas). Ver los [falta] de arriba y SETUP.md." -ForegroundColor Yellow

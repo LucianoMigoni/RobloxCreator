@@ -30,3 +30,10 @@ __pycache__/
 # Sistema
 .DS_Store
 Thumbs.db
+
+# Salidas de generadores con IA: al repo solo pasa lo elegido, registrado en assets/index.json
+meshy_output/
+
+# Claves locales (nunca al repo): las claves van en variables de entorno
+.env
+*.env
