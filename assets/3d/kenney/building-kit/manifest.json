@@ -1,0 +1,1092 @@
+{
+ "pack": "kenney-building-kit",
+ "kind": "model3d",
+ "source": "https://kenney.nl/assets/building-kit",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 79,
+ "items": [
+  {
+   "name": "barricade-doorway-a",
+   "file": "barricade-doorway-a.glb",
+   "kb": 8,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "barricade-doorway-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "barricade-doorway-b",
+   "file": "barricade-doorway-b.glb",
+   "kb": 12,
+   "triangles": 108,
+   "animations": [],
+   "parts": [
+    "barricade-doorway-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "barricade-doorway-c",
+   "file": "barricade-doorway-c.glb",
+   "kb": 13,
+   "triangles": 122,
+   "animations": [],
+   "parts": [
+    "barricade-doorway-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "barricade-window-a",
+   "file": "barricade-window-a.glb",
+   "kb": 8,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "barricade-window-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "barricade-window-b",
+   "file": "barricade-window-b.glb",
+   "kb": 12,
+   "triangles": 108,
+   "animations": [],
+   "parts": [
+    "barricade-window-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "barricade-window-c",
+   "file": "barricade-window-c.glb",
+   "kb": 13,
+   "triangles": 122,
+   "animations": [],
+   "parts": [
+    "barricade-window-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "border-corner-diagonal",
+   "file": "border-corner-diagonal.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "border-corner-diagonal"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "border-corner-round",
+   "file": "border-corner-round.glb",
+   "kb": 14,
+   "triangles": 168,
+   "animations": [],
+   "parts": [
+    "border-corner-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "border-corner-small",
+   "file": "border-corner-small.glb",
+   "kb": 5,
+   "triangles": 46,
+   "animations": [],
+   "parts": [
+    "border-corner-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "border-corner",
+   "file": "border-corner.glb",
+   "kb": 5,
+   "triangles": 46,
+   "animations": [],
+   "parts": [
+    "border-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "border-high-corner-diagonal",
+   "file": "border-high-corner-diagonal.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "border-high-corner-diagonal"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "border-high-corner-round",
+   "file": "border-high-corner-round.glb",
+   "kb": 14,
+   "triangles": 168,
+   "animations": [],
+   "parts": [
+    "border-high-corner-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "border-high-corner-small",
+   "file": "border-high-corner-small.glb",
+   "kb": 5,
+   "triangles": 46,
+   "animations": [],
+   "parts": [
+    "border-high-corner-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "border-high-corner",
+   "file": "border-high-corner.glb",
+   "kb": 5,
+   "triangles": 46,
+   "animations": [],
+   "parts": [
+    "border-high-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "border-high",
+   "file": "border-high.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "border-high"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "border",
+   "file": "border.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "border"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "column-thin",
+   "file": "column-thin.glb",
+   "kb": 4,
+   "triangles": 38,
+   "animations": [],
+   "parts": [
+    "column-thin"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "column-wide",
+   "file": "column-wide.glb",
+   "kb": 4,
+   "triangles": 38,
+   "animations": [],
+   "parts": [
+    "column-wide"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "column",
+   "file": "column.glb",
+   "kb": 4,
+   "triangles": 38,
+   "animations": [],
+   "parts": [
+    "column"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "detail-pipe",
+   "file": "detail-pipe.glb",
+   "kb": 7,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "detail-pipe"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "door-rotate-round-a",
+   "file": "door-rotate-round-a.glb",
+   "kb": 22,
+   "triangles": 172,
+   "animations": [
+    "open",
+    "close",
+    "open-and-close"
+   ],
+   "parts": [
+    "door",
+    "handle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "door-rotate-round-b",
+   "file": "door-rotate-round-b.glb",
+   "kb": 32,
+   "triangles": 348,
+   "animations": [
+    "open",
+    "close",
+    "open-and-close"
+   ],
+   "parts": [
+    "door",
+    "handle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "door-rotate-round-c",
+   "file": "door-rotate-round-c.glb",
+   "kb": 39,
+   "triangles": 380,
+   "animations": [
+    "open",
+    "close",
+    "open-and-close"
+   ],
+   "parts": [
+    "door",
+    "handle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "door-rotate-round-d",
+   "file": "door-rotate-round-d.glb",
+   "kb": 41,
+   "triangles": 446,
+   "animations": [
+    "open",
+    "close",
+    "open-and-close"
+   ],
+   "parts": [
+    "door",
+    "(%ignore)",
+    "handle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "door-rotate-square-a",
+   "file": "door-rotate-square-a.glb",
+   "kb": 25,
+   "triangles": 188,
+   "animations": [
+    "open",
+    "close",
+    "open-and-close"
+   ],
+   "parts": [
+    "door",
+    "handle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "door-rotate-square-b",
+   "file": "door-rotate-square-b.glb",
+   "kb": 23,
+   "triangles": 208,
+   "animations": [
+    "open",
+    "close",
+    "open-and-close"
+   ],
+   "parts": [
+    "door",
+    "handle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "door-rotate-square-c",
+   "file": "door-rotate-square-c.glb",
+   "kb": 28,
+   "triangles": 240,
+   "animations": [
+    "open",
+    "close",
+    "open-and-close"
+   ],
+   "parts": [
+    "door",
+    "handle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "door-rotate-square-d",
+   "file": "door-rotate-square-d.glb",
+   "kb": 30,
+   "triangles": 264,
+   "animations": [
+    "open",
+    "close",
+    "open-and-close"
+   ],
+   "parts": [
+    "door",
+    "(%ignore)",
+    "handle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "floor-corner-diagonal",
+   "file": "floor-corner-diagonal.glb",
+   "kb": 3,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "floor-corner-diagonal"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "floor-corner-round",
+   "file": "floor-corner-round.glb",
+   "kb": 5,
+   "triangles": 52,
+   "animations": [],
+   "parts": [
+    "floor-corner-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "floor-half",
+   "file": "floor-half.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "floor-half"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "floor-quarter",
+   "file": "floor-quarter.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "floor-quarter"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "floor",
+   "file": "floor.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "floor"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "gutter-vertical-bottom",
+   "file": "gutter-vertical-bottom.glb",
+   "kb": 8,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "gutter-vertical-bottom"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "gutter-vertical-short",
+   "file": "gutter-vertical-short.glb",
+   "kb": 6,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "gutter-vertical-short"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "gutter-vertical-top",
+   "file": "gutter-vertical-top.glb",
+   "kb": 8,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "gutter-vertical-top"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "gutter-vertical-wall",
+   "file": "gutter-vertical-wall.glb",
+   "kb": 8,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "gutter-vertical-wall"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "gutter-vertical",
+   "file": "gutter-vertical.glb",
+   "kb": 8,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "gutter-vertical"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "plating-detailed-wide",
+   "file": "plating-detailed-wide.glb",
+   "kb": 16,
+   "triangles": 180,
+   "animations": [],
+   "parts": [
+    "plating-detailed-wide"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "plating-detailed",
+   "file": "plating-detailed.glb",
+   "kb": 16,
+   "triangles": 180,
+   "animations": [],
+   "parts": [
+    "plating-detailed"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "plating-wide",
+   "file": "plating-wide.glb",
+   "kb": 12,
+   "triangles": 140,
+   "animations": [],
+   "parts": [
+    "plating-wide"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "plating",
+   "file": "plating.glb",
+   "kb": 12,
+   "triangles": 140,
+   "animations": [],
+   "parts": [
+    "plating"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "roof-flat-center",
+   "file": "roof-flat-center.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "roof-flat-center"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "roof-flat-corner-inner",
+   "file": "roof-flat-corner-inner.glb",
+   "kb": 5,
+   "triangles": 50,
+   "animations": [],
+   "parts": [
+    "roof-flat-corner-inner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "roof-flat-corner",
+   "file": "roof-flat-corner.glb",
+   "kb": 6,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "roof-flat-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "roof-flat-patch-large",
+   "file": "roof-flat-patch-large.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "roof-flat-patch-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "roof-flat-patch",
+   "file": "roof-flat-patch.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "roof-flat-patch"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "roof-flat-side",
+   "file": "roof-flat-side.glb",
+   "kb": 5,
+   "triangles": 46,
+   "animations": [],
+   "parts": [
+    "roof-flat-side"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "roof-flat-square",
+   "file": "roof-flat-square.glb",
+   "kb": 8,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "roof-flat-square"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stairs-center-short",
+   "file": "stairs-center-short.glb",
+   "kb": 7,
+   "triangles": 66,
+   "animations": [],
+   "parts": [
+    "stairs-center-short"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stairs-center",
+   "file": "stairs-center.glb",
+   "kb": 12,
+   "triangles": 114,
+   "animations": [],
+   "parts": [
+    "stairs-center"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stairs-closed-short",
+   "file": "stairs-closed-short.glb",
+   "kb": 8,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "stairs-closed-short"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stairs-closed",
+   "file": "stairs-closed.glb",
+   "kb": 15,
+   "triangles": 148,
+   "animations": [],
+   "parts": [
+    "stairs-closed"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stairs-open-short",
+   "file": "stairs-open-short.glb",
+   "kb": 9,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "stairs-open-short"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stairs-open",
+   "file": "stairs-open.glb",
+   "kb": 14,
+   "triangles": 132,
+   "animations": [],
+   "parts": [
+    "stairs-open"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stairs-sides-short",
+   "file": "stairs-sides-short.glb",
+   "kb": 13,
+   "triangles": 104,
+   "animations": [],
+   "parts": [
+    "stairs-sides-short",
+    "Group",
+    "Group"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stairs-sides",
+   "file": "stairs-sides.glb",
+   "kb": 17,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "stairs-sides",
+    "Group",
+    "Group"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-corner-column-bottom",
+   "file": "wall-corner-column-bottom.glb",
+   "kb": 6,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "wall-corner-column-bottom"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-corner-column-small-bottom",
+   "file": "wall-corner-column-small-bottom.glb",
+   "kb": 6,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "wall-corner-column-small-bottom"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-corner-column-small",
+   "file": "wall-corner-column-small.glb",
+   "kb": 4,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "wall-corner-column-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-corner-column",
+   "file": "wall-corner-column.glb",
+   "kb": 4,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "wall-corner-column"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-corner-diagonal",
+   "file": "wall-corner-diagonal.glb",
+   "kb": 3,
+   "triangles": 22,
+   "animations": [],
+   "parts": [
+    "wall-corner-diagonal"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-corner-round",
+   "file": "wall-corner-round.glb",
+   "kb": 8,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "wall-corner-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-corner",
+   "file": "wall-corner.glb",
+   "kb": 3,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "wall-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-doorway-round",
+   "file": "wall-doorway-round.glb",
+   "kb": 10,
+   "triangles": 164,
+   "animations": [],
+   "parts": [
+    "wall-doorway-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-doorway-square",
+   "file": "wall-doorway-square.glb",
+   "kb": 6,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "wall-doorway-square"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-doorway-wide-round",
+   "file": "wall-doorway-wide-round.glb",
+   "kb": 11,
+   "triangles": 176,
+   "animations": [],
+   "parts": [
+    "wall-doorway-wide-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-doorway-wide-square",
+   "file": "wall-doorway-wide-square.glb",
+   "kb": 6,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "wall-doorway-wide-square"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-half",
+   "file": "wall-half.glb",
+   "kb": 2,
+   "triangles": 10,
+   "animations": [],
+   "parts": [
+    "wall-half"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-low",
+   "file": "wall-low.glb",
+   "kb": 2,
+   "triangles": 10,
+   "animations": [],
+   "parts": [
+    "wall-low"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-window-round-detailed",
+   "file": "wall-window-round-detailed.glb",
+   "kb": 19,
+   "triangles": 290,
+   "animations": [],
+   "parts": [
+    "wall-window-round-detailed",
+    "(%ignore)"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-window-round",
+   "file": "wall-window-round.glb",
+   "kb": 14,
+   "triangles": 216,
+   "animations": [],
+   "parts": [
+    "wall-window-round",
+    "(%ignore)"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-window-square-detailed",
+   "file": "wall-window-square-detailed.glb",
+   "kb": 11,
+   "triangles": 130,
+   "animations": [],
+   "parts": [
+    "wall-window-square-detailed",
+    "(%ignore)"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-window-square",
+   "file": "wall-window-square.glb",
+   "kb": 8,
+   "triangles": 98,
+   "animations": [],
+   "parts": [
+    "wall-window-square",
+    "(%ignore)"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-window-wide-round-detailed",
+   "file": "wall-window-wide-round-detailed.glb",
+   "kb": 22,
+   "triangles": 330,
+   "animations": [],
+   "parts": [
+    "wall-window-wide-round-detailed",
+    "(%ignore)"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-window-wide-round",
+   "file": "wall-window-wide-round.glb",
+   "kb": 15,
+   "triangles": 226,
+   "animations": [],
+   "parts": [
+    "wall-window-wide-round",
+    "(%ignore)"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-window-wide-square-detailed",
+   "file": "wall-window-wide-square-detailed.glb",
+   "kb": 13,
+   "triangles": 154,
+   "animations": [],
+   "parts": [
+    "wall-window-wide-square-detailed",
+    "(%ignore)"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-window-wide-square",
+   "file": "wall-window-wide-square.glb",
+   "kb": 8,
+   "triangles": 98,
+   "animations": [],
+   "parts": [
+    "wall-window-wide-square",
+    "(%ignore)"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall",
+   "file": "wall.glb",
+   "kb": 2,
+   "triangles": 10,
+   "animations": [],
+   "parts": [
+    "wall"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  }
+ ]
+}

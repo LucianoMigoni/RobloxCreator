@@ -1,0 +1,637 @@
+{
+ "pack": "kenney-mini-skate",
+ "kind": "model3d",
+ "source": "https://kenney.nl/assets/mini-skate",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 42,
+ "items": [
+  {
+   "name": "bench",
+   "file": "bench.glb",
+   "kb": 22,
+   "triangles": 232,
+   "animations": [],
+   "parts": [
+    "bench"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "benches",
+   "file": "benches.glb",
+   "kb": 34,
+   "triangles": 348,
+   "animations": [],
+   "parts": [
+    "benches"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bowl-corner-inner-low",
+   "file": "bowl-corner-inner-low.glb",
+   "kb": 12,
+   "triangles": 126,
+   "animations": [],
+   "parts": [
+    "bowl-corner-inner-low"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bowl-corner-inner",
+   "file": "bowl-corner-inner.glb",
+   "kb": 15,
+   "triangles": 150,
+   "animations": [],
+   "parts": [
+    "bowl-corner-inner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bowl-corner-outer-low",
+   "file": "bowl-corner-outer-low.glb",
+   "kb": 12,
+   "triangles": 126,
+   "animations": [],
+   "parts": [
+    "bowl-corner-outer-low"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bowl-corner-outer",
+   "file": "bowl-corner-outer.glb",
+   "kb": 15,
+   "triangles": 154,
+   "animations": [],
+   "parts": [
+    "bowl-corner-outer"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bowl-platform",
+   "file": "bowl-platform.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "bowl-platform"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bowl-side-low",
+   "file": "bowl-side-low.glb",
+   "kb": 7,
+   "triangles": 70,
+   "animations": [],
+   "parts": [
+    "bowl-side-low"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bowl-side",
+   "file": "bowl-side.glb",
+   "kb": 8,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "bowl-side"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "character-skate-boy",
+   "file": "character-skate-boy.glb",
+   "kb": 263,
+   "triangles": 722,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "sprint",
+    "jump",
+    "fall",
+    "crouch",
+    "sit",
+    "drive",
+    "die",
+    "pick-up",
+    "emote-yes",
+    "emote-no",
+    "holding-right",
+    "holding-left",
+    "holding-both",
+    "holding-right-shoot",
+    "holding-left-shoot",
+    "holding-both-shoot",
+    "attack-melee-right",
+    "attack-melee-left",
+    "attack-kick-right",
+    "attack-kick-left",
+    "interact-right",
+    "interact-left",
+    "wheelchair-sit",
+    "wheelchair-look-left",
+    "wheelchair-look-right",
+    "wheelchair-move-forward",
+    "wheelchair-move-back",
+    "wheelchair-move-left",
+    "wheelchair-move-right",
+    "skate",
+    "skate-stand",
+    "skate-air",
+    "skate-grab"
+   ],
+   "parts": [
+    "body-mesh",
+    "head-mesh"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "character-skate-girl",
+   "file": "character-skate-girl.glb",
+   "kb": 279,
+   "triangles": 790,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "sprint",
+    "jump",
+    "fall",
+    "crouch",
+    "sit",
+    "drive",
+    "die",
+    "pick-up",
+    "emote-yes",
+    "emote-no",
+    "holding-right",
+    "holding-left",
+    "holding-both",
+    "holding-right-shoot",
+    "holding-left-shoot",
+    "holding-both-shoot",
+    "attack-melee-right",
+    "attack-melee-left",
+    "attack-kick-right",
+    "attack-kick-left",
+    "interact-right",
+    "interact-left",
+    "wheelchair-sit",
+    "wheelchair-look-left",
+    "wheelchair-look-right",
+    "wheelchair-move-forward",
+    "wheelchair-move-back",
+    "wheelchair-move-left",
+    "wheelchair-move-right",
+    "skate",
+    "skate-stand",
+    "skate-air",
+    "skate-grab"
+   ],
+   "parts": [
+    "body-mesh",
+    "head-mesh"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fence",
+   "file": "fence.glb",
+   "kb": 17,
+   "triangles": 184,
+   "animations": [],
+   "parts": [
+    "fence"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "floor-concrete",
+   "file": "floor-concrete.glb",
+   "kb": 1,
+   "triangles": 2,
+   "animations": [],
+   "parts": [
+    "floor-concrete"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "floor-wood",
+   "file": "floor-wood.glb",
+   "kb": 5,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "floor-wood"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "half-pipe-low",
+   "file": "half-pipe-low.glb",
+   "kb": 7,
+   "triangles": 70,
+   "animations": [],
+   "parts": [
+    "half-pipe-low"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "half-pipe",
+   "file": "half-pipe.glb",
+   "kb": 8,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "half-pipe"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "obstacle-box-grind",
+   "file": "obstacle-box-grind.glb",
+   "kb": 9,
+   "triangles": 88,
+   "animations": [],
+   "parts": [
+    "obstacle-box-grind"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "obstacle-box",
+   "file": "obstacle-box.glb",
+   "kb": 12,
+   "triangles": 124,
+   "animations": [],
+   "parts": [
+    "obstacle-box"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "obstacle-corner",
+   "file": "obstacle-corner.glb",
+   "kb": 21,
+   "triangles": 212,
+   "animations": [],
+   "parts": [
+    "obstacle-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "obstacle-end",
+   "file": "obstacle-end.glb",
+   "kb": 11,
+   "triangles": 108,
+   "animations": [],
+   "parts": [
+    "obstacle-end"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "obstacle-middle-rail",
+   "file": "obstacle-middle-rail.glb",
+   "kb": 21,
+   "triangles": 210,
+   "animations": [],
+   "parts": [
+    "obstacle-middle-rail"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "obstacle-middle",
+   "file": "obstacle-middle.glb",
+   "kb": 6,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "obstacle-middle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pallet",
+   "file": "pallet.glb",
+   "kb": 11,
+   "triangles": 108,
+   "animations": [],
+   "parts": [
+    "pallet"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "plank",
+   "file": "plank.glb",
+   "kb": 6,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "plank"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "rail-curve",
+   "file": "rail-curve.glb",
+   "kb": 10,
+   "triangles": 106,
+   "animations": [],
+   "parts": [
+    "rail-curve"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "rail-high-curve",
+   "file": "rail-high-curve.glb",
+   "kb": 10,
+   "triangles": 106,
+   "animations": [],
+   "parts": [
+    "rail-high-curve"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "rail-high",
+   "file": "rail-high.glb",
+   "kb": 16,
+   "triangles": 150,
+   "animations": [],
+   "parts": [
+    "rail-high"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "rail-low-end",
+   "file": "rail-low-end.glb",
+   "kb": 10,
+   "triangles": 98,
+   "animations": [],
+   "parts": [
+    "rail-low-end"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "rail-low",
+   "file": "rail-low.glb",
+   "kb": 16,
+   "triangles": 150,
+   "animations": [],
+   "parts": [
+    "rail-low"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "rail-slope-smooth",
+   "file": "rail-slope-smooth.glb",
+   "kb": 26,
+   "triangles": 286,
+   "animations": [],
+   "parts": [
+    "rail-slope-smooth"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "rail-slope",
+   "file": "rail-slope.glb",
+   "kb": 16,
+   "triangles": 150,
+   "animations": [],
+   "parts": [
+    "rail-slope"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ramp-rail",
+   "file": "ramp-rail.glb",
+   "kb": 23,
+   "triangles": 240,
+   "animations": [],
+   "parts": [
+    "ramp-rail"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ramp",
+   "file": "ramp.glb",
+   "kb": 10,
+   "triangles": 104,
+   "animations": [],
+   "parts": [
+    "ramp"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "scooter",
+   "file": "scooter.glb",
+   "kb": 36,
+   "triangles": 410,
+   "animations": [],
+   "parts": [
+    "scooter"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "skateboard",
+   "file": "skateboard.glb",
+   "kb": 37,
+   "triangles": 432,
+   "animations": [],
+   "parts": [
+    "skateboard"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "slope-smooth",
+   "file": "slope-smooth.glb",
+   "kb": 19,
+   "triangles": 228,
+   "animations": [],
+   "parts": [
+    "slope-smooth"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "steps-rail",
+   "file": "steps-rail.glb",
+   "kb": 22,
+   "triangles": 224,
+   "animations": [],
+   "parts": [
+    "steps-rail"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "steps",
+   "file": "steps.glb",
+   "kb": 9,
+   "triangles": 88,
+   "animations": [],
+   "parts": [
+    "steps"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "structure-platform",
+   "file": "structure-platform.glb",
+   "kb": 16,
+   "triangles": 156,
+   "animations": [],
+   "parts": [
+    "structure-platform"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "structure-wood-platform",
+   "file": "structure-wood-platform.glb",
+   "kb": 26,
+   "triangles": 260,
+   "animations": [],
+   "parts": [
+    "structure-wood-platform"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "structure-wood",
+   "file": "structure-wood.glb",
+   "kb": 24,
+   "triangles": 248,
+   "animations": [],
+   "parts": [
+    "structure-wood"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "vehicle",
+   "file": "vehicle.glb",
+   "kb": 83,
+   "triangles": 908,
+   "animations": [],
+   "parts": [
+    "wheel-back-left",
+    "wheel-back-right",
+    "wheel-front-left",
+    "wheel-front-right",
+    "body"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  }
+ ]
+}

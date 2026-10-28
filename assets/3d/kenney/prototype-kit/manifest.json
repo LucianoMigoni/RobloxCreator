@@ -1,0 +1,2143 @@
+{
+ "pack": "kenney-prototype-kit",
+ "kind": "model3d",
+ "source": "https://kenney.nl/assets/prototype-kit",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 145,
+ "items": [
+  {
+   "name": "animal-bison",
+   "file": "animal-bison.glb",
+   "kb": 44,
+   "triangles": 264,
+   "animations": [
+    "walk",
+    "run",
+    "down",
+    "up"
+   ],
+   "parts": [
+    "torso",
+    "leg-back-left",
+    "leg-back-right",
+    "leg-front-left",
+    "leg-front-right",
+    "head"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "animal-dog",
+   "file": "animal-dog.glb",
+   "kb": 55,
+   "triangles": 292,
+   "animations": [
+    "walk",
+    "run",
+    "down",
+    "up"
+   ],
+   "parts": [
+    "torso",
+    "leg-back-left",
+    "leg-back-right",
+    "leg-front-left",
+    "leg-front-right",
+    "neck",
+    "head",
+    "tail"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "animal-horse",
+   "file": "animal-horse.glb",
+   "kb": 54,
+   "triangles": 280,
+   "animations": [
+    "walk",
+    "run",
+    "down",
+    "up"
+   ],
+   "parts": [
+    "torso",
+    "leg-back-left",
+    "leg-back-right",
+    "leg-front-left",
+    "leg-front-right",
+    "neck",
+    "head",
+    "tail"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "button-floor-round-small",
+   "file": "button-floor-round-small.glb",
+   "kb": 11,
+   "triangles": 92,
+   "animations": [
+    "toggle-on",
+    "toggle-off",
+    "toggle"
+   ],
+   "parts": [
+    "button-floor-round-small",
+    "button"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "button-floor-round",
+   "file": "button-floor-round.glb",
+   "kb": 11,
+   "triangles": 92,
+   "animations": [
+    "toggle-on",
+    "toggle-off",
+    "toggle"
+   ],
+   "parts": [
+    "button-floor-round",
+    "button"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "button-floor-square-small",
+   "file": "button-floor-square-small.glb",
+   "kb": 11,
+   "triangles": 86,
+   "animations": [
+    "toggle-on",
+    "toggle-off",
+    "toggle"
+   ],
+   "parts": [
+    "button-floor-square-small",
+    "button"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "button-floor-square",
+   "file": "button-floor-square.glb",
+   "kb": 11,
+   "triangles": 86,
+   "animations": [
+    "toggle-on",
+    "toggle-off",
+    "toggle"
+   ],
+   "parts": [
+    "button-floor-square",
+    "button"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coin",
+   "file": "coin.glb",
+   "kb": 21,
+   "triangles": 252,
+   "animations": [],
+   "parts": [
+    "coin"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "column-low",
+   "file": "column-low.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "column-low"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "column-rounded-low",
+   "file": "column-rounded-low.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "column-rounded-low"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "column-rounded",
+   "file": "column-rounded.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "column-rounded"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "column-triangle-low",
+   "file": "column-triangle-low.glb",
+   "kb": 2,
+   "triangles": 8,
+   "animations": [],
+   "parts": [
+    "column-triangle-low"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "column-triangle",
+   "file": "column-triangle.glb",
+   "kb": 2,
+   "triangles": 8,
+   "animations": [],
+   "parts": [
+    "column-triangle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "column",
+   "file": "column.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "column"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "crate-color",
+   "file": "crate-color.glb",
+   "kb": 17,
+   "triangles": 204,
+   "animations": [],
+   "parts": [
+    "crate-color"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "crate",
+   "file": "crate.glb",
+   "kb": 17,
+   "triangles": 204,
+   "animations": [],
+   "parts": [
+    "crate"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "door-garage",
+   "file": "door-garage.glb",
+   "kb": 15,
+   "triangles": 88,
+   "animations": [
+    "open",
+    "close",
+    "open-and-close"
+   ],
+   "parts": [
+    "door"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "door-rotate",
+   "file": "door-rotate.glb",
+   "kb": 14,
+   "triangles": 68,
+   "animations": [
+    "open",
+    "close",
+    "open-and-close"
+   ],
+   "parts": [
+    "door",
+    "handle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "door-sliding-double-round",
+   "file": "door-sliding-double-round.glb",
+   "kb": 17,
+   "triangles": 96,
+   "animations": [
+    "open",
+    "close",
+    "open-and-close"
+   ],
+   "parts": [
+    "door-right",
+    "door-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "door-sliding-double-wide",
+   "file": "door-sliding-double-wide.glb",
+   "kb": 23,
+   "triangles": 176,
+   "animations": [
+    "open",
+    "close",
+    "open-and-close"
+   ],
+   "parts": [
+    "door-right",
+    "door-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "door-sliding-double",
+   "file": "door-sliding-double.glb",
+   "kb": 23,
+   "triangles": 176,
+   "animations": [
+    "open",
+    "close",
+    "open-and-close"
+   ],
+   "parts": [
+    "door-right",
+    "door-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "door-sliding",
+   "file": "door-sliding.glb",
+   "kb": 12,
+   "triangles": 88,
+   "animations": [
+    "open",
+    "close",
+    "open-and-close"
+   ],
+   "parts": [
+    "door"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "figurine-cube-detailed",
+   "file": "figurine-cube-detailed.glb",
+   "kb": 125,
+   "triangles": 254,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "sprint",
+    "sit",
+    "drive",
+    "die",
+    "pick-up",
+    "emote-yes",
+    "emote-no",
+    "holding-right",
+    "holding-left",
+    "holding-both",
+    "holding-right-shoot",
+    "holding-left-shoot",
+    "holding-both-shoot",
+    "attack-melee-right",
+    "attack-melee-left",
+    "attack-kick-right",
+    "attack-kick-left",
+    "interact-right",
+    "interact-left",
+    "wheelchair-sit",
+    "wheelchair-move-forward",
+    "wheelchair-move-back",
+    "wheelchair-move-left",
+    "wheelchair-move-right"
+   ],
+   "parts": [
+    "leg-left",
+    "leg-right",
+    "torso",
+    "arm-left",
+    "arm-right",
+    "head"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "figurine-cube",
+   "file": "figurine-cube.glb",
+   "kb": 117,
+   "triangles": 168,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "sprint",
+    "sit",
+    "drive",
+    "die",
+    "pick-up",
+    "emote-yes",
+    "emote-no",
+    "holding-right",
+    "holding-left",
+    "holding-both",
+    "holding-right-shoot",
+    "holding-left-shoot",
+    "holding-both-shoot",
+    "attack-melee-right",
+    "attack-melee-left",
+    "attack-kick-right",
+    "attack-kick-left",
+    "interact-right",
+    "interact-left",
+    "wheelchair-sit",
+    "wheelchair-move-forward",
+    "wheelchair-move-back",
+    "wheelchair-move-left",
+    "wheelchair-move-right"
+   ],
+   "parts": [
+    "leg-left",
+    "leg-right",
+    "torso",
+    "arm-left",
+    "arm-right",
+    "head"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "figurine-large",
+   "file": "figurine-large.glb",
+   "kb": 117,
+   "triangles": 156,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "sprint",
+    "sit",
+    "drive",
+    "die",
+    "pick-up",
+    "emote-yes",
+    "emote-no",
+    "holding-right",
+    "holding-left",
+    "holding-both",
+    "holding-right-shoot",
+    "holding-left-shoot",
+    "holding-both-shoot",
+    "attack-melee-right",
+    "attack-melee-left",
+    "attack-kick-right",
+    "attack-kick-left",
+    "interact-right",
+    "interact-left",
+    "wheelchair-sit",
+    "wheelchair-move-forward",
+    "wheelchair-move-back",
+    "wheelchair-move-left",
+    "wheelchair-move-right"
+   ],
+   "parts": [
+    "leg-left",
+    "leg-right",
+    "torso",
+    "arm-left",
+    "arm-right",
+    "head"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "figurine",
+   "file": "figurine.glb",
+   "kb": 116,
+   "triangles": 148,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "sprint",
+    "sit",
+    "drive",
+    "die",
+    "pick-up",
+    "emote-yes",
+    "emote-no",
+    "holding-right",
+    "holding-left",
+    "holding-both",
+    "holding-right-shoot",
+    "holding-left-shoot",
+    "holding-both-shoot",
+    "attack-melee-right",
+    "attack-melee-left",
+    "attack-kick-right",
+    "attack-kick-left",
+    "interact-right",
+    "interact-left",
+    "wheelchair-sit",
+    "wheelchair-move-forward",
+    "wheelchair-move-back",
+    "wheelchair-move-left",
+    "wheelchair-move-right"
+   ],
+   "parts": [
+    "leg-left",
+    "leg-right",
+    "torso",
+    "arm-left",
+    "arm-right",
+    "head"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "flag",
+   "file": "flag.glb",
+   "kb": 10,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "flag"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "floor-diagonal",
+   "file": "floor-diagonal.glb",
+   "kb": 2,
+   "triangles": 4,
+   "animations": [],
+   "parts": [
+    "floor-diagonal"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "floor-small-diagonal",
+   "file": "floor-small-diagonal.glb",
+   "kb": 2,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "floor-small-diagonal"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "floor-small-square",
+   "file": "floor-small-square.glb",
+   "kb": 3,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "floor-small-square"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "floor-square",
+   "file": "floor-square.glb",
+   "kb": 2,
+   "triangles": 8,
+   "animations": [],
+   "parts": [
+    "floor-square"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "floor-thick-corner-diagonal",
+   "file": "floor-thick-corner-diagonal.glb",
+   "kb": 3,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "floor-thick-corner-diagonal"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "floor-thick-corner-round",
+   "file": "floor-thick-corner-round.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "floor-thick-corner-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "floor-thick-corner-rounded",
+   "file": "floor-thick-corner-rounded.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "floor-thick-corner-rounded"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "floor-thick",
+   "file": "floor-thick.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "floor-thick"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "hat-cap",
+   "file": "hat-cap.glb",
+   "kb": 4,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "hat-cap"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "hat-hard",
+   "file": "hat-hard.glb",
+   "kb": 5,
+   "triangles": 48,
+   "animations": [],
+   "parts": [
+    "hat-hard"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "indicator-doorway",
+   "file": "indicator-doorway.glb",
+   "kb": 2,
+   "triangles": 13,
+   "animations": [],
+   "parts": [
+    "indicator-doorway"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "indicator-round-a",
+   "file": "indicator-round-a.glb",
+   "kb": 6,
+   "triangles": 32,
+   "animations": [
+    "animation"
+   ],
+   "parts": [
+    "rotate-y"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "indicator-round-b",
+   "file": "indicator-round-b.glb",
+   "kb": 4,
+   "triangles": 24,
+   "animations": [
+    "animation"
+   ],
+   "parts": [
+    "rotate-y"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "indicator-round-c",
+   "file": "indicator-round-c.glb",
+   "kb": 4,
+   "triangles": 28,
+   "animations": [
+    "animation"
+   ],
+   "parts": [
+    "rotate-y"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "indicator-round-d",
+   "file": "indicator-round-d.glb",
+   "kb": 7,
+   "triangles": 64,
+   "animations": [
+    "animation"
+   ],
+   "parts": [
+    "rotate-y"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "indicator-round-e",
+   "file": "indicator-round-e.glb",
+   "kb": 7,
+   "triangles": 64,
+   "animations": [
+    "animation"
+   ],
+   "parts": [
+    "rotate-y"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "indicator-round-f",
+   "file": "indicator-round-f.glb",
+   "kb": 10,
+   "triangles": 96,
+   "animations": [
+    "animation"
+   ],
+   "parts": [
+    "rotate-y"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "indicator-special-area",
+   "file": "indicator-special-area.glb",
+   "kb": 2,
+   "triangles": 18,
+   "animations": [],
+   "parts": [
+    "indicator-special-area"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "indicator-special-arrow",
+   "file": "indicator-special-arrow.glb",
+   "kb": 2,
+   "triangles": 15,
+   "animations": [],
+   "parts": [
+    "indicator-special-arrow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "indicator-special-cross",
+   "file": "indicator-special-cross.glb",
+   "kb": 2,
+   "triangles": 22,
+   "animations": [],
+   "parts": [
+    "indicator-special-cross"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "indicator-special-lines",
+   "file": "indicator-special-lines.glb",
+   "kb": 3,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "indicator-special-lines"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "indicator-square-a",
+   "file": "indicator-square-a.glb",
+   "kb": 1,
+   "triangles": 8,
+   "animations": [],
+   "parts": [
+    "indicator-square-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "indicator-square-b",
+   "file": "indicator-square-b.glb",
+   "kb": 3,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "indicator-square-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "indicator-square-c",
+   "file": "indicator-square-c.glb",
+   "kb": 2,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "indicator-square-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "indicator-square-d",
+   "file": "indicator-square-d.glb",
+   "kb": 3,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "indicator-square-d"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "indicator-square-e",
+   "file": "indicator-square-e.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "indicator-square-e"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "indicator-square-f",
+   "file": "indicator-square-f.glb",
+   "kb": 6,
+   "triangles": 48,
+   "animations": [],
+   "parts": [
+    "indicator-square-f"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ladder-color",
+   "file": "ladder-color.glb",
+   "kb": 21,
+   "triangles": 224,
+   "animations": [],
+   "parts": [
+    "ladder-color"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ladder-top",
+   "file": "ladder-top.glb",
+   "kb": 24,
+   "triangles": 256,
+   "animations": [],
+   "parts": [
+    "ladder-top"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ladder",
+   "file": "ladder.glb",
+   "kb": 21,
+   "triangles": 224,
+   "animations": [],
+   "parts": [
+    "ladder"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "lever-double",
+   "file": "lever-double.glb",
+   "kb": 13,
+   "triangles": 98,
+   "animations": [
+    "toggle-on",
+    "toggle-off",
+    "toggle"
+   ],
+   "parts": [
+    "lever-double",
+    "handle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "lever-single",
+   "file": "lever-single.glb",
+   "kb": 12,
+   "triangles": 80,
+   "animations": [
+    "toggle-on",
+    "toggle-off",
+    "toggle"
+   ],
+   "parts": [
+    "lever-single",
+    "handle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "number-0",
+   "file": "number-0.glb",
+   "kb": 6,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "number-0"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "number-1",
+   "file": "number-1.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "number-1"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "number-2",
+   "file": "number-2.glb",
+   "kb": 6,
+   "triangles": 68,
+   "animations": [],
+   "parts": [
+    "number-2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "number-3",
+   "file": "number-3.glb",
+   "kb": 6,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "number-3"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "number-4",
+   "file": "number-4.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "number-4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "number-5",
+   "file": "number-5.glb",
+   "kb": 6,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "number-5"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "number-6",
+   "file": "number-6.glb",
+   "kb": 7,
+   "triangles": 80,
+   "animations": [],
+   "parts": [
+    "number-6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "number-7",
+   "file": "number-7.glb",
+   "kb": 4,
+   "triangles": 40,
+   "animations": [],
+   "parts": [
+    "number-7"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "number-8",
+   "file": "number-8.glb",
+   "kb": 7,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "number-8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "number-9",
+   "file": "number-9.glb",
+   "kb": 6,
+   "triangles": 68,
+   "animations": [],
+   "parts": [
+    "number-9"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "number-double-0",
+   "file": "number-double-0.glb",
+   "kb": 9,
+   "triangles": 96,
+   "animations": [],
+   "parts": [
+    "number-double-0"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "number-double-1",
+   "file": "number-double-1.glb",
+   "kb": 7,
+   "triangles": 68,
+   "animations": [],
+   "parts": [
+    "number-double-1"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "number-double-2",
+   "file": "number-double-2.glb",
+   "kb": 10,
+   "triangles": 104,
+   "animations": [],
+   "parts": [
+    "number-double-2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "number-double-3",
+   "file": "number-double-3.glb",
+   "kb": 9,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "number-double-3"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "number-double-4",
+   "file": "number-double-4.glb",
+   "kb": 6,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "number-double-4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "number-double-5",
+   "file": "number-double-5.glb",
+   "kb": 9,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "number-double-5"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "number-double-6",
+   "file": "number-double-6.glb",
+   "kb": 13,
+   "triangles": 120,
+   "animations": [],
+   "parts": [
+    "number-double-6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "number-double-7",
+   "file": "number-double-7.glb",
+   "kb": 7,
+   "triangles": 62,
+   "animations": [],
+   "parts": [
+    "number-double-7"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "number-double-8",
+   "file": "number-double-8.glb",
+   "kb": 13,
+   "triangles": 124,
+   "animations": [],
+   "parts": [
+    "number-double-8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "number-double-9",
+   "file": "number-double-9.glb",
+   "kb": 11,
+   "triangles": 102,
+   "animations": [],
+   "parts": [
+    "number-double-9"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pipe-corner",
+   "file": "pipe-corner.glb",
+   "kb": 5,
+   "triangles": 48,
+   "animations": [],
+   "parts": [
+    "pipe-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pipe-half-section",
+   "file": "pipe-half-section.glb",
+   "kb": 5,
+   "triangles": 40,
+   "animations": [],
+   "parts": [
+    "pipe-half-section"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pipe-half",
+   "file": "pipe-half.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "pipe-half"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pipe-section",
+   "file": "pipe-section.glb",
+   "kb": 5,
+   "triangles": 40,
+   "animations": [],
+   "parts": [
+    "pipe-section"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pipe-split",
+   "file": "pipe-split.glb",
+   "kb": 9,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "pipe-split"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pipe",
+   "file": "pipe.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "pipe"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "shape-cube-half",
+   "file": "shape-cube-half.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "shape-cube-half"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "shape-cube-rounded",
+   "file": "shape-cube-rounded.glb",
+   "kb": 23,
+   "triangles": 204,
+   "animations": [],
+   "parts": [
+    "shape-cube-rounded"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "shape-cube",
+   "file": "shape-cube.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "shape-cube"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "shape-cylinder-detailed",
+   "file": "shape-cylinder-detailed.glb",
+   "kb": 8,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "shape-cylinder-detailed"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "shape-cylinder-half-detailed",
+   "file": "shape-cylinder-half-detailed.glb",
+   "kb": 5,
+   "triangles": 48,
+   "animations": [],
+   "parts": [
+    "shape-cylinder-half-detailed"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "shape-cylinder-half",
+   "file": "shape-cylinder-half.glb",
+   "kb": 3,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "shape-cylinder-half"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "shape-cylinder",
+   "file": "shape-cylinder.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "shape-cylinder"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "shape-hexagon-half",
+   "file": "shape-hexagon-half.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "shape-hexagon-half"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "shape-hexagon",
+   "file": "shape-hexagon.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "shape-hexagon"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "shape-hollow-cylinder-detailed",
+   "file": "shape-hollow-cylinder-detailed.glb",
+   "kb": 16,
+   "triangles": 192,
+   "animations": [],
+   "parts": [
+    "shape-hollow-cylinder-detailed"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "shape-hollow-cylinder-half-detailed",
+   "file": "shape-hollow-cylinder-half-detailed.glb",
+   "kb": 9,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "shape-hollow-cylinder-half-detailed"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "shape-hollow-cylinder-half",
+   "file": "shape-hollow-cylinder-half.glb",
+   "kb": 5,
+   "triangles": 52,
+   "animations": [],
+   "parts": [
+    "shape-hollow-cylinder-half"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "shape-hollow-cylinder",
+   "file": "shape-hollow-cylinder.glb",
+   "kb": 8,
+   "triangles": 96,
+   "animations": [],
+   "parts": [
+    "shape-hollow-cylinder"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "shape-hollow-hexagon-half",
+   "file": "shape-hollow-hexagon-half.glb",
+   "kb": 4,
+   "triangles": 28,
+   "animations": [],
+   "parts": [
+    "shape-hollow-hexagon-half"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "shape-hollow-hexagon",
+   "file": "shape-hollow-hexagon.glb",
+   "kb": 5,
+   "triangles": 54,
+   "animations": [],
+   "parts": [
+    "shape-hollow-hexagon"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "shape-slope",
+   "file": "shape-slope.glb",
+   "kb": 2,
+   "triangles": 8,
+   "animations": [],
+   "parts": [
+    "shape-slope"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "shape-triangular-prism-low",
+   "file": "shape-triangular-prism-low.glb",
+   "kb": 2,
+   "triangles": 8,
+   "animations": [],
+   "parts": [
+    "shape-triangular-prism-low"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "shape-triangular-prism",
+   "file": "shape-triangular-prism.glb",
+   "kb": 2,
+   "triangles": 8,
+   "animations": [],
+   "parts": [
+    "shape-triangular-prism"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stairs-diagonal-narrow",
+   "file": "stairs-diagonal-narrow.glb",
+   "kb": 4,
+   "triangles": 40,
+   "animations": [],
+   "parts": [
+    "stairs-diagonal-narrow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stairs-diagonal-small-narrow",
+   "file": "stairs-diagonal-small-narrow.glb",
+   "kb": 7,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "stairs-diagonal-small-narrow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stairs-diagonal-small",
+   "file": "stairs-diagonal-small.glb",
+   "kb": 7,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "stairs-diagonal-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stairs-diagonal",
+   "file": "stairs-diagonal.glb",
+   "kb": 4,
+   "triangles": 40,
+   "animations": [],
+   "parts": [
+    "stairs-diagonal"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stairs-narrow",
+   "file": "stairs-narrow.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "stairs-narrow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stairs-small-narrow",
+   "file": "stairs-small-narrow.glb",
+   "kb": 7,
+   "triangles": 68,
+   "animations": [],
+   "parts": [
+    "stairs-small-narrow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stairs-small",
+   "file": "stairs-small.glb",
+   "kb": 7,
+   "triangles": 68,
+   "animations": [],
+   "parts": [
+    "stairs-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stairs",
+   "file": "stairs.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "stairs"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "target-a-round",
+   "file": "target-a-round.glb",
+   "kb": 7,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "target-a-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "target-a-square",
+   "file": "target-a-square.glb",
+   "kb": 7,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "target-a-square"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "target-b-round",
+   "file": "target-b-round.glb",
+   "kb": 8,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "target-b-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "target-b-square",
+   "file": "target-b-square.glb",
+   "kb": 7,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "target-b-square"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "vehicle-convertible",
+   "file": "vehicle-convertible.glb",
+   "kb": 74,
+   "triangles": 846,
+   "animations": [],
+   "parts": [
+    "wheel-back-left",
+    "wheel-back-right",
+    "wheel-front-left",
+    "wheel-front-right",
+    "body"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "vehicle",
+   "file": "vehicle.glb",
+   "kb": 76,
+   "triangles": 860,
+   "animations": [],
+   "parts": [
+    "wheel-back-left",
+    "wheel-back-right",
+    "wheel-front-left",
+    "wheel-front-right",
+    "body",
+    "Group"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-corner-low",
+   "file": "wall-corner-low.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "wall-corner-low"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-corner-rounded-low",
+   "file": "wall-corner-rounded-low.glb",
+   "kb": 3,
+   "triangles": 28,
+   "animations": [],
+   "parts": [
+    "wall-corner-rounded-low"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-corner-rounded",
+   "file": "wall-corner-rounded.glb",
+   "kb": 3,
+   "triangles": 28,
+   "animations": [],
+   "parts": [
+    "wall-corner-rounded"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-corner",
+   "file": "wall-corner.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "wall-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-diagonal-low",
+   "file": "wall-diagonal-low.glb",
+   "kb": 3,
+   "triangles": 28,
+   "animations": [],
+   "parts": [
+    "wall-diagonal-low"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-diagonal",
+   "file": "wall-diagonal.glb",
+   "kb": 3,
+   "triangles": 28,
+   "animations": [],
+   "parts": [
+    "wall-diagonal"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-doorway-garage",
+   "file": "wall-doorway-garage.glb",
+   "kb": 13,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "wall-doorway-garage"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-doorway-round",
+   "file": "wall-doorway-round.glb",
+   "kb": 8,
+   "triangles": 88,
+   "animations": [],
+   "parts": [
+    "wall-doorway-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-doorway-sliding",
+   "file": "wall-doorway-sliding.glb",
+   "kb": 13,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "wall-doorway-sliding"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-doorway-wide-sliding",
+   "file": "wall-doorway-wide-sliding.glb",
+   "kb": 13,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "wall-doorway-wide-sliding"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-doorway-wide",
+   "file": "wall-doorway-wide.glb",
+   "kb": 13,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "wall-doorway-wide"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-doorway",
+   "file": "wall-doorway.glb",
+   "kb": 13,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "wall-doorway"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-low",
+   "file": "wall-low.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "wall-low"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-round-low",
+   "file": "wall-round-low.glb",
+   "kb": 6,
+   "triangles": 68,
+   "animations": [],
+   "parts": [
+    "wall-round-low"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-round",
+   "file": "wall-round.glb",
+   "kb": 6,
+   "triangles": 68,
+   "animations": [],
+   "parts": [
+    "wall-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-window-barred-large",
+   "file": "wall-window-barred-large.glb",
+   "kb": 9,
+   "triangles": 104,
+   "animations": [],
+   "parts": [
+    "wall-window-barred-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-window-barred-medium",
+   "file": "wall-window-barred-medium.glb",
+   "kb": 9,
+   "triangles": 104,
+   "animations": [],
+   "parts": [
+    "wall-window-barred-medium"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-window-barred-small",
+   "file": "wall-window-barred-small.glb",
+   "kb": 9,
+   "triangles": 104,
+   "animations": [],
+   "parts": [
+    "wall-window-barred-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-window-cutout-large",
+   "file": "wall-window-cutout-large.glb",
+   "kb": 4,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "wall-window-cutout-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-window-cutout-medium",
+   "file": "wall-window-cutout-medium.glb",
+   "kb": 4,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "wall-window-cutout-medium"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-window-cutout-small",
+   "file": "wall-window-cutout-small.glb",
+   "kb": 4,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "wall-window-cutout-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-window-large",
+   "file": "wall-window-large.glb",
+   "kb": 8,
+   "triangles": 96,
+   "animations": [],
+   "parts": [
+    "wall-window-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-window-medium",
+   "file": "wall-window-medium.glb",
+   "kb": 8,
+   "triangles": 96,
+   "animations": [],
+   "parts": [
+    "wall-window-medium"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-window-small",
+   "file": "wall-window-small.glb",
+   "kb": 8,
+   "triangles": 96,
+   "animations": [],
+   "parts": [
+    "wall-window-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall",
+   "file": "wall.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "wall"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "weapon-shield",
+   "file": "weapon-shield.glb",
+   "kb": 7,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "weapon-shield"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "weapon-sword",
+   "file": "weapon-sword.glb",
+   "kb": 6,
+   "triangles": 48,
+   "animations": [],
+   "parts": [
+    "weapon-sword"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wheelchair",
+   "file": "wheelchair.glb",
+   "kb": 27,
+   "triangles": 296,
+   "animations": [],
+   "parts": [
+    "wheelchair",
+    "wheel-left",
+    "wheel-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  }
+ ]
+}

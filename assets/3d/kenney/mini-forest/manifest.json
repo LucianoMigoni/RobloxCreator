@@ -1,0 +1,331 @@
+{
+ "pack": "kenney-mini-forest",
+ "kind": "model3d",
+ "source": "https://kenney.nl/assets/mini-forest",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 22,
+ "items": [
+  {
+   "name": "bridge",
+   "file": "bridge.glb",
+   "kb": 31,
+   "triangles": 372,
+   "animations": [],
+   "parts": [
+    "bridge"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-platform",
+   "file": "building-platform.glb",
+   "kb": 47,
+   "triangles": 508,
+   "animations": [],
+   "parts": [
+    "building-platform"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-roof",
+   "file": "building-roof.glb",
+   "kb": 31,
+   "triangles": 324,
+   "animations": [],
+   "parts": [
+    "building-roof"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-structure",
+   "file": "building-structure.glb",
+   "kb": 15,
+   "triangles": 144,
+   "animations": [],
+   "parts": [
+    "building-structure"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "character-archer",
+   "file": "character-archer.glb",
+   "kb": 233,
+   "triangles": 574,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "sprint",
+    "jump",
+    "fall",
+    "crouch",
+    "sit",
+    "drive",
+    "die",
+    "pick-up",
+    "emote-yes",
+    "emote-no",
+    "holding-right",
+    "holding-left",
+    "holding-both",
+    "holding-right-shoot",
+    "holding-left-shoot",
+    "holding-both-shoot",
+    "attack-melee-right",
+    "attack-melee-left",
+    "attack-kick-right",
+    "attack-kick-left",
+    "interact-right",
+    "interact-left",
+    "wheelchair-sit",
+    "wheelchair-look-left",
+    "wheelchair-look-right",
+    "wheelchair-move-forward",
+    "wheelchair-move-back",
+    "wheelchair-move-left",
+    "wheelchair-move-right"
+   ],
+   "parts": [
+    "body-mesh",
+    "head-mesh"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fence",
+   "file": "fence.glb",
+   "kb": 29,
+   "triangles": 330,
+   "animations": [],
+   "parts": [
+    "fence"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "flag",
+   "file": "flag.glb",
+   "kb": 16,
+   "triangles": 162,
+   "animations": [],
+   "parts": [
+    "flag"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ladder",
+   "file": "ladder.glb",
+   "kb": 21,
+   "triangles": 216,
+   "animations": [],
+   "parts": [
+    "ladder"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "patch-dirt",
+   "file": "patch-dirt.glb",
+   "kb": 9,
+   "triangles": 108,
+   "animations": [],
+   "parts": [
+    "patch-dirt"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "patch-grass",
+   "file": "patch-grass.glb",
+   "kb": 29,
+   "triangles": 295,
+   "animations": [],
+   "parts": [
+    "patch-grass"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "plant",
+   "file": "plant.glb",
+   "kb": 21,
+   "triangles": 156,
+   "animations": [],
+   "parts": [
+    "plant"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "platform",
+   "file": "platform.glb",
+   "kb": 61,
+   "triangles": 651,
+   "animations": [],
+   "parts": [
+    "platform"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "rocks-high",
+   "file": "rocks-high.glb",
+   "kb": 31,
+   "triangles": 342,
+   "animations": [],
+   "parts": [
+    "rocks-high"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "rocks-low",
+   "file": "rocks-low.glb",
+   "kb": 31,
+   "triangles": 342,
+   "animations": [],
+   "parts": [
+    "rocks-low"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "rocks-ramp",
+   "file": "rocks-ramp.glb",
+   "kb": 22,
+   "triangles": 234,
+   "animations": [],
+   "parts": [
+    "rocks-ramp"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stones",
+   "file": "stones.glb",
+   "kb": 22,
+   "triangles": 236,
+   "animations": [],
+   "parts": [
+    "stones"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "target",
+   "file": "target.glb",
+   "kb": 17,
+   "triangles": 188,
+   "animations": [],
+   "parts": [
+    "target"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tent",
+   "file": "tent.glb",
+   "kb": 76,
+   "triangles": 847,
+   "animations": [],
+   "parts": [
+    "tent"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tree-high",
+   "file": "tree-high.glb",
+   "kb": 30,
+   "triangles": 266,
+   "animations": [],
+   "parts": [
+    "tree-high"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tree",
+   "file": "tree.glb",
+   "kb": 22,
+   "triangles": 182,
+   "animations": [],
+   "parts": [
+    "tree"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "weapon-arrow",
+   "file": "weapon-arrow.glb",
+   "kb": 7,
+   "triangles": 58,
+   "animations": [],
+   "parts": [
+    "weapon-arrow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "weapon-bow",
+   "file": "weapon-bow.glb",
+   "kb": 8,
+   "triangles": 80,
+   "animations": [],
+   "parts": [
+    "weapon-bow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  }
+ ]
+}

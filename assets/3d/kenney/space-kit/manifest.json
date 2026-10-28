@@ -1,0 +1,1733 @@
+{
+ "pack": "kenney-space-kit",
+ "kind": "model3d",
+ "source": "https://kenney.nl/assets/space-kit",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 153,
+ "items": [
+  {
+   "name": "alien",
+   "file": "alien.glb",
+   "kb": 27,
+   "triangles": 292,
+   "animations": [],
+   "parts": [
+    "armLeft",
+    "armRight",
+    "body",
+    "head",
+    "legLeft",
+    "legRight"
+   ],
+   "textures": []
+  },
+  {
+   "name": "astronautA",
+   "file": "astronautA.glb",
+   "kb": 27,
+   "triangles": 296,
+   "animations": [],
+   "parts": [
+    "armLeft",
+    "armRight",
+    "body",
+    "head",
+    "legLeft",
+    "legRight"
+   ],
+   "textures": []
+  },
+  {
+   "name": "astronautB",
+   "file": "astronautB.glb",
+   "kb": 27,
+   "triangles": 314,
+   "animations": [],
+   "parts": [
+    "armLeft",
+    "armRight",
+    "body",
+    "head",
+    "legLeft",
+    "legRight"
+   ],
+   "textures": []
+  },
+  {
+   "name": "barrel",
+   "file": "barrel.glb",
+   "kb": 4,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "barrel"
+   ],
+   "textures": []
+  },
+  {
+   "name": "barrels",
+   "file": "barrels.glb",
+   "kb": 20,
+   "triangles": 268,
+   "animations": [],
+   "parts": [
+    "barrels",
+    "barrel",
+    "barrel",
+    "barrel",
+    "barrel"
+   ],
+   "textures": []
+  },
+  {
+   "name": "barrels_rail",
+   "file": "barrels_rail.glb",
+   "kb": 29,
+   "triangles": 428,
+   "animations": [],
+   "parts": [
+    "barrels_rail",
+    "barrel",
+    "barrel",
+    "barrel",
+    "barrel"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bones",
+   "file": "bones.glb",
+   "kb": 13,
+   "triangles": 168,
+   "animations": [],
+   "parts": [
+    "bones"
+   ],
+   "textures": []
+  },
+  {
+   "name": "chimney",
+   "file": "chimney.glb",
+   "kb": 8,
+   "triangles": 140,
+   "animations": [],
+   "parts": [
+    "chimney"
+   ],
+   "textures": []
+  },
+  {
+   "name": "chimney_detailed",
+   "file": "chimney_detailed.glb",
+   "kb": 18,
+   "triangles": 332,
+   "animations": [],
+   "parts": [
+    "chimney_detailed"
+   ],
+   "textures": []
+  },
+  {
+   "name": "corridor",
+   "file": "corridor.glb",
+   "kb": 6,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "corridor"
+   ],
+   "textures": []
+  },
+  {
+   "name": "corridor_corner",
+   "file": "corridor_corner.glb",
+   "kb": 8,
+   "triangles": 110,
+   "animations": [],
+   "parts": [
+    "corridor_corner"
+   ],
+   "textures": []
+  },
+  {
+   "name": "corridor_cornerRound",
+   "file": "corridor_cornerRound.glb",
+   "kb": 25,
+   "triangles": 414,
+   "animations": [],
+   "parts": [
+    "corridor_cornerRound"
+   ],
+   "textures": []
+  },
+  {
+   "name": "corridor_cornerRoundWindow",
+   "file": "corridor_cornerRoundWindow.glb",
+   "kb": 29,
+   "triangles": 484,
+   "animations": [],
+   "parts": [
+    "corridor_cornerRoundWindow"
+   ],
+   "textures": []
+  },
+  {
+   "name": "corridor_cross",
+   "file": "corridor_cross.glb",
+   "kb": 12,
+   "triangles": 172,
+   "animations": [],
+   "parts": [
+    "corridor_cross"
+   ],
+   "textures": []
+  },
+  {
+   "name": "corridor_detailed",
+   "file": "corridor_detailed.glb",
+   "kb": 11,
+   "triangles": 164,
+   "animations": [],
+   "parts": [
+    "corridor_detailed"
+   ],
+   "textures": []
+  },
+  {
+   "name": "corridor_end",
+   "file": "corridor_end.glb",
+   "kb": 8,
+   "triangles": 120,
+   "animations": [],
+   "parts": [
+    "corridor_end"
+   ],
+   "textures": []
+  },
+  {
+   "name": "corridor_open",
+   "file": "corridor_open.glb",
+   "kb": 11,
+   "triangles": 170,
+   "animations": [],
+   "parts": [
+    "corridor_open"
+   ],
+   "textures": []
+  },
+  {
+   "name": "corridor_roof",
+   "file": "corridor_roof.glb",
+   "kb": 4,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "corridor_roof"
+   ],
+   "textures": []
+  },
+  {
+   "name": "corridor_split",
+   "file": "corridor_split.glb",
+   "kb": 9,
+   "triangles": 128,
+   "animations": [],
+   "parts": [
+    "corridor_split"
+   ],
+   "textures": []
+  },
+  {
+   "name": "corridor_wall",
+   "file": "corridor_wall.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "corridor_wall"
+   ],
+   "textures": []
+  },
+  {
+   "name": "corridor_wallCorner",
+   "file": "corridor_wallCorner.glb",
+   "kb": 16,
+   "triangles": 256,
+   "animations": [],
+   "parts": [
+    "corridor_wallCorner"
+   ],
+   "textures": []
+  },
+  {
+   "name": "corridor_window",
+   "file": "corridor_window.glb",
+   "kb": 12,
+   "triangles": 190,
+   "animations": [],
+   "parts": [
+    "corridor_window"
+   ],
+   "textures": []
+  },
+  {
+   "name": "corridor_windowClosed",
+   "file": "corridor_windowClosed.glb",
+   "kb": 13,
+   "triangles": 214,
+   "animations": [],
+   "parts": [
+    "corridor_windowClosed"
+   ],
+   "textures": []
+  },
+  {
+   "name": "craft_cargoA",
+   "file": "craft_cargoA.glb",
+   "kb": 18,
+   "triangles": 264,
+   "animations": [],
+   "parts": [
+    "craft_cargoA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "craft_cargoB",
+   "file": "craft_cargoB.glb",
+   "kb": 25,
+   "triangles": 380,
+   "animations": [],
+   "parts": [
+    "craft_cargoB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "craft_miner",
+   "file": "craft_miner.glb",
+   "kb": 26,
+   "triangles": 384,
+   "animations": [],
+   "parts": [
+    "craft_miner"
+   ],
+   "textures": []
+  },
+  {
+   "name": "craft_racer",
+   "file": "craft_racer.glb",
+   "kb": 18,
+   "triangles": 280,
+   "animations": [],
+   "parts": [
+    "craft_racer"
+   ],
+   "textures": []
+  },
+  {
+   "name": "craft_speederA",
+   "file": "craft_speederA.glb",
+   "kb": 20,
+   "triangles": 280,
+   "animations": [],
+   "parts": [
+    "craft_speederA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "craft_speederB",
+   "file": "craft_speederB.glb",
+   "kb": 18,
+   "triangles": 270,
+   "animations": [],
+   "parts": [
+    "craft_speederB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "craft_speederC",
+   "file": "craft_speederC.glb",
+   "kb": 20,
+   "triangles": 292,
+   "animations": [],
+   "parts": [
+    "craft_speederC"
+   ],
+   "textures": []
+  },
+  {
+   "name": "craft_speederD",
+   "file": "craft_speederD.glb",
+   "kb": 22,
+   "triangles": 322,
+   "animations": [],
+   "parts": [
+    "craft_speederD"
+   ],
+   "textures": []
+  },
+  {
+   "name": "crater",
+   "file": "crater.glb",
+   "kb": 5,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "crater"
+   ],
+   "textures": []
+  },
+  {
+   "name": "craterLarge",
+   "file": "craterLarge.glb",
+   "kb": 5,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "craterLarge"
+   ],
+   "textures": []
+  },
+  {
+   "name": "desk_chair",
+   "file": "desk_chair.glb",
+   "kb": 7,
+   "triangles": 88,
+   "animations": [],
+   "parts": [
+    "desk_chair"
+   ],
+   "textures": []
+  },
+  {
+   "name": "desk_chairArms",
+   "file": "desk_chairArms.glb",
+   "kb": 10,
+   "triangles": 128,
+   "animations": [],
+   "parts": [
+    "desk_chairArms"
+   ],
+   "textures": []
+  },
+  {
+   "name": "desk_chairStool",
+   "file": "desk_chairStool.glb",
+   "kb": 6,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "desk_chairStool"
+   ],
+   "textures": []
+  },
+  {
+   "name": "desk_computer",
+   "file": "desk_computer.glb",
+   "kb": 6,
+   "triangles": 88,
+   "animations": [],
+   "parts": [
+    "desk_computer"
+   ],
+   "textures": []
+  },
+  {
+   "name": "desk_computerCorner",
+   "file": "desk_computerCorner.glb",
+   "kb": 8,
+   "triangles": 126,
+   "animations": [],
+   "parts": [
+    "desk_computerCorner"
+   ],
+   "textures": []
+  },
+  {
+   "name": "desk_computerScreen",
+   "file": "desk_computerScreen.glb",
+   "kb": 8,
+   "triangles": 108,
+   "animations": [],
+   "parts": [
+    "desk_computerScreen"
+   ],
+   "textures": []
+  },
+  {
+   "name": "gate_complex",
+   "file": "gate_complex.glb",
+   "kb": 29,
+   "triangles": 460,
+   "animations": [],
+   "parts": [
+    "gate_complex"
+   ],
+   "textures": []
+  },
+  {
+   "name": "gate_simple",
+   "file": "gate_simple.glb",
+   "kb": 14,
+   "triangles": 212,
+   "animations": [],
+   "parts": [
+    "gate_simple"
+   ],
+   "textures": []
+  },
+  {
+   "name": "hangar_largeA",
+   "file": "hangar_largeA.glb",
+   "kb": 24,
+   "triangles": 412,
+   "animations": [],
+   "parts": [
+    "hangar_largeA",
+    "gate",
+    "gate"
+   ],
+   "textures": []
+  },
+  {
+   "name": "hangar_largeB",
+   "file": "hangar_largeB.glb",
+   "kb": 22,
+   "triangles": 360,
+   "animations": [],
+   "parts": [
+    "hangar_largeB",
+    "gate",
+    "gate"
+   ],
+   "textures": []
+  },
+  {
+   "name": "hangar_roundA",
+   "file": "hangar_roundA.glb",
+   "kb": 11,
+   "triangles": 166,
+   "animations": [],
+   "parts": [
+    "hangar_roundA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "hangar_roundB",
+   "file": "hangar_roundB.glb",
+   "kb": 11,
+   "triangles": 166,
+   "animations": [],
+   "parts": [
+    "hangar_roundB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "hangar_roundGlass",
+   "file": "hangar_roundGlass.glb",
+   "kb": 9,
+   "triangles": 113,
+   "animations": [],
+   "parts": [
+    "hangar_roundGlass"
+   ],
+   "textures": []
+  },
+  {
+   "name": "hangar_smallA",
+   "file": "hangar_smallA.glb",
+   "kb": 18,
+   "triangles": 280,
+   "animations": [],
+   "parts": [
+    "hangar_smallA",
+    "gate",
+    "gate"
+   ],
+   "textures": []
+  },
+  {
+   "name": "hangar_smallB",
+   "file": "hangar_smallB.glb",
+   "kb": 18,
+   "triangles": 284,
+   "animations": [],
+   "parts": [
+    "hangar_smallB",
+    "gate",
+    "gate"
+   ],
+   "textures": []
+  },
+  {
+   "name": "machine_barrel",
+   "file": "machine_barrel.glb",
+   "kb": 23,
+   "triangles": 338,
+   "animations": [],
+   "parts": [
+    "machine_barrel",
+    "cables"
+   ],
+   "textures": []
+  },
+  {
+   "name": "machine_barrelLarge",
+   "file": "machine_barrelLarge.glb",
+   "kb": 13,
+   "triangles": 192,
+   "animations": [],
+   "parts": [
+    "machine_barrelLarge"
+   ],
+   "textures": []
+  },
+  {
+   "name": "machine_generator",
+   "file": "machine_generator.glb",
+   "kb": 27,
+   "triangles": 406,
+   "animations": [],
+   "parts": [
+    "machine_generator",
+    "cable"
+   ],
+   "textures": []
+  },
+  {
+   "name": "machine_generatorLarge",
+   "file": "machine_generatorLarge.glb",
+   "kb": 9,
+   "triangles": 126,
+   "animations": [],
+   "parts": [
+    "machine_generatorLarge"
+   ],
+   "textures": []
+  },
+  {
+   "name": "machine_wireless",
+   "file": "machine_wireless.glb",
+   "kb": 13,
+   "triangles": 174,
+   "animations": [],
+   "parts": [
+    "machine_wireless"
+   ],
+   "textures": []
+  },
+  {
+   "name": "machine_wirelessCable",
+   "file": "machine_wirelessCable.glb",
+   "kb": 20,
+   "triangles": 282,
+   "animations": [],
+   "parts": [
+    "machine_wirelessCable",
+    "cable"
+   ],
+   "textures": []
+  },
+  {
+   "name": "meteor",
+   "file": "meteor.glb",
+   "kb": 6,
+   "triangles": 68,
+   "animations": [],
+   "parts": [
+    "meteor"
+   ],
+   "textures": []
+  },
+  {
+   "name": "meteor_detailed",
+   "file": "meteor_detailed.glb",
+   "kb": 13,
+   "triangles": 196,
+   "animations": [],
+   "parts": [
+    "meteor_detailed"
+   ],
+   "textures": []
+  },
+  {
+   "name": "meteor_half",
+   "file": "meteor_half.glb",
+   "kb": 4,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "meteor_half"
+   ],
+   "textures": []
+  },
+  {
+   "name": "monorail_trackCornerLarge",
+   "file": "monorail_trackCornerLarge.glb",
+   "kb": 13,
+   "triangles": 204,
+   "animations": [],
+   "parts": [
+    "monorail_trackCornerLarge"
+   ],
+   "textures": []
+  },
+  {
+   "name": "monorail_trackCornerSmall",
+   "file": "monorail_trackCornerSmall.glb",
+   "kb": 26,
+   "triangles": 408,
+   "animations": [],
+   "parts": [
+    "monorail_trackCornerSmall"
+   ],
+   "textures": []
+  },
+  {
+   "name": "monorail_trackSlope",
+   "file": "monorail_trackSlope.glb",
+   "kb": 3,
+   "triangles": 28,
+   "animations": [],
+   "parts": [
+    "monorail_trackSlope"
+   ],
+   "textures": []
+  },
+  {
+   "name": "monorail_trackStraight",
+   "file": "monorail_trackStraight.glb",
+   "kb": 3,
+   "triangles": 28,
+   "animations": [],
+   "parts": [
+    "monorail_trackStraight"
+   ],
+   "textures": []
+  },
+  {
+   "name": "monorail_trackSupport",
+   "file": "monorail_trackSupport.glb",
+   "kb": 11,
+   "triangles": 176,
+   "animations": [],
+   "parts": [
+    "monorail_trackSupport"
+   ],
+   "textures": []
+  },
+  {
+   "name": "monorail_trackSupportCorner",
+   "file": "monorail_trackSupportCorner.glb",
+   "kb": 11,
+   "triangles": 164,
+   "animations": [],
+   "parts": [
+    "monorail_trackSupportCorner"
+   ],
+   "textures": []
+  },
+  {
+   "name": "monorail_trainBox",
+   "file": "monorail_trainBox.glb",
+   "kb": 7,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "monorail_trainBox"
+   ],
+   "textures": []
+  },
+  {
+   "name": "monorail_trainCargo",
+   "file": "monorail_trainCargo.glb",
+   "kb": 50,
+   "triangles": 816,
+   "animations": [],
+   "parts": [
+    "monorail_trainCargo",
+    "load"
+   ],
+   "textures": []
+  },
+  {
+   "name": "monorail_trainEnd",
+   "file": "monorail_trainEnd.glb",
+   "kb": 13,
+   "triangles": 190,
+   "animations": [],
+   "parts": [
+    "monorail_trainEnd"
+   ],
+   "textures": []
+  },
+  {
+   "name": "monorail_trainFlat",
+   "file": "monorail_trainFlat.glb",
+   "kb": 7,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "monorail_trainFlat"
+   ],
+   "textures": []
+  },
+  {
+   "name": "monorail_trainFront",
+   "file": "monorail_trainFront.glb",
+   "kb": 16,
+   "triangles": 242,
+   "animations": [],
+   "parts": [
+    "monorail_trainFront"
+   ],
+   "textures": []
+  },
+  {
+   "name": "monorail_trainPassenger",
+   "file": "monorail_trainPassenger.glb",
+   "kb": 12,
+   "triangles": 164,
+   "animations": [],
+   "parts": [
+    "monorail_trainPassenger"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pipe_corner",
+   "file": "pipe_corner.glb",
+   "kb": 6,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "pipe_corner"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pipe_cornerDiagonal",
+   "file": "pipe_cornerDiagonal.glb",
+   "kb": 4,
+   "triangles": 48,
+   "animations": [],
+   "parts": [
+    "pipe_cornerDiagonal"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pipe_cornerRound",
+   "file": "pipe_cornerRound.glb",
+   "kb": 22,
+   "triangles": 352,
+   "animations": [],
+   "parts": [
+    "pipe_cornerRound"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pipe_cornerRoundLarge",
+   "file": "pipe_cornerRoundLarge.glb",
+   "kb": 22,
+   "triangles": 356,
+   "animations": [],
+   "parts": [
+    "pipe_cornerRoundLarge"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pipe_cross",
+   "file": "pipe_cross.glb",
+   "kb": 13,
+   "triangles": 200,
+   "animations": [],
+   "parts": [
+    "pipe_cross"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pipe_end",
+   "file": "pipe_end.glb",
+   "kb": 6,
+   "triangles": 82,
+   "animations": [],
+   "parts": [
+    "pipe_end"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pipe_entrance",
+   "file": "pipe_entrance.glb",
+   "kb": 8,
+   "triangles": 126,
+   "animations": [],
+   "parts": [
+    "pipe_entrance"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pipe_open",
+   "file": "pipe_open.glb",
+   "kb": 7,
+   "triangles": 104,
+   "animations": [],
+   "parts": [
+    "pipe_open"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pipe_rampLarge",
+   "file": "pipe_rampLarge.glb",
+   "kb": 11,
+   "triangles": 160,
+   "animations": [],
+   "parts": [
+    "pipe_rampLarge"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pipe_rampSmall",
+   "file": "pipe_rampSmall.glb",
+   "kb": 11,
+   "triangles": 160,
+   "animations": [],
+   "parts": [
+    "pipe_rampSmall"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pipe_ring",
+   "file": "pipe_ring.glb",
+   "kb": 10,
+   "triangles": 144,
+   "animations": [],
+   "parts": [
+    "pipe_ring"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pipe_ringHigh",
+   "file": "pipe_ringHigh.glb",
+   "kb": 13,
+   "triangles": 190,
+   "animations": [],
+   "parts": [
+    "pipe_ringHigh"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pipe_ringHighEnd",
+   "file": "pipe_ringHighEnd.glb",
+   "kb": 13,
+   "triangles": 186,
+   "animations": [],
+   "parts": [
+    "pipe_ringHighEnd"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pipe_ringSupport",
+   "file": "pipe_ringSupport.glb",
+   "kb": 8,
+   "triangles": 104,
+   "animations": [],
+   "parts": [
+    "pipe_ringSupport"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pipe_split",
+   "file": "pipe_split.glb",
+   "kb": 9,
+   "triangles": 142,
+   "animations": [],
+   "parts": [
+    "pipe_split"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pipe_straight",
+   "file": "pipe_straight.glb",
+   "kb": 6,
+   "triangles": 80,
+   "animations": [],
+   "parts": [
+    "pipe_straight"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pipe_supportHigh",
+   "file": "pipe_supportHigh.glb",
+   "kb": 5,
+   "triangles": 40,
+   "animations": [],
+   "parts": [
+    "pipe_supportHigh"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pipe_supportLow",
+   "file": "pipe_supportLow.glb",
+   "kb": 5,
+   "triangles": 40,
+   "animations": [],
+   "parts": [
+    "pipe_supportLow"
+   ],
+   "textures": []
+  },
+  {
+   "name": "platform_center",
+   "file": "platform_center.glb",
+   "kb": 1,
+   "triangles": 4,
+   "animations": [],
+   "parts": [
+    "platform_center"
+   ],
+   "textures": []
+  },
+  {
+   "name": "platform_corner",
+   "file": "platform_corner.glb",
+   "kb": 6,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "platform_corner"
+   ],
+   "textures": []
+  },
+  {
+   "name": "platform_cornerOpen",
+   "file": "platform_cornerOpen.glb",
+   "kb": 4,
+   "triangles": 50,
+   "animations": [],
+   "parts": [
+    "platform_cornerOpen"
+   ],
+   "textures": []
+  },
+  {
+   "name": "platform_cornerRound",
+   "file": "platform_cornerRound.glb",
+   "kb": 19,
+   "triangles": 356,
+   "animations": [],
+   "parts": [
+    "platform_cornerRound"
+   ],
+   "textures": []
+  },
+  {
+   "name": "platform_end",
+   "file": "platform_end.glb",
+   "kb": 5,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "platform_end"
+   ],
+   "textures": []
+  },
+  {
+   "name": "platform_high",
+   "file": "platform_high.glb",
+   "kb": 15,
+   "triangles": 236,
+   "animations": [],
+   "parts": [
+    "platform_high"
+   ],
+   "textures": []
+  },
+  {
+   "name": "platform_large",
+   "file": "platform_large.glb",
+   "kb": 6,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "platform_large"
+   ],
+   "textures": []
+  },
+  {
+   "name": "platform_long",
+   "file": "platform_long.glb",
+   "kb": 6,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "platform_long"
+   ],
+   "textures": []
+  },
+  {
+   "name": "platform_low",
+   "file": "platform_low.glb",
+   "kb": 10,
+   "triangles": 156,
+   "animations": [],
+   "parts": [
+    "platform_low"
+   ],
+   "textures": []
+  },
+  {
+   "name": "platform_side",
+   "file": "platform_side.glb",
+   "kb": 4,
+   "triangles": 30,
+   "animations": [],
+   "parts": [
+    "platform_side"
+   ],
+   "textures": []
+  },
+  {
+   "name": "platform_small",
+   "file": "platform_small.glb",
+   "kb": 6,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "platform_small"
+   ],
+   "textures": []
+  },
+  {
+   "name": "platform_smallDiagonal",
+   "file": "platform_smallDiagonal.glb",
+   "kb": 5,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "platform_smallDiagonal"
+   ],
+   "textures": []
+  },
+  {
+   "name": "platform_straight",
+   "file": "platform_straight.glb",
+   "kb": 6,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "platform_straight"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rail",
+   "file": "rail.glb",
+   "kb": 6,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "rail"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rail_corner",
+   "file": "rail_corner.glb",
+   "kb": 9,
+   "triangles": 130,
+   "animations": [],
+   "parts": [
+    "rail_corner"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rail_end",
+   "file": "rail_end.glb",
+   "kb": 4,
+   "triangles": 46,
+   "animations": [],
+   "parts": [
+    "rail_end"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rail_middle",
+   "file": "rail_middle.glb",
+   "kb": 4,
+   "triangles": 46,
+   "animations": [],
+   "parts": [
+    "rail_middle"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock",
+   "file": "rock.glb",
+   "kb": 12,
+   "triangles": 172,
+   "animations": [],
+   "parts": [
+    "rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_crystals",
+   "file": "rock_crystals.glb",
+   "kb": 24,
+   "triangles": 364,
+   "animations": [],
+   "parts": [
+    "rock_crystals"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_crystalsLargeA",
+   "file": "rock_crystalsLargeA.glb",
+   "kb": 25,
+   "triangles": 384,
+   "animations": [],
+   "parts": [
+    "rock_crystalsLargeA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_crystalsLargeB",
+   "file": "rock_crystalsLargeB.glb",
+   "kb": 25,
+   "triangles": 380,
+   "animations": [],
+   "parts": [
+    "rock_crystalsLargeB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_largeA",
+   "file": "rock_largeA.glb",
+   "kb": 12,
+   "triangles": 176,
+   "animations": [],
+   "parts": [
+    "rock_largeA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_largeB",
+   "file": "rock_largeB.glb",
+   "kb": 12,
+   "triangles": 172,
+   "animations": [],
+   "parts": [
+    "rock_largeB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rocket_baseA",
+   "file": "rocket_baseA.glb",
+   "kb": 20,
+   "triangles": 300,
+   "animations": [],
+   "parts": [
+    "rocket_baseA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rocket_baseB",
+   "file": "rocket_baseB.glb",
+   "kb": 19,
+   "triangles": 284,
+   "animations": [],
+   "parts": [
+    "rocket_baseB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rocket_finsA",
+   "file": "rocket_finsA.glb",
+   "kb": 12,
+   "triangles": 192,
+   "animations": [],
+   "parts": [
+    "rocket_finsA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rocket_finsB",
+   "file": "rocket_finsB.glb",
+   "kb": 15,
+   "triangles": 249,
+   "animations": [],
+   "parts": [
+    "rocket_finsB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rocket_fuelA",
+   "file": "rocket_fuelA.glb",
+   "kb": 6,
+   "triangles": 94,
+   "animations": [],
+   "parts": [
+    "rocket_fuelA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rocket_fuelB",
+   "file": "rocket_fuelB.glb",
+   "kb": 8,
+   "triangles": 130,
+   "animations": [],
+   "parts": [
+    "rocket_fuelB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rocket_sidesA",
+   "file": "rocket_sidesA.glb",
+   "kb": 13,
+   "triangles": 222,
+   "animations": [],
+   "parts": [
+    "rocket_sidesA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rocket_sidesB",
+   "file": "rocket_sidesB.glb",
+   "kb": 13,
+   "triangles": 206,
+   "animations": [],
+   "parts": [
+    "rocket_sidesB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rocket_topA",
+   "file": "rocket_topA.glb",
+   "kb": 6,
+   "triangles": 50,
+   "animations": [],
+   "parts": [
+    "rocket_topA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rocket_topB",
+   "file": "rocket_topB.glb",
+   "kb": 7,
+   "triangles": 82,
+   "animations": [],
+   "parts": [
+    "rocket_topB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rocks_smallA",
+   "file": "rocks_smallA.glb",
+   "kb": 5,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "rocks_smallA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rocks_smallB",
+   "file": "rocks_smallB.glb",
+   "kb": 5,
+   "triangles": 48,
+   "animations": [],
+   "parts": [
+    "rocks_smallB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rover",
+   "file": "rover.glb",
+   "kb": 13,
+   "triangles": 172,
+   "animations": [],
+   "parts": [
+    "rover"
+   ],
+   "textures": []
+  },
+  {
+   "name": "satelliteDish",
+   "file": "satelliteDish.glb",
+   "kb": 19,
+   "triangles": 274,
+   "animations": [],
+   "parts": [
+    "satelliteDish"
+   ],
+   "textures": []
+  },
+  {
+   "name": "satelliteDish_detailed",
+   "file": "satelliteDish_detailed.glb",
+   "kb": 25,
+   "triangles": 390,
+   "animations": [],
+   "parts": [
+    "satelliteDish_detailed"
+   ],
+   "textures": []
+  },
+  {
+   "name": "satelliteDish_large",
+   "file": "satelliteDish_large.glb",
+   "kb": 13,
+   "triangles": 186,
+   "animations": [],
+   "parts": [
+    "satelliteDish_large"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stairs",
+   "file": "stairs.glb",
+   "kb": 14,
+   "triangles": 208,
+   "animations": [],
+   "parts": [
+    "stairs"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stairs_corner",
+   "file": "stairs_corner.glb",
+   "kb": 18,
+   "triangles": 306,
+   "animations": [],
+   "parts": [
+    "stairs_corner"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stairs_short",
+   "file": "stairs_short.glb",
+   "kb": 9,
+   "triangles": 136,
+   "animations": [],
+   "parts": [
+    "stairs_short"
+   ],
+   "textures": []
+  },
+  {
+   "name": "structure",
+   "file": "structure.glb",
+   "kb": 10,
+   "triangles": 168,
+   "animations": [],
+   "parts": [
+    "structure"
+   ],
+   "textures": []
+  },
+  {
+   "name": "structure_closed",
+   "file": "structure_closed.glb",
+   "kb": 15,
+   "triangles": 264,
+   "animations": [],
+   "parts": [
+    "structure_closed"
+   ],
+   "textures": []
+  },
+  {
+   "name": "structure_detailed",
+   "file": "structure_detailed.glb",
+   "kb": 13,
+   "triangles": 232,
+   "animations": [],
+   "parts": [
+    "structure_detailed"
+   ],
+   "textures": []
+  },
+  {
+   "name": "structure_diagonal",
+   "file": "structure_diagonal.glb",
+   "kb": 19,
+   "triangles": 344,
+   "animations": [],
+   "parts": [
+    "structure_diagonal"
+   ],
+   "textures": []
+  },
+  {
+   "name": "supports_high",
+   "file": "supports_high.glb",
+   "kb": 20,
+   "triangles": 312,
+   "animations": [],
+   "parts": [
+    "supports_high"
+   ],
+   "textures": []
+  },
+  {
+   "name": "supports_low",
+   "file": "supports_low.glb",
+   "kb": 14,
+   "triangles": 184,
+   "animations": [],
+   "parts": [
+    "supports_low"
+   ],
+   "textures": []
+  },
+  {
+   "name": "terrain",
+   "file": "terrain.glb",
+   "kb": 1,
+   "triangles": 2,
+   "animations": [],
+   "parts": [
+    "terrain"
+   ],
+   "textures": []
+  },
+  {
+   "name": "terrain_ramp",
+   "file": "terrain_ramp.glb",
+   "kb": 2,
+   "triangles": 4,
+   "animations": [],
+   "parts": [
+    "terrain_ramp"
+   ],
+   "textures": []
+  },
+  {
+   "name": "terrain_rampLarge",
+   "file": "terrain_rampLarge.glb",
+   "kb": 2,
+   "triangles": 4,
+   "animations": [],
+   "parts": [
+    "terrain_rampLarge"
+   ],
+   "textures": []
+  },
+  {
+   "name": "terrain_rampLarge_detailed",
+   "file": "terrain_rampLarge_detailed.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "terrain_rampLarge_detailed"
+   ],
+   "textures": []
+  },
+  {
+   "name": "terrain_roadCorner",
+   "file": "terrain_roadCorner.glb",
+   "kb": 4,
+   "triangles": 98,
+   "animations": [],
+   "parts": [
+    "terrain_roadCorner"
+   ],
+   "textures": []
+  },
+  {
+   "name": "terrain_roadCross",
+   "file": "terrain_roadCross.glb",
+   "kb": 3,
+   "triangles": 50,
+   "animations": [],
+   "parts": [
+    "terrain_roadCross"
+   ],
+   "textures": []
+  },
+  {
+   "name": "terrain_roadEnd",
+   "file": "terrain_roadEnd.glb",
+   "kb": 3,
+   "triangles": 58,
+   "animations": [],
+   "parts": [
+    "terrain_roadEnd"
+   ],
+   "textures": []
+  },
+  {
+   "name": "terrain_roadSplit",
+   "file": "terrain_roadSplit.glb",
+   "kb": 6,
+   "triangles": 162,
+   "animations": [],
+   "parts": [
+    "terrain_roadSplit"
+   ],
+   "textures": []
+  },
+  {
+   "name": "terrain_roadStraight",
+   "file": "terrain_roadStraight.glb",
+   "kb": 2,
+   "triangles": 10,
+   "animations": [],
+   "parts": [
+    "terrain_roadStraight"
+   ],
+   "textures": []
+  },
+  {
+   "name": "terrain_side",
+   "file": "terrain_side.glb",
+   "kb": 1,
+   "triangles": 2,
+   "animations": [],
+   "parts": [
+    "terrain_side"
+   ],
+   "textures": []
+  },
+  {
+   "name": "terrain_sideCliff",
+   "file": "terrain_sideCliff.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "terrain_sideCliff"
+   ],
+   "textures": []
+  },
+  {
+   "name": "terrain_sideCorner",
+   "file": "terrain_sideCorner.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "terrain_sideCorner"
+   ],
+   "textures": []
+  },
+  {
+   "name": "terrain_sideCornerInner",
+   "file": "terrain_sideCornerInner.glb",
+   "kb": 2,
+   "triangles": 10,
+   "animations": [],
+   "parts": [
+    "terrain_sideCornerInner"
+   ],
+   "textures": []
+  },
+  {
+   "name": "terrain_sideEnd",
+   "file": "terrain_sideEnd.glb",
+   "kb": 2,
+   "triangles": 9,
+   "animations": [],
+   "parts": [
+    "terrain_sideEnd"
+   ],
+   "textures": []
+  },
+  {
+   "name": "turret_double",
+   "file": "turret_double.glb",
+   "kb": 49,
+   "triangles": 876,
+   "animations": [],
+   "parts": [
+    "turret_double",
+    "turret"
+   ],
+   "textures": []
+  },
+  {
+   "name": "turret_single",
+   "file": "turret_single.glb",
+   "kb": 38,
+   "triangles": 576,
+   "animations": [],
+   "parts": [
+    "turret_single",
+    "turret",
+    "Group",
+    "Group"
+   ],
+   "textures": []
+  },
+  {
+   "name": "weapon_gun",
+   "file": "weapon_gun.glb",
+   "kb": 6,
+   "triangles": 70,
+   "animations": [],
+   "parts": [
+    "weapon_gun"
+   ],
+   "textures": []
+  },
+  {
+   "name": "weapon_rifle",
+   "file": "weapon_rifle.glb",
+   "kb": 8,
+   "triangles": 106,
+   "animations": [],
+   "parts": [
+    "weapon_rifle"
+   ],
+   "textures": []
+  }
+ ]
+}

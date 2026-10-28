@@ -1,0 +1,1263 @@
+{
+ "pack": "kenney-racing-kit",
+ "kind": "model3d",
+ "source": "https://kenney.nl/assets/racing-kit",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 112,
+ "items": [
+  {
+   "name": "bannerTowerGreen",
+   "file": "bannerTowerGreen.glb",
+   "kb": 33,
+   "triangles": 426,
+   "animations": [],
+   "parts": [
+    "bannerTowerGreen(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bannerTowerRed",
+   "file": "bannerTowerRed.glb",
+   "kb": 33,
+   "triangles": 426,
+   "animations": [],
+   "parts": [
+    "bannerTowerRed(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "barrierRed",
+   "file": "barrierRed.glb",
+   "kb": 3,
+   "triangles": 28,
+   "animations": [],
+   "parts": [
+    "barrierRed(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "barrierWall",
+   "file": "barrierWall.glb",
+   "kb": 5,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "barrierWall(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "barrierWhite",
+   "file": "barrierWhite.glb",
+   "kb": 3,
+   "triangles": 28,
+   "animations": [],
+   "parts": [
+    "barrierWhite(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "billboard",
+   "file": "billboard.glb",
+   "kb": 14,
+   "triangles": 136,
+   "animations": [],
+   "parts": [
+    "billboard(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "billboardDouble_exclusive",
+   "file": "billboardDouble_exclusive.glb",
+   "kb": 14,
+   "triangles": 126,
+   "animations": [],
+   "parts": [
+    "billboardDouble_exclusive(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "billboardLow",
+   "file": "billboardLow.glb",
+   "kb": 14,
+   "triangles": 136,
+   "animations": [],
+   "parts": [
+    "billboardLow(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "billboardLower",
+   "file": "billboardLower.glb",
+   "kb": 12,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "billboardLower(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "camera_exclusive",
+   "file": "camera_exclusive.glb",
+   "kb": 11,
+   "triangles": 136,
+   "animations": [],
+   "parts": [
+    "camera_exclusive(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "fenceCurved",
+   "file": "fenceCurved.glb",
+   "kb": 23,
+   "triangles": 352,
+   "animations": [],
+   "parts": [
+    "fenceCurved(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "fenceStraight",
+   "file": "fenceStraight.glb",
+   "kb": 7,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "fenceStraight(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "flagCheckers",
+   "file": "flagCheckers.glb",
+   "kb": 14,
+   "triangles": 184,
+   "animations": [],
+   "parts": [
+    "flagCheckers(Clone)",
+    "Group"
+   ],
+   "textures": []
+  },
+  {
+   "name": "flagCheckersSmall",
+   "file": "flagCheckersSmall.glb",
+   "kb": 10,
+   "triangles": 132,
+   "animations": [],
+   "parts": [
+    "flagCheckersSmall(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "flagGreen",
+   "file": "flagGreen.glb",
+   "kb": 16,
+   "triangles": 184,
+   "animations": [],
+   "parts": [
+    "flagGreen(Clone)",
+    "Group"
+   ],
+   "textures": []
+  },
+  {
+   "name": "flagRed",
+   "file": "flagRed.glb",
+   "kb": 16,
+   "triangles": 184,
+   "animations": [],
+   "parts": [
+    "flagRed(Clone)",
+    "Group"
+   ],
+   "textures": []
+  },
+  {
+   "name": "flagTankco",
+   "file": "flagTankco.glb",
+   "kb": 18,
+   "triangles": 184,
+   "animations": [],
+   "parts": [
+    "flagTankco(Clone)",
+    "Group"
+   ],
+   "textures": []
+  },
+  {
+   "name": "grandStand",
+   "file": "grandStand.glb",
+   "kb": 12,
+   "triangles": 128,
+   "animations": [],
+   "parts": [
+    "grandStand(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "grandStandAwning",
+   "file": "grandStandAwning.glb",
+   "kb": 20,
+   "triangles": 280,
+   "animations": [],
+   "parts": [
+    "grandStandAwning(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "grandStandCovered",
+   "file": "grandStandCovered.glb",
+   "kb": 14,
+   "triangles": 168,
+   "animations": [],
+   "parts": [
+    "grandStandCovered(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "grandStandCoveredRound",
+   "file": "grandStandCoveredRound.glb",
+   "kb": 89,
+   "triangles": 1302,
+   "animations": [],
+   "parts": [
+    "grandStandCoveredRound(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "grandStandRound",
+   "file": "grandStandRound.glb",
+   "kb": 69,
+   "triangles": 1022,
+   "animations": [],
+   "parts": [
+    "grandStandRound(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "grass",
+   "file": "grass.glb",
+   "kb": 1,
+   "triangles": 2,
+   "animations": [],
+   "parts": [
+    "grass(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "lightColored",
+   "file": "lightColored.glb",
+   "kb": 18,
+   "triangles": 268,
+   "animations": [],
+   "parts": [
+    "lightColored(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "lightPostLarge",
+   "file": "lightPostLarge.glb",
+   "kb": 22,
+   "triangles": 340,
+   "animations": [],
+   "parts": [
+    "lightPostLarge(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "lightPostModern",
+   "file": "lightPostModern.glb",
+   "kb": 16,
+   "triangles": 198,
+   "animations": [],
+   "parts": [
+    "lightPostModern(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "lightPost_exclusive",
+   "file": "lightPost_exclusive.glb",
+   "kb": 16,
+   "triangles": 228,
+   "animations": [],
+   "parts": [
+    "lightPost_exclusive(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "lightRed",
+   "file": "lightRed.glb",
+   "kb": 19,
+   "triangles": 308,
+   "animations": [],
+   "parts": [
+    "lightRed(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "lightRedDouble",
+   "file": "lightRedDouble.glb",
+   "kb": 30,
+   "triangles": 560,
+   "animations": [],
+   "parts": [
+    "lightRedDouble(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "overhead",
+   "file": "overhead.glb",
+   "kb": 8,
+   "triangles": 124,
+   "animations": [],
+   "parts": [
+    "overhead(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "overheadLights",
+   "file": "overheadLights.glb",
+   "kb": 25,
+   "triangles": 432,
+   "animations": [],
+   "parts": [
+    "overheadLights(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "overheadRound",
+   "file": "overheadRound.glb",
+   "kb": 8,
+   "triangles": 132,
+   "animations": [],
+   "parts": [
+    "overheadRound(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "overheadRoundColored",
+   "file": "overheadRoundColored.glb",
+   "kb": 7,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "overheadRoundColored(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pitsGarage",
+   "file": "pitsGarage.glb",
+   "kb": 12,
+   "triangles": 96,
+   "animations": [],
+   "parts": [
+    "pitsGarage(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pitsGarageClosed",
+   "file": "pitsGarageClosed.glb",
+   "kb": 15,
+   "triangles": 162,
+   "animations": [],
+   "parts": [
+    "pitsGarageClosed(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pitsGarageCorner",
+   "file": "pitsGarageCorner.glb",
+   "kb": 9,
+   "triangles": 109,
+   "animations": [],
+   "parts": [
+    "pitsGarageCorner(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pitsOffice",
+   "file": "pitsOffice.glb",
+   "kb": 7,
+   "triangles": 88,
+   "animations": [],
+   "parts": [
+    "pitsOffice(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pitsOfficeCorner",
+   "file": "pitsOfficeCorner.glb",
+   "kb": 9,
+   "triangles": 126,
+   "animations": [],
+   "parts": [
+    "pitsOfficeCorner(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pitsOfficeRoof",
+   "file": "pitsOfficeRoof.glb",
+   "kb": 11,
+   "triangles": 142,
+   "animations": [],
+   "parts": [
+    "pitsOfficeRoof(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pylon",
+   "file": "pylon.glb",
+   "kb": 7,
+   "triangles": 108,
+   "animations": [],
+   "parts": [
+    "pylon(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "raceCarGreen",
+   "file": "raceCarGreen.glb",
+   "kb": 103,
+   "triangles": 1430,
+   "animations": [],
+   "parts": [
+    "body",
+    "wheelBackLeft",
+    "wheelBackRight",
+    "wheelFrontLeft",
+    "wheelFrontRight"
+   ],
+   "textures": []
+  },
+  {
+   "name": "raceCarOrange",
+   "file": "raceCarOrange.glb",
+   "kb": 103,
+   "triangles": 1430,
+   "animations": [],
+   "parts": [
+    "body",
+    "wheelBackLeft",
+    "wheelBackRight",
+    "wheelFrontLeft",
+    "wheelFrontRight"
+   ],
+   "textures": []
+  },
+  {
+   "name": "raceCarRed",
+   "file": "raceCarRed.glb",
+   "kb": 103,
+   "triangles": 1430,
+   "animations": [],
+   "parts": [
+    "body",
+    "wheelBackLeft",
+    "wheelBackRight",
+    "wheelFrontLeft",
+    "wheelFrontRight"
+   ],
+   "textures": []
+  },
+  {
+   "name": "raceCarWhite",
+   "file": "raceCarWhite.glb",
+   "kb": 103,
+   "triangles": 1430,
+   "animations": [],
+   "parts": [
+    "body",
+    "wheelBackLeft",
+    "wheelBackRight",
+    "wheelFrontLeft",
+    "wheelFrontRight"
+   ],
+   "textures": []
+  },
+  {
+   "name": "radarEquipment",
+   "file": "radarEquipment.glb",
+   "kb": 19,
+   "triangles": 292,
+   "animations": [],
+   "parts": [
+    "radarEquipment(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rail",
+   "file": "rail.glb",
+   "kb": 5,
+   "triangles": 68,
+   "animations": [],
+   "parts": [
+    "rail(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "railDouble",
+   "file": "railDouble.glb",
+   "kb": 8,
+   "triangles": 112,
+   "animations": [],
+   "parts": [
+    "railDouble(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ramp",
+   "file": "ramp.glb",
+   "kb": 6,
+   "triangles": 94,
+   "animations": [],
+   "parts": [
+    "ramp(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadBump",
+   "file": "roadBump.glb",
+   "kb": 8,
+   "triangles": 94,
+   "animations": [],
+   "parts": [
+    "roadBump(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadCornerBridgeLarge",
+   "file": "roadCornerBridgeLarge.glb",
+   "kb": 20,
+   "triangles": 308,
+   "animations": [],
+   "parts": [
+    "roadCornerBridgeLarge(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadCornerBridgeLarger",
+   "file": "roadCornerBridgeLarger.glb",
+   "kb": 20,
+   "triangles": 308,
+   "animations": [],
+   "parts": [
+    "roadCornerBridgeLarger(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadCornerBridgeSmall",
+   "file": "roadCornerBridgeSmall.glb",
+   "kb": 17,
+   "triangles": 260,
+   "animations": [],
+   "parts": [
+    "roadCornerBridgeSmall(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadCornerLarge",
+   "file": "roadCornerLarge.glb",
+   "kb": 14,
+   "triangles": 216,
+   "animations": [],
+   "parts": [
+    "roadCornerLarge(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadCornerLargeBorder",
+   "file": "roadCornerLargeBorder.glb",
+   "kb": 6,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "roadCornerLargeBorder(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadCornerLargeBorderInner",
+   "file": "roadCornerLargeBorderInner.glb",
+   "kb": 6,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "roadCornerLargeBorderInner(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadCornerLargeSand",
+   "file": "roadCornerLargeSand.glb",
+   "kb": 2,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "roadCornerLargeSand(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadCornerLargeSandInner",
+   "file": "roadCornerLargeSandInner.glb",
+   "kb": 2,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "roadCornerLargeSandInner(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadCornerLargeWall",
+   "file": "roadCornerLargeWall.glb",
+   "kb": 6,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "roadCornerLargeWall(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadCornerLargeWallInner",
+   "file": "roadCornerLargeWallInner.glb",
+   "kb": 7,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "roadCornerLargeWallInner(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadCornerLarger",
+   "file": "roadCornerLarger.glb",
+   "kb": 12,
+   "triangles": 216,
+   "animations": [],
+   "parts": [
+    "roadCornerLarger(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadCornerLargerBorder",
+   "file": "roadCornerLargerBorder.glb",
+   "kb": 6,
+   "triangles": 79,
+   "animations": [],
+   "parts": [
+    "roadCornerLargerBorder(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadCornerLargerBorderInner",
+   "file": "roadCornerLargerBorderInner.glb",
+   "kb": 6,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "roadCornerLargerBorderInner(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadCornerLargerSand",
+   "file": "roadCornerLargerSand.glb",
+   "kb": 2,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "roadCornerLargerSand(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadCornerLargerSandInner",
+   "file": "roadCornerLargerSandInner.glb",
+   "kb": 2,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "roadCornerLargerSandInner(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadCornerLargerWall",
+   "file": "roadCornerLargerWall.glb",
+   "kb": 6,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "roadCornerLargerWall(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadCornerLargerWallInner",
+   "file": "roadCornerLargerWallInner.glb",
+   "kb": 6,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "roadCornerLargerWallInner(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadCornerSmall",
+   "file": "roadCornerSmall.glb",
+   "kb": 14,
+   "triangles": 204,
+   "animations": [],
+   "parts": [
+    "roadCornerSmall(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadCornerSmallBorder",
+   "file": "roadCornerSmallBorder.glb",
+   "kb": 6,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "roadCornerSmallBorder(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadCornerSmallSand",
+   "file": "roadCornerSmallSand.glb",
+   "kb": 2,
+   "triangles": 25,
+   "animations": [],
+   "parts": [
+    "roadCornerSmallSand(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadCornerSmallSquare",
+   "file": "roadCornerSmallSquare.glb",
+   "kb": 18,
+   "triangles": 182,
+   "animations": [],
+   "parts": [
+    "roadCornerSmallSquare(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadCornerSmallWall",
+   "file": "roadCornerSmallWall.glb",
+   "kb": 6,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "roadCornerSmallWall(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadCrossing",
+   "file": "roadCrossing.glb",
+   "kb": 18,
+   "triangles": 266,
+   "animations": [],
+   "parts": [
+    "roadCrossing(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadCurved",
+   "file": "roadCurved.glb",
+   "kb": 26,
+   "triangles": 432,
+   "animations": [],
+   "parts": [
+    "roadCurved(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadCurvedSplit",
+   "file": "roadCurvedSplit.glb",
+   "kb": 36,
+   "triangles": 592,
+   "animations": [],
+   "parts": [
+    "roadCurvedSplit(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadEnd",
+   "file": "roadEnd.glb",
+   "kb": 9,
+   "triangles": 125,
+   "animations": [],
+   "parts": [
+    "roadEnd(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadPitEntry",
+   "file": "roadPitEntry.glb",
+   "kb": 4,
+   "triangles": 34,
+   "animations": [],
+   "parts": [
+    "roadPitEntry(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadPitGarage",
+   "file": "roadPitGarage.glb",
+   "kb": 5,
+   "triangles": 58,
+   "animations": [],
+   "parts": [
+    "roadPitGarage(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadPitStraight",
+   "file": "roadPitStraight.glb",
+   "kb": 3,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "roadPitStraight(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadPitStraightLong",
+   "file": "roadPitStraightLong.glb",
+   "kb": 3,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "roadPitStraightLong(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadRamp",
+   "file": "roadRamp.glb",
+   "kb": 3,
+   "triangles": 18,
+   "animations": [],
+   "parts": [
+    "roadRamp(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadRampLong",
+   "file": "roadRampLong.glb",
+   "kb": 3,
+   "triangles": 18,
+   "animations": [],
+   "parts": [
+    "roadRampLong(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadRampLongCurved",
+   "file": "roadRampLongCurved.glb",
+   "kb": 27,
+   "triangles": 417,
+   "animations": [],
+   "parts": [
+    "roadRampLongCurved(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadRampLongCurvedWall",
+   "file": "roadRampLongCurvedWall.glb",
+   "kb": 30,
+   "triangles": 474,
+   "animations": [],
+   "parts": [
+    "roadRampLongCurvedWall(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadRampLongWall",
+   "file": "roadRampLongWall.glb",
+   "kb": 4,
+   "triangles": 30,
+   "animations": [],
+   "parts": [
+    "roadRampLongWall(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadRampWall",
+   "file": "roadRampWall.glb",
+   "kb": 4,
+   "triangles": 30,
+   "animations": [],
+   "parts": [
+    "roadRampWall(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadSide",
+   "file": "roadSide.glb",
+   "kb": 6,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "roadSide(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadSplit",
+   "file": "roadSplit.glb",
+   "kb": 4,
+   "triangles": 37,
+   "animations": [],
+   "parts": [
+    "roadSplit(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadSplitLarge",
+   "file": "roadSplitLarge.glb",
+   "kb": 13,
+   "triangles": 187,
+   "animations": [],
+   "parts": [
+    "roadSplitLarge(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadSplitLarger",
+   "file": "roadSplitLarger.glb",
+   "kb": 18,
+   "triangles": 201,
+   "animations": [],
+   "parts": [
+    "roadSplitLarger(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadSplitRound",
+   "file": "roadSplitRound.glb",
+   "kb": 23,
+   "triangles": 375,
+   "animations": [],
+   "parts": [
+    "roadSplitRound(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadSplitRoundLarge",
+   "file": "roadSplitRoundLarge.glb",
+   "kb": 32,
+   "triangles": 393,
+   "animations": [],
+   "parts": [
+    "roadSplitRoundLarge(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadSplitSmall",
+   "file": "roadSplitSmall.glb",
+   "kb": 10,
+   "triangles": 134,
+   "animations": [],
+   "parts": [
+    "roadSplitSmall(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadStart",
+   "file": "roadStart.glb",
+   "kb": 13,
+   "triangles": 182,
+   "animations": [],
+   "parts": [
+    "roadStart(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadStartPositions",
+   "file": "roadStartPositions.glb",
+   "kb": 5,
+   "triangles": 82,
+   "animations": [],
+   "parts": [
+    "roadStartPositions(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadStraight",
+   "file": "roadStraight.glb",
+   "kb": 3,
+   "triangles": 18,
+   "animations": [],
+   "parts": [
+    "roadStraight(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadStraightArrow",
+   "file": "roadStraightArrow.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "roadStraightArrow(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadStraightBridge",
+   "file": "roadStraightBridge.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "roadStraightBridge(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadStraightBridgeMid",
+   "file": "roadStraightBridgeMid.glb",
+   "kb": 5,
+   "triangles": 48,
+   "animations": [],
+   "parts": [
+    "roadStraightBridgeMid(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadStraightBridgeStart",
+   "file": "roadStraightBridgeStart.glb",
+   "kb": 5,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "roadStraightBridgeStart(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadStraightLong",
+   "file": "roadStraightLong.glb",
+   "kb": 3,
+   "triangles": 18,
+   "animations": [],
+   "parts": [
+    "roadStraightLong(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadStraightLongBump",
+   "file": "roadStraightLongBump.glb",
+   "kb": 52,
+   "triangles": 834,
+   "animations": [],
+   "parts": [
+    "roadStraightLongBump(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadStraightLongBumpRound",
+   "file": "roadStraightLongBumpRound.glb",
+   "kb": 9,
+   "triangles": 114,
+   "animations": [],
+   "parts": [
+    "roadStraightLongBumpRound(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadStraightLongMid",
+   "file": "roadStraightLongMid.glb",
+   "kb": 9,
+   "triangles": 122,
+   "animations": [],
+   "parts": [
+    "roadStraightLongMid(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "roadStraightSkew",
+   "file": "roadStraightSkew.glb",
+   "kb": 3,
+   "triangles": 18,
+   "animations": [],
+   "parts": [
+    "roadStraightSkew(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tent",
+   "file": "tent.glb",
+   "kb": 6,
+   "triangles": 86,
+   "animations": [],
+   "parts": [
+    "tent(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tentClosed",
+   "file": "tentClosed.glb",
+   "kb": 8,
+   "triangles": 110,
+   "animations": [],
+   "parts": [
+    "tentClosed(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tentClosedLong",
+   "file": "tentClosedLong.glb",
+   "kb": 8,
+   "triangles": 110,
+   "animations": [],
+   "parts": [
+    "tentClosedLong(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tentLong",
+   "file": "tentLong.glb",
+   "kb": 6,
+   "triangles": 86,
+   "animations": [],
+   "parts": [
+    "tentLong(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tentRoof",
+   "file": "tentRoof.glb",
+   "kb": 9,
+   "triangles": 132,
+   "animations": [],
+   "parts": [
+    "tentRoof(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tentRoofDouble",
+   "file": "tentRoofDouble.glb",
+   "kb": 15,
+   "triangles": 236,
+   "animations": [],
+   "parts": [
+    "tentRoofDouble(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "treeLarge",
+   "file": "treeLarge.glb",
+   "kb": 6,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "treeLarge(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "treeSmall",
+   "file": "treeSmall.glb",
+   "kb": 6,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "treeSmall(Clone)"
+   ],
+   "textures": []
+  }
+ ]
+}

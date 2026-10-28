@@ -1,0 +1,326 @@
+{
+ "pack": "kenney-mini-arena",
+ "kind": "model3d",
+ "source": "https://kenney.nl/assets/mini-arena",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 22,
+ "items": [
+  {
+   "name": "banner",
+   "file": "banner.glb",
+   "kb": 21,
+   "triangles": 228,
+   "animations": [],
+   "parts": [
+    "banner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block",
+   "file": "block.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "block"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "border-corner",
+   "file": "border-corner.glb",
+   "kb": 10,
+   "triangles": 122,
+   "animations": [],
+   "parts": [
+    "border-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "border-straight",
+   "file": "border-straight.glb",
+   "kb": 6,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "border-straight"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bricks",
+   "file": "bricks.glb",
+   "kb": 12,
+   "triangles": 120,
+   "animations": [],
+   "parts": [
+    "bricks"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "character-soldier",
+   "file": "character-soldier.glb",
+   "kb": 174,
+   "triangles": 513,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "sprint",
+    "jump",
+    "fall",
+    "crouch",
+    "sit",
+    "drive",
+    "die",
+    "pick-up",
+    "emote-yes",
+    "emote-no",
+    "holding-right",
+    "holding-left",
+    "holding-both",
+    "holding-right-shoot",
+    "holding-left-shoot",
+    "holding-both-shoot",
+    "attack-melee-right",
+    "attack-melee-left",
+    "attack-kick-right",
+    "attack-kick-left",
+    "interact-right",
+    "interact-left"
+   ],
+   "parts": [
+    "body-mesh",
+    "head-mesh"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "column-damaged",
+   "file": "column-damaged.glb",
+   "kb": 13,
+   "triangles": 148,
+   "animations": [],
+   "parts": [
+    "column-damaged"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "column",
+   "file": "column.glb",
+   "kb": 16,
+   "triangles": 168,
+   "animations": [],
+   "parts": [
+    "column"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "floor-detail",
+   "file": "floor-detail.glb",
+   "kb": 6,
+   "triangles": 50,
+   "animations": [],
+   "parts": [
+    "floor-detail"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "floor",
+   "file": "floor.glb",
+   "kb": 1,
+   "triangles": 2,
+   "animations": [],
+   "parts": [
+    "floor"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stairs-corner-inner",
+   "file": "stairs-corner-inner.glb",
+   "kb": 7,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "stairs-corner-inner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stairs-corner",
+   "file": "stairs-corner.glb",
+   "kb": 8,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "stairs-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stairs",
+   "file": "stairs.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "stairs"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "statue",
+   "file": "statue.glb",
+   "kb": 49,
+   "triangles": 549,
+   "animations": [],
+   "parts": [
+    "statue"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tree",
+   "file": "tree.glb",
+   "kb": 33,
+   "triangles": 330,
+   "animations": [],
+   "parts": [
+    "tree"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "trophy",
+   "file": "trophy.glb",
+   "kb": 23,
+   "triangles": 244,
+   "animations": [],
+   "parts": [
+    "trophy"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-corner",
+   "file": "wall-corner.glb",
+   "kb": 21,
+   "triangles": 226,
+   "animations": [],
+   "parts": [
+    "wall-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-gate",
+   "file": "wall-gate.glb",
+   "kb": 30,
+   "triangles": 322,
+   "animations": [],
+   "parts": [
+    "wall-gate",
+    "gate"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall",
+   "file": "wall.glb",
+   "kb": 15,
+   "triangles": 174,
+   "animations": [],
+   "parts": [
+    "wall"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "weapon-rack",
+   "file": "weapon-rack.glb",
+   "kb": 19,
+   "triangles": 212,
+   "animations": [],
+   "parts": [
+    "weapon-rack",
+    "Group"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "weapon-spear",
+   "file": "weapon-spear.glb",
+   "kb": 7,
+   "triangles": 58,
+   "animations": [],
+   "parts": [
+    "weapon-spear"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "weapon-sword",
+   "file": "weapon-sword.glb",
+   "kb": 9,
+   "triangles": 80,
+   "animations": [],
+   "parts": [
+    "weapon-sword"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  }
+ ]
+}

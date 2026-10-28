@@ -1,0 +1,634 @@
+{
+ "pack": "kenney-watercraft-kit",
+ "kind": "model3d",
+ "source": "https://kenney.nl/assets/watercraft-kit",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 46,
+ "items": [
+  {
+   "name": "arrow-standing",
+   "file": "arrow-standing.glb",
+   "kb": 4,
+   "triangles": 40,
+   "animations": [],
+   "parts": [
+    "arrow-standing"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "arrow",
+   "file": "arrow.glb",
+   "kb": 6,
+   "triangles": 62,
+   "animations": [],
+   "parts": [
+    "arrow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "boat-fan",
+   "file": "boat-fan.glb",
+   "kb": 30,
+   "triangles": 310,
+   "animations": [],
+   "parts": [
+    "boat-fan",
+    "fan"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "boat-fishing-small",
+   "file": "boat-fishing-small.glb",
+   "kb": 22,
+   "triangles": 237,
+   "animations": [],
+   "parts": [
+    "boat-fishing-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "boat-house-a",
+   "file": "boat-house-a.glb",
+   "kb": 37,
+   "triangles": 408,
+   "animations": [],
+   "parts": [
+    "boat-house-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "boat-house-b",
+   "file": "boat-house-b.glb",
+   "kb": 35,
+   "triangles": 380,
+   "animations": [],
+   "parts": [
+    "boat-house-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "boat-house-c",
+   "file": "boat-house-c.glb",
+   "kb": 39,
+   "triangles": 452,
+   "animations": [],
+   "parts": [
+    "boat-house-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "boat-house-d",
+   "file": "boat-house-d.glb",
+   "kb": 47,
+   "triangles": 550,
+   "animations": [],
+   "parts": [
+    "boat-house-d"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "boat-row-large",
+   "file": "boat-row-large.glb",
+   "kb": 15,
+   "triangles": 174,
+   "animations": [],
+   "parts": [
+    "boat-row-large",
+    "paddles"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "boat-row-small",
+   "file": "boat-row-small.glb",
+   "kb": 17,
+   "triangles": 168,
+   "animations": [],
+   "parts": [
+    "boat-row-small",
+    "paddles"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "boat-sail-a",
+   "file": "boat-sail-a.glb",
+   "kb": 34,
+   "triangles": 386,
+   "animations": [],
+   "parts": [
+    "boat-sail-a",
+    "sail"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "boat-sail-b",
+   "file": "boat-sail-b.glb",
+   "kb": 37,
+   "triangles": 426,
+   "animations": [],
+   "parts": [
+    "boat-sail-b",
+    "sail"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "boat-speed-a",
+   "file": "boat-speed-a.glb",
+   "kb": 16,
+   "triangles": 156,
+   "animations": [],
+   "parts": [
+    "boat-speed-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "boat-speed-b",
+   "file": "boat-speed-b.glb",
+   "kb": 15,
+   "triangles": 148,
+   "animations": [],
+   "parts": [
+    "boat-speed-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "boat-speed-c",
+   "file": "boat-speed-c.glb",
+   "kb": 16,
+   "triangles": 154,
+   "animations": [],
+   "parts": [
+    "boat-speed-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "boat-speed-d",
+   "file": "boat-speed-d.glb",
+   "kb": 22,
+   "triangles": 250,
+   "animations": [],
+   "parts": [
+    "boat-speed-d"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "boat-speed-e",
+   "file": "boat-speed-e.glb",
+   "kb": 24,
+   "triangles": 265,
+   "animations": [],
+   "parts": [
+    "boat-speed-e"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "boat-speed-f",
+   "file": "boat-speed-f.glb",
+   "kb": 21,
+   "triangles": 234,
+   "animations": [],
+   "parts": [
+    "boat-speed-f"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "boat-speed-g",
+   "file": "boat-speed-g.glb",
+   "kb": 13,
+   "triangles": 136,
+   "animations": [],
+   "parts": [
+    "boat-speed-g"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "boat-speed-h",
+   "file": "boat-speed-h.glb",
+   "kb": 19,
+   "triangles": 180,
+   "animations": [],
+   "parts": [
+    "boat-speed-h"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "boat-speed-i",
+   "file": "boat-speed-i.glb",
+   "kb": 14,
+   "triangles": 136,
+   "animations": [],
+   "parts": [
+    "boat-speed-i"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "boat-speed-j",
+   "file": "boat-speed-j.glb",
+   "kb": 20,
+   "triangles": 178,
+   "animations": [],
+   "parts": [
+    "boat-speed-j"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "boat-tow-a",
+   "file": "boat-tow-a.glb",
+   "kb": 49,
+   "triangles": 576,
+   "animations": [],
+   "parts": [
+    "boat-tow-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "boat-tow-b",
+   "file": "boat-tow-b.glb",
+   "kb": 50,
+   "triangles": 588,
+   "animations": [],
+   "parts": [
+    "boat-tow-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "boat-tug-a",
+   "file": "boat-tug-a.glb",
+   "kb": 40,
+   "triangles": 471,
+   "animations": [],
+   "parts": [
+    "boat-tug-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "boat-tug-b",
+   "file": "boat-tug-b.glb",
+   "kb": 32,
+   "triangles": 371,
+   "animations": [],
+   "parts": [
+    "boat-tug-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "boat-tug-c",
+   "file": "boat-tug-c.glb",
+   "kb": 18,
+   "triangles": 197,
+   "animations": [],
+   "parts": [
+    "boat-tug-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "buoy-flag",
+   "file": "buoy-flag.glb",
+   "kb": 21,
+   "triangles": 218,
+   "animations": [],
+   "parts": [
+    "buoy-flag"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "buoy",
+   "file": "buoy.glb",
+   "kb": 11,
+   "triangles": 118,
+   "animations": [],
+   "parts": [
+    "buoy"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cargo-container-a",
+   "file": "cargo-container-a.glb",
+   "kb": 16,
+   "triangles": 160,
+   "animations": [],
+   "parts": [
+    "cargo-container-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cargo-container-b",
+   "file": "cargo-container-b.glb",
+   "kb": 16,
+   "triangles": 160,
+   "animations": [],
+   "parts": [
+    "cargo-container-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cargo-container-c",
+   "file": "cargo-container-c.glb",
+   "kb": 16,
+   "triangles": 160,
+   "animations": [],
+   "parts": [
+    "cargo-container-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cargo-pile-a",
+   "file": "cargo-pile-a.glb",
+   "kb": 17,
+   "triangles": 176,
+   "animations": [],
+   "parts": [
+    "cargo-pile-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cargo-pile-b",
+   "file": "cargo-pile-b.glb",
+   "kb": 33,
+   "triangles": 352,
+   "animations": [],
+   "parts": [
+    "cargo-pile-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "gate-finish",
+   "file": "gate-finish.glb",
+   "kb": 8,
+   "triangles": 104,
+   "animations": [],
+   "parts": [
+    "gate-finish"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "gate",
+   "file": "gate.glb",
+   "kb": 9,
+   "triangles": 104,
+   "animations": [],
+   "parts": [
+    "gate"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ramp-wide",
+   "file": "ramp-wide.glb",
+   "kb": 14,
+   "triangles": 128,
+   "animations": [],
+   "parts": [
+    "ramp-wide"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ramp",
+   "file": "ramp.glb",
+   "kb": 14,
+   "triangles": 128,
+   "animations": [],
+   "parts": [
+    "ramp"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ship-cargo-a",
+   "file": "ship-cargo-a.glb",
+   "kb": 95,
+   "triangles": 1060,
+   "animations": [],
+   "parts": [
+    "ship-cargo-a",
+    "cargo-c",
+    "cargo-b",
+    "cargo-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ship-cargo-b",
+   "file": "ship-cargo-b.glb",
+   "kb": 77,
+   "triangles": 850,
+   "animations": [],
+   "parts": [
+    "ship-cargo-b",
+    "cargo-a",
+    "cargo-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ship-cargo-c",
+   "file": "ship-cargo-c.glb",
+   "kb": 30,
+   "triangles": 362,
+   "animations": [],
+   "parts": [
+    "ship-cargo-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ship-large",
+   "file": "ship-large.glb",
+   "kb": 152,
+   "triangles": 1849,
+   "animations": [],
+   "parts": [
+    "ship-large",
+    "sail-b",
+    "sail-a",
+    "flag-c",
+    "flag-b",
+    "flag-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ship-ocean-liner-small",
+   "file": "ship-ocean-liner-small.glb",
+   "kb": 142,
+   "triangles": 1750,
+   "animations": [],
+   "parts": [
+    "ship-ocean-liner-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ship-ocean-liner",
+   "file": "ship-ocean-liner.glb",
+   "kb": 222,
+   "triangles": 2796,
+   "animations": [],
+   "parts": [
+    "ship-ocean-liner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ship-small-ghost",
+   "file": "ship-small-ghost.glb",
+   "kb": 152,
+   "triangles": 1703,
+   "animations": [],
+   "parts": [
+    "ship-small-ghost",
+    "sail-b",
+    "sail-a",
+    "flag-b",
+    "flag-a",
+    "flag-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ship-small",
+   "file": "ship-small.glb",
+   "kb": 141,
+   "triangles": 1723,
+   "animations": [],
+   "parts": [
+    "ship-small",
+    "flag-a",
+    "sail-b",
+    "sail-a",
+    "flag-c",
+    "flag-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  }
+ ]
+}

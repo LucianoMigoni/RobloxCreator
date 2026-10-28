@@ -1,0 +1,346 @@
+{
+ "pack": "kenney-mini-market",
+ "kind": "model3d",
+ "source": "https://kenney.nl/assets/mini-market",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 20,
+ "items": [
+  {
+   "name": "bottle-return",
+   "file": "bottle-return.glb",
+   "kb": 30,
+   "triangles": 324,
+   "animations": [],
+   "parts": [
+    "bottle-return"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cash-register",
+   "file": "cash-register.glb",
+   "kb": 19,
+   "triangles": 203,
+   "animations": [],
+   "parts": [
+    "cash-register"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "character-employee",
+   "file": "character-employee.glb",
+   "kb": 210,
+   "triangles": 520,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "sprint",
+    "jump",
+    "fall",
+    "crouch",
+    "sit",
+    "drive",
+    "die",
+    "pick-up",
+    "emote-yes",
+    "emote-no",
+    "holding-right",
+    "holding-left",
+    "holding-both",
+    "holding-right-shoot",
+    "holding-left-shoot",
+    "holding-both-shoot",
+    "attack-melee-right",
+    "attack-melee-left",
+    "attack-kick-right",
+    "attack-kick-left",
+    "interact-right",
+    "interact-left",
+    "wheelchair-sit",
+    "wheelchair-look-left",
+    "wheelchair-look-right",
+    "wheelchair-move-forward",
+    "wheelchair-move-back",
+    "wheelchair-move-left",
+    "wheelchair-move-right"
+   ],
+   "parts": [
+    "body-mesh",
+    "head-mesh"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "column",
+   "file": "column.glb",
+   "kb": 18,
+   "triangles": 188,
+   "animations": [],
+   "parts": [
+    "column"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "display-bread",
+   "file": "display-bread.glb",
+   "kb": 35,
+   "triangles": 362,
+   "animations": [],
+   "parts": [
+    "display-bread",
+    "bread",
+    "bread"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "display-fruit",
+   "file": "display-fruit.glb",
+   "kb": 61,
+   "triangles": 650,
+   "animations": [],
+   "parts": [
+    "display-fruit"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fence-door-rotate",
+   "file": "fence-door-rotate.glb",
+   "kb": 35,
+   "triangles": 288,
+   "animations": [
+    "open",
+    "close",
+    "open-and-close"
+   ],
+   "parts": [
+    "fence-door-rotate",
+    "door-left",
+    "door-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fence",
+   "file": "fence.glb",
+   "kb": 8,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "fence"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "floor",
+   "file": "floor.glb",
+   "kb": 3,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "floor"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "freezer",
+   "file": "freezer.glb",
+   "kb": 16,
+   "triangles": 180,
+   "animations": [],
+   "parts": [
+    "freezer"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "freezers-standing",
+   "file": "freezers-standing.glb",
+   "kb": 14,
+   "triangles": 156,
+   "animations": [],
+   "parts": [
+    "freezers-standing"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "shelf-bags",
+   "file": "shelf-bags.glb",
+   "kb": 76,
+   "triangles": 892,
+   "animations": [],
+   "parts": [
+    "shelf-bags",
+    "bag",
+    "bag",
+    "bag",
+    "bag",
+    "bag",
+    "bag",
+    "bag",
+    "bag"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "shelf-boxes",
+   "file": "shelf-boxes.glb",
+   "kb": 55,
+   "triangles": 436,
+   "animations": [],
+   "parts": [
+    "shelf-boxes",
+    "carton",
+    "carton",
+    "carton",
+    "carton",
+    "carton",
+    "carton",
+    "box",
+    "box",
+    "box",
+    "box"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "shelf-end",
+   "file": "shelf-end.glb",
+   "kb": 43,
+   "triangles": 362,
+   "animations": [],
+   "parts": [
+    "shelf-end",
+    "bottle",
+    "bottle",
+    "bottle",
+    "carton",
+    "carton",
+    "carton",
+    "Group"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "shopping-basket",
+   "file": "shopping-basket.glb",
+   "kb": 25,
+   "triangles": 288,
+   "animations": [],
+   "parts": [
+    "shopping-basket"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "shopping-cart",
+   "file": "shopping-cart.glb",
+   "kb": 34,
+   "triangles": 384,
+   "animations": [],
+   "parts": [
+    "shopping-cart"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-corner",
+   "file": "wall-corner.glb",
+   "kb": 7,
+   "triangles": 66,
+   "animations": [],
+   "parts": [
+    "wall-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-door-rotate",
+   "file": "wall-door-rotate.glb",
+   "kb": 37,
+   "triangles": 316,
+   "animations": [
+    "open",
+    "close",
+    "open-and-close"
+   ],
+   "parts": [
+    "wall-door-rotate",
+    "Group",
+    "door-left",
+    "door-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-window",
+   "file": "wall-window.glb",
+   "kb": 15,
+   "triangles": 146,
+   "animations": [],
+   "parts": [
+    "wall-window",
+    "(%ignore)"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall",
+   "file": "wall.glb",
+   "kb": 4,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "wall"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  }
+ ]
+}

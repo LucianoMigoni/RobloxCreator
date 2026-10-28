@@ -1,0 +1,531 @@
+{
+ "pack": "kenney-city-kit-suburban",
+ "kind": "model3d",
+ "source": "https://kenney.nl/assets/city-kit-suburban",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 40,
+ "items": [
+  {
+   "name": "building-type-a",
+   "file": "building-type-a.glb",
+   "kb": 96,
+   "triangles": 1174,
+   "animations": [],
+   "parts": [
+    "building-type-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-type-b",
+   "file": "building-type-b.glb",
+   "kb": 143,
+   "triangles": 1748,
+   "animations": [],
+   "parts": [
+    "building-type-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-type-c",
+   "file": "building-type-c.glb",
+   "kb": 97,
+   "triangles": 1196,
+   "animations": [],
+   "parts": [
+    "building-type-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-type-d",
+   "file": "building-type-d.glb",
+   "kb": 143,
+   "triangles": 1757,
+   "animations": [],
+   "parts": [
+    "building-type-d"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-type-e",
+   "file": "building-type-e.glb",
+   "kb": 142,
+   "triangles": 1731,
+   "animations": [],
+   "parts": [
+    "building-type-e"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-type-f",
+   "file": "building-type-f.glb",
+   "kb": 135,
+   "triangles": 1616,
+   "animations": [],
+   "parts": [
+    "building-type-f"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-type-g",
+   "file": "building-type-g.glb",
+   "kb": 91,
+   "triangles": 1067,
+   "animations": [],
+   "parts": [
+    "building-type-g"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-type-h",
+   "file": "building-type-h.glb",
+   "kb": 63,
+   "triangles": 770,
+   "animations": [],
+   "parts": [
+    "building-type-h"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-type-i",
+   "file": "building-type-i.glb",
+   "kb": 68,
+   "triangles": 800,
+   "animations": [],
+   "parts": [
+    "building-type-i"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-type-j",
+   "file": "building-type-j.glb",
+   "kb": 97,
+   "triangles": 1210,
+   "animations": [],
+   "parts": [
+    "building-type-j"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-type-k",
+   "file": "building-type-k.glb",
+   "kb": 87,
+   "triangles": 1024,
+   "animations": [],
+   "parts": [
+    "building-type-k"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-type-l",
+   "file": "building-type-l.glb",
+   "kb": 106,
+   "triangles": 1310,
+   "animations": [],
+   "parts": [
+    "building-type-l"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-type-m",
+   "file": "building-type-m.glb",
+   "kb": 94,
+   "triangles": 1112,
+   "animations": [],
+   "parts": [
+    "building-type-m"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-type-n",
+   "file": "building-type-n.glb",
+   "kb": 136,
+   "triangles": 1612,
+   "animations": [],
+   "parts": [
+    "building-type-n"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-type-o",
+   "file": "building-type-o.glb",
+   "kb": 111,
+   "triangles": 1326,
+   "animations": [],
+   "parts": [
+    "building-type-o"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-type-p",
+   "file": "building-type-p.glb",
+   "kb": 106,
+   "triangles": 1282,
+   "animations": [],
+   "parts": [
+    "building-type-p"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-type-q",
+   "file": "building-type-q.glb",
+   "kb": 96,
+   "triangles": 1140,
+   "animations": [],
+   "parts": [
+    "building-type-q"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-type-r",
+   "file": "building-type-r.glb",
+   "kb": 86,
+   "triangles": 1030,
+   "animations": [],
+   "parts": [
+    "building-type-r"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-type-s",
+   "file": "building-type-s.glb",
+   "kb": 100,
+   "triangles": 1212,
+   "animations": [],
+   "parts": [
+    "building-type-s"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-type-t",
+   "file": "building-type-t.glb",
+   "kb": 163,
+   "triangles": 2062,
+   "animations": [],
+   "parts": [
+    "building-type-t"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-type-u",
+   "file": "building-type-u.glb",
+   "kb": 115,
+   "triangles": 1332,
+   "animations": [],
+   "parts": [
+    "building-type-u"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "driveway-long",
+   "file": "driveway-long.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "driveway-long"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "driveway-short",
+   "file": "driveway-short.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "driveway-short"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fence-1x2",
+   "file": "fence-1x2.glb",
+   "kb": 16,
+   "triangles": 156,
+   "animations": [],
+   "parts": [
+    "fence-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fence-1x3",
+   "file": "fence-1x3.glb",
+   "kb": 20,
+   "triangles": 204,
+   "animations": [],
+   "parts": [
+    "fence-1x3"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fence-1x4",
+   "file": "fence-1x4.glb",
+   "kb": 24,
+   "triangles": 252,
+   "animations": [],
+   "parts": [
+    "fence-1x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fence-2x2",
+   "file": "fence-2x2.glb",
+   "kb": 23,
+   "triangles": 236,
+   "animations": [],
+   "parts": [
+    "fence-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fence-2x3",
+   "file": "fence-2x3.glb",
+   "kb": 27,
+   "triangles": 284,
+   "animations": [],
+   "parts": [
+    "fence-2x3"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fence-3x2",
+   "file": "fence-3x2.glb",
+   "kb": 30,
+   "triangles": 316,
+   "animations": [],
+   "parts": [
+    "fence-3x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fence-3x3",
+   "file": "fence-3x3.glb",
+   "kb": 34,
+   "triangles": 364,
+   "animations": [],
+   "parts": [
+    "fence-3x3"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fence-low",
+   "file": "fence-low.glb",
+   "kb": 18,
+   "triangles": 180,
+   "animations": [],
+   "parts": [
+    "fence-low"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fence",
+   "file": "fence.glb",
+   "kb": 9,
+   "triangles": 88,
+   "animations": [],
+   "parts": [
+    "fence"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "path-long",
+   "file": "path-long.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "path-long"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "path-short",
+   "file": "path-short.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "path-short"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "path-stones-long",
+   "file": "path-stones-long.glb",
+   "kb": 6,
+   "triangles": 48,
+   "animations": [],
+   "parts": [
+    "path-stones-long"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "path-stones-messy",
+   "file": "path-stones-messy.glb",
+   "kb": 5,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "path-stones-messy"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "path-stones-short",
+   "file": "path-stones-short.glb",
+   "kb": 4,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "path-stones-short"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "planter",
+   "file": "planter.glb",
+   "kb": 19,
+   "triangles": 204,
+   "animations": [],
+   "parts": [
+    "planter"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tree-large",
+   "file": "tree-large.glb",
+   "kb": 5,
+   "triangles": 42,
+   "animations": [],
+   "parts": [
+    "tree-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tree-small",
+   "file": "tree-small.glb",
+   "kb": 5,
+   "triangles": 42,
+   "animations": [],
+   "parts": [
+    "tree-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,3859 @@
+{
+ "pack": "kenney-brick-kit",
+ "kind": "model3d",
+ "source": "https://kenney.nl/assets/brick-kit",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 296,
+ "items": [
+  {
+   "name": "bevel-hq-brick-1x1-round",
+   "file": "bevel-hq-brick-1x1-round.glb",
+   "kb": 6,
+   "triangles": 114,
+   "animations": [],
+   "parts": [
+    "bevel-hq-brick-1x1-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-brick-1x1",
+   "file": "bevel-hq-brick-1x1.glb",
+   "kb": 4,
+   "triangles": 58,
+   "animations": [],
+   "parts": [
+    "bevel-hq-brick-1x1"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-brick-1x2",
+   "file": "bevel-hq-brick-1x2.glb",
+   "kb": 6,
+   "triangles": 96,
+   "animations": [],
+   "parts": [
+    "bevel-hq-brick-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-brick-1x4",
+   "file": "bevel-hq-brick-1x4.glb",
+   "kb": 9,
+   "triangles": 172,
+   "animations": [],
+   "parts": [
+    "bevel-hq-brick-1x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-brick-1x6",
+   "file": "bevel-hq-brick-1x6.glb",
+   "kb": 12,
+   "triangles": 248,
+   "animations": [],
+   "parts": [
+    "bevel-hq-brick-1x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-brick-1x8",
+   "file": "bevel-hq-brick-1x8.glb",
+   "kb": 17,
+   "triangles": 324,
+   "animations": [],
+   "parts": [
+    "bevel-hq-brick-1x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-brick-2x2",
+   "file": "bevel-hq-brick-2x2.glb",
+   "kb": 9,
+   "triangles": 172,
+   "animations": [],
+   "parts": [
+    "bevel-hq-brick-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-brick-2x4",
+   "file": "bevel-hq-brick-2x4.glb",
+   "kb": 17,
+   "triangles": 324,
+   "animations": [],
+   "parts": [
+    "bevel-hq-brick-2x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-brick-2x6",
+   "file": "bevel-hq-brick-2x6.glb",
+   "kb": 24,
+   "triangles": 476,
+   "animations": [],
+   "parts": [
+    "bevel-hq-brick-2x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-brick-2x8",
+   "file": "bevel-hq-brick-2x8.glb",
+   "kb": 30,
+   "triangles": 628,
+   "animations": [],
+   "parts": [
+    "bevel-hq-brick-2x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-brick-corner",
+   "file": "bevel-hq-brick-corner.glb",
+   "kb": 8,
+   "triangles": 146,
+   "animations": [],
+   "parts": [
+    "bevel-hq-brick-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-brick-slope-1x2",
+   "file": "bevel-hq-brick-slope-1x2.glb",
+   "kb": 5,
+   "triangles": 62,
+   "animations": [],
+   "parts": [
+    "bevel-hq-brick-slope-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-brick-slope-2x2",
+   "file": "bevel-hq-brick-slope-2x2.glb",
+   "kb": 6,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "bevel-hq-brick-slope-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-brick-slope-2x3",
+   "file": "bevel-hq-brick-slope-2x3.glb",
+   "kb": 8,
+   "triangles": 138,
+   "animations": [],
+   "parts": [
+    "bevel-hq-brick-slope-2x3"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-brick-slope-2x4",
+   "file": "bevel-hq-brick-slope-2x4.glb",
+   "kb": 10,
+   "triangles": 176,
+   "animations": [],
+   "parts": [
+    "bevel-hq-brick-slope-2x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-brick-slope-3x1",
+   "file": "bevel-hq-brick-slope-3x1.glb",
+   "kb": 5,
+   "triangles": 62,
+   "animations": [],
+   "parts": [
+    "bevel-hq-brick-slope-3x1"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-brick-slope-3x2",
+   "file": "bevel-hq-brick-slope-3x2.glb",
+   "kb": 6,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "bevel-hq-brick-slope-3x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-brick-slope-corner-inside-2x2",
+   "file": "bevel-hq-brick-slope-corner-inside-2x2.glb",
+   "kb": 8,
+   "triangles": 142,
+   "animations": [],
+   "parts": [
+    "bevel-hq-brick-slope-corner-inside-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-brick-slope-corner-inside-inverted-2x2",
+   "file": "bevel-hq-brick-slope-corner-inside-inverted-2x2.glb",
+   "kb": 10,
+   "triangles": 178,
+   "animations": [],
+   "parts": [
+    "bevel-hq-brick-slope-corner-inside-inverted-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-brick-slope-corner-outside-2x2",
+   "file": "bevel-hq-brick-slope-corner-outside-2x2.glb",
+   "kb": 5,
+   "triangles": 62,
+   "animations": [],
+   "parts": [
+    "bevel-hq-brick-slope-corner-outside-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-brick-slope-corner-outside-inverted-2x2",
+   "file": "bevel-hq-brick-slope-corner-outside-inverted-2x2.glb",
+   "kb": 10,
+   "triangles": 178,
+   "animations": [],
+   "parts": [
+    "bevel-hq-brick-slope-corner-outside-inverted-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-brick-slope-inverted-1x2",
+   "file": "bevel-hq-brick-slope-inverted-1x2.glb",
+   "kb": 6,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "bevel-hq-brick-slope-inverted-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-brick-slope-inverted-2x2",
+   "file": "bevel-hq-brick-slope-inverted-2x2.glb",
+   "kb": 10,
+   "triangles": 176,
+   "animations": [],
+   "parts": [
+    "bevel-hq-brick-slope-inverted-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-plate-1x1-round",
+   "file": "bevel-hq-plate-1x1-round.glb",
+   "kb": 6,
+   "triangles": 114,
+   "animations": [],
+   "parts": [
+    "bevel-hq-plate-1x1-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-plate-1x1",
+   "file": "bevel-hq-plate-1x1.glb",
+   "kb": 4,
+   "triangles": 58,
+   "animations": [],
+   "parts": [
+    "bevel-hq-plate-1x1"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-plate-1x2",
+   "file": "bevel-hq-plate-1x2.glb",
+   "kb": 6,
+   "triangles": 96,
+   "animations": [],
+   "parts": [
+    "bevel-hq-plate-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-plate-1x4",
+   "file": "bevel-hq-plate-1x4.glb",
+   "kb": 9,
+   "triangles": 172,
+   "animations": [],
+   "parts": [
+    "bevel-hq-plate-1x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-plate-1x6",
+   "file": "bevel-hq-plate-1x6.glb",
+   "kb": 12,
+   "triangles": 248,
+   "animations": [],
+   "parts": [
+    "bevel-hq-plate-1x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-plate-1x8",
+   "file": "bevel-hq-plate-1x8.glb",
+   "kb": 17,
+   "triangles": 324,
+   "animations": [],
+   "parts": [
+    "bevel-hq-plate-1x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-plate-2x2",
+   "file": "bevel-hq-plate-2x2.glb",
+   "kb": 9,
+   "triangles": 172,
+   "animations": [],
+   "parts": [
+    "bevel-hq-plate-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-plate-2x4",
+   "file": "bevel-hq-plate-2x4.glb",
+   "kb": 17,
+   "triangles": 324,
+   "animations": [],
+   "parts": [
+    "bevel-hq-plate-2x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-plate-2x6",
+   "file": "bevel-hq-plate-2x6.glb",
+   "kb": 24,
+   "triangles": 476,
+   "animations": [],
+   "parts": [
+    "bevel-hq-plate-2x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-plate-2x8",
+   "file": "bevel-hq-plate-2x8.glb",
+   "kb": 30,
+   "triangles": 628,
+   "animations": [],
+   "parts": [
+    "bevel-hq-plate-2x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-plate-4x4",
+   "file": "bevel-hq-plate-4x4.glb",
+   "kb": 30,
+   "triangles": 628,
+   "animations": [],
+   "parts": [
+    "bevel-hq-plate-4x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-plate-4x6",
+   "file": "bevel-hq-plate-4x6.glb",
+   "kb": 44,
+   "triangles": 932,
+   "animations": [],
+   "parts": [
+    "bevel-hq-plate-4x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-plate-4x8",
+   "file": "bevel-hq-plate-4x8.glb",
+   "kb": 58,
+   "triangles": 1236,
+   "animations": [],
+   "parts": [
+    "bevel-hq-plate-4x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-hq-plate-corner",
+   "file": "bevel-hq-plate-corner.glb",
+   "kb": 8,
+   "triangles": 146,
+   "animations": [],
+   "parts": [
+    "bevel-hq-plate-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-brick-1x1-round",
+   "file": "bevel-lq-brick-1x1-round.glb",
+   "kb": 6,
+   "triangles": 82,
+   "animations": [],
+   "parts": [
+    "bevel-lq-brick-1x1-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-brick-1x1",
+   "file": "bevel-lq-brick-1x1.glb",
+   "kb": 4,
+   "triangles": 34,
+   "animations": [],
+   "parts": [
+    "bevel-lq-brick-1x1"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-brick-1x2",
+   "file": "bevel-lq-brick-1x2.glb",
+   "kb": 5,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "bevel-lq-brick-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-brick-1x4",
+   "file": "bevel-lq-brick-1x4.glb",
+   "kb": 7,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "bevel-lq-brick-1x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-brick-1x6",
+   "file": "bevel-lq-brick-1x6.glb",
+   "kb": 10,
+   "triangles": 144,
+   "animations": [],
+   "parts": [
+    "bevel-lq-brick-1x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-brick-1x8",
+   "file": "bevel-lq-brick-1x8.glb",
+   "kb": 12,
+   "triangles": 188,
+   "animations": [],
+   "parts": [
+    "bevel-lq-brick-1x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-brick-2x2",
+   "file": "bevel-lq-brick-2x2.glb",
+   "kb": 7,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "bevel-lq-brick-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-brick-2x4",
+   "file": "bevel-lq-brick-2x4.glb",
+   "kb": 12,
+   "triangles": 188,
+   "animations": [],
+   "parts": [
+    "bevel-lq-brick-2x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-brick-2x6",
+   "file": "bevel-lq-brick-2x6.glb",
+   "kb": 17,
+   "triangles": 276,
+   "animations": [],
+   "parts": [
+    "bevel-lq-brick-2x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-brick-2x8",
+   "file": "bevel-lq-brick-2x8.glb",
+   "kb": 22,
+   "triangles": 364,
+   "animations": [],
+   "parts": [
+    "bevel-lq-brick-2x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-brick-corner",
+   "file": "bevel-lq-brick-corner.glb",
+   "kb": 7,
+   "triangles": 86,
+   "animations": [],
+   "parts": [
+    "bevel-lq-brick-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-brick-slope-1x2",
+   "file": "bevel-lq-brick-slope-1x2.glb",
+   "kb": 4,
+   "triangles": 38,
+   "animations": [],
+   "parts": [
+    "bevel-lq-brick-slope-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-brick-slope-2x2",
+   "file": "bevel-lq-brick-slope-2x2.glb",
+   "kb": 5,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "bevel-lq-brick-slope-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-brick-slope-2x3",
+   "file": "bevel-lq-brick-slope-2x3.glb",
+   "kb": 6,
+   "triangles": 82,
+   "animations": [],
+   "parts": [
+    "bevel-lq-brick-slope-2x3"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-brick-slope-2x4",
+   "file": "bevel-lq-brick-slope-2x4.glb",
+   "kb": 7,
+   "triangles": 104,
+   "animations": [],
+   "parts": [
+    "bevel-lq-brick-slope-2x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-brick-slope-3x1",
+   "file": "bevel-lq-brick-slope-3x1.glb",
+   "kb": 4,
+   "triangles": 38,
+   "animations": [],
+   "parts": [
+    "bevel-lq-brick-slope-3x1"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-brick-slope-3x2",
+   "file": "bevel-lq-brick-slope-3x2.glb",
+   "kb": 5,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "bevel-lq-brick-slope-3x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-brick-slope-corner-inside-2x2",
+   "file": "bevel-lq-brick-slope-corner-inside-2x2.glb",
+   "kb": 6,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "bevel-lq-brick-slope-corner-inside-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-brick-slope-corner-inside-inverted-2x2",
+   "file": "bevel-lq-brick-slope-corner-inside-inverted-2x2.glb",
+   "kb": 8,
+   "triangles": 106,
+   "animations": [],
+   "parts": [
+    "bevel-lq-brick-slope-corner-inside-inverted-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-brick-slope-corner-outside-2x2",
+   "file": "bevel-lq-brick-slope-corner-outside-2x2.glb",
+   "kb": 4,
+   "triangles": 40,
+   "animations": [],
+   "parts": [
+    "bevel-lq-brick-slope-corner-outside-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-brick-slope-corner-outside-inverted-2x2",
+   "file": "bevel-lq-brick-slope-corner-outside-inverted-2x2.glb",
+   "kb": 8,
+   "triangles": 106,
+   "animations": [],
+   "parts": [
+    "bevel-lq-brick-slope-corner-outside-inverted-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-brick-slope-inverted-1x2",
+   "file": "bevel-lq-brick-slope-inverted-1x2.glb",
+   "kb": 5,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "bevel-lq-brick-slope-inverted-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-brick-slope-inverted-2x2",
+   "file": "bevel-lq-brick-slope-inverted-2x2.glb",
+   "kb": 7,
+   "triangles": 104,
+   "animations": [],
+   "parts": [
+    "bevel-lq-brick-slope-inverted-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-plate-1x1-round",
+   "file": "bevel-lq-plate-1x1-round.glb",
+   "kb": 6,
+   "triangles": 82,
+   "animations": [],
+   "parts": [
+    "bevel-lq-plate-1x1-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-plate-1x1",
+   "file": "bevel-lq-plate-1x1.glb",
+   "kb": 4,
+   "triangles": 34,
+   "animations": [],
+   "parts": [
+    "bevel-lq-plate-1x1"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-plate-1x2",
+   "file": "bevel-lq-plate-1x2.glb",
+   "kb": 5,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "bevel-lq-plate-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-plate-1x4",
+   "file": "bevel-lq-plate-1x4.glb",
+   "kb": 7,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "bevel-lq-plate-1x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-plate-1x6",
+   "file": "bevel-lq-plate-1x6.glb",
+   "kb": 10,
+   "triangles": 144,
+   "animations": [],
+   "parts": [
+    "bevel-lq-plate-1x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-plate-1x8",
+   "file": "bevel-lq-plate-1x8.glb",
+   "kb": 12,
+   "triangles": 188,
+   "animations": [],
+   "parts": [
+    "bevel-lq-plate-1x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-plate-2x2",
+   "file": "bevel-lq-plate-2x2.glb",
+   "kb": 7,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "bevel-lq-plate-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-plate-2x4",
+   "file": "bevel-lq-plate-2x4.glb",
+   "kb": 12,
+   "triangles": 188,
+   "animations": [],
+   "parts": [
+    "bevel-lq-plate-2x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-plate-2x6",
+   "file": "bevel-lq-plate-2x6.glb",
+   "kb": 17,
+   "triangles": 276,
+   "animations": [],
+   "parts": [
+    "bevel-lq-plate-2x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-plate-2x8",
+   "file": "bevel-lq-plate-2x8.glb",
+   "kb": 22,
+   "triangles": 364,
+   "animations": [],
+   "parts": [
+    "bevel-lq-plate-2x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-plate-4x4",
+   "file": "bevel-lq-plate-4x4.glb",
+   "kb": 22,
+   "triangles": 364,
+   "animations": [],
+   "parts": [
+    "bevel-lq-plate-4x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-plate-4x6",
+   "file": "bevel-lq-plate-4x6.glb",
+   "kb": 33,
+   "triangles": 540,
+   "animations": [],
+   "parts": [
+    "bevel-lq-plate-4x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-plate-4x8",
+   "file": "bevel-lq-plate-4x8.glb",
+   "kb": 43,
+   "triangles": 716,
+   "animations": [],
+   "parts": [
+    "bevel-lq-plate-4x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bevel-lq-plate-corner",
+   "file": "bevel-lq-plate-corner.glb",
+   "kb": 7,
+   "triangles": 86,
+   "animations": [],
+   "parts": [
+    "bevel-lq-plate-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-brick-1x1-round",
+   "file": "none-hq-brick-1x1-round.glb",
+   "kb": 5,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "none-hq-brick-1x1-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-brick-1x1",
+   "file": "none-hq-brick-1x1.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "none-hq-brick-1x1"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-brick-1x2",
+   "file": "none-hq-brick-1x2.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "none-hq-brick-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-brick-1x4",
+   "file": "none-hq-brick-1x4.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "none-hq-brick-1x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-brick-1x6",
+   "file": "none-hq-brick-1x6.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "none-hq-brick-1x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-brick-1x8",
+   "file": "none-hq-brick-1x8.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "none-hq-brick-1x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-brick-2x2",
+   "file": "none-hq-brick-2x2.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "none-hq-brick-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-brick-2x4",
+   "file": "none-hq-brick-2x4.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "none-hq-brick-2x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-brick-2x6",
+   "file": "none-hq-brick-2x6.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "none-hq-brick-2x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-brick-2x8",
+   "file": "none-hq-brick-2x8.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "none-hq-brick-2x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-brick-corner",
+   "file": "none-hq-brick-corner.glb",
+   "kb": 4,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "none-hq-brick-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-brick-slope-1x2",
+   "file": "none-hq-brick-slope-1x2.glb",
+   "kb": 3,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "none-hq-brick-slope-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-brick-slope-2x2",
+   "file": "none-hq-brick-slope-2x2.glb",
+   "kb": 3,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "none-hq-brick-slope-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-brick-slope-2x3",
+   "file": "none-hq-brick-slope-2x3.glb",
+   "kb": 3,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "none-hq-brick-slope-2x3"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-brick-slope-2x4",
+   "file": "none-hq-brick-slope-2x4.glb",
+   "kb": 3,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "none-hq-brick-slope-2x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-brick-slope-3x1",
+   "file": "none-hq-brick-slope-3x1.glb",
+   "kb": 3,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "none-hq-brick-slope-3x1"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-brick-slope-3x2",
+   "file": "none-hq-brick-slope-3x2.glb",
+   "kb": 3,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "none-hq-brick-slope-3x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-brick-slope-corner-inside-2x2",
+   "file": "none-hq-brick-slope-corner-inside-2x2.glb",
+   "kb": 3,
+   "triangles": 28,
+   "animations": [],
+   "parts": [
+    "none-hq-brick-slope-corner-inside-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-brick-slope-corner-inside-inverted-2x2",
+   "file": "none-hq-brick-slope-corner-inside-inverted-2x2.glb",
+   "kb": 3,
+   "triangles": 26,
+   "animations": [],
+   "parts": [
+    "none-hq-brick-slope-corner-inside-inverted-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-brick-slope-corner-outside-2x2",
+   "file": "none-hq-brick-slope-corner-outside-2x2.glb",
+   "kb": 3,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "none-hq-brick-slope-corner-outside-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-brick-slope-corner-outside-inverted-2x2",
+   "file": "none-hq-brick-slope-corner-outside-inverted-2x2.glb",
+   "kb": 3,
+   "triangles": 26,
+   "animations": [],
+   "parts": [
+    "none-hq-brick-slope-corner-outside-inverted-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-brick-slope-inverted-1x2",
+   "file": "none-hq-brick-slope-inverted-1x2.glb",
+   "kb": 3,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "none-hq-brick-slope-inverted-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-brick-slope-inverted-2x2",
+   "file": "none-hq-brick-slope-inverted-2x2.glb",
+   "kb": 3,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "none-hq-brick-slope-inverted-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-plate-1x1-round",
+   "file": "none-hq-plate-1x1-round.glb",
+   "kb": 5,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "none-hq-plate-1x1-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-plate-1x1",
+   "file": "none-hq-plate-1x1.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "none-hq-plate-1x1"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-plate-1x2",
+   "file": "none-hq-plate-1x2.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "none-hq-plate-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-plate-1x4",
+   "file": "none-hq-plate-1x4.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "none-hq-plate-1x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-plate-1x6",
+   "file": "none-hq-plate-1x6.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "none-hq-plate-1x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-plate-1x8",
+   "file": "none-hq-plate-1x8.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "none-hq-plate-1x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-plate-2x2",
+   "file": "none-hq-plate-2x2.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "none-hq-plate-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-plate-2x4",
+   "file": "none-hq-plate-2x4.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "none-hq-plate-2x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-plate-2x6",
+   "file": "none-hq-plate-2x6.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "none-hq-plate-2x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-plate-2x8",
+   "file": "none-hq-plate-2x8.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "none-hq-plate-2x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-plate-4x4",
+   "file": "none-hq-plate-4x4.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "none-hq-plate-4x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-plate-4x6",
+   "file": "none-hq-plate-4x6.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "none-hq-plate-4x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-plate-4x8",
+   "file": "none-hq-plate-4x8.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "none-hq-plate-4x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-hq-plate-corner",
+   "file": "none-hq-plate-corner.glb",
+   "kb": 4,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "none-hq-plate-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-brick-1x1-round",
+   "file": "none-lq-brick-1x1-round.glb",
+   "kb": 4,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "none-lq-brick-1x1-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-brick-1x1",
+   "file": "none-lq-brick-1x1.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "none-lq-brick-1x1"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-brick-1x2",
+   "file": "none-lq-brick-1x2.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "none-lq-brick-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-brick-1x4",
+   "file": "none-lq-brick-1x4.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "none-lq-brick-1x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-brick-1x6",
+   "file": "none-lq-brick-1x6.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "none-lq-brick-1x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-brick-1x8",
+   "file": "none-lq-brick-1x8.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "none-lq-brick-1x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-brick-2x2",
+   "file": "none-lq-brick-2x2.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "none-lq-brick-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-brick-2x4",
+   "file": "none-lq-brick-2x4.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "none-lq-brick-2x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-brick-2x6",
+   "file": "none-lq-brick-2x6.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "none-lq-brick-2x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-brick-2x8",
+   "file": "none-lq-brick-2x8.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "none-lq-brick-2x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-brick-corner",
+   "file": "none-lq-brick-corner.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "none-lq-brick-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-brick-slope-1x2",
+   "file": "none-lq-brick-slope-1x2.glb",
+   "kb": 3,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "none-lq-brick-slope-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-brick-slope-2x2",
+   "file": "none-lq-brick-slope-2x2.glb",
+   "kb": 3,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "none-lq-brick-slope-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-brick-slope-2x3",
+   "file": "none-lq-brick-slope-2x3.glb",
+   "kb": 3,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "none-lq-brick-slope-2x3"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-brick-slope-2x4",
+   "file": "none-lq-brick-slope-2x4.glb",
+   "kb": 3,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "none-lq-brick-slope-2x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-brick-slope-3x1",
+   "file": "none-lq-brick-slope-3x1.glb",
+   "kb": 3,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "none-lq-brick-slope-3x1"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-brick-slope-3x2",
+   "file": "none-lq-brick-slope-3x2.glb",
+   "kb": 3,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "none-lq-brick-slope-3x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-brick-slope-corner-inside-2x2",
+   "file": "none-lq-brick-slope-corner-inside-2x2.glb",
+   "kb": 3,
+   "triangles": 18,
+   "animations": [],
+   "parts": [
+    "none-lq-brick-slope-corner-inside-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-brick-slope-corner-inside-inverted-2x2",
+   "file": "none-lq-brick-slope-corner-inside-inverted-2x2.glb",
+   "kb": 3,
+   "triangles": 18,
+   "animations": [],
+   "parts": [
+    "none-lq-brick-slope-corner-inside-inverted-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-brick-slope-corner-outside-2x2",
+   "file": "none-lq-brick-slope-corner-outside-2x2.glb",
+   "kb": 3,
+   "triangles": 18,
+   "animations": [],
+   "parts": [
+    "none-lq-brick-slope-corner-outside-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-brick-slope-corner-outside-inverted-2x2",
+   "file": "none-lq-brick-slope-corner-outside-inverted-2x2.glb",
+   "kb": 3,
+   "triangles": 18,
+   "animations": [],
+   "parts": [
+    "none-lq-brick-slope-corner-outside-inverted-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-brick-slope-inverted-1x2",
+   "file": "none-lq-brick-slope-inverted-1x2.glb",
+   "kb": 3,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "none-lq-brick-slope-inverted-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-brick-slope-inverted-2x2",
+   "file": "none-lq-brick-slope-inverted-2x2.glb",
+   "kb": 3,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "none-lq-brick-slope-inverted-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-plate-1x1-round",
+   "file": "none-lq-plate-1x1-round.glb",
+   "kb": 4,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "none-lq-plate-1x1-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-plate-1x1",
+   "file": "none-lq-plate-1x1.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "none-lq-plate-1x1"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-plate-1x2",
+   "file": "none-lq-plate-1x2.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "none-lq-plate-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-plate-1x4",
+   "file": "none-lq-plate-1x4.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "none-lq-plate-1x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-plate-1x6",
+   "file": "none-lq-plate-1x6.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "none-lq-plate-1x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-plate-1x8",
+   "file": "none-lq-plate-1x8.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "none-lq-plate-1x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-plate-2x2",
+   "file": "none-lq-plate-2x2.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "none-lq-plate-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-plate-2x4",
+   "file": "none-lq-plate-2x4.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "none-lq-plate-2x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-plate-2x6",
+   "file": "none-lq-plate-2x6.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "none-lq-plate-2x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-plate-2x8",
+   "file": "none-lq-plate-2x8.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "none-lq-plate-2x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-plate-4x4",
+   "file": "none-lq-plate-4x4.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "none-lq-plate-4x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-plate-4x6",
+   "file": "none-lq-plate-4x6.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "none-lq-plate-4x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-plate-4x8",
+   "file": "none-lq-plate-4x8.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "none-lq-plate-4x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "none-lq-plate-corner",
+   "file": "none-lq-plate-corner.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "none-lq-plate-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-brick-1x1-round",
+   "file": "round-hq-brick-1x1-round.glb",
+   "kb": 6,
+   "triangles": 114,
+   "animations": [],
+   "parts": [
+    "round-hq-brick-1x1-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-brick-1x1",
+   "file": "round-hq-brick-1x1.glb",
+   "kb": 4,
+   "triangles": 58,
+   "animations": [],
+   "parts": [
+    "round-hq-brick-1x1"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-brick-1x2",
+   "file": "round-hq-brick-1x2.glb",
+   "kb": 6,
+   "triangles": 96,
+   "animations": [],
+   "parts": [
+    "round-hq-brick-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-brick-1x4",
+   "file": "round-hq-brick-1x4.glb",
+   "kb": 9,
+   "triangles": 172,
+   "animations": [],
+   "parts": [
+    "round-hq-brick-1x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-brick-1x6",
+   "file": "round-hq-brick-1x6.glb",
+   "kb": 12,
+   "triangles": 248,
+   "animations": [],
+   "parts": [
+    "round-hq-brick-1x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-brick-1x8",
+   "file": "round-hq-brick-1x8.glb",
+   "kb": 17,
+   "triangles": 324,
+   "animations": [],
+   "parts": [
+    "round-hq-brick-1x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-brick-2x2",
+   "file": "round-hq-brick-2x2.glb",
+   "kb": 9,
+   "triangles": 172,
+   "animations": [],
+   "parts": [
+    "round-hq-brick-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-brick-2x4",
+   "file": "round-hq-brick-2x4.glb",
+   "kb": 17,
+   "triangles": 324,
+   "animations": [],
+   "parts": [
+    "round-hq-brick-2x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-brick-2x6",
+   "file": "round-hq-brick-2x6.glb",
+   "kb": 24,
+   "triangles": 476,
+   "animations": [],
+   "parts": [
+    "round-hq-brick-2x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-brick-2x8",
+   "file": "round-hq-brick-2x8.glb",
+   "kb": 30,
+   "triangles": 628,
+   "animations": [],
+   "parts": [
+    "round-hq-brick-2x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-brick-corner",
+   "file": "round-hq-brick-corner.glb",
+   "kb": 8,
+   "triangles": 146,
+   "animations": [],
+   "parts": [
+    "round-hq-brick-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-brick-slope-1x2",
+   "file": "round-hq-brick-slope-1x2.glb",
+   "kb": 5,
+   "triangles": 62,
+   "animations": [],
+   "parts": [
+    "round-hq-brick-slope-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-brick-slope-2x2",
+   "file": "round-hq-brick-slope-2x2.glb",
+   "kb": 6,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "round-hq-brick-slope-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-brick-slope-2x3",
+   "file": "round-hq-brick-slope-2x3.glb",
+   "kb": 8,
+   "triangles": 138,
+   "animations": [],
+   "parts": [
+    "round-hq-brick-slope-2x3"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-brick-slope-2x4",
+   "file": "round-hq-brick-slope-2x4.glb",
+   "kb": 10,
+   "triangles": 176,
+   "animations": [],
+   "parts": [
+    "round-hq-brick-slope-2x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-brick-slope-3x1",
+   "file": "round-hq-brick-slope-3x1.glb",
+   "kb": 5,
+   "triangles": 62,
+   "animations": [],
+   "parts": [
+    "round-hq-brick-slope-3x1"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-brick-slope-3x2",
+   "file": "round-hq-brick-slope-3x2.glb",
+   "kb": 6,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "round-hq-brick-slope-3x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-brick-slope-corner-inside-2x2",
+   "file": "round-hq-brick-slope-corner-inside-2x2.glb",
+   "kb": 8,
+   "triangles": 142,
+   "animations": [],
+   "parts": [
+    "round-hq-brick-slope-corner-inside-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-brick-slope-corner-inside-inverted-2x2",
+   "file": "round-hq-brick-slope-corner-inside-inverted-2x2.glb",
+   "kb": 10,
+   "triangles": 178,
+   "animations": [],
+   "parts": [
+    "round-hq-brick-slope-corner-inside-inverted-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-brick-slope-corner-outside-2x2",
+   "file": "round-hq-brick-slope-corner-outside-2x2.glb",
+   "kb": 5,
+   "triangles": 62,
+   "animations": [],
+   "parts": [
+    "round-hq-brick-slope-corner-outside-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-brick-slope-corner-outside-inverted-2x2",
+   "file": "round-hq-brick-slope-corner-outside-inverted-2x2.glb",
+   "kb": 10,
+   "triangles": 178,
+   "animations": [],
+   "parts": [
+    "round-hq-brick-slope-corner-outside-inverted-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-brick-slope-inverted-1x2",
+   "file": "round-hq-brick-slope-inverted-1x2.glb",
+   "kb": 6,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "round-hq-brick-slope-inverted-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-brick-slope-inverted-2x2",
+   "file": "round-hq-brick-slope-inverted-2x2.glb",
+   "kb": 10,
+   "triangles": 176,
+   "animations": [],
+   "parts": [
+    "round-hq-brick-slope-inverted-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-plate-1x1-round",
+   "file": "round-hq-plate-1x1-round.glb",
+   "kb": 6,
+   "triangles": 114,
+   "animations": [],
+   "parts": [
+    "round-hq-plate-1x1-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-plate-1x1",
+   "file": "round-hq-plate-1x1.glb",
+   "kb": 4,
+   "triangles": 58,
+   "animations": [],
+   "parts": [
+    "round-hq-plate-1x1"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-plate-1x2",
+   "file": "round-hq-plate-1x2.glb",
+   "kb": 6,
+   "triangles": 96,
+   "animations": [],
+   "parts": [
+    "round-hq-plate-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-plate-1x4",
+   "file": "round-hq-plate-1x4.glb",
+   "kb": 9,
+   "triangles": 172,
+   "animations": [],
+   "parts": [
+    "round-hq-plate-1x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-plate-1x6",
+   "file": "round-hq-plate-1x6.glb",
+   "kb": 12,
+   "triangles": 248,
+   "animations": [],
+   "parts": [
+    "round-hq-plate-1x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-plate-1x8",
+   "file": "round-hq-plate-1x8.glb",
+   "kb": 17,
+   "triangles": 324,
+   "animations": [],
+   "parts": [
+    "round-hq-plate-1x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-plate-2x2",
+   "file": "round-hq-plate-2x2.glb",
+   "kb": 9,
+   "triangles": 172,
+   "animations": [],
+   "parts": [
+    "round-hq-plate-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-plate-2x4",
+   "file": "round-hq-plate-2x4.glb",
+   "kb": 17,
+   "triangles": 324,
+   "animations": [],
+   "parts": [
+    "round-hq-plate-2x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-plate-2x6",
+   "file": "round-hq-plate-2x6.glb",
+   "kb": 24,
+   "triangles": 476,
+   "animations": [],
+   "parts": [
+    "round-hq-plate-2x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-plate-2x8",
+   "file": "round-hq-plate-2x8.glb",
+   "kb": 30,
+   "triangles": 628,
+   "animations": [],
+   "parts": [
+    "round-hq-plate-2x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-plate-4x4",
+   "file": "round-hq-plate-4x4.glb",
+   "kb": 30,
+   "triangles": 628,
+   "animations": [],
+   "parts": [
+    "round-hq-plate-4x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-plate-4x6",
+   "file": "round-hq-plate-4x6.glb",
+   "kb": 44,
+   "triangles": 932,
+   "animations": [],
+   "parts": [
+    "round-hq-plate-4x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-plate-4x8",
+   "file": "round-hq-plate-4x8.glb",
+   "kb": 58,
+   "triangles": 1236,
+   "animations": [],
+   "parts": [
+    "round-hq-plate-4x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-hq-plate-corner",
+   "file": "round-hq-plate-corner.glb",
+   "kb": 8,
+   "triangles": 146,
+   "animations": [],
+   "parts": [
+    "round-hq-plate-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-brick-1x1-round",
+   "file": "round-lq-brick-1x1-round.glb",
+   "kb": 6,
+   "triangles": 82,
+   "animations": [],
+   "parts": [
+    "round-lq-brick-1x1-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-brick-1x1",
+   "file": "round-lq-brick-1x1.glb",
+   "kb": 4,
+   "triangles": 34,
+   "animations": [],
+   "parts": [
+    "round-lq-brick-1x1"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-brick-1x2",
+   "file": "round-lq-brick-1x2.glb",
+   "kb": 5,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "round-lq-brick-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-brick-1x4",
+   "file": "round-lq-brick-1x4.glb",
+   "kb": 7,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "round-lq-brick-1x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-brick-1x6",
+   "file": "round-lq-brick-1x6.glb",
+   "kb": 10,
+   "triangles": 144,
+   "animations": [],
+   "parts": [
+    "round-lq-brick-1x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-brick-1x8",
+   "file": "round-lq-brick-1x8.glb",
+   "kb": 12,
+   "triangles": 188,
+   "animations": [],
+   "parts": [
+    "round-lq-brick-1x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-brick-2x2",
+   "file": "round-lq-brick-2x2.glb",
+   "kb": 7,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "round-lq-brick-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-brick-2x4",
+   "file": "round-lq-brick-2x4.glb",
+   "kb": 12,
+   "triangles": 188,
+   "animations": [],
+   "parts": [
+    "round-lq-brick-2x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-brick-2x6",
+   "file": "round-lq-brick-2x6.glb",
+   "kb": 17,
+   "triangles": 276,
+   "animations": [],
+   "parts": [
+    "round-lq-brick-2x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-brick-2x8",
+   "file": "round-lq-brick-2x8.glb",
+   "kb": 22,
+   "triangles": 364,
+   "animations": [],
+   "parts": [
+    "round-lq-brick-2x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-brick-corner",
+   "file": "round-lq-brick-corner.glb",
+   "kb": 7,
+   "triangles": 86,
+   "animations": [],
+   "parts": [
+    "round-lq-brick-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-brick-slope-1x2",
+   "file": "round-lq-brick-slope-1x2.glb",
+   "kb": 4,
+   "triangles": 38,
+   "animations": [],
+   "parts": [
+    "round-lq-brick-slope-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-brick-slope-2x2",
+   "file": "round-lq-brick-slope-2x2.glb",
+   "kb": 5,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "round-lq-brick-slope-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-brick-slope-2x3",
+   "file": "round-lq-brick-slope-2x3.glb",
+   "kb": 6,
+   "triangles": 82,
+   "animations": [],
+   "parts": [
+    "round-lq-brick-slope-2x3"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-brick-slope-2x4",
+   "file": "round-lq-brick-slope-2x4.glb",
+   "kb": 7,
+   "triangles": 104,
+   "animations": [],
+   "parts": [
+    "round-lq-brick-slope-2x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-brick-slope-3x1",
+   "file": "round-lq-brick-slope-3x1.glb",
+   "kb": 4,
+   "triangles": 38,
+   "animations": [],
+   "parts": [
+    "round-lq-brick-slope-3x1"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-brick-slope-3x2",
+   "file": "round-lq-brick-slope-3x2.glb",
+   "kb": 5,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "round-lq-brick-slope-3x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-brick-slope-corner-inside-2x2",
+   "file": "round-lq-brick-slope-corner-inside-2x2.glb",
+   "kb": 6,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "round-lq-brick-slope-corner-inside-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-brick-slope-corner-inside-inverted-2x2",
+   "file": "round-lq-brick-slope-corner-inside-inverted-2x2.glb",
+   "kb": 8,
+   "triangles": 106,
+   "animations": [],
+   "parts": [
+    "round-lq-brick-slope-corner-inside-inverted-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-brick-slope-corner-outside-2x2",
+   "file": "round-lq-brick-slope-corner-outside-2x2.glb",
+   "kb": 4,
+   "triangles": 40,
+   "animations": [],
+   "parts": [
+    "round-lq-brick-slope-corner-outside-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-brick-slope-corner-outside-inverted-2x2",
+   "file": "round-lq-brick-slope-corner-outside-inverted-2x2.glb",
+   "kb": 8,
+   "triangles": 106,
+   "animations": [],
+   "parts": [
+    "round-lq-brick-slope-corner-outside-inverted-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-brick-slope-inverted-1x2",
+   "file": "round-lq-brick-slope-inverted-1x2.glb",
+   "kb": 5,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "round-lq-brick-slope-inverted-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-brick-slope-inverted-2x2",
+   "file": "round-lq-brick-slope-inverted-2x2.glb",
+   "kb": 7,
+   "triangles": 104,
+   "animations": [],
+   "parts": [
+    "round-lq-brick-slope-inverted-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-plate-1x1-round",
+   "file": "round-lq-plate-1x1-round.glb",
+   "kb": 6,
+   "triangles": 82,
+   "animations": [],
+   "parts": [
+    "round-lq-plate-1x1-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-plate-1x1",
+   "file": "round-lq-plate-1x1.glb",
+   "kb": 4,
+   "triangles": 34,
+   "animations": [],
+   "parts": [
+    "round-lq-plate-1x1"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-plate-1x2",
+   "file": "round-lq-plate-1x2.glb",
+   "kb": 5,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "round-lq-plate-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-plate-1x4",
+   "file": "round-lq-plate-1x4.glb",
+   "kb": 7,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "round-lq-plate-1x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-plate-1x6",
+   "file": "round-lq-plate-1x6.glb",
+   "kb": 10,
+   "triangles": 144,
+   "animations": [],
+   "parts": [
+    "round-lq-plate-1x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-plate-1x8",
+   "file": "round-lq-plate-1x8.glb",
+   "kb": 12,
+   "triangles": 188,
+   "animations": [],
+   "parts": [
+    "round-lq-plate-1x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-plate-2x2",
+   "file": "round-lq-plate-2x2.glb",
+   "kb": 7,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "round-lq-plate-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-plate-2x4",
+   "file": "round-lq-plate-2x4.glb",
+   "kb": 12,
+   "triangles": 188,
+   "animations": [],
+   "parts": [
+    "round-lq-plate-2x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-plate-2x6",
+   "file": "round-lq-plate-2x6.glb",
+   "kb": 17,
+   "triangles": 276,
+   "animations": [],
+   "parts": [
+    "round-lq-plate-2x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-plate-2x8",
+   "file": "round-lq-plate-2x8.glb",
+   "kb": 22,
+   "triangles": 364,
+   "animations": [],
+   "parts": [
+    "round-lq-plate-2x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-plate-4x4",
+   "file": "round-lq-plate-4x4.glb",
+   "kb": 22,
+   "triangles": 364,
+   "animations": [],
+   "parts": [
+    "round-lq-plate-4x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-plate-4x6",
+   "file": "round-lq-plate-4x6.glb",
+   "kb": 33,
+   "triangles": 540,
+   "animations": [],
+   "parts": [
+    "round-lq-plate-4x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-plate-4x8",
+   "file": "round-lq-plate-4x8.glb",
+   "kb": 43,
+   "triangles": 716,
+   "animations": [],
+   "parts": [
+    "round-lq-plate-4x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "round-lq-plate-corner",
+   "file": "round-lq-plate-corner.glb",
+   "kb": 7,
+   "triangles": 86,
+   "animations": [],
+   "parts": [
+    "round-lq-plate-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-brick-1x1-round",
+   "file": "square-hq-brick-1x1-round.glb",
+   "kb": 6,
+   "triangles": 114,
+   "animations": [],
+   "parts": [
+    "square-hq-brick-1x1-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-brick-1x1",
+   "file": "square-hq-brick-1x1.glb",
+   "kb": 4,
+   "triangles": 38,
+   "animations": [],
+   "parts": [
+    "square-hq-brick-1x1"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-brick-1x2",
+   "file": "square-hq-brick-1x2.glb",
+   "kb": 6,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "square-hq-brick-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-brick-1x4",
+   "file": "square-hq-brick-1x4.glb",
+   "kb": 8,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "square-hq-brick-1x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-brick-1x6",
+   "file": "square-hq-brick-1x6.glb",
+   "kb": 11,
+   "triangles": 128,
+   "animations": [],
+   "parts": [
+    "square-hq-brick-1x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-brick-1x8",
+   "file": "square-hq-brick-1x8.glb",
+   "kb": 14,
+   "triangles": 164,
+   "animations": [],
+   "parts": [
+    "square-hq-brick-1x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-brick-2x2",
+   "file": "square-hq-brick-2x2.glb",
+   "kb": 8,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "square-hq-brick-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-brick-2x4",
+   "file": "square-hq-brick-2x4.glb",
+   "kb": 14,
+   "triangles": 164,
+   "animations": [],
+   "parts": [
+    "square-hq-brick-2x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-brick-2x6",
+   "file": "square-hq-brick-2x6.glb",
+   "kb": 20,
+   "triangles": 236,
+   "animations": [],
+   "parts": [
+    "square-hq-brick-2x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-brick-2x8",
+   "file": "square-hq-brick-2x8.glb",
+   "kb": 26,
+   "triangles": 308,
+   "animations": [],
+   "parts": [
+    "square-hq-brick-2x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-brick-corner",
+   "file": "square-hq-brick-corner.glb",
+   "kb": 8,
+   "triangles": 86,
+   "animations": [],
+   "parts": [
+    "square-hq-brick-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-brick-slope-1x2",
+   "file": "square-hq-brick-slope-1x2.glb",
+   "kb": 4,
+   "triangles": 42,
+   "animations": [],
+   "parts": [
+    "square-hq-brick-slope-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-brick-slope-2x2",
+   "file": "square-hq-brick-slope-2x2.glb",
+   "kb": 6,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "square-hq-brick-slope-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-brick-slope-2x3",
+   "file": "square-hq-brick-slope-2x3.glb",
+   "kb": 7,
+   "triangles": 78,
+   "animations": [],
+   "parts": [
+    "square-hq-brick-slope-2x3"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-brick-slope-2x4",
+   "file": "square-hq-brick-slope-2x4.glb",
+   "kb": 9,
+   "triangles": 96,
+   "animations": [],
+   "parts": [
+    "square-hq-brick-slope-2x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-brick-slope-3x1",
+   "file": "square-hq-brick-slope-3x1.glb",
+   "kb": 4,
+   "triangles": 42,
+   "animations": [],
+   "parts": [
+    "square-hq-brick-slope-3x1"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-brick-slope-3x2",
+   "file": "square-hq-brick-slope-3x2.glb",
+   "kb": 6,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "square-hq-brick-slope-3x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-brick-slope-corner-inside-2x2",
+   "file": "square-hq-brick-slope-corner-inside-2x2.glb",
+   "kb": 8,
+   "triangles": 82,
+   "animations": [],
+   "parts": [
+    "square-hq-brick-slope-corner-inside-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-brick-slope-corner-inside-inverted-2x2",
+   "file": "square-hq-brick-slope-corner-inside-inverted-2x2.glb",
+   "kb": 9,
+   "triangles": 98,
+   "animations": [],
+   "parts": [
+    "square-hq-brick-slope-corner-inside-inverted-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-brick-slope-corner-outside-2x2",
+   "file": "square-hq-brick-slope-corner-outside-2x2.glb",
+   "kb": 5,
+   "triangles": 42,
+   "animations": [],
+   "parts": [
+    "square-hq-brick-slope-corner-outside-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-brick-slope-corner-outside-inverted-2x2",
+   "file": "square-hq-brick-slope-corner-outside-inverted-2x2.glb",
+   "kb": 9,
+   "triangles": 98,
+   "animations": [],
+   "parts": [
+    "square-hq-brick-slope-corner-outside-inverted-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-brick-slope-inverted-1x2",
+   "file": "square-hq-brick-slope-inverted-1x2.glb",
+   "kb": 6,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "square-hq-brick-slope-inverted-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-brick-slope-inverted-2x2",
+   "file": "square-hq-brick-slope-inverted-2x2.glb",
+   "kb": 9,
+   "triangles": 96,
+   "animations": [],
+   "parts": [
+    "square-hq-brick-slope-inverted-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-plate-1x1-round",
+   "file": "square-hq-plate-1x1-round.glb",
+   "kb": 6,
+   "triangles": 114,
+   "animations": [],
+   "parts": [
+    "square-hq-plate-1x1-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-plate-1x1",
+   "file": "square-hq-plate-1x1.glb",
+   "kb": 4,
+   "triangles": 38,
+   "animations": [],
+   "parts": [
+    "square-hq-plate-1x1"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-plate-1x2",
+   "file": "square-hq-plate-1x2.glb",
+   "kb": 6,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "square-hq-plate-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-plate-1x4",
+   "file": "square-hq-plate-1x4.glb",
+   "kb": 8,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "square-hq-plate-1x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-plate-1x6",
+   "file": "square-hq-plate-1x6.glb",
+   "kb": 11,
+   "triangles": 128,
+   "animations": [],
+   "parts": [
+    "square-hq-plate-1x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-plate-1x8",
+   "file": "square-hq-plate-1x8.glb",
+   "kb": 14,
+   "triangles": 164,
+   "animations": [],
+   "parts": [
+    "square-hq-plate-1x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-plate-2x2",
+   "file": "square-hq-plate-2x2.glb",
+   "kb": 8,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "square-hq-plate-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-plate-2x4",
+   "file": "square-hq-plate-2x4.glb",
+   "kb": 14,
+   "triangles": 164,
+   "animations": [],
+   "parts": [
+    "square-hq-plate-2x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-plate-2x6",
+   "file": "square-hq-plate-2x6.glb",
+   "kb": 20,
+   "triangles": 236,
+   "animations": [],
+   "parts": [
+    "square-hq-plate-2x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-plate-2x8",
+   "file": "square-hq-plate-2x8.glb",
+   "kb": 26,
+   "triangles": 308,
+   "animations": [],
+   "parts": [
+    "square-hq-plate-2x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-plate-4x4",
+   "file": "square-hq-plate-4x4.glb",
+   "kb": 26,
+   "triangles": 308,
+   "animations": [],
+   "parts": [
+    "square-hq-plate-4x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-plate-4x6",
+   "file": "square-hq-plate-4x6.glb",
+   "kb": 37,
+   "triangles": 452,
+   "animations": [],
+   "parts": [
+    "square-hq-plate-4x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-plate-4x8",
+   "file": "square-hq-plate-4x8.glb",
+   "kb": 48,
+   "triangles": 596,
+   "animations": [],
+   "parts": [
+    "square-hq-plate-4x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-hq-plate-corner",
+   "file": "square-hq-plate-corner.glb",
+   "kb": 8,
+   "triangles": 86,
+   "animations": [],
+   "parts": [
+    "square-hq-plate-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-brick-1x1-round",
+   "file": "square-lq-brick-1x1-round.glb",
+   "kb": 6,
+   "triangles": 82,
+   "animations": [],
+   "parts": [
+    "square-lq-brick-1x1-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-brick-1x1",
+   "file": "square-lq-brick-1x1.glb",
+   "kb": 3,
+   "triangles": 22,
+   "animations": [],
+   "parts": [
+    "square-lq-brick-1x1"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-brick-1x2",
+   "file": "square-lq-brick-1x2.glb",
+   "kb": 4,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "square-lq-brick-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-brick-1x4",
+   "file": "square-lq-brick-1x4.glb",
+   "kb": 6,
+   "triangles": 52,
+   "animations": [],
+   "parts": [
+    "square-lq-brick-1x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-brick-1x6",
+   "file": "square-lq-brick-1x6.glb",
+   "kb": 8,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "square-lq-brick-1x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-brick-1x8",
+   "file": "square-lq-brick-1x8.glb",
+   "kb": 10,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "square-lq-brick-1x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-brick-2x2",
+   "file": "square-lq-brick-2x2.glb",
+   "kb": 6,
+   "triangles": 52,
+   "animations": [],
+   "parts": [
+    "square-lq-brick-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-brick-2x4",
+   "file": "square-lq-brick-2x4.glb",
+   "kb": 10,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "square-lq-brick-2x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-brick-2x6",
+   "file": "square-lq-brick-2x6.glb",
+   "kb": 14,
+   "triangles": 132,
+   "animations": [],
+   "parts": [
+    "square-lq-brick-2x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-brick-2x8",
+   "file": "square-lq-brick-2x8.glb",
+   "kb": 18,
+   "triangles": 172,
+   "animations": [],
+   "parts": [
+    "square-lq-brick-2x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-brick-corner",
+   "file": "square-lq-brick-corner.glb",
+   "kb": 6,
+   "triangles": 50,
+   "animations": [],
+   "parts": [
+    "square-lq-brick-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-brick-slope-1x2",
+   "file": "square-lq-brick-slope-1x2.glb",
+   "kb": 4,
+   "triangles": 26,
+   "animations": [],
+   "parts": [
+    "square-lq-brick-slope-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-brick-slope-2x2",
+   "file": "square-lq-brick-slope-2x2.glb",
+   "kb": 5,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "square-lq-brick-slope-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-brick-slope-2x3",
+   "file": "square-lq-brick-slope-2x3.glb",
+   "kb": 6,
+   "triangles": 46,
+   "animations": [],
+   "parts": [
+    "square-lq-brick-slope-2x3"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-brick-slope-2x4",
+   "file": "square-lq-brick-slope-2x4.glb",
+   "kb": 7,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "square-lq-brick-slope-2x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-brick-slope-3x1",
+   "file": "square-lq-brick-slope-3x1.glb",
+   "kb": 4,
+   "triangles": 26,
+   "animations": [],
+   "parts": [
+    "square-lq-brick-slope-3x1"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-brick-slope-3x2",
+   "file": "square-lq-brick-slope-3x2.glb",
+   "kb": 5,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "square-lq-brick-slope-3x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-brick-slope-corner-inside-2x2",
+   "file": "square-lq-brick-slope-corner-inside-2x2.glb",
+   "kb": 6,
+   "triangles": 48,
+   "animations": [],
+   "parts": [
+    "square-lq-brick-slope-corner-inside-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-brick-slope-corner-inside-inverted-2x2",
+   "file": "square-lq-brick-slope-corner-inside-inverted-2x2.glb",
+   "kb": 7,
+   "triangles": 58,
+   "animations": [],
+   "parts": [
+    "square-lq-brick-slope-corner-inside-inverted-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-brick-slope-corner-outside-2x2",
+   "file": "square-lq-brick-slope-corner-outside-2x2.glb",
+   "kb": 4,
+   "triangles": 28,
+   "animations": [],
+   "parts": [
+    "square-lq-brick-slope-corner-outside-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-brick-slope-corner-outside-inverted-2x2",
+   "file": "square-lq-brick-slope-corner-outside-inverted-2x2.glb",
+   "kb": 7,
+   "triangles": 58,
+   "animations": [],
+   "parts": [
+    "square-lq-brick-slope-corner-outside-inverted-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-brick-slope-inverted-1x2",
+   "file": "square-lq-brick-slope-inverted-1x2.glb",
+   "kb": 5,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "square-lq-brick-slope-inverted-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-brick-slope-inverted-2x2",
+   "file": "square-lq-brick-slope-inverted-2x2.glb",
+   "kb": 7,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "square-lq-brick-slope-inverted-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-plate-1x1-round",
+   "file": "square-lq-plate-1x1-round.glb",
+   "kb": 6,
+   "triangles": 82,
+   "animations": [],
+   "parts": [
+    "square-lq-plate-1x1-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-plate-1x1",
+   "file": "square-lq-plate-1x1.glb",
+   "kb": 3,
+   "triangles": 22,
+   "animations": [],
+   "parts": [
+    "square-lq-plate-1x1"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-plate-1x2",
+   "file": "square-lq-plate-1x2.glb",
+   "kb": 4,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "square-lq-plate-1x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-plate-1x4",
+   "file": "square-lq-plate-1x4.glb",
+   "kb": 6,
+   "triangles": 52,
+   "animations": [],
+   "parts": [
+    "square-lq-plate-1x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-plate-1x6",
+   "file": "square-lq-plate-1x6.glb",
+   "kb": 8,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "square-lq-plate-1x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-plate-1x8",
+   "file": "square-lq-plate-1x8.glb",
+   "kb": 10,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "square-lq-plate-1x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-plate-2x2",
+   "file": "square-lq-plate-2x2.glb",
+   "kb": 6,
+   "triangles": 52,
+   "animations": [],
+   "parts": [
+    "square-lq-plate-2x2"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-plate-2x4",
+   "file": "square-lq-plate-2x4.glb",
+   "kb": 10,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "square-lq-plate-2x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-plate-2x6",
+   "file": "square-lq-plate-2x6.glb",
+   "kb": 14,
+   "triangles": 132,
+   "animations": [],
+   "parts": [
+    "square-lq-plate-2x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-plate-2x8",
+   "file": "square-lq-plate-2x8.glb",
+   "kb": 18,
+   "triangles": 172,
+   "animations": [],
+   "parts": [
+    "square-lq-plate-2x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-plate-4x4",
+   "file": "square-lq-plate-4x4.glb",
+   "kb": 18,
+   "triangles": 172,
+   "animations": [],
+   "parts": [
+    "square-lq-plate-4x4"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-plate-4x6",
+   "file": "square-lq-plate-4x6.glb",
+   "kb": 26,
+   "triangles": 252,
+   "animations": [],
+   "parts": [
+    "square-lq-plate-4x6"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-plate-4x8",
+   "file": "square-lq-plate-4x8.glb",
+   "kb": 34,
+   "triangles": 332,
+   "animations": [],
+   "parts": [
+    "square-lq-plate-4x8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "square-lq-plate-corner",
+   "file": "square-lq-plate-corner.glb",
+   "kb": 6,
+   "triangles": 50,
+   "animations": [],
+   "parts": [
+    "square-lq-plate-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  }
+ ]
+}

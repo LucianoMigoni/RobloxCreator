@@ -1,0 +1,2400 @@
+{
+ "pack": "kenney-coaster-kit",
+ "kind": "model3d",
+ "source": "https://kenney.nl/assets/coaster-kit",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 183,
+ "items": [
+  {
+   "name": "bench",
+   "file": "bench.glb",
+   "kb": 11,
+   "triangles": 112,
+   "animations": [],
+   "parts": [
+    "bench"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-flume-cap-back",
+   "file": "coaster-flume-cap-back.glb",
+   "kb": 2,
+   "triangles": 10,
+   "animations": [],
+   "parts": [
+    "coaster-flume-cap-back"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-flume-cap-front",
+   "file": "coaster-flume-cap-front.glb",
+   "kb": 2,
+   "triangles": 10,
+   "animations": [],
+   "parts": [
+    "coaster-flume-cap-front"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-flume-corner-large-ramp",
+   "file": "coaster-flume-corner-large-ramp.glb",
+   "kb": 39,
+   "triangles": 492,
+   "animations": [],
+   "parts": [
+    "coaster-flume-corner-large-ramp"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-flume-corner-large",
+   "file": "coaster-flume-corner-large.glb",
+   "kb": 39,
+   "triangles": 492,
+   "animations": [],
+   "parts": [
+    "coaster-flume-corner-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-flume-corner-small-ramp",
+   "file": "coaster-flume-corner-small-ramp.glb",
+   "kb": 23,
+   "triangles": 280,
+   "animations": [],
+   "parts": [
+    "coaster-flume-corner-small-ramp"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-flume-corner-small",
+   "file": "coaster-flume-corner-small.glb",
+   "kb": 23,
+   "triangles": 280,
+   "animations": [],
+   "parts": [
+    "coaster-flume-corner-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-flume-curve",
+   "file": "coaster-flume-curve.glb",
+   "kb": 29,
+   "triangles": 362,
+   "animations": [],
+   "parts": [
+    "coaster-flume-curve"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-flume-looping",
+   "file": "coaster-flume-looping.glb",
+   "kb": 79,
+   "triangles": 1018,
+   "animations": [],
+   "parts": [
+    "coaster-flume-looping"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-flume-segment",
+   "file": "coaster-flume-segment.glb",
+   "kb": 4,
+   "triangles": 34,
+   "animations": [],
+   "parts": [
+    "coaster-flume-segment"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-flume-straight-bend-large",
+   "file": "coaster-flume-straight-bend-large.glb",
+   "kb": 39,
+   "triangles": 492,
+   "animations": [],
+   "parts": [
+    "coaster-flume-straight-bend-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-flume-straight-bend",
+   "file": "coaster-flume-straight-bend.glb",
+   "kb": 23,
+   "triangles": 280,
+   "animations": [],
+   "parts": [
+    "coaster-flume-straight-bend"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-flume-straight-bump-down",
+   "file": "coaster-flume-straight-bump-down.glb",
+   "kb": 26,
+   "triangles": 328,
+   "animations": [],
+   "parts": [
+    "coaster-flume-straight-bump-down"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-flume-straight-bump-up",
+   "file": "coaster-flume-straight-bump-up.glb",
+   "kb": 26,
+   "triangles": 328,
+   "animations": [],
+   "parts": [
+    "coaster-flume-straight-bump-up"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-flume-straight-hill-beginning",
+   "file": "coaster-flume-straight-hill-beginning.glb",
+   "kb": 26,
+   "triangles": 328,
+   "animations": [],
+   "parts": [
+    "coaster-flume-straight-hill-beginning"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-flume-straight-hill-complete-half",
+   "file": "coaster-flume-straight-hill-complete-half.glb",
+   "kb": 26,
+   "triangles": 328,
+   "animations": [],
+   "parts": [
+    "coaster-flume-straight-hill-complete-half"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-flume-straight-hill-complete",
+   "file": "coaster-flume-straight-hill-complete.glb",
+   "kb": 26,
+   "triangles": 328,
+   "animations": [],
+   "parts": [
+    "coaster-flume-straight-hill-complete"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-flume-straight-hill-end",
+   "file": "coaster-flume-straight-hill-end.glb",
+   "kb": 26,
+   "triangles": 328,
+   "animations": [],
+   "parts": [
+    "coaster-flume-straight-hill-end"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-flume-straight-skew-left-side",
+   "file": "coaster-flume-straight-skew-left-side.glb",
+   "kb": 23,
+   "triangles": 280,
+   "animations": [],
+   "parts": [
+    "coaster-flume-straight-skew-left-side"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-flume-straight-skew-left",
+   "file": "coaster-flume-straight-skew-left.glb",
+   "kb": 23,
+   "triangles": 280,
+   "animations": [],
+   "parts": [
+    "coaster-flume-straight-skew-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-flume-straight-skew-right-side",
+   "file": "coaster-flume-straight-skew-right-side.glb",
+   "kb": 23,
+   "triangles": 280,
+   "animations": [],
+   "parts": [
+    "coaster-flume-straight-skew-right-side"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-flume-straight-skew-right",
+   "file": "coaster-flume-straight-skew-right.glb",
+   "kb": 23,
+   "triangles": 280,
+   "animations": [],
+   "parts": [
+    "coaster-flume-straight-skew-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-flume-straight",
+   "file": "coaster-flume-straight.glb",
+   "kb": 23,
+   "triangles": 280,
+   "animations": [],
+   "parts": [
+    "coaster-flume-straight"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-flume-track",
+   "file": "coaster-flume-track.glb",
+   "kb": 5,
+   "triangles": 48,
+   "animations": [],
+   "parts": [
+    "coaster-flume-track"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-hanging-cap-back",
+   "file": "coaster-hanging-cap-back.glb",
+   "kb": 2,
+   "triangles": 14,
+   "animations": [],
+   "parts": [
+    "coaster-hanging-cap-back"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-hanging-cap-front",
+   "file": "coaster-hanging-cap-front.glb",
+   "kb": 2,
+   "triangles": 14,
+   "animations": [],
+   "parts": [
+    "coaster-hanging-cap-front"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-hanging-corner-large-ramp",
+   "file": "coaster-hanging-corner-large-ramp.glb",
+   "kb": 56,
+   "triangles": 684,
+   "animations": [],
+   "parts": [
+    "coaster-hanging-corner-large-ramp"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-hanging-corner-large",
+   "file": "coaster-hanging-corner-large.glb",
+   "kb": 56,
+   "triangles": 684,
+   "animations": [],
+   "parts": [
+    "coaster-hanging-corner-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-hanging-corner-small-ramp",
+   "file": "coaster-hanging-corner-small-ramp.glb",
+   "kb": 33,
+   "triangles": 396,
+   "animations": [],
+   "parts": [
+    "coaster-hanging-corner-small-ramp"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-hanging-corner-small",
+   "file": "coaster-hanging-corner-small.glb",
+   "kb": 33,
+   "triangles": 396,
+   "animations": [],
+   "parts": [
+    "coaster-hanging-corner-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-hanging-curve",
+   "file": "coaster-hanging-curve.glb",
+   "kb": 41,
+   "triangles": 500,
+   "animations": [],
+   "parts": [
+    "coaster-hanging-curve"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-hanging-looping",
+   "file": "coaster-hanging-looping.glb",
+   "kb": 109,
+   "triangles": 1332,
+   "animations": [],
+   "parts": [
+    "coaster-hanging-looping"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-hanging-segment",
+   "file": "coaster-hanging-segment.glb",
+   "kb": 4,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "coaster-hanging-segment"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-hanging-straight-bend-large",
+   "file": "coaster-hanging-straight-bend-large.glb",
+   "kb": 56,
+   "triangles": 684,
+   "animations": [],
+   "parts": [
+    "coaster-hanging-straight-bend-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-hanging-straight-bend",
+   "file": "coaster-hanging-straight-bend.glb",
+   "kb": 33,
+   "triangles": 396,
+   "animations": [],
+   "parts": [
+    "coaster-hanging-straight-bend"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-hanging-straight-bump-down",
+   "file": "coaster-hanging-straight-bump-down.glb",
+   "kb": 39,
+   "triangles": 476,
+   "animations": [],
+   "parts": [
+    "coaster-hanging-straight-bump-down"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-hanging-straight-bump-up",
+   "file": "coaster-hanging-straight-bump-up.glb",
+   "kb": 39,
+   "triangles": 476,
+   "animations": [],
+   "parts": [
+    "coaster-hanging-straight-bump-up"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-hanging-straight-hill-beginning",
+   "file": "coaster-hanging-straight-hill-beginning.glb",
+   "kb": 39,
+   "triangles": 476,
+   "animations": [],
+   "parts": [
+    "coaster-hanging-straight-hill-beginning"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-hanging-straight-hill-complete-half",
+   "file": "coaster-hanging-straight-hill-complete-half.glb",
+   "kb": 39,
+   "triangles": 476,
+   "animations": [],
+   "parts": [
+    "coaster-hanging-straight-hill-complete-half"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-hanging-straight-hill-complete",
+   "file": "coaster-hanging-straight-hill-complete.glb",
+   "kb": 39,
+   "triangles": 476,
+   "animations": [],
+   "parts": [
+    "coaster-hanging-straight-hill-complete"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-hanging-straight-hill-end",
+   "file": "coaster-hanging-straight-hill-end.glb",
+   "kb": 39,
+   "triangles": 476,
+   "animations": [],
+   "parts": [
+    "coaster-hanging-straight-hill-end"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-hanging-straight-skew-left-side",
+   "file": "coaster-hanging-straight-skew-left-side.glb",
+   "kb": 33,
+   "triangles": 396,
+   "animations": [],
+   "parts": [
+    "coaster-hanging-straight-skew-left-side"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-hanging-straight-skew-left",
+   "file": "coaster-hanging-straight-skew-left.glb",
+   "kb": 33,
+   "triangles": 396,
+   "animations": [],
+   "parts": [
+    "coaster-hanging-straight-skew-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-hanging-straight-skew-right-side",
+   "file": "coaster-hanging-straight-skew-right-side.glb",
+   "kb": 33,
+   "triangles": 396,
+   "animations": [],
+   "parts": [
+    "coaster-hanging-straight-skew-right-side"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-hanging-straight-skew-right",
+   "file": "coaster-hanging-straight-skew-right.glb",
+   "kb": 33,
+   "triangles": 396,
+   "animations": [],
+   "parts": [
+    "coaster-hanging-straight-skew-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-hanging-straight",
+   "file": "coaster-hanging-straight.glb",
+   "kb": 32,
+   "triangles": 396,
+   "animations": [],
+   "parts": [
+    "coaster-hanging-straight"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-hanging-track",
+   "file": "coaster-hanging-track.glb",
+   "kb": 7,
+   "triangles": 80,
+   "animations": [],
+   "parts": [
+    "coaster-hanging-track"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-monorail-cap-back",
+   "file": "coaster-monorail-cap-back.glb",
+   "kb": 2,
+   "triangles": 10,
+   "animations": [],
+   "parts": [
+    "coaster-monorail-cap-back"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-monorail-cap-front",
+   "file": "coaster-monorail-cap-front.glb",
+   "kb": 2,
+   "triangles": 10,
+   "animations": [],
+   "parts": [
+    "coaster-monorail-cap-front"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-monorail-corner-large-ramp",
+   "file": "coaster-monorail-corner-large-ramp.glb",
+   "kb": 38,
+   "triangles": 468,
+   "animations": [],
+   "parts": [
+    "coaster-monorail-corner-large-ramp"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-monorail-corner-large",
+   "file": "coaster-monorail-corner-large.glb",
+   "kb": 38,
+   "triangles": 468,
+   "animations": [],
+   "parts": [
+    "coaster-monorail-corner-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-monorail-corner-small-ramp",
+   "file": "coaster-monorail-corner-small-ramp.glb",
+   "kb": 22,
+   "triangles": 268,
+   "animations": [],
+   "parts": [
+    "coaster-monorail-corner-small-ramp"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-monorail-corner-small",
+   "file": "coaster-monorail-corner-small.glb",
+   "kb": 22,
+   "triangles": 268,
+   "animations": [],
+   "parts": [
+    "coaster-monorail-corner-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-monorail-curve",
+   "file": "coaster-monorail-curve.glb",
+   "kb": 28,
+   "triangles": 344,
+   "animations": [],
+   "parts": [
+    "coaster-monorail-curve"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-monorail-looping",
+   "file": "coaster-monorail-looping.glb",
+   "kb": 77,
+   "triangles": 952,
+   "animations": [],
+   "parts": [
+    "coaster-monorail-looping"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-monorail-segment",
+   "file": "coaster-monorail-segment.glb",
+   "kb": 4,
+   "triangles": 28,
+   "animations": [],
+   "parts": [
+    "coaster-monorail-segment"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-monorail-straight-bend-large",
+   "file": "coaster-monorail-straight-bend-large.glb",
+   "kb": 38,
+   "triangles": 468,
+   "animations": [],
+   "parts": [
+    "coaster-monorail-straight-bend-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-monorail-straight-bend",
+   "file": "coaster-monorail-straight-bend.glb",
+   "kb": 22,
+   "triangles": 268,
+   "animations": [],
+   "parts": [
+    "coaster-monorail-straight-bend"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-monorail-straight-bump-down",
+   "file": "coaster-monorail-straight-bump-down.glb",
+   "kb": 26,
+   "triangles": 316,
+   "animations": [],
+   "parts": [
+    "coaster-monorail-straight-bump-down"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-monorail-straight-bump-up",
+   "file": "coaster-monorail-straight-bump-up.glb",
+   "kb": 26,
+   "triangles": 316,
+   "animations": [],
+   "parts": [
+    "coaster-monorail-straight-bump-up"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-monorail-straight-hill-beginning",
+   "file": "coaster-monorail-straight-hill-beginning.glb",
+   "kb": 26,
+   "triangles": 316,
+   "animations": [],
+   "parts": [
+    "coaster-monorail-straight-hill-beginning"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-monorail-straight-hill-complete-half",
+   "file": "coaster-monorail-straight-hill-complete-half.glb",
+   "kb": 26,
+   "triangles": 316,
+   "animations": [],
+   "parts": [
+    "coaster-monorail-straight-hill-complete-half"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-monorail-straight-hill-complete",
+   "file": "coaster-monorail-straight-hill-complete.glb",
+   "kb": 26,
+   "triangles": 316,
+   "animations": [],
+   "parts": [
+    "coaster-monorail-straight-hill-complete"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-monorail-straight-hill-end",
+   "file": "coaster-monorail-straight-hill-end.glb",
+   "kb": 26,
+   "triangles": 316,
+   "animations": [],
+   "parts": [
+    "coaster-monorail-straight-hill-end"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-monorail-straight-skew-left-side",
+   "file": "coaster-monorail-straight-skew-left-side.glb",
+   "kb": 22,
+   "triangles": 268,
+   "animations": [],
+   "parts": [
+    "coaster-monorail-straight-skew-left-side"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-monorail-straight-skew-left",
+   "file": "coaster-monorail-straight-skew-left.glb",
+   "kb": 22,
+   "triangles": 268,
+   "animations": [],
+   "parts": [
+    "coaster-monorail-straight-skew-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-monorail-straight-skew-right-side",
+   "file": "coaster-monorail-straight-skew-right-side.glb",
+   "kb": 22,
+   "triangles": 268,
+   "animations": [],
+   "parts": [
+    "coaster-monorail-straight-skew-right-side"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-monorail-straight-skew-right",
+   "file": "coaster-monorail-straight-skew-right.glb",
+   "kb": 22,
+   "triangles": 268,
+   "animations": [],
+   "parts": [
+    "coaster-monorail-straight-skew-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-monorail-straight",
+   "file": "coaster-monorail-straight.glb",
+   "kb": 22,
+   "triangles": 268,
+   "animations": [],
+   "parts": [
+    "coaster-monorail-straight"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-monorail-track",
+   "file": "coaster-monorail-track.glb",
+   "kb": 5,
+   "triangles": 48,
+   "animations": [],
+   "parts": [
+    "coaster-monorail-track"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-mouse-cap-back",
+   "file": "coaster-mouse-cap-back.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "coaster-mouse-cap-back"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-mouse-cap-front",
+   "file": "coaster-mouse-cap-front.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "coaster-mouse-cap-front"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-mouse-corner-large-ramp",
+   "file": "coaster-mouse-corner-large-ramp.glb",
+   "kb": 44,
+   "triangles": 536,
+   "animations": [],
+   "parts": [
+    "coaster-mouse-corner-large-ramp"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-mouse-corner-large",
+   "file": "coaster-mouse-corner-large.glb",
+   "kb": 44,
+   "triangles": 536,
+   "animations": [],
+   "parts": [
+    "coaster-mouse-corner-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-mouse-corner-small-ramp",
+   "file": "coaster-mouse-corner-small-ramp.glb",
+   "kb": 27,
+   "triangles": 328,
+   "animations": [],
+   "parts": [
+    "coaster-mouse-corner-small-ramp"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-mouse-corner-small",
+   "file": "coaster-mouse-corner-small.glb",
+   "kb": 27,
+   "triangles": 328,
+   "animations": [],
+   "parts": [
+    "coaster-mouse-corner-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-mouse-curve",
+   "file": "coaster-mouse-curve.glb",
+   "kb": 33,
+   "triangles": 400,
+   "animations": [],
+   "parts": [
+    "coaster-mouse-curve"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-mouse-looping",
+   "file": "coaster-mouse-looping.glb",
+   "kb": 78,
+   "triangles": 976,
+   "animations": [],
+   "parts": [
+    "coaster-mouse-looping"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-mouse-segment",
+   "file": "coaster-mouse-segment.glb",
+   "kb": 2,
+   "triangles": 8,
+   "animations": [],
+   "parts": [
+    "coaster-mouse-segment"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-mouse-straight-bend-large",
+   "file": "coaster-mouse-straight-bend-large.glb",
+   "kb": 44,
+   "triangles": 536,
+   "animations": [],
+   "parts": [
+    "coaster-mouse-straight-bend-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-mouse-straight-bend",
+   "file": "coaster-mouse-straight-bend.glb",
+   "kb": 27,
+   "triangles": 328,
+   "animations": [],
+   "parts": [
+    "coaster-mouse-straight-bend"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-mouse-straight-bump-down",
+   "file": "coaster-mouse-straight-bump-down.glb",
+   "kb": 32,
+   "triangles": 392,
+   "animations": [],
+   "parts": [
+    "coaster-mouse-straight-bump-down"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-mouse-straight-bump-up",
+   "file": "coaster-mouse-straight-bump-up.glb",
+   "kb": 32,
+   "triangles": 392,
+   "animations": [],
+   "parts": [
+    "coaster-mouse-straight-bump-up"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-mouse-straight-hill-beginning",
+   "file": "coaster-mouse-straight-hill-beginning.glb",
+   "kb": 32,
+   "triangles": 392,
+   "animations": [],
+   "parts": [
+    "coaster-mouse-straight-hill-beginning"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-mouse-straight-hill-complete-half",
+   "file": "coaster-mouse-straight-hill-complete-half.glb",
+   "kb": 32,
+   "triangles": 392,
+   "animations": [],
+   "parts": [
+    "coaster-mouse-straight-hill-complete-half"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-mouse-straight-hill-complete",
+   "file": "coaster-mouse-straight-hill-complete.glb",
+   "kb": 32,
+   "triangles": 392,
+   "animations": [],
+   "parts": [
+    "coaster-mouse-straight-hill-complete"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-mouse-straight-hill-end",
+   "file": "coaster-mouse-straight-hill-end.glb",
+   "kb": 32,
+   "triangles": 392,
+   "animations": [],
+   "parts": [
+    "coaster-mouse-straight-hill-end"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-mouse-straight-skew-left-side",
+   "file": "coaster-mouse-straight-skew-left-side.glb",
+   "kb": 27,
+   "triangles": 328,
+   "animations": [],
+   "parts": [
+    "coaster-mouse-straight-skew-left-side"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-mouse-straight-skew-left",
+   "file": "coaster-mouse-straight-skew-left.glb",
+   "kb": 27,
+   "triangles": 328,
+   "animations": [],
+   "parts": [
+    "coaster-mouse-straight-skew-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-mouse-straight-skew-right-side",
+   "file": "coaster-mouse-straight-skew-right-side.glb",
+   "kb": 27,
+   "triangles": 328,
+   "animations": [],
+   "parts": [
+    "coaster-mouse-straight-skew-right-side"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-mouse-straight-skew-right",
+   "file": "coaster-mouse-straight-skew-right.glb",
+   "kb": 27,
+   "triangles": 328,
+   "animations": [],
+   "parts": [
+    "coaster-mouse-straight-skew-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-mouse-straight",
+   "file": "coaster-mouse-straight.glb",
+   "kb": 27,
+   "triangles": 328,
+   "animations": [],
+   "parts": [
+    "coaster-mouse-straight"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-mouse-track",
+   "file": "coaster-mouse-track.glb",
+   "kb": 6,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "coaster-mouse-track"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-steel-cap-back",
+   "file": "coaster-steel-cap-back.glb",
+   "kb": 2,
+   "triangles": 18,
+   "animations": [],
+   "parts": [
+    "coaster-steel-cap-back"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-steel-cap-front",
+   "file": "coaster-steel-cap-front.glb",
+   "kb": 2,
+   "triangles": 18,
+   "animations": [],
+   "parts": [
+    "coaster-steel-cap-front"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-steel-corner-large-ramp",
+   "file": "coaster-steel-corner-large-ramp.glb",
+   "kb": 73,
+   "triangles": 900,
+   "animations": [],
+   "parts": [
+    "coaster-steel-corner-large-ramp"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-steel-corner-large",
+   "file": "coaster-steel-corner-large.glb",
+   "kb": 73,
+   "triangles": 900,
+   "animations": [],
+   "parts": [
+    "coaster-steel-corner-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-steel-corner-small-ramp",
+   "file": "coaster-steel-corner-small-ramp.glb",
+   "kb": 47,
+   "triangles": 564,
+   "animations": [],
+   "parts": [
+    "coaster-steel-corner-small-ramp"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-steel-corner-small",
+   "file": "coaster-steel-corner-small.glb",
+   "kb": 47,
+   "triangles": 564,
+   "animations": [],
+   "parts": [
+    "coaster-steel-corner-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-steel-curve",
+   "file": "coaster-steel-curve.glb",
+   "kb": 56,
+   "triangles": 684,
+   "animations": [],
+   "parts": [
+    "coaster-steel-curve"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-steel-looping",
+   "file": "coaster-steel-looping.glb",
+   "kb": 133,
+   "triangles": 1644,
+   "animations": [],
+   "parts": [
+    "coaster-steel-looping"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-steel-segment",
+   "file": "coaster-steel-segment.glb",
+   "kb": 4,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "coaster-steel-segment"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-steel-straight-bend-large",
+   "file": "coaster-steel-straight-bend-large.glb",
+   "kb": 73,
+   "triangles": 900,
+   "animations": [],
+   "parts": [
+    "coaster-steel-straight-bend-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-steel-straight-bend",
+   "file": "coaster-steel-straight-bend.glb",
+   "kb": 47,
+   "triangles": 564,
+   "animations": [],
+   "parts": [
+    "coaster-steel-straight-bend"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-steel-straight-bump-down",
+   "file": "coaster-steel-straight-bump-down.glb",
+   "kb": 54,
+   "triangles": 660,
+   "animations": [],
+   "parts": [
+    "coaster-steel-straight-bump-down"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-steel-straight-bump-up",
+   "file": "coaster-steel-straight-bump-up.glb",
+   "kb": 54,
+   "triangles": 660,
+   "animations": [],
+   "parts": [
+    "coaster-steel-straight-bump-up"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-steel-straight-hill-beginning",
+   "file": "coaster-steel-straight-hill-beginning.glb",
+   "kb": 54,
+   "triangles": 660,
+   "animations": [],
+   "parts": [
+    "coaster-steel-straight-hill-beginning"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-steel-straight-hill-complete-half",
+   "file": "coaster-steel-straight-hill-complete-half.glb",
+   "kb": 54,
+   "triangles": 660,
+   "animations": [],
+   "parts": [
+    "coaster-steel-straight-hill-complete-half"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-steel-straight-hill-complete",
+   "file": "coaster-steel-straight-hill-complete.glb",
+   "kb": 54,
+   "triangles": 660,
+   "animations": [],
+   "parts": [
+    "coaster-steel-straight-hill-complete"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-steel-straight-hill-end",
+   "file": "coaster-steel-straight-hill-end.glb",
+   "kb": 54,
+   "triangles": 660,
+   "animations": [],
+   "parts": [
+    "coaster-steel-straight-hill-end"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-steel-straight-skew-left-side",
+   "file": "coaster-steel-straight-skew-left-side.glb",
+   "kb": 47,
+   "triangles": 564,
+   "animations": [],
+   "parts": [
+    "coaster-steel-straight-skew-left-side"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-steel-straight-skew-left",
+   "file": "coaster-steel-straight-skew-left.glb",
+   "kb": 47,
+   "triangles": 564,
+   "animations": [],
+   "parts": [
+    "coaster-steel-straight-skew-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-steel-straight-skew-right-side",
+   "file": "coaster-steel-straight-skew-right-side.glb",
+   "kb": 47,
+   "triangles": 564,
+   "animations": [],
+   "parts": [
+    "coaster-steel-straight-skew-right-side"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-steel-straight-skew-right",
+   "file": "coaster-steel-straight-skew-right.glb",
+   "kb": 47,
+   "triangles": 564,
+   "animations": [],
+   "parts": [
+    "coaster-steel-straight-skew-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-steel-straight",
+   "file": "coaster-steel-straight.glb",
+   "kb": 47,
+   "triangles": 564,
+   "animations": [],
+   "parts": [
+    "coaster-steel-straight"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-steel-track",
+   "file": "coaster-steel-track.glb",
+   "kb": 8,
+   "triangles": 96,
+   "animations": [],
+   "parts": [
+    "coaster-steel-track"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-train-front",
+   "file": "coaster-train-front.glb",
+   "kb": 60,
+   "triangles": 678,
+   "animations": [],
+   "parts": [
+    "coaster-train-front"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-train-hanging",
+   "file": "coaster-train-hanging.glb",
+   "kb": 58,
+   "triangles": 688,
+   "animations": [],
+   "parts": [
+    "coaster-train-hanging"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-train-safety",
+   "file": "coaster-train-safety.glb",
+   "kb": 77,
+   "triangles": 896,
+   "animations": [],
+   "parts": [
+    "coaster-train-safety"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-train-wooden",
+   "file": "coaster-train-wooden.glb",
+   "kb": 67,
+   "triangles": 766,
+   "animations": [],
+   "parts": [
+    "coaster-train-wooden"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-train",
+   "file": "coaster-train.glb",
+   "kb": 59,
+   "triangles": 668,
+   "animations": [],
+   "parts": [
+    "coaster-train"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-wood-corner-large-ramp",
+   "file": "coaster-wood-corner-large-ramp.glb",
+   "kb": 102,
+   "triangles": 1256,
+   "animations": [],
+   "parts": [
+    "coaster-wood-corner-large-ramp"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-wood-corner-large",
+   "file": "coaster-wood-corner-large.glb",
+   "kb": 102,
+   "triangles": 1256,
+   "animations": [],
+   "parts": [
+    "coaster-wood-corner-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-wood-corner-small-ramp",
+   "file": "coaster-wood-corner-small-ramp.glb",
+   "kb": 66,
+   "triangles": 800,
+   "animations": [],
+   "parts": [
+    "coaster-wood-corner-small-ramp"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-wood-corner-small",
+   "file": "coaster-wood-corner-small.glb",
+   "kb": 66,
+   "triangles": 800,
+   "animations": [],
+   "parts": [
+    "coaster-wood-corner-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-wood-curve",
+   "file": "coaster-wood-curve.glb",
+   "kb": 79,
+   "triangles": 964,
+   "animations": [],
+   "parts": [
+    "coaster-wood-curve"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-wood-looping",
+   "file": "coaster-wood-looping.glb",
+   "kb": 183,
+   "triangles": 2276,
+   "animations": [],
+   "parts": [
+    "coaster-wood-looping"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-wood-segment",
+   "file": "coaster-wood-segment.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "coaster-wood-segment"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-wood-straight-bend-large",
+   "file": "coaster-wood-straight-bend-large.glb",
+   "kb": 102,
+   "triangles": 1256,
+   "animations": [],
+   "parts": [
+    "coaster-wood-straight-bend-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-wood-straight-bend",
+   "file": "coaster-wood-straight-bend.glb",
+   "kb": 66,
+   "triangles": 800,
+   "animations": [],
+   "parts": [
+    "coaster-wood-straight-bend"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-wood-straight-bump-down",
+   "file": "coaster-wood-straight-bump-down.glb",
+   "kb": 76,
+   "triangles": 928,
+   "animations": [],
+   "parts": [
+    "coaster-wood-straight-bump-down"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-wood-straight-bump-up",
+   "file": "coaster-wood-straight-bump-up.glb",
+   "kb": 76,
+   "triangles": 928,
+   "animations": [],
+   "parts": [
+    "coaster-wood-straight-bump-up"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-wood-straight-hill-beginning",
+   "file": "coaster-wood-straight-hill-beginning.glb",
+   "kb": 76,
+   "triangles": 928,
+   "animations": [],
+   "parts": [
+    "coaster-wood-straight-hill-beginning"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-wood-straight-hill-complete-half",
+   "file": "coaster-wood-straight-hill-complete-half.glb",
+   "kb": 76,
+   "triangles": 928,
+   "animations": [],
+   "parts": [
+    "coaster-wood-straight-hill-complete-half"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-wood-straight-hill-complete",
+   "file": "coaster-wood-straight-hill-complete.glb",
+   "kb": 76,
+   "triangles": 928,
+   "animations": [],
+   "parts": [
+    "coaster-wood-straight-hill-complete"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-wood-straight-hill-end",
+   "file": "coaster-wood-straight-hill-end.glb",
+   "kb": 76,
+   "triangles": 928,
+   "animations": [],
+   "parts": [
+    "coaster-wood-straight-hill-end"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-wood-straight-skew-left-side",
+   "file": "coaster-wood-straight-skew-left-side.glb",
+   "kb": 66,
+   "triangles": 800,
+   "animations": [],
+   "parts": [
+    "coaster-wood-straight-skew-left-side"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-wood-straight-skew-left",
+   "file": "coaster-wood-straight-skew-left.glb",
+   "kb": 66,
+   "triangles": 800,
+   "animations": [],
+   "parts": [
+    "coaster-wood-straight-skew-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-wood-straight-skew-right-side",
+   "file": "coaster-wood-straight-skew-right-side.glb",
+   "kb": 66,
+   "triangles": 800,
+   "animations": [],
+   "parts": [
+    "coaster-wood-straight-skew-right-side"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-wood-straight-skew-right",
+   "file": "coaster-wood-straight-skew-right.glb",
+   "kb": 66,
+   "triangles": 800,
+   "animations": [],
+   "parts": [
+    "coaster-wood-straight-skew-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-wood-straight",
+   "file": "coaster-wood-straight.glb",
+   "kb": 66,
+   "triangles": 800,
+   "animations": [],
+   "parts": [
+    "coaster-wood-straight"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coaster-wood-track",
+   "file": "coaster-wood-track.glb",
+   "kb": 11,
+   "triangles": 128,
+   "animations": [],
+   "parts": [
+    "coaster-wood-track"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "flowers",
+   "file": "flowers.glb",
+   "kb": 25,
+   "triangles": 264,
+   "animations": [],
+   "parts": [
+    "flowers"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "grass",
+   "file": "grass.glb",
+   "kb": 8,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "grass"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "park-entrance",
+   "file": "park-entrance.glb",
+   "kb": 83,
+   "triangles": 942,
+   "animations": [],
+   "parts": [
+    "park-entrance"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "path-corner",
+   "file": "path-corner.glb",
+   "kb": 11,
+   "triangles": 102,
+   "animations": [],
+   "parts": [
+    "path-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "path-crossing",
+   "file": "path-crossing.glb",
+   "kb": 18,
+   "triangles": 188,
+   "animations": [],
+   "parts": [
+    "path-crossing"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "path-exit",
+   "file": "path-exit.glb",
+   "kb": 13,
+   "triangles": 144,
+   "animations": [],
+   "parts": [
+    "path-exit"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "path-split",
+   "file": "path-split.glb",
+   "kb": 13,
+   "triangles": 128,
+   "animations": [],
+   "parts": [
+    "path-split"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "path-steps",
+   "file": "path-steps.glb",
+   "kb": 13,
+   "triangles": 120,
+   "animations": [],
+   "parts": [
+    "path-steps"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "path-straight",
+   "file": "path-straight.glb",
+   "kb": 8,
+   "triangles": 68,
+   "animations": [],
+   "parts": [
+    "path-straight"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "queue-corner",
+   "file": "queue-corner.glb",
+   "kb": 15,
+   "triangles": 140,
+   "animations": [],
+   "parts": [
+    "queue-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "queue-crossing",
+   "file": "queue-crossing.glb",
+   "kb": 24,
+   "triangles": 244,
+   "animations": [],
+   "parts": [
+    "queue-crossing"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "queue-entrance",
+   "file": "queue-entrance.glb",
+   "kb": 15,
+   "triangles": 164,
+   "animations": [],
+   "parts": [
+    "queue-entrance"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "queue-split",
+   "file": "queue-split.glb",
+   "kb": 17,
+   "triangles": 166,
+   "animations": [],
+   "parts": [
+    "queue-split"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "queue-steps",
+   "file": "queue-steps.glb",
+   "kb": 23,
+   "triangles": 220,
+   "animations": [],
+   "parts": [
+    "queue-steps"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "queue-straight",
+   "file": "queue-straight.glb",
+   "kb": 10,
+   "triangles": 88,
+   "animations": [],
+   "parts": [
+    "queue-straight"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ride-entrance",
+   "file": "ride-entrance.glb",
+   "kb": 25,
+   "triangles": 270,
+   "animations": [],
+   "parts": [
+    "ride-entrance",
+    "OuterShell"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ride-exit",
+   "file": "ride-exit.glb",
+   "kb": 15,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "ride-exit",
+    "OuterShell"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stall-drinks",
+   "file": "stall-drinks.glb",
+   "kb": 25,
+   "triangles": 274,
+   "animations": [],
+   "parts": [
+    "stall-drinks"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stall-food",
+   "file": "stall-food.glb",
+   "kb": 35,
+   "triangles": 380,
+   "animations": [],
+   "parts": [
+    "stall-food"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stall-information",
+   "file": "stall-information.glb",
+   "kb": 20,
+   "triangles": 212,
+   "animations": [],
+   "parts": [
+    "stall-information"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stall-toilets",
+   "file": "stall-toilets.glb",
+   "kb": 19,
+   "triangles": 211,
+   "animations": [],
+   "parts": [
+    "stall-toilets"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "station-fence",
+   "file": "station-fence.glb",
+   "kb": 20,
+   "triangles": 212,
+   "animations": [],
+   "parts": [
+    "station-fence"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "station-gate",
+   "file": "station-gate.glb",
+   "kb": 40,
+   "triangles": 328,
+   "animations": [],
+   "parts": [
+    "station-gate",
+    "",
+    "",
+    "",
+    "",
+    "Group",
+    "Group",
+    "Group",
+    "Group"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "station",
+   "file": "station.glb",
+   "kb": 7,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "station"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-large-bottom",
+   "file": "support-large-bottom.glb",
+   "kb": 11,
+   "triangles": 112,
+   "animations": [],
+   "parts": [
+    "support-large-bottom"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-large-horizontal-ring",
+   "file": "support-large-horizontal-ring.glb",
+   "kb": 6,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "support-large-horizontal-ring"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-large-horizontal",
+   "file": "support-large-horizontal.glb",
+   "kb": 4,
+   "triangles": 28,
+   "animations": [],
+   "parts": [
+    "support-large-horizontal"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-large-skew-bottom",
+   "file": "support-large-skew-bottom.glb",
+   "kb": 11,
+   "triangles": 112,
+   "animations": [],
+   "parts": [
+    "support-large-skew-bottom"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-large-skew",
+   "file": "support-large-skew.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "support-large-skew"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-large",
+   "file": "support-large.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "support-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-small-bottom",
+   "file": "support-small-bottom.glb",
+   "kb": 11,
+   "triangles": 112,
+   "animations": [],
+   "parts": [
+    "support-small-bottom"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-small-horizontal-ring",
+   "file": "support-small-horizontal-ring.glb",
+   "kb": 6,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "support-small-horizontal-ring"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-small-horizontal",
+   "file": "support-small-horizontal.glb",
+   "kb": 4,
+   "triangles": 28,
+   "animations": [],
+   "parts": [
+    "support-small-horizontal"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-small-skew-bottom",
+   "file": "support-small-skew-bottom.glb",
+   "kb": 11,
+   "triangles": 112,
+   "animations": [],
+   "parts": [
+    "support-small-skew-bottom"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-small-skew",
+   "file": "support-small-skew.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "support-small-skew"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-small",
+   "file": "support-small.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "support-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-log-flume",
+   "file": "train-log-flume.glb",
+   "kb": 19,
+   "triangles": 219,
+   "animations": [],
+   "parts": [
+    "train-log-flume"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-monorail",
+   "file": "train-monorail.glb",
+   "kb": 30,
+   "triangles": 344,
+   "animations": [],
+   "parts": [
+    "train-monorail"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "trash",
+   "file": "trash.glb",
+   "kb": 7,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "trash"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tree-large",
+   "file": "tree-large.glb",
+   "kb": 28,
+   "triangles": 284,
+   "animations": [],
+   "parts": [
+    "tree-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tree",
+   "file": "tree.glb",
+   "kb": 28,
+   "triangles": 284,
+   "animations": [],
+   "parts": [
+    "tree"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  }
+ ]
+}

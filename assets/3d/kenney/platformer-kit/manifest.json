@@ -1,0 +1,2173 @@
+{
+ "pack": "kenney-platformer-kit",
+ "kind": "model3d",
+ "source": "https://kenney.nl/assets/platformer-kit",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 153,
+ "items": [
+  {
+   "name": "arrow",
+   "file": "arrow.glb",
+   "kb": 7,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "arrow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "arrows",
+   "file": "arrows.glb",
+   "kb": 9,
+   "triangles": 88,
+   "animations": [],
+   "parts": [
+    "arrows"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "barrel",
+   "file": "barrel.glb",
+   "kb": 13,
+   "triangles": 148,
+   "animations": [],
+   "parts": [
+    "barrel"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-corner-low",
+   "file": "block-grass-corner-low.glb",
+   "kb": 9,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "block-grass-corner-low"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-corner-overhang-low",
+   "file": "block-grass-corner-overhang-low.glb",
+   "kb": 11,
+   "triangles": 110,
+   "animations": [],
+   "parts": [
+    "block-grass-corner-overhang-low"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-corner-overhang",
+   "file": "block-grass-corner-overhang.glb",
+   "kb": 11,
+   "triangles": 110,
+   "animations": [],
+   "parts": [
+    "block-grass-corner-overhang"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-corner",
+   "file": "block-grass-corner.glb",
+   "kb": 9,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "block-grass-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-curve-half",
+   "file": "block-grass-curve-half.glb",
+   "kb": 10,
+   "triangles": 112,
+   "animations": [],
+   "parts": [
+    "block-grass-curve-half"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-curve-low",
+   "file": "block-grass-curve-low.glb",
+   "kb": 13,
+   "triangles": 156,
+   "animations": [],
+   "parts": [
+    "block-grass-curve-low"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-curve",
+   "file": "block-grass-curve.glb",
+   "kb": 18,
+   "triangles": 204,
+   "animations": [],
+   "parts": [
+    "block-grass-curve"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-edge",
+   "file": "block-grass-edge.glb",
+   "kb": 11,
+   "triangles": 112,
+   "animations": [],
+   "parts": [
+    "block-grass-edge"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-hexagon",
+   "file": "block-grass-hexagon.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "block-grass-hexagon"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-large-slope-narrow",
+   "file": "block-grass-large-slope-narrow.glb",
+   "kb": 10,
+   "triangles": 102,
+   "animations": [],
+   "parts": [
+    "block-grass-large-slope-narrow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-large-slope-steep-narrow",
+   "file": "block-grass-large-slope-steep-narrow.glb",
+   "kb": 10,
+   "triangles": 102,
+   "animations": [],
+   "parts": [
+    "block-grass-large-slope-steep-narrow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-large-slope-steep",
+   "file": "block-grass-large-slope-steep.glb",
+   "kb": 10,
+   "triangles": 102,
+   "animations": [],
+   "parts": [
+    "block-grass-large-slope-steep"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-large-slope",
+   "file": "block-grass-large-slope.glb",
+   "kb": 10,
+   "triangles": 102,
+   "animations": [],
+   "parts": [
+    "block-grass-large-slope"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-large-tall",
+   "file": "block-grass-large-tall.glb",
+   "kb": 9,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "block-grass-large-tall"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-large",
+   "file": "block-grass-large.glb",
+   "kb": 9,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "block-grass-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-long",
+   "file": "block-grass-long.glb",
+   "kb": 9,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "block-grass-long"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-low-hexagon",
+   "file": "block-grass-low-hexagon.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "block-grass-low-hexagon"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-low-large",
+   "file": "block-grass-low-large.glb",
+   "kb": 9,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "block-grass-low-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-low-long",
+   "file": "block-grass-low-long.glb",
+   "kb": 9,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "block-grass-low-long"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-low-narrow",
+   "file": "block-grass-low-narrow.glb",
+   "kb": 9,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "block-grass-low-narrow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-low",
+   "file": "block-grass-low.glb",
+   "kb": 9,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "block-grass-low"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-narrow",
+   "file": "block-grass-narrow.glb",
+   "kb": 9,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "block-grass-narrow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-overhang-corner",
+   "file": "block-grass-overhang-corner.glb",
+   "kb": 12,
+   "triangles": 120,
+   "animations": [],
+   "parts": [
+    "block-grass-overhang-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-overhang-edge",
+   "file": "block-grass-overhang-edge.glb",
+   "kb": 13,
+   "triangles": 140,
+   "animations": [],
+   "parts": [
+    "block-grass-overhang-edge"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-overhang-hexagon",
+   "file": "block-grass-overhang-hexagon.glb",
+   "kb": 7,
+   "triangles": 62,
+   "animations": [],
+   "parts": [
+    "block-grass-overhang-hexagon"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-overhang-large-slope-narrow",
+   "file": "block-grass-overhang-large-slope-narrow.glb",
+   "kb": 13,
+   "triangles": 142,
+   "animations": [],
+   "parts": [
+    "block-grass-overhang-large-slope-narrow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-overhang-large-slope-steep-narrow",
+   "file": "block-grass-overhang-large-slope-steep-narrow.glb",
+   "kb": 14,
+   "triangles": 142,
+   "animations": [],
+   "parts": [
+    "block-grass-overhang-large-slope-steep-narrow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-overhang-large-slope-steep",
+   "file": "block-grass-overhang-large-slope-steep.glb",
+   "kb": 15,
+   "triangles": 154,
+   "animations": [],
+   "parts": [
+    "block-grass-overhang-large-slope-steep"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-overhang-large-slope",
+   "file": "block-grass-overhang-large-slope.glb",
+   "kb": 15,
+   "triangles": 154,
+   "animations": [],
+   "parts": [
+    "block-grass-overhang-large-slope"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-overhang-large-tall",
+   "file": "block-grass-overhang-large-tall.glb",
+   "kb": 14,
+   "triangles": 144,
+   "animations": [],
+   "parts": [
+    "block-grass-overhang-large-tall"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-overhang-large",
+   "file": "block-grass-overhang-large.glb",
+   "kb": 14,
+   "triangles": 144,
+   "animations": [],
+   "parts": [
+    "block-grass-overhang-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-overhang-long",
+   "file": "block-grass-overhang-long.glb",
+   "kb": 13,
+   "triangles": 132,
+   "animations": [],
+   "parts": [
+    "block-grass-overhang-long"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-overhang-low-hexagon",
+   "file": "block-grass-overhang-low-hexagon.glb",
+   "kb": 7,
+   "triangles": 62,
+   "animations": [],
+   "parts": [
+    "block-grass-overhang-low-hexagon"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-overhang-low-large",
+   "file": "block-grass-overhang-low-large.glb",
+   "kb": 13,
+   "triangles": 144,
+   "animations": [],
+   "parts": [
+    "block-grass-overhang-low-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-overhang-low-long",
+   "file": "block-grass-overhang-low-long.glb",
+   "kb": 13,
+   "triangles": 132,
+   "animations": [],
+   "parts": [
+    "block-grass-overhang-low-long"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-overhang-low-narrow",
+   "file": "block-grass-overhang-low-narrow.glb",
+   "kb": 12,
+   "triangles": 120,
+   "animations": [],
+   "parts": [
+    "block-grass-overhang-low-narrow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-overhang-low",
+   "file": "block-grass-overhang-low.glb",
+   "kb": 12,
+   "triangles": 120,
+   "animations": [],
+   "parts": [
+    "block-grass-overhang-low"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass-overhang-narrow",
+   "file": "block-grass-overhang-narrow.glb",
+   "kb": 12,
+   "triangles": 120,
+   "animations": [],
+   "parts": [
+    "block-grass-overhang-narrow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-grass",
+   "file": "block-grass.glb",
+   "kb": 9,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "block-grass"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-moving-blue",
+   "file": "block-moving-blue.glb",
+   "kb": 22,
+   "triangles": 256,
+   "animations": [],
+   "parts": [
+    "block-moving-blue"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-moving-large",
+   "file": "block-moving-large.glb",
+   "kb": 12,
+   "triangles": 136,
+   "animations": [],
+   "parts": [
+    "block-moving-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-moving",
+   "file": "block-moving.glb",
+   "kb": 12,
+   "triangles": 136,
+   "animations": [],
+   "parts": [
+    "block-moving"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-corner-low",
+   "file": "block-snow-corner-low.glb",
+   "kb": 9,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "block-snow-corner-low"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-corner-overhang-low",
+   "file": "block-snow-corner-overhang-low.glb",
+   "kb": 10,
+   "triangles": 104,
+   "animations": [],
+   "parts": [
+    "block-snow-corner-overhang-low"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-corner-overhang",
+   "file": "block-snow-corner-overhang.glb",
+   "kb": 10,
+   "triangles": 104,
+   "animations": [],
+   "parts": [
+    "block-snow-corner-overhang"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-corner",
+   "file": "block-snow-corner.glb",
+   "kb": 9,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "block-snow-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-curve-half",
+   "file": "block-snow-curve-half.glb",
+   "kb": 10,
+   "triangles": 112,
+   "animations": [],
+   "parts": [
+    "block-snow-curve-half"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-curve-low",
+   "file": "block-snow-curve-low.glb",
+   "kb": 13,
+   "triangles": 156,
+   "animations": [],
+   "parts": [
+    "block-snow-curve-low"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-curve",
+   "file": "block-snow-curve.glb",
+   "kb": 18,
+   "triangles": 204,
+   "animations": [],
+   "parts": [
+    "block-snow-curve"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-edge",
+   "file": "block-snow-edge.glb",
+   "kb": 11,
+   "triangles": 112,
+   "animations": [],
+   "parts": [
+    "block-snow-edge"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-hexagon",
+   "file": "block-snow-hexagon.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "block-snow-hexagon"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-large-slope-narrow",
+   "file": "block-snow-large-slope-narrow.glb",
+   "kb": 10,
+   "triangles": 102,
+   "animations": [],
+   "parts": [
+    "block-snow-large-slope-narrow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-large-slope-steep-narrow",
+   "file": "block-snow-large-slope-steep-narrow.glb",
+   "kb": 10,
+   "triangles": 102,
+   "animations": [],
+   "parts": [
+    "block-snow-large-slope-steep-narrow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-large-slope-steep",
+   "file": "block-snow-large-slope-steep.glb",
+   "kb": 10,
+   "triangles": 102,
+   "animations": [],
+   "parts": [
+    "block-snow-large-slope-steep"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-large-slope",
+   "file": "block-snow-large-slope.glb",
+   "kb": 10,
+   "triangles": 102,
+   "animations": [],
+   "parts": [
+    "block-snow-large-slope"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-large-tall",
+   "file": "block-snow-large-tall.glb",
+   "kb": 9,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "block-snow-large-tall"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-large",
+   "file": "block-snow-large.glb",
+   "kb": 9,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "block-snow-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-long",
+   "file": "block-snow-long.glb",
+   "kb": 9,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "block-snow-long"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-low-hexagon",
+   "file": "block-snow-low-hexagon.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "block-snow-low-hexagon"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-low-large",
+   "file": "block-snow-low-large.glb",
+   "kb": 9,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "block-snow-low-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-low-long",
+   "file": "block-snow-low-long.glb",
+   "kb": 9,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "block-snow-low-long"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-low-narrow",
+   "file": "block-snow-low-narrow.glb",
+   "kb": 9,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "block-snow-low-narrow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-low",
+   "file": "block-snow-low.glb",
+   "kb": 9,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "block-snow-low"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-narrow",
+   "file": "block-snow-narrow.glb",
+   "kb": 9,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "block-snow-narrow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-overhang-corner",
+   "file": "block-snow-overhang-corner.glb",
+   "kb": 11,
+   "triangles": 112,
+   "animations": [],
+   "parts": [
+    "block-snow-overhang-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-overhang-edge",
+   "file": "block-snow-overhang-edge.glb",
+   "kb": 12,
+   "triangles": 132,
+   "animations": [],
+   "parts": [
+    "block-snow-overhang-edge"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-overhang-hexagon",
+   "file": "block-snow-overhang-hexagon.glb",
+   "kb": 7,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "block-snow-overhang-hexagon"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-overhang-large-slope-narrow",
+   "file": "block-snow-overhang-large-slope-narrow.glb",
+   "kb": 12,
+   "triangles": 132,
+   "animations": [],
+   "parts": [
+    "block-snow-overhang-large-slope-narrow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-overhang-large-slope-steep-narrow",
+   "file": "block-snow-overhang-large-slope-steep-narrow.glb",
+   "kb": 12,
+   "triangles": 132,
+   "animations": [],
+   "parts": [
+    "block-snow-overhang-large-slope-steep-narrow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-overhang-large-slope-steep",
+   "file": "block-snow-overhang-large-slope-steep.glb",
+   "kb": 15,
+   "triangles": 162,
+   "animations": [],
+   "parts": [
+    "block-snow-overhang-large-slope-steep"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-overhang-large-slope",
+   "file": "block-snow-overhang-large-slope.glb",
+   "kb": 15,
+   "triangles": 162,
+   "animations": [],
+   "parts": [
+    "block-snow-overhang-large-slope"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-overhang-large-tall",
+   "file": "block-snow-overhang-large-tall.glb",
+   "kb": 14,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "block-snow-overhang-large-tall"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-overhang-large",
+   "file": "block-snow-overhang-large.glb",
+   "kb": 14,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "block-snow-overhang-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-overhang-long",
+   "file": "block-snow-overhang-long.glb",
+   "kb": 12,
+   "triangles": 122,
+   "animations": [],
+   "parts": [
+    "block-snow-overhang-long"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-overhang-low-hexagon",
+   "file": "block-snow-overhang-low-hexagon.glb",
+   "kb": 7,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "block-snow-overhang-low-hexagon"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-overhang-low-large",
+   "file": "block-snow-overhang-low-large.glb",
+   "kb": 14,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "block-snow-overhang-low-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-overhang-low-long",
+   "file": "block-snow-overhang-low-long.glb",
+   "kb": 12,
+   "triangles": 122,
+   "animations": [],
+   "parts": [
+    "block-snow-overhang-low-long"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-overhang-low-narrow",
+   "file": "block-snow-overhang-low-narrow.glb",
+   "kb": 10,
+   "triangles": 104,
+   "animations": [],
+   "parts": [
+    "block-snow-overhang-low-narrow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-overhang-low",
+   "file": "block-snow-overhang-low.glb",
+   "kb": 11,
+   "triangles": 112,
+   "animations": [],
+   "parts": [
+    "block-snow-overhang-low"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow-overhang-narrow",
+   "file": "block-snow-overhang-narrow.glb",
+   "kb": 10,
+   "triangles": 104,
+   "animations": [],
+   "parts": [
+    "block-snow-overhang-narrow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "block-snow",
+   "file": "block-snow.glb",
+   "kb": 9,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "block-snow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bomb",
+   "file": "bomb.glb",
+   "kb": 16,
+   "triangles": 148,
+   "animations": [],
+   "parts": [
+    "bomb"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "brick",
+   "file": "brick.glb",
+   "kb": 21,
+   "triangles": 188,
+   "animations": [],
+   "parts": [
+    "brick"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "button-round",
+   "file": "button-round.glb",
+   "kb": 14,
+   "triangles": 92,
+   "animations": [
+    "toggle-on",
+    "toggle-off",
+    "toggle"
+   ],
+   "parts": [
+    "button-round",
+    "button"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "button-square",
+   "file": "button-square.glb",
+   "kb": 14,
+   "triangles": 84,
+   "animations": [
+    "toggle-on",
+    "toggle-off",
+    "toggle"
+   ],
+   "parts": [
+    "button-square",
+    "button"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "character-oobi",
+   "file": "character-oobi.glb",
+   "kb": 230,
+   "triangles": 1096,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "sprint",
+    "jump",
+    "fall",
+    "crouch",
+    "sit",
+    "drive",
+    "die",
+    "pick-up",
+    "emote-yes",
+    "emote-no",
+    "holding-right",
+    "holding-left",
+    "holding-both",
+    "holding-right-shoot",
+    "holding-left-shoot",
+    "holding-both-shoot",
+    "attack-melee-right",
+    "attack-melee-left",
+    "attack-kick-right",
+    "attack-kick-left",
+    "interact-right",
+    "interact-left"
+   ],
+   "parts": [
+    "body-mesh"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "character-oodi",
+   "file": "character-oodi.glb",
+   "kb": 197,
+   "triangles": 938,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "sprint",
+    "jump",
+    "fall",
+    "crouch",
+    "sit",
+    "drive",
+    "die",
+    "pick-up",
+    "emote-yes",
+    "emote-no",
+    "holding-right",
+    "holding-left",
+    "holding-both",
+    "holding-right-shoot",
+    "holding-left-shoot",
+    "holding-both-shoot",
+    "attack-melee-right",
+    "attack-melee-left",
+    "attack-kick-right",
+    "attack-kick-left",
+    "interact-right",
+    "interact-left"
+   ],
+   "parts": [
+    "body-mesh"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "character-ooli",
+   "file": "character-ooli.glb",
+   "kb": 201,
+   "triangles": 918,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "sprint",
+    "jump",
+    "fall",
+    "crouch",
+    "sit",
+    "drive",
+    "die",
+    "pick-up",
+    "emote-yes",
+    "emote-no",
+    "holding-right",
+    "holding-left",
+    "holding-both",
+    "holding-right-shoot",
+    "holding-left-shoot",
+    "holding-both-shoot",
+    "attack-melee-right",
+    "attack-melee-left",
+    "attack-kick-right",
+    "attack-kick-left",
+    "interact-right",
+    "interact-left"
+   ],
+   "parts": [
+    "body-mesh"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "character-oopi",
+   "file": "character-oopi.glb",
+   "kb": 206,
+   "triangles": 938,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "sprint",
+    "jump",
+    "fall",
+    "crouch",
+    "sit",
+    "drive",
+    "die",
+    "pick-up",
+    "emote-yes",
+    "emote-no",
+    "holding-right",
+    "holding-left",
+    "holding-both",
+    "holding-right-shoot",
+    "holding-left-shoot",
+    "holding-both-shoot",
+    "attack-melee-right",
+    "attack-melee-left",
+    "attack-kick-right",
+    "attack-kick-left",
+    "interact-right",
+    "interact-left"
+   ],
+   "parts": [
+    "body-mesh"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "character-oozi",
+   "file": "character-oozi.glb",
+   "kb": 213,
+   "triangles": 938,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "sprint",
+    "jump",
+    "fall",
+    "crouch",
+    "sit",
+    "drive",
+    "die",
+    "pick-up",
+    "emote-yes",
+    "emote-no",
+    "holding-right",
+    "holding-left",
+    "holding-both",
+    "holding-right-shoot",
+    "holding-left-shoot",
+    "holding-both-shoot",
+    "attack-melee-right",
+    "attack-melee-left",
+    "attack-kick-right",
+    "attack-kick-left",
+    "interact-right",
+    "interact-left"
+   ],
+   "parts": [
+    "body-mesh"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "chest",
+   "file": "chest.glb",
+   "kb": 27,
+   "triangles": 232,
+   "animations": [
+    "open",
+    "close",
+    "open-close"
+   ],
+   "parts": [
+    "chest",
+    "lid"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coin-bronze",
+   "file": "coin-bronze.glb",
+   "kb": 10,
+   "triangles": 124,
+   "animations": [],
+   "parts": [
+    "coin-bronze"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coin-gold",
+   "file": "coin-gold.glb",
+   "kb": 10,
+   "triangles": 124,
+   "animations": [],
+   "parts": [
+    "coin-gold"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coin-silver",
+   "file": "coin-silver.glb",
+   "kb": 10,
+   "triangles": 124,
+   "animations": [],
+   "parts": [
+    "coin-silver"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "conveyor-belt",
+   "file": "conveyor-belt.glb",
+   "kb": 33,
+   "triangles": 364,
+   "animations": [],
+   "parts": [
+    "conveyor-belt",
+    "arrow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "crate-item-strong",
+   "file": "crate-item-strong.glb",
+   "kb": 36,
+   "triangles": 380,
+   "animations": [],
+   "parts": [
+    "crate-item-strong"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "crate-item",
+   "file": "crate-item.glb",
+   "kb": 13,
+   "triangles": 140,
+   "animations": [],
+   "parts": [
+    "crate-item"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "crate-strong",
+   "file": "crate-strong.glb",
+   "kb": 40,
+   "triangles": 428,
+   "animations": [],
+   "parts": [
+    "crate-strong"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "crate",
+   "file": "crate.glb",
+   "kb": 14,
+   "triangles": 156,
+   "animations": [],
+   "parts": [
+    "crate"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "door-large-open",
+   "file": "door-large-open.glb",
+   "kb": 16,
+   "triangles": 176,
+   "animations": [],
+   "parts": [
+    "door-large-open"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "door-open",
+   "file": "door-open.glb",
+   "kb": 6,
+   "triangles": 68,
+   "animations": [],
+   "parts": [
+    "door-open"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "door-rotate-large",
+   "file": "door-rotate-large.glb",
+   "kb": 40,
+   "triangles": 380,
+   "animations": [
+    "open",
+    "close",
+    "open-and-close"
+   ],
+   "parts": [
+    "door-rotate-large",
+    "door"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "door-rotate",
+   "file": "door-rotate.glb",
+   "kb": 40,
+   "triangles": 401,
+   "animations": [
+    "open",
+    "close",
+    "open-and-close"
+   ],
+   "parts": [
+    "door-rotate",
+    "door"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fence-broken",
+   "file": "fence-broken.glb",
+   "kb": 20,
+   "triangles": 216,
+   "animations": [],
+   "parts": [
+    "fence-broken"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fence-corner-curved",
+   "file": "fence-corner-curved.glb",
+   "kb": 15,
+   "triangles": 160,
+   "animations": [],
+   "parts": [
+    "fence-corner-curved"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fence-corner",
+   "file": "fence-corner.glb",
+   "kb": 9,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "fence-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fence-low-broken",
+   "file": "fence-low-broken.glb",
+   "kb": 10,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "fence-low-broken"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fence-low-corner-curved",
+   "file": "fence-low-corner-curved.glb",
+   "kb": 20,
+   "triangles": 216,
+   "animations": [],
+   "parts": [
+    "fence-low-corner-curved"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fence-low-corner",
+   "file": "fence-low-corner.glb",
+   "kb": 11,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "fence-low-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fence-low-straight",
+   "file": "fence-low-straight.glb",
+   "kb": 7,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "fence-low-straight"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fence-rope",
+   "file": "fence-rope.glb",
+   "kb": 18,
+   "triangles": 180,
+   "animations": [],
+   "parts": [
+    "fence-rope"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fence-straight",
+   "file": "fence-straight.glb",
+   "kb": 6,
+   "triangles": 48,
+   "animations": [],
+   "parts": [
+    "fence-straight"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "flag",
+   "file": "flag.glb",
+   "kb": 11,
+   "triangles": 110,
+   "animations": [],
+   "parts": [
+    "flag"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "flowers-tall",
+   "file": "flowers-tall.glb",
+   "kb": 38,
+   "triangles": 398,
+   "animations": [],
+   "parts": [
+    "flowers-tall"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "flowers",
+   "file": "flowers.glb",
+   "kb": 25,
+   "triangles": 264,
+   "animations": [],
+   "parts": [
+    "flowers"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "grass",
+   "file": "grass.glb",
+   "kb": 8,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "grass"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "heart",
+   "file": "heart.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "heart"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "hedge-corner",
+   "file": "hedge-corner.glb",
+   "kb": 11,
+   "triangles": 104,
+   "animations": [],
+   "parts": [
+    "hedge-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "hedge",
+   "file": "hedge.glb",
+   "kb": 8,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "hedge"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "jewel",
+   "file": "jewel.glb",
+   "kb": 3,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "jewel"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "key",
+   "file": "key.glb",
+   "kb": 12,
+   "triangles": 148,
+   "animations": [],
+   "parts": [
+    "key"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ladder-broken",
+   "file": "ladder-broken.glb",
+   "kb": 10,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "ladder-broken"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ladder-long",
+   "file": "ladder-long.glb",
+   "kb": 10,
+   "triangles": 88,
+   "animations": [],
+   "parts": [
+    "ladder-long"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ladder",
+   "file": "ladder.glb",
+   "kb": 7,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "ladder"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "lever",
+   "file": "lever.glb",
+   "kb": 19,
+   "triangles": 134,
+   "animations": [
+    "toggle-on",
+    "toggle-off",
+    "toggle"
+   ],
+   "parts": [
+    "lever",
+    "handle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "lock",
+   "file": "lock.glb",
+   "kb": 9,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "lock"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "mushrooms",
+   "file": "mushrooms.glb",
+   "kb": 13,
+   "triangles": 126,
+   "animations": [],
+   "parts": [
+    "mushrooms"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pipe",
+   "file": "pipe.glb",
+   "kb": 19,
+   "triangles": 216,
+   "animations": [],
+   "parts": [
+    "pipe"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "plant",
+   "file": "plant.glb",
+   "kb": 12,
+   "triangles": 108,
+   "animations": [],
+   "parts": [
+    "plant"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "platform-fortified",
+   "file": "platform-fortified.glb",
+   "kb": 12,
+   "triangles": 108,
+   "animations": [],
+   "parts": [
+    "platform-fortified"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "platform-overhang",
+   "file": "platform-overhang.glb",
+   "kb": 8,
+   "triangles": 68,
+   "animations": [],
+   "parts": [
+    "platform-overhang"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "platform-ramp",
+   "file": "platform-ramp.glb",
+   "kb": 9,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "platform-ramp"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "platform",
+   "file": "platform.glb",
+   "kb": 9,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "platform"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "poles",
+   "file": "poles.glb",
+   "kb": 23,
+   "triangles": 268,
+   "animations": [],
+   "parts": [
+    "poles"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "rocks",
+   "file": "rocks.glb",
+   "kb": 9,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "rocks"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "saw",
+   "file": "saw.glb",
+   "kb": 13,
+   "triangles": 128,
+   "animations": [],
+   "parts": [
+    "saw"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "sign",
+   "file": "sign.glb",
+   "kb": 8,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "sign"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "spike-block-wide",
+   "file": "spike-block-wide.glb",
+   "kb": 26,
+   "triangles": 220,
+   "animations": [],
+   "parts": [
+    "spike-block-wide"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "spike-block",
+   "file": "spike-block.glb",
+   "kb": 14,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "spike-block"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "spring",
+   "file": "spring.glb",
+   "kb": 37,
+   "triangles": 356,
+   "animations": [],
+   "parts": [
+    "spring",
+    "platform",
+    "spring"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "star",
+   "file": "star.glb",
+   "kb": 6,
+   "triangles": 30,
+   "animations": [],
+   "parts": [
+    "star"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stones",
+   "file": "stones.glb",
+   "kb": 13,
+   "triangles": 120,
+   "animations": [],
+   "parts": [
+    "stones"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "trap-spikes-large",
+   "file": "trap-spikes-large.glb",
+   "kb": 28,
+   "triangles": 282,
+   "animations": [
+    "show",
+    "hide",
+    "show-hide"
+   ],
+   "parts": [
+    "trap-spikes-large",
+    "spikes"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "trap-spikes",
+   "file": "trap-spikes.glb",
+   "kb": 21,
+   "triangles": 168,
+   "animations": [
+    "show",
+    "hide",
+    "show-hide"
+   ],
+   "parts": [
+    "trap-spikes",
+    "spikes"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tree-pine-small",
+   "file": "tree-pine-small.glb",
+   "kb": 21,
+   "triangles": 204,
+   "animations": [],
+   "parts": [
+    "tree-pine-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tree-pine-snow-small",
+   "file": "tree-pine-snow-small.glb",
+   "kb": 21,
+   "triangles": 204,
+   "animations": [],
+   "parts": [
+    "tree-pine-snow-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tree-pine-snow",
+   "file": "tree-pine-snow.glb",
+   "kb": 21,
+   "triangles": 204,
+   "animations": [],
+   "parts": [
+    "tree-pine-snow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tree-pine",
+   "file": "tree-pine.glb",
+   "kb": 21,
+   "triangles": 204,
+   "animations": [],
+   "parts": [
+    "tree-pine"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tree-snow",
+   "file": "tree-snow.glb",
+   "kb": 41,
+   "triangles": 408,
+   "animations": [],
+   "parts": [
+    "tree-snow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tree",
+   "file": "tree.glb",
+   "kb": 41,
+   "triangles": 408,
+   "animations": [],
+   "parts": [
+    "tree"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  }
+ ]
+}

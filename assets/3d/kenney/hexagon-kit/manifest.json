@@ -1,0 +1,956 @@
+{
+ "pack": "kenney-hexagon-kit",
+ "kind": "model3d",
+ "source": "https://kenney.nl/assets/hexagon-kit",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 72,
+ "items": [
+  {
+   "name": "bridge",
+   "file": "bridge.glb",
+   "kb": 35,
+   "triangles": 408,
+   "animations": [],
+   "parts": [
+    "bridge"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-archery",
+   "file": "building-archery.glb",
+   "kb": 57,
+   "triangles": 628,
+   "animations": [],
+   "parts": [
+    "building-archery"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-cabin",
+   "file": "building-cabin.glb",
+   "kb": 42,
+   "triangles": 450,
+   "animations": [],
+   "parts": [
+    "building-cabin"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-castle",
+   "file": "building-castle.glb",
+   "kb": 86,
+   "triangles": 966,
+   "animations": [],
+   "parts": [
+    "building-castle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-dock",
+   "file": "building-dock.glb",
+   "kb": 28,
+   "triangles": 282,
+   "animations": [],
+   "parts": [
+    "building-dock"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-farm",
+   "file": "building-farm.glb",
+   "kb": 18,
+   "triangles": 186,
+   "animations": [],
+   "parts": [
+    "building-farm"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-house",
+   "file": "building-house.glb",
+   "kb": 34,
+   "triangles": 352,
+   "animations": [],
+   "parts": [
+    "building-house"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-market",
+   "file": "building-market.glb",
+   "kb": 51,
+   "triangles": 594,
+   "animations": [],
+   "parts": [
+    "building-market"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-mill",
+   "file": "building-mill.glb",
+   "kb": 47,
+   "triangles": 484,
+   "animations": [
+    "animation"
+   ],
+   "parts": [
+    "building-mill",
+    "rotate-x"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-mine",
+   "file": "building-mine.glb",
+   "kb": 32,
+   "triangles": 344,
+   "animations": [],
+   "parts": [
+    "building-mine"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-port",
+   "file": "building-port.glb",
+   "kb": 37,
+   "triangles": 366,
+   "animations": [],
+   "parts": [
+    "building-port"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-sheep",
+   "file": "building-sheep.glb",
+   "kb": 69,
+   "triangles": 772,
+   "animations": [],
+   "parts": [
+    "building-sheep"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-smelter",
+   "file": "building-smelter.glb",
+   "kb": 41,
+   "triangles": 436,
+   "animations": [],
+   "parts": [
+    "building-smelter"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-tower",
+   "file": "building-tower.glb",
+   "kb": 49,
+   "triangles": 528,
+   "animations": [],
+   "parts": [
+    "building-tower"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-village",
+   "file": "building-village.glb",
+   "kb": 39,
+   "triangles": 406,
+   "animations": [],
+   "parts": [
+    "building-village"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-wall",
+   "file": "building-wall.glb",
+   "kb": 63,
+   "triangles": 678,
+   "animations": [],
+   "parts": [
+    "building-wall"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-walls",
+   "file": "building-walls.glb",
+   "kb": 106,
+   "triangles": 1208,
+   "animations": [],
+   "parts": [
+    "building-walls"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-watermill",
+   "file": "building-watermill.glb",
+   "kb": 54,
+   "triangles": 594,
+   "animations": [
+    "animation"
+   ],
+   "parts": [
+    "building-watermill",
+    "rotate-z"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "building-wizard-tower",
+   "file": "building-wizard-tower.glb",
+   "kb": 86,
+   "triangles": 968,
+   "animations": [],
+   "parts": [
+    "building-wizard-tower"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "dirt-lumber",
+   "file": "dirt-lumber.glb",
+   "kb": 34,
+   "triangles": 344,
+   "animations": [],
+   "parts": [
+    "dirt-lumber"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "dirt",
+   "file": "dirt.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "dirt"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "grass-forest",
+   "file": "grass-forest.glb",
+   "kb": 44,
+   "triangles": 448,
+   "animations": [],
+   "parts": [
+    "grass-forest"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "grass-hill",
+   "file": "grass-hill.glb",
+   "kb": 33,
+   "triangles": 348,
+   "animations": [],
+   "parts": [
+    "grass-hill"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "grass",
+   "file": "grass.glb",
+   "kb": 4,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "grass"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "path-corner-sharp",
+   "file": "path-corner-sharp.glb",
+   "kb": 5,
+   "triangles": 43,
+   "animations": [],
+   "parts": [
+    "path-corner-sharp"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "path-corner",
+   "file": "path-corner.glb",
+   "kb": 5,
+   "triangles": 40,
+   "animations": [],
+   "parts": [
+    "path-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "path-crossing",
+   "file": "path-crossing.glb",
+   "kb": 9,
+   "triangles": 94,
+   "animations": [],
+   "parts": [
+    "path-crossing"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "path-end",
+   "file": "path-end.glb",
+   "kb": 3,
+   "triangles": 22,
+   "animations": [],
+   "parts": [
+    "path-end"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "path-intersectionA",
+   "file": "path-intersectionA.glb",
+   "kb": 6,
+   "triangles": 52,
+   "animations": [],
+   "parts": [
+    "path-intersectionA"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "path-intersectionB",
+   "file": "path-intersectionB.glb",
+   "kb": 6,
+   "triangles": 51,
+   "animations": [],
+   "parts": [
+    "path-intersectionB"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "path-intersectionC",
+   "file": "path-intersectionC.glb",
+   "kb": 6,
+   "triangles": 51,
+   "animations": [],
+   "parts": [
+    "path-intersectionC"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "path-intersectionD",
+   "file": "path-intersectionD.glb",
+   "kb": 7,
+   "triangles": 66,
+   "animations": [],
+   "parts": [
+    "path-intersectionD"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "path-intersectionE",
+   "file": "path-intersectionE.glb",
+   "kb": 7,
+   "triangles": 66,
+   "animations": [],
+   "parts": [
+    "path-intersectionE"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "path-intersectionF",
+   "file": "path-intersectionF.glb",
+   "kb": 6,
+   "triangles": 59,
+   "animations": [],
+   "parts": [
+    "path-intersectionF"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "path-intersectionG",
+   "file": "path-intersectionG.glb",
+   "kb": 8,
+   "triangles": 82,
+   "animations": [],
+   "parts": [
+    "path-intersectionG"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "path-intersectionH",
+   "file": "path-intersectionH.glb",
+   "kb": 7,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "path-intersectionH"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "path-square-end",
+   "file": "path-square-end.glb",
+   "kb": 4,
+   "triangles": 37,
+   "animations": [],
+   "parts": [
+    "path-square-end"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "path-square",
+   "file": "path-square.glb",
+   "kb": 6,
+   "triangles": 52,
+   "animations": [],
+   "parts": [
+    "path-square"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "path-start",
+   "file": "path-start.glb",
+   "kb": 4,
+   "triangles": 34,
+   "animations": [],
+   "parts": [
+    "path-start"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "path-straight",
+   "file": "path-straight.glb",
+   "kb": 4,
+   "triangles": 34,
+   "animations": [],
+   "parts": [
+    "path-straight"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "river-corner-sharp",
+   "file": "river-corner-sharp.glb",
+   "kb": 11,
+   "triangles": 134,
+   "animations": [],
+   "parts": [
+    "river-corner-sharp"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "river-corner",
+   "file": "river-corner.glb",
+   "kb": 11,
+   "triangles": 136,
+   "animations": [],
+   "parts": [
+    "river-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "river-crossing",
+   "file": "river-crossing.glb",
+   "kb": 20,
+   "triangles": 240,
+   "animations": [],
+   "parts": [
+    "river-crossing"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "river-end",
+   "file": "river-end.glb",
+   "kb": 8,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "river-end"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "river-intersectionA",
+   "file": "river-intersectionA.glb",
+   "kb": 13,
+   "triangles": 158,
+   "animations": [],
+   "parts": [
+    "river-intersectionA"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "river-intersectionB",
+   "file": "river-intersectionB.glb",
+   "kb": 19,
+   "triangles": 218,
+   "animations": [],
+   "parts": [
+    "river-intersectionB"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "river-intersectionC",
+   "file": "river-intersectionC.glb",
+   "kb": 13,
+   "triangles": 159,
+   "animations": [],
+   "parts": [
+    "river-intersectionC"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "river-intersectionD",
+   "file": "river-intersectionD.glb",
+   "kb": 16,
+   "triangles": 196,
+   "animations": [],
+   "parts": [
+    "river-intersectionD"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "river-intersectionE",
+   "file": "river-intersectionE.glb",
+   "kb": 16,
+   "triangles": 192,
+   "animations": [],
+   "parts": [
+    "river-intersectionE"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "river-intersectionF",
+   "file": "river-intersectionF.glb",
+   "kb": 15,
+   "triangles": 184,
+   "animations": [],
+   "parts": [
+    "river-intersectionF"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "river-intersectionG",
+   "file": "river-intersectionG.glb",
+   "kb": 19,
+   "triangles": 222,
+   "animations": [],
+   "parts": [
+    "river-intersectionG"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "river-intersectionH",
+   "file": "river-intersectionH.glb",
+   "kb": 16,
+   "triangles": 182,
+   "animations": [],
+   "parts": [
+    "river-intersectionH"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "river-start",
+   "file": "river-start.glb",
+   "kb": 10,
+   "triangles": 112,
+   "animations": [],
+   "parts": [
+    "river-start"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "river-straight",
+   "file": "river-straight.glb",
+   "kb": 10,
+   "triangles": 120,
+   "animations": [],
+   "parts": [
+    "river-straight"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "sand-desert",
+   "file": "sand-desert.glb",
+   "kb": 24,
+   "triangles": 246,
+   "animations": [],
+   "parts": [
+    "sand-desert"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "sand-rocks",
+   "file": "sand-rocks.glb",
+   "kb": 9,
+   "triangles": 82,
+   "animations": [],
+   "parts": [
+    "sand-rocks"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "sand",
+   "file": "sand.glb",
+   "kb": 4,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "sand"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stone-hill",
+   "file": "stone-hill.glb",
+   "kb": 13,
+   "triangles": 134,
+   "animations": [],
+   "parts": [
+    "stone-hill"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stone-mountain",
+   "file": "stone-mountain.glb",
+   "kb": 20,
+   "triangles": 210,
+   "animations": [],
+   "parts": [
+    "stone-mountain"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stone-rocks",
+   "file": "stone-rocks.glb",
+   "kb": 24,
+   "triangles": 268,
+   "animations": [],
+   "parts": [
+    "stone-rocks"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stone",
+   "file": "stone.glb",
+   "kb": 4,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "stone"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "unit-house",
+   "file": "unit-house.glb",
+   "kb": 8,
+   "triangles": 80,
+   "animations": [],
+   "parts": [
+    "unit-house"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "unit-mansion",
+   "file": "unit-mansion.glb",
+   "kb": 12,
+   "triangles": 130,
+   "animations": [],
+   "parts": [
+    "unit-mansion"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "unit-mill",
+   "file": "unit-mill.glb",
+   "kb": 22,
+   "triangles": 228,
+   "animations": [
+    "animation"
+   ],
+   "parts": [
+    "unit-mill",
+    "rotate-x"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "unit-ship-large",
+   "file": "unit-ship-large.glb",
+   "kb": 17,
+   "triangles": 162,
+   "animations": [],
+   "parts": [
+    "unit-ship-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "unit-ship",
+   "file": "unit-ship.glb",
+   "kb": 12,
+   "triangles": 124,
+   "animations": [],
+   "parts": [
+    "unit-ship"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "unit-tower",
+   "file": "unit-tower.glb",
+   "kb": 20,
+   "triangles": 226,
+   "animations": [],
+   "parts": [
+    "unit-tower"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "unit-tree",
+   "file": "unit-tree.glb",
+   "kb": 6,
+   "triangles": 52,
+   "animations": [],
+   "parts": [
+    "unit-tree"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "unit-wall-tower",
+   "file": "unit-wall-tower.glb",
+   "kb": 15,
+   "triangles": 164,
+   "animations": [],
+   "parts": [
+    "unit-wall-tower"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "water-island",
+   "file": "water-island.glb",
+   "kb": 9,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "water-island"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "water-rocks",
+   "file": "water-rocks.glb",
+   "kb": 16,
+   "triangles": 164,
+   "animations": [],
+   "parts": [
+    "water-rocks"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "water",
+   "file": "water.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "water"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  }
+ ]
+}

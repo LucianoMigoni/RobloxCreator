@@ -1,0 +1,2003 @@
+{
+ "pack": "roblox-audio-library",
+ "kind": "sound",
+ "source": "Creator Store de Roblox (apis.roblox.com/toolbox-service), filtro creatorTargetId=1 (Roblox)",
+ "license": "Audio de Roblox: se usa dentro de experiencias de Roblox sin subir nada",
+ "author": "Roblox",
+ "imported": "2026-10-28",
+ "count": 249,
+ "items": [
+  {
+   "name": "00000000",
+   "file": "rbxassetid://101395123066704",
+   "id": 101395123066704,
+   "seconds": 0,
+   "audioType": "Unknown",
+   "keyword": "music"
+  },
+  {
+   "name": "00000000",
+   "file": "rbxassetid://106434555113536",
+   "id": 106434555113536,
+   "seconds": 0,
+   "audioType": "Unknown",
+   "keyword": "music"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_8Bit_Blip_01",
+   "file": "rbxassetid://16480580213",
+   "id": 16480580213,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_8Bit_Blip_02",
+   "file": "rbxassetid://16480580064",
+   "id": 16480580064,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_8Bit_Blip_03",
+   "file": "rbxassetid://16480579910",
+   "id": 16480579910,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_8Bit_Blip_04",
+   "file": "rbxassetid://16480579685",
+   "id": 16480579685,
+   "seconds": 2,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_8Bit_Blip_05",
+   "file": "rbxassetid://16480579431",
+   "id": 16480579431,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_8Bit_Blip_06",
+   "file": "rbxassetid://16480579230",
+   "id": 16480579230,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_8Bit_Blip_07",
+   "file": "rbxassetid://16480578737",
+   "id": 16480578737,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_8Bit_Blip_09",
+   "file": "rbxassetid://16480578434",
+   "id": 16480578434,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_8Bit_Blip_10",
+   "file": "rbxassetid://16480578302",
+   "id": 16480578302,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_8Bit_Riser_01",
+   "file": "rbxassetid://16480578169",
+   "id": 16480578169,
+   "seconds": 2,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_8Bit_Riser_02",
+   "file": "rbxassetid://16480578036",
+   "id": 16480578036,
+   "seconds": 3,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_8Bit_Riser_04",
+   "file": "rbxassetid://16480577565",
+   "id": 16480577565,
+   "seconds": 3,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_8Bit_Tone_Loop_01",
+   "file": "rbxassetid://16480577416",
+   "id": 16480577416,
+   "seconds": 8,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_8Bit_Tone_Loop_02",
+   "file": "rbxassetid://16480577262",
+   "id": 16480577262,
+   "seconds": 5,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_8Bit_Tone_Loop_03",
+   "file": "rbxassetid://16480577096",
+   "id": 16480577096,
+   "seconds": 13,
+   "audioType": "Music",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_8Bit_Tone_Loop_04",
+   "file": "rbxassetid://16480576843",
+   "id": 16480576843,
+   "seconds": 6,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_8Bit_Tone_Loop_05",
+   "file": "rbxassetid://16480576688",
+   "id": 16480576688,
+   "seconds": 6,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Ball_Plastic_Slide_01",
+   "file": "rbxassetid://16480576404",
+   "id": 16480576404,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Ball_Plastic_Slide_02",
+   "file": "rbxassetid://16480576300",
+   "id": 16480576300,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Ball_Plastic_Slide_03",
+   "file": "rbxassetid://16480576200",
+   "id": 16480576200,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Ball_Plastic_Slide_04",
+   "file": "rbxassetid://16480576087",
+   "id": 16480576087,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Ball_Plastic_Slide_05",
+   "file": "rbxassetid://16480576535",
+   "id": 16480576535,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Ball_Plastic_Slide_06",
+   "file": "rbxassetid://16480575963",
+   "id": 16480575963,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Big_Metal_Tally_01",
+   "file": "rbxassetid://16480575861",
+   "id": 16480575861,
+   "seconds": 2,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Big_Metal_Tally_02",
+   "file": "rbxassetid://16480575731",
+   "id": 16480575731,
+   "seconds": 2,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Big_Metal_Tally_03",
+   "file": "rbxassetid://16480575322",
+   "id": 16480575322,
+   "seconds": 2,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Big_Metal_Tally_04",
+   "file": "rbxassetid://16480575523",
+   "id": 16480575523,
+   "seconds": 2,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Big_Metal_Tally_05",
+   "file": "rbxassetid://16480575096",
+   "id": 16480575096,
+   "seconds": 2,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Big_Metal_Tally_06",
+   "file": "rbxassetid://16480574888",
+   "id": 16480574888,
+   "seconds": 2,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Bumper_Full_01",
+   "file": "rbxassetid://16480574637",
+   "id": 16480574637,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Bumper_Low_Bells_02",
+   "file": "rbxassetid://16480570986",
+   "id": 16480570986,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "bell"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Bumper_Low_Bells_03",
+   "file": "rbxassetid://16480570779",
+   "id": 16480570779,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "bell"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Bumper_Low_Bells_04",
+   "file": "rbxassetid://16480570609",
+   "id": 16480570609,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "bell"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Bumper_Low_Bells_05",
+   "file": "rbxassetid://16480570385",
+   "id": 16480570385,
+   "seconds": 2,
+   "audioType": "SoundEffect",
+   "keyword": "bell"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Bumper_Mecanical_Air_03",
+   "file": "rbxassetid://16480569639",
+   "id": 16480569639,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Bumper_Mecanical_Air_04",
+   "file": "rbxassetid://16480569140",
+   "id": 16480569140,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Bumper_Mecanical_Air_05",
+   "file": "rbxassetid://16480568993",
+   "id": 16480568993,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Bumper_Soft_Click_01",
+   "file": "rbxassetid://16480568821",
+   "id": 16480568821,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "click"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Bumper_Soft_Click_02",
+   "file": "rbxassetid://16480568611",
+   "id": 16480568611,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "click"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Bumper_Soft_Click_03",
+   "file": "rbxassetid://16480568432",
+   "id": 16480568432,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "click"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Bumper_Soft_Click_04",
+   "file": "rbxassetid://16480568294",
+   "id": 16480568294,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "click"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Bumper_Soft_Click_05",
+   "file": "rbxassetid://16480568148",
+   "id": 16480568148,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "click"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Bumper_Weighted_Click_01",
+   "file": "rbxassetid://16480567946",
+   "id": 16480567946,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "click"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Bumper_Weighted_Click_02",
+   "file": "rbxassetid://16480567850",
+   "id": 16480567850,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "click"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Bumper_Weighted_Click_03",
+   "file": "rbxassetid://16480567747",
+   "id": 16480567747,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "click"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Bumper_Weighted_Click_04",
+   "file": "rbxassetid://16480567638",
+   "id": 16480567638,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "click"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Bumper_Weighted_Click_05",
+   "file": "rbxassetid://16480567515",
+   "id": 16480567515,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "click"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Endgame_Tally_01",
+   "file": "rbxassetid://16480567382",
+   "id": 16480567382,
+   "seconds": 2,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Flipper_Down_01",
+   "file": "rbxassetid://16480567211",
+   "id": 16480567211,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Flipper_Down_02",
+   "file": "rbxassetid://16480567024",
+   "id": 16480567024,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Flipper_Down_04",
+   "file": "rbxassetid://16480566481",
+   "id": 16480566481,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Flipper_Down_05",
+   "file": "rbxassetid://16480566252",
+   "id": 16480566252,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Flipper_Full_01",
+   "file": "rbxassetid://16480566008",
+   "id": 16480566008,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Flipper_Full_02",
+   "file": "rbxassetid://16480565810",
+   "id": 16480565810,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Flipper_Full_03",
+   "file": "rbxassetid://16480565620",
+   "id": 16480565620,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Flipper_Full_04",
+   "file": "rbxassetid://16480565375",
+   "id": 16480565375,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Flipper_Full_05",
+   "file": "rbxassetid://16480565133",
+   "id": 16480565133,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Flipper_Up_01",
+   "file": "rbxassetid://16480564862",
+   "id": 16480564862,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Flipper_Up_04",
+   "file": "rbxassetid://16480564530",
+   "id": 16480564530,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Flipper_Up_05",
+   "file": "rbxassetid://16480564315",
+   "id": 16480564315,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Flipper_Up_06",
+   "file": "rbxassetid://16480564091",
+   "id": 16480564091,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Gameplay_Actions_01",
+   "file": "rbxassetid://16480563821",
+   "id": 16480563821,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "game"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Gameplay_Actions_02",
+   "file": "rbxassetid://16480563372",
+   "id": 16480563372,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "game"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Gameplay_Actions_03",
+   "file": "rbxassetid://16480563559",
+   "id": 16480563559,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "game"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Gameplay_Actions_04",
+   "file": "rbxassetid://16480563071",
+   "id": 16480563071,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "game"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Gameplay_Actions_05",
+   "file": "rbxassetid://16480562576",
+   "id": 16480562576,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "game"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Gameplay_Actions_06",
+   "file": "rbxassetid://16480562767",
+   "id": 16480562767,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "game"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Gameplay_Actions_07",
+   "file": "rbxassetid://16480562390",
+   "id": 16480562390,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "game"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Gameplay_Actions_08",
+   "file": "rbxassetid://16480562133",
+   "id": 16480562133,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "game"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Gameplay_Actions_09",
+   "file": "rbxassetid://16480561888",
+   "id": 16480561888,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "game"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Gameplay_Actions_10",
+   "file": "rbxassetid://16480561738",
+   "id": 16480561738,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "game"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Gameplay_Actions_11",
+   "file": "rbxassetid://16480561587",
+   "id": 16480561587,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "game"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Gameplay_Actions_12",
+   "file": "rbxassetid://16480561421",
+   "id": 16480561421,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "game"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Gameplay_Actions_13",
+   "file": "rbxassetid://16480561089",
+   "id": 16480561089,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "game"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Giant_Button_Press_01",
+   "file": "rbxassetid://16480560857",
+   "id": 16480560857,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Giant_Button_Press_02",
+   "file": "rbxassetid://16480560696",
+   "id": 16480560696,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Giant_Button_Press_03",
+   "file": "rbxassetid://16480560478",
+   "id": 16480560478,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Giant_Button_Press_04",
+   "file": "rbxassetid://16480560173",
+   "id": 16480560173,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Giant_Button_Press_05",
+   "file": "rbxassetid://16480559878",
+   "id": 16480559878,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Giant_Button_Press_06",
+   "file": "rbxassetid://16480559627",
+   "id": 16480559627,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Giant_Button_Press_08",
+   "file": "rbxassetid://16480559134",
+   "id": 16480559134,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Joystick_Buzz_Release_01",
+   "file": "rbxassetid://16480558943",
+   "id": 16480558943,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Joystick_Buzz_Release_02",
+   "file": "rbxassetid://16480558759",
+   "id": 16480558759,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Joystick_Buzz_Release_04",
+   "file": "rbxassetid://16480558444",
+   "id": 16480558444,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Joystick_Buzz_Release_05",
+   "file": "rbxassetid://16480558297",
+   "id": 16480558297,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Joystick_Clicky_Loop_01",
+   "file": "rbxassetid://16480558059",
+   "id": 16480558059,
+   "seconds": 5,
+   "audioType": "SoundEffect",
+   "keyword": "click"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Joystick_Rotate_Loop_01",
+   "file": "rbxassetid://16480557782",
+   "id": 16480557782,
+   "seconds": 9,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Joystick_Slam_02",
+   "file": "rbxassetid://16480557344",
+   "id": 16480557344,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Joystick_Slam_03",
+   "file": "rbxassetid://16480557158",
+   "id": 16480557158,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Joystick_Slam_04",
+   "file": "rbxassetid://16480556770",
+   "id": 16480556770,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Joystick_Slam_05",
+   "file": "rbxassetid://16480556957",
+   "id": 16480556957,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Large_Plastic_Button_Press_01",
+   "file": "rbxassetid://16480556621",
+   "id": 16480556621,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Large_Plastic_Button_Press_03",
+   "file": "rbxassetid://16480556200",
+   "id": 16480556200,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Large_Plastic_Button_Press_04",
+   "file": "rbxassetid://16480555978",
+   "id": 16480555978,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Modern_Machine_Mechanics_01",
+   "file": "rbxassetid://16480555593",
+   "id": 16480555593,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Modern_Machine_Mechanics_03",
+   "file": "rbxassetid://16480555243",
+   "id": 16480555243,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Rolling_Many_Constant_Loop_01",
+   "file": "rbxassetid://16480554820",
+   "id": 16480554820,
+   "seconds": 8,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Rolling_Metal_Tracks_Loop_01",
+   "file": "rbxassetid://16480554578",
+   "id": 16480554578,
+   "seconds": 3,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Rolling_Single_Loop_01",
+   "file": "rbxassetid://16480554368",
+   "id": 16480554368,
+   "seconds": 9,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Scoreboard_Tally_Loop_01",
+   "file": "rbxassetid://16480554151",
+   "id": 16480554151,
+   "seconds": 5,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Small_Button_Press_01",
+   "file": "rbxassetid://16480555003",
+   "id": 16480555003,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Small_Button_Press_02",
+   "file": "rbxassetid://16480553937",
+   "id": 16480553937,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Small_Button_Press_03",
+   "file": "rbxassetid://16480553530",
+   "id": 16480553530,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Small_Button_Press_04",
+   "file": "rbxassetid://16480553328",
+   "id": 16480553328,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Small_Button_Press_05",
+   "file": "rbxassetid://16480553171",
+   "id": 16480553171,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Small_Button_Press_06",
+   "file": "rbxassetid://16480552993",
+   "id": 16480552993,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Small_Button_Press_08",
+   "file": "rbxassetid://16480552737",
+   "id": 16480552737,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Small_Button_Press_09",
+   "file": "rbxassetid://16480552518",
+   "id": 16480552518,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Small_Button_Press_10",
+   "file": "rbxassetid://16480552350",
+   "id": 16480552350,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Small_Button_Press_11",
+   "file": "rbxassetid://16480552135",
+   "id": 16480552135,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Small_Button_Press_12",
+   "file": "rbxassetid://16480551890",
+   "id": 16480551890,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Small_Metal_Click_01",
+   "file": "rbxassetid://16480551554",
+   "id": 16480551554,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "click"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Startup_Mechanical_01",
+   "file": "rbxassetid://16480551414",
+   "id": 16480551414,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Startup_Mechanical_02",
+   "file": "rbxassetid://16480551277",
+   "id": 16480551277,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Tiny_Button_Press_01",
+   "file": "rbxassetid://16480550292",
+   "id": 16480550292,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Tiny_Button_Press_02",
+   "file": "rbxassetid://16480550090",
+   "id": 16480550090,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Tiny_Button_Press_03",
+   "file": "rbxassetid://16480550203",
+   "id": 16480550203,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Tiny_Button_Press_04",
+   "file": "rbxassetid://16480550820",
+   "id": 16480550820,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Tiny_Button_Press_05",
+   "file": "rbxassetid://16480550412",
+   "id": 16480550412,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Tiny_Button_Press_06",
+   "file": "rbxassetid://16480549947",
+   "id": 16480549947,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Tiny_Button_Press_07",
+   "file": "rbxassetid://16480549841",
+   "id": 16480549841,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Tiny_Button_Press_08",
+   "file": "rbxassetid://16480549708",
+   "id": 16480549708,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "button"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Token_Insert_01",
+   "file": "rbxassetid://16480548103",
+   "id": 16480548103,
+   "seconds": 2,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Token_Insert_03",
+   "file": "rbxassetid://16480549189",
+   "id": 16480549189,
+   "seconds": 2,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Token_Insert_04",
+   "file": "rbxassetid://16480548988",
+   "id": 16480548988,
+   "seconds": 2,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "Audio/Roblox_Pinball_Token_Insert_05",
+   "file": "rbxassetid://16480548845",
+   "id": 16480548845,
+   "seconds": 2,
+   "audioType": "SoundEffect",
+   "keyword": "Audio/Roblox"
+  },
+  {
+   "name": "BathRunning",
+   "file": "rbxassetid://365551014",
+   "id": 365551014,
+   "seconds": 82,
+   "audioType": "Unknown",
+   "keyword": "music"
+  },
+  {
+   "name": "Blender",
+   "file": "rbxassetid://365965609",
+   "id": 365965609,
+   "seconds": 4,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "Cannon_Explode",
+   "file": "rbxassetid://3149249837",
+   "id": 3149249837,
+   "seconds": 4,
+   "audioType": "SoundEffect",
+   "keyword": "pop"
+  },
+  {
+   "name": "Catapult Launch",
+   "file": "rbxassetid://17283613561",
+   "id": 17283613561,
+   "seconds": 4,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "Catapult Load",
+   "file": "rbxassetid://17283609606",
+   "id": 17283609606,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "CoffeeBrew",
+   "file": "rbxassetid://365956378",
+   "id": 365956378,
+   "seconds": 15,
+   "audioType": "Unknown",
+   "keyword": "music"
+  },
+  {
+   "name": "CoinTransfer_01",
+   "file": "rbxassetid://127645268874265",
+   "id": 127645268874265,
+   "seconds": 2,
+   "audioType": "SoundEffect",
+   "keyword": "coin"
+  },
+  {
+   "name": "CupboardOpenClose",
+   "file": "rbxassetid://365551423",
+   "id": 365551423,
+   "seconds": 4,
+   "audioType": "SoundEffect",
+   "keyword": "door"
+  },
+  {
+   "name": "Dishwasher",
+   "file": "rbxassetid://365552741",
+   "id": 365552741,
+   "seconds": 53,
+   "audioType": "Unknown",
+   "keyword": "SFX"
+  },
+  {
+   "name": "FaucetTurnOn",
+   "file": "rbxassetid://365203457",
+   "id": 365203457,
+   "seconds": 15,
+   "audioType": "Unknown",
+   "keyword": "music"
+  },
+  {
+   "name": "FridgeCloseShort",
+   "file": "rbxassetid://365572712",
+   "id": 365572712,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "FridgeOpen",
+   "file": "rbxassetid://365549814",
+   "id": 365549814,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "Generic - Cloud Blitz",
+   "file": "rbxassetid://17422163655",
+   "id": 17422163655,
+   "seconds": 138,
+   "audioType": "Music",
+   "keyword": "music"
+  },
+  {
+   "name": "HR - WASSA (Instrumental)",
+   "file": "rbxassetid://17422147220",
+   "id": 17422147220,
+   "seconds": 85,
+   "audioType": "Music",
+   "keyword": "music"
+  },
+  {
+   "name": "HR - WASSA (Instrumental)",
+   "file": "rbxassetid://17422122997",
+   "id": 17422122997,
+   "seconds": 85,
+   "audioType": "Music",
+   "keyword": "music"
+  },
+  {
+   "name": "HalloweenLightning.wav",
+   "file": "rbxassetid://12222019",
+   "id": 12222019,
+   "seconds": 5,
+   "audioType": "SoundEffect",
+   "keyword": "thunder"
+  },
+  {
+   "name": "HalloweenThunder.wav",
+   "file": "rbxassetid://12222030",
+   "id": 12222030,
+   "seconds": 4,
+   "audioType": "SoundEffect",
+   "keyword": "thunder"
+  },
+  {
+   "name": "Kerplunk.wav",
+   "file": "rbxassetid://12222054",
+   "id": 12222054,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "Kid saying Ouch.wav",
+   "file": "rbxassetid://12222058",
+   "id": 12222058,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "Launching rocket.wav",
+   "file": "rbxassetid://12222065",
+   "id": 12222065,
+   "seconds": 2,
+   "audioType": "SoundEffect",
+   "keyword": "rocket"
+  },
+  {
+   "name": "Official OOF Sound Effect",
+   "file": "rbxassetid://79348298352567",
+   "id": 79348298352567,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "PV_Join",
+   "file": "rbxassetid://87296803139875",
+   "id": 87296803139875,
+   "seconds": 3,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "PV_Leave",
+   "file": "rbxassetid://108128059974752",
+   "id": 108128059974752,
+   "seconds": 3,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "PV_ToastNotif",
+   "file": "rbxassetid://99437156604053",
+   "id": 99437156604053,
+   "seconds": 3,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "PlayerStep_Dirt_09",
+   "file": "rbxassetid://123482534263519",
+   "id": 123482534263519,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "RBLX UI Back (SFX)",
+   "file": "rbxassetid://10066914500",
+   "id": 10066914500,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "RBLX UI"
+  },
+  {
+   "name": "RBLX UI Camera (SFX)",
+   "file": "rbxassetid://10066921516",
+   "id": 10066921516,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "RBLX UI"
+  },
+  {
+   "name": "RBLX UI Delete (SFX)",
+   "file": "rbxassetid://10066926605",
+   "id": 10066926605,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "RBLX UI"
+  },
+  {
+   "name": "RBLX UI Hover 01 (SFX)",
+   "file": "rbxassetid://10066931761",
+   "id": 10066931761,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "RBLX UI"
+  },
+  {
+   "name": "RBLX UI Hover 02 (SFX)",
+   "file": "rbxassetid://10066936758",
+   "id": 10066936758,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "RBLX UI"
+  },
+  {
+   "name": "RBLX UI Hover 03 (SFX)",
+   "file": "rbxassetid://10066942189",
+   "id": 10066942189,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "RBLX UI"
+  },
+  {
+   "name": "RBLX UI Purchase (SFX)",
+   "file": "rbxassetid://10066947742",
+   "id": 10066947742,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "purchase"
+  },
+  {
+   "name": "RBLX UI Select 01 (SFX)",
+   "file": "rbxassetid://10128760939",
+   "id": 10128760939,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "RBLX UI"
+  },
+  {
+   "name": "RBLX UI Select 02 (SFX)",
+   "file": "rbxassetid://10066968815",
+   "id": 10066968815,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "RBLX UI"
+  },
+  {
+   "name": "RBLX UI Swipe (SFX)",
+   "file": "rbxassetid://10128766965",
+   "id": 10128766965,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "RBLX UI"
+  },
+  {
+   "name": "Rain Effect",
+   "file": "rbxassetid://1516791621",
+   "id": 1516791621,
+   "seconds": 59,
+   "audioType": "Unknown",
+   "keyword": "rain"
+  },
+  {
+   "name": "Roblox GUI - Aura",
+   "file": "rbxassetid://17208327798",
+   "id": 17208327798,
+   "seconds": 2,
+   "audioType": "SoundEffect",
+   "keyword": "Roblox GUI"
+  },
+  {
+   "name": "Roblox GUI - Back",
+   "file": "rbxassetid://17208186900",
+   "id": 17208186900,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Roblox GUI"
+  },
+  {
+   "name": "Roblox GUI - Bubble",
+   "file": "rbxassetid://17208204604",
+   "id": 17208204604,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "bubble"
+  },
+  {
+   "name": "Roblox GUI - Call Accept",
+   "file": "rbxassetid://17208209318",
+   "id": 17208209318,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Roblox GUI"
+  },
+  {
+   "name": "Roblox GUI - Call Decline",
+   "file": "rbxassetid://17208214688",
+   "id": 17208214688,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Roblox GUI"
+  },
+  {
+   "name": "Roblox GUI - Call Hang Up",
+   "file": "rbxassetid://17208220181",
+   "id": 17208220181,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Roblox GUI"
+  },
+  {
+   "name": "Roblox GUI - Call Leave",
+   "file": "rbxassetid://17208295577",
+   "id": 17208295577,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Roblox GUI"
+  },
+  {
+   "name": "Roblox GUI - Camera Shutter",
+   "file": "rbxassetid://17208312548",
+   "id": 17208312548,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Roblox GUI"
+  },
+  {
+   "name": "Roblox GUI - Equip",
+   "file": "rbxassetid://17208323435",
+   "id": 17208323435,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Roblox GUI"
+  },
+  {
+   "name": "Roblox GUI - Hello",
+   "file": "rbxassetid://17208335138",
+   "id": 17208335138,
+   "seconds": 5,
+   "audioType": "SoundEffect",
+   "keyword": "Roblox GUI"
+  },
+  {
+   "name": "Roblox GUI - Hover 01",
+   "file": "rbxassetid://17208339919",
+   "id": 17208339919,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "Roblox GUI"
+  },
+  {
+   "name": "Roblox GUI - Hover 02",
+   "file": "rbxassetid://17208343514",
+   "id": 17208343514,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "Roblox GUI"
+  },
+  {
+   "name": "Roblox GUI - Hover 03",
+   "file": "rbxassetid://17208348006",
+   "id": 17208348006,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "Roblox GUI"
+  },
+  {
+   "name": "Roblox GUI - Negative",
+   "file": "rbxassetid://17208353912",
+   "id": 17208353912,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "Roblox GUI"
+  },
+  {
+   "name": "Roblox GUI - Notification High",
+   "file": "rbxassetid://17208361335",
+   "id": 17208361335,
+   "seconds": 2,
+   "audioType": "SoundEffect",
+   "keyword": "notification"
+  },
+  {
+   "name": "Roblox GUI - Notification Low",
+   "file": "rbxassetid://17208372272",
+   "id": 17208372272,
+   "seconds": 3,
+   "audioType": "SoundEffect",
+   "keyword": "notification"
+  },
+  {
+   "name": "Roblox GUI - Pickup",
+   "file": "rbxassetid://17208319162",
+   "id": 17208319162,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Roblox GUI"
+  },
+  {
+   "name": "Roblox GUI - Purchase",
+   "file": "rbxassetid://17208380755",
+   "id": 17208380755,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "purchase"
+  },
+  {
+   "name": "Roblox GUI - Recycle",
+   "file": "rbxassetid://17208389987",
+   "id": 17208389987,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Roblox GUI"
+  },
+  {
+   "name": "Roblox GUI - Ringtone",
+   "file": "rbxassetid://17208308857",
+   "id": 17208308857,
+   "seconds": 23,
+   "audioType": "Music",
+   "keyword": "Roblox GUI"
+  },
+  {
+   "name": "Roblox GUI - Select",
+   "file": "rbxassetid://17208396156",
+   "id": 17208396156,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Roblox GUI"
+  },
+  {
+   "name": "Roblox GUI - Send",
+   "file": "rbxassetid://17208399163",
+   "id": 17208399163,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Roblox GUI"
+  },
+  {
+   "name": "Roblox GUI - Spraypaint",
+   "file": "rbxassetid://17208402198",
+   "id": 17208402198,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Roblox GUI"
+  },
+  {
+   "name": "Roblox GUI - Swipe",
+   "file": "rbxassetid://17208405682",
+   "id": 17208405682,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Roblox GUI"
+  },
+  {
+   "name": "Roblox GUI - Tab",
+   "file": "rbxassetid://17208408337",
+   "id": 17208408337,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Roblox GUI"
+  },
+  {
+   "name": "Roblox_RetroFluteMusic_01",
+   "file": "rbxassetid://15930255433",
+   "id": 15930255433,
+   "seconds": 108,
+   "audioType": "Music",
+   "keyword": "music"
+  },
+  {
+   "name": "Roblox_UI_Bright_Click",
+   "file": "rbxassetid://15675059323",
+   "id": 15675059323,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "click"
+  },
+  {
+   "name": "Roblox_UI_Cute_Goodbye",
+   "file": "rbxassetid://15675081158",
+   "id": 15675081158,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "cute"
+  },
+  {
+   "name": "Roblox_UI_Cute_Pop",
+   "file": "rbxassetid://15675055424",
+   "id": 15675055424,
+   "seconds": 3,
+   "audioType": "SoundEffect",
+   "keyword": "pop"
+  },
+  {
+   "name": "Roblox_UI_Delete",
+   "file": "rbxassetid://15675075163",
+   "id": 15675075163,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Roblox_UI"
+  },
+  {
+   "name": "Roblox_UI_Indicator",
+   "file": "rbxassetid://15675085146",
+   "id": 15675085146,
+   "seconds": 3,
+   "audioType": "SoundEffect",
+   "keyword": "Roblox_UI"
+  },
+  {
+   "name": "Roblox_UI_Loop_Air_Whooshes",
+   "file": "rbxassetid://15675021174",
+   "id": 15675021174,
+   "seconds": 11,
+   "audioType": "Unknown",
+   "keyword": "whoosh"
+  },
+  {
+   "name": "Roblox_UI_Loop_Calm_Music",
+   "file": "rbxassetid://15675069601",
+   "id": 15675069601,
+   "seconds": 95,
+   "audioType": "Music",
+   "keyword": "Roblox_UI"
+  },
+  {
+   "name": "Roblox_UI_Loop_Guitar_Acoustic",
+   "file": "rbxassetid://15675051846",
+   "id": 15675051846,
+   "seconds": 12,
+   "audioType": "Music",
+   "keyword": "Roblox_UI"
+  },
+  {
+   "name": "Roblox_UI_Paper_Swipe",
+   "file": "rbxassetid://15675037413",
+   "id": 15675037413,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Roblox_UI"
+  },
+  {
+   "name": "Roblox_UI_Piano_Hello",
+   "file": "rbxassetid://15675016548",
+   "id": 15675016548,
+   "seconds": 4,
+   "audioType": "SoundEffect",
+   "keyword": "Roblox_UI"
+  },
+  {
+   "name": "Roblox_UI_Small_Click",
+   "file": "rbxassetid://15675032796",
+   "id": 15675032796,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "click"
+  },
+  {
+   "name": "Roblox_UI_Sweep",
+   "file": "rbxassetid://15675046931",
+   "id": 15675046931,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Roblox_UI"
+  },
+  {
+   "name": "Roblox_UI_Tonal_Stinger",
+   "file": "rbxassetid://15675043410",
+   "id": 15675043410,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "Roblox_UI"
+  },
+  {
+   "name": "Roblox_UI_Whistle_Low",
+   "file": "rbxassetid://15675062723",
+   "id": 15675062723,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "whistle"
+  },
+  {
+   "name": "Roblox_UI_Whoosh_01",
+   "file": "rbxassetid://15675024286",
+   "id": 15675024286,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "whoosh"
+  },
+  {
+   "name": "Roblox_UI_Whoosh_02",
+   "file": "rbxassetid://15675028888",
+   "id": 15675028888,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "whoosh"
+  },
+  {
+   "name": "Roblox_UI_Whoosh_03",
+   "file": "rbxassetid://15674975792",
+   "id": 15674975792,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "whoosh"
+  },
+  {
+   "name": "Roblox_UI_Whoosh_04",
+   "file": "rbxassetid://15675012262",
+   "id": 15675012262,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "whoosh"
+  },
+  {
+   "name": "Rocket shot.wav",
+   "file": "rbxassetid://12222084",
+   "id": 12222084,
+   "seconds": 5,
+   "audioType": "SoundEffect",
+   "keyword": "rocket"
+  },
+  {
+   "name": "Rocket whoosh 01.wav",
+   "file": "rbxassetid://12222095",
+   "id": 12222095,
+   "seconds": 6,
+   "audioType": "SoundEffect",
+   "keyword": "whoosh"
+  },
+  {
+   "name": "Rubber band sling shot.wav",
+   "file": "rbxassetid://12222103",
+   "id": 12222103,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "Rubber band.wav",
+   "file": "rbxassetid://12222106",
+   "id": 12222106,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "SWITCH3.wav",
+   "file": "rbxassetid://12222183",
+   "id": 12222183,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "Short spring sound.wav",
+   "file": "rbxassetid://12222124",
+   "id": 12222124,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "boing"
+  },
+  {
+   "name": "Shoulder fired rocket.wav",
+   "file": "rbxassetid://12222132",
+   "id": 12222132,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "rocket"
+  },
+  {
+   "name": "Thunder With Lion Roar Searing Blast Growl 3 (SFX)",
+   "file": "rbxassetid://9120031442",
+   "id": 9120031442,
+   "seconds": 4,
+   "audioType": "SoundEffect",
+   "keyword": "thunder"
+  },
+  {
+   "name": "ToasterUp",
+   "file": "rbxassetid://365950085",
+   "id": 365950085,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "TutorialMusic_01",
+   "file": "rbxassetid://130053244401794",
+   "id": 130053244401794,
+   "seconds": 262,
+   "audioType": "Music",
+   "keyword": "music"
+  },
+  {
+   "name": "TutorialPurchase_01",
+   "file": "rbxassetid://99366249808641",
+   "id": 99366249808641,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "UFO Beam",
+   "file": "rbxassetid://162670130",
+   "id": 162670130,
+   "seconds": 17,
+   "audioType": "Unknown",
+   "keyword": "zap"
+  },
+  {
+   "name": "UFO Flying",
+   "file": "rbxassetid://162670113",
+   "id": 162670113,
+   "seconds": 5,
+   "audioType": "SoundEffect",
+   "keyword": "whoosh"
+  },
+  {
+   "name": "UFO Idle",
+   "file": "rbxassetid://162670150",
+   "id": 162670150,
+   "seconds": 6,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "UFO Taking Off",
+   "file": "rbxassetid://162670145",
+   "id": 162670145,
+   "seconds": 3,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "Water Drip Cu Single Drips Constant 9 (SFX)",
+   "file": "rbxassetid://9120510269",
+   "id": 9120510269,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "water"
+  },
+  {
+   "name": "Water_Plants_01",
+   "file": "rbxassetid://103840356233584",
+   "id": 103840356233584,
+   "seconds": 2,
+   "audioType": "SoundEffect",
+   "keyword": "water"
+  },
+  {
+   "name": "bass.wav",
+   "file": "rbxassetid://12221944",
+   "id": 12221944,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "bass.wav",
+   "file": "rbxassetid://12221831",
+   "id": 12221831,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "bfsl-minifigfoots1.mp3",
+   "file": "rbxassetid://12221952",
+   "id": 12221952,
+   "seconds": 2,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "bfsl-minifigfoots2.mp3",
+   "file": "rbxassetid://12221962",
+   "id": 12221962,
+   "seconds": 2,
+   "audioType": "SoundEffect",
+   "keyword": "footstep"
+  },
+  {
+   "name": "button.wav",
+   "file": "rbxassetid://12221967",
+   "id": 12221967,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "click"
+  },
+  {
+   "name": "clickfast.wav",
+   "file": "rbxassetid://12221976",
+   "id": 12221976,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "click"
+  },
+  {
+   "name": "collide.wav",
+   "file": "rbxassetid://12221984",
+   "id": 12221984,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "electronicpingshort.wav",
+   "file": "rbxassetid://12221990",
+   "id": 12221990,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "ding"
+  },
+  {
+   "name": "flashbulb.wav",
+   "file": "rbxassetid://12221996",
+   "id": 12221996,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "glassbreak.wav",
+   "file": "rbxassetid://12222005",
+   "id": 12222005,
+   "seconds": 2,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "hit.wav",
+   "file": "rbxassetid://12222046",
+   "id": 12222046,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "hit"
+  },
+  {
+   "name": "luvbackpack x sukoyomi - control",
+   "file": "rbxassetid://17422113153",
+   "id": 17422113153,
+   "seconds": 149,
+   "audioType": "Music",
+   "keyword": "music"
+  },
+  {
+   "name": "pageturn.wav",
+   "file": "rbxassetid://12222076",
+   "id": 12222076,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "paintball.wav",
+   "file": "rbxassetid://11900833",
+   "id": 11900833,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "snap.wav",
+   "file": "rbxassetid://12222140",
+   "id": 12222140,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "egg"
+  },
+  {
+   "name": "splat.wav",
+   "file": "rbxassetid://12222152",
+   "id": 12222152,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "slap"
+  },
+  {
+   "name": "switch.wav",
+   "file": "rbxassetid://12222170",
+   "id": 12222170,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "chest"
+  },
+  {
+   "name": "swoosh.wav",
+   "file": "rbxassetid://12222200",
+   "id": 12222200,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "swoosh"
+  },
+  {
+   "name": "swordlunge.wav",
+   "file": "rbxassetid://12222208",
+   "id": 12222208,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "swordslash.wav",
+   "file": "rbxassetid://12222216",
+   "id": 12222216,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "ufofly.wav",
+   "file": "rbxassetid://12221842",
+   "id": 12221842,
+   "seconds": 4,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "unsheath.wav",
+   "file": "rbxassetid://12222225",
+   "id": 12222225,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "uuhhh.wav",
+   "file": "rbxassetid://12222242",
+   "id": 12222242,
+   "seconds": 0,
+   "audioType": "SoundEffect",
+   "keyword": "SFX"
+  },
+  {
+   "name": "victory.wav",
+   "file": "rbxassetid://12222253",
+   "id": 12222253,
+   "seconds": 1,
+   "audioType": "SoundEffect",
+   "keyword": "victory"
+  }
+ ]
+}

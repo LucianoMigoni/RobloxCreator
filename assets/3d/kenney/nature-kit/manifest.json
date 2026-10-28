@@ -1,0 +1,3639 @@
+{
+ "pack": "kenney-nature-kit",
+ "kind": "model3d",
+ "source": "https://kenney.nl/assets/nature-kit",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 329,
+ "items": [
+  {
+   "name": "bed",
+   "file": "bed.glb",
+   "kb": 18,
+   "triangles": 268,
+   "animations": [],
+   "parts": [
+    "bed"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bed_floor",
+   "file": "bed_floor.glb",
+   "kb": 10,
+   "triangles": 124,
+   "animations": [],
+   "parts": [
+    "bed_floor"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bridge_center_stone",
+   "file": "bridge_center_stone.glb",
+   "kb": 4,
+   "triangles": 52,
+   "animations": [],
+   "parts": [
+    "bridge_center_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bridge_center_stoneRound",
+   "file": "bridge_center_stoneRound.glb",
+   "kb": 4,
+   "triangles": 52,
+   "animations": [],
+   "parts": [
+    "bridge_center_stoneRound"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bridge_center_wood",
+   "file": "bridge_center_wood.glb",
+   "kb": 5,
+   "triangles": 52,
+   "animations": [],
+   "parts": [
+    "bridge_center_wood"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bridge_center_woodRound",
+   "file": "bridge_center_woodRound.glb",
+   "kb": 6,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "bridge_center_woodRound"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bridge_side_stone",
+   "file": "bridge_side_stone.glb",
+   "kb": 11,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "bridge_side_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bridge_side_stoneRound",
+   "file": "bridge_side_stoneRound.glb",
+   "kb": 13,
+   "triangles": 198,
+   "animations": [],
+   "parts": [
+    "bridge_side_stoneRound"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bridge_side_wood",
+   "file": "bridge_side_wood.glb",
+   "kb": 10,
+   "triangles": 136,
+   "animations": [],
+   "parts": [
+    "bridge_side_wood"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bridge_side_woodRound",
+   "file": "bridge_side_woodRound.glb",
+   "kb": 13,
+   "triangles": 190,
+   "animations": [],
+   "parts": [
+    "bridge_side_woodRound"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bridge_stone",
+   "file": "bridge_stone.glb",
+   "kb": 17,
+   "triangles": 252,
+   "animations": [],
+   "parts": [
+    "bridge_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bridge_stoneNarrow",
+   "file": "bridge_stoneNarrow.glb",
+   "kb": 17,
+   "triangles": 252,
+   "animations": [],
+   "parts": [
+    "bridge_stoneNarrow"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bridge_stoneRound",
+   "file": "bridge_stoneRound.glb",
+   "kb": 22,
+   "triangles": 360,
+   "animations": [],
+   "parts": [
+    "bridge_stoneRound"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bridge_stoneRoundNarrow",
+   "file": "bridge_stoneRoundNarrow.glb",
+   "kb": 22,
+   "triangles": 360,
+   "animations": [],
+   "parts": [
+    "bridge_stoneRoundNarrow"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bridge_wood",
+   "file": "bridge_wood.glb",
+   "kb": 15,
+   "triangles": 220,
+   "animations": [],
+   "parts": [
+    "bridge_wood"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bridge_woodNarrow",
+   "file": "bridge_woodNarrow.glb",
+   "kb": 15,
+   "triangles": 220,
+   "animations": [],
+   "parts": [
+    "bridge_woodNarrow"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bridge_woodRound",
+   "file": "bridge_woodRound.glb",
+   "kb": 20,
+   "triangles": 336,
+   "animations": [],
+   "parts": [
+    "bridge_woodRound"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bridge_woodRoundNarrow",
+   "file": "bridge_woodRoundNarrow.glb",
+   "kb": 20,
+   "triangles": 336,
+   "animations": [],
+   "parts": [
+    "bridge_woodRoundNarrow"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cactus_short",
+   "file": "cactus_short.glb",
+   "kb": 8,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "cactus_short"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cactus_tall",
+   "file": "cactus_tall.glb",
+   "kb": 9,
+   "triangles": 122,
+   "animations": [],
+   "parts": [
+    "cactus_tall"
+   ],
+   "textures": []
+  },
+  {
+   "name": "campfire_bricks",
+   "file": "campfire_bricks.glb",
+   "kb": 9,
+   "triangles": 120,
+   "animations": [],
+   "parts": [
+    "campfire_bricks"
+   ],
+   "textures": []
+  },
+  {
+   "name": "campfire_logs",
+   "file": "campfire_logs.glb",
+   "kb": 9,
+   "triangles": 112,
+   "animations": [],
+   "parts": [
+    "campfire_logs"
+   ],
+   "textures": []
+  },
+  {
+   "name": "campfire_planks",
+   "file": "campfire_planks.glb",
+   "kb": 7,
+   "triangles": 108,
+   "animations": [],
+   "parts": [
+    "campfire_planks"
+   ],
+   "textures": []
+  },
+  {
+   "name": "campfire_stones",
+   "file": "campfire_stones.glb",
+   "kb": 16,
+   "triangles": 264,
+   "animations": [],
+   "parts": [
+    "campfire_stones"
+   ],
+   "textures": []
+  },
+  {
+   "name": "canoe",
+   "file": "canoe.glb",
+   "kb": 15,
+   "triangles": 200,
+   "animations": [],
+   "parts": [
+    "canoe"
+   ],
+   "textures": []
+  },
+  {
+   "name": "canoe_paddle",
+   "file": "canoe_paddle.glb",
+   "kb": 3,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "canoe_paddle"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_blockCave_rock",
+   "file": "cliff_blockCave_rock.glb",
+   "kb": 5,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "cliff_blockCave_rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_blockCave_stone",
+   "file": "cliff_blockCave_stone.glb",
+   "kb": 5,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "cliff_blockCave_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_blockDiagonal_rock",
+   "file": "cliff_blockDiagonal_rock.glb",
+   "kb": 2,
+   "triangles": 8,
+   "animations": [],
+   "parts": [
+    "cliff_blockDiagonal_rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_blockDiagonal_stone",
+   "file": "cliff_blockDiagonal_stone.glb",
+   "kb": 2,
+   "triangles": 8,
+   "animations": [],
+   "parts": [
+    "cliff_blockDiagonal_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_blockHalf_rock",
+   "file": "cliff_blockHalf_rock.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "cliff_blockHalf_rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_blockHalf_stone",
+   "file": "cliff_blockHalf_stone.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "cliff_blockHalf_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_blockQuarter_rock",
+   "file": "cliff_blockQuarter_rock.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "cliff_blockQuarter_rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_blockQuarter_stone",
+   "file": "cliff_blockQuarter_stone.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "cliff_blockQuarter_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_blockSlopeHalfWalls_rock",
+   "file": "cliff_blockSlopeHalfWalls_rock.glb",
+   "kb": 8,
+   "triangles": 106,
+   "animations": [],
+   "parts": [
+    "cliff_blockSlopeHalfWalls_rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_blockSlopeHalfWalls_stone",
+   "file": "cliff_blockSlopeHalfWalls_stone.glb",
+   "kb": 8,
+   "triangles": 106,
+   "animations": [],
+   "parts": [
+    "cliff_blockSlopeHalfWalls_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_blockSlopeWalls_rock",
+   "file": "cliff_blockSlopeWalls_rock.glb",
+   "kb": 8,
+   "triangles": 106,
+   "animations": [],
+   "parts": [
+    "cliff_blockSlopeWalls_rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_blockSlopeWalls_stone",
+   "file": "cliff_blockSlopeWalls_stone.glb",
+   "kb": 8,
+   "triangles": 106,
+   "animations": [],
+   "parts": [
+    "cliff_blockSlopeWalls_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_blockSlope_rock",
+   "file": "cliff_blockSlope_rock.glb",
+   "kb": 6,
+   "triangles": 70,
+   "animations": [],
+   "parts": [
+    "cliff_blockSlope_rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_blockSlope_stone",
+   "file": "cliff_blockSlope_stone.glb",
+   "kb": 6,
+   "triangles": 70,
+   "animations": [],
+   "parts": [
+    "cliff_blockSlope_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_block_rock",
+   "file": "cliff_block_rock.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "cliff_block_rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_block_stone",
+   "file": "cliff_block_stone.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "cliff_block_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_cave_rock",
+   "file": "cliff_cave_rock.glb",
+   "kb": 5,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "cliff_cave_rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_cave_stone",
+   "file": "cliff_cave_stone.glb",
+   "kb": 5,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "cliff_cave_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_cornerInnerLarge_rock",
+   "file": "cliff_cornerInnerLarge_rock.glb",
+   "kb": 4,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "cliff_cornerInnerLarge_rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_cornerInnerLarge_stone",
+   "file": "cliff_cornerInnerLarge_stone.glb",
+   "kb": 4,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "cliff_cornerInnerLarge_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_cornerInnerTop_rock",
+   "file": "cliff_cornerInnerTop_rock.glb",
+   "kb": 7,
+   "triangles": 89,
+   "animations": [],
+   "parts": [
+    "cliff_cornerInnerTop_rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_cornerInnerTop_stone",
+   "file": "cliff_cornerInnerTop_stone.glb",
+   "kb": 7,
+   "triangles": 89,
+   "animations": [],
+   "parts": [
+    "cliff_cornerInnerTop_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_cornerInner_rock",
+   "file": "cliff_cornerInner_rock.glb",
+   "kb": 4,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "cliff_cornerInner_rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_cornerInner_stone",
+   "file": "cliff_cornerInner_stone.glb",
+   "kb": 8,
+   "triangles": 112,
+   "animations": [],
+   "parts": [
+    "cliff_cornerInner_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_cornerLarge_rock",
+   "file": "cliff_cornerLarge_rock.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "cliff_cornerLarge_rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_cornerLarge_stone",
+   "file": "cliff_cornerLarge_stone.glb",
+   "kb": 3,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "cliff_cornerLarge_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_cornerTop_rock",
+   "file": "cliff_cornerTop_rock.glb",
+   "kb": 3,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "cliff_cornerTop_rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_cornerTop_stone",
+   "file": "cliff_cornerTop_stone.glb",
+   "kb": 3,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "cliff_cornerTop_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_corner_rock",
+   "file": "cliff_corner_rock.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "cliff_corner_rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_corner_stone",
+   "file": "cliff_corner_stone.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "cliff_corner_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_diagonal_rock",
+   "file": "cliff_diagonal_rock.glb",
+   "kb": 4,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "cliff_diagonal_rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_diagonal_stone",
+   "file": "cliff_diagonal_stone.glb",
+   "kb": 4,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "cliff_diagonal_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_halfCornerInner_rock",
+   "file": "cliff_halfCornerInner_rock.glb",
+   "kb": 7,
+   "triangles": 89,
+   "animations": [],
+   "parts": [
+    "cliff_halfCornerInner_rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_halfCornerInner_stone",
+   "file": "cliff_halfCornerInner_stone.glb",
+   "kb": 7,
+   "triangles": 89,
+   "animations": [],
+   "parts": [
+    "cliff_halfCornerInner_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_halfCorner_rock",
+   "file": "cliff_halfCorner_rock.glb",
+   "kb": 3,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "cliff_halfCorner_rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_halfCorner_stone",
+   "file": "cliff_halfCorner_stone.glb",
+   "kb": 3,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "cliff_halfCorner_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_half_rock",
+   "file": "cliff_half_rock.glb",
+   "kb": 5,
+   "triangles": 53,
+   "animations": [],
+   "parts": [
+    "cliff_half_rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_half_stone",
+   "file": "cliff_half_stone.glb",
+   "kb": 5,
+   "triangles": 53,
+   "animations": [],
+   "parts": [
+    "cliff_half_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_large_rock",
+   "file": "cliff_large_rock.glb",
+   "kb": 3,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "cliff_large_rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_large_stone",
+   "file": "cliff_large_stone.glb",
+   "kb": 3,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "cliff_large_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_rock",
+   "file": "cliff_rock.glb",
+   "kb": 3,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "cliff_rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_stepsCornerInner_rock",
+   "file": "cliff_stepsCornerInner_rock.glb",
+   "kb": 15,
+   "triangles": 213,
+   "animations": [],
+   "parts": [
+    "cliff_stepsCornerInner_rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_stepsCornerInner_stone",
+   "file": "cliff_stepsCornerInner_stone.glb",
+   "kb": 15,
+   "triangles": 213,
+   "animations": [],
+   "parts": [
+    "cliff_stepsCornerInner_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_stepsCorner_rock",
+   "file": "cliff_stepsCorner_rock.glb",
+   "kb": 17,
+   "triangles": 245,
+   "animations": [],
+   "parts": [
+    "cliff_stepsCorner_rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_stepsCorner_stone",
+   "file": "cliff_stepsCorner_stone.glb",
+   "kb": 17,
+   "triangles": 245,
+   "animations": [],
+   "parts": [
+    "cliff_stepsCorner_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_steps_rock",
+   "file": "cliff_steps_rock.glb",
+   "kb": 15,
+   "triangles": 219,
+   "animations": [],
+   "parts": [
+    "cliff_steps_rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_steps_stone",
+   "file": "cliff_steps_stone.glb",
+   "kb": 15,
+   "triangles": 219,
+   "animations": [],
+   "parts": [
+    "cliff_steps_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_stone",
+   "file": "cliff_stone.glb",
+   "kb": 3,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "cliff_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_topDiagonal_rock",
+   "file": "cliff_topDiagonal_rock.glb",
+   "kb": 6,
+   "triangles": 66,
+   "animations": [],
+   "parts": [
+    "cliff_topDiagonal_rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_topDiagonal_stone",
+   "file": "cliff_topDiagonal_stone.glb",
+   "kb": 10,
+   "triangles": 132,
+   "animations": [],
+   "parts": [
+    "cliff_topDiagonal_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_top_rock",
+   "file": "cliff_top_rock.glb",
+   "kb": 5,
+   "triangles": 53,
+   "animations": [],
+   "parts": [
+    "cliff_top_rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_top_stone",
+   "file": "cliff_top_stone.glb",
+   "kb": 5,
+   "triangles": 53,
+   "animations": [],
+   "parts": [
+    "cliff_top_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_waterfallTop_rock",
+   "file": "cliff_waterfallTop_rock.glb",
+   "kb": 6,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "cliff_waterfallTop_rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_waterfallTop_stone",
+   "file": "cliff_waterfallTop_stone.glb",
+   "kb": 7,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "cliff_waterfallTop_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_waterfall_rock",
+   "file": "cliff_waterfall_rock.glb",
+   "kb": 4,
+   "triangles": 34,
+   "animations": [],
+   "parts": [
+    "cliff_waterfall_rock"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cliff_waterfall_stone",
+   "file": "cliff_waterfall_stone.glb",
+   "kb": 5,
+   "triangles": 68,
+   "animations": [],
+   "parts": [
+    "cliff_waterfall_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "crop_carrot",
+   "file": "crop_carrot.glb",
+   "kb": 12,
+   "triangles": 148,
+   "animations": [],
+   "parts": [
+    "crop_carrot"
+   ],
+   "textures": []
+  },
+  {
+   "name": "crop_melon",
+   "file": "crop_melon.glb",
+   "kb": 13,
+   "triangles": 236,
+   "animations": [],
+   "parts": [
+    "crop_melon"
+   ],
+   "textures": []
+  },
+  {
+   "name": "crop_pumpkin",
+   "file": "crop_pumpkin.glb",
+   "kb": 10,
+   "triangles": 120,
+   "animations": [],
+   "parts": [
+    "crop_pumpkin"
+   ],
+   "textures": []
+  },
+  {
+   "name": "crop_turnip",
+   "file": "crop_turnip.glb",
+   "kb": 13,
+   "triangles": 168,
+   "animations": [],
+   "parts": [
+    "crop_turnip"
+   ],
+   "textures": []
+  },
+  {
+   "name": "crops_bambooStageA",
+   "file": "crops_bambooStageA.glb",
+   "kb": 21,
+   "triangles": 276,
+   "animations": [],
+   "parts": [
+    "crops_bambooStageA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "crops_bambooStageB",
+   "file": "crops_bambooStageB.glb",
+   "kb": 39,
+   "triangles": 564,
+   "animations": [],
+   "parts": [
+    "crops_bambooStageB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "crops_cornStageA",
+   "file": "crops_cornStageA.glb",
+   "kb": 8,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "crops_cornStageA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "crops_cornStageB",
+   "file": "crops_cornStageB.glb",
+   "kb": 9,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "crops_cornStageB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "crops_cornStageC",
+   "file": "crops_cornStageC.glb",
+   "kb": 11,
+   "triangles": 148,
+   "animations": [],
+   "parts": [
+    "crops_cornStageC"
+   ],
+   "textures": []
+  },
+  {
+   "name": "crops_cornStageD",
+   "file": "crops_cornStageD.glb",
+   "kb": 28,
+   "triangles": 300,
+   "animations": [],
+   "parts": [
+    "crops_cornStageD",
+    "corn",
+    "corn",
+    "corn",
+    "corn"
+   ],
+   "textures": []
+  },
+  {
+   "name": "crops_dirtDoubleRow",
+   "file": "crops_dirtDoubleRow.glb",
+   "kb": 7,
+   "triangles": 88,
+   "animations": [],
+   "parts": [
+    "crops_dirtDoubleRow"
+   ],
+   "textures": []
+  },
+  {
+   "name": "crops_dirtDoubleRowCorner",
+   "file": "crops_dirtDoubleRowCorner.glb",
+   "kb": 5,
+   "triangles": 50,
+   "animations": [],
+   "parts": [
+    "crops_dirtDoubleRowCorner"
+   ],
+   "textures": []
+  },
+  {
+   "name": "crops_dirtDoubleRowEnd",
+   "file": "crops_dirtDoubleRowEnd.glb",
+   "kb": 6,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "crops_dirtDoubleRowEnd"
+   ],
+   "textures": []
+  },
+  {
+   "name": "crops_dirtRow",
+   "file": "crops_dirtRow.glb",
+   "kb": 4,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "crops_dirtRow"
+   ],
+   "textures": []
+  },
+  {
+   "name": "crops_dirtRowCorner",
+   "file": "crops_dirtRowCorner.glb",
+   "kb": 3,
+   "triangles": 19,
+   "animations": [],
+   "parts": [
+    "crops_dirtRowCorner"
+   ],
+   "textures": []
+  },
+  {
+   "name": "crops_dirtRowEnd",
+   "file": "crops_dirtRowEnd.glb",
+   "kb": 3,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "crops_dirtRowEnd"
+   ],
+   "textures": []
+  },
+  {
+   "name": "crops_dirtSingle",
+   "file": "crops_dirtSingle.glb",
+   "kb": 4,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "crops_dirtSingle"
+   ],
+   "textures": []
+  },
+  {
+   "name": "crops_leafsStageA",
+   "file": "crops_leafsStageA.glb",
+   "kb": 6,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "crops_leafsStageA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "crops_leafsStageB",
+   "file": "crops_leafsStageB.glb",
+   "kb": 7,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "crops_leafsStageB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "crops_wheatStageA",
+   "file": "crops_wheatStageA.glb",
+   "kb": 54,
+   "triangles": 720,
+   "animations": [],
+   "parts": [
+    "crops_wheatStageA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "crops_wheatStageB",
+   "file": "crops_wheatStageB.glb",
+   "kb": 29,
+   "triangles": 360,
+   "animations": [],
+   "parts": [
+    "crops_wheatStageB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "fence_bend",
+   "file": "fence_bend.glb",
+   "kb": 15,
+   "triangles": 240,
+   "animations": [],
+   "parts": [
+    "fence_bend"
+   ],
+   "textures": []
+  },
+  {
+   "name": "fence_bendCenter",
+   "file": "fence_bendCenter.glb",
+   "kb": 19,
+   "triangles": 298,
+   "animations": [],
+   "parts": [
+    "fence_bendCenter"
+   ],
+   "textures": []
+  },
+  {
+   "name": "fence_corner",
+   "file": "fence_corner.glb",
+   "kb": 8,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "fence_corner"
+   ],
+   "textures": []
+  },
+  {
+   "name": "fence_gate",
+   "file": "fence_gate.glb",
+   "kb": 27,
+   "triangles": 524,
+   "animations": [],
+   "parts": [
+    "fence_gate",
+    "gate"
+   ],
+   "textures": []
+  },
+  {
+   "name": "fence_planks",
+   "file": "fence_planks.glb",
+   "kb": 7,
+   "triangles": 96,
+   "animations": [],
+   "parts": [
+    "fence_planks"
+   ],
+   "textures": []
+  },
+  {
+   "name": "fence_planksDouble",
+   "file": "fence_planksDouble.glb",
+   "kb": 10,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "fence_planksDouble"
+   ],
+   "textures": []
+  },
+  {
+   "name": "fence_simple",
+   "file": "fence_simple.glb",
+   "kb": 5,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "fence_simple"
+   ],
+   "textures": []
+  },
+  {
+   "name": "fence_simpleCenter",
+   "file": "fence_simpleCenter.glb",
+   "kb": 8,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "fence_simpleCenter"
+   ],
+   "textures": []
+  },
+  {
+   "name": "fence_simpleDiagonal",
+   "file": "fence_simpleDiagonal.glb",
+   "kb": 6,
+   "triangles": 80,
+   "animations": [],
+   "parts": [
+    "fence_simpleDiagonal"
+   ],
+   "textures": []
+  },
+  {
+   "name": "fence_simpleDiagonalCenter",
+   "file": "fence_simpleDiagonalCenter.glb",
+   "kb": 10,
+   "triangles": 148,
+   "animations": [],
+   "parts": [
+    "fence_simpleDiagonalCenter"
+   ],
+   "textures": []
+  },
+  {
+   "name": "fence_simpleHigh",
+   "file": "fence_simpleHigh.glb",
+   "kb": 4,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "fence_simpleHigh"
+   ],
+   "textures": []
+  },
+  {
+   "name": "fence_simpleLow",
+   "file": "fence_simpleLow.glb",
+   "kb": 4,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "fence_simpleLow"
+   ],
+   "textures": []
+  },
+  {
+   "name": "flower_purpleA",
+   "file": "flower_purpleA.glb",
+   "kb": 6,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "flower_purpleA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "flower_purpleB",
+   "file": "flower_purpleB.glb",
+   "kb": 7,
+   "triangles": 98,
+   "animations": [],
+   "parts": [
+    "flower_purpleB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "flower_purpleC",
+   "file": "flower_purpleC.glb",
+   "kb": 7,
+   "triangles": 78,
+   "animations": [],
+   "parts": [
+    "flower_purpleC"
+   ],
+   "textures": []
+  },
+  {
+   "name": "flower_redA",
+   "file": "flower_redA.glb",
+   "kb": 6,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "flower_redA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "flower_redB",
+   "file": "flower_redB.glb",
+   "kb": 7,
+   "triangles": 98,
+   "animations": [],
+   "parts": [
+    "flower_redB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "flower_redC",
+   "file": "flower_redC.glb",
+   "kb": 7,
+   "triangles": 78,
+   "animations": [],
+   "parts": [
+    "flower_redC"
+   ],
+   "textures": []
+  },
+  {
+   "name": "flower_yellowA",
+   "file": "flower_yellowA.glb",
+   "kb": 6,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "flower_yellowA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "flower_yellowB",
+   "file": "flower_yellowB.glb",
+   "kb": 10,
+   "triangles": 154,
+   "animations": [],
+   "parts": [
+    "flower_yellowB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "flower_yellowC",
+   "file": "flower_yellowC.glb",
+   "kb": 7,
+   "triangles": 78,
+   "animations": [],
+   "parts": [
+    "flower_yellowC"
+   ],
+   "textures": []
+  },
+  {
+   "name": "grass",
+   "file": "grass.glb",
+   "kb": 11,
+   "triangles": 132,
+   "animations": [],
+   "parts": [
+    "grass"
+   ],
+   "textures": []
+  },
+  {
+   "name": "grass_large",
+   "file": "grass_large.glb",
+   "kb": 18,
+   "triangles": 224,
+   "animations": [],
+   "parts": [
+    "grass_large"
+   ],
+   "textures": []
+  },
+  {
+   "name": "grass_leafs",
+   "file": "grass_leafs.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "grass_leafs"
+   ],
+   "textures": []
+  },
+  {
+   "name": "grass_leafsLarge",
+   "file": "grass_leafsLarge.glb",
+   "kb": 13,
+   "triangles": 144,
+   "animations": [],
+   "parts": [
+    "grass_leafsLarge"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_grass",
+   "file": "ground_grass.glb",
+   "kb": 1,
+   "triangles": 2,
+   "animations": [],
+   "parts": [
+    "ground_grass"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_pathBend",
+   "file": "ground_pathBend.glb",
+   "kb": 4,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "ground_pathBend"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_pathBendBank",
+   "file": "ground_pathBendBank.glb",
+   "kb": 4,
+   "triangles": 38,
+   "animations": [],
+   "parts": [
+    "ground_pathBendBank"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_pathCorner",
+   "file": "ground_pathCorner.glb",
+   "kb": 3,
+   "triangles": 22,
+   "animations": [],
+   "parts": [
+    "ground_pathCorner"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_pathCornerSmall",
+   "file": "ground_pathCornerSmall.glb",
+   "kb": 3,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "ground_pathCornerSmall"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_pathCross",
+   "file": "ground_pathCross.glb",
+   "kb": 6,
+   "triangles": 74,
+   "animations": [],
+   "parts": [
+    "ground_pathCross"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_pathEnd",
+   "file": "ground_pathEnd.glb",
+   "kb": 4,
+   "triangles": 52,
+   "animations": [],
+   "parts": [
+    "ground_pathEnd"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_pathEndClosed",
+   "file": "ground_pathEndClosed.glb",
+   "kb": 5,
+   "triangles": 68,
+   "animations": [],
+   "parts": [
+    "ground_pathEndClosed"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_pathOpen",
+   "file": "ground_pathOpen.glb",
+   "kb": 1,
+   "triangles": 8,
+   "animations": [],
+   "parts": [
+    "ground_pathOpen"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_pathRocks",
+   "file": "ground_pathRocks.glb",
+   "kb": 7,
+   "triangles": 102,
+   "animations": [],
+   "parts": [
+    "ground_pathRocks"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_pathSide",
+   "file": "ground_pathSide.glb",
+   "kb": 4,
+   "triangles": 34,
+   "animations": [],
+   "parts": [
+    "ground_pathSide"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_pathSideOpen",
+   "file": "ground_pathSideOpen.glb",
+   "kb": 4,
+   "triangles": 40,
+   "animations": [],
+   "parts": [
+    "ground_pathSideOpen"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_pathSplit",
+   "file": "ground_pathSplit.glb",
+   "kb": 5,
+   "triangles": 68,
+   "animations": [],
+   "parts": [
+    "ground_pathSplit"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_pathStraight",
+   "file": "ground_pathStraight.glb",
+   "kb": 5,
+   "triangles": 62,
+   "animations": [],
+   "parts": [
+    "ground_pathStraight"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_pathTile",
+   "file": "ground_pathTile.glb",
+   "kb": 6,
+   "triangles": 86,
+   "animations": [],
+   "parts": [
+    "ground_pathTile"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_riverBend",
+   "file": "ground_riverBend.glb",
+   "kb": 5,
+   "triangles": 54,
+   "animations": [],
+   "parts": [
+    "ground_riverBend"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_riverBendBank",
+   "file": "ground_riverBendBank.glb",
+   "kb": 5,
+   "triangles": 54,
+   "animations": [],
+   "parts": [
+    "ground_riverBendBank"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_riverCorner",
+   "file": "ground_riverCorner.glb",
+   "kb": 4,
+   "triangles": 40,
+   "animations": [],
+   "parts": [
+    "ground_riverCorner"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_riverCornerSmall",
+   "file": "ground_riverCornerSmall.glb",
+   "kb": 4,
+   "triangles": 26,
+   "animations": [],
+   "parts": [
+    "ground_riverCornerSmall"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_riverCross",
+   "file": "ground_riverCross.glb",
+   "kb": 7,
+   "triangles": 82,
+   "animations": [],
+   "parts": [
+    "ground_riverCross"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_riverEnd",
+   "file": "ground_riverEnd.glb",
+   "kb": 5,
+   "triangles": 52,
+   "animations": [],
+   "parts": [
+    "ground_riverEnd"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_riverEndClosed",
+   "file": "ground_riverEndClosed.glb",
+   "kb": 6,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "ground_riverEndClosed"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_riverOpen",
+   "file": "ground_riverOpen.glb",
+   "kb": 1,
+   "triangles": 8,
+   "animations": [],
+   "parts": [
+    "ground_riverOpen"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_riverRocks",
+   "file": "ground_riverRocks.glb",
+   "kb": 8,
+   "triangles": 102,
+   "animations": [],
+   "parts": [
+    "ground_riverRocks"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_riverSide",
+   "file": "ground_riverSide.glb",
+   "kb": 4,
+   "triangles": 34,
+   "animations": [],
+   "parts": [
+    "ground_riverSide"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_riverSideOpen",
+   "file": "ground_riverSideOpen.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "ground_riverSideOpen"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_riverSplit",
+   "file": "ground_riverSplit.glb",
+   "kb": 6,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "ground_riverSplit"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_riverStraight",
+   "file": "ground_riverStraight.glb",
+   "kb": 5,
+   "triangles": 62,
+   "animations": [],
+   "parts": [
+    "ground_riverStraight"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ground_riverTile",
+   "file": "ground_riverTile.glb",
+   "kb": 8,
+   "triangles": 128,
+   "animations": [],
+   "parts": [
+    "ground_riverTile"
+   ],
+   "textures": []
+  },
+  {
+   "name": "hanging_moss",
+   "file": "hanging_moss.glb",
+   "kb": 4,
+   "triangles": 52,
+   "animations": [],
+   "parts": [
+    "hanging_moss"
+   ],
+   "textures": []
+  },
+  {
+   "name": "lily_large",
+   "file": "lily_large.glb",
+   "kb": 7,
+   "triangles": 86,
+   "animations": [],
+   "parts": [
+    "lily_large"
+   ],
+   "textures": []
+  },
+  {
+   "name": "lily_small",
+   "file": "lily_small.glb",
+   "kb": 5,
+   "triangles": 52,
+   "animations": [],
+   "parts": [
+    "lily_small"
+   ],
+   "textures": []
+  },
+  {
+   "name": "log",
+   "file": "log.glb",
+   "kb": 13,
+   "triangles": 200,
+   "animations": [],
+   "parts": [
+    "log"
+   ],
+   "textures": []
+  },
+  {
+   "name": "log_large",
+   "file": "log_large.glb",
+   "kb": 7,
+   "triangles": 96,
+   "animations": [],
+   "parts": [
+    "log_large"
+   ],
+   "textures": []
+  },
+  {
+   "name": "log_stack",
+   "file": "log_stack.glb",
+   "kb": 10,
+   "triangles": 184,
+   "animations": [],
+   "parts": [
+    "log_stack"
+   ],
+   "textures": []
+  },
+  {
+   "name": "log_stackLarge",
+   "file": "log_stackLarge.glb",
+   "kb": 17,
+   "triangles": 310,
+   "animations": [],
+   "parts": [
+    "log_stackLarge"
+   ],
+   "textures": []
+  },
+  {
+   "name": "mushroom_red",
+   "file": "mushroom_red.glb",
+   "kb": 6,
+   "triangles": 48,
+   "animations": [],
+   "parts": [
+    "mushroom_red"
+   ],
+   "textures": []
+  },
+  {
+   "name": "mushroom_redGroup",
+   "file": "mushroom_redGroup.glb",
+   "kb": 14,
+   "triangles": 144,
+   "animations": [],
+   "parts": [
+    "mushroom_redGroup"
+   ],
+   "textures": []
+  },
+  {
+   "name": "mushroom_redTall",
+   "file": "mushroom_redTall.glb",
+   "kb": 6,
+   "triangles": 48,
+   "animations": [],
+   "parts": [
+    "mushroom_redTall"
+   ],
+   "textures": []
+  },
+  {
+   "name": "mushroom_tan",
+   "file": "mushroom_tan.glb",
+   "kb": 5,
+   "triangles": 48,
+   "animations": [],
+   "parts": [
+    "mushroom_tan"
+   ],
+   "textures": []
+  },
+  {
+   "name": "mushroom_tanGroup",
+   "file": "mushroom_tanGroup.glb",
+   "kb": 14,
+   "triangles": 144,
+   "animations": [],
+   "parts": [
+    "mushroom_tanGroup"
+   ],
+   "textures": []
+  },
+  {
+   "name": "mushroom_tanTall",
+   "file": "mushroom_tanTall.glb",
+   "kb": 6,
+   "triangles": 48,
+   "animations": [],
+   "parts": [
+    "mushroom_tanTall"
+   ],
+   "textures": []
+  },
+  {
+   "name": "path_stone",
+   "file": "path_stone.glb",
+   "kb": 12,
+   "triangles": 136,
+   "animations": [],
+   "parts": [
+    "path_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "path_stoneCircle",
+   "file": "path_stoneCircle.glb",
+   "kb": 12,
+   "triangles": 164,
+   "animations": [],
+   "parts": [
+    "path_stoneCircle"
+   ],
+   "textures": []
+  },
+  {
+   "name": "path_stoneCorner",
+   "file": "path_stoneCorner.glb",
+   "kb": 10,
+   "triangles": 112,
+   "animations": [],
+   "parts": [
+    "path_stoneCorner"
+   ],
+   "textures": []
+  },
+  {
+   "name": "path_stoneEnd",
+   "file": "path_stoneEnd.glb",
+   "kb": 8,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "path_stoneEnd"
+   ],
+   "textures": []
+  },
+  {
+   "name": "path_wood",
+   "file": "path_wood.glb",
+   "kb": 6,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "path_wood"
+   ],
+   "textures": []
+  },
+  {
+   "name": "path_woodCorner",
+   "file": "path_woodCorner.glb",
+   "kb": 6,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "path_woodCorner"
+   ],
+   "textures": []
+  },
+  {
+   "name": "path_woodEnd",
+   "file": "path_woodEnd.glb",
+   "kb": 5,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "path_woodEnd"
+   ],
+   "textures": []
+  },
+  {
+   "name": "plant_bush",
+   "file": "plant_bush.glb",
+   "kb": 4,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "plant_bush"
+   ],
+   "textures": []
+  },
+  {
+   "name": "plant_bushDetailed",
+   "file": "plant_bushDetailed.glb",
+   "kb": 9,
+   "triangles": 104,
+   "animations": [],
+   "parts": [
+    "plant_bushDetailed"
+   ],
+   "textures": []
+  },
+  {
+   "name": "plant_bushLarge",
+   "file": "plant_bushLarge.glb",
+   "kb": 6,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "plant_bushLarge"
+   ],
+   "textures": []
+  },
+  {
+   "name": "plant_bushLargeTriangle",
+   "file": "plant_bushLargeTriangle.glb",
+   "kb": 4,
+   "triangles": 39,
+   "animations": [],
+   "parts": [
+    "plant_bushLargeTriangle"
+   ],
+   "textures": []
+  },
+  {
+   "name": "plant_bushSmall",
+   "file": "plant_bushSmall.glb",
+   "kb": 3,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "plant_bushSmall"
+   ],
+   "textures": []
+  },
+  {
+   "name": "plant_bushTriangle",
+   "file": "plant_bushTriangle.glb",
+   "kb": 3,
+   "triangles": 30,
+   "animations": [],
+   "parts": [
+    "plant_bushTriangle"
+   ],
+   "textures": []
+  },
+  {
+   "name": "plant_flatShort",
+   "file": "plant_flatShort.glb",
+   "kb": 3,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "plant_flatShort"
+   ],
+   "textures": []
+  },
+  {
+   "name": "plant_flatTall",
+   "file": "plant_flatTall.glb",
+   "kb": 3,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "plant_flatTall"
+   ],
+   "textures": []
+  },
+  {
+   "name": "platform_beach",
+   "file": "platform_beach.glb",
+   "kb": 12,
+   "triangles": 192,
+   "animations": [],
+   "parts": [
+    "platform_beach"
+   ],
+   "textures": []
+  },
+  {
+   "name": "platform_grass",
+   "file": "platform_grass.glb",
+   "kb": 12,
+   "triangles": 186,
+   "animations": [],
+   "parts": [
+    "platform_grass"
+   ],
+   "textures": []
+  },
+  {
+   "name": "platform_stone",
+   "file": "platform_stone.glb",
+   "kb": 13,
+   "triangles": 192,
+   "animations": [],
+   "parts": [
+    "platform_stone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pot_large",
+   "file": "pot_large.glb",
+   "kb": 6,
+   "triangles": 68,
+   "animations": [],
+   "parts": [
+    "pot_large"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pot_small",
+   "file": "pot_small.glb",
+   "kb": 6,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "pot_small"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_largeA",
+   "file": "rock_largeA.glb",
+   "kb": 7,
+   "triangles": 80,
+   "animations": [],
+   "parts": [
+    "rock_largeA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_largeB",
+   "file": "rock_largeB.glb",
+   "kb": 8,
+   "triangles": 85,
+   "animations": [],
+   "parts": [
+    "rock_largeB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_largeC",
+   "file": "rock_largeC.glb",
+   "kb": 6,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "rock_largeC"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_largeD",
+   "file": "rock_largeD.glb",
+   "kb": 7,
+   "triangles": 80,
+   "animations": [],
+   "parts": [
+    "rock_largeD"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_largeE",
+   "file": "rock_largeE.glb",
+   "kb": 6,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "rock_largeE"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_largeF",
+   "file": "rock_largeF.glb",
+   "kb": 7,
+   "triangles": 73,
+   "animations": [],
+   "parts": [
+    "rock_largeF"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_smallA",
+   "file": "rock_smallA.glb",
+   "kb": 2,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "rock_smallA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_smallB",
+   "file": "rock_smallB.glb",
+   "kb": 3,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "rock_smallB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_smallC",
+   "file": "rock_smallC.glb",
+   "kb": 2,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "rock_smallC"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_smallD",
+   "file": "rock_smallD.glb",
+   "kb": 3,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "rock_smallD"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_smallE",
+   "file": "rock_smallE.glb",
+   "kb": 5,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "rock_smallE"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_smallF",
+   "file": "rock_smallF.glb",
+   "kb": 5,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "rock_smallF"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_smallFlatA",
+   "file": "rock_smallFlatA.glb",
+   "kb": 3,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "rock_smallFlatA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_smallFlatB",
+   "file": "rock_smallFlatB.glb",
+   "kb": 2,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "rock_smallFlatB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_smallFlatC",
+   "file": "rock_smallFlatC.glb",
+   "kb": 4,
+   "triangles": 40,
+   "animations": [],
+   "parts": [
+    "rock_smallFlatC"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_smallG",
+   "file": "rock_smallG.glb",
+   "kb": 4,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "rock_smallG"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_smallH",
+   "file": "rock_smallH.glb",
+   "kb": 6,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "rock_smallH"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_smallI",
+   "file": "rock_smallI.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "rock_smallI"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_smallTopA",
+   "file": "rock_smallTopA.glb",
+   "kb": 5,
+   "triangles": 52,
+   "animations": [],
+   "parts": [
+    "rock_smallTopA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_smallTopB",
+   "file": "rock_smallTopB.glb",
+   "kb": 6,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "rock_smallTopB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_tallA",
+   "file": "rock_tallA.glb",
+   "kb": 11,
+   "triangles": 136,
+   "animations": [],
+   "parts": [
+    "rock_tallA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_tallB",
+   "file": "rock_tallB.glb",
+   "kb": 13,
+   "triangles": 172,
+   "animations": [],
+   "parts": [
+    "rock_tallB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_tallC",
+   "file": "rock_tallC.glb",
+   "kb": 5,
+   "triangles": 37,
+   "animations": [],
+   "parts": [
+    "rock_tallC"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_tallD",
+   "file": "rock_tallD.glb",
+   "kb": 5,
+   "triangles": 38,
+   "animations": [],
+   "parts": [
+    "rock_tallD"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_tallE",
+   "file": "rock_tallE.glb",
+   "kb": 5,
+   "triangles": 38,
+   "animations": [],
+   "parts": [
+    "rock_tallE"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_tallF",
+   "file": "rock_tallF.glb",
+   "kb": 5,
+   "triangles": 46,
+   "animations": [],
+   "parts": [
+    "rock_tallF"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_tallG",
+   "file": "rock_tallG.glb",
+   "kb": 6,
+   "triangles": 62,
+   "animations": [],
+   "parts": [
+    "rock_tallG"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_tallH",
+   "file": "rock_tallH.glb",
+   "kb": 7,
+   "triangles": 78,
+   "animations": [],
+   "parts": [
+    "rock_tallH"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_tallI",
+   "file": "rock_tallI.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "rock_tallI"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rock_tallJ",
+   "file": "rock_tallJ.glb",
+   "kb": 5,
+   "triangles": 42,
+   "animations": [],
+   "parts": [
+    "rock_tallJ"
+   ],
+   "textures": []
+  },
+  {
+   "name": "sign",
+   "file": "sign.glb",
+   "kb": 4,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "sign"
+   ],
+   "textures": []
+  },
+  {
+   "name": "statue_block",
+   "file": "statue_block.glb",
+   "kb": 10,
+   "triangles": 140,
+   "animations": [],
+   "parts": [
+    "statue_block"
+   ],
+   "textures": []
+  },
+  {
+   "name": "statue_column",
+   "file": "statue_column.glb",
+   "kb": 10,
+   "triangles": 122,
+   "animations": [],
+   "parts": [
+    "statue_column"
+   ],
+   "textures": []
+  },
+  {
+   "name": "statue_columnDamaged",
+   "file": "statue_columnDamaged.glb",
+   "kb": 8,
+   "triangles": 108,
+   "animations": [],
+   "parts": [
+    "statue_columnDamaged"
+   ],
+   "textures": []
+  },
+  {
+   "name": "statue_head",
+   "file": "statue_head.glb",
+   "kb": 14,
+   "triangles": 196,
+   "animations": [],
+   "parts": [
+    "statue_head"
+   ],
+   "textures": []
+  },
+  {
+   "name": "statue_obelisk",
+   "file": "statue_obelisk.glb",
+   "kb": 4,
+   "triangles": 38,
+   "animations": [],
+   "parts": [
+    "statue_obelisk"
+   ],
+   "textures": []
+  },
+  {
+   "name": "statue_ring",
+   "file": "statue_ring.glb",
+   "kb": 6,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "statue_ring"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_largeA",
+   "file": "stone_largeA.glb",
+   "kb": 6,
+   "triangles": 80,
+   "animations": [],
+   "parts": [
+    "stone_largeA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_largeB",
+   "file": "stone_largeB.glb",
+   "kb": 7,
+   "triangles": 85,
+   "animations": [],
+   "parts": [
+    "stone_largeB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_largeC",
+   "file": "stone_largeC.glb",
+   "kb": 6,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "stone_largeC"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_largeD",
+   "file": "stone_largeD.glb",
+   "kb": 7,
+   "triangles": 80,
+   "animations": [],
+   "parts": [
+    "stone_largeD"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_largeE",
+   "file": "stone_largeE.glb",
+   "kb": 5,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "stone_largeE"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_largeF",
+   "file": "stone_largeF.glb",
+   "kb": 6,
+   "triangles": 73,
+   "animations": [],
+   "parts": [
+    "stone_largeF"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_smallA",
+   "file": "stone_smallA.glb",
+   "kb": 2,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "stone_smallA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_smallB",
+   "file": "stone_smallB.glb",
+   "kb": 3,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "stone_smallB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_smallC",
+   "file": "stone_smallC.glb",
+   "kb": 2,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "stone_smallC"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_smallD",
+   "file": "stone_smallD.glb",
+   "kb": 3,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "stone_smallD"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_smallE",
+   "file": "stone_smallE.glb",
+   "kb": 5,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "stone_smallE"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_smallF",
+   "file": "stone_smallF.glb",
+   "kb": 5,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "stone_smallF"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_smallFlatA",
+   "file": "stone_smallFlatA.glb",
+   "kb": 2,
+   "triangles": 20,
+   "animations": [],
+   "parts": [
+    "stone_smallFlatA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_smallFlatB",
+   "file": "stone_smallFlatB.glb",
+   "kb": 2,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "stone_smallFlatB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_smallFlatC",
+   "file": "stone_smallFlatC.glb",
+   "kb": 3,
+   "triangles": 40,
+   "animations": [],
+   "parts": [
+    "stone_smallFlatC"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_smallG",
+   "file": "stone_smallG.glb",
+   "kb": 3,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "stone_smallG"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_smallH",
+   "file": "stone_smallH.glb",
+   "kb": 5,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "stone_smallH"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_smallI",
+   "file": "stone_smallI.glb",
+   "kb": 4,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "stone_smallI"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_smallTopA",
+   "file": "stone_smallTopA.glb",
+   "kb": 4,
+   "triangles": 52,
+   "animations": [],
+   "parts": [
+    "stone_smallTopA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_smallTopB",
+   "file": "stone_smallTopB.glb",
+   "kb": 6,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "stone_smallTopB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_tallA",
+   "file": "stone_tallA.glb",
+   "kb": 11,
+   "triangles": 136,
+   "animations": [],
+   "parts": [
+    "stone_tallA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_tallB",
+   "file": "stone_tallB.glb",
+   "kb": 13,
+   "triangles": 172,
+   "animations": [],
+   "parts": [
+    "stone_tallB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_tallC",
+   "file": "stone_tallC.glb",
+   "kb": 4,
+   "triangles": 37,
+   "animations": [],
+   "parts": [
+    "stone_tallC"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_tallD",
+   "file": "stone_tallD.glb",
+   "kb": 4,
+   "triangles": 38,
+   "animations": [],
+   "parts": [
+    "stone_tallD"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_tallE",
+   "file": "stone_tallE.glb",
+   "kb": 4,
+   "triangles": 38,
+   "animations": [],
+   "parts": [
+    "stone_tallE"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_tallF",
+   "file": "stone_tallF.glb",
+   "kb": 5,
+   "triangles": 46,
+   "animations": [],
+   "parts": [
+    "stone_tallF"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_tallG",
+   "file": "stone_tallG.glb",
+   "kb": 6,
+   "triangles": 62,
+   "animations": [],
+   "parts": [
+    "stone_tallG"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_tallH",
+   "file": "stone_tallH.glb",
+   "kb": 7,
+   "triangles": 78,
+   "animations": [],
+   "parts": [
+    "stone_tallH"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_tallI",
+   "file": "stone_tallI.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "stone_tallI"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stone_tallJ",
+   "file": "stone_tallJ.glb",
+   "kb": 4,
+   "triangles": 42,
+   "animations": [],
+   "parts": [
+    "stone_tallJ"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stump_old",
+   "file": "stump_old.glb",
+   "kb": 9,
+   "triangles": 120,
+   "animations": [],
+   "parts": [
+    "stump_old"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stump_oldTall",
+   "file": "stump_oldTall.glb",
+   "kb": 9,
+   "triangles": 120,
+   "animations": [],
+   "parts": [
+    "stump_oldTall"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stump_round",
+   "file": "stump_round.glb",
+   "kb": 5,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "stump_round"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stump_roundDetailed",
+   "file": "stump_roundDetailed.glb",
+   "kb": 7,
+   "triangles": 96,
+   "animations": [],
+   "parts": [
+    "stump_roundDetailed"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stump_square",
+   "file": "stump_square.glb",
+   "kb": 4,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "stump_square"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stump_squareDetailed",
+   "file": "stump_squareDetailed.glb",
+   "kb": 7,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "stump_squareDetailed"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stump_squareDetailedWide",
+   "file": "stump_squareDetailedWide.glb",
+   "kb": 7,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "stump_squareDetailedWide"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tent_detailedClosed",
+   "file": "tent_detailedClosed.glb",
+   "kb": 15,
+   "triangles": 228,
+   "animations": [],
+   "parts": [
+    "tent_detailedClosed"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tent_detailedOpen",
+   "file": "tent_detailedOpen.glb",
+   "kb": 14,
+   "triangles": 232,
+   "animations": [],
+   "parts": [
+    "tent_detailedOpen"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tent_smallClosed",
+   "file": "tent_smallClosed.glb",
+   "kb": 12,
+   "triangles": 220,
+   "animations": [],
+   "parts": [
+    "tent_smallClosed"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tent_smallOpen",
+   "file": "tent_smallOpen.glb",
+   "kb": 13,
+   "triangles": 224,
+   "animations": [],
+   "parts": [
+    "tent_smallOpen"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_blocks",
+   "file": "tree_blocks.glb",
+   "kb": 9,
+   "triangles": 132,
+   "animations": [],
+   "parts": [
+    "tree_blocks"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_blocks_dark",
+   "file": "tree_blocks_dark.glb",
+   "kb": 9,
+   "triangles": 132,
+   "animations": [],
+   "parts": [
+    "tree_blocks_dark"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_blocks_fall",
+   "file": "tree_blocks_fall.glb",
+   "kb": 17,
+   "triangles": 264,
+   "animations": [],
+   "parts": [
+    "tree_blocks_fall"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_cone",
+   "file": "tree_cone.glb",
+   "kb": 10,
+   "triangles": 132,
+   "animations": [],
+   "parts": [
+    "tree_cone"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_cone_dark",
+   "file": "tree_cone_dark.glb",
+   "kb": 19,
+   "triangles": 264,
+   "animations": [],
+   "parts": [
+    "tree_cone_dark"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_cone_fall",
+   "file": "tree_cone_fall.glb",
+   "kb": 10,
+   "triangles": 132,
+   "animations": [],
+   "parts": [
+    "tree_cone_fall"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_default",
+   "file": "tree_default.glb",
+   "kb": 9,
+   "triangles": 114,
+   "animations": [],
+   "parts": [
+    "tree_default"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_default_dark",
+   "file": "tree_default_dark.glb",
+   "kb": 9,
+   "triangles": 114,
+   "animations": [],
+   "parts": [
+    "tree_default_dark"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_default_fall",
+   "file": "tree_default_fall.glb",
+   "kb": 16,
+   "triangles": 228,
+   "animations": [],
+   "parts": [
+    "tree_default_fall"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_detailed",
+   "file": "tree_detailed.glb",
+   "kb": 30,
+   "triangles": 402,
+   "animations": [],
+   "parts": [
+    "tree_detailed"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_detailed_dark",
+   "file": "tree_detailed_dark.glb",
+   "kb": 30,
+   "triangles": 402,
+   "animations": [],
+   "parts": [
+    "tree_detailed_dark"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_detailed_fall",
+   "file": "tree_detailed_fall.glb",
+   "kb": 30,
+   "triangles": 402,
+   "animations": [],
+   "parts": [
+    "tree_detailed_fall"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_fat",
+   "file": "tree_fat.glb",
+   "kb": 5,
+   "triangles": 50,
+   "animations": [],
+   "parts": [
+    "tree_fat"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_fat_darkh",
+   "file": "tree_fat_darkh.glb",
+   "kb": 5,
+   "triangles": 50,
+   "animations": [],
+   "parts": [
+    "tree_fat_darkh"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_fat_fall",
+   "file": "tree_fat_fall.glb",
+   "kb": 5,
+   "triangles": 50,
+   "animations": [],
+   "parts": [
+    "tree_fat_fall"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_oak",
+   "file": "tree_oak.glb",
+   "kb": 14,
+   "triangles": 196,
+   "animations": [],
+   "parts": [
+    "tree_oak"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_oak_dark",
+   "file": "tree_oak_dark.glb",
+   "kb": 14,
+   "triangles": 196,
+   "animations": [],
+   "parts": [
+    "tree_oak_dark"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_oak_fall",
+   "file": "tree_oak_fall.glb",
+   "kb": 14,
+   "triangles": 196,
+   "animations": [],
+   "parts": [
+    "tree_oak_fall"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_palm",
+   "file": "tree_palm.glb",
+   "kb": 13,
+   "triangles": 186,
+   "animations": [],
+   "parts": [
+    "tree_palm"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_palmBend",
+   "file": "tree_palmBend.glb",
+   "kb": 14,
+   "triangles": 200,
+   "animations": [],
+   "parts": [
+    "tree_palmBend"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_palmDetailedShort",
+   "file": "tree_palmDetailedShort.glb",
+   "kb": 27,
+   "triangles": 336,
+   "animations": [],
+   "parts": [
+    "tree_palmDetailedShort",
+    "leafs",
+    "leafs"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_palmDetailedTall",
+   "file": "tree_palmDetailedTall.glb",
+   "kb": 27,
+   "triangles": 336,
+   "animations": [],
+   "parts": [
+    "tree_palmDetailedTall",
+    "leafs",
+    "leafs"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_palmShort",
+   "file": "tree_palmShort.glb",
+   "kb": 15,
+   "triangles": 190,
+   "animations": [],
+   "parts": [
+    "tree_palmShort"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_palmTall",
+   "file": "tree_palmTall.glb",
+   "kb": 15,
+   "triangles": 190,
+   "animations": [],
+   "parts": [
+    "tree_palmTall"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_pineDefaultA",
+   "file": "tree_pineDefaultA.glb",
+   "kb": 16,
+   "triangles": 230,
+   "animations": [],
+   "parts": [
+    "tree_pineDefaultA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_pineDefaultB",
+   "file": "tree_pineDefaultB.glb",
+   "kb": 17,
+   "triangles": 246,
+   "animations": [],
+   "parts": [
+    "tree_pineDefaultB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_pineGroundA",
+   "file": "tree_pineGroundA.glb",
+   "kb": 6,
+   "triangles": 82,
+   "animations": [],
+   "parts": [
+    "tree_pineGroundA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_pineGroundB",
+   "file": "tree_pineGroundB.glb",
+   "kb": 6,
+   "triangles": 82,
+   "animations": [],
+   "parts": [
+    "tree_pineGroundB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_pineRoundA",
+   "file": "tree_pineRoundA.glb",
+   "kb": 14,
+   "triangles": 204,
+   "animations": [],
+   "parts": [
+    "tree_pineRoundA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_pineRoundB",
+   "file": "tree_pineRoundB.glb",
+   "kb": 18,
+   "triangles": 262,
+   "animations": [],
+   "parts": [
+    "tree_pineRoundB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_pineRoundC",
+   "file": "tree_pineRoundC.glb",
+   "kb": 14,
+   "triangles": 206,
+   "animations": [],
+   "parts": [
+    "tree_pineRoundC"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_pineRoundD",
+   "file": "tree_pineRoundD.glb",
+   "kb": 13,
+   "triangles": 170,
+   "animations": [],
+   "parts": [
+    "tree_pineRoundD"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_pineRoundE",
+   "file": "tree_pineRoundE.glb",
+   "kb": 14,
+   "triangles": 198,
+   "animations": [],
+   "parts": [
+    "tree_pineRoundE"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_pineRoundF",
+   "file": "tree_pineRoundF.glb",
+   "kb": 15,
+   "triangles": 214,
+   "animations": [],
+   "parts": [
+    "tree_pineRoundF"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_pineSmallA",
+   "file": "tree_pineSmallA.glb",
+   "kb": 12,
+   "triangles": 164,
+   "animations": [],
+   "parts": [
+    "tree_pineSmallA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_pineSmallB",
+   "file": "tree_pineSmallB.glb",
+   "kb": 7,
+   "triangles": 86,
+   "animations": [],
+   "parts": [
+    "tree_pineSmallB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_pineSmallC",
+   "file": "tree_pineSmallC.glb",
+   "kb": 5,
+   "triangles": 54,
+   "animations": [],
+   "parts": [
+    "tree_pineSmallC"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_pineSmallD",
+   "file": "tree_pineSmallD.glb",
+   "kb": 5,
+   "triangles": 54,
+   "animations": [],
+   "parts": [
+    "tree_pineSmallD"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_pineTallA",
+   "file": "tree_pineTallA.glb",
+   "kb": 7,
+   "triangles": 78,
+   "animations": [],
+   "parts": [
+    "tree_pineTallA"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_pineTallA_detailed",
+   "file": "tree_pineTallA_detailed.glb",
+   "kb": 10,
+   "triangles": 134,
+   "animations": [],
+   "parts": [
+    "tree_pineTallA_detailed"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_pineTallB",
+   "file": "tree_pineTallB.glb",
+   "kb": 7,
+   "triangles": 78,
+   "animations": [],
+   "parts": [
+    "tree_pineTallB"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_pineTallB_detailed",
+   "file": "tree_pineTallB_detailed.glb",
+   "kb": 12,
+   "triangles": 166,
+   "animations": [],
+   "parts": [
+    "tree_pineTallB_detailed"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_pineTallC",
+   "file": "tree_pineTallC.glb",
+   "kb": 7,
+   "triangles": 98,
+   "animations": [],
+   "parts": [
+    "tree_pineTallC"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_pineTallC_detailed",
+   "file": "tree_pineTallC_detailed.glb",
+   "kb": 11,
+   "triangles": 154,
+   "animations": [],
+   "parts": [
+    "tree_pineTallC_detailed"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_pineTallD",
+   "file": "tree_pineTallD.glb",
+   "kb": 7,
+   "triangles": 98,
+   "animations": [],
+   "parts": [
+    "tree_pineTallD"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_pineTallD_detailed",
+   "file": "tree_pineTallD_detailed.glb",
+   "kb": 12,
+   "triangles": 170,
+   "animations": [],
+   "parts": [
+    "tree_pineTallD_detailed"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_plateau",
+   "file": "tree_plateau.glb",
+   "kb": 15,
+   "triangles": 215,
+   "animations": [],
+   "parts": [
+    "tree_plateau"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_plateau_dark",
+   "file": "tree_plateau_dark.glb",
+   "kb": 15,
+   "triangles": 215,
+   "animations": [],
+   "parts": [
+    "tree_plateau_dark"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_plateau_fall",
+   "file": "tree_plateau_fall.glb",
+   "kb": 15,
+   "triangles": 215,
+   "animations": [],
+   "parts": [
+    "tree_plateau_fall"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_simple",
+   "file": "tree_simple.glb",
+   "kb": 6,
+   "triangles": 62,
+   "animations": [],
+   "parts": [
+    "tree_simple"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_simple_dark",
+   "file": "tree_simple_dark.glb",
+   "kb": 6,
+   "triangles": 62,
+   "animations": [],
+   "parts": [
+    "tree_simple_dark"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_simple_fall",
+   "file": "tree_simple_fall.glb",
+   "kb": 6,
+   "triangles": 62,
+   "animations": [],
+   "parts": [
+    "tree_simple_fall"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_small",
+   "file": "tree_small.glb",
+   "kb": 6,
+   "triangles": 62,
+   "animations": [],
+   "parts": [
+    "tree_small"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_small_dark",
+   "file": "tree_small_dark.glb",
+   "kb": 10,
+   "triangles": 124,
+   "animations": [],
+   "parts": [
+    "tree_small_dark"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_small_fall",
+   "file": "tree_small_fall.glb",
+   "kb": 6,
+   "triangles": 62,
+   "animations": [],
+   "parts": [
+    "tree_small_fall"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_tall",
+   "file": "tree_tall.glb",
+   "kb": 6,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "tree_tall"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_tall_dark",
+   "file": "tree_tall_dark.glb",
+   "kb": 6,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "tree_tall_dark"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_tall_fall",
+   "file": "tree_tall_fall.glb",
+   "kb": 11,
+   "triangles": 144,
+   "animations": [],
+   "parts": [
+    "tree_tall_fall"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_thin",
+   "file": "tree_thin.glb",
+   "kb": 16,
+   "triangles": 228,
+   "animations": [],
+   "parts": [
+    "tree_thin"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_thin_dark",
+   "file": "tree_thin_dark.glb",
+   "kb": 31,
+   "triangles": 456,
+   "animations": [],
+   "parts": [
+    "tree_thin_dark"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tree_thin_fall",
+   "file": "tree_thin_fall.glb",
+   "kb": 16,
+   "triangles": 228,
+   "animations": [],
+   "parts": [
+    "tree_thin_fall"
+   ],
+   "textures": []
+  }
+ ]
+}

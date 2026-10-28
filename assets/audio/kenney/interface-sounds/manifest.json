@@ -1,0 +1,511 @@
+{
+ "pack": "kenney-interface-sounds",
+ "kind": "sound",
+ "source": "https://kenney.nl/assets/interface-sounds",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 100,
+ "items": [
+  {
+   "name": "back_001",
+   "file": "back_001.ogg",
+   "kb": 6
+  },
+  {
+   "name": "back_002",
+   "file": "back_002.ogg",
+   "kb": 6
+  },
+  {
+   "name": "back_003",
+   "file": "back_003.ogg",
+   "kb": 7
+  },
+  {
+   "name": "back_004",
+   "file": "back_004.ogg",
+   "kb": 6
+  },
+  {
+   "name": "bong_001",
+   "file": "bong_001.ogg",
+   "kb": 4
+  },
+  {
+   "name": "click_001",
+   "file": "click_001.ogg",
+   "kb": 4
+  },
+  {
+   "name": "click_002",
+   "file": "click_002.ogg",
+   "kb": 4
+  },
+  {
+   "name": "click_003",
+   "file": "click_003.ogg",
+   "kb": 4
+  },
+  {
+   "name": "click_004",
+   "file": "click_004.ogg",
+   "kb": 4
+  },
+  {
+   "name": "click_005",
+   "file": "click_005.ogg",
+   "kb": 4
+  },
+  {
+   "name": "close_001",
+   "file": "close_001.ogg",
+   "kb": 9
+  },
+  {
+   "name": "close_002",
+   "file": "close_002.ogg",
+   "kb": 14
+  },
+  {
+   "name": "close_003",
+   "file": "close_003.ogg",
+   "kb": 15
+  },
+  {
+   "name": "close_004",
+   "file": "close_004.ogg",
+   "kb": 15
+  },
+  {
+   "name": "confirmation_001",
+   "file": "confirmation_001.ogg",
+   "kb": 8
+  },
+  {
+   "name": "confirmation_002",
+   "file": "confirmation_002.ogg",
+   "kb": 13
+  },
+  {
+   "name": "confirmation_003",
+   "file": "confirmation_003.ogg",
+   "kb": 9
+  },
+  {
+   "name": "confirmation_004",
+   "file": "confirmation_004.ogg",
+   "kb": 12
+  },
+  {
+   "name": "drop_001",
+   "file": "drop_001.ogg",
+   "kb": 5
+  },
+  {
+   "name": "drop_002",
+   "file": "drop_002.ogg",
+   "kb": 6
+  },
+  {
+   "name": "drop_003",
+   "file": "drop_003.ogg",
+   "kb": 6
+  },
+  {
+   "name": "drop_004",
+   "file": "drop_004.ogg",
+   "kb": 7
+  },
+  {
+   "name": "error_001",
+   "file": "error_001.ogg",
+   "kb": 7
+  },
+  {
+   "name": "error_002",
+   "file": "error_002.ogg",
+   "kb": 7
+  },
+  {
+   "name": "error_003",
+   "file": "error_003.ogg",
+   "kb": 11
+  },
+  {
+   "name": "error_004",
+   "file": "error_004.ogg",
+   "kb": 6
+  },
+  {
+   "name": "error_005",
+   "file": "error_005.ogg",
+   "kb": 7
+  },
+  {
+   "name": "error_006",
+   "file": "error_006.ogg",
+   "kb": 8
+  },
+  {
+   "name": "error_007",
+   "file": "error_007.ogg",
+   "kb": 9
+  },
+  {
+   "name": "error_008",
+   "file": "error_008.ogg",
+   "kb": 8
+  },
+  {
+   "name": "glass_001",
+   "file": "glass_001.ogg",
+   "kb": 5
+  },
+  {
+   "name": "glass_002",
+   "file": "glass_002.ogg",
+   "kb": 4
+  },
+  {
+   "name": "glass_003",
+   "file": "glass_003.ogg",
+   "kb": 5
+  },
+  {
+   "name": "glass_004",
+   "file": "glass_004.ogg",
+   "kb": 8
+  },
+  {
+   "name": "glass_005",
+   "file": "glass_005.ogg",
+   "kb": 6
+  },
+  {
+   "name": "glass_006",
+   "file": "glass_006.ogg",
+   "kb": 6
+  },
+  {
+   "name": "glitch_001",
+   "file": "glitch_001.ogg",
+   "kb": 5
+  },
+  {
+   "name": "glitch_002",
+   "file": "glitch_002.ogg",
+   "kb": 5
+  },
+  {
+   "name": "glitch_003",
+   "file": "glitch_003.ogg",
+   "kb": 4
+  },
+  {
+   "name": "glitch_004",
+   "file": "glitch_004.ogg",
+   "kb": 5
+  },
+  {
+   "name": "maximize_001",
+   "file": "maximize_001.ogg",
+   "kb": 11
+  },
+  {
+   "name": "maximize_002",
+   "file": "maximize_002.ogg",
+   "kb": 9
+  },
+  {
+   "name": "maximize_003",
+   "file": "maximize_003.ogg",
+   "kb": 11
+  },
+  {
+   "name": "maximize_004",
+   "file": "maximize_004.ogg",
+   "kb": 17
+  },
+  {
+   "name": "maximize_005",
+   "file": "maximize_005.ogg",
+   "kb": 20
+  },
+  {
+   "name": "maximize_006",
+   "file": "maximize_006.ogg",
+   "kb": 11
+  },
+  {
+   "name": "maximize_007",
+   "file": "maximize_007.ogg",
+   "kb": 7
+  },
+  {
+   "name": "maximize_008",
+   "file": "maximize_008.ogg",
+   "kb": 8
+  },
+  {
+   "name": "maximize_009",
+   "file": "maximize_009.ogg",
+   "kb": 7
+  },
+  {
+   "name": "minimize_001",
+   "file": "minimize_001.ogg",
+   "kb": 11
+  },
+  {
+   "name": "minimize_002",
+   "file": "minimize_002.ogg",
+   "kb": 9
+  },
+  {
+   "name": "minimize_003",
+   "file": "minimize_003.ogg",
+   "kb": 11
+  },
+  {
+   "name": "minimize_004",
+   "file": "minimize_004.ogg",
+   "kb": 16
+  },
+  {
+   "name": "minimize_005",
+   "file": "minimize_005.ogg",
+   "kb": 19
+  },
+  {
+   "name": "minimize_006",
+   "file": "minimize_006.ogg",
+   "kb": 11
+  },
+  {
+   "name": "minimize_007",
+   "file": "minimize_007.ogg",
+   "kb": 7
+  },
+  {
+   "name": "minimize_008",
+   "file": "minimize_008.ogg",
+   "kb": 9
+  },
+  {
+   "name": "minimize_009",
+   "file": "minimize_009.ogg",
+   "kb": 7
+  },
+  {
+   "name": "open_001",
+   "file": "open_001.ogg",
+   "kb": 9
+  },
+  {
+   "name": "open_002",
+   "file": "open_002.ogg",
+   "kb": 14
+  },
+  {
+   "name": "open_003",
+   "file": "open_003.ogg",
+   "kb": 14
+  },
+  {
+   "name": "open_004",
+   "file": "open_004.ogg",
+   "kb": 15
+  },
+  {
+   "name": "pluck_001",
+   "file": "pluck_001.ogg",
+   "kb": 6
+  },
+  {
+   "name": "pluck_002",
+   "file": "pluck_002.ogg",
+   "kb": 6
+  },
+  {
+   "name": "question_001",
+   "file": "question_001.ogg",
+   "kb": 11
+  },
+  {
+   "name": "question_002",
+   "file": "question_002.ogg",
+   "kb": 9
+  },
+  {
+   "name": "question_003",
+   "file": "question_003.ogg",
+   "kb": 8
+  },
+  {
+   "name": "question_004",
+   "file": "question_004.ogg",
+   "kb": 9
+  },
+  {
+   "name": "scratch_001",
+   "file": "scratch_001.ogg",
+   "kb": 8
+  },
+  {
+   "name": "scratch_002",
+   "file": "scratch_002.ogg",
+   "kb": 9
+  },
+  {
+   "name": "scratch_003",
+   "file": "scratch_003.ogg",
+   "kb": 8
+  },
+  {
+   "name": "scratch_004",
+   "file": "scratch_004.ogg",
+   "kb": 16
+  },
+  {
+   "name": "scratch_005",
+   "file": "scratch_005.ogg",
+   "kb": 15
+  },
+  {
+   "name": "scroll_001",
+   "file": "scroll_001.ogg",
+   "kb": 21
+  },
+  {
+   "name": "scroll_002",
+   "file": "scroll_002.ogg",
+   "kb": 24
+  },
+  {
+   "name": "scroll_003",
+   "file": "scroll_003.ogg",
+   "kb": 28
+  },
+  {
+   "name": "scroll_004",
+   "file": "scroll_004.ogg",
+   "kb": 19
+  },
+  {
+   "name": "scroll_005",
+   "file": "scroll_005.ogg",
+   "kb": 19
+  },
+  {
+   "name": "select_001",
+   "file": "select_001.ogg",
+   "kb": 5
+  },
+  {
+   "name": "select_002",
+   "file": "select_002.ogg",
+   "kb": 5
+  },
+  {
+   "name": "select_003",
+   "file": "select_003.ogg",
+   "kb": 6
+  },
+  {
+   "name": "select_004",
+   "file": "select_004.ogg",
+   "kb": 6
+  },
+  {
+   "name": "select_005",
+   "file": "select_005.ogg",
+   "kb": 6
+  },
+  {
+   "name": "select_006",
+   "file": "select_006.ogg",
+   "kb": 7
+  },
+  {
+   "name": "select_007",
+   "file": "select_007.ogg",
+   "kb": 6
+  },
+  {
+   "name": "select_008",
+   "file": "select_008.ogg",
+   "kb": 6
+  },
+  {
+   "name": "switch_001",
+   "file": "switch_001.ogg",
+   "kb": 6
+  },
+  {
+   "name": "switch_002",
+   "file": "switch_002.ogg",
+   "kb": 6
+  },
+  {
+   "name": "switch_003",
+   "file": "switch_003.ogg",
+   "kb": 9
+  },
+  {
+   "name": "switch_004",
+   "file": "switch_004.ogg",
+   "kb": 7
+  },
+  {
+   "name": "switch_005",
+   "file": "switch_005.ogg",
+   "kb": 7
+  },
+  {
+   "name": "switch_006",
+   "file": "switch_006.ogg",
+   "kb": 7
+  },
+  {
+   "name": "switch_007",
+   "file": "switch_007.ogg",
+   "kb": 7
+  },
+  {
+   "name": "tick_001",
+   "file": "tick_001.ogg",
+   "kb": 4
+  },
+  {
+   "name": "tick_002",
+   "file": "tick_002.ogg",
+   "kb": 4
+  },
+  {
+   "name": "tick_004",
+   "file": "tick_004.ogg",
+   "kb": 4
+  },
+  {
+   "name": "toggle_001",
+   "file": "toggle_001.ogg",
+   "kb": 7
+  },
+  {
+   "name": "toggle_002",
+   "file": "toggle_002.ogg",
+   "kb": 7
+  },
+  {
+   "name": "toggle_003",
+   "file": "toggle_003.ogg",
+   "kb": 8
+  },
+  {
+   "name": "toggle_004",
+   "file": "toggle_004.ogg",
+   "kb": 6
+  }
+ ]
+}

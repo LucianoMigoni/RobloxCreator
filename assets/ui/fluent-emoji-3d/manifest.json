@@ -1,0 +1,906 @@
+{
+ "pack": "fluent-emoji-3d",
+ "kind": "icon",
+ "source": "https://github.com/microsoft/fluentui-emoji",
+ "license": "MIT",
+ "author": "Microsoft Corporation",
+ "imported": "2026-10-28",
+ "count": 179,
+ "items": [
+  {
+   "name": "1st_place_medal",
+   "file": "1st_place_medal.png",
+   "kb": 29
+  },
+  {
+   "name": "2nd_place_medal",
+   "file": "2nd_place_medal.png",
+   "kb": 34
+  },
+  {
+   "name": "3rd_place_medal",
+   "file": "3rd_place_medal.png",
+   "kb": 34
+  },
+  {
+   "name": "admission_tickets",
+   "file": "admission_tickets.png",
+   "kb": 25
+  },
+  {
+   "name": "alarm_clock",
+   "file": "alarm_clock.png",
+   "kb": 41
+  },
+  {
+   "name": "alien",
+   "file": "alien.png",
+   "kb": 37
+  },
+  {
+   "name": "anchor",
+   "file": "anchor.png",
+   "kb": 25
+  },
+  {
+   "name": "axe",
+   "file": "axe.png",
+   "kb": 19
+  },
+  {
+   "name": "baby_chick",
+   "file": "baby_chick.png",
+   "kb": 25
+  },
+  {
+   "name": "balloon",
+   "file": "balloon.png",
+   "kb": 23
+  },
+  {
+   "name": "banana",
+   "file": "banana.png",
+   "kb": 25
+  },
+  {
+   "name": "basket",
+   "file": "basket.png",
+   "kb": 39
+  },
+  {
+   "name": "bat",
+   "file": "bat.png",
+   "kb": 27
+  },
+  {
+   "name": "battery",
+   "file": "battery.png",
+   "kb": 18
+  },
+  {
+   "name": "bell",
+   "file": "bell.png",
+   "kb": 25
+  },
+  {
+   "name": "birthday_cake",
+   "file": "birthday_cake.png",
+   "kb": 40
+  },
+  {
+   "name": "blowfish",
+   "file": "blowfish.png",
+   "kb": 28
+  },
+  {
+   "name": "bomb",
+   "file": "bomb.png",
+   "kb": 32
+  },
+  {
+   "name": "books",
+   "file": "books.png",
+   "kb": 25
+  },
+  {
+   "name": "bow_and_arrow",
+   "file": "bow_and_arrow.png",
+   "kb": 39
+  },
+  {
+   "name": "broom",
+   "file": "broom.png",
+   "kb": 16
+  },
+  {
+   "name": "bubbles",
+   "file": "bubbles.png",
+   "kb": 33
+  },
+  {
+   "name": "bucket",
+   "file": "bucket.png",
+   "kb": 32
+  },
+  {
+   "name": "butterfly",
+   "file": "butterfly.png",
+   "kb": 59
+  },
+  {
+   "name": "cactus",
+   "file": "cactus.png",
+   "kb": 37
+  },
+  {
+   "name": "calendar",
+   "file": "calendar.png",
+   "kb": 40
+  },
+  {
+   "name": "candy",
+   "file": "candy.png",
+   "kb": 33
+  },
+  {
+   "name": "carrot",
+   "file": "carrot.png",
+   "kb": 36
+  },
+  {
+   "name": "cat_face",
+   "file": "cat_face.png",
+   "kb": 36
+  },
+  {
+   "name": "chart_increasing",
+   "file": "chart_increasing.png",
+   "kb": 41
+  },
+  {
+   "name": "check_mark_button",
+   "file": "check_mark_button.png",
+   "kb": 33
+  },
+  {
+   "name": "cherries",
+   "file": "cherries.png",
+   "kb": 35
+  },
+  {
+   "name": "cherry_blossom",
+   "file": "cherry_blossom.png",
+   "kb": 34
+  },
+  {
+   "name": "chocolate_bar",
+   "file": "chocolate_bar.png",
+   "kb": 33
+  },
+  {
+   "name": "christmas_tree",
+   "file": "christmas_tree.png",
+   "kb": 26
+  },
+  {
+   "name": "cloud",
+   "file": "cloud.png",
+   "kb": 18
+  },
+  {
+   "name": "cloud_with_lightning_and_rain",
+   "file": "cloud_with_lightning_and_rain.png",
+   "kb": 50
+  },
+  {
+   "name": "coin",
+   "file": "coin.png",
+   "kb": 34
+  },
+  {
+   "name": "collision",
+   "file": "collision.png",
+   "kb": 30
+  },
+  {
+   "name": "comet",
+   "file": "comet.png",
+   "kb": 26
+  },
+  {
+   "name": "compass",
+   "file": "compass.png",
+   "kb": 57
+  },
+  {
+   "name": "confetti_ball",
+   "file": "confetti_ball.png",
+   "kb": 39
+  },
+  {
+   "name": "cookie",
+   "file": "cookie.png",
+   "kb": 37
+  },
+  {
+   "name": "counterclockwise_arrows_button",
+   "file": "counterclockwise_arrows_button.png",
+   "kb": 33
+  },
+  {
+   "name": "crab",
+   "file": "crab.png",
+   "kb": 34
+  },
+  {
+   "name": "crescent_moon",
+   "file": "crescent_moon.png",
+   "kb": 23
+  },
+  {
+   "name": "cross_mark",
+   "file": "cross_mark.png",
+   "kb": 23
+  },
+  {
+   "name": "crossed_swords",
+   "file": "crossed_swords.png",
+   "kb": 31
+  },
+  {
+   "name": "crown",
+   "file": "crown.png",
+   "kb": 31
+  },
+  {
+   "name": "crystal_ball",
+   "file": "crystal_ball.png",
+   "kb": 34
+  },
+  {
+   "name": "deciduous_tree",
+   "file": "deciduous_tree.png",
+   "kb": 27
+  },
+  {
+   "name": "desert_island",
+   "file": "desert_island.png",
+   "kb": 33
+  },
+  {
+   "name": "dizzy",
+   "file": "dizzy.png",
+   "kb": 22
+  },
+  {
+   "name": "dog_face",
+   "file": "dog_face.png",
+   "kb": 42
+  },
+  {
+   "name": "dollar_banknote",
+   "file": "dollar_banknote.png",
+   "kb": 28
+  },
+  {
+   "name": "dolphin",
+   "file": "dolphin.png",
+   "kb": 23
+  },
+  {
+   "name": "doughnut",
+   "file": "doughnut.png",
+   "kb": 41
+  },
+  {
+   "name": "dragon",
+   "file": "dragon.png",
+   "kb": 39
+  },
+  {
+   "name": "dragon_face",
+   "file": "dragon_face.png",
+   "kb": 42
+  },
+  {
+   "name": "egg",
+   "file": "egg.png",
+   "kb": 19
+  },
+  {
+   "name": "envelope",
+   "file": "envelope.png",
+   "kb": 27
+  },
+  {
+   "name": "evergreen_tree",
+   "file": "evergreen_tree.png",
+   "kb": 20
+  },
+  {
+   "name": "fire",
+   "file": "fire.png",
+   "kb": 26
+  },
+  {
+   "name": "firecracker",
+   "file": "firecracker.png",
+   "kb": 21
+  },
+  {
+   "name": "fish",
+   "file": "fish.png",
+   "kb": 28
+  },
+  {
+   "name": "fishing_pole",
+   "file": "fishing_pole.png",
+   "kb": 28
+  },
+  {
+   "name": "flying_saucer",
+   "file": "flying_saucer.png",
+   "kb": 31
+  },
+  {
+   "name": "footprints",
+   "file": "footprints.png",
+   "kb": 33
+  },
+  {
+   "name": "four_leaf_clover",
+   "file": "four_leaf_clover.png",
+   "kb": 36
+  },
+  {
+   "name": "fox",
+   "file": "fox.png",
+   "kb": 40
+  },
+  {
+   "name": "frog",
+   "file": "frog.png",
+   "kb": 37
+  },
+  {
+   "name": "game_die",
+   "file": "game_die.png",
+   "kb": 36
+  },
+  {
+   "name": "gear",
+   "file": "gear.png",
+   "kb": 38
+  },
+  {
+   "name": "gem_stone",
+   "file": "gem_stone.png",
+   "kb": 18
+  },
+  {
+   "name": "ghost",
+   "file": "ghost.png",
+   "kb": 32
+  },
+  {
+   "name": "globe_showing_americas",
+   "file": "globe_showing_americas.png",
+   "kb": 41
+  },
+  {
+   "name": "glowing_star",
+   "file": "glowing_star.png",
+   "kb": 27
+  },
+  {
+   "name": "hamburger",
+   "file": "hamburger.png",
+   "kb": 35
+  },
+  {
+   "name": "hammer",
+   "file": "hammer.png",
+   "kb": 19
+  },
+  {
+   "name": "hammer_and_pick",
+   "file": "hammer_and_pick.png",
+   "kb": 33
+  },
+  {
+   "name": "hamster",
+   "file": "hamster.png",
+   "kb": 36
+  },
+  {
+   "name": "hatching_chick",
+   "file": "hatching_chick.png",
+   "kb": 34
+  },
+  {
+   "name": "high_voltage",
+   "file": "high_voltage.png",
+   "kb": 15
+  },
+  {
+   "name": "hole",
+   "file": "hole.png",
+   "kb": 16
+  },
+  {
+   "name": "honeybee",
+   "file": "honeybee.png",
+   "kb": 32
+  },
+  {
+   "name": "hourglass_done",
+   "file": "hourglass_done.png",
+   "kb": 32
+  },
+  {
+   "name": "hourglass_not_done",
+   "file": "hourglass_not_done.png",
+   "kb": 33
+  },
+  {
+   "name": "hundred_points",
+   "file": "hundred_points.png",
+   "kb": 35
+  },
+  {
+   "name": "ice_cream",
+   "file": "ice_cream.png",
+   "kb": 33
+  },
+  {
+   "name": "jack_o_lantern",
+   "file": "jack_o_lantern.png",
+   "kb": 32
+  },
+  {
+   "name": "joystick",
+   "file": "joystick.png",
+   "kb": 34
+  },
+  {
+   "name": "key",
+   "file": "key.png",
+   "kb": 21
+  },
+  {
+   "name": "keyboard",
+   "file": "keyboard.png",
+   "kb": 26
+  },
+  {
+   "name": "kite",
+   "file": "kite.png",
+   "kb": 29
+  },
+  {
+   "name": "light_bulb",
+   "file": "light_bulb.png",
+   "kb": 21
+  },
+  {
+   "name": "lion",
+   "file": "lion.png",
+   "kb": 48
+  },
+  {
+   "name": "lobster",
+   "file": "lobster.png",
+   "kb": 44
+  },
+  {
+   "name": "locked",
+   "file": "locked.png",
+   "kb": 29
+  },
+  {
+   "name": "lollipop",
+   "file": "lollipop.png",
+   "kb": 27
+  },
+  {
+   "name": "magic_wand",
+   "file": "magic_wand.png",
+   "kb": 17
+  },
+  {
+   "name": "magnet",
+   "file": "magnet.png",
+   "kb": 23
+  },
+  {
+   "name": "magnifying_glass_tilted_left",
+   "file": "magnifying_glass_tilted_left.png",
+   "kb": 34
+  },
+  {
+   "name": "megaphone",
+   "file": "megaphone.png",
+   "kb": 35
+  },
+  {
+   "name": "milky_way",
+   "file": "milky_way.png",
+   "kb": 42
+  },
+  {
+   "name": "money_bag",
+   "file": "money_bag.png",
+   "kb": 33
+  },
+  {
+   "name": "money_with_wings",
+   "file": "money_with_wings.png",
+   "kb": 34
+  },
+  {
+   "name": "monkey_face",
+   "file": "monkey_face.png",
+   "kb": 36
+  },
+  {
+   "name": "mountain",
+   "file": "mountain.png",
+   "kb": 39
+  },
+  {
+   "name": "mushroom",
+   "file": "mushroom.png",
+   "kb": 22
+  },
+  {
+   "name": "musical_notes",
+   "file": "musical_notes.png",
+   "kb": 28
+  },
+  {
+   "name": "ninja",
+   "file": "ninja.png",
+   "kb": 37
+  },
+  {
+   "name": "octopus",
+   "file": "octopus.png",
+   "kb": 33
+  },
+  {
+   "name": "old_key",
+   "file": "old_key.png",
+   "kb": 27
+  },
+  {
+   "name": "open_book",
+   "file": "open_book.png",
+   "kb": 23
+  },
+  {
+   "name": "package",
+   "file": "package.png",
+   "kb": 30
+  },
+  {
+   "name": "panda",
+   "file": "panda.png",
+   "kb": 42
+  },
+  {
+   "name": "party_popper",
+   "file": "party_popper.png",
+   "kb": 41
+  },
+  {
+   "name": "penguin",
+   "file": "penguin.png",
+   "kb": 32
+  },
+  {
+   "name": "pick",
+   "file": "pick.png",
+   "kb": 21
+  },
+  {
+   "name": "pirate_flag",
+   "file": "pirate_flag.png",
+   "kb": 25
+  },
+  {
+   "name": "pizza",
+   "file": "pizza.png",
+   "kb": 30
+  },
+  {
+   "name": "plus",
+   "file": "plus.png",
+   "kb": 19
+  },
+  {
+   "name": "popcorn",
+   "file": "popcorn.png",
+   "kb": 34
+  },
+  {
+   "name": "puzzle_piece",
+   "file": "puzzle_piece.png",
+   "kb": 30
+  },
+  {
+   "name": "rabbit_face",
+   "file": "rabbit_face.png",
+   "kb": 30
+  },
+  {
+   "name": "racing_car",
+   "file": "racing_car.png",
+   "kb": 18
+  },
+  {
+   "name": "rainbow",
+   "file": "rainbow.png",
+   "kb": 34
+  },
+  {
+   "name": "recycling_symbol",
+   "file": "recycling_symbol.png",
+   "kb": 31
+  },
+  {
+   "name": "red_apple",
+   "file": "red_apple.png",
+   "kb": 42
+  },
+  {
+   "name": "red_heart",
+   "file": "red_heart.png",
+   "kb": 28
+  },
+  {
+   "name": "ribbon",
+   "file": "ribbon.png",
+   "kb": 36
+  },
+  {
+   "name": "ring",
+   "file": "ring.png",
+   "kb": 22
+  },
+  {
+   "name": "ringed_planet",
+   "file": "ringed_planet.png",
+   "kb": 29
+  },
+  {
+   "name": "robot",
+   "file": "robot.png",
+   "kb": 42
+  },
+  {
+   "name": "rocket",
+   "file": "rocket.png",
+   "kb": 35
+  },
+  {
+   "name": "running_shoe",
+   "file": "running_shoe.png",
+   "kb": 30
+  },
+  {
+   "name": "sailboat",
+   "file": "sailboat.png",
+   "kb": 22
+  },
+  {
+   "name": "sauropod",
+   "file": "sauropod.png",
+   "kb": 27
+  },
+  {
+   "name": "scroll",
+   "file": "scroll.png",
+   "kb": 22
+  },
+  {
+   "name": "seedling",
+   "file": "seedling.png",
+   "kb": 24
+  },
+  {
+   "name": "shark",
+   "file": "shark.png",
+   "kb": 31
+  },
+  {
+   "name": "shield",
+   "file": "shield.png",
+   "kb": 29
+  },
+  {
+   "name": "shopping_bags",
+   "file": "shopping_bags.png",
+   "kb": 27
+  },
+  {
+   "name": "shopping_cart",
+   "file": "shopping_cart.png",
+   "kb": 29
+  },
+  {
+   "name": "skull",
+   "file": "skull.png",
+   "kb": 31
+  },
+  {
+   "name": "slot_machine",
+   "file": "slot_machine.png",
+   "kb": 39
+  },
+  {
+   "name": "snowflake",
+   "file": "snowflake.png",
+   "kb": 39
+  },
+  {
+   "name": "snowman",
+   "file": "snowman.png",
+   "kb": 40
+  },
+  {
+   "name": "soap",
+   "file": "soap.png",
+   "kb": 34
+  },
+  {
+   "name": "sparkles",
+   "file": "sparkles.png",
+   "kb": 21
+  },
+  {
+   "name": "speaker_high_volume",
+   "file": "speaker_high_volume.png",
+   "kb": 27
+  },
+  {
+   "name": "speedboat",
+   "file": "speedboat.png",
+   "kb": 28
+  },
+  {
+   "name": "spider_web",
+   "file": "spider_web.png",
+   "kb": 40
+  },
+  {
+   "name": "spiral_calendar",
+   "file": "spiral_calendar.png",
+   "kb": 37
+  },
+  {
+   "name": "sponge",
+   "file": "sponge.png",
+   "kb": 33
+  },
+  {
+   "name": "sports_medal",
+   "file": "sports_medal.png",
+   "kb": 17
+  },
+  {
+   "name": "spouting_whale",
+   "file": "spouting_whale.png",
+   "kb": 36
+  },
+  {
+   "name": "star",
+   "file": "star.png",
+   "kb": 23
+  },
+  {
+   "name": "stopwatch",
+   "file": "stopwatch.png",
+   "kb": 44
+  },
+  {
+   "name": "strawberry",
+   "file": "strawberry.png",
+   "kb": 29
+  },
+  {
+   "name": "sun",
+   "file": "sun.png",
+   "kb": 33
+  },
+  {
+   "name": "sunflower",
+   "file": "sunflower.png",
+   "kb": 34
+  },
+  {
+   "name": "teddy_bear",
+   "file": "teddy_bear.png",
+   "kb": 43
+  },
+  {
+   "name": "ticket",
+   "file": "ticket.png",
+   "kb": 20
+  },
+  {
+   "name": "tiger_face",
+   "file": "tiger_face.png",
+   "kb": 44
+  },
+  {
+   "name": "timer_clock",
+   "file": "timer_clock.png",
+   "kb": 54
+  },
+  {
+   "name": "trophy",
+   "file": "trophy.png",
+   "kb": 31
+  },
+  {
+   "name": "tropical_fish",
+   "file": "tropical_fish.png",
+   "kb": 26
+  },
+  {
+   "name": "turtle",
+   "file": "turtle.png",
+   "kb": 30
+  },
+  {
+   "name": "unicorn",
+   "file": "unicorn.png",
+   "kb": 34
+  },
+  {
+   "name": "unlocked",
+   "file": "unlocked.png",
+   "kb": 29
+  },
+  {
+   "name": "video_game",
+   "file": "video_game.png",
+   "kb": 30
+  },
+  {
+   "name": "volcano",
+   "file": "volcano.png",
+   "kb": 31
+  },
+  {
+   "name": "warning",
+   "file": "warning.png",
+   "kb": 21
+  },
+  {
+   "name": "watermelon",
+   "file": "watermelon.png",
+   "kb": 28
+  },
+  {
+   "name": "world_map",
+   "file": "world_map.png",
+   "kb": 46
+  },
+  {
+   "name": "wrapped_gift",
+   "file": "wrapped_gift.png",
+   "kb": 31
+  },
+  {
+   "name": "wrench",
+   "file": "wrench.png",
+   "kb": 17
+  },
+  {
+   "name": "yo_yo",
+   "file": "yo_yo.png",
+   "kb": 32
+  }
+ ]
+}

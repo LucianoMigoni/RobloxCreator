@@ -1,0 +1,2104 @@
+{
+ "pack": "kenney-tower-defense-kit",
+ "kind": "model3d",
+ "source": "https://kenney.nl/assets/tower-defense-kit",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 160,
+ "items": [
+  {
+   "name": "detail-crystal-large",
+   "file": "detail-crystal-large.glb",
+   "kb": 43,
+   "triangles": 436,
+   "animations": [],
+   "parts": [
+    "detail-crystal-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "detail-crystal",
+   "file": "detail-crystal.glb",
+   "kb": 8,
+   "triangles": 68,
+   "animations": [],
+   "parts": [
+    "detail-crystal"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "detail-dirt-large",
+   "file": "detail-dirt-large.glb",
+   "kb": 22,
+   "triangles": 232,
+   "animations": [],
+   "parts": [
+    "detail-dirt-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "detail-dirt",
+   "file": "detail-dirt.glb",
+   "kb": 22,
+   "triangles": 232,
+   "animations": [],
+   "parts": [
+    "detail-dirt"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "detail-rocks-large",
+   "file": "detail-rocks-large.glb",
+   "kb": 22,
+   "triangles": 232,
+   "animations": [],
+   "parts": [
+    "detail-rocks-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "detail-rocks",
+   "file": "detail-rocks.glb",
+   "kb": 18,
+   "triangles": 184,
+   "animations": [],
+   "parts": [
+    "detail-rocks"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "detail-tree-large",
+   "file": "detail-tree-large.glb",
+   "kb": 18,
+   "triangles": 168,
+   "animations": [],
+   "parts": [
+    "detail-tree-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "detail-tree",
+   "file": "detail-tree.glb",
+   "kb": 18,
+   "triangles": 168,
+   "animations": [],
+   "parts": [
+    "detail-tree"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "enemy-ufo-a-weapon",
+   "file": "enemy-ufo-a-weapon.glb",
+   "kb": 94,
+   "triangles": 1028,
+   "animations": [],
+   "parts": [
+    "enemy-ufo-a-weapon",
+    "barrel"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "enemy-ufo-a",
+   "file": "enemy-ufo-a.glb",
+   "kb": 41,
+   "triangles": 520,
+   "animations": [],
+   "parts": [
+    "enemy-ufo-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "enemy-ufo-b-weapon",
+   "file": "enemy-ufo-b-weapon.glb",
+   "kb": 87,
+   "triangles": 988,
+   "animations": [],
+   "parts": [
+    "enemy-ufo-b-weapon",
+    "catapult"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "enemy-ufo-b",
+   "file": "enemy-ufo-b.glb",
+   "kb": 36,
+   "triangles": 472,
+   "animations": [],
+   "parts": [
+    "enemy-ufo-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "enemy-ufo-beam-burst",
+   "file": "enemy-ufo-beam-burst.glb",
+   "kb": 8,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "enemy-ufo-beam-burst"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "enemy-ufo-beam",
+   "file": "enemy-ufo-beam.glb",
+   "kb": 6,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "enemy-ufo-beam"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "enemy-ufo-c-weapon",
+   "file": "enemy-ufo-c-weapon.glb",
+   "kb": 86,
+   "triangles": 972,
+   "animations": [],
+   "parts": [
+    "enemy-ufo-c-weapon",
+    "barrel"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "enemy-ufo-c",
+   "file": "enemy-ufo-c.glb",
+   "kb": 34,
+   "triangles": 440,
+   "animations": [],
+   "parts": [
+    "enemy-ufo-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "enemy-ufo-d-weapon",
+   "file": "enemy-ufo-d-weapon.glb",
+   "kb": 88,
+   "triangles": 996,
+   "animations": [],
+   "parts": [
+    "enemy-ufo-d-weapon",
+    "arrow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "enemy-ufo-d",
+   "file": "enemy-ufo-d.glb",
+   "kb": 44,
+   "triangles": 584,
+   "animations": [],
+   "parts": [
+    "enemy-ufo-d"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "selection-a",
+   "file": "selection-a.glb",
+   "kb": 18,
+   "triangles": 192,
+   "animations": [],
+   "parts": [
+    "selection-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "selection-b",
+   "file": "selection-b.glb",
+   "kb": 4,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "selection-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-detail-crystal-large",
+   "file": "snow-detail-crystal-large.glb",
+   "kb": 43,
+   "triangles": 436,
+   "animations": [],
+   "parts": [
+    "snow-detail-crystal-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-detail-crystal",
+   "file": "snow-detail-crystal.glb",
+   "kb": 8,
+   "triangles": 68,
+   "animations": [],
+   "parts": [
+    "snow-detail-crystal"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-detail-dirt-large",
+   "file": "snow-detail-dirt-large.glb",
+   "kb": 22,
+   "triangles": 232,
+   "animations": [],
+   "parts": [
+    "snow-detail-dirt-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-detail-dirt",
+   "file": "snow-detail-dirt.glb",
+   "kb": 22,
+   "triangles": 232,
+   "animations": [],
+   "parts": [
+    "snow-detail-dirt"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-detail-rocks-large",
+   "file": "snow-detail-rocks-large.glb",
+   "kb": 22,
+   "triangles": 232,
+   "animations": [],
+   "parts": [
+    "snow-detail-rocks-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-detail-rocks",
+   "file": "snow-detail-rocks.glb",
+   "kb": 18,
+   "triangles": 184,
+   "animations": [],
+   "parts": [
+    "snow-detail-rocks"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-detail-tree-large",
+   "file": "snow-detail-tree-large.glb",
+   "kb": 18,
+   "triangles": 168,
+   "animations": [],
+   "parts": [
+    "snow-detail-tree-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-detail-tree",
+   "file": "snow-detail-tree.glb",
+   "kb": 18,
+   "triangles": 168,
+   "animations": [],
+   "parts": [
+    "snow-detail-tree"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-bump",
+   "file": "snow-tile-bump.glb",
+   "kb": 28,
+   "triangles": 320,
+   "animations": [],
+   "parts": [
+    "snow-tile-bump"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-corner-inner",
+   "file": "snow-tile-corner-inner.glb",
+   "kb": 4,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "snow-tile-corner-inner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-corner-large",
+   "file": "snow-tile-corner-large.glb",
+   "kb": 103,
+   "triangles": 1104,
+   "animations": [],
+   "parts": [
+    "snow-tile-corner-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-corner-outer",
+   "file": "snow-tile-corner-outer.glb",
+   "kb": 4,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "snow-tile-corner-outer"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-corner-round",
+   "file": "snow-tile-corner-round.glb",
+   "kb": 30,
+   "triangles": 332,
+   "animations": [],
+   "parts": [
+    "snow-tile-corner-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-corner-square",
+   "file": "snow-tile-corner-square.glb",
+   "kb": 16,
+   "triangles": 168,
+   "animations": [],
+   "parts": [
+    "snow-tile-corner-square"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-crossing",
+   "file": "snow-tile-crossing.glb",
+   "kb": 24,
+   "triangles": 276,
+   "animations": [],
+   "parts": [
+    "snow-tile-crossing"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-crystal",
+   "file": "snow-tile-crystal.glb",
+   "kb": 46,
+   "triangles": 460,
+   "animations": [],
+   "parts": [
+    "snow-tile-crystal"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-dirt",
+   "file": "snow-tile-dirt.glb",
+   "kb": 3,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "snow-tile-dirt"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-end-round",
+   "file": "snow-tile-end-round.glb",
+   "kb": 19,
+   "triangles": 208,
+   "animations": [],
+   "parts": [
+    "snow-tile-end-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-end",
+   "file": "snow-tile-end.glb",
+   "kb": 15,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "snow-tile-end"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-hill",
+   "file": "snow-tile-hill.glb",
+   "kb": 35,
+   "triangles": 376,
+   "animations": [],
+   "parts": [
+    "snow-tile-hill"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-river-bridge",
+   "file": "snow-tile-river-bridge.glb",
+   "kb": 31,
+   "triangles": 340,
+   "animations": [],
+   "parts": [
+    "snow-tile-river-bridge"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-river-corner",
+   "file": "snow-tile-river-corner.glb",
+   "kb": 59,
+   "triangles": 664,
+   "animations": [],
+   "parts": [
+    "snow-tile-river-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-river-slope-large",
+   "file": "snow-tile-river-slope-large.glb",
+   "kb": 8,
+   "triangles": 88,
+   "animations": [],
+   "parts": [
+    "snow-tile-river-slope-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-river-slope",
+   "file": "snow-tile-river-slope.glb",
+   "kb": 17,
+   "triangles": 184,
+   "animations": [],
+   "parts": [
+    "snow-tile-river-slope"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-river-straight",
+   "file": "snow-tile-river-straight.glb",
+   "kb": 17,
+   "triangles": 184,
+   "animations": [],
+   "parts": [
+    "snow-tile-river-straight"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-river-transition",
+   "file": "snow-tile-river-transition.glb",
+   "kb": 22,
+   "triangles": 236,
+   "animations": [],
+   "parts": [
+    "snow-tile-river-transition"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-river-waterfall",
+   "file": "snow-tile-river-waterfall.glb",
+   "kb": 38,
+   "triangles": 432,
+   "animations": [],
+   "parts": [
+    "snow-tile-river-waterfall"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-rock",
+   "file": "snow-tile-rock.glb",
+   "kb": 35,
+   "triangles": 376,
+   "animations": [],
+   "parts": [
+    "snow-tile-rock"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-slope",
+   "file": "snow-tile-slope.glb",
+   "kb": 3,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "snow-tile-slope"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-spawn-end-round",
+   "file": "snow-tile-spawn-end-round.glb",
+   "kb": 34,
+   "triangles": 384,
+   "animations": [],
+   "parts": [
+    "snow-tile-spawn-end-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-spawn-end",
+   "file": "snow-tile-spawn-end.glb",
+   "kb": 22,
+   "triangles": 232,
+   "animations": [],
+   "parts": [
+    "snow-tile-spawn-end"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-spawn-round",
+   "file": "snow-tile-spawn-round.glb",
+   "kb": 33,
+   "triangles": 360,
+   "animations": [],
+   "parts": [
+    "snow-tile-spawn-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-spawn",
+   "file": "snow-tile-spawn.glb",
+   "kb": 25,
+   "triangles": 264,
+   "animations": [],
+   "parts": [
+    "snow-tile-spawn"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-split",
+   "file": "snow-tile-split.glb",
+   "kb": 20,
+   "triangles": 220,
+   "animations": [],
+   "parts": [
+    "snow-tile-split"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-straight-slope-large",
+   "file": "snow-tile-straight-slope-large.glb",
+   "kb": 6,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "snow-tile-straight-slope-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-straight-slope",
+   "file": "snow-tile-straight-slope.glb",
+   "kb": 15,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "snow-tile-straight-slope"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-straight",
+   "file": "snow-tile-straight.glb",
+   "kb": 15,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "snow-tile-straight"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-transition",
+   "file": "snow-tile-transition.glb",
+   "kb": 15,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "snow-tile-transition"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-tree-double",
+   "file": "snow-tile-tree-double.glb",
+   "kb": 37,
+   "triangles": 360,
+   "animations": [],
+   "parts": [
+    "snow-tile-tree-double"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-tree-quad",
+   "file": "snow-tile-tree-quad.glb",
+   "kb": 92,
+   "triangles": 936,
+   "animations": [],
+   "parts": [
+    "snow-tile-tree-quad"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-tree",
+   "file": "snow-tile-tree.glb",
+   "kb": 20,
+   "triangles": 192,
+   "animations": [],
+   "parts": [
+    "snow-tile-tree"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-wide-corner",
+   "file": "snow-tile-wide-corner.glb",
+   "kb": 74,
+   "triangles": 784,
+   "animations": [],
+   "parts": [
+    "snow-tile-wide-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-wide-split",
+   "file": "snow-tile-wide-split.glb",
+   "kb": 20,
+   "triangles": 216,
+   "animations": [],
+   "parts": [
+    "snow-tile-wide-split"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-wide-straight",
+   "file": "snow-tile-wide-straight.glb",
+   "kb": 9,
+   "triangles": 96,
+   "animations": [],
+   "parts": [
+    "snow-tile-wide-straight"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile-wide-transition",
+   "file": "snow-tile-wide-transition.glb",
+   "kb": 17,
+   "triangles": 184,
+   "animations": [],
+   "parts": [
+    "snow-tile-wide-transition"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-tile",
+   "file": "snow-tile.glb",
+   "kb": 3,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "snow-tile"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-wood-structure-high-part",
+   "file": "snow-wood-structure-high-part.glb",
+   "kb": 14,
+   "triangles": 128,
+   "animations": [],
+   "parts": [
+    "snow-wood-structure-high-part"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-wood-structure-high",
+   "file": "snow-wood-structure-high.glb",
+   "kb": 43,
+   "triangles": 416,
+   "animations": [],
+   "parts": [
+    "snow-wood-structure-high"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-wood-structure-part",
+   "file": "snow-wood-structure-part.glb",
+   "kb": 10,
+   "triangles": 88,
+   "animations": [],
+   "parts": [
+    "snow-wood-structure-part"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-wood-structure",
+   "file": "snow-wood-structure.glb",
+   "kb": 27,
+   "triangles": 256,
+   "animations": [],
+   "parts": [
+    "snow-wood-structure"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "spawn-round",
+   "file": "spawn-round.glb",
+   "kb": 18,
+   "triangles": 188,
+   "animations": [],
+   "parts": [
+    "spawn-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "spawn-square",
+   "file": "spawn-square.glb",
+   "kb": 13,
+   "triangles": 132,
+   "animations": [],
+   "parts": [
+    "spawn-square"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-bump",
+   "file": "tile-bump.glb",
+   "kb": 28,
+   "triangles": 320,
+   "animations": [],
+   "parts": [
+    "tile-bump"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-corner-inner",
+   "file": "tile-corner-inner.glb",
+   "kb": 4,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "tile-corner-inner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-corner-large",
+   "file": "tile-corner-large.glb",
+   "kb": 103,
+   "triangles": 1104,
+   "animations": [],
+   "parts": [
+    "tile-corner-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-corner-outer",
+   "file": "tile-corner-outer.glb",
+   "kb": 4,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "tile-corner-outer"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-corner-round",
+   "file": "tile-corner-round.glb",
+   "kb": 30,
+   "triangles": 332,
+   "animations": [],
+   "parts": [
+    "tile-corner-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-corner-square",
+   "file": "tile-corner-square.glb",
+   "kb": 16,
+   "triangles": 168,
+   "animations": [],
+   "parts": [
+    "tile-corner-square"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-crossing",
+   "file": "tile-crossing.glb",
+   "kb": 24,
+   "triangles": 276,
+   "animations": [],
+   "parts": [
+    "tile-crossing"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-crystal",
+   "file": "tile-crystal.glb",
+   "kb": 46,
+   "triangles": 460,
+   "animations": [],
+   "parts": [
+    "tile-crystal"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-dirt",
+   "file": "tile-dirt.glb",
+   "kb": 3,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "tile-dirt"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-end-round",
+   "file": "tile-end-round.glb",
+   "kb": 19,
+   "triangles": 208,
+   "animations": [],
+   "parts": [
+    "tile-end-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-end",
+   "file": "tile-end.glb",
+   "kb": 15,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "tile-end"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-hill",
+   "file": "tile-hill.glb",
+   "kb": 35,
+   "triangles": 376,
+   "animations": [],
+   "parts": [
+    "tile-hill"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-river-bridge",
+   "file": "tile-river-bridge.glb",
+   "kb": 31,
+   "triangles": 340,
+   "animations": [],
+   "parts": [
+    "tile-river-bridge"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-river-corner",
+   "file": "tile-river-corner.glb",
+   "kb": 59,
+   "triangles": 664,
+   "animations": [],
+   "parts": [
+    "tile-river-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-river-slope-large",
+   "file": "tile-river-slope-large.glb",
+   "kb": 8,
+   "triangles": 88,
+   "animations": [],
+   "parts": [
+    "tile-river-slope-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-river-slope",
+   "file": "tile-river-slope.glb",
+   "kb": 17,
+   "triangles": 184,
+   "animations": [],
+   "parts": [
+    "tile-river-slope"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-river-straight",
+   "file": "tile-river-straight.glb",
+   "kb": 17,
+   "triangles": 184,
+   "animations": [],
+   "parts": [
+    "tile-river-straight"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-river-transition",
+   "file": "tile-river-transition.glb",
+   "kb": 22,
+   "triangles": 236,
+   "animations": [],
+   "parts": [
+    "tile-river-transition"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-river-waterfall",
+   "file": "tile-river-waterfall.glb",
+   "kb": 38,
+   "triangles": 432,
+   "animations": [],
+   "parts": [
+    "tile-river-waterfall"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-rock",
+   "file": "tile-rock.glb",
+   "kb": 35,
+   "triangles": 376,
+   "animations": [],
+   "parts": [
+    "tile-rock"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-slope",
+   "file": "tile-slope.glb",
+   "kb": 3,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "tile-slope"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-spawn-end-round",
+   "file": "tile-spawn-end-round.glb",
+   "kb": 34,
+   "triangles": 384,
+   "animations": [],
+   "parts": [
+    "tile-spawn-end-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-spawn-end",
+   "file": "tile-spawn-end.glb",
+   "kb": 22,
+   "triangles": 232,
+   "animations": [],
+   "parts": [
+    "tile-spawn-end"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-spawn-round",
+   "file": "tile-spawn-round.glb",
+   "kb": 33,
+   "triangles": 360,
+   "animations": [],
+   "parts": [
+    "tile-spawn-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-spawn",
+   "file": "tile-spawn.glb",
+   "kb": 25,
+   "triangles": 264,
+   "animations": [],
+   "parts": [
+    "tile-spawn"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-split",
+   "file": "tile-split.glb",
+   "kb": 20,
+   "triangles": 220,
+   "animations": [],
+   "parts": [
+    "tile-split"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-straight-slope-large",
+   "file": "tile-straight-slope-large.glb",
+   "kb": 6,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "tile-straight-slope-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-straight-slope",
+   "file": "tile-straight-slope.glb",
+   "kb": 15,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "tile-straight-slope"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-straight",
+   "file": "tile-straight.glb",
+   "kb": 15,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "tile-straight"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-transition",
+   "file": "tile-transition.glb",
+   "kb": 15,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "tile-transition"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-tree-double",
+   "file": "tile-tree-double.glb",
+   "kb": 59,
+   "triangles": 600,
+   "animations": [],
+   "parts": [
+    "tile-tree-double"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-tree-quad",
+   "file": "tile-tree-quad.glb",
+   "kb": 92,
+   "triangles": 936,
+   "animations": [],
+   "parts": [
+    "tile-tree-quad"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-tree",
+   "file": "tile-tree.glb",
+   "kb": 31,
+   "triangles": 312,
+   "animations": [],
+   "parts": [
+    "tile-tree"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-wide-corner",
+   "file": "tile-wide-corner.glb",
+   "kb": 74,
+   "triangles": 784,
+   "animations": [],
+   "parts": [
+    "tile-wide-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-wide-split",
+   "file": "tile-wide-split.glb",
+   "kb": 20,
+   "triangles": 216,
+   "animations": [],
+   "parts": [
+    "tile-wide-split"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-wide-straight",
+   "file": "tile-wide-straight.glb",
+   "kb": 9,
+   "triangles": 96,
+   "animations": [],
+   "parts": [
+    "tile-wide-straight"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile-wide-transition",
+   "file": "tile-wide-transition.glb",
+   "kb": 17,
+   "triangles": 184,
+   "animations": [],
+   "parts": [
+    "tile-wide-transition"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tile",
+   "file": "tile.glb",
+   "kb": 3,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "tile"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-round-base",
+   "file": "tower-round-base.glb",
+   "kb": 36,
+   "triangles": 408,
+   "animations": [],
+   "parts": [
+    "tower-round-base"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-round-bottom-a",
+   "file": "tower-round-bottom-a.glb",
+   "kb": 34,
+   "triangles": 368,
+   "animations": [],
+   "parts": [
+    "tower-round-bottom-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-round-bottom-b",
+   "file": "tower-round-bottom-b.glb",
+   "kb": 32,
+   "triangles": 360,
+   "animations": [],
+   "parts": [
+    "tower-round-bottom-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-round-bottom-c",
+   "file": "tower-round-bottom-c.glb",
+   "kb": 36,
+   "triangles": 360,
+   "animations": [],
+   "parts": [
+    "tower-round-bottom-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-round-build-a",
+   "file": "tower-round-build-a.glb",
+   "kb": 49,
+   "triangles": 524,
+   "animations": [],
+   "parts": [
+    "tower-round-build-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-round-build-b",
+   "file": "tower-round-build-b.glb",
+   "kb": 61,
+   "triangles": 648,
+   "animations": [],
+   "parts": [
+    "tower-round-build-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-round-build-c",
+   "file": "tower-round-build-c.glb",
+   "kb": 72,
+   "triangles": 776,
+   "animations": [],
+   "parts": [
+    "tower-round-build-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-round-build-d",
+   "file": "tower-round-build-d.glb",
+   "kb": 77,
+   "triangles": 824,
+   "animations": [],
+   "parts": [
+    "tower-round-build-d"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-round-build-e",
+   "file": "tower-round-build-e.glb",
+   "kb": 86,
+   "triangles": 948,
+   "animations": [],
+   "parts": [
+    "tower-round-build-e"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-round-build-f",
+   "file": "tower-round-build-f.glb",
+   "kb": 100,
+   "triangles": 1076,
+   "animations": [],
+   "parts": [
+    "tower-round-build-f"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-round-crystals",
+   "file": "tower-round-crystals.glb",
+   "kb": 69,
+   "triangles": 688,
+   "animations": [],
+   "parts": [
+    "tower-round-crystals",
+    "crystal",
+    "crystal-small",
+    "crystal-small",
+    "crystal-small",
+    "crystal-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-round-middle-a",
+   "file": "tower-round-middle-a.glb",
+   "kb": 59,
+   "triangles": 628,
+   "animations": [],
+   "parts": [
+    "tower-round-middle-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-round-middle-b",
+   "file": "tower-round-middle-b.glb",
+   "kb": 57,
+   "triangles": 612,
+   "animations": [],
+   "parts": [
+    "tower-round-middle-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-round-middle-c",
+   "file": "tower-round-middle-c.glb",
+   "kb": 52,
+   "triangles": 588,
+   "animations": [],
+   "parts": [
+    "tower-round-middle-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-round-roof-a",
+   "file": "tower-round-roof-a.glb",
+   "kb": 71,
+   "triangles": 772,
+   "animations": [],
+   "parts": [
+    "tower-round-roof-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-round-roof-b",
+   "file": "tower-round-roof-b.glb",
+   "kb": 73,
+   "triangles": 812,
+   "animations": [],
+   "parts": [
+    "tower-round-roof-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-round-roof-c",
+   "file": "tower-round-roof-c.glb",
+   "kb": 69,
+   "triangles": 752,
+   "animations": [],
+   "parts": [
+    "tower-round-roof-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-round-top-a",
+   "file": "tower-round-top-a.glb",
+   "kb": 43,
+   "triangles": 472,
+   "animations": [],
+   "parts": [
+    "tower-round-top-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-round-top-b",
+   "file": "tower-round-top-b.glb",
+   "kb": 46,
+   "triangles": 512,
+   "animations": [],
+   "parts": [
+    "tower-round-top-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-round-top-c",
+   "file": "tower-round-top-c.glb",
+   "kb": 45,
+   "triangles": 472,
+   "animations": [],
+   "parts": [
+    "tower-round-top-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-square-bottom-a",
+   "file": "tower-square-bottom-a.glb",
+   "kb": 12,
+   "triangles": 120,
+   "animations": [],
+   "parts": [
+    "tower-square-bottom-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-square-bottom-b",
+   "file": "tower-square-bottom-b.glb",
+   "kb": 34,
+   "triangles": 384,
+   "animations": [],
+   "parts": [
+    "tower-square-bottom-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-square-bottom-c",
+   "file": "tower-square-bottom-c.glb",
+   "kb": 24,
+   "triangles": 268,
+   "animations": [],
+   "parts": [
+    "tower-square-bottom-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-square-build-a",
+   "file": "tower-square-build-a.glb",
+   "kb": 74,
+   "triangles": 824,
+   "animations": [],
+   "parts": [
+    "tower-square-build-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-square-build-b",
+   "file": "tower-square-build-b.glb",
+   "kb": 77,
+   "triangles": 888,
+   "animations": [],
+   "parts": [
+    "tower-square-build-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-square-build-c",
+   "file": "tower-square-build-c.glb",
+   "kb": 67,
+   "triangles": 772,
+   "animations": [],
+   "parts": [
+    "tower-square-build-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-square-build-d",
+   "file": "tower-square-build-d.glb",
+   "kb": 83,
+   "triangles": 916,
+   "animations": [],
+   "parts": [
+    "tower-square-build-d"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-square-build-e",
+   "file": "tower-square-build-e.glb",
+   "kb": 87,
+   "triangles": 984,
+   "animations": [],
+   "parts": [
+    "tower-square-build-e"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-square-build-f",
+   "file": "tower-square-build-f.glb",
+   "kb": 76,
+   "triangles": 864,
+   "animations": [],
+   "parts": [
+    "tower-square-build-f"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-square-middle-a",
+   "file": "tower-square-middle-a.glb",
+   "kb": 44,
+   "triangles": 452,
+   "animations": [],
+   "parts": [
+    "tower-square-middle-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-square-middle-b",
+   "file": "tower-square-middle-b.glb",
+   "kb": 24,
+   "triangles": 272,
+   "animations": [],
+   "parts": [
+    "tower-square-middle-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-square-middle-c",
+   "file": "tower-square-middle-c.glb",
+   "kb": 25,
+   "triangles": 292,
+   "animations": [],
+   "parts": [
+    "tower-square-middle-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-square-roof-a",
+   "file": "tower-square-roof-a.glb",
+   "kb": 73,
+   "triangles": 820,
+   "animations": [],
+   "parts": [
+    "tower-square-roof-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-square-roof-b",
+   "file": "tower-square-roof-b.glb",
+   "kb": 54,
+   "triangles": 600,
+   "animations": [],
+   "parts": [
+    "tower-square-roof-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-square-roof-c",
+   "file": "tower-square-roof-c.glb",
+   "kb": 53,
+   "triangles": 596,
+   "animations": [],
+   "parts": [
+    "tower-square-roof-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-square-top-a",
+   "file": "tower-square-top-a.glb",
+   "kb": 64,
+   "triangles": 728,
+   "animations": [],
+   "parts": [
+    "tower-square-top-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-square-top-b",
+   "file": "tower-square-top-b.glb",
+   "kb": 44,
+   "triangles": 504,
+   "animations": [],
+   "parts": [
+    "tower-square-top-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-square-top-c",
+   "file": "tower-square-top-c.glb",
+   "kb": 44,
+   "triangles": 504,
+   "animations": [],
+   "parts": [
+    "tower-square-top-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "weapon-ammo-arrow",
+   "file": "weapon-ammo-arrow.glb",
+   "kb": 8,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "weapon-ammo-arrow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "weapon-ammo-boulder",
+   "file": "weapon-ammo-boulder.glb",
+   "kb": 9,
+   "triangles": 88,
+   "animations": [],
+   "parts": [
+    "weapon-ammo-boulder"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "weapon-ammo-bullet",
+   "file": "weapon-ammo-bullet.glb",
+   "kb": 16,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "weapon-ammo-bullet"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "weapon-ammo-cannonball",
+   "file": "weapon-ammo-cannonball.glb",
+   "kb": 19,
+   "triangles": 160,
+   "animations": [],
+   "parts": [
+    "weapon-ammo-cannonball"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "weapon-ballista",
+   "file": "weapon-ballista.glb",
+   "kb": 57,
+   "triangles": 620,
+   "animations": [],
+   "parts": [
+    "weapon-ballista",
+    "arrow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "weapon-cannon",
+   "file": "weapon-cannon.glb",
+   "kb": 57,
+   "triangles": 644,
+   "animations": [],
+   "parts": [
+    "weapon-cannon",
+    "barrel"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "weapon-catapult",
+   "file": "weapon-catapult.glb",
+   "kb": 56,
+   "triangles": 628,
+   "animations": [],
+   "parts": [
+    "weapon-catapult",
+    "catapult"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "weapon-turret",
+   "file": "weapon-turret.glb",
+   "kb": 58,
+   "triangles": 620,
+   "animations": [],
+   "parts": [
+    "weapon-turret",
+    "barrel"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wood-structure-high-part",
+   "file": "wood-structure-high-part.glb",
+   "kb": 9,
+   "triangles": 80,
+   "animations": [],
+   "parts": [
+    "wood-structure-high-part"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wood-structure-high",
+   "file": "wood-structure-high.glb",
+   "kb": 23,
+   "triangles": 224,
+   "animations": [],
+   "parts": [
+    "wood-structure-high"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wood-structure-part",
+   "file": "wood-structure-part.glb",
+   "kb": 7,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "wood-structure-part"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wood-structure",
+   "file": "wood-structure.glb",
+   "kb": 17,
+   "triangles": 160,
+   "animations": [],
+   "parts": [
+    "wood-structure"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  }
+ ]
+}

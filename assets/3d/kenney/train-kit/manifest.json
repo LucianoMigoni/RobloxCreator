@@ -1,0 +1,1454 @@
+{
+ "pack": "kenney-train-kit",
+ "kind": "model3d",
+ "source": "https://kenney.nl/assets/train-kit",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 103,
+ "items": [
+  {
+   "name": "railroad-corner-large-ramp",
+   "file": "railroad-corner-large-ramp.glb",
+   "kb": 50,
+   "triangles": 568,
+   "animations": [],
+   "parts": [
+    "railroad-corner-large-ramp"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-corner-large",
+   "file": "railroad-corner-large.glb",
+   "kb": 50,
+   "triangles": 568,
+   "animations": [],
+   "parts": [
+    "railroad-corner-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-corner-small-ramp",
+   "file": "railroad-corner-small-ramp.glb",
+   "kb": 34,
+   "triangles": 376,
+   "animations": [],
+   "parts": [
+    "railroad-corner-small-ramp"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-corner-small",
+   "file": "railroad-corner-small.glb",
+   "kb": 34,
+   "triangles": 376,
+   "animations": [],
+   "parts": [
+    "railroad-corner-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-curve",
+   "file": "railroad-curve.glb",
+   "kb": 40,
+   "triangles": 452,
+   "animations": [],
+   "parts": [
+    "railroad-curve"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-damaged-corner-large-ramp",
+   "file": "railroad-damaged-corner-large-ramp.glb",
+   "kb": 52,
+   "triangles": 568,
+   "animations": [],
+   "parts": [
+    "railroad-damaged-corner-large-ramp"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-damaged-corner-large",
+   "file": "railroad-damaged-corner-large.glb",
+   "kb": 52,
+   "triangles": 568,
+   "animations": [],
+   "parts": [
+    "railroad-damaged-corner-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-damaged-corner-small-ramp",
+   "file": "railroad-damaged-corner-small-ramp.glb",
+   "kb": 35,
+   "triangles": 376,
+   "animations": [],
+   "parts": [
+    "railroad-damaged-corner-small-ramp"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-damaged-corner-small",
+   "file": "railroad-damaged-corner-small.glb",
+   "kb": 35,
+   "triangles": 376,
+   "animations": [],
+   "parts": [
+    "railroad-damaged-corner-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-damaged-curve",
+   "file": "railroad-damaged-curve.glb",
+   "kb": 42,
+   "triangles": 452,
+   "animations": [],
+   "parts": [
+    "railroad-damaged-curve"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-damaged-straight-bend-large",
+   "file": "railroad-damaged-straight-bend-large.glb",
+   "kb": 52,
+   "triangles": 568,
+   "animations": [],
+   "parts": [
+    "railroad-damaged-straight-bend-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-damaged-straight-bend",
+   "file": "railroad-damaged-straight-bend.glb",
+   "kb": 35,
+   "triangles": 376,
+   "animations": [],
+   "parts": [
+    "railroad-damaged-straight-bend"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-damaged-straight-bump-down",
+   "file": "railroad-damaged-straight-bump-down.glb",
+   "kb": 39,
+   "triangles": 416,
+   "animations": [],
+   "parts": [
+    "railroad-damaged-straight-bump-down"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-damaged-straight-bump-up",
+   "file": "railroad-damaged-straight-bump-up.glb",
+   "kb": 39,
+   "triangles": 416,
+   "animations": [],
+   "parts": [
+    "railroad-damaged-straight-bump-up"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-damaged-straight-hill-beginning",
+   "file": "railroad-damaged-straight-hill-beginning.glb",
+   "kb": 39,
+   "triangles": 416,
+   "animations": [],
+   "parts": [
+    "railroad-damaged-straight-hill-beginning"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-damaged-straight-hill-complete-half",
+   "file": "railroad-damaged-straight-hill-complete-half.glb",
+   "kb": 39,
+   "triangles": 416,
+   "animations": [],
+   "parts": [
+    "railroad-damaged-straight-hill-complete-half"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-damaged-straight-hill-complete",
+   "file": "railroad-damaged-straight-hill-complete.glb",
+   "kb": 39,
+   "triangles": 416,
+   "animations": [],
+   "parts": [
+    "railroad-damaged-straight-hill-complete"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-damaged-straight-hill-end",
+   "file": "railroad-damaged-straight-hill-end.glb",
+   "kb": 39,
+   "triangles": 416,
+   "animations": [],
+   "parts": [
+    "railroad-damaged-straight-hill-end"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-damaged-straight-skew-left-side",
+   "file": "railroad-damaged-straight-skew-left-side.glb",
+   "kb": 35,
+   "triangles": 376,
+   "animations": [],
+   "parts": [
+    "railroad-damaged-straight-skew-left-side"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-damaged-straight-skew-left",
+   "file": "railroad-damaged-straight-skew-left.glb",
+   "kb": 35,
+   "triangles": 376,
+   "animations": [],
+   "parts": [
+    "railroad-damaged-straight-skew-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-damaged-straight-skew-right-side",
+   "file": "railroad-damaged-straight-skew-right-side.glb",
+   "kb": 35,
+   "triangles": 376,
+   "animations": [],
+   "parts": [
+    "railroad-damaged-straight-skew-right-side"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-damaged-straight-skew-right",
+   "file": "railroad-damaged-straight-skew-right.glb",
+   "kb": 35,
+   "triangles": 376,
+   "animations": [],
+   "parts": [
+    "railroad-damaged-straight-skew-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-damaged-straight",
+   "file": "railroad-damaged-straight.glb",
+   "kb": 35,
+   "triangles": 376,
+   "animations": [],
+   "parts": [
+    "railroad-damaged-straight"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-rail-corner-large-ramp",
+   "file": "railroad-rail-corner-large-ramp.glb",
+   "kb": 24,
+   "triangles": 280,
+   "animations": [],
+   "parts": [
+    "railroad-rail-corner-large-ramp"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-rail-corner-large",
+   "file": "railroad-rail-corner-large.glb",
+   "kb": 24,
+   "triangles": 280,
+   "animations": [],
+   "parts": [
+    "railroad-rail-corner-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-rail-corner-small-ramp",
+   "file": "railroad-rail-corner-small-ramp.glb",
+   "kb": 14,
+   "triangles": 160,
+   "animations": [],
+   "parts": [
+    "railroad-rail-corner-small-ramp"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-rail-corner-small",
+   "file": "railroad-rail-corner-small.glb",
+   "kb": 14,
+   "triangles": 160,
+   "animations": [],
+   "parts": [
+    "railroad-rail-corner-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-rail-curve",
+   "file": "railroad-rail-curve.glb",
+   "kb": 17,
+   "triangles": 200,
+   "animations": [],
+   "parts": [
+    "railroad-rail-curve"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-rail-straight-bend-large",
+   "file": "railroad-rail-straight-bend-large.glb",
+   "kb": 24,
+   "triangles": 280,
+   "animations": [],
+   "parts": [
+    "railroad-rail-straight-bend-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-rail-straight-bend",
+   "file": "railroad-rail-straight-bend.glb",
+   "kb": 14,
+   "triangles": 160,
+   "animations": [],
+   "parts": [
+    "railroad-rail-straight-bend"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-rail-straight-bump-down",
+   "file": "railroad-rail-straight-bump-down.glb",
+   "kb": 18,
+   "triangles": 200,
+   "animations": [],
+   "parts": [
+    "railroad-rail-straight-bump-down"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-rail-straight-bump-up",
+   "file": "railroad-rail-straight-bump-up.glb",
+   "kb": 18,
+   "triangles": 200,
+   "animations": [],
+   "parts": [
+    "railroad-rail-straight-bump-up"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-rail-straight-hill-beginning",
+   "file": "railroad-rail-straight-hill-beginning.glb",
+   "kb": 18,
+   "triangles": 200,
+   "animations": [],
+   "parts": [
+    "railroad-rail-straight-hill-beginning"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-rail-straight-hill-complete-half",
+   "file": "railroad-rail-straight-hill-complete-half.glb",
+   "kb": 18,
+   "triangles": 200,
+   "animations": [],
+   "parts": [
+    "railroad-rail-straight-hill-complete-half"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-rail-straight-hill-complete",
+   "file": "railroad-rail-straight-hill-complete.glb",
+   "kb": 18,
+   "triangles": 200,
+   "animations": [],
+   "parts": [
+    "railroad-rail-straight-hill-complete"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-rail-straight-hill-end",
+   "file": "railroad-rail-straight-hill-end.glb",
+   "kb": 18,
+   "triangles": 200,
+   "animations": [],
+   "parts": [
+    "railroad-rail-straight-hill-end"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-rail-straight-skew-left-side",
+   "file": "railroad-rail-straight-skew-left-side.glb",
+   "kb": 14,
+   "triangles": 160,
+   "animations": [],
+   "parts": [
+    "railroad-rail-straight-skew-left-side"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-rail-straight-skew-left",
+   "file": "railroad-rail-straight-skew-left.glb",
+   "kb": 14,
+   "triangles": 160,
+   "animations": [],
+   "parts": [
+    "railroad-rail-straight-skew-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-rail-straight-skew-right-side",
+   "file": "railroad-rail-straight-skew-right-side.glb",
+   "kb": 14,
+   "triangles": 160,
+   "animations": [],
+   "parts": [
+    "railroad-rail-straight-skew-right-side"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-rail-straight-skew-right",
+   "file": "railroad-rail-straight-skew-right.glb",
+   "kb": 14,
+   "triangles": 160,
+   "animations": [],
+   "parts": [
+    "railroad-rail-straight-skew-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-rail-straight",
+   "file": "railroad-rail-straight.glb",
+   "kb": 14,
+   "triangles": 160,
+   "animations": [],
+   "parts": [
+    "railroad-rail-straight"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-straight-bend-large",
+   "file": "railroad-straight-bend-large.glb",
+   "kb": 50,
+   "triangles": 568,
+   "animations": [],
+   "parts": [
+    "railroad-straight-bend-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-straight-bend",
+   "file": "railroad-straight-bend.glb",
+   "kb": 34,
+   "triangles": 376,
+   "animations": [],
+   "parts": [
+    "railroad-straight-bend"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-straight-bump-down",
+   "file": "railroad-straight-bump-down.glb",
+   "kb": 37,
+   "triangles": 416,
+   "animations": [],
+   "parts": [
+    "railroad-straight-bump-down"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-straight-bump-up",
+   "file": "railroad-straight-bump-up.glb",
+   "kb": 37,
+   "triangles": 416,
+   "animations": [],
+   "parts": [
+    "railroad-straight-bump-up"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-straight-hill-beginning",
+   "file": "railroad-straight-hill-beginning.glb",
+   "kb": 37,
+   "triangles": 416,
+   "animations": [],
+   "parts": [
+    "railroad-straight-hill-beginning"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-straight-hill-complete-half",
+   "file": "railroad-straight-hill-complete-half.glb",
+   "kb": 37,
+   "triangles": 416,
+   "animations": [],
+   "parts": [
+    "railroad-straight-hill-complete-half"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-straight-hill-complete",
+   "file": "railroad-straight-hill-complete.glb",
+   "kb": 37,
+   "triangles": 416,
+   "animations": [],
+   "parts": [
+    "railroad-straight-hill-complete"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-straight-hill-end",
+   "file": "railroad-straight-hill-end.glb",
+   "kb": 37,
+   "triangles": 416,
+   "animations": [],
+   "parts": [
+    "railroad-straight-hill-end"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-straight-skew-left-side",
+   "file": "railroad-straight-skew-left-side.glb",
+   "kb": 34,
+   "triangles": 376,
+   "animations": [],
+   "parts": [
+    "railroad-straight-skew-left-side"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-straight-skew-left",
+   "file": "railroad-straight-skew-left.glb",
+   "kb": 34,
+   "triangles": 376,
+   "animations": [],
+   "parts": [
+    "railroad-straight-skew-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-straight-skew-right-side",
+   "file": "railroad-straight-skew-right-side.glb",
+   "kb": 34,
+   "triangles": 376,
+   "animations": [],
+   "parts": [
+    "railroad-straight-skew-right-side"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-straight-skew-right",
+   "file": "railroad-straight-skew-right.glb",
+   "kb": 34,
+   "triangles": 376,
+   "animations": [],
+   "parts": [
+    "railroad-straight-skew-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "railroad-straight",
+   "file": "railroad-straight.glb",
+   "kb": 33,
+   "triangles": 376,
+   "animations": [],
+   "parts": [
+    "railroad-straight"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "spline-segment",
+   "file": "spline-segment.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "spline-segment"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "spline-track-damaged",
+   "file": "spline-track-damaged.glb",
+   "kb": 5,
+   "triangles": 40,
+   "animations": [],
+   "parts": [
+    "spline-track-damaged"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "spline-track",
+   "file": "spline-track.glb",
+   "kb": 4,
+   "triangles": 40,
+   "animations": [],
+   "parts": [
+    "spline-track"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "track-detailed",
+   "file": "track-detailed.glb",
+   "kb": 12,
+   "triangles": 124,
+   "animations": [],
+   "parts": [
+    "track-detailed"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "track-single-detailed",
+   "file": "track-single-detailed.glb",
+   "kb": 7,
+   "triangles": 68,
+   "animations": [],
+   "parts": [
+    "track-single-detailed"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "track-single",
+   "file": "track-single.glb",
+   "kb": 5,
+   "triangles": 52,
+   "animations": [],
+   "parts": [
+    "track-single"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "track",
+   "file": "track.glb",
+   "kb": 8,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "track"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-carriage-box",
+   "file": "train-carriage-box.glb",
+   "kb": 96,
+   "triangles": 1076,
+   "animations": [],
+   "parts": [
+    "train-carriage-box",
+    "wheels-front",
+    "wheels-back"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-carriage-coal",
+   "file": "train-carriage-coal.glb",
+   "kb": 107,
+   "triangles": 1184,
+   "animations": [],
+   "parts": [
+    "train-carriage-coal",
+    "wheels-front",
+    "wheels-back",
+    "cargo"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-carriage-container-blue",
+   "file": "train-carriage-container-blue.glb",
+   "kb": 113,
+   "triangles": 1242,
+   "animations": [],
+   "parts": [
+    "train-carriage-container-blue",
+    "wheels-front",
+    "wheels-back",
+    "cargo"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-carriage-container-green",
+   "file": "train-carriage-container-green.glb",
+   "kb": 113,
+   "triangles": 1242,
+   "animations": [],
+   "parts": [
+    "train-carriage-container-green",
+    "wheels-front",
+    "wheels-back",
+    "cargo"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-carriage-container-red",
+   "file": "train-carriage-container-red.glb",
+   "kb": 113,
+   "triangles": 1242,
+   "animations": [],
+   "parts": [
+    "train-carriage-container-red",
+    "wheels-back",
+    "cargo",
+    "wheels-front"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-carriage-dirt",
+   "file": "train-carriage-dirt.glb",
+   "kb": 107,
+   "triangles": 1184,
+   "animations": [],
+   "parts": [
+    "train-carriage-dirt",
+    "wheels-front",
+    "wheels-back",
+    "cargo"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-carriage-flatbed-wood",
+   "file": "train-carriage-flatbed-wood.glb",
+   "kb": 100,
+   "triangles": 1094,
+   "animations": [],
+   "parts": [
+    "train-carriage-flatbed-wood",
+    "wheels-front",
+    "wheels-back"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-carriage-flatbed",
+   "file": "train-carriage-flatbed.glb",
+   "kb": 97,
+   "triangles": 1070,
+   "animations": [],
+   "parts": [
+    "train-carriage-flatbed",
+    "wheels-front",
+    "wheels-back"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-carriage-lumber",
+   "file": "train-carriage-lumber.glb",
+   "kb": 107,
+   "triangles": 1170,
+   "animations": [],
+   "parts": [
+    "train-carriage-lumber",
+    "wheels-front",
+    "wheels-back",
+    "cargo"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-carriage-tank-large",
+   "file": "train-carriage-tank-large.glb",
+   "kb": 104,
+   "triangles": 1146,
+   "animations": [],
+   "parts": [
+    "train-carriage-tank-large",
+    "wheels-front",
+    "wheels-back"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-carriage-tank",
+   "file": "train-carriage-tank.glb",
+   "kb": 104,
+   "triangles": 1146,
+   "animations": [],
+   "parts": [
+    "train-carriage-tank",
+    "wheels-front",
+    "wheels-back"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-carriage-wood",
+   "file": "train-carriage-wood.glb",
+   "kb": 102,
+   "triangles": 1136,
+   "animations": [],
+   "parts": [
+    "train-carriage-wood",
+    "wheels-front",
+    "wheels-back",
+    "cargo"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-connector",
+   "file": "train-connector.glb",
+   "kb": 4,
+   "triangles": 40,
+   "animations": [],
+   "parts": [
+    "train-connector"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-diesel-a",
+   "file": "train-diesel-a.glb",
+   "kb": 152,
+   "triangles": 1742,
+   "animations": [],
+   "parts": [
+    "train-diesel-a",
+    "wheels-front",
+    "wheels-back"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-diesel-b",
+   "file": "train-diesel-b.glb",
+   "kb": 112,
+   "triangles": 1244,
+   "animations": [],
+   "parts": [
+    "train-diesel-b",
+    "wheels-back",
+    "wheels-front"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-diesel-box-a",
+   "file": "train-diesel-box-a.glb",
+   "kb": 152,
+   "triangles": 1726,
+   "animations": [],
+   "parts": [
+    "train-diesel-box-a",
+    "wheels-front",
+    "wheels-back"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-diesel-box-b",
+   "file": "train-diesel-box-b.glb",
+   "kb": 110,
+   "triangles": 1228,
+   "animations": [],
+   "parts": [
+    "train-diesel-box-b",
+    "wheels-front",
+    "wheels-back"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-diesel-box-c",
+   "file": "train-diesel-box-c.glb",
+   "kb": 132,
+   "triangles": 1504,
+   "animations": [],
+   "parts": [
+    "train-diesel-box-c",
+    "wheels-back",
+    "wheels-front"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-diesel-c",
+   "file": "train-diesel-c.glb",
+   "kb": 113,
+   "triangles": 1263,
+   "animations": [],
+   "parts": [
+    "train-diesel-c",
+    "wheels-front",
+    "wheels-back"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-electric-bullet-a",
+   "file": "train-electric-bullet-a.glb",
+   "kb": 111,
+   "triangles": 1261,
+   "animations": [],
+   "parts": [
+    "train-electric-bullet-a",
+    "wheels-front",
+    "wheels-back"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-electric-bullet-b",
+   "file": "train-electric-bullet-b.glb",
+   "kb": 122,
+   "triangles": 1394,
+   "animations": [],
+   "parts": [
+    "train-electric-bullet-b",
+    "wheels-back",
+    "wheels-front"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-electric-bullet-c",
+   "file": "train-electric-bullet-c.glb",
+   "kb": 101,
+   "triangles": 1138,
+   "animations": [],
+   "parts": [
+    "train-electric-bullet-c",
+    "wheels-front",
+    "wheels-back"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-electric-city-a",
+   "file": "train-electric-city-a.glb",
+   "kb": 101,
+   "triangles": 1130,
+   "animations": [],
+   "parts": [
+    "train-electric-city-a",
+    "wheels-front",
+    "wheels-back"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-electric-city-b",
+   "file": "train-electric-city-b.glb",
+   "kb": 132,
+   "triangles": 1500,
+   "animations": [],
+   "parts": [
+    "train-electric-city-b",
+    "collector",
+    "wheels-back",
+    "wheels-front"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-electric-city-c",
+   "file": "train-electric-city-c.glb",
+   "kb": 118,
+   "triangles": 1336,
+   "animations": [],
+   "parts": [
+    "train-electric-city-c",
+    "wheels-back",
+    "wheels-front"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-electric-double-a",
+   "file": "train-electric-double-a.glb",
+   "kb": 131,
+   "triangles": 1445,
+   "animations": [],
+   "parts": [
+    "train-electric-double-a",
+    "wheels-back",
+    "wheels-front"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-electric-double-b",
+   "file": "train-electric-double-b.glb",
+   "kb": 131,
+   "triangles": 1462,
+   "animations": [],
+   "parts": [
+    "train-electric-double-b",
+    "wheels-front",
+    "wheels-back"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-electric-double-c",
+   "file": "train-electric-double-c.glb",
+   "kb": 114,
+   "triangles": 1262,
+   "animations": [],
+   "parts": [
+    "train-electric-double-c",
+    "wheels-back",
+    "wheels-front"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-electric-square-a",
+   "file": "train-electric-square-a.glb",
+   "kb": 142,
+   "triangles": 1616,
+   "animations": [],
+   "parts": [
+    "train-electric-square-a",
+    "collector",
+    "wheels-back",
+    "wheels-front"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-electric-square-b",
+   "file": "train-electric-square-b.glb",
+   "kb": 125,
+   "triangles": 1418,
+   "animations": [],
+   "parts": [
+    "train-electric-square-b",
+    "wheels-back",
+    "wheels-front"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-electric-square-c",
+   "file": "train-electric-square-c.glb",
+   "kb": 121,
+   "triangles": 1362,
+   "animations": [],
+   "parts": [
+    "train-electric-square-c",
+    "wheels-front",
+    "wheels-back"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-electric-subway-a",
+   "file": "train-electric-subway-a.glb",
+   "kb": 136,
+   "triangles": 1544,
+   "animations": [],
+   "parts": [
+    "train-electric-subway-a",
+    "wheels-front",
+    "wheels-back"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-electric-subway-b",
+   "file": "train-electric-subway-b.glb",
+   "kb": 116,
+   "triangles": 1310,
+   "animations": [],
+   "parts": [
+    "train-electric-subway-b",
+    "wheels-front",
+    "wheels-back"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-electric-subway-c",
+   "file": "train-electric-subway-c.glb",
+   "kb": 136,
+   "triangles": 1554,
+   "animations": [],
+   "parts": [
+    "train-electric-subway-c",
+    "wheels-front",
+    "wheels-back"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-locomotive-a",
+   "file": "train-locomotive-a.glb",
+   "kb": 150,
+   "triangles": 1666,
+   "animations": [],
+   "parts": [
+    "train-locomotive-a",
+    "wheels-front",
+    "wheel",
+    "wheel",
+    "wheel",
+    "wheel"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-locomotive-b",
+   "file": "train-locomotive-b.glb",
+   "kb": 139,
+   "triangles": 1542,
+   "animations": [],
+   "parts": [
+    "train-locomotive-b",
+    "wheel",
+    "wheel",
+    "wheel",
+    "wheel",
+    "wheels-front"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-locomotive-c",
+   "file": "train-locomotive-c.glb",
+   "kb": 153,
+   "triangles": 1700,
+   "animations": [],
+   "parts": [
+    "train-locomotive-c",
+    "wheel",
+    "wheel",
+    "wheels-front",
+    "wheel",
+    "wheel"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-locomotive-passenger-a",
+   "file": "train-locomotive-passenger-a.glb",
+   "kb": 117,
+   "triangles": 1308,
+   "animations": [],
+   "parts": [
+    "train-locomotive-passenger-a",
+    "wheels-front",
+    "wheels-back"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-locomotive-passenger-b",
+   "file": "train-locomotive-passenger-b.glb",
+   "kb": 126,
+   "triangles": 1416,
+   "animations": [],
+   "parts": [
+    "train-locomotive-passenger-b",
+    "wheels-front",
+    "wheels-back"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-tram-classic",
+   "file": "train-tram-classic.glb",
+   "kb": 140,
+   "triangles": 1648,
+   "animations": [],
+   "parts": [
+    "train-tram-classic",
+    "collector",
+    "wheels-front",
+    "wheels-back"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-tram-modern",
+   "file": "train-tram-modern.glb",
+   "kb": 131,
+   "triangles": 1498,
+   "animations": [],
+   "parts": [
+    "train-tram-modern",
+    "collector",
+    "wheels-front",
+    "wheels-back"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-tram-round",
+   "file": "train-tram-round.glb",
+   "kb": 172,
+   "triangles": 1944,
+   "animations": [],
+   "parts": [
+    "train-tram-round",
+    "collector",
+    "Group",
+    "wheels-front",
+    "wheels-back"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  }
+ ]
+}

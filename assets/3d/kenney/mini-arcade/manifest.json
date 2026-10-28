@@ -1,0 +1,363 @@
+{
+ "pack": "kenney-mini-arcade",
+ "kind": "model3d",
+ "source": "https://kenney.nl/assets/mini-arcade",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 20,
+ "items": [
+  {
+   "name": "air-hockey",
+   "file": "air-hockey.glb",
+   "kb": 41,
+   "triangles": 438,
+   "animations": [],
+   "parts": [
+    "air-hockey",
+    "player-a",
+    "player-b",
+    "puck"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "arcade-machine",
+   "file": "arcade-machine.glb",
+   "kb": 37,
+   "triangles": 392,
+   "animations": [],
+   "parts": [
+    "arcade-machine"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "basketball-game",
+   "file": "basketball-game.glb",
+   "kb": 48,
+   "triangles": 526,
+   "animations": [],
+   "parts": [
+    "basketball-game",
+    "ball"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cash-register",
+   "file": "cash-register.glb",
+   "kb": 24,
+   "triangles": 262,
+   "animations": [],
+   "parts": [
+    "cash-register"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "character-employee",
+   "file": "character-employee.glb",
+   "kb": 211,
+   "triangles": 524,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "sprint",
+    "jump",
+    "fall",
+    "crouch",
+    "sit",
+    "drive",
+    "die",
+    "pick-up",
+    "emote-yes",
+    "emote-no",
+    "holding-right",
+    "holding-left",
+    "holding-both",
+    "holding-right-shoot",
+    "holding-left-shoot",
+    "holding-both-shoot",
+    "attack-melee-right",
+    "attack-melee-left",
+    "attack-kick-right",
+    "attack-kick-left",
+    "interact-right",
+    "interact-left",
+    "wheelchair-sit",
+    "wheelchair-look-left",
+    "wheelchair-look-right",
+    "wheelchair-move-forward",
+    "wheelchair-move-back",
+    "wheelchair-move-left",
+    "wheelchair-move-right"
+   ],
+   "parts": [
+    "body-mesh",
+    "head-mesh"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "character-gamer",
+   "file": "character-gamer.glb",
+   "kb": 206,
+   "triangles": 477,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "sprint",
+    "jump",
+    "fall",
+    "crouch",
+    "sit",
+    "drive",
+    "die",
+    "pick-up",
+    "emote-yes",
+    "emote-no",
+    "holding-right",
+    "holding-left",
+    "holding-both",
+    "holding-right-shoot",
+    "holding-left-shoot",
+    "holding-both-shoot",
+    "attack-melee-right",
+    "attack-melee-left",
+    "attack-kick-right",
+    "attack-kick-left",
+    "interact-right",
+    "interact-left",
+    "wheelchair-sit",
+    "wheelchair-look-left",
+    "wheelchair-look-right",
+    "wheelchair-move-forward",
+    "wheelchair-move-back",
+    "wheelchair-move-left",
+    "wheelchair-move-right"
+   ],
+   "parts": [
+    "body-mesh",
+    "head-mesh"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "claw-machine",
+   "file": "claw-machine.glb",
+   "kb": 71,
+   "triangles": 730,
+   "animations": [
+    "animation"
+   ],
+   "parts": [
+    "claw-machine",
+    "(%ignore)",
+    "rotate-y"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "column",
+   "file": "column.glb",
+   "kb": 18,
+   "triangles": 188,
+   "animations": [],
+   "parts": [
+    "column"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "dance-machine",
+   "file": "dance-machine.glb",
+   "kb": 61,
+   "triangles": 654,
+   "animations": [],
+   "parts": [
+    "dance-machine",
+    "Group"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "floor",
+   "file": "floor.glb",
+   "kb": 3,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "floor"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "gambling-machine",
+   "file": "gambling-machine.glb",
+   "kb": 53,
+   "triangles": 626,
+   "animations": [],
+   "parts": [
+    "gambling-machine"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pinball",
+   "file": "pinball.glb",
+   "kb": 57,
+   "triangles": 592,
+   "animations": [],
+   "parts": [
+    "pinball",
+    "(%ignore)"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "prize-wheel",
+   "file": "prize-wheel.glb",
+   "kb": 22,
+   "triangles": 224,
+   "animations": [
+    "animation"
+   ],
+   "parts": [
+    "prize-wheel",
+    "rotate-z"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "prizes",
+   "file": "prizes.glb",
+   "kb": 41,
+   "triangles": 464,
+   "animations": [],
+   "parts": [
+    "prizes"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ticket-machine",
+   "file": "ticket-machine.glb",
+   "kb": 27,
+   "triangles": 277,
+   "animations": [
+    "animation"
+   ],
+   "parts": [
+    "ticket-machine",
+    "rotate-y"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "vending-machine",
+   "file": "vending-machine.glb",
+   "kb": 15,
+   "triangles": 176,
+   "animations": [],
+   "parts": [
+    "vending-machine"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-corner",
+   "file": "wall-corner.glb",
+   "kb": 7,
+   "triangles": 70,
+   "animations": [],
+   "parts": [
+    "wall-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-door-rotate",
+   "file": "wall-door-rotate.glb",
+   "kb": 37,
+   "triangles": 308,
+   "animations": [
+    "open",
+    "close",
+    "open-and-close"
+   ],
+   "parts": [
+    "wall-door-rotate",
+    "Group",
+    "door-right",
+    "door-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall-window",
+   "file": "wall-window.glb",
+   "kb": 14,
+   "triangles": 138,
+   "animations": [],
+   "parts": [
+    "wall-window",
+    "(%ignore)"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wall",
+   "file": "wall.glb",
+   "kb": 4,
+   "triangles": 46,
+   "animations": [],
+   "parts": [
+    "wall"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  }
+ ]
+}

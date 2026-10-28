@@ -1,0 +1,281 @@
+{
+ "pack": "kenney-casino-audio",
+ "kind": "sound",
+ "source": "https://kenney.nl/assets/casino-audio",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 54,
+ "items": [
+  {
+   "name": "card-fan-1",
+   "file": "card-fan-1.ogg",
+   "kb": 12
+  },
+  {
+   "name": "card-fan-2",
+   "file": "card-fan-2.ogg",
+   "kb": 17
+  },
+  {
+   "name": "card-place-1",
+   "file": "card-place-1.ogg",
+   "kb": 9
+  },
+  {
+   "name": "card-place-2",
+   "file": "card-place-2.ogg",
+   "kb": 7
+  },
+  {
+   "name": "card-place-3",
+   "file": "card-place-3.ogg",
+   "kb": 11
+  },
+  {
+   "name": "card-place-4",
+   "file": "card-place-4.ogg",
+   "kb": 9
+  },
+  {
+   "name": "card-shove-1",
+   "file": "card-shove-1.ogg",
+   "kb": 10
+  },
+  {
+   "name": "card-shove-2",
+   "file": "card-shove-2.ogg",
+   "kb": 10
+  },
+  {
+   "name": "card-shove-3",
+   "file": "card-shove-3.ogg",
+   "kb": 9
+  },
+  {
+   "name": "card-shove-4",
+   "file": "card-shove-4.ogg",
+   "kb": 10
+  },
+  {
+   "name": "card-shuffle",
+   "file": "card-shuffle.ogg",
+   "kb": 29
+  },
+  {
+   "name": "card-slide-1",
+   "file": "card-slide-1.ogg",
+   "kb": 8
+  },
+  {
+   "name": "card-slide-2",
+   "file": "card-slide-2.ogg",
+   "kb": 8
+  },
+  {
+   "name": "card-slide-3",
+   "file": "card-slide-3.ogg",
+   "kb": 8
+  },
+  {
+   "name": "card-slide-4",
+   "file": "card-slide-4.ogg",
+   "kb": 7
+  },
+  {
+   "name": "card-slide-5",
+   "file": "card-slide-5.ogg",
+   "kb": 8
+  },
+  {
+   "name": "card-slide-6",
+   "file": "card-slide-6.ogg",
+   "kb": 8
+  },
+  {
+   "name": "card-slide-7",
+   "file": "card-slide-7.ogg",
+   "kb": 9
+  },
+  {
+   "name": "card-slide-8",
+   "file": "card-slide-8.ogg",
+   "kb": 9
+  },
+  {
+   "name": "cards-pack-open-1",
+   "file": "cards-pack-open-1.ogg",
+   "kb": 12
+  },
+  {
+   "name": "cards-pack-open-2",
+   "file": "cards-pack-open-2.ogg",
+   "kb": 10
+  },
+  {
+   "name": "cards-pack-take-out-1",
+   "file": "cards-pack-take-out-1.ogg",
+   "kb": 8
+  },
+  {
+   "name": "cards-pack-take-out-2",
+   "file": "cards-pack-take-out-2.ogg",
+   "kb": 9
+  },
+  {
+   "name": "chip-lay-1",
+   "file": "chip-lay-1.ogg",
+   "kb": 5
+  },
+  {
+   "name": "chip-lay-2",
+   "file": "chip-lay-2.ogg",
+   "kb": 5
+  },
+  {
+   "name": "chip-lay-3",
+   "file": "chip-lay-3.ogg",
+   "kb": 6
+  },
+  {
+   "name": "chips-collide-1",
+   "file": "chips-collide-1.ogg",
+   "kb": 6
+  },
+  {
+   "name": "chips-collide-2",
+   "file": "chips-collide-2.ogg",
+   "kb": 5
+  },
+  {
+   "name": "chips-collide-3",
+   "file": "chips-collide-3.ogg",
+   "kb": 6
+  },
+  {
+   "name": "chips-collide-4",
+   "file": "chips-collide-4.ogg",
+   "kb": 5
+  },
+  {
+   "name": "chips-handle-1",
+   "file": "chips-handle-1.ogg",
+   "kb": 9
+  },
+  {
+   "name": "chips-handle-2",
+   "file": "chips-handle-2.ogg",
+   "kb": 8
+  },
+  {
+   "name": "chips-handle-3",
+   "file": "chips-handle-3.ogg",
+   "kb": 6
+  },
+  {
+   "name": "chips-handle-4",
+   "file": "chips-handle-4.ogg",
+   "kb": 7
+  },
+  {
+   "name": "chips-handle-5",
+   "file": "chips-handle-5.ogg",
+   "kb": 11
+  },
+  {
+   "name": "chips-handle-6",
+   "file": "chips-handle-6.ogg",
+   "kb": 8
+  },
+  {
+   "name": "chips-stack-1",
+   "file": "chips-stack-1.ogg",
+   "kb": 6
+  },
+  {
+   "name": "chips-stack-2",
+   "file": "chips-stack-2.ogg",
+   "kb": 5
+  },
+  {
+   "name": "chips-stack-3",
+   "file": "chips-stack-3.ogg",
+   "kb": 7
+  },
+  {
+   "name": "chips-stack-4",
+   "file": "chips-stack-4.ogg",
+   "kb": 5
+  },
+  {
+   "name": "chips-stack-5",
+   "file": "chips-stack-5.ogg",
+   "kb": 5
+  },
+  {
+   "name": "chips-stack-6",
+   "file": "chips-stack-6.ogg",
+   "kb": 5
+  },
+  {
+   "name": "dice-grab-1",
+   "file": "dice-grab-1.ogg",
+   "kb": 10
+  },
+  {
+   "name": "dice-grab-2",
+   "file": "dice-grab-2.ogg",
+   "kb": 11
+  },
+  {
+   "name": "dice-shake-1",
+   "file": "dice-shake-1.ogg",
+   "kb": 18
+  },
+  {
+   "name": "dice-shake-2",
+   "file": "dice-shake-2.ogg",
+   "kb": 19
+  },
+  {
+   "name": "dice-shake-3",
+   "file": "dice-shake-3.ogg",
+   "kb": 19
+  },
+  {
+   "name": "dice-throw-1",
+   "file": "dice-throw-1.ogg",
+   "kb": 9
+  },
+  {
+   "name": "dice-throw-2",
+   "file": "dice-throw-2.ogg",
+   "kb": 7
+  },
+  {
+   "name": "dice-throw-3",
+   "file": "dice-throw-3.ogg",
+   "kb": 9
+  },
+  {
+   "name": "die-throw-1",
+   "file": "die-throw-1.ogg",
+   "kb": 8
+  },
+  {
+   "name": "die-throw-2",
+   "file": "die-throw-2.ogg",
+   "kb": 9
+  },
+  {
+   "name": "die-throw-3",
+   "file": "die-throw-3.ogg",
+   "kb": 9
+  },
+  {
+   "name": "die-throw-4",
+   "file": "die-throw-4.ogg",
+   "kb": 7
+  }
+ ]
+}

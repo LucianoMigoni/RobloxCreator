@@ -1,0 +1,648 @@
+{
+ "pack": "kenney-cube-pets",
+ "kind": "model3d",
+ "source": "https://kenney.nl/assets/cube-pets",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 24,
+ "items": [
+  {
+   "name": "animal-beaver",
+   "file": "animal-beaver.glb",
+   "kb": 146,
+   "triangles": 670,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "run",
+    "eat",
+    "dance",
+    "gesture-positive",
+    "gesture-negative"
+   ],
+   "parts": [
+    "leg-back-left",
+    "leg-back-right",
+    "leg-front-left",
+    "leg-front-right",
+    "body",
+    "tail"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "animal-bee",
+   "file": "animal-bee.glb",
+   "kb": 160,
+   "triangles": 742,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "run",
+    "eat",
+    "dance",
+    "gesture-positive",
+    "gesture-negative"
+   ],
+   "parts": [
+    "body",
+    "wing-left",
+    "wing-right",
+    "leg-back-left",
+    "leg-back-right",
+    "leg-front-left",
+    "leg-front-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "animal-bunny",
+   "file": "animal-bunny.glb",
+   "kb": 128,
+   "triangles": 575,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "run",
+    "eat",
+    "dance",
+    "gesture-positive",
+    "gesture-negative"
+   ],
+   "parts": [
+    "body",
+    "leg-back-left",
+    "leg-back-right",
+    "leg-front-left",
+    "leg-front-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "animal-cat",
+   "file": "animal-cat.glb",
+   "kb": 161,
+   "triangles": 684,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "run",
+    "eat",
+    "dance",
+    "gesture-positive",
+    "gesture-negative"
+   ],
+   "parts": [
+    "body",
+    "Group",
+    "tail",
+    "leg-back-left",
+    "leg-back-right",
+    "leg-front-left",
+    "leg-front-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "animal-caterpillar",
+   "file": "animal-caterpillar.glb",
+   "kb": 127,
+   "triangles": 578,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "run",
+    "eat",
+    "dance",
+    "gesture-positive",
+    "gesture-negative"
+   ],
+   "parts": [
+    "leg-front-left",
+    "body",
+    "leg-back-left",
+    "leg-back-right",
+    "leg-front-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "animal-chick",
+   "file": "animal-chick.glb",
+   "kb": 122,
+   "triangles": 490,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "run",
+    "eat",
+    "dance",
+    "gesture-positive",
+    "gesture-negative"
+   ],
+   "parts": [
+    "leg-front-right",
+    "leg-front-left",
+    "body",
+    "wing-left",
+    "wing-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "animal-cow",
+   "file": "animal-cow.glb",
+   "kb": 125,
+   "triangles": 578,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "run",
+    "eat",
+    "dance",
+    "gesture-positive",
+    "gesture-negative"
+   ],
+   "parts": [
+    "leg-front-right",
+    "leg-front-left",
+    "leg-back-right",
+    "leg-back-left",
+    "body",
+    "Group"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "animal-crab",
+   "file": "animal-crab.glb",
+   "kb": 147,
+   "triangles": 676,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "run",
+    "eat",
+    "dance",
+    "gesture-positive",
+    "gesture-negative"
+   ],
+   "parts": [
+    "leg-back-left",
+    "body",
+    "Group",
+    "leg-front-left",
+    "leg-back-right",
+    "leg-front-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "animal-deer",
+   "file": "animal-deer.glb",
+   "kb": 146,
+   "triangles": 760,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "run",
+    "eat",
+    "dance",
+    "gesture-positive",
+    "gesture-negative"
+   ],
+   "parts": [
+    "leg-back-left",
+    "body",
+    "leg-back-right",
+    "leg-front-left",
+    "leg-front-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "animal-dog",
+   "file": "animal-dog.glb",
+   "kb": 116,
+   "triangles": 490,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "run",
+    "eat",
+    "dance",
+    "gesture-positive",
+    "gesture-negative"
+   ],
+   "parts": [
+    "body",
+    "leg-back-left",
+    "leg-back-right",
+    "leg-front-left",
+    "leg-front-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "animal-elephant",
+   "file": "animal-elephant.glb",
+   "kb": 145,
+   "triangles": 676,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "run",
+    "eat",
+    "dance",
+    "gesture-positive",
+    "gesture-negative"
+   ],
+   "parts": [
+    "body",
+    "tail",
+    "leg-back-left",
+    "leg-front-left",
+    "leg-back-right",
+    "leg-front-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "animal-fish",
+   "file": "animal-fish.glb",
+   "kb": 89,
+   "triangles": 422,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "run",
+    "eat",
+    "dance",
+    "gesture-positive",
+    "gesture-negative"
+   ],
+   "parts": [
+    "body",
+    "wing-right",
+    "wing-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "animal-fox",
+   "file": "animal-fox.glb",
+   "kb": 138,
+   "triangles": 568,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "run",
+    "eat",
+    "dance",
+    "gesture-positive",
+    "gesture-negative"
+   ],
+   "parts": [
+    "body",
+    "tail",
+    "leg-back-left",
+    "leg-back-right",
+    "leg-front-left",
+    "leg-front-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "animal-giraffe",
+   "file": "animal-giraffe.glb",
+   "kb": 129,
+   "triangles": 598,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "run",
+    "eat",
+    "dance",
+    "gesture-positive",
+    "gesture-negative"
+   ],
+   "parts": [
+    "body",
+    "leg-back-left",
+    "leg-back-right",
+    "leg-front-left",
+    "leg-front-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "animal-hog",
+   "file": "animal-hog.glb",
+   "kb": 138,
+   "triangles": 706,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "run",
+    "eat",
+    "dance",
+    "gesture-positive",
+    "gesture-negative"
+   ],
+   "parts": [
+    "body",
+    "leg-back-left",
+    "leg-back-right",
+    "leg-front-left",
+    "leg-front-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "animal-koala",
+   "file": "animal-koala.glb",
+   "kb": 127,
+   "triangles": 594,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "run",
+    "eat",
+    "dance",
+    "gesture-positive",
+    "gesture-negative"
+   ],
+   "parts": [
+    "body",
+    "leg-back-left",
+    "leg-back-right",
+    "leg-front-left",
+    "leg-front-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "animal-lion",
+   "file": "animal-lion.glb",
+   "kb": 168,
+   "triangles": 889,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "run",
+    "eat",
+    "dance",
+    "gesture-positive",
+    "gesture-negative"
+   ],
+   "parts": [
+    "leg-front-right",
+    "body",
+    "tail",
+    "leg-back-left",
+    "leg-back-right",
+    "leg-front-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "animal-monkey",
+   "file": "animal-monkey.glb",
+   "kb": 170,
+   "triangles": 918,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "run",
+    "eat",
+    "dance",
+    "gesture-positive",
+    "gesture-negative"
+   ],
+   "parts": [
+    "leg-front-left",
+    "leg-front-right",
+    "leg-back-right",
+    "leg-back-left",
+    "body",
+    "tail"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "animal-panda",
+   "file": "animal-panda.glb",
+   "kb": 130,
+   "triangles": 734,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "run",
+    "eat",
+    "dance",
+    "gesture-positive",
+    "gesture-negative"
+   ],
+   "parts": [
+    "body",
+    "leg-back-left",
+    "leg-back-right",
+    "leg-front-left",
+    "leg-front-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "animal-parrot",
+   "file": "animal-parrot.glb",
+   "kb": 150,
+   "triangles": 530,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "run",
+    "eat",
+    "dance",
+    "gesture-positive",
+    "gesture-negative"
+   ],
+   "parts": [
+    "body",
+    "Group",
+    "tail",
+    "wing-right",
+    "wing-left",
+    "leg-front-left",
+    "leg-front-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "animal-penguin",
+   "file": "animal-penguin.glb",
+   "kb": 127,
+   "triangles": 558,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "run",
+    "eat",
+    "dance",
+    "gesture-positive",
+    "gesture-negative"
+   ],
+   "parts": [
+    "leg-front-right",
+    "body",
+    "wing-left",
+    "wing-right",
+    "leg-front-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "animal-pig",
+   "file": "animal-pig.glb",
+   "kb": 124,
+   "triangles": 424,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "run",
+    "eat",
+    "dance",
+    "gesture-positive",
+    "gesture-negative"
+   ],
+   "parts": [
+    "body",
+    "Group",
+    "leg-back-left",
+    "leg-back-right",
+    "leg-front-left",
+    "leg-front-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "animal-polar",
+   "file": "animal-polar.glb",
+   "kb": 96,
+   "triangles": 522,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "run",
+    "eat",
+    "dance",
+    "gesture-positive",
+    "gesture-negative"
+   ],
+   "parts": [
+    "body",
+    "leg-back-left",
+    "leg-back-right",
+    "leg-front-left",
+    "leg-front-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "animal-tiger",
+   "file": "animal-tiger.glb",
+   "kb": 168,
+   "triangles": 951,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "run",
+    "eat",
+    "dance",
+    "gesture-positive",
+    "gesture-negative"
+   ],
+   "parts": [
+    "leg-front-right",
+    "body",
+    "tail",
+    "leg-back-left",
+    "leg-back-right",
+    "leg-front-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  }
+ ]
+}

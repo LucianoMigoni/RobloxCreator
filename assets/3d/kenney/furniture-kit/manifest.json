@@ -1,0 +1,1617 @@
+{
+ "pack": "kenney-furniture-kit",
+ "kind": "model3d",
+ "source": "https://kenney.nl/assets/furniture-kit",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 140,
+ "items": [
+  {
+   "name": "bathroomCabinet",
+   "file": "bathroomCabinet.glb",
+   "kb": 7,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "bathroomCabinet(Clone)",
+    "door"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bathroomCabinetDrawer",
+   "file": "bathroomCabinetDrawer.glb",
+   "kb": 33,
+   "triangles": 508,
+   "animations": [],
+   "parts": [
+    "bathroomCabinetDrawer(Clone)",
+    "drawerBottom",
+    "drawerTop"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bathroomMirror",
+   "file": "bathroomMirror.glb",
+   "kb": 6,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "bathroomMirror(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bathroomSink",
+   "file": "bathroomSink.glb",
+   "kb": 22,
+   "triangles": 316,
+   "animations": [],
+   "parts": [
+    "bathroomSink(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bathroomSinkSquare",
+   "file": "bathroomSinkSquare.glb",
+   "kb": 14,
+   "triangles": 234,
+   "animations": [],
+   "parts": [
+    "bathroomSinkSquare(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bathtub",
+   "file": "bathtub.glb",
+   "kb": 34,
+   "triangles": 602,
+   "animations": [],
+   "parts": [
+    "bathtub(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bear",
+   "file": "bear.glb",
+   "kb": 11,
+   "triangles": 134,
+   "animations": [],
+   "parts": [
+    "bear(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bedBunk",
+   "file": "bedBunk.glb",
+   "kb": 39,
+   "triangles": 580,
+   "animations": [],
+   "parts": [
+    "bedBunk(Clone)",
+    "coverBottom",
+    "coverTop",
+    "pillowBottom",
+    "pillowTop"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bedDouble",
+   "file": "bedDouble.glb",
+   "kb": 22,
+   "triangles": 264,
+   "animations": [],
+   "parts": [
+    "bedDouble(Clone)",
+    "cover",
+    "pillowLeft",
+    "pillowRight"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bedSingle",
+   "file": "bedSingle.glb",
+   "kb": 18,
+   "triangles": 214,
+   "animations": [],
+   "parts": [
+    "bedSingle(Clone)",
+    "cover",
+    "pillow"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bench",
+   "file": "bench.glb",
+   "kb": 10,
+   "triangles": 170,
+   "animations": [],
+   "parts": [
+    "bench(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "benchCushion",
+   "file": "benchCushion.glb",
+   "kb": 12,
+   "triangles": 196,
+   "animations": [],
+   "parts": [
+    "benchCushion(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "benchCushionLow",
+   "file": "benchCushionLow.glb",
+   "kb": 10,
+   "triangles": 138,
+   "animations": [],
+   "parts": [
+    "benchCushionLow(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bookcaseClosed",
+   "file": "bookcaseClosed.glb",
+   "kb": 22,
+   "triangles": 372,
+   "animations": [],
+   "parts": [
+    "bookcaseClosed(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bookcaseClosedDoors",
+   "file": "bookcaseClosedDoors.glb",
+   "kb": 22,
+   "triangles": 296,
+   "animations": [],
+   "parts": [
+    "bookcaseClosedDoors(Clone)",
+    "doorLeft",
+    "doorRight"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bookcaseClosedWide",
+   "file": "bookcaseClosedWide.glb",
+   "kb": 22,
+   "triangles": 372,
+   "animations": [],
+   "parts": [
+    "bookcaseClosedWide(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bookcaseOpen",
+   "file": "bookcaseOpen.glb",
+   "kb": 17,
+   "triangles": 320,
+   "animations": [],
+   "parts": [
+    "bookcaseOpen(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "bookcaseOpenLow",
+   "file": "bookcaseOpenLow.glb",
+   "kb": 11,
+   "triangles": 184,
+   "animations": [],
+   "parts": [
+    "bookcaseOpenLow(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "books",
+   "file": "books.glb",
+   "kb": 6,
+   "triangles": 62,
+   "animations": [],
+   "parts": [
+    "books(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cabinetBed",
+   "file": "cabinetBed.glb",
+   "kb": 7,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "cabinetBed(Clone)",
+    "door"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cabinetBedDrawer",
+   "file": "cabinetBedDrawer.glb",
+   "kb": 15,
+   "triangles": 182,
+   "animations": [],
+   "parts": [
+    "cabinetBedDrawer(Clone)",
+    "door",
+    "drawer"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cabinetBedDrawerTable",
+   "file": "cabinetBedDrawerTable.glb",
+   "kb": 11,
+   "triangles": 140,
+   "animations": [],
+   "parts": [
+    "cabinetBedDrawerTable(Clone)",
+    "drawer"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cabinetTelevision",
+   "file": "cabinetTelevision.glb",
+   "kb": 10,
+   "triangles": 154,
+   "animations": [],
+   "parts": [
+    "cabinetTelevision(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cabinetTelevisionDoors",
+   "file": "cabinetTelevisionDoors.glb",
+   "kb": 16,
+   "triangles": 210,
+   "animations": [],
+   "parts": [
+    "cabinetTelevisionDoors(Clone)",
+    "doorLeft",
+    "doorRight"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cardboardBoxClosed",
+   "file": "cardboardBoxClosed.glb",
+   "kb": 5,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "cardboardBoxClosed(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "cardboardBoxOpen",
+   "file": "cardboardBoxOpen.glb",
+   "kb": 5,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "cardboardBoxOpen(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ceilingFan",
+   "file": "ceilingFan.glb",
+   "kb": 14,
+   "triangles": 214,
+   "animations": [],
+   "parts": [
+    "ceilingFan(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "chair",
+   "file": "chair.glb",
+   "kb": 10,
+   "triangles": 170,
+   "animations": [],
+   "parts": [
+    "chair(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "chairCushion",
+   "file": "chairCushion.glb",
+   "kb": 12,
+   "triangles": 198,
+   "animations": [],
+   "parts": [
+    "chairCushion(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "chairDesk",
+   "file": "chairDesk.glb",
+   "kb": 38,
+   "triangles": 588,
+   "animations": [],
+   "parts": [
+    "chairDesk(Clone)",
+    "chair"
+   ],
+   "textures": []
+  },
+  {
+   "name": "chairModernCushion",
+   "file": "chairModernCushion.glb",
+   "kb": 7,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "chairModernCushion(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "chairModernFrameCushion",
+   "file": "chairModernFrameCushion.glb",
+   "kb": 18,
+   "triangles": 284,
+   "animations": [],
+   "parts": [
+    "chairModernFrameCushion(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "chairRounded",
+   "file": "chairRounded.glb",
+   "kb": 16,
+   "triangles": 280,
+   "animations": [],
+   "parts": [
+    "chairRounded(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "coatRack",
+   "file": "coatRack.glb",
+   "kb": 9,
+   "triangles": 132,
+   "animations": [],
+   "parts": [
+    "coatRack(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "coatRackStanding",
+   "file": "coatRackStanding.glb",
+   "kb": 12,
+   "triangles": 190,
+   "animations": [],
+   "parts": [
+    "coatRackStanding(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "computerKeyboard",
+   "file": "computerKeyboard.glb",
+   "kb": 3,
+   "triangles": 32,
+   "animations": [],
+   "parts": [
+    "computerKeyboard(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "computerMouse",
+   "file": "computerMouse.glb",
+   "kb": 5,
+   "triangles": 71,
+   "animations": [],
+   "parts": [
+    "computerMouse(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "computerScreen",
+   "file": "computerScreen.glb",
+   "kb": 6,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "computerScreen(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "desk",
+   "file": "desk.glb",
+   "kb": 14,
+   "triangles": 198,
+   "animations": [],
+   "parts": [
+    "desk(Clone)",
+    "drawer"
+   ],
+   "textures": []
+  },
+  {
+   "name": "deskCorner",
+   "file": "deskCorner.glb",
+   "kb": 17,
+   "triangles": 250,
+   "animations": [],
+   "parts": [
+    "deskCorner(Clone)",
+    "drawer"
+   ],
+   "textures": []
+  },
+  {
+   "name": "doorway",
+   "file": "doorway.glb",
+   "kb": 14,
+   "triangles": 188,
+   "animations": [],
+   "parts": [
+    "doorway(Clone)",
+    "door"
+   ],
+   "textures": []
+  },
+  {
+   "name": "doorwayFront",
+   "file": "doorwayFront.glb",
+   "kb": 12,
+   "triangles": 156,
+   "animations": [],
+   "parts": [
+    "doorwayFront(Clone)",
+    "door"
+   ],
+   "textures": []
+  },
+  {
+   "name": "doorwayOpen",
+   "file": "doorwayOpen.glb",
+   "kb": 3,
+   "triangles": 28,
+   "animations": [],
+   "parts": [
+    "doorwayOpen(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "dryer",
+   "file": "dryer.glb",
+   "kb": 17,
+   "triangles": 262,
+   "animations": [],
+   "parts": [
+    "dryer(Clone)",
+    "dryerDoor"
+   ],
+   "textures": []
+  },
+  {
+   "name": "floorCorner",
+   "file": "floorCorner.glb",
+   "kb": 2,
+   "triangles": 16,
+   "animations": [],
+   "parts": [
+    "floorCorner(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "floorCornerRound",
+   "file": "floorCornerRound.glb",
+   "kb": 5,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "floorCornerRound(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "floorFull",
+   "file": "floorFull.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "floorFull(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "floorHalf",
+   "file": "floorHalf.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "floorHalf(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "hoodLarge",
+   "file": "hoodLarge.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "hoodLarge(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "hoodModern",
+   "file": "hoodModern.glb",
+   "kb": 3,
+   "triangles": 28,
+   "animations": [],
+   "parts": [
+    "hoodModern(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "kitchenBar",
+   "file": "kitchenBar.glb",
+   "kb": 5,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "kitchenBar(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "kitchenBarEnd",
+   "file": "kitchenBarEnd.glb",
+   "kb": 10,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "kitchenBarEnd(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "kitchenBlender",
+   "file": "kitchenBlender.glb",
+   "kb": 18,
+   "triangles": 246,
+   "animations": [],
+   "parts": [
+    "kitchenBlender(Clone)",
+    "blenderCup",
+    "blenderTop"
+   ],
+   "textures": []
+  },
+  {
+   "name": "kitchenCabinet",
+   "file": "kitchenCabinet.glb",
+   "kb": 10,
+   "triangles": 114,
+   "animations": [],
+   "parts": [
+    "kitchenCabinet(Clone)",
+    "door"
+   ],
+   "textures": []
+  },
+  {
+   "name": "kitchenCabinetCornerInner",
+   "file": "kitchenCabinetCornerInner.glb",
+   "kb": 5,
+   "triangles": 54,
+   "animations": [],
+   "parts": [
+    "kitchenCabinetCornerInner(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "kitchenCabinetCornerRound",
+   "file": "kitchenCabinetCornerRound.glb",
+   "kb": 13,
+   "triangles": 194,
+   "animations": [],
+   "parts": [
+    "kitchenCabinetCornerRound(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "kitchenCabinetDrawer",
+   "file": "kitchenCabinetDrawer.glb",
+   "kb": 15,
+   "triangles": 174,
+   "animations": [],
+   "parts": [
+    "kitchenCabinetDrawer(Clone)",
+    "door",
+    "drawer"
+   ],
+   "textures": []
+  },
+  {
+   "name": "kitchenCabinetUpper",
+   "file": "kitchenCabinetUpper.glb",
+   "kb": 7,
+   "triangles": 80,
+   "animations": [],
+   "parts": [
+    "kitchenCabinetUpper(Clone)",
+    "door"
+   ],
+   "textures": []
+  },
+  {
+   "name": "kitchenCabinetUpperCorner",
+   "file": "kitchenCabinetUpperCorner.glb",
+   "kb": 13,
+   "triangles": 204,
+   "animations": [],
+   "parts": [
+    "kitchenCabinetUpperCorner(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "kitchenCabinetUpperDouble",
+   "file": "kitchenCabinetUpperDouble.glb",
+   "kb": 17,
+   "triangles": 234,
+   "animations": [],
+   "parts": [
+    "kitchenCabinetUpperDouble(Clone)",
+    "doorLeft",
+    "doorRight"
+   ],
+   "textures": []
+  },
+  {
+   "name": "kitchenCabinetUpperLow",
+   "file": "kitchenCabinetUpperLow.glb",
+   "kb": 7,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "kitchenCabinetUpperLow(Clone)",
+    "door"
+   ],
+   "textures": []
+  },
+  {
+   "name": "kitchenCoffeeMachine",
+   "file": "kitchenCoffeeMachine.glb",
+   "kb": 13,
+   "triangles": 166,
+   "animations": [],
+   "parts": [
+    "kitchenCoffeeMachine(Clone)",
+    "mug"
+   ],
+   "textures": []
+  },
+  {
+   "name": "kitchenFridge",
+   "file": "kitchenFridge.glb",
+   "kb": 19,
+   "triangles": 250,
+   "animations": [],
+   "parts": [
+    "kitchenFridge(Clone)",
+    "doorFreezer",
+    "doorFridge"
+   ],
+   "textures": []
+  },
+  {
+   "name": "kitchenFridgeBuiltIn",
+   "file": "kitchenFridgeBuiltIn.glb",
+   "kb": 22,
+   "triangles": 268,
+   "animations": [],
+   "parts": [
+    "kitchenFridgeBuiltIn(Clone)",
+    "doorFreezer",
+    "doorFridge"
+   ],
+   "textures": []
+  },
+  {
+   "name": "kitchenFridgeLarge",
+   "file": "kitchenFridgeLarge.glb",
+   "kb": 29,
+   "triangles": 436,
+   "animations": [],
+   "parts": [
+    "kitchenFridgeLarge(Clone)",
+    "doorLeft",
+    "doorRight"
+   ],
+   "textures": []
+  },
+  {
+   "name": "kitchenFridgeSmall",
+   "file": "kitchenFridgeSmall.glb",
+   "kb": 12,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "kitchenFridgeSmall(Clone)",
+    "doorFridge"
+   ],
+   "textures": []
+  },
+  {
+   "name": "kitchenMicrowave",
+   "file": "kitchenMicrowave.glb",
+   "kb": 10,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "kitchenMicrowave(Clone)",
+    "Group"
+   ],
+   "textures": []
+  },
+  {
+   "name": "kitchenSink",
+   "file": "kitchenSink.glb",
+   "kb": 22,
+   "triangles": 318,
+   "animations": [],
+   "parts": [
+    "kitchenSink(Clone)",
+    "door"
+   ],
+   "textures": []
+  },
+  {
+   "name": "kitchenStove",
+   "file": "kitchenStove.glb",
+   "kb": 53,
+   "triangles": 830,
+   "animations": [],
+   "parts": [
+    "kitchenStove(Clone)",
+    "door"
+   ],
+   "textures": []
+  },
+  {
+   "name": "kitchenStoveElectric",
+   "file": "kitchenStoveElectric.glb",
+   "kb": 18,
+   "triangles": 338,
+   "animations": [],
+   "parts": [
+    "kitchenStoveElectric(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "lampRoundFloor",
+   "file": "lampRoundFloor.glb",
+   "kb": 6,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "lampRoundFloor(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "lampRoundTable",
+   "file": "lampRoundTable.glb",
+   "kb": 6,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "lampRoundTable(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "lampSquareCeiling",
+   "file": "lampSquareCeiling.glb",
+   "kb": 5,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "lampSquareCeiling(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "lampSquareFloor",
+   "file": "lampSquareFloor.glb",
+   "kb": 5,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "lampSquareFloor(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "lampSquareTable",
+   "file": "lampSquareTable.glb",
+   "kb": 5,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "lampSquareTable(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "lampWall",
+   "file": "lampWall.glb",
+   "kb": 4,
+   "triangles": 42,
+   "animations": [],
+   "parts": [
+    "lampWall(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "laptop",
+   "file": "laptop.glb",
+   "kb": 5,
+   "triangles": 68,
+   "animations": [],
+   "parts": [
+    "laptop(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "loungeChair",
+   "file": "loungeChair.glb",
+   "kb": 9,
+   "triangles": 128,
+   "animations": [],
+   "parts": [
+    "loungeChair(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "loungeChairRelax",
+   "file": "loungeChairRelax.glb",
+   "kb": 13,
+   "triangles": 188,
+   "animations": [],
+   "parts": [
+    "loungeChairRelax(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "loungeDesignChair",
+   "file": "loungeDesignChair.glb",
+   "kb": 8,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "loungeDesignChair(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "loungeDesignSofa",
+   "file": "loungeDesignSofa.glb",
+   "kb": 8,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "loungeDesignSofa(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "loungeDesignSofaCorner",
+   "file": "loungeDesignSofaCorner.glb",
+   "kb": 13,
+   "triangles": 176,
+   "animations": [],
+   "parts": [
+    "loungeDesignSofaCorner(Clone)",
+    "Group"
+   ],
+   "textures": []
+  },
+  {
+   "name": "loungeSofa",
+   "file": "loungeSofa.glb",
+   "kb": 9,
+   "triangles": 128,
+   "animations": [],
+   "parts": [
+    "loungeSofa(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "loungeSofaCorner",
+   "file": "loungeSofaCorner.glb",
+   "kb": 13,
+   "triangles": 190,
+   "animations": [],
+   "parts": [
+    "loungeSofaCorner(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "loungeSofaLong",
+   "file": "loungeSofaLong.glb",
+   "kb": 12,
+   "triangles": 186,
+   "animations": [],
+   "parts": [
+    "loungeSofaLong(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "loungeSofaOttoman",
+   "file": "loungeSofaOttoman.glb",
+   "kb": 6,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "loungeSofaOttoman(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "paneling",
+   "file": "paneling.glb",
+   "kb": 3,
+   "triangles": 40,
+   "animations": [],
+   "parts": [
+    "paneling(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pillow",
+   "file": "pillow.glb",
+   "kb": 4,
+   "triangles": 50,
+   "animations": [],
+   "parts": [
+    "pillow(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pillowBlue",
+   "file": "pillowBlue.glb",
+   "kb": 4,
+   "triangles": 50,
+   "animations": [],
+   "parts": [
+    "pillowBlue(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pillowBlueLong",
+   "file": "pillowBlueLong.glb",
+   "kb": 4,
+   "triangles": 50,
+   "animations": [],
+   "parts": [
+    "pillowBlueLong(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pillowLong",
+   "file": "pillowLong.glb",
+   "kb": 4,
+   "triangles": 50,
+   "animations": [],
+   "parts": [
+    "pillowLong(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "plantSmall1",
+   "file": "plantSmall1.glb",
+   "kb": 8,
+   "triangles": 102,
+   "animations": [],
+   "parts": [
+    "plantSmall1(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "plantSmall2",
+   "file": "plantSmall2.glb",
+   "kb": 12,
+   "triangles": 158,
+   "animations": [],
+   "parts": [
+    "plantSmall2(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "plantSmall3",
+   "file": "plantSmall3.glb",
+   "kb": 8,
+   "triangles": 98,
+   "animations": [],
+   "parts": [
+    "plantSmall3(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "pottedPlant",
+   "file": "pottedPlant.glb",
+   "kb": 7,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "pottedPlant(Clone)",
+    "plant"
+   ],
+   "textures": []
+  },
+  {
+   "name": "radio",
+   "file": "radio.glb",
+   "kb": 24,
+   "triangles": 432,
+   "animations": [],
+   "parts": [
+    "radio(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rugDoormat",
+   "file": "rugDoormat.glb",
+   "kb": 13,
+   "triangles": 204,
+   "animations": [],
+   "parts": [
+    "rugDoormat(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rugRectangle",
+   "file": "rugRectangle.glb",
+   "kb": 3,
+   "triangles": 28,
+   "animations": [],
+   "parts": [
+    "rugRectangle(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rugRound",
+   "file": "rugRound.glb",
+   "kb": 9,
+   "triangles": 188,
+   "animations": [],
+   "parts": [
+    "rugRound(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rugRounded",
+   "file": "rugRounded.glb",
+   "kb": 10,
+   "triangles": 204,
+   "animations": [],
+   "parts": [
+    "rugRounded(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "rugSquare",
+   "file": "rugSquare.glb",
+   "kb": 3,
+   "triangles": 28,
+   "animations": [],
+   "parts": [
+    "rugSquare(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "shower",
+   "file": "shower.glb",
+   "kb": 50,
+   "triangles": 810,
+   "animations": [],
+   "parts": [
+    "shower(Clone)",
+    "doorLeft",
+    "doorRight"
+   ],
+   "textures": []
+  },
+  {
+   "name": "showerRound",
+   "file": "showerRound.glb",
+   "kb": 70,
+   "triangles": 960,
+   "animations": [],
+   "parts": [
+    "showerRound(Clone)",
+    "doorLeft",
+    "doorRight",
+    "faucet"
+   ],
+   "textures": []
+  },
+  {
+   "name": "sideTable",
+   "file": "sideTable.glb",
+   "kb": 8,
+   "triangles": 118,
+   "animations": [],
+   "parts": [
+    "sideTable(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "sideTableDrawers",
+   "file": "sideTableDrawers.glb",
+   "kb": 18,
+   "triangles": 238,
+   "animations": [],
+   "parts": [
+    "sideTableDrawers(Clone)",
+    "drawerLeft",
+    "drawerRight"
+   ],
+   "textures": []
+  },
+  {
+   "name": "speaker",
+   "file": "speaker.glb",
+   "kb": 15,
+   "triangles": 228,
+   "animations": [],
+   "parts": [
+    "speaker(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "speakerSmall",
+   "file": "speakerSmall.glb",
+   "kb": 14,
+   "triangles": 220,
+   "animations": [],
+   "parts": [
+    "speakerSmall(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stairs",
+   "file": "stairs.glb",
+   "kb": 21,
+   "triangles": 308,
+   "animations": [],
+   "parts": [
+    "stairs(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stairsCorner",
+   "file": "stairsCorner.glb",
+   "kb": 21,
+   "triangles": 312,
+   "animations": [],
+   "parts": [
+    "stairsCorner(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stairsOpen",
+   "file": "stairsOpen.glb",
+   "kb": 38,
+   "triangles": 558,
+   "animations": [],
+   "parts": [
+    "stairsOpen(Clone)",
+    "Group",
+    "Group"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stairsOpenSingle",
+   "file": "stairsOpenSingle.glb",
+   "kb": 24,
+   "triangles": 326,
+   "animations": [],
+   "parts": [
+    "stairsOpenSingle(Clone)",
+    "Group"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stoolBar",
+   "file": "stoolBar.glb",
+   "kb": 11,
+   "triangles": 176,
+   "animations": [],
+   "parts": [
+    "stoolBar(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "stoolBarSquare",
+   "file": "stoolBarSquare.glb",
+   "kb": 9,
+   "triangles": 142,
+   "animations": [],
+   "parts": [
+    "stoolBarSquare(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "table",
+   "file": "table.glb",
+   "kb": 8,
+   "triangles": 120,
+   "animations": [],
+   "parts": [
+    "table(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tableCloth",
+   "file": "tableCloth.glb",
+   "kb": 9,
+   "triangles": 144,
+   "animations": [],
+   "parts": [
+    "tableCloth(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tableCoffee",
+   "file": "tableCoffee.glb",
+   "kb": 8,
+   "triangles": 124,
+   "animations": [],
+   "parts": [
+    "tableCoffee(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tableCoffeeGlass",
+   "file": "tableCoffeeGlass.glb",
+   "kb": 9,
+   "triangles": 140,
+   "animations": [],
+   "parts": [
+    "tableCoffeeGlass(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tableCoffeeGlassSquare",
+   "file": "tableCoffeeGlassSquare.glb",
+   "kb": 9,
+   "triangles": 140,
+   "animations": [],
+   "parts": [
+    "tableCoffeeGlassSquare(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tableCoffeeSquare",
+   "file": "tableCoffeeSquare.glb",
+   "kb": 8,
+   "triangles": 124,
+   "animations": [],
+   "parts": [
+    "tableCoffeeSquare(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tableCross",
+   "file": "tableCross.glb",
+   "kb": 11,
+   "triangles": 178,
+   "animations": [],
+   "parts": [
+    "tableCross(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tableCrossCloth",
+   "file": "tableCrossCloth.glb",
+   "kb": 13,
+   "triangles": 202,
+   "animations": [],
+   "parts": [
+    "tableCrossCloth(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tableGlass",
+   "file": "tableGlass.glb",
+   "kb": 9,
+   "triangles": 144,
+   "animations": [],
+   "parts": [
+    "tableGlass(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "tableRound",
+   "file": "tableRound.glb",
+   "kb": 6,
+   "triangles": 80,
+   "animations": [],
+   "parts": [
+    "tableRound(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "televisionAntenna",
+   "file": "televisionAntenna.glb",
+   "kb": 4,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "televisionAntenna(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "televisionModern",
+   "file": "televisionModern.glb",
+   "kb": 6,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "televisionModern(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "televisionVintage",
+   "file": "televisionVintage.glb",
+   "kb": 18,
+   "triangles": 280,
+   "animations": [],
+   "parts": [
+    "televisionVintage(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "toaster",
+   "file": "toaster.glb",
+   "kb": 14,
+   "triangles": 220,
+   "animations": [],
+   "parts": [
+    "toaster(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "toilet",
+   "file": "toilet.glb",
+   "kb": 17,
+   "triangles": 230,
+   "animations": [],
+   "parts": [
+    "toilet(Clone)",
+    "cover"
+   ],
+   "textures": []
+  },
+  {
+   "name": "toiletSquare",
+   "file": "toiletSquare.glb",
+   "kb": 17,
+   "triangles": 228,
+   "animations": [],
+   "parts": [
+    "toiletSquare(Clone)",
+    "Group"
+   ],
+   "textures": []
+  },
+  {
+   "name": "trashcan",
+   "file": "trashcan.glb",
+   "kb": 6,
+   "triangles": 68,
+   "animations": [],
+   "parts": [
+    "trashcan(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "wall",
+   "file": "wall.glb",
+   "kb": 3,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "wall(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "wallCorner",
+   "file": "wallCorner.glb",
+   "kb": 4,
+   "triangles": 28,
+   "animations": [],
+   "parts": [
+    "wallCorner(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "wallCornerRond",
+   "file": "wallCornerRond.glb",
+   "kb": 10,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "wallCornerRond(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "wallDoorway",
+   "file": "wallDoorway.glb",
+   "kb": 6,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "wallDoorway(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "wallDoorwayWide",
+   "file": "wallDoorwayWide.glb",
+   "kb": 6,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "wallDoorwayWide(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "wallHalf",
+   "file": "wallHalf.glb",
+   "kb": 3,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "wallHalf(Clone)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "wallWindow",
+   "file": "wallWindow.glb",
+   "kb": 10,
+   "triangles": 108,
+   "animations": [],
+   "parts": [
+    "wallWindow(Clone)",
+    "window"
+   ],
+   "textures": []
+  },
+  {
+   "name": "wallWindowSlide",
+   "file": "wallWindowSlide.glb",
+   "kb": 14,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "wallWindowSlide(Clone)",
+    "windowBottom",
+    "windowTop"
+   ],
+   "textures": []
+  },
+  {
+   "name": "washer",
+   "file": "washer.glb",
+   "kb": 46,
+   "triangles": 720,
+   "animations": [],
+   "parts": [
+    "washer(Clone)",
+    "washerDoor"
+   ],
+   "textures": []
+  },
+  {
+   "name": "washerDryerStacked",
+   "file": "washerDryerStacked.glb",
+   "kb": 62,
+   "triangles": 992,
+   "animations": [],
+   "parts": [
+    "washerDryerStacked(Clone)",
+    "dryerDoor",
+    "washerDoor"
+   ],
+   "textures": []
+  }
+ ]
+}

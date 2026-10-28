@@ -1,0 +1,1009 @@
+{
+ "pack": "kenney-pirate-kit",
+ "kind": "model3d",
+ "source": "https://kenney.nl/assets/pirate-kit",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 72,
+ "items": [
+  {
+   "name": "barrel",
+   "file": "barrel.glb",
+   "kb": 13,
+   "triangles": 148,
+   "animations": [],
+   "parts": [
+    "barrel"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "boat-row-large",
+   "file": "boat-row-large.glb",
+   "kb": 15,
+   "triangles": 174,
+   "animations": [],
+   "parts": [
+    "boat-row-large",
+    "paddles"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "boat-row-small",
+   "file": "boat-row-small.glb",
+   "kb": 17,
+   "triangles": 168,
+   "animations": [],
+   "parts": [
+    "boat-row-small",
+    "paddles"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bottle-large",
+   "file": "bottle-large.glb",
+   "kb": 11,
+   "triangles": 108,
+   "animations": [],
+   "parts": [
+    "bottle-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bottle",
+   "file": "bottle.glb",
+   "kb": 13,
+   "triangles": 124,
+   "animations": [],
+   "parts": [
+    "bottle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cannon-ball",
+   "file": "cannon-ball.glb",
+   "kb": 7,
+   "triangles": 48,
+   "animations": [],
+   "parts": [
+    "cannon-ball"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cannon-mobile",
+   "file": "cannon-mobile.glb",
+   "kb": 42,
+   "triangles": 472,
+   "animations": [],
+   "parts": [
+    "cannon-mobile",
+    "Group",
+    "Group"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cannon",
+   "file": "cannon.glb",
+   "kb": 23,
+   "triangles": 232,
+   "animations": [],
+   "parts": [
+    "cannon",
+    "Group",
+    "Group"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "castle-door",
+   "file": "castle-door.glb",
+   "kb": 36,
+   "triangles": 392,
+   "animations": [],
+   "parts": [
+    "castle-door"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "castle-gate",
+   "file": "castle-gate.glb",
+   "kb": 65,
+   "triangles": 716,
+   "animations": [],
+   "parts": [
+    "castle-gate"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "castle-wall",
+   "file": "castle-wall.glb",
+   "kb": 29,
+   "triangles": 306,
+   "animations": [],
+   "parts": [
+    "castle-wall"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "castle-window",
+   "file": "castle-window.glb",
+   "kb": 27,
+   "triangles": 292,
+   "animations": [],
+   "parts": [
+    "castle-window"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "chest",
+   "file": "chest.glb",
+   "kb": 24,
+   "triangles": 232,
+   "animations": [
+    "open",
+    "close",
+    "open-close"
+   ],
+   "parts": [
+    "chest",
+    "lid"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "crate-bottles",
+   "file": "crate-bottles.glb",
+   "kb": 57,
+   "triangles": 572,
+   "animations": [],
+   "parts": [
+    "crate-bottles"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "crate",
+   "file": "crate.glb",
+   "kb": 9,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "crate"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "flag-high-pennant",
+   "file": "flag-high-pennant.glb",
+   "kb": 13,
+   "triangles": 118,
+   "animations": [],
+   "parts": [
+    "flag-high-pennant"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "flag-high",
+   "file": "flag-high.glb",
+   "kb": 14,
+   "triangles": 144,
+   "animations": [],
+   "parts": [
+    "flag-high"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "flag-pennant",
+   "file": "flag-pennant.glb",
+   "kb": 13,
+   "triangles": 118,
+   "animations": [],
+   "parts": [
+    "flag-pennant"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "flag-pirate-high-pennant",
+   "file": "flag-pirate-high-pennant.glb",
+   "kb": 13,
+   "triangles": 118,
+   "animations": [],
+   "parts": [
+    "flag-pirate-high-pennant"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "flag-pirate-high",
+   "file": "flag-pirate-high.glb",
+   "kb": 14,
+   "triangles": 144,
+   "animations": [],
+   "parts": [
+    "flag-pirate-high"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "flag-pirate-pennant",
+   "file": "flag-pirate-pennant.glb",
+   "kb": 13,
+   "triangles": 118,
+   "animations": [],
+   "parts": [
+    "flag-pirate-pennant"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "flag-pirate",
+   "file": "flag-pirate.glb",
+   "kb": 14,
+   "triangles": 144,
+   "animations": [],
+   "parts": [
+    "flag-pirate"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "flag",
+   "file": "flag.glb",
+   "kb": 14,
+   "triangles": 144,
+   "animations": [],
+   "parts": [
+    "flag"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "grass-patch",
+   "file": "grass-patch.glb",
+   "kb": 37,
+   "triangles": 360,
+   "animations": [],
+   "parts": [
+    "grass-patch"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "grass-plant",
+   "file": "grass-plant.glb",
+   "kb": 14,
+   "triangles": 144,
+   "animations": [],
+   "parts": [
+    "grass-plant"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "grass",
+   "file": "grass.glb",
+   "kb": 8,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "grass"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "hole",
+   "file": "hole.glb",
+   "kb": 27,
+   "triangles": 286,
+   "animations": [],
+   "parts": [
+    "hole"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "mast-ropes",
+   "file": "mast-ropes.glb",
+   "kb": 35,
+   "triangles": 350,
+   "animations": [],
+   "parts": [
+    "mast-ropes",
+    "sail-a",
+    "flag-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "mast",
+   "file": "mast.glb",
+   "kb": 30,
+   "triangles": 302,
+   "animations": [],
+   "parts": [
+    "mast",
+    "sail-a",
+    "flag-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "palm-bend",
+   "file": "palm-bend.glb",
+   "kb": 35,
+   "triangles": 338,
+   "animations": [],
+   "parts": [
+    "palm-bend"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "palm-detailed-bend",
+   "file": "palm-detailed-bend.glb",
+   "kb": 50,
+   "triangles": 482,
+   "animations": [],
+   "parts": [
+    "palm-detailed-bend"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "palm-detailed-straight",
+   "file": "palm-detailed-straight.glb",
+   "kb": 50,
+   "triangles": 482,
+   "animations": [],
+   "parts": [
+    "palm-detailed-straight"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "palm-straight",
+   "file": "palm-straight.glb",
+   "kb": 35,
+   "triangles": 338,
+   "animations": [],
+   "parts": [
+    "palm-straight"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "patch-grass-foliage",
+   "file": "patch-grass-foliage.glb",
+   "kb": 29,
+   "triangles": 300,
+   "animations": [],
+   "parts": [
+    "patch-grass-foliage"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "patch-grass",
+   "file": "patch-grass.glb",
+   "kb": 8,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "patch-grass"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "patch-sand-foliage",
+   "file": "patch-sand-foliage.glb",
+   "kb": 61,
+   "triangles": 636,
+   "animations": [],
+   "parts": [
+    "patch-sand-foliage"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "patch-sand",
+   "file": "patch-sand.glb",
+   "kb": 9,
+   "triangles": 108,
+   "animations": [],
+   "parts": [
+    "patch-sand"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "platform-planks",
+   "file": "platform-planks.glb",
+   "kb": 6,
+   "triangles": 48,
+   "animations": [],
+   "parts": [
+    "platform-planks"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "platform",
+   "file": "platform.glb",
+   "kb": 7,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "platform"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "rocks-a",
+   "file": "rocks-a.glb",
+   "kb": 26,
+   "triangles": 264,
+   "animations": [],
+   "parts": [
+    "rocks-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "rocks-b",
+   "file": "rocks-b.glb",
+   "kb": 30,
+   "triangles": 300,
+   "animations": [],
+   "parts": [
+    "rocks-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "rocks-c",
+   "file": "rocks-c.glb",
+   "kb": 23,
+   "triangles": 232,
+   "animations": [],
+   "parts": [
+    "rocks-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "rocks-sand-a",
+   "file": "rocks-sand-a.glb",
+   "kb": 55,
+   "triangles": 552,
+   "animations": [],
+   "parts": [
+    "rocks-sand-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "rocks-sand-b",
+   "file": "rocks-sand-b.glb",
+   "kb": 52,
+   "triangles": 516,
+   "animations": [],
+   "parts": [
+    "rocks-sand-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "rocks-sand-c",
+   "file": "rocks-sand-c.glb",
+   "kb": 45,
+   "triangles": 448,
+   "animations": [],
+   "parts": [
+    "rocks-sand-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ship-ghost",
+   "file": "ship-ghost.glb",
+   "kb": 152,
+   "triangles": 1703,
+   "animations": [],
+   "parts": [
+    "ship-ghost",
+    "flag-b",
+    "flag-c",
+    "sail-a",
+    "sail-b",
+    "flag-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ship-large",
+   "file": "ship-large.glb",
+   "kb": 152,
+   "triangles": 1849,
+   "animations": [],
+   "parts": [
+    "ship-large",
+    "flag-a",
+    "sail-b",
+    "sail-a",
+    "flag-c",
+    "flag-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ship-medium",
+   "file": "ship-medium.glb",
+   "kb": 141,
+   "triangles": 1723,
+   "animations": [],
+   "parts": [
+    "ship-medium",
+    "sail-b",
+    "sail-a",
+    "flag-c",
+    "flag-b",
+    "flag-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ship-pirate-large",
+   "file": "ship-pirate-large.glb",
+   "kb": 173,
+   "triangles": 1938,
+   "animations": [],
+   "parts": [
+    "ship-pirate-large",
+    "sail-b",
+    "sail-a",
+    "flag-c",
+    "flag-c",
+    "flag-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ship-pirate-medium",
+   "file": "ship-pirate-medium.glb",
+   "kb": 162,
+   "triangles": 1812,
+   "animations": [],
+   "parts": [
+    "ship-pirate-medium",
+    "flag-b",
+    "sail-b",
+    "sail-a",
+    "flag-c",
+    "flag-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ship-pirate-small",
+   "file": "ship-pirate-small.glb",
+   "kb": 128,
+   "triangles": 1461,
+   "animations": [],
+   "parts": [
+    "ship-pirate-small",
+    "sail-a",
+    "flag-b",
+    "flag-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ship-small",
+   "file": "ship-small.glb",
+   "kb": 113,
+   "triangles": 1370,
+   "animations": [],
+   "parts": [
+    "ship-small",
+    "flag-a",
+    "flag-b",
+    "sail-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ship-wreck",
+   "file": "ship-wreck.glb",
+   "kb": 218,
+   "triangles": 2282,
+   "animations": [],
+   "parts": [
+    "ship-wreck",
+    "grass",
+    "grass",
+    "grass",
+    "grass",
+    "grass",
+    "grass",
+    "grass",
+    "grass",
+    "grass",
+    "Group",
+    "sail-a",
+    "Group",
+    "Group",
+    "Group",
+    "Group"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "structure-fence-sides",
+   "file": "structure-fence-sides.glb",
+   "kb": 43,
+   "triangles": 436,
+   "animations": [],
+   "parts": [
+    "structure-fence-sides",
+    "Group"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "structure-fence",
+   "file": "structure-fence.glb",
+   "kb": 34,
+   "triangles": 356,
+   "animations": [],
+   "parts": [
+    "structure-fence"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "structure-platform-dock-small",
+   "file": "structure-platform-dock-small.glb",
+   "kb": 31,
+   "triangles": 312,
+   "animations": [],
+   "parts": [
+    "structure-platform-dock-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "structure-platform-dock",
+   "file": "structure-platform-dock.glb",
+   "kb": 32,
+   "triangles": 324,
+   "animations": [],
+   "parts": [
+    "structure-platform-dock"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "structure-platform-small",
+   "file": "structure-platform-small.glb",
+   "kb": 22,
+   "triangles": 208,
+   "animations": [],
+   "parts": [
+    "structure-platform-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "structure-platform",
+   "file": "structure-platform.glb",
+   "kb": 23,
+   "triangles": 220,
+   "animations": [],
+   "parts": [
+    "structure-platform"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "structure-roof",
+   "file": "structure-roof.glb",
+   "kb": 33,
+   "triangles": 348,
+   "animations": [],
+   "parts": [
+    "structure-roof"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "structure",
+   "file": "structure.glb",
+   "kb": 27,
+   "triangles": 276,
+   "animations": [],
+   "parts": [
+    "structure"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tool-paddle",
+   "file": "tool-paddle.glb",
+   "kb": 6,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "tool-paddle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tool-shovel",
+   "file": "tool-shovel.glb",
+   "kb": 15,
+   "triangles": 168,
+   "animations": [],
+   "parts": [
+    "tool-shovel"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-base-door",
+   "file": "tower-base-door.glb",
+   "kb": 12,
+   "triangles": 130,
+   "animations": [],
+   "parts": [
+    "tower-base-door"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-base",
+   "file": "tower-base.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "tower-base"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-complete-large",
+   "file": "tower-complete-large.glb",
+   "kb": 53,
+   "triangles": 604,
+   "animations": [],
+   "parts": [
+    "tower-complete-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-complete-small",
+   "file": "tower-complete-small.glb",
+   "kb": 57,
+   "triangles": 650,
+   "animations": [],
+   "parts": [
+    "tower-complete-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-middle-windows",
+   "file": "tower-middle-windows.glb",
+   "kb": 22,
+   "triangles": 242,
+   "animations": [],
+   "parts": [
+    "tower-middle-windows"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-middle",
+   "file": "tower-middle.glb",
+   "kb": 20,
+   "triangles": 210,
+   "animations": [],
+   "parts": [
+    "tower-middle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-roof",
+   "file": "tower-roof.glb",
+   "kb": 11,
+   "triangles": 110,
+   "animations": [],
+   "parts": [
+    "tower-roof"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-top",
+   "file": "tower-top.glb",
+   "kb": 28,
+   "triangles": 334,
+   "animations": [],
+   "parts": [
+    "tower-top"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tower-watch",
+   "file": "tower-watch.glb",
+   "kb": 21,
+   "triangles": 248,
+   "animations": [],
+   "parts": [
+    "tower-watch"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  }
+ ]
+}

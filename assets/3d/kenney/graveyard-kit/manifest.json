@@ -1,0 +1,1392 @@
+{
+ "pack": "kenney-graveyard-kit",
+ "kind": "model3d",
+ "source": "https://kenney.nl/assets/graveyard-kit",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 91,
+ "items": [
+  {
+   "name": "altar-stone",
+   "file": "altar-stone.glb",
+   "kb": 16,
+   "triangles": 166,
+   "animations": [],
+   "parts": [
+    "altar-stone"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "altar-wood",
+   "file": "altar-wood.glb",
+   "kb": 27,
+   "triangles": 306,
+   "animations": [],
+   "parts": [
+    "altar-wood"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bench-damaged",
+   "file": "bench-damaged.glb",
+   "kb": 22,
+   "triangles": 240,
+   "animations": [],
+   "parts": [
+    "bench-damaged"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bench",
+   "file": "bench.glb",
+   "kb": 15,
+   "triangles": 160,
+   "animations": [],
+   "parts": [
+    "bench"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "border-pillar",
+   "file": "border-pillar.glb",
+   "kb": 11,
+   "triangles": 104,
+   "animations": [],
+   "parts": [
+    "border-pillar"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "brick-wall-curve-small",
+   "file": "brick-wall-curve-small.glb",
+   "kb": 49,
+   "triangles": 524,
+   "animations": [],
+   "parts": [
+    "brick-wall-curve-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "brick-wall-curve",
+   "file": "brick-wall-curve.glb",
+   "kb": 33,
+   "triangles": 348,
+   "animations": [],
+   "parts": [
+    "brick-wall-curve"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "brick-wall-end",
+   "file": "brick-wall-end.glb",
+   "kb": 30,
+   "triangles": 316,
+   "animations": [],
+   "parts": [
+    "brick-wall-end"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "brick-wall",
+   "file": "brick-wall.glb",
+   "kb": 18,
+   "triangles": 192,
+   "animations": [],
+   "parts": [
+    "brick-wall"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "candle-multiple",
+   "file": "candle-multiple.glb",
+   "kb": 16,
+   "triangles": 162,
+   "animations": [],
+   "parts": [
+    "candle-multiple"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "candle",
+   "file": "candle.glb",
+   "kb": 6,
+   "triangles": 54,
+   "animations": [],
+   "parts": [
+    "candle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "character-ghost",
+   "file": "character-ghost.glb",
+   "kb": 111,
+   "triangles": 413,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "sprint",
+    "jump",
+    "fall",
+    "crouch",
+    "sit",
+    "drive",
+    "die",
+    "pick-up",
+    "emote-yes",
+    "emote-no",
+    "holding-right",
+    "holding-left",
+    "holding-both",
+    "holding-right-shoot",
+    "holding-left-shoot",
+    "holding-both-shoot",
+    "attack-melee-right",
+    "attack-melee-left",
+    "attack-kick-right",
+    "attack-kick-left",
+    "interact-right",
+    "interact-left",
+    "wheelchair-sit",
+    "wheelchair-look-left",
+    "wheelchair-look-right",
+    "wheelchair-move-forward",
+    "wheelchair-move-back",
+    "wheelchair-move-left",
+    "wheelchair-move-right"
+   ],
+   "parts": [
+    "torso",
+    "arm-right",
+    "arm-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "character-keeper",
+   "file": "character-keeper.glb",
+   "kb": 244,
+   "triangles": 1141,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "sprint",
+    "jump",
+    "fall",
+    "crouch",
+    "sit",
+    "drive",
+    "die",
+    "pick-up",
+    "emote-yes",
+    "emote-no",
+    "holding-right",
+    "holding-left",
+    "holding-both",
+    "holding-right-shoot",
+    "holding-left-shoot",
+    "holding-both-shoot",
+    "attack-melee-right",
+    "attack-melee-left",
+    "attack-kick-right",
+    "attack-kick-left",
+    "interact-right",
+    "interact-left",
+    "wheelchair-sit",
+    "wheelchair-look-left",
+    "wheelchair-look-right",
+    "wheelchair-move-forward",
+    "wheelchair-move-back",
+    "wheelchair-move-left",
+    "wheelchair-move-right"
+   ],
+   "parts": [
+    "leg-right",
+    "torso",
+    "head",
+    "arm-right",
+    "arm-left",
+    "leg-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "character-skeleton",
+   "file": "character-skeleton.glb",
+   "kb": 198,
+   "triangles": 658,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "sprint",
+    "jump",
+    "fall",
+    "crouch",
+    "sit",
+    "drive",
+    "die",
+    "pick-up",
+    "emote-yes",
+    "emote-no",
+    "holding-right",
+    "holding-left",
+    "holding-both",
+    "holding-right-shoot",
+    "holding-left-shoot",
+    "holding-both-shoot",
+    "attack-melee-right",
+    "attack-melee-left",
+    "attack-kick-right",
+    "attack-kick-left",
+    "interact-right",
+    "interact-left",
+    "wheelchair-sit",
+    "wheelchair-look-left",
+    "wheelchair-look-right",
+    "wheelchair-move-forward",
+    "wheelchair-move-back",
+    "wheelchair-move-left",
+    "wheelchair-move-right"
+   ],
+   "parts": [
+    "leg-left",
+    "torso",
+    "head",
+    "arm-right",
+    "arm-left",
+    "leg-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "character-vampire",
+   "file": "character-vampire.glb",
+   "kb": 242,
+   "triangles": 1100,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "sprint",
+    "jump",
+    "fall",
+    "crouch",
+    "sit",
+    "drive",
+    "die",
+    "pick-up",
+    "emote-yes",
+    "emote-no",
+    "holding-right",
+    "holding-left",
+    "holding-both",
+    "holding-right-shoot",
+    "holding-left-shoot",
+    "holding-both-shoot",
+    "attack-melee-right",
+    "attack-melee-left",
+    "attack-kick-right",
+    "attack-kick-left",
+    "interact-right",
+    "interact-left",
+    "wheelchair-sit",
+    "wheelchair-look-left",
+    "wheelchair-look-right",
+    "wheelchair-move-forward",
+    "wheelchair-move-back",
+    "wheelchair-move-left",
+    "wheelchair-move-right"
+   ],
+   "parts": [
+    "torso",
+    "arm-right",
+    "arm-left",
+    "head",
+    "leg-right",
+    "leg-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "character-zombie",
+   "file": "character-zombie.glb",
+   "kb": 239,
+   "triangles": 1078,
+   "animations": [
+    "static",
+    "idle",
+    "walk",
+    "sprint",
+    "jump",
+    "fall",
+    "crouch",
+    "sit",
+    "drive",
+    "die",
+    "pick-up",
+    "emote-yes",
+    "emote-no",
+    "holding-right",
+    "holding-left",
+    "holding-both",
+    "holding-right-shoot",
+    "holding-left-shoot",
+    "holding-both-shoot",
+    "attack-melee-right",
+    "attack-melee-left",
+    "attack-kick-right",
+    "attack-kick-left",
+    "interact-right",
+    "interact-left",
+    "wheelchair-sit",
+    "wheelchair-look-left",
+    "wheelchair-look-right",
+    "wheelchair-move-forward",
+    "wheelchair-move-back",
+    "wheelchair-move-left",
+    "wheelchair-move-right"
+   ],
+   "parts": [
+    "leg-left",
+    "leg-right",
+    "torso",
+    "arm-left",
+    "arm-right",
+    "head"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coffin-old",
+   "file": "coffin-old.glb",
+   "kb": 19,
+   "triangles": 216,
+   "animations": [],
+   "parts": [
+    "coffin-old"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coffin",
+   "file": "coffin.glb",
+   "kb": 24,
+   "triangles": 256,
+   "animations": [],
+   "parts": [
+    "coffin",
+    "lid"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "column-large",
+   "file": "column-large.glb",
+   "kb": 36,
+   "triangles": 394,
+   "animations": [],
+   "parts": [
+    "column-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cross-column",
+   "file": "cross-column.glb",
+   "kb": 20,
+   "triangles": 200,
+   "animations": [],
+   "parts": [
+    "cross-column"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cross-wood",
+   "file": "cross-wood.glb",
+   "kb": 12,
+   "triangles": 126,
+   "animations": [],
+   "parts": [
+    "cross-wood"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cross",
+   "file": "cross.glb",
+   "kb": 15,
+   "triangles": 158,
+   "animations": [],
+   "parts": [
+    "cross"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "crypt-a",
+   "file": "crypt-a.glb",
+   "kb": 10,
+   "triangles": 108,
+   "animations": [],
+   "parts": [
+    "crypt-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "crypt-b",
+   "file": "crypt-b.glb",
+   "kb": 11,
+   "triangles": 118,
+   "animations": [],
+   "parts": [
+    "crypt-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "crypt-door",
+   "file": "crypt-door.glb",
+   "kb": 15,
+   "triangles": 136,
+   "animations": [
+    "open",
+    "close",
+    "open-and-close"
+   ],
+   "parts": [
+    "door"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "crypt-large-door",
+   "file": "crypt-large-door.glb",
+   "kb": 21,
+   "triangles": 200,
+   "animations": [
+    "open",
+    "close",
+    "open-and-close"
+   ],
+   "parts": [
+    "door"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "crypt-large-roof",
+   "file": "crypt-large-roof.glb",
+   "kb": 34,
+   "triangles": 406,
+   "animations": [],
+   "parts": [
+    "crypt-large-roof"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "crypt-large",
+   "file": "crypt-large.glb",
+   "kb": 53,
+   "triangles": 626,
+   "animations": [],
+   "parts": [
+    "crypt-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "crypt-small-roof",
+   "file": "crypt-small-roof.glb",
+   "kb": 26,
+   "triangles": 275,
+   "animations": [],
+   "parts": [
+    "crypt-small-roof"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "crypt-small",
+   "file": "crypt-small.glb",
+   "kb": 36,
+   "triangles": 414,
+   "animations": [],
+   "parts": [
+    "crypt-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "crypt",
+   "file": "crypt.glb",
+   "kb": 24,
+   "triangles": 252,
+   "animations": [],
+   "parts": [
+    "crypt"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "debris-wood",
+   "file": "debris-wood.glb",
+   "kb": 10,
+   "triangles": 108,
+   "animations": [],
+   "parts": [
+    "debris-wood"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "debris",
+   "file": "debris.glb",
+   "kb": 24,
+   "triangles": 240,
+   "animations": [],
+   "parts": [
+    "debris"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "detail-bowl",
+   "file": "detail-bowl.glb",
+   "kb": 17,
+   "triangles": 176,
+   "animations": [],
+   "parts": [
+    "detail-bowl"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "detail-chalice",
+   "file": "detail-chalice.glb",
+   "kb": 13,
+   "triangles": 136,
+   "animations": [],
+   "parts": [
+    "detail-chalice"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "detail-plate",
+   "file": "detail-plate.glb",
+   "kb": 11,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "detail-plate"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fence-damaged",
+   "file": "fence-damaged.glb",
+   "kb": 29,
+   "triangles": 320,
+   "animations": [],
+   "parts": [
+    "fence-damaged"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fence-gate",
+   "file": "fence-gate.glb",
+   "kb": 28,
+   "triangles": 296,
+   "animations": [],
+   "parts": [
+    "fence-gate"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fence",
+   "file": "fence.glb",
+   "kb": 39,
+   "triangles": 432,
+   "animations": [],
+   "parts": [
+    "fence"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fire-basket",
+   "file": "fire-basket.glb",
+   "kb": 18,
+   "triangles": 196,
+   "animations": [],
+   "parts": [
+    "fire-basket"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "grave-border",
+   "file": "grave-border.glb",
+   "kb": 56,
+   "triangles": 600,
+   "animations": [],
+   "parts": [
+    "grave-border"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "grave",
+   "file": "grave.glb",
+   "kb": 24,
+   "triangles": 256,
+   "animations": [],
+   "parts": [
+    "grave"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "gravestone-bevel",
+   "file": "gravestone-bevel.glb",
+   "kb": 15,
+   "triangles": 174,
+   "animations": [],
+   "parts": [
+    "gravestone-bevel"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "gravestone-broken",
+   "file": "gravestone-broken.glb",
+   "kb": 12,
+   "triangles": 134,
+   "animations": [],
+   "parts": [
+    "gravestone-broken"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "gravestone-cross-large",
+   "file": "gravestone-cross-large.glb",
+   "kb": 17,
+   "triangles": 192,
+   "animations": [],
+   "parts": [
+    "gravestone-cross-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "gravestone-cross",
+   "file": "gravestone-cross.glb",
+   "kb": 20,
+   "triangles": 222,
+   "animations": [],
+   "parts": [
+    "gravestone-cross"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "gravestone-debris",
+   "file": "gravestone-debris.glb",
+   "kb": 11,
+   "triangles": 122,
+   "animations": [],
+   "parts": [
+    "gravestone-debris"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "gravestone-decorative",
+   "file": "gravestone-decorative.glb",
+   "kb": 9,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "gravestone-decorative"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "gravestone-roof",
+   "file": "gravestone-roof.glb",
+   "kb": 15,
+   "triangles": 172,
+   "animations": [],
+   "parts": [
+    "gravestone-roof"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "gravestone-round",
+   "file": "gravestone-round.glb",
+   "kb": 16,
+   "triangles": 178,
+   "animations": [],
+   "parts": [
+    "gravestone-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "gravestone-wide",
+   "file": "gravestone-wide.glb",
+   "kb": 22,
+   "triangles": 266,
+   "animations": [],
+   "parts": [
+    "gravestone-wide"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "hay-bale-bundled",
+   "file": "hay-bale-bundled.glb",
+   "kb": 34,
+   "triangles": 364,
+   "animations": [],
+   "parts": [
+    "hay-bale-bundled"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "hay-bale",
+   "file": "hay-bale.glb",
+   "kb": 17,
+   "triangles": 180,
+   "animations": [],
+   "parts": [
+    "hay-bale"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "iron-fence-bar",
+   "file": "iron-fence-bar.glb",
+   "kb": 9,
+   "triangles": 88,
+   "animations": [],
+   "parts": [
+    "iron-fence-bar"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "iron-fence-border-column",
+   "file": "iron-fence-border-column.glb",
+   "kb": 39,
+   "triangles": 400,
+   "animations": [],
+   "parts": [
+    "iron-fence-border-column"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "iron-fence-border-curve",
+   "file": "iron-fence-border-curve.glb",
+   "kb": 53,
+   "triangles": 576,
+   "animations": [],
+   "parts": [
+    "iron-fence-border-curve"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "iron-fence-border-gate",
+   "file": "iron-fence-border-gate.glb",
+   "kb": 25,
+   "triangles": 256,
+   "animations": [],
+   "parts": [
+    "iron-fence-border-gate"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "iron-fence-border",
+   "file": "iron-fence-border.glb",
+   "kb": 38,
+   "triangles": 380,
+   "animations": [],
+   "parts": [
+    "iron-fence-border"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "iron-fence-curve",
+   "file": "iron-fence-curve.glb",
+   "kb": 45,
+   "triangles": 472,
+   "animations": [],
+   "parts": [
+    "iron-fence-curve"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "iron-fence-damaged",
+   "file": "iron-fence-damaged.glb",
+   "kb": 34,
+   "triangles": 336,
+   "animations": [],
+   "parts": [
+    "iron-fence-damaged"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "iron-fence",
+   "file": "iron-fence.glb",
+   "kb": 37,
+   "triangles": 376,
+   "animations": [],
+   "parts": [
+    "iron-fence"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "lantern-candle",
+   "file": "lantern-candle.glb",
+   "kb": 21,
+   "triangles": 224,
+   "animations": [],
+   "parts": [
+    "lantern-candle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "lantern-glass",
+   "file": "lantern-glass.glb",
+   "kb": 18,
+   "triangles": 186,
+   "animations": [],
+   "parts": [
+    "lantern-glass"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "lightpost-all",
+   "file": "lightpost-all.glb",
+   "kb": 91,
+   "triangles": 1012,
+   "animations": [],
+   "parts": [
+    "lightpost-all"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "lightpost-double",
+   "file": "lightpost-double.glb",
+   "kb": 52,
+   "triangles": 572,
+   "animations": [],
+   "parts": [
+    "lightpost-double"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "lightpost-single",
+   "file": "lightpost-single.glb",
+   "kb": 33,
+   "triangles": 352,
+   "animations": [],
+   "parts": [
+    "lightpost-single"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pillar-large",
+   "file": "pillar-large.glb",
+   "kb": 16,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "pillar-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pillar-obelisk",
+   "file": "pillar-obelisk.glb",
+   "kb": 8,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "pillar-obelisk"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pillar-small",
+   "file": "pillar-small.glb",
+   "kb": 10,
+   "triangles": 96,
+   "animations": [],
+   "parts": [
+    "pillar-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pillar-square",
+   "file": "pillar-square.glb",
+   "kb": 17,
+   "triangles": 178,
+   "animations": [],
+   "parts": [
+    "pillar-square"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pine-crooked",
+   "file": "pine-crooked.glb",
+   "kb": 35,
+   "triangles": 336,
+   "animations": [],
+   "parts": [
+    "pine-crooked"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pine-fall-crooked",
+   "file": "pine-fall-crooked.glb",
+   "kb": 35,
+   "triangles": 336,
+   "animations": [],
+   "parts": [
+    "pine-fall-crooked"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pine-fall",
+   "file": "pine-fall.glb",
+   "kb": 35,
+   "triangles": 336,
+   "animations": [],
+   "parts": [
+    "pine-fall"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pine",
+   "file": "pine.glb",
+   "kb": 35,
+   "triangles": 336,
+   "animations": [],
+   "parts": [
+    "pine"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pumpkin-carved",
+   "file": "pumpkin-carved.glb",
+   "kb": 45,
+   "triangles": 486,
+   "animations": [],
+   "parts": [
+    "pumpkin-carved"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pumpkin-tall-carved",
+   "file": "pumpkin-tall-carved.glb",
+   "kb": 43,
+   "triangles": 460,
+   "animations": [],
+   "parts": [
+    "pumpkin-tall-carved"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pumpkin-tall",
+   "file": "pumpkin-tall.glb",
+   "kb": 34,
+   "triangles": 348,
+   "animations": [],
+   "parts": [
+    "pumpkin-tall"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pumpkin",
+   "file": "pumpkin.glb",
+   "kb": 34,
+   "triangles": 348,
+   "animations": [],
+   "parts": [
+    "pumpkin"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "road",
+   "file": "road.glb",
+   "kb": 28,
+   "triangles": 308,
+   "animations": [],
+   "parts": [
+    "road"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "rocks-tall",
+   "file": "rocks-tall.glb",
+   "kb": 36,
+   "triangles": 364,
+   "animations": [],
+   "parts": [
+    "rocks-tall"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "rocks",
+   "file": "rocks.glb",
+   "kb": 35,
+   "triangles": 364,
+   "animations": [],
+   "parts": [
+    "rocks"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "shovel-dirt",
+   "file": "shovel-dirt.glb",
+   "kb": 25,
+   "triangles": 280,
+   "animations": [],
+   "parts": [
+    "shovel-dirt"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "shovel",
+   "file": "shovel.glb",
+   "kb": 13,
+   "triangles": 148,
+   "animations": [],
+   "parts": [
+    "shovel"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stone-wall-column",
+   "file": "stone-wall-column.glb",
+   "kb": 13,
+   "triangles": 138,
+   "animations": [],
+   "parts": [
+    "stone-wall-column"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stone-wall-curve",
+   "file": "stone-wall-curve.glb",
+   "kb": 26,
+   "triangles": 266,
+   "animations": [],
+   "parts": [
+    "stone-wall-curve"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stone-wall-damaged",
+   "file": "stone-wall-damaged.glb",
+   "kb": 13,
+   "triangles": 144,
+   "animations": [],
+   "parts": [
+    "stone-wall-damaged"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "stone-wall",
+   "file": "stone-wall.glb",
+   "kb": 6,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "stone-wall"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "trunk-long",
+   "file": "trunk-long.glb",
+   "kb": 30,
+   "triangles": 312,
+   "animations": [],
+   "parts": [
+    "trunk-long"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "trunk",
+   "file": "trunk.glb",
+   "kb": 26,
+   "triangles": 274,
+   "animations": [],
+   "parts": [
+    "trunk"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "urn-round",
+   "file": "urn-round.glb",
+   "kb": 23,
+   "triangles": 230,
+   "animations": [],
+   "parts": [
+    "urn-round",
+    "lid"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "urn-square",
+   "file": "urn-square.glb",
+   "kb": 21,
+   "triangles": 218,
+   "animations": [],
+   "parts": [
+    "urn-square",
+    "lid"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  }
+ ]
+}

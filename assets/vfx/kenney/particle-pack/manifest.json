@@ -1,0 +1,411 @@
+{
+ "pack": "kenney-particle-pack",
+ "kind": "image",
+ "source": "https://kenney.nl/assets/particle-pack",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 80,
+ "items": [
+  {
+   "name": "circle_01",
+   "file": "circle_01.png",
+   "kb": 68
+  },
+  {
+   "name": "circle_02",
+   "file": "circle_02.png",
+   "kb": 42
+  },
+  {
+   "name": "circle_03",
+   "file": "circle_03.png",
+   "kb": 71
+  },
+  {
+   "name": "circle_04",
+   "file": "circle_04.png",
+   "kb": 58
+  },
+  {
+   "name": "circle_05",
+   "file": "circle_05.png",
+   "kb": 63
+  },
+  {
+   "name": "dirt_01",
+   "file": "dirt_01.png",
+   "kb": 46
+  },
+  {
+   "name": "dirt_02",
+   "file": "dirt_02.png",
+   "kb": 52
+  },
+  {
+   "name": "dirt_03",
+   "file": "dirt_03.png",
+   "kb": 112
+  },
+  {
+   "name": "fire_01",
+   "file": "fire_01.png",
+   "kb": 97
+  },
+  {
+   "name": "fire_02",
+   "file": "fire_02.png",
+   "kb": 86
+  },
+  {
+   "name": "flame_01",
+   "file": "flame_01.png",
+   "kb": 52
+  },
+  {
+   "name": "flame_02",
+   "file": "flame_02.png",
+   "kb": 66
+  },
+  {
+   "name": "flame_03",
+   "file": "flame_03.png",
+   "kb": 48
+  },
+  {
+   "name": "flame_04",
+   "file": "flame_04.png",
+   "kb": 69
+  },
+  {
+   "name": "flame_05",
+   "file": "flame_05.png",
+   "kb": 13
+  },
+  {
+   "name": "flame_06",
+   "file": "flame_06.png",
+   "kb": 15
+  },
+  {
+   "name": "flare_01",
+   "file": "flare_01.png",
+   "kb": 41
+  },
+  {
+   "name": "light_01",
+   "file": "light_01.png",
+   "kb": 91
+  },
+  {
+   "name": "light_02",
+   "file": "light_02.png",
+   "kb": 91
+  },
+  {
+   "name": "light_03",
+   "file": "light_03.png",
+   "kb": 97
+  },
+  {
+   "name": "magic_01",
+   "file": "magic_01.png",
+   "kb": 79
+  },
+  {
+   "name": "magic_02",
+   "file": "magic_02.png",
+   "kb": 84
+  },
+  {
+   "name": "magic_03",
+   "file": "magic_03.png",
+   "kb": 56
+  },
+  {
+   "name": "magic_04",
+   "file": "magic_04.png",
+   "kb": 48
+  },
+  {
+   "name": "magic_05",
+   "file": "magic_05.png",
+   "kb": 73
+  },
+  {
+   "name": "muzzle_01",
+   "file": "muzzle_01.png",
+   "kb": 79
+  },
+  {
+   "name": "muzzle_02",
+   "file": "muzzle_02.png",
+   "kb": 56
+  },
+  {
+   "name": "muzzle_03",
+   "file": "muzzle_03.png",
+   "kb": 55
+  },
+  {
+   "name": "muzzle_04",
+   "file": "muzzle_04.png",
+   "kb": 61
+  },
+  {
+   "name": "muzzle_05",
+   "file": "muzzle_05.png",
+   "kb": 52
+  },
+  {
+   "name": "scorch_01",
+   "file": "scorch_01.png",
+   "kb": 59
+  },
+  {
+   "name": "scorch_02",
+   "file": "scorch_02.png",
+   "kb": 72
+  },
+  {
+   "name": "scorch_03",
+   "file": "scorch_03.png",
+   "kb": 89
+  },
+  {
+   "name": "scratch_01",
+   "file": "scratch_01.png",
+   "kb": 63
+  },
+  {
+   "name": "slash_01",
+   "file": "slash_01.png",
+   "kb": 24
+  },
+  {
+   "name": "slash_02",
+   "file": "slash_02.png",
+   "kb": 37
+  },
+  {
+   "name": "slash_03",
+   "file": "slash_03.png",
+   "kb": 16
+  },
+  {
+   "name": "slash_04",
+   "file": "slash_04.png",
+   "kb": 17
+  },
+  {
+   "name": "smoke_01",
+   "file": "smoke_01.png",
+   "kb": 95
+  },
+  {
+   "name": "smoke_02",
+   "file": "smoke_02.png",
+   "kb": 94
+  },
+  {
+   "name": "smoke_03",
+   "file": "smoke_03.png",
+   "kb": 38
+  },
+  {
+   "name": "smoke_04",
+   "file": "smoke_04.png",
+   "kb": 95
+  },
+  {
+   "name": "smoke_05",
+   "file": "smoke_05.png",
+   "kb": 81
+  },
+  {
+   "name": "smoke_06",
+   "file": "smoke_06.png",
+   "kb": 60
+  },
+  {
+   "name": "smoke_07",
+   "file": "smoke_07.png",
+   "kb": 76
+  },
+  {
+   "name": "smoke_08",
+   "file": "smoke_08.png",
+   "kb": 88
+  },
+  {
+   "name": "smoke_09",
+   "file": "smoke_09.png",
+   "kb": 85
+  },
+  {
+   "name": "smoke_10",
+   "file": "smoke_10.png",
+   "kb": 88
+  },
+  {
+   "name": "spark_01",
+   "file": "spark_01.png",
+   "kb": 92
+  },
+  {
+   "name": "spark_02",
+   "file": "spark_02.png",
+   "kb": 99
+  },
+  {
+   "name": "spark_03",
+   "file": "spark_03.png",
+   "kb": 77
+  },
+  {
+   "name": "spark_04",
+   "file": "spark_04.png",
+   "kb": 81
+  },
+  {
+   "name": "spark_05",
+   "file": "spark_05.png",
+   "kb": 63
+  },
+  {
+   "name": "spark_06",
+   "file": "spark_06.png",
+   "kb": 45
+  },
+  {
+   "name": "spark_07",
+   "file": "spark_07.png",
+   "kb": 40
+  },
+  {
+   "name": "star_01",
+   "file": "star_01.png",
+   "kb": 41
+  },
+  {
+   "name": "star_02",
+   "file": "star_02.png",
+   "kb": 48
+  },
+  {
+   "name": "star_03",
+   "file": "star_03.png",
+   "kb": 55
+  },
+  {
+   "name": "star_04",
+   "file": "star_04.png",
+   "kb": 29
+  },
+  {
+   "name": "star_05",
+   "file": "star_05.png",
+   "kb": 60
+  },
+  {
+   "name": "star_06",
+   "file": "star_06.png",
+   "kb": 34
+  },
+  {
+   "name": "star_07",
+   "file": "star_07.png",
+   "kb": 31
+  },
+  {
+   "name": "star_08",
+   "file": "star_08.png",
+   "kb": 25
+  },
+  {
+   "name": "star_09",
+   "file": "star_09.png",
+   "kb": 48
+  },
+  {
+   "name": "symbol_01",
+   "file": "symbol_01.png",
+   "kb": 8
+  },
+  {
+   "name": "symbol_02",
+   "file": "symbol_02.png",
+   "kb": 7
+  },
+  {
+   "name": "trace_01",
+   "file": "trace_01.png",
+   "kb": 37
+  },
+  {
+   "name": "trace_02",
+   "file": "trace_02.png",
+   "kb": 38
+  },
+  {
+   "name": "trace_03",
+   "file": "trace_03.png",
+   "kb": 41
+  },
+  {
+   "name": "trace_04",
+   "file": "trace_04.png",
+   "kb": 46
+  },
+  {
+   "name": "trace_05",
+   "file": "trace_05.png",
+   "kb": 41
+  },
+  {
+   "name": "trace_06",
+   "file": "trace_06.png",
+   "kb": 35
+  },
+  {
+   "name": "trace_07",
+   "file": "trace_07.png",
+   "kb": 32
+  },
+  {
+   "name": "twirl_01",
+   "file": "twirl_01.png",
+   "kb": 49
+  },
+  {
+   "name": "twirl_02",
+   "file": "twirl_02.png",
+   "kb": 75
+  },
+  {
+   "name": "twirl_03",
+   "file": "twirl_03.png",
+   "kb": 79
+  },
+  {
+   "name": "window_01",
+   "file": "window_01.png",
+   "kb": 32
+  },
+  {
+   "name": "window_02",
+   "file": "window_02.png",
+   "kb": 38
+  },
+  {
+   "name": "window_03",
+   "file": "window_03.png",
+   "kb": 16
+  },
+  {
+   "name": "window_04",
+   "file": "window_04.png",
+   "kb": 50
+  }
+ ]
+}

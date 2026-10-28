@@ -1,0 +1,2123 @@
+{
+ "pack": "kenney-marble-kit",
+ "kind": "model3d",
+ "source": "https://kenney.nl/assets/marble-kit",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 162,
+ "items": [
+  {
+   "name": "banner-double-high",
+   "file": "banner-double-high.glb",
+   "kb": 12,
+   "triangles": 128,
+   "animations": [],
+   "parts": [
+    "banner-double-high"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "banner-double",
+   "file": "banner-double.glb",
+   "kb": 12,
+   "triangles": 128,
+   "animations": [],
+   "parts": [
+    "banner-double"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "banner-hanging-double-high",
+   "file": "banner-hanging-double-high.glb",
+   "kb": 14,
+   "triangles": 168,
+   "animations": [],
+   "parts": [
+    "banner-hanging-double-high"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "banner-hanging-double",
+   "file": "banner-hanging-double.glb",
+   "kb": 14,
+   "triangles": 168,
+   "animations": [],
+   "parts": [
+    "banner-hanging-double"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "banner-hanging-high",
+   "file": "banner-hanging-high.glb",
+   "kb": 7,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "banner-hanging-high"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "banner-hanging",
+   "file": "banner-hanging.glb",
+   "kb": 7,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "banner-hanging"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "banner-high",
+   "file": "banner-high.glb",
+   "kb": 6,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "banner-high"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "banner",
+   "file": "banner.glb",
+   "kb": 6,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "banner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bend-large",
+   "file": "bend-large.glb",
+   "kb": 43,
+   "triangles": 516,
+   "animations": [],
+   "parts": [
+    "bend-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bend-medium",
+   "file": "bend-medium.glb",
+   "kb": 24,
+   "triangles": 276,
+   "animations": [],
+   "parts": [
+    "bend-medium"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bend-solid-large",
+   "file": "bend-solid-large.glb",
+   "kb": 35,
+   "triangles": 412,
+   "animations": [],
+   "parts": [
+    "bend-solid-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bend-solid-medium",
+   "file": "bend-solid-medium.glb",
+   "kb": 19,
+   "triangles": 220,
+   "animations": [],
+   "parts": [
+    "bend-solid-medium"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bend",
+   "file": "bend.glb",
+   "kb": 38,
+   "triangles": 446,
+   "animations": [],
+   "parts": [
+    "bend"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bump-a",
+   "file": "bump-a.glb",
+   "kb": 35,
+   "triangles": 376,
+   "animations": [],
+   "parts": [
+    "bump-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bump-b",
+   "file": "bump-b.glb",
+   "kb": 35,
+   "triangles": 376,
+   "animations": [],
+   "parts": [
+    "bump-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bump-c",
+   "file": "bump-c.glb",
+   "kb": 35,
+   "triangles": 376,
+   "animations": [],
+   "parts": [
+    "bump-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bump-d",
+   "file": "bump-d.glb",
+   "kb": 35,
+   "triangles": 376,
+   "animations": [],
+   "parts": [
+    "bump-d"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bump-solid-a",
+   "file": "bump-solid-a.glb",
+   "kb": 30,
+   "triangles": 308,
+   "animations": [],
+   "parts": [
+    "bump-solid-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bump-solid-b",
+   "file": "bump-solid-b.glb",
+   "kb": 30,
+   "triangles": 308,
+   "animations": [],
+   "parts": [
+    "bump-solid-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bump-solid-c",
+   "file": "bump-solid-c.glb",
+   "kb": 30,
+   "triangles": 308,
+   "animations": [],
+   "parts": [
+    "bump-solid-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bump-solid-d",
+   "file": "bump-solid-d.glb",
+   "kb": 30,
+   "triangles": 308,
+   "animations": [],
+   "parts": [
+    "bump-solid-d"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "corner-solid",
+   "file": "corner-solid.glb",
+   "kb": 18,
+   "triangles": 200,
+   "animations": [],
+   "parts": [
+    "corner-solid"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "corner",
+   "file": "corner.glb",
+   "kb": 21,
+   "triangles": 244,
+   "animations": [],
+   "parts": [
+    "corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cross",
+   "file": "cross.glb",
+   "kb": 8,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "cross"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "curve-large",
+   "file": "curve-large.glb",
+   "kb": 24,
+   "triangles": 276,
+   "animations": [],
+   "parts": [
+    "curve-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "curve-solid-large",
+   "file": "curve-solid-large.glb",
+   "kb": 20,
+   "triangles": 224,
+   "animations": [],
+   "parts": [
+    "curve-solid-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "curve-solid",
+   "file": "curve-solid.glb",
+   "kb": 11,
+   "triangles": 128,
+   "animations": [],
+   "parts": [
+    "curve-solid"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "curve-wide-large",
+   "file": "curve-wide-large.glb",
+   "kb": 25,
+   "triangles": 296,
+   "animations": [],
+   "parts": [
+    "curve-wide-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "curve-wide-medium",
+   "file": "curve-wide-medium.glb",
+   "kb": 25,
+   "triangles": 296,
+   "animations": [],
+   "parts": [
+    "curve-wide-medium"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "curve-wide-solid-large",
+   "file": "curve-wide-solid-large.glb",
+   "kb": 21,
+   "triangles": 240,
+   "animations": [],
+   "parts": [
+    "curve-wide-solid-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "curve-wide-solid-medium",
+   "file": "curve-wide-solid-medium.glb",
+   "kb": 21,
+   "triangles": 240,
+   "animations": [],
+   "parts": [
+    "curve-wide-solid-medium"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "curve-wide",
+   "file": "curve-wide.glb",
+   "kb": 21,
+   "triangles": 240,
+   "animations": [],
+   "parts": [
+    "curve-wide"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "curve",
+   "file": "curve.glb",
+   "kb": 13,
+   "triangles": 156,
+   "animations": [],
+   "parts": [
+    "curve"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "end-hole-rounded",
+   "file": "end-hole-rounded.glb",
+   "kb": 10,
+   "triangles": 120,
+   "animations": [],
+   "parts": [
+    "end-hole-rounded"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "end-hole-square",
+   "file": "end-hole-square.glb",
+   "kb": 9,
+   "triangles": 104,
+   "animations": [],
+   "parts": [
+    "end-hole-square"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "end-rounded",
+   "file": "end-rounded.glb",
+   "kb": 5,
+   "triangles": 52,
+   "animations": [],
+   "parts": [
+    "end-rounded"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "end-square",
+   "file": "end-square.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "end-square"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fan-four",
+   "file": "fan-four.glb",
+   "kb": 17,
+   "triangles": 178,
+   "animations": [],
+   "parts": [
+    "fan-four",
+    "fan"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fan-simple-four",
+   "file": "fan-simple-four.glb",
+   "kb": 16,
+   "triangles": 156,
+   "animations": [],
+   "parts": [
+    "fan-simple-four",
+    "fan"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fan-simple-two",
+   "file": "fan-simple-two.glb",
+   "kb": 12,
+   "triangles": 108,
+   "animations": [],
+   "parts": [
+    "fan-simple-two",
+    "fan"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fan-standing-four",
+   "file": "fan-standing-four.glb",
+   "kb": 19,
+   "triangles": 210,
+   "animations": [],
+   "parts": [
+    "fan-standing-four",
+    "fan"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fan-standing-two",
+   "file": "fan-standing-two.glb",
+   "kb": 15,
+   "triangles": 162,
+   "animations": [],
+   "parts": [
+    "fan-standing-two",
+    "fan"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fan-two",
+   "file": "fan-two.glb",
+   "kb": 13,
+   "triangles": 130,
+   "animations": [],
+   "parts": [
+    "fan-two",
+    "fan"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "funnel-long",
+   "file": "funnel-long.glb",
+   "kb": 8,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "funnel-long"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "funnel",
+   "file": "funnel.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "funnel"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "helix-half-left",
+   "file": "helix-half-left.glb",
+   "kb": 44,
+   "triangles": 324,
+   "animations": [],
+   "parts": [
+    "helix-half-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "helix-half-right",
+   "file": "helix-half-right.glb",
+   "kb": 44,
+   "triangles": 324,
+   "animations": [],
+   "parts": [
+    "helix-half-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "helix-large-half-left",
+   "file": "helix-large-half-left.glb",
+   "kb": 81,
+   "triangles": 588,
+   "animations": [],
+   "parts": [
+    "helix-large-half-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "helix-large-half-right",
+   "file": "helix-large-half-right.glb",
+   "kb": 81,
+   "triangles": 588,
+   "animations": [],
+   "parts": [
+    "helix-large-half-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "helix-large-left",
+   "file": "helix-large-left.glb",
+   "kb": 159,
+   "triangles": 1160,
+   "animations": [],
+   "parts": [
+    "helix-large-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "helix-large-quarter-left",
+   "file": "helix-large-quarter-left.glb",
+   "kb": 42,
+   "triangles": 302,
+   "animations": [],
+   "parts": [
+    "helix-large-quarter-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "helix-large-quarter-right",
+   "file": "helix-large-quarter-right.glb",
+   "kb": 42,
+   "triangles": 302,
+   "animations": [],
+   "parts": [
+    "helix-large-quarter-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "helix-large-right",
+   "file": "helix-large-right.glb",
+   "kb": 159,
+   "triangles": 1160,
+   "animations": [],
+   "parts": [
+    "helix-large-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "helix-left",
+   "file": "helix-left.glb",
+   "kb": 86,
+   "triangles": 632,
+   "animations": [],
+   "parts": [
+    "helix-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "helix-quarter-left",
+   "file": "helix-quarter-left.glb",
+   "kb": 23,
+   "triangles": 170,
+   "animations": [],
+   "parts": [
+    "helix-quarter-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "helix-quarter-right",
+   "file": "helix-quarter-right.glb",
+   "kb": 23,
+   "triangles": 170,
+   "animations": [],
+   "parts": [
+    "helix-quarter-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "helix-right",
+   "file": "helix-right.glb",
+   "kb": 86,
+   "triangles": 632,
+   "animations": [],
+   "parts": [
+    "helix-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "marble-center-butterfly-high",
+   "file": "marble-center-butterfly-high.glb",
+   "kb": 32,
+   "triangles": 304,
+   "animations": [],
+   "parts": [
+    "marble-center-butterfly-high",
+    "(%ignore)"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "marble-center-butterfly-low",
+   "file": "marble-center-butterfly-low.glb",
+   "kb": 11,
+   "triangles": 88,
+   "animations": [],
+   "parts": [
+    "marble-center-butterfly-low",
+    "(%ignore)"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "marble-center-high",
+   "file": "marble-center-high.glb",
+   "kb": 33,
+   "triangles": 316,
+   "animations": [],
+   "parts": [
+    "marble-center-high",
+    "(%ignore)"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "marble-center-low",
+   "file": "marble-center-low.glb",
+   "kb": 11,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "marble-center-low",
+    "(%ignore)"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "marble-high",
+   "file": "marble-high.glb",
+   "kb": 28,
+   "triangles": 256,
+   "animations": [],
+   "parts": [
+    "(%ignore)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "marble-low",
+   "file": "marble-low.glb",
+   "kb": 8,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "(%ignore)"
+   ],
+   "textures": []
+  },
+  {
+   "name": "ramp-end-a",
+   "file": "ramp-end-a.glb",
+   "kb": 11,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "ramp-end-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ramp-end-b",
+   "file": "ramp-end-b.glb",
+   "kb": 11,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "ramp-end-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ramp-end-c",
+   "file": "ramp-end-c.glb",
+   "kb": 11,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "ramp-end-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ramp-end-d",
+   "file": "ramp-end-d.glb",
+   "kb": 11,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "ramp-end-d"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ramp-end-solid-a",
+   "file": "ramp-end-solid-a.glb",
+   "kb": 10,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "ramp-end-solid-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ramp-end-solid-b",
+   "file": "ramp-end-solid-b.glb",
+   "kb": 10,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "ramp-end-solid-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ramp-end-solid-c",
+   "file": "ramp-end-solid-c.glb",
+   "kb": 10,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "ramp-end-solid-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ramp-end-solid-d",
+   "file": "ramp-end-solid-d.glb",
+   "kb": 10,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "ramp-end-solid-d"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ramp-long-a",
+   "file": "ramp-long-a.glb",
+   "kb": 19,
+   "triangles": 196,
+   "animations": [],
+   "parts": [
+    "ramp-long-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ramp-long-b",
+   "file": "ramp-long-b.glb",
+   "kb": 19,
+   "triangles": 196,
+   "animations": [],
+   "parts": [
+    "ramp-long-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ramp-long-c",
+   "file": "ramp-long-c.glb",
+   "kb": 19,
+   "triangles": 196,
+   "animations": [],
+   "parts": [
+    "ramp-long-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ramp-long-d",
+   "file": "ramp-long-d.glb",
+   "kb": 19,
+   "triangles": 196,
+   "animations": [],
+   "parts": [
+    "ramp-long-d"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ramp-long-solid-a",
+   "file": "ramp-long-solid-a.glb",
+   "kb": 16,
+   "triangles": 164,
+   "animations": [],
+   "parts": [
+    "ramp-long-solid-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ramp-long-solid-b",
+   "file": "ramp-long-solid-b.glb",
+   "kb": 16,
+   "triangles": 164,
+   "animations": [],
+   "parts": [
+    "ramp-long-solid-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ramp-long-solid-c",
+   "file": "ramp-long-solid-c.glb",
+   "kb": 16,
+   "triangles": 164,
+   "animations": [],
+   "parts": [
+    "ramp-long-solid-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ramp-long-solid-d",
+   "file": "ramp-long-solid-d.glb",
+   "kb": 16,
+   "triangles": 164,
+   "animations": [],
+   "parts": [
+    "ramp-long-solid-d"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ramp-start-a",
+   "file": "ramp-start-a.glb",
+   "kb": 11,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "ramp-start-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ramp-start-b",
+   "file": "ramp-start-b.glb",
+   "kb": 11,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "ramp-start-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ramp-start-c",
+   "file": "ramp-start-c.glb",
+   "kb": 11,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "ramp-start-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ramp-start-d",
+   "file": "ramp-start-d.glb",
+   "kb": 11,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "ramp-start-d"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ramp-start-solid-a",
+   "file": "ramp-start-solid-a.glb",
+   "kb": 10,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "ramp-start-solid-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ramp-start-solid-b",
+   "file": "ramp-start-solid-b.glb",
+   "kb": 10,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "ramp-start-solid-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ramp-start-solid-c",
+   "file": "ramp-start-solid-c.glb",
+   "kb": 10,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "ramp-start-solid-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ramp-start-solid-d",
+   "file": "ramp-start-solid-d.glb",
+   "kb": 10,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "ramp-start-solid-d"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "s-curve-left-large",
+   "file": "s-curve-left-large.glb",
+   "kb": 43,
+   "triangles": 516,
+   "animations": [],
+   "parts": [
+    "s-curve-left-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "s-curve-left",
+   "file": "s-curve-left.glb",
+   "kb": 24,
+   "triangles": 276,
+   "animations": [],
+   "parts": [
+    "s-curve-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "s-curve-right-large",
+   "file": "s-curve-right-large.glb",
+   "kb": 43,
+   "triangles": 516,
+   "animations": [],
+   "parts": [
+    "s-curve-right-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "s-curve-right",
+   "file": "s-curve-right.glb",
+   "kb": 24,
+   "triangles": 276,
+   "animations": [],
+   "parts": [
+    "s-curve-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "s-curve-short-left-a",
+   "file": "s-curve-short-left-a.glb",
+   "kb": 22,
+   "triangles": 216,
+   "animations": [],
+   "parts": [
+    "s-curve-short-left-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "s-curve-short-left-b",
+   "file": "s-curve-short-left-b.glb",
+   "kb": 23,
+   "triangles": 216,
+   "animations": [],
+   "parts": [
+    "s-curve-short-left-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "s-curve-short-left-c",
+   "file": "s-curve-short-left-c.glb",
+   "kb": 23,
+   "triangles": 216,
+   "animations": [],
+   "parts": [
+    "s-curve-short-left-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "slant-a",
+   "file": "slant-a.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "slant-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "slant-b",
+   "file": "slant-b.glb",
+   "kb": 7,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "slant-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "slant-c",
+   "file": "slant-c.glb",
+   "kb": 7,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "slant-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "slant-d",
+   "file": "slant-d.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "slant-d"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "slant-long-a",
+   "file": "slant-long-a.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "slant-long-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "slant-long-b",
+   "file": "slant-long-b.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "slant-long-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "slant-long-c",
+   "file": "slant-long-c.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "slant-long-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "slant-long-d",
+   "file": "slant-long-d.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "slant-long-d"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "slant-solid-a",
+   "file": "slant-solid-a.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "slant-solid-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "slant-solid-b",
+   "file": "slant-solid-b.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "slant-solid-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "slant-solid-c",
+   "file": "slant-solid-c.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "slant-solid-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "slant-solid-d",
+   "file": "slant-solid-d.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "slant-solid-d"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "slant-solid-long-a",
+   "file": "slant-solid-long-a.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "slant-solid-long-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "slant-solid-long-b",
+   "file": "slant-solid-long-b.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "slant-solid-long-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "slant-solid-long-c",
+   "file": "slant-solid-long-c.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "slant-solid-long-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "slant-solid-long-d",
+   "file": "slant-solid-long-d.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "slant-solid-long-d"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "split-double-sides-solid",
+   "file": "split-double-sides-solid.glb",
+   "kb": 37,
+   "triangles": 438,
+   "animations": [],
+   "parts": [
+    "split-double-sides-solid"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "split-double-sides",
+   "file": "split-double-sides.glb",
+   "kb": 41,
+   "triangles": 494,
+   "animations": [],
+   "parts": [
+    "split-double-sides"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "split-double-solid",
+   "file": "split-double-solid.glb",
+   "kb": 34,
+   "triangles": 326,
+   "animations": [],
+   "parts": [
+    "split-double-solid"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "split-double",
+   "file": "split-double.glb",
+   "kb": 38,
+   "triangles": 378,
+   "animations": [],
+   "parts": [
+    "split-double"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "split-large-left",
+   "file": "split-large-left.glb",
+   "kb": 22,
+   "triangles": 260,
+   "animations": [],
+   "parts": [
+    "split-large-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "split-large-right",
+   "file": "split-large-right.glb",
+   "kb": 22,
+   "triangles": 260,
+   "animations": [],
+   "parts": [
+    "split-large-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "split-large-solid-left",
+   "file": "split-large-solid-left.glb",
+   "kb": 16,
+   "triangles": 176,
+   "animations": [],
+   "parts": [
+    "split-large-solid-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "split-large-solid-right",
+   "file": "split-large-solid-right.glb",
+   "kb": 16,
+   "triangles": 176,
+   "animations": [],
+   "parts": [
+    "split-large-solid-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "split-left",
+   "file": "split-left.glb",
+   "kb": 13,
+   "triangles": 158,
+   "animations": [],
+   "parts": [
+    "split-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "split-right",
+   "file": "split-right.glb",
+   "kb": 13,
+   "triangles": 158,
+   "animations": [],
+   "parts": [
+    "split-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "split-solid-left",
+   "file": "split-solid-left.glb",
+   "kb": 10,
+   "triangles": 114,
+   "animations": [],
+   "parts": [
+    "split-solid-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "split-solid-right",
+   "file": "split-solid-right.glb",
+   "kb": 10,
+   "triangles": 114,
+   "animations": [],
+   "parts": [
+    "split-solid-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "split",
+   "file": "split.glb",
+   "kb": 6,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "split"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "straight-hole",
+   "file": "straight-hole.glb",
+   "kb": 9,
+   "triangles": 112,
+   "animations": [],
+   "parts": [
+    "straight-hole"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "straight-wide-hole",
+   "file": "straight-wide-hole.glb",
+   "kb": 9,
+   "triangles": 112,
+   "animations": [],
+   "parts": [
+    "straight-wide-hole"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "straight-wide",
+   "file": "straight-wide.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "straight-wide"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "straight",
+   "file": "straight.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "straight"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-color-four-bottom",
+   "file": "support-color-four-bottom.glb",
+   "kb": 24,
+   "triangles": 240,
+   "animations": [],
+   "parts": [
+    "support-color-four-bottom"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-color-four-middle",
+   "file": "support-color-four-middle.glb",
+   "kb": 11,
+   "triangles": 112,
+   "animations": [],
+   "parts": [
+    "support-color-four-middle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-color-four-top-double",
+   "file": "support-color-four-top-double.glb",
+   "kb": 20,
+   "triangles": 216,
+   "animations": [],
+   "parts": [
+    "support-color-four-top-double"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-color-four-top",
+   "file": "support-color-four-top.glb",
+   "kb": 15,
+   "triangles": 156,
+   "animations": [],
+   "parts": [
+    "support-color-four-top"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-color-single-bottom",
+   "file": "support-color-single-bottom.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "support-color-single-bottom"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-color-single-middle",
+   "file": "support-color-single-middle.glb",
+   "kb": 4,
+   "triangles": 28,
+   "animations": [],
+   "parts": [
+    "support-color-single-middle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-color-single-top-double",
+   "file": "support-color-single-top-double.glb",
+   "kb": 11,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "support-color-single-top-double"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-color-single-top",
+   "file": "support-color-single-top.glb",
+   "kb": 7,
+   "triangles": 66,
+   "animations": [],
+   "parts": [
+    "support-color-single-top"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-color-two-bottom",
+   "file": "support-color-two-bottom.glb",
+   "kb": 12,
+   "triangles": 120,
+   "animations": [],
+   "parts": [
+    "support-color-two-bottom"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-color-two-middle",
+   "file": "support-color-two-middle.glb",
+   "kb": 6,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "support-color-two-middle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-color-two-top-double",
+   "file": "support-color-two-top-double.glb",
+   "kb": 15,
+   "triangles": 160,
+   "animations": [],
+   "parts": [
+    "support-color-two-top-double"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-color-two-top",
+   "file": "support-color-two-top.glb",
+   "kb": 9,
+   "triangles": 88,
+   "animations": [],
+   "parts": [
+    "support-color-two-top"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-four-bottom",
+   "file": "support-four-bottom.glb",
+   "kb": 24,
+   "triangles": 240,
+   "animations": [],
+   "parts": [
+    "support-four-bottom"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-four-middle",
+   "file": "support-four-middle.glb",
+   "kb": 11,
+   "triangles": 112,
+   "animations": [],
+   "parts": [
+    "support-four-middle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-four-top-double",
+   "file": "support-four-top-double.glb",
+   "kb": 20,
+   "triangles": 216,
+   "animations": [],
+   "parts": [
+    "support-four-top-double"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-four-top",
+   "file": "support-four-top.glb",
+   "kb": 15,
+   "triangles": 156,
+   "animations": [],
+   "parts": [
+    "support-four-top"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-single-bottom",
+   "file": "support-single-bottom.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "support-single-bottom"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-single-middle",
+   "file": "support-single-middle.glb",
+   "kb": 4,
+   "triangles": 28,
+   "animations": [],
+   "parts": [
+    "support-single-middle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-single-top-double",
+   "file": "support-single-top-double.glb",
+   "kb": 11,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "support-single-top-double"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-single-top",
+   "file": "support-single-top.glb",
+   "kb": 7,
+   "triangles": 66,
+   "animations": [],
+   "parts": [
+    "support-single-top"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-two-bottom",
+   "file": "support-two-bottom.glb",
+   "kb": 12,
+   "triangles": 120,
+   "animations": [],
+   "parts": [
+    "support-two-bottom"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-two-middle",
+   "file": "support-two-middle.glb",
+   "kb": 6,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "support-two-middle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-two-top-double",
+   "file": "support-two-top-double.glb",
+   "kb": 15,
+   "triangles": 160,
+   "animations": [],
+   "parts": [
+    "support-two-top-double"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "support-two-top",
+   "file": "support-two-top.glb",
+   "kb": 9,
+   "triangles": 88,
+   "animations": [],
+   "parts": [
+    "support-two-top"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tree-large",
+   "file": "tree-large.glb",
+   "kb": 9,
+   "triangles": 80,
+   "animations": [],
+   "parts": [
+    "tree-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tree-tall-large",
+   "file": "tree-tall-large.glb",
+   "kb": 9,
+   "triangles": 80,
+   "animations": [],
+   "parts": [
+    "tree-tall-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tree-tall",
+   "file": "tree-tall.glb",
+   "kb": 9,
+   "triangles": 80,
+   "animations": [],
+   "parts": [
+    "tree-tall"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tree",
+   "file": "tree.glb",
+   "kb": 9,
+   "triangles": 80,
+   "animations": [],
+   "parts": [
+    "tree"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tunnel",
+   "file": "tunnel.glb",
+   "kb": 6,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "tunnel"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wave-a",
+   "file": "wave-a.glb",
+   "kb": 39,
+   "triangles": 416,
+   "animations": [],
+   "parts": [
+    "wave-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wave-b",
+   "file": "wave-b.glb",
+   "kb": 42,
+   "triangles": 416,
+   "animations": [],
+   "parts": [
+    "wave-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wave-c",
+   "file": "wave-c.glb",
+   "kb": 42,
+   "triangles": 416,
+   "animations": [],
+   "parts": [
+    "wave-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wave-solid-a",
+   "file": "wave-solid-a.glb",
+   "kb": 33,
+   "triangles": 340,
+   "animations": [],
+   "parts": [
+    "wave-solid-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wave-solid-b",
+   "file": "wave-solid-b.glb",
+   "kb": 37,
+   "triangles": 340,
+   "animations": [],
+   "parts": [
+    "wave-solid-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wave-solid-c",
+   "file": "wave-solid-c.glb",
+   "kb": 37,
+   "triangles": 340,
+   "animations": [],
+   "parts": [
+    "wave-solid-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  }
+ ]
+}

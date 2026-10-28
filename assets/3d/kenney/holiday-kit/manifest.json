@@ -1,0 +1,1315 @@
+{
+ "pack": "kenney-holiday-kit",
+ "kind": "model3d",
+ "source": "https://kenney.nl/assets/holiday-kit",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 99,
+ "items": [
+  {
+   "name": "bench-short",
+   "file": "bench-short.glb",
+   "kb": 15,
+   "triangles": 160,
+   "animations": [],
+   "parts": [
+    "bench-short"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bench",
+   "file": "bench.glb",
+   "kb": 15,
+   "triangles": 160,
+   "animations": [],
+   "parts": [
+    "bench"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-corner-bottom",
+   "file": "cabin-corner-bottom.glb",
+   "kb": 5,
+   "triangles": 38,
+   "animations": [],
+   "parts": [
+    "cabin-corner-bottom"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-corner-logs",
+   "file": "cabin-corner-logs.glb",
+   "kb": 15,
+   "triangles": 168,
+   "animations": [],
+   "parts": [
+    "cabin-corner-logs"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-corner",
+   "file": "cabin-corner.glb",
+   "kb": 2,
+   "triangles": 10,
+   "animations": [],
+   "parts": [
+    "cabin-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-door-rotate",
+   "file": "cabin-door-rotate.glb",
+   "kb": 26,
+   "triangles": 252,
+   "animations": [
+    "open",
+    "close",
+    "open-and-close"
+   ],
+   "parts": [
+    "cabin-door-rotate",
+    "door"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-doorway-center",
+   "file": "cabin-doorway-center.glb",
+   "kb": 4,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "cabin-doorway-center"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-doorway-left",
+   "file": "cabin-doorway-left.glb",
+   "kb": 10,
+   "triangles": 112,
+   "animations": [],
+   "parts": [
+    "cabin-doorway-left"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-doorway-right",
+   "file": "cabin-doorway-right.glb",
+   "kb": 10,
+   "triangles": 112,
+   "animations": [],
+   "parts": [
+    "cabin-doorway-right"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-doorway",
+   "file": "cabin-doorway.glb",
+   "kb": 17,
+   "triangles": 200,
+   "animations": [],
+   "parts": [
+    "cabin-doorway"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-fence",
+   "file": "cabin-fence.glb",
+   "kb": 7,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "cabin-fence"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-overhang-door-rotate",
+   "file": "cabin-overhang-door-rotate.glb",
+   "kb": 31,
+   "triangles": 316,
+   "animations": [
+    "open",
+    "close",
+    "open-and-close"
+   ],
+   "parts": [
+    "cabin-overhang-door-rotate",
+    "door"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-overhang-doorway",
+   "file": "cabin-overhang-doorway.glb",
+   "kb": 19,
+   "triangles": 220,
+   "animations": [],
+   "parts": [
+    "cabin-overhang-doorway"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-roof-chimney",
+   "file": "cabin-roof-chimney.glb",
+   "kb": 10,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "cabin-roof-chimney"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-roof-corner",
+   "file": "cabin-roof-corner.glb",
+   "kb": 11,
+   "triangles": 113,
+   "animations": [],
+   "parts": [
+    "cabin-roof-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-roof-dormer",
+   "file": "cabin-roof-dormer.glb",
+   "kb": 11,
+   "triangles": 127,
+   "animations": [],
+   "parts": [
+    "cabin-roof-dormer"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-roof-point",
+   "file": "cabin-roof-point.glb",
+   "kb": 6,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "cabin-roof-point"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-roof-snow-chimney",
+   "file": "cabin-roof-snow-chimney.glb",
+   "kb": 18,
+   "triangles": 188,
+   "animations": [],
+   "parts": [
+    "cabin-roof-snow-chimney"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-roof-snow-corner",
+   "file": "cabin-roof-snow-corner.glb",
+   "kb": 20,
+   "triangles": 197,
+   "animations": [],
+   "parts": [
+    "cabin-roof-snow-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-roof-snow-dormer",
+   "file": "cabin-roof-snow-dormer.glb",
+   "kb": 15,
+   "triangles": 165,
+   "animations": [],
+   "parts": [
+    "cabin-roof-snow-dormer"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-roof-snow-point",
+   "file": "cabin-roof-snow-point.glb",
+   "kb": 17,
+   "triangles": 174,
+   "animations": [],
+   "parts": [
+    "cabin-roof-snow-point"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-roof-snow",
+   "file": "cabin-roof-snow.glb",
+   "kb": 12,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "cabin-roof-snow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-roof-top",
+   "file": "cabin-roof-top.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "cabin-roof-top"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-roof",
+   "file": "cabin-roof.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "cabin-roof"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-wall-low",
+   "file": "cabin-wall-low.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "cabin-wall-low"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-wall-roof-center",
+   "file": "cabin-wall-roof-center.glb",
+   "kb": 7,
+   "triangles": 80,
+   "animations": [],
+   "parts": [
+    "cabin-wall-roof-center"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-wall-roof",
+   "file": "cabin-wall-roof.glb",
+   "kb": 8,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "cabin-wall-roof"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-wall-wreath",
+   "file": "cabin-wall-wreath.glb",
+   "kb": 35,
+   "triangles": 372,
+   "animations": [],
+   "parts": [
+    "cabin-wall-wreath"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-wall",
+   "file": "cabin-wall.glb",
+   "kb": 8,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "cabin-wall"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-window-a",
+   "file": "cabin-window-a.glb",
+   "kb": 21,
+   "triangles": 248,
+   "animations": [],
+   "parts": [
+    "cabin-window-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-window-b",
+   "file": "cabin-window-b.glb",
+   "kb": 19,
+   "triangles": 220,
+   "animations": [],
+   "parts": [
+    "cabin-window-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-window-c",
+   "file": "cabin-window-c.glb",
+   "kb": 25,
+   "triangles": 300,
+   "animations": [],
+   "parts": [
+    "cabin-window-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabin-window-large",
+   "file": "cabin-window-large.glb",
+   "kb": 17,
+   "triangles": 194,
+   "animations": [],
+   "parts": [
+    "cabin-window-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "candy-cane-green",
+   "file": "candy-cane-green.glb",
+   "kb": 7,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "candy-cane-green"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "candy-cane-red",
+   "file": "candy-cane-red.glb",
+   "kb": 7,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "candy-cane-red"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "festivus-pole",
+   "file": "festivus-pole.glb",
+   "kb": 7,
+   "triangles": 62,
+   "animations": [],
+   "parts": [
+    "festivus-pole"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "floor-stone",
+   "file": "floor-stone.glb",
+   "kb": 6,
+   "triangles": 48,
+   "animations": [],
+   "parts": [
+    "floor-stone"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "floor-wood-snow",
+   "file": "floor-wood-snow.glb",
+   "kb": 10,
+   "triangles": 112,
+   "animations": [],
+   "parts": [
+    "floor-wood-snow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "floor-wood",
+   "file": "floor-wood.glb",
+   "kb": 10,
+   "triangles": 112,
+   "animations": [],
+   "parts": [
+    "floor-wood"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "gingerbread-man",
+   "file": "gingerbread-man.glb",
+   "kb": 13,
+   "triangles": 160,
+   "animations": [],
+   "parts": [
+    "gingerbread-man"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "gingerbread-woman",
+   "file": "gingerbread-woman.glb",
+   "kb": 21,
+   "triangles": 220,
+   "animations": [],
+   "parts": [
+    "gingerbread-woman",
+    "Group"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "hanukkah-dreidel",
+   "file": "hanukkah-dreidel.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "hanukkah-dreidel"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "hanukkah-menorah-candles",
+   "file": "hanukkah-menorah-candles.glb",
+   "kb": 85,
+   "triangles": 1150,
+   "animations": [],
+   "parts": [
+    "hanukkah-menorah-candles"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "hanukkah-menorah",
+   "file": "hanukkah-menorah.glb",
+   "kb": 44,
+   "triangles": 492,
+   "animations": [],
+   "parts": [
+    "hanukkah-menorah"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "kwanzaa-kikombe",
+   "file": "kwanzaa-kikombe.glb",
+   "kb": 17,
+   "triangles": 176,
+   "animations": [],
+   "parts": [
+    "kwanzaa-kikombe"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "kwanzaa-kinara-alternative",
+   "file": "kwanzaa-kinara-alternative.glb",
+   "kb": 71,
+   "triangles": 714,
+   "animations": [],
+   "parts": [
+    "kwanzaa-kinara-alternative"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "kwanzaa-kinara",
+   "file": "kwanzaa-kinara.glb",
+   "kb": 81,
+   "triangles": 838,
+   "animations": [],
+   "parts": [
+    "kwanzaa-kinara"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "lantern-hanging",
+   "file": "lantern-hanging.glb",
+   "kb": 15,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "lantern-hanging"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "lantern",
+   "file": "lantern.glb",
+   "kb": 17,
+   "triangles": 172,
+   "animations": [],
+   "parts": [
+    "lantern"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "lights-colored",
+   "file": "lights-colored.glb",
+   "kb": 76,
+   "triangles": 760,
+   "animations": [],
+   "parts": [
+    "lights-colored"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "lights-green",
+   "file": "lights-green.glb",
+   "kb": 76,
+   "triangles": 760,
+   "animations": [],
+   "parts": [
+    "lights-green"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "lights-red",
+   "file": "lights-red.glb",
+   "kb": 76,
+   "triangles": 760,
+   "animations": [],
+   "parts": [
+    "lights-red"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "nutcracker",
+   "file": "nutcracker.glb",
+   "kb": 72,
+   "triangles": 812,
+   "animations": [],
+   "parts": [
+    "nutcracker"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "present-a-cube",
+   "file": "present-a-cube.glb",
+   "kb": 18,
+   "triangles": 238,
+   "animations": [],
+   "parts": [
+    "present-a-cube",
+    "lid"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "present-a-rectangle",
+   "file": "present-a-rectangle.glb",
+   "kb": 18,
+   "triangles": 238,
+   "animations": [],
+   "parts": [
+    "present-a-rectangle",
+    "lid"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "present-a-round",
+   "file": "present-a-round.glb",
+   "kb": 18,
+   "triangles": 238,
+   "animations": [],
+   "parts": [
+    "present-a-round",
+    "lid"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "present-b-cube",
+   "file": "present-b-cube.glb",
+   "kb": 20,
+   "triangles": 238,
+   "animations": [],
+   "parts": [
+    "present-b-cube",
+    "lid"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "present-b-rectangle",
+   "file": "present-b-rectangle.glb",
+   "kb": 20,
+   "triangles": 238,
+   "animations": [],
+   "parts": [
+    "present-b-rectangle",
+    "lid"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "present-b-round",
+   "file": "present-b-round.glb",
+   "kb": 20,
+   "triangles": 238,
+   "animations": [],
+   "parts": [
+    "present-b-round",
+    "lid"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "reindeer",
+   "file": "reindeer.glb",
+   "kb": 81,
+   "triangles": 870,
+   "animations": [],
+   "parts": [
+    "reindeer"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "rocks-large",
+   "file": "rocks-large.glb",
+   "kb": 68,
+   "triangles": 696,
+   "animations": [],
+   "parts": [
+    "rocks-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "rocks-medium",
+   "file": "rocks-medium.glb",
+   "kb": 33,
+   "triangles": 330,
+   "animations": [],
+   "parts": [
+    "rocks-medium"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "rocks-small",
+   "file": "rocks-small.glb",
+   "kb": 33,
+   "triangles": 330,
+   "animations": [],
+   "parts": [
+    "rocks-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "sled-long",
+   "file": "sled-long.glb",
+   "kb": 20,
+   "triangles": 204,
+   "animations": [],
+   "parts": [
+    "sled-long"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "sled",
+   "file": "sled.glb",
+   "kb": 22,
+   "triangles": 236,
+   "animations": [],
+   "parts": [
+    "sled"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-bunker",
+   "file": "snow-bunker.glb",
+   "kb": 25,
+   "triangles": 264,
+   "animations": [],
+   "parts": [
+    "snow-bunker"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-flat-large",
+   "file": "snow-flat-large.glb",
+   "kb": 10,
+   "triangles": 108,
+   "animations": [],
+   "parts": [
+    "snow-flat-large"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-flat",
+   "file": "snow-flat.glb",
+   "kb": 15,
+   "triangles": 168,
+   "animations": [],
+   "parts": [
+    "snow-flat"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snow-pile",
+   "file": "snow-pile.glb",
+   "kb": 13,
+   "triangles": 132,
+   "animations": [],
+   "parts": [
+    "snow-pile"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snowflake-a",
+   "file": "snowflake-a.glb",
+   "kb": 23,
+   "triangles": 284,
+   "animations": [],
+   "parts": [
+    "snowflake-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snowflake-b",
+   "file": "snowflake-b.glb",
+   "kb": 18,
+   "triangles": 212,
+   "animations": [],
+   "parts": [
+    "snowflake-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snowflake-c",
+   "file": "snowflake-c.glb",
+   "kb": 14,
+   "triangles": 164,
+   "animations": [],
+   "parts": [
+    "snowflake-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snowman-hat",
+   "file": "snowman-hat.glb",
+   "kb": 54,
+   "triangles": 555,
+   "animations": [],
+   "parts": [
+    "snowman-hat"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "snowman",
+   "file": "snowman.glb",
+   "kb": 45,
+   "triangles": 446,
+   "animations": [],
+   "parts": [
+    "snowman"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "sock-green-cane",
+   "file": "sock-green-cane.glb",
+   "kb": 20,
+   "triangles": 252,
+   "animations": [],
+   "parts": [
+    "sock-green-cane"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "sock-green",
+   "file": "sock-green.glb",
+   "kb": 13,
+   "triangles": 168,
+   "animations": [],
+   "parts": [
+    "sock-green"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "sock-red-cane",
+   "file": "sock-red-cane.glb",
+   "kb": 20,
+   "triangles": 252,
+   "animations": [],
+   "parts": [
+    "sock-red-cane"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "sock-red",
+   "file": "sock-red.glb",
+   "kb": 13,
+   "triangles": 168,
+   "animations": [],
+   "parts": [
+    "sock-red"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-locomotive",
+   "file": "train-locomotive.glb",
+   "kb": 69,
+   "triangles": 740,
+   "animations": [],
+   "parts": [
+    "train-locomotive"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-tender",
+   "file": "train-tender.glb",
+   "kb": 27,
+   "triangles": 320,
+   "animations": [],
+   "parts": [
+    "train-tender"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-wagon-flat-short",
+   "file": "train-wagon-flat-short.glb",
+   "kb": 31,
+   "triangles": 360,
+   "animations": [],
+   "parts": [
+    "train-wagon-flat-short"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-wagon-flat",
+   "file": "train-wagon-flat.glb",
+   "kb": 55,
+   "triangles": 662,
+   "animations": [],
+   "parts": [
+    "train-wagon-flat"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-wagon-logs",
+   "file": "train-wagon-logs.glb",
+   "kb": 64,
+   "triangles": 762,
+   "animations": [],
+   "parts": [
+    "train-wagon-logs"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-wagon-short",
+   "file": "train-wagon-short.glb",
+   "kb": 44,
+   "triangles": 536,
+   "animations": [],
+   "parts": [
+    "train-wagon-short"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "train-wagon",
+   "file": "train-wagon.glb",
+   "kb": 88,
+   "triangles": 934,
+   "animations": [],
+   "parts": [
+    "train-wagon"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "trainset-rail-bend",
+   "file": "trainset-rail-bend.glb",
+   "kb": 12,
+   "triangles": 136,
+   "animations": [],
+   "parts": [
+    "Group"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "trainset-rail-corner",
+   "file": "trainset-rail-corner.glb",
+   "kb": 7,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "trainset-rail-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "trainset-rail-detailed-bend",
+   "file": "trainset-rail-detailed-bend.glb",
+   "kb": 18,
+   "triangles": 196,
+   "animations": [],
+   "parts": [
+    "trainset-rail-detailed-bend"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "trainset-rail-detailed-corner",
+   "file": "trainset-rail-detailed-corner.glb",
+   "kb": 10,
+   "triangles": 96,
+   "animations": [],
+   "parts": [
+    "trainset-rail-detailed-corner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "trainset-rail-detailed-straight",
+   "file": "trainset-rail-detailed-straight.glb",
+   "kb": 7,
+   "triangles": 60,
+   "animations": [],
+   "parts": [
+    "trainset-rail-detailed-straight"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "trainset-rail-straight",
+   "file": "trainset-rail-straight.glb",
+   "kb": 4,
+   "triangles": 24,
+   "animations": [],
+   "parts": [
+    "trainset-rail-straight"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tree-decorated-snow",
+   "file": "tree-decorated-snow.glb",
+   "kb": 83,
+   "triangles": 810,
+   "animations": [],
+   "parts": [
+    "tree-decorated-snow"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tree-decorated",
+   "file": "tree-decorated.glb",
+   "kb": 69,
+   "triangles": 670,
+   "animations": [],
+   "parts": [
+    "tree-decorated"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tree-snow-a",
+   "file": "tree-snow-a.glb",
+   "kb": 33,
+   "triangles": 378,
+   "animations": [],
+   "parts": [
+    "tree-snow-a"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tree-snow-b",
+   "file": "tree-snow-b.glb",
+   "kb": 37,
+   "triangles": 374,
+   "animations": [],
+   "parts": [
+    "tree-snow-b"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tree-snow-c",
+   "file": "tree-snow-c.glb",
+   "kb": 23,
+   "triangles": 234,
+   "animations": [],
+   "parts": [
+    "tree-snow-c"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tree",
+   "file": "tree.glb",
+   "kb": 23,
+   "triangles": 234,
+   "animations": [],
+   "parts": [
+    "tree"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wreath-decorated",
+   "file": "wreath-decorated.glb",
+   "kb": 91,
+   "triangles": 828,
+   "animations": [],
+   "parts": [
+    "wreath-decorated"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wreath",
+   "file": "wreath.glb",
+   "kb": 28,
+   "triangles": 288,
+   "animations": [],
+   "parts": [
+    "wreath"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  }
+ ]
+}

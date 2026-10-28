@@ -1,0 +1,436 @@
+{
+ "pack": "kenney-music-jingles",
+ "kind": "sound",
+ "source": "https://kenney.nl/assets/music-jingles",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 85,
+ "items": [
+  {
+   "name": "jingles_NES00",
+   "file": "8-Bit jingles/jingles_NES00.ogg",
+   "kb": 39
+  },
+  {
+   "name": "jingles_NES01",
+   "file": "8-Bit jingles/jingles_NES01.ogg",
+   "kb": 11
+  },
+  {
+   "name": "jingles_NES02",
+   "file": "8-Bit jingles/jingles_NES02.ogg",
+   "kb": 11
+  },
+  {
+   "name": "jingles_NES03",
+   "file": "8-Bit jingles/jingles_NES03.ogg",
+   "kb": 16
+  },
+  {
+   "name": "jingles_NES04",
+   "file": "8-Bit jingles/jingles_NES04.ogg",
+   "kb": 16
+  },
+  {
+   "name": "jingles_NES05",
+   "file": "8-Bit jingles/jingles_NES05.ogg",
+   "kb": 20
+  },
+  {
+   "name": "jingles_NES06",
+   "file": "8-Bit jingles/jingles_NES06.ogg",
+   "kb": 18
+  },
+  {
+   "name": "jingles_NES07",
+   "file": "8-Bit jingles/jingles_NES07.ogg",
+   "kb": 18
+  },
+  {
+   "name": "jingles_NES08",
+   "file": "8-Bit jingles/jingles_NES08.ogg",
+   "kb": 16
+  },
+  {
+   "name": "jingles_NES09",
+   "file": "8-Bit jingles/jingles_NES09.ogg",
+   "kb": 11
+  },
+  {
+   "name": "jingles_NES10",
+   "file": "8-Bit jingles/jingles_NES10.ogg",
+   "kb": 11
+  },
+  {
+   "name": "jingles_NES11",
+   "file": "8-Bit jingles/jingles_NES11.ogg",
+   "kb": 20
+  },
+  {
+   "name": "jingles_NES12",
+   "file": "8-Bit jingles/jingles_NES12.ogg",
+   "kb": 20
+  },
+  {
+   "name": "jingles_NES13",
+   "file": "8-Bit jingles/jingles_NES13.ogg",
+   "kb": 24
+  },
+  {
+   "name": "jingles_NES14",
+   "file": "8-Bit jingles/jingles_NES14.ogg",
+   "kb": 11
+  },
+  {
+   "name": "jingles_NES15",
+   "file": "8-Bit jingles/jingles_NES15.ogg",
+   "kb": 11
+  },
+  {
+   "name": "jingles_NES16",
+   "file": "8-Bit jingles/jingles_NES16.ogg",
+   "kb": 13
+  },
+  {
+   "name": "jingles_HIT00",
+   "file": "Hit jingles/jingles_HIT00.ogg",
+   "kb": 8
+  },
+  {
+   "name": "jingles_HIT01",
+   "file": "Hit jingles/jingles_HIT01.ogg",
+   "kb": 11
+  },
+  {
+   "name": "jingles_HIT02",
+   "file": "Hit jingles/jingles_HIT02.ogg",
+   "kb": 11
+  },
+  {
+   "name": "jingles_HIT03",
+   "file": "Hit jingles/jingles_HIT03.ogg",
+   "kb": 13
+  },
+  {
+   "name": "jingles_HIT04",
+   "file": "Hit jingles/jingles_HIT04.ogg",
+   "kb": 11
+  },
+  {
+   "name": "jingles_HIT05",
+   "file": "Hit jingles/jingles_HIT05.ogg",
+   "kb": 13
+  },
+  {
+   "name": "jingles_HIT06",
+   "file": "Hit jingles/jingles_HIT06.ogg",
+   "kb": 11
+  },
+  {
+   "name": "jingles_HIT07",
+   "file": "Hit jingles/jingles_HIT07.ogg",
+   "kb": 8
+  },
+  {
+   "name": "jingles_HIT08",
+   "file": "Hit jingles/jingles_HIT08.ogg",
+   "kb": 8
+  },
+  {
+   "name": "jingles_HIT09",
+   "file": "Hit jingles/jingles_HIT09.ogg",
+   "kb": 15
+  },
+  {
+   "name": "jingles_HIT10",
+   "file": "Hit jingles/jingles_HIT10.ogg",
+   "kb": 14
+  },
+  {
+   "name": "jingles_HIT11",
+   "file": "Hit jingles/jingles_HIT11.ogg",
+   "kb": 17
+  },
+  {
+   "name": "jingles_HIT12",
+   "file": "Hit jingles/jingles_HIT12.ogg",
+   "kb": 8
+  },
+  {
+   "name": "jingles_HIT13",
+   "file": "Hit jingles/jingles_HIT13.ogg",
+   "kb": 8
+  },
+  {
+   "name": "jingles_HIT14",
+   "file": "Hit jingles/jingles_HIT14.ogg",
+   "kb": 9
+  },
+  {
+   "name": "jingles_HIT15",
+   "file": "Hit jingles/jingles_HIT15.ogg",
+   "kb": 19
+  },
+  {
+   "name": "jingles_HIT16",
+   "file": "Hit jingles/jingles_HIT16.ogg",
+   "kb": 8
+  },
+  {
+   "name": "jingles_PIZZI00",
+   "file": "Pizzicato jingles/jingles_PIZZI00.ogg",
+   "kb": 10
+  },
+  {
+   "name": "jingles_PIZZI01",
+   "file": "Pizzicato jingles/jingles_PIZZI01.ogg",
+   "kb": 16
+  },
+  {
+   "name": "jingles_PIZZI02",
+   "file": "Pizzicato jingles/jingles_PIZZI02.ogg",
+   "kb": 15
+  },
+  {
+   "name": "jingles_PIZZI03",
+   "file": "Pizzicato jingles/jingles_PIZZI03.ogg",
+   "kb": 16
+  },
+  {
+   "name": "jingles_PIZZI04",
+   "file": "Pizzicato jingles/jingles_PIZZI04.ogg",
+   "kb": 10
+  },
+  {
+   "name": "jingles_PIZZI05",
+   "file": "Pizzicato jingles/jingles_PIZZI05.ogg",
+   "kb": 10
+  },
+  {
+   "name": "jingles_PIZZI06",
+   "file": "Pizzicato jingles/jingles_PIZZI06.ogg",
+   "kb": 11
+  },
+  {
+   "name": "jingles_PIZZI07",
+   "file": "Pizzicato jingles/jingles_PIZZI07.ogg",
+   "kb": 18
+  },
+  {
+   "name": "jingles_PIZZI08",
+   "file": "Pizzicato jingles/jingles_PIZZI08.ogg",
+   "kb": 10
+  },
+  {
+   "name": "jingles_PIZZI09",
+   "file": "Pizzicato jingles/jingles_PIZZI09.ogg",
+   "kb": 10
+  },
+  {
+   "name": "jingles_PIZZI10",
+   "file": "Pizzicato jingles/jingles_PIZZI10.ogg",
+   "kb": 13
+  },
+  {
+   "name": "jingles_PIZZI11",
+   "file": "Pizzicato jingles/jingles_PIZZI11.ogg",
+   "kb": 13
+  },
+  {
+   "name": "jingles_PIZZI12",
+   "file": "Pizzicato jingles/jingles_PIZZI12.ogg",
+   "kb": 15
+  },
+  {
+   "name": "jingles_PIZZI13",
+   "file": "Pizzicato jingles/jingles_PIZZI13.ogg",
+   "kb": 14
+  },
+  {
+   "name": "jingles_PIZZI14",
+   "file": "Pizzicato jingles/jingles_PIZZI14.ogg",
+   "kb": 14
+  },
+  {
+   "name": "jingles_PIZZI15",
+   "file": "Pizzicato jingles/jingles_PIZZI15.ogg",
+   "kb": 13
+  },
+  {
+   "name": "jingles_PIZZI16",
+   "file": "Pizzicato jingles/jingles_PIZZI16.ogg",
+   "kb": 9
+  },
+  {
+   "name": "jingles_SAX00",
+   "file": "Sax jingles/jingles_SAX00.ogg",
+   "kb": 10
+  },
+  {
+   "name": "jingles_SAX01",
+   "file": "Sax jingles/jingles_SAX01.ogg",
+   "kb": 17
+  },
+  {
+   "name": "jingles_SAX02",
+   "file": "Sax jingles/jingles_SAX02.ogg",
+   "kb": 16
+  },
+  {
+   "name": "jingles_SAX03",
+   "file": "Sax jingles/jingles_SAX03.ogg",
+   "kb": 19
+  },
+  {
+   "name": "jingles_SAX04",
+   "file": "Sax jingles/jingles_SAX04.ogg",
+   "kb": 9
+  },
+  {
+   "name": "jingles_SAX05",
+   "file": "Sax jingles/jingles_SAX05.ogg",
+   "kb": 9
+  },
+  {
+   "name": "jingles_SAX06",
+   "file": "Sax jingles/jingles_SAX06.ogg",
+   "kb": 10
+  },
+  {
+   "name": "jingles_SAX07",
+   "file": "Sax jingles/jingles_SAX07.ogg",
+   "kb": 30
+  },
+  {
+   "name": "jingles_SAX08",
+   "file": "Sax jingles/jingles_SAX08.ogg",
+   "kb": 9
+  },
+  {
+   "name": "jingles_SAX09",
+   "file": "Sax jingles/jingles_SAX09.ogg",
+   "kb": 9
+  },
+  {
+   "name": "jingles_SAX10",
+   "file": "Sax jingles/jingles_SAX10.ogg",
+   "kb": 13
+  },
+  {
+   "name": "jingles_SAX11",
+   "file": "Sax jingles/jingles_SAX11.ogg",
+   "kb": 13
+  },
+  {
+   "name": "jingles_SAX12",
+   "file": "Sax jingles/jingles_SAX12.ogg",
+   "kb": 16
+  },
+  {
+   "name": "jingles_SAX13",
+   "file": "Sax jingles/jingles_SAX13.ogg",
+   "kb": 15
+  },
+  {
+   "name": "jingles_SAX14",
+   "file": "Sax jingles/jingles_SAX14.ogg",
+   "kb": 14
+  },
+  {
+   "name": "jingles_SAX15",
+   "file": "Sax jingles/jingles_SAX15.ogg",
+   "kb": 13
+  },
+  {
+   "name": "jingles_SAX16",
+   "file": "Sax jingles/jingles_SAX16.ogg",
+   "kb": 10
+  },
+  {
+   "name": "jingles_STEEL00",
+   "file": "Steel jingles/jingles_STEEL00.ogg",
+   "kb": 15
+  },
+  {
+   "name": "jingles_STEEL01",
+   "file": "Steel jingles/jingles_STEEL01.ogg",
+   "kb": 20
+  },
+  {
+   "name": "jingles_STEEL02",
+   "file": "Steel jingles/jingles_STEEL02.ogg",
+   "kb": 21
+  },
+  {
+   "name": "jingles_STEEL03",
+   "file": "Steel jingles/jingles_STEEL03.ogg",
+   "kb": 18
+  },
+  {
+   "name": "jingles_STEEL04",
+   "file": "Steel jingles/jingles_STEEL04.ogg",
+   "kb": 14
+  },
+  {
+   "name": "jingles_STEEL05",
+   "file": "Steel jingles/jingles_STEEL05.ogg",
+   "kb": 14
+  },
+  {
+   "name": "jingles_STEEL06",
+   "file": "Steel jingles/jingles_STEEL06.ogg",
+   "kb": 18
+  },
+  {
+   "name": "jingles_STEEL07",
+   "file": "Steel jingles/jingles_STEEL07.ogg",
+   "kb": 21
+  },
+  {
+   "name": "jingles_STEEL08",
+   "file": "Steel jingles/jingles_STEEL08.ogg",
+   "kb": 13
+  },
+  {
+   "name": "jingles_STEEL09",
+   "file": "Steel jingles/jingles_STEEL09.ogg",
+   "kb": 10
+  },
+  {
+   "name": "jingles_STEEL10",
+   "file": "Steel jingles/jingles_STEEL10.ogg",
+   "kb": 15
+  },
+  {
+   "name": "jingles_STEEL11",
+   "file": "Steel jingles/jingles_STEEL11.ogg",
+   "kb": 14
+  },
+  {
+   "name": "jingles_STEEL12",
+   "file": "Steel jingles/jingles_STEEL12.ogg",
+   "kb": 18
+  },
+  {
+   "name": "jingles_STEEL13",
+   "file": "Steel jingles/jingles_STEEL13.ogg",
+   "kb": 16
+  },
+  {
+   "name": "jingles_STEEL14",
+   "file": "Steel jingles/jingles_STEEL14.ogg",
+   "kb": 20
+  },
+  {
+   "name": "jingles_STEEL15",
+   "file": "Steel jingles/jingles_STEEL15.ogg",
+   "kb": 15
+  },
+  {
+   "name": "jingles_STEEL16",
+   "file": "Steel jingles/jingles_STEEL16.ogg",
+   "kb": 15
+  }
+ ]
+}

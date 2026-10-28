@@ -1,0 +1,2733 @@
+{
+ "pack": "kenney-food-kit",
+ "kind": "model3d",
+ "source": "https://kenney.nl/assets/food-kit",
+ "license": "CC0-1.0",
+ "author": "Kenney (www.kenney.nl)",
+ "imported": "2026-10-28",
+ "count": 200,
+ "items": [
+  {
+   "name": "advocado-half",
+   "file": "advocado-half.glb",
+   "kb": 10,
+   "triangles": 98,
+   "animations": [],
+   "parts": [
+    "advocado-half",
+    "pit"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "apple-half",
+   "file": "apple-half.glb",
+   "kb": 10,
+   "triangles": 124,
+   "animations": [],
+   "parts": [
+    "apple-half"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "apple",
+   "file": "apple.glb",
+   "kb": 14,
+   "triangles": 136,
+   "animations": [],
+   "parts": [
+    "apple"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "avocado",
+   "file": "avocado.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "avocado"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bacon-raw",
+   "file": "bacon-raw.glb",
+   "kb": 5,
+   "triangles": 40,
+   "animations": [],
+   "parts": [
+    "bacon-raw"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bacon",
+   "file": "bacon.glb",
+   "kb": 5,
+   "triangles": 40,
+   "animations": [],
+   "parts": [
+    "bacon"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bag-flat",
+   "file": "bag-flat.glb",
+   "kb": 11,
+   "triangles": 114,
+   "animations": [],
+   "parts": [
+    "bag-flat"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bag",
+   "file": "bag.glb",
+   "kb": 6,
+   "triangles": 46,
+   "animations": [],
+   "parts": [
+    "bag"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "banana",
+   "file": "banana.glb",
+   "kb": 12,
+   "triangles": 104,
+   "animations": [],
+   "parts": [
+    "banana"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "barrel",
+   "file": "barrel.glb",
+   "kb": 26,
+   "triangles": 308,
+   "animations": [],
+   "parts": [
+    "barrel"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "beet",
+   "file": "beet.glb",
+   "kb": 10,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "beet"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bottle-ketchup",
+   "file": "bottle-ketchup.glb",
+   "kb": 9,
+   "triangles": 96,
+   "animations": [],
+   "parts": [
+    "bottle-ketchup"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bottle-musterd",
+   "file": "bottle-musterd.glb",
+   "kb": 9,
+   "triangles": 96,
+   "animations": [],
+   "parts": [
+    "bottle-musterd"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bottle-oil",
+   "file": "bottle-oil.glb",
+   "kb": 10,
+   "triangles": 96,
+   "animations": [],
+   "parts": [
+    "bottle-oil"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bowl-broth",
+   "file": "bowl-broth.glb",
+   "kb": 16,
+   "triangles": 210,
+   "animations": [],
+   "parts": [
+    "bowl-broth",
+    "Group"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bowl-cereal",
+   "file": "bowl-cereal.glb",
+   "kb": 12,
+   "triangles": 120,
+   "animations": [],
+   "parts": [
+    "bowl-cereal"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bowl-soup",
+   "file": "bowl-soup.glb",
+   "kb": 10,
+   "triangles": 132,
+   "animations": [],
+   "parts": [
+    "bowl-soup"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bowl",
+   "file": "bowl.glb",
+   "kb": 6,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "bowl"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "bread",
+   "file": "bread.glb",
+   "kb": 9,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "bread"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "broccoli",
+   "file": "broccoli.glb",
+   "kb": 19,
+   "triangles": 220,
+   "animations": [],
+   "parts": [
+    "broccoli"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "burger-cheese-double",
+   "file": "burger-cheese-double.glb",
+   "kb": 43,
+   "triangles": 392,
+   "animations": [],
+   "parts": [
+    "bun-bottom",
+    "bun-middle",
+    "bun-top",
+    "cheese",
+    "cheese",
+    "patty",
+    "patty"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "burger-cheese",
+   "file": "burger-cheese.glb",
+   "kb": 25,
+   "triangles": 226,
+   "animations": [],
+   "parts": [
+    "bun-bottom",
+    "bun-top",
+    "cheese",
+    "patty"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "burger-double",
+   "file": "burger-double.glb",
+   "kb": 54,
+   "triangles": 468,
+   "animations": [],
+   "parts": [
+    "bun-bottom",
+    "bun-middle",
+    "bun-top",
+    "cheese",
+    "cheese",
+    "patty",
+    "patty",
+    "salad",
+    "salad",
+    "tomato"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "burger",
+   "file": "burger.glb",
+   "kb": 33,
+   "triangles": 294,
+   "animations": [],
+   "parts": [
+    "bun-bottom",
+    "bun-top",
+    "cheese",
+    "patty",
+    "salad",
+    "tomato"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cabbage",
+   "file": "cabbage.glb",
+   "kb": 15,
+   "triangles": 140,
+   "animations": [],
+   "parts": [
+    "cabbage"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cake-birthday",
+   "file": "cake-birthday.glb",
+   "kb": 112,
+   "triangles": 1146,
+   "animations": [],
+   "parts": [
+    "slice",
+    "slice",
+    "slice",
+    "slice",
+    "slice",
+    "slice"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cake-slicer",
+   "file": "cake-slicer.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "cake-slicer"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cake",
+   "file": "cake.glb",
+   "kb": 71,
+   "triangles": 750,
+   "animations": [],
+   "parts": [
+    "slice",
+    "slice",
+    "slice",
+    "slice",
+    "slice",
+    "slice"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "can-open",
+   "file": "can-open.glb",
+   "kb": 17,
+   "triangles": 216,
+   "animations": [],
+   "parts": [
+    "can-open"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "can-small",
+   "file": "can-small.glb",
+   "kb": 15,
+   "triangles": 154,
+   "animations": [],
+   "parts": [
+    "can-small",
+    "Group"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "can",
+   "file": "can.glb",
+   "kb": 13,
+   "triangles": 156,
+   "animations": [],
+   "parts": [
+    "can"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "candy-bar-wrapper",
+   "file": "candy-bar-wrapper.glb",
+   "kb": 5,
+   "triangles": 48,
+   "animations": [],
+   "parts": [
+    "candy-bar-wrapper"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "candy-bar",
+   "file": "candy-bar.glb",
+   "kb": 7,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "candy-bar"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "carrot",
+   "file": "carrot.glb",
+   "kb": 15,
+   "triangles": 148,
+   "animations": [],
+   "parts": [
+    "carrot"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "carton-small",
+   "file": "carton-small.glb",
+   "kb": 8,
+   "triangles": 74,
+   "animations": [],
+   "parts": [
+    "carton-small"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "carton",
+   "file": "carton.glb",
+   "kb": 9,
+   "triangles": 94,
+   "animations": [],
+   "parts": [
+    "carton"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cauliflower",
+   "file": "cauliflower.glb",
+   "kb": 16,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "cauliflower"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "celery-stick",
+   "file": "celery-stick.glb",
+   "kb": 5,
+   "triangles": 52,
+   "animations": [],
+   "parts": [
+    "celery-stick"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cheese-cut",
+   "file": "cheese-cut.glb",
+   "kb": 13,
+   "triangles": 160,
+   "animations": [],
+   "parts": [
+    "cheese-cut"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cheese-slicer",
+   "file": "cheese-slicer.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "cheese-slicer"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cheese",
+   "file": "cheese.glb",
+   "kb": 59,
+   "triangles": 576,
+   "animations": [],
+   "parts": [
+    "wedge",
+    "wedge",
+    "wedge",
+    "wedge",
+    "wedge",
+    "wedge",
+    "wedge",
+    "wedge",
+    "wedge",
+    "wedge",
+    "wedge",
+    "wedge"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cherries",
+   "file": "cherries.glb",
+   "kb": 13,
+   "triangles": 134,
+   "animations": [],
+   "parts": [
+    "cherries"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "chinese",
+   "file": "chinese.glb",
+   "kb": 18,
+   "triangles": 162,
+   "animations": [],
+   "parts": [
+    "chinese",
+    "chopstick",
+    "chopstick"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "chocolate-wrapper",
+   "file": "chocolate-wrapper.glb",
+   "kb": 11,
+   "triangles": 118,
+   "animations": [],
+   "parts": [
+    "chocolate-wrapper"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "chocolate",
+   "file": "chocolate.glb",
+   "kb": 12,
+   "triangles": 140,
+   "animations": [],
+   "parts": [
+    "chocolate"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "chopstic-decorative",
+   "file": "chopstic-decorative.glb",
+   "kb": 5,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "chopstic-decorative"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "chopstick",
+   "file": "chopstick.glb",
+   "kb": 2,
+   "triangles": 12,
+   "animations": [],
+   "parts": [
+    "chopstick"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cocktail",
+   "file": "cocktail.glb",
+   "kb": 13,
+   "triangles": 144,
+   "animations": [],
+   "parts": [
+    "cocktail",
+    "straw",
+    "lemon"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coconut-half",
+   "file": "coconut-half.glb",
+   "kb": 8,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "coconut-half"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "coconut",
+   "file": "coconut.glb",
+   "kb": 8,
+   "triangles": 76,
+   "animations": [],
+   "parts": [
+    "coconut"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cookie-chocolate",
+   "file": "cookie-chocolate.glb",
+   "kb": 12,
+   "triangles": 136,
+   "animations": [],
+   "parts": [
+    "cookie-chocolate"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cookie",
+   "file": "cookie.glb",
+   "kb": 7,
+   "triangles": 68,
+   "animations": [],
+   "parts": [
+    "cookie"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cooking-fork",
+   "file": "cooking-fork.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "cooking-fork"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cooking-knife-chopping",
+   "file": "cooking-knife-chopping.glb",
+   "kb": 7,
+   "triangles": 80,
+   "animations": [],
+   "parts": [
+    "cooking-knife-chopping"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cooking-knife",
+   "file": "cooking-knife.glb",
+   "kb": 5,
+   "triangles": 39,
+   "animations": [],
+   "parts": [
+    "cooking-knife"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cooking-spatula",
+   "file": "cooking-spatula.glb",
+   "kb": 6,
+   "triangles": 72,
+   "animations": [],
+   "parts": [
+    "cooking-spatula"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cooking-spoon",
+   "file": "cooking-spoon.glb",
+   "kb": 6,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "cooking-spoon"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "corn-dog",
+   "file": "corn-dog.glb",
+   "kb": 8,
+   "triangles": 64,
+   "animations": [],
+   "parts": [
+    "corn-dog",
+    "dog"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "corn",
+   "file": "corn.glb",
+   "kb": 13,
+   "triangles": 128,
+   "animations": [],
+   "parts": [
+    "corn"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "croissant",
+   "file": "croissant.glb",
+   "kb": 14,
+   "triangles": 162,
+   "animations": [],
+   "parts": [
+    "croissant"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cup-coffee",
+   "file": "cup-coffee.glb",
+   "kb": 7,
+   "triangles": 108,
+   "animations": [],
+   "parts": [
+    "cup-coffee"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cup-saucer",
+   "file": "cup-saucer.glb",
+   "kb": 7,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "cup-saucer"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cup-tea",
+   "file": "cup-tea.glb",
+   "kb": 9,
+   "triangles": 144,
+   "animations": [],
+   "parts": [
+    "cup-tea"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cup",
+   "file": "cup.glb",
+   "kb": 7,
+   "triangles": 112,
+   "animations": [],
+   "parts": [
+    "cup"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cupcake",
+   "file": "cupcake.glb",
+   "kb": 22,
+   "triangles": 204,
+   "animations": [],
+   "parts": [
+    "cupcake",
+    "cherry",
+    "cake"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cutting-board-japanese",
+   "file": "cutting-board-japanese.glb",
+   "kb": 9,
+   "triangles": 104,
+   "animations": [],
+   "parts": [
+    "cutting-board-japanese"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cutting-board-round",
+   "file": "cutting-board-round.glb",
+   "kb": 12,
+   "triangles": 156,
+   "animations": [],
+   "parts": [
+    "cutting-board-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "cutting-board",
+   "file": "cutting-board.glb",
+   "kb": 10,
+   "triangles": 120,
+   "animations": [],
+   "parts": [
+    "cutting-board"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "dim-sum",
+   "file": "dim-sum.glb",
+   "kb": 7,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "dim-sum"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "donut-chocolate",
+   "file": "donut-chocolate.glb",
+   "kb": 12,
+   "triangles": 120,
+   "animations": [],
+   "parts": [
+    "donut-chocolate"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "donut-sprinkles",
+   "file": "donut-sprinkles.glb",
+   "kb": 19,
+   "triangles": 180,
+   "animations": [],
+   "parts": [
+    "donut-sprinkles"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "donut",
+   "file": "donut.glb",
+   "kb": 11,
+   "triangles": 108,
+   "animations": [],
+   "parts": [
+    "donut"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "egg-cooked",
+   "file": "egg-cooked.glb",
+   "kb": 6,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "egg-cooked"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "egg-cup",
+   "file": "egg-cup.glb",
+   "kb": 6,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "egg-cup"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "egg-half",
+   "file": "egg-half.glb",
+   "kb": 8,
+   "triangles": 80,
+   "animations": [],
+   "parts": [
+    "egg-half"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "egg",
+   "file": "egg.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "egg"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "eggplant",
+   "file": "eggplant.glb",
+   "kb": 13,
+   "triangles": 124,
+   "animations": [],
+   "parts": [
+    "eggplant"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fish-bones",
+   "file": "fish-bones.glb",
+   "kb": 33,
+   "triangles": 384,
+   "animations": [],
+   "parts": [
+    "fish-bones"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fish",
+   "file": "fish.glb",
+   "kb": 30,
+   "triangles": 233,
+   "animations": [],
+   "parts": [
+    "fish"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "frappe",
+   "file": "frappe.glb",
+   "kb": 22,
+   "triangles": 320,
+   "animations": [],
+   "parts": [
+    "frappe"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fries-empty",
+   "file": "fries-empty.glb",
+   "kb": 11,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "fries-empty"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "fries",
+   "file": "fries.glb",
+   "kb": 57,
+   "triangles": 564,
+   "animations": [],
+   "parts": [
+    "fries",
+    "fries"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "frikandel-speciaal",
+   "file": "frikandel-speciaal.glb",
+   "kb": 24,
+   "triangles": 308,
+   "animations": [],
+   "parts": [
+    "frikandel-speciaal",
+    "frikandel",
+    "sauce-onions"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "frying-pan-lid",
+   "file": "frying-pan-lid.glb",
+   "kb": 13,
+   "triangles": 156,
+   "animations": [],
+   "parts": [
+    "frying-pan-lid",
+    "(%ignore)"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "frying-pan",
+   "file": "frying-pan.glb",
+   "kb": 18,
+   "triangles": 200,
+   "animations": [],
+   "parts": [
+    "frying-pan"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ginger-bread-cutter",
+   "file": "ginger-bread-cutter.glb",
+   "kb": 11,
+   "triangles": 136,
+   "animations": [],
+   "parts": [
+    "ginger-bread-cutter"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ginger-bread",
+   "file": "ginger-bread.glb",
+   "kb": 7,
+   "triangles": 80,
+   "animations": [],
+   "parts": [
+    "ginger-bread"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "glass-wine",
+   "file": "glass-wine.glb",
+   "kb": 23,
+   "triangles": 232,
+   "animations": [],
+   "parts": [
+    "glass-wine"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "glass",
+   "file": "glass.glb",
+   "kb": 4,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "glass"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "grapes",
+   "file": "grapes.glb",
+   "kb": 57,
+   "triangles": 592,
+   "animations": [],
+   "parts": [
+    "grapes"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "honey",
+   "file": "honey.glb",
+   "kb": 14,
+   "triangles": 140,
+   "animations": [],
+   "parts": [
+    "honey"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "hot-dog-raw",
+   "file": "hot-dog-raw.glb",
+   "kb": 9,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "hot-dog-raw"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "hot-dog",
+   "file": "hot-dog.glb",
+   "kb": 27,
+   "triangles": 272,
+   "animations": [],
+   "parts": [
+    "hot-dog",
+    "sauce",
+    "sausage"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ice-cream-cne",
+   "file": "ice-cream-cne.glb",
+   "kb": 5,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "ice-cream-cne"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ice-cream-cup",
+   "file": "ice-cream-cup.glb",
+   "kb": 7,
+   "triangles": 68,
+   "animations": [],
+   "parts": [
+    "ice-cream-cup"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ice-cream-scoop-chocolate",
+   "file": "ice-cream-scoop-chocolate.glb",
+   "kb": 8,
+   "triangles": 80,
+   "animations": [],
+   "parts": [
+    "ice-cream-scoop-chocolate"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ice-cream-scoop-mint",
+   "file": "ice-cream-scoop-mint.glb",
+   "kb": 7,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "ice-cream-scoop-mint"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "ice-cream",
+   "file": "ice-cream.glb",
+   "kb": 9,
+   "triangles": 80,
+   "animations": [],
+   "parts": [
+    "ice-cream",
+    "Group"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "knife-block",
+   "file": "knife-block.glb",
+   "kb": 19,
+   "triangles": 157,
+   "animations": [],
+   "parts": [
+    "knife-block",
+    "cooking-knife",
+    "cooking-knife",
+    "cooking-knife"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "leek",
+   "file": "leek.glb",
+   "kb": 16,
+   "triangles": 172,
+   "animations": [],
+   "parts": [
+    "leek"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "lemon-half",
+   "file": "lemon-half.glb",
+   "kb": 10,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "lemon-half"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "lemon",
+   "file": "lemon.glb",
+   "kb": 11,
+   "triangles": 104,
+   "animations": [],
+   "parts": [
+    "lemon"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "loaf-baguette",
+   "file": "loaf-baguette.glb",
+   "kb": 12,
+   "triangles": 122,
+   "animations": [],
+   "parts": [
+    "loaf-baguette"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "loaf-round",
+   "file": "loaf-round.glb",
+   "kb": 10,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "loaf-round"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "loaf",
+   "file": "loaf.glb",
+   "kb": 9,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "loaf"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "lollypop",
+   "file": "lollypop.glb",
+   "kb": 8,
+   "triangles": 108,
+   "animations": [],
+   "parts": [
+    "lollypop"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "maki-roe",
+   "file": "maki-roe.glb",
+   "kb": 6,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "maki-roe"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "maki-salmon",
+   "file": "maki-salmon.glb",
+   "kb": 5,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "maki-salmon"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "maki-vegetable",
+   "file": "maki-vegetable.glb",
+   "kb": 5,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "maki-vegetable"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "meat-cooked",
+   "file": "meat-cooked.glb",
+   "kb": 10,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "meat-cooked"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "meat-patty",
+   "file": "meat-patty.glb",
+   "kb": 8,
+   "triangles": 104,
+   "animations": [],
+   "parts": [
+    "meat-patty"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "meat-raw",
+   "file": "meat-raw.glb",
+   "kb": 9,
+   "triangles": 110,
+   "animations": [],
+   "parts": [
+    "meat-raw"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "meat-ribs",
+   "file": "meat-ribs.glb",
+   "kb": 14,
+   "triangles": 164,
+   "animations": [],
+   "parts": [
+    "meat-ribs"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "meat-sausage",
+   "file": "meat-sausage.glb",
+   "kb": 45,
+   "triangles": 320,
+   "animations": [],
+   "parts": [
+    "meat-sausage"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "meat-tenderizer",
+   "file": "meat-tenderizer.glb",
+   "kb": 30,
+   "triangles": 322,
+   "animations": [],
+   "parts": [
+    "meat-tenderizer"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "mincemeat-pie",
+   "file": "mincemeat-pie.glb",
+   "kb": 12,
+   "triangles": 164,
+   "animations": [],
+   "parts": [
+    "mincemeat-pie"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "mortar-pestle",
+   "file": "mortar-pestle.glb",
+   "kb": 7,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "mortar-pestle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "mortar",
+   "file": "mortar.glb",
+   "kb": 9,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "mortar"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "muffin",
+   "file": "muffin.glb",
+   "kb": 10,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "muffin"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "mug",
+   "file": "mug.glb",
+   "kb": 19,
+   "triangles": 232,
+   "animations": [],
+   "parts": [
+    "mug"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "mushroom-half",
+   "file": "mushroom-half.glb",
+   "kb": 6,
+   "triangles": 68,
+   "animations": [],
+   "parts": [
+    "mushroom-half"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "mushroom",
+   "file": "mushroom.glb",
+   "kb": 8,
+   "triangles": 80,
+   "animations": [],
+   "parts": [
+    "mushroom"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "mussel-open",
+   "file": "mussel-open.glb",
+   "kb": 9,
+   "triangles": 90,
+   "animations": [],
+   "parts": [
+    "mussel-open"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "mussel",
+   "file": "mussel.glb",
+   "kb": 5,
+   "triangles": 38,
+   "animations": [],
+   "parts": [
+    "mussel"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "onion-half",
+   "file": "onion-half.glb",
+   "kb": 8,
+   "triangles": 108,
+   "animations": [],
+   "parts": [
+    "onion-half"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "onion",
+   "file": "onion.glb",
+   "kb": 8,
+   "triangles": 68,
+   "animations": [],
+   "parts": [
+    "onion"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "orange",
+   "file": "orange.glb",
+   "kb": 12,
+   "triangles": 120,
+   "animations": [],
+   "parts": [
+    "orange"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pan-stew",
+   "file": "pan-stew.glb",
+   "kb": 27,
+   "triangles": 344,
+   "animations": [],
+   "parts": [
+    "pan-stew"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pan",
+   "file": "pan.glb",
+   "kb": 19,
+   "triangles": 236,
+   "animations": [],
+   "parts": [
+    "pan"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pancakes",
+   "file": "pancakes.glb",
+   "kb": 41,
+   "triangles": 512,
+   "animations": [],
+   "parts": [
+    "pancakes",
+    "butter",
+    "pancake",
+    "pancake",
+    "pancake"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "paprika-slice",
+   "file": "paprika-slice.glb",
+   "kb": 8,
+   "triangles": 96,
+   "animations": [],
+   "parts": [
+    "paprika-slice"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "paprika",
+   "file": "paprika.glb",
+   "kb": 14,
+   "triangles": 132,
+   "animations": [],
+   "parts": [
+    "paprika"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "peanut-butter",
+   "file": "peanut-butter.glb",
+   "kb": 17,
+   "triangles": 172,
+   "animations": [],
+   "parts": [
+    "peanut-butter"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pear-half",
+   "file": "pear-half.glb",
+   "kb": 11,
+   "triangles": 126,
+   "animations": [],
+   "parts": [
+    "pear-half"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pear",
+   "file": "pear.glb",
+   "kb": 15,
+   "triangles": 136,
+   "animations": [],
+   "parts": [
+    "pear"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pepper-mill",
+   "file": "pepper-mill.glb",
+   "kb": 25,
+   "triangles": 252,
+   "animations": [],
+   "parts": [
+    "pepper-mill"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pepper",
+   "file": "pepper.glb",
+   "kb": 12,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "pepper"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pie",
+   "file": "pie.glb",
+   "kb": 21,
+   "triangles": 292,
+   "animations": [],
+   "parts": [
+    "pie"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pineapple",
+   "file": "pineapple.glb",
+   "kb": 19,
+   "triangles": 196,
+   "animations": [],
+   "parts": [
+    "pineapple"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pizza-box",
+   "file": "pizza-box.glb",
+   "kb": 8,
+   "triangles": 84,
+   "animations": [],
+   "parts": [
+    "pizza-box",
+    "lid"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pizza-cutter",
+   "file": "pizza-cutter.glb",
+   "kb": 8,
+   "triangles": 96,
+   "animations": [],
+   "parts": [
+    "pizza-cutter"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pizza",
+   "file": "pizza.glb",
+   "kb": 104,
+   "triangles": 1208,
+   "animations": [],
+   "parts": [
+    "slice6",
+    "slice1",
+    "slice2",
+    "slice3",
+    "slice4",
+    "slice5",
+    "slice7",
+    "slice8"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "plate-broken",
+   "file": "plate-broken.glb",
+   "kb": 32,
+   "triangles": 336,
+   "animations": [],
+   "parts": [
+    "piece",
+    "piece",
+    "piece",
+    "piece",
+    "piece",
+    "piece",
+    "piece",
+    "piece"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "plate-deep",
+   "file": "plate-deep.glb",
+   "kb": 7,
+   "triangles": 140,
+   "animations": [],
+   "parts": [
+    "plate-deep"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "plate-dinner",
+   "file": "plate-dinner.glb",
+   "kb": 27,
+   "triangles": 354,
+   "animations": [],
+   "parts": [
+    "plate-dinner"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "plate-rectangle",
+   "file": "plate-rectangle.glb",
+   "kb": 6,
+   "triangles": 68,
+   "animations": [],
+   "parts": [
+    "plate-rectangle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "plate-sauerkraut",
+   "file": "plate-sauerkraut.glb",
+   "kb": 63,
+   "triangles": 580,
+   "animations": [],
+   "parts": [
+    "plate-sauerkraut"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "plate",
+   "file": "plate.glb",
+   "kb": 8,
+   "triangles": 140,
+   "animations": [],
+   "parts": [
+    "plate"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "popsicle-chocolate",
+   "file": "popsicle-chocolate.glb",
+   "kb": 11,
+   "triangles": 132,
+   "animations": [],
+   "parts": [
+    "popsicle-chocolate"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "popsicle-stick",
+   "file": "popsicle-stick.glb",
+   "kb": 4,
+   "triangles": 36,
+   "animations": [],
+   "parts": [
+    "popsicle-stick"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "popsicle",
+   "file": "popsicle.glb",
+   "kb": 7,
+   "triangles": 78,
+   "animations": [],
+   "parts": [
+    "popsicle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pot-lid",
+   "file": "pot-lid.glb",
+   "kb": 10,
+   "triangles": 132,
+   "animations": [],
+   "parts": [
+    "pot-lid"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pot-stew-lid",
+   "file": "pot-stew-lid.glb",
+   "kb": 15,
+   "triangles": 176,
+   "animations": [],
+   "parts": [
+    "pot-stew-lid",
+    "(%ignore)"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pot-stew",
+   "file": "pot-stew.glb",
+   "kb": 28,
+   "triangles": 370,
+   "animations": [],
+   "parts": [
+    "pot-stew"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pot",
+   "file": "pot.glb",
+   "kb": 18,
+   "triangles": 228,
+   "animations": [],
+   "parts": [
+    "pot"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pudding",
+   "file": "pudding.glb",
+   "kb": 6,
+   "triangles": 56,
+   "animations": [],
+   "parts": [
+    "pudding"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pumpkin-basic",
+   "file": "pumpkin-basic.glb",
+   "kb": 8,
+   "triangles": 80,
+   "animations": [],
+   "parts": [
+    "pumpkin-basic"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "pumpkin",
+   "file": "pumpkin.glb",
+   "kb": 19,
+   "triangles": 188,
+   "animations": [],
+   "parts": [
+    "pumpkin"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "radish",
+   "file": "radish.glb",
+   "kb": 16,
+   "triangles": 166,
+   "animations": [],
+   "parts": [
+    "radish"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "rice-ball",
+   "file": "rice-ball.glb",
+   "kb": 6,
+   "triangles": 104,
+   "animations": [],
+   "parts": [
+    "rice-ball"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "rollingPin",
+   "file": "rollingPin.glb",
+   "kb": 13,
+   "triangles": 140,
+   "animations": [],
+   "parts": [
+    "rollingPin"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "salad",
+   "file": "salad.glb",
+   "kb": 16,
+   "triangles": 170,
+   "animations": [],
+   "parts": [
+    "salad"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "sandwich",
+   "file": "sandwich.glb",
+   "kb": 19,
+   "triangles": 176,
+   "animations": [],
+   "parts": [
+    "lettuce",
+    "meat",
+    "bun",
+    "bun"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "sausage-half",
+   "file": "sausage-half.glb",
+   "kb": 8,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "sausage-half"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "sausage",
+   "file": "sausage.glb",
+   "kb": 9,
+   "triangles": 92,
+   "animations": [],
+   "parts": [
+    "sausage"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "shaker-pepper",
+   "file": "shaker-pepper.glb",
+   "kb": 9,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "shaker-pepper"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "shaker-salt",
+   "file": "shaker-salt.glb",
+   "kb": 11,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "shaker-salt"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "skewer-vegetables",
+   "file": "skewer-vegetables.glb",
+   "kb": 22,
+   "triangles": 156,
+   "animations": [],
+   "parts": [
+    "skewer-vegetables",
+    "meat",
+    "meat",
+    "meat",
+    "vegetables",
+    "vegetables"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "skewer",
+   "file": "skewer.glb",
+   "kb": 16,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "skewer",
+    "meat",
+    "meat",
+    "meat"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "soda-bottle",
+   "file": "soda-bottle.glb",
+   "kb": 11,
+   "triangles": 100,
+   "animations": [],
+   "parts": [
+    "soda-bottle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "soda-can-crushed",
+   "file": "soda-can-crushed.glb",
+   "kb": 20,
+   "triangles": 212,
+   "animations": [],
+   "parts": [
+    "soda-can-crushed"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "soda-can",
+   "file": "soda-can.glb",
+   "kb": 16,
+   "triangles": 164,
+   "animations": [],
+   "parts": [
+    "soda-can"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "soda-glass",
+   "file": "soda-glass.glb",
+   "kb": 12,
+   "triangles": 124,
+   "animations": [],
+   "parts": [
+    "soda-glass",
+    "straw",
+    "lemon"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "soda",
+   "file": "soda.glb",
+   "kb": 12,
+   "triangles": 188,
+   "animations": [],
+   "parts": [
+    "soda"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "soy",
+   "file": "soy.glb",
+   "kb": 5,
+   "triangles": 68,
+   "animations": [],
+   "parts": [
+    "soy"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "steamer",
+   "file": "steamer.glb",
+   "kb": 44,
+   "triangles": 492,
+   "animations": [],
+   "parts": [
+    "lid",
+    "layer",
+    "layer",
+    "layer"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "strawberry",
+   "file": "strawberry.glb",
+   "kb": 16,
+   "triangles": 156,
+   "animations": [],
+   "parts": [
+    "strawberry"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "styrofoam-dinner",
+   "file": "styrofoam-dinner.glb",
+   "kb": 23,
+   "triangles": 240,
+   "animations": [],
+   "parts": [
+    "styrofoam-dinner",
+    "Group",
+    "Group",
+    "Group",
+    "lid"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "styrofoam",
+   "file": "styrofoam.glb",
+   "kb": 11,
+   "triangles": 152,
+   "animations": [],
+   "parts": [
+    "styrofoam",
+    "lid"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "sub",
+   "file": "sub.glb",
+   "kb": 57,
+   "triangles": 574,
+   "animations": [],
+   "parts": [
+    "bun-bottom",
+    "lettuce",
+    "meat",
+    "tomato",
+    "tomato",
+    "tomato",
+    "bun-top"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "sundae",
+   "file": "sundae.glb",
+   "kb": 25,
+   "triangles": 316,
+   "animations": [],
+   "parts": [
+    "sundae",
+    "cherry",
+    "straw"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "sushi-egg",
+   "file": "sushi-egg.glb",
+   "kb": 7,
+   "triangles": 78,
+   "animations": [],
+   "parts": [
+    "sushi-egg"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "sushi-salmon",
+   "file": "sushi-salmon.glb",
+   "kb": 8,
+   "triangles": 96,
+   "animations": [],
+   "parts": [
+    "sushi-salmon"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "taco",
+   "file": "taco.glb",
+   "kb": 17,
+   "triangles": 174,
+   "animations": [],
+   "parts": [
+    "taco"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tajine-lid",
+   "file": "tajine-lid.glb",
+   "kb": 13,
+   "triangles": 136,
+   "animations": [],
+   "parts": [
+    "tajine-lid"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tajine",
+   "file": "tajine.glb",
+   "kb": 15,
+   "triangles": 164,
+   "animations": [],
+   "parts": [
+    "tajine"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tomato-slice",
+   "file": "tomato-slice.glb",
+   "kb": 12,
+   "triangles": 140,
+   "animations": [],
+   "parts": [
+    "tomato-slice"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "tomato",
+   "file": "tomato.glb",
+   "kb": 13,
+   "triangles": 132,
+   "animations": [],
+   "parts": [
+    "tomato"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "turkey",
+   "file": "turkey.glb",
+   "kb": 36,
+   "triangles": 368,
+   "animations": [],
+   "parts": [
+    "turkey",
+    "leg",
+    "leg"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "utensil-fork",
+   "file": "utensil-fork.glb",
+   "kb": 4,
+   "triangles": 44,
+   "animations": [],
+   "parts": [
+    "utensil-fork"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "utensil-knife",
+   "file": "utensil-knife.glb",
+   "kb": 3,
+   "triangles": 18,
+   "animations": [],
+   "parts": [
+    "utensil-knife"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "utensil-spoon",
+   "file": "utensil-spoon.glb",
+   "kb": 5,
+   "triangles": 46,
+   "animations": [],
+   "parts": [
+    "utensil-spoon"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "waffle",
+   "file": "waffle.glb",
+   "kb": 46,
+   "triangles": 588,
+   "animations": [],
+   "parts": [
+    "waffle"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "watermelon",
+   "file": "watermelon.glb",
+   "kb": 91,
+   "triangles": 1376,
+   "animations": [],
+   "parts": [
+    "slice",
+    "slice",
+    "slice",
+    "slice",
+    "slice",
+    "slice",
+    "slice",
+    "slice"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "whipped-cream",
+   "file": "whipped-cream.glb",
+   "kb": 4,
+   "triangles": 80,
+   "animations": [],
+   "parts": [
+    "whipped-cream"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "whisk",
+   "file": "whisk.glb",
+   "kb": 10,
+   "triangles": 150,
+   "animations": [],
+   "parts": [
+    "whisk"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "whole-ham",
+   "file": "whole-ham.glb",
+   "kb": 11,
+   "triangles": 128,
+   "animations": [],
+   "parts": [
+    "whole-ham"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wholer-ham",
+   "file": "wholer-ham.glb",
+   "kb": 12,
+   "triangles": 116,
+   "animations": [],
+   "parts": [
+    "wholer-ham"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wine-red",
+   "file": "wine-red.glb",
+   "kb": 13,
+   "triangles": 132,
+   "animations": [],
+   "parts": [
+    "wine-red"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  },
+  {
+   "name": "wine-white",
+   "file": "wine-white.glb",
+   "kb": 13,
+   "triangles": 124,
+   "animations": [],
+   "parts": [
+    "wine-white"
+   ],
+   "textures": [
+    "Textures/colormap.png"
+   ]
+  }
+ ]
+}
