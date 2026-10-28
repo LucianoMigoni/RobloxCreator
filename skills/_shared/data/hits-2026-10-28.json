@@ -1,0 +1,1235 @@
+{
+ "fetched": "2026-10-28",
+ "source": "games.roblox.com/v1/games, apis.roblox.com/game-passes/v1 (APIs públicas de Roblox)",
+ "games": {
+  "Steal An Egg": {
+   "universeId": 10563114921,
+   "playing": 802518,
+   "visits": 9749076999,
+   "favorites": 8880046,
+   "created": "2026-07-25",
+   "genre": "Simulation/Tycoon",
+   "maxPlayers": 7,
+   "passes": [
+    [
+     "X2 MONEY!",
+     399
+    ],
+    [
+     "X2 GROWTH SPEED!",
+     467
+    ]
+   ]
+  },
+  "[💀] Steal a Brainrot": {
+   "universeId": 7709344486,
+   "playing": 222566,
+   "visits": 74211000601,
+   "favorites": 29646725,
+   "created": "2025-05-16",
+   "genre": "Simulation/Tycoon",
+   "maxPlayers": 8,
+   "passes": [
+    [
+     "Admin Commands",
+     7999
+    ],
+    [
+     "VIP",
+     375
+    ],
+    [
+     "2x Money",
+     299
+    ]
+   ]
+  },
+  "[🎃] Grow a Garden 🌶️": {
+   "universeId": 7436755782,
+   "playing": 12853,
+   "visits": 35994913885,
+   "favorites": 11458943,
+   "created": "2025-03-25",
+   "genre": "Simulation/Tycoon",
+   "maxPlayers": 4,
+   "passes": []
+  },
+  "[🎃UPD] Fish It! 🐟": {
+   "universeId": 6701277882,
+   "playing": 67235,
+   "visits": 4804464721,
+   "favorites": 1294853,
+   "created": "2024-10-21",
+   "genre": "Simulation/Incremental Simulator",
+   "maxPlayers": 20,
+   "passes": [
+    [
+     "VIP 👑",
+     445
+    ],
+    [
+     "Advanced Luck 🍀✨",
+     545
+    ],
+    [
+     "Extra Luck 🍀✨",
+     245
+    ],
+    [
+     "Hyper Pack ⭐",
+     999
+    ],
+    [
+     "More Mutations 🌈⭐",
+     295
+    ],
+    [
+     "Sell Anywhere 🌍",
+     315
+    ],
+    [
+     "Small Luck 🍀",
+     50
+    ],
+    [
+     "Double XP 💜",
+     195
+    ],
+    [
+     "Mini Hoverboat 🔥",
+     225
+    ],
+    [
+     "Futuristic Pack 🚨",
+     399
+    ],
+    [
+     "Blossom Pack 🌸",
+     399
+    ],
+    [
+     "Lightning Pack ⚡",
+     399
+    ]
+   ]
+  },
+  "X100| +1 Speed Keyboard Escape | Candy & Chocolate": {
+   "universeId": 9584852943,
+   "playing": 40514,
+   "visits": 6607626930,
+   "favorites": 7214725,
+   "created": "2026-01-18",
+   "genre": "Simulation/Incremental Simulator",
+   "maxPlayers": 22,
+   "passes": [
+    [
+     "ADMIN Treadmill",
+     1199
+    ],
+    [
+     "Wild Trail",
+     1999
+    ],
+    [
+     "Candy Treadmill",
+     749
+    ],
+    [
+     "Diamond Treadmill",
+     345
+    ],
+    [
+     "Gold Treadmill",
+     79
+    ],
+    [
+     "Wild Aura",
+     1999
+    ],
+    [
+     "InfinityTrail",
+     2999
+    ],
+    [
+     "Wins Multiplier x2",
+     95
+    ],
+    [
+     "Unlock Soundpacks",
+     85
+    ],
+    [
+     "More Equipped Items (20 slots)",
+     299
+    ],
+    [
+     "GalaxyTrail",
+     295
+    ],
+    [
+     "Darkness Aura",
+     1479
+    ],
+    [
+     "Spooky Trail",
+     1835
+    ],
+    [
+     "RainbowTrail",
+     199
+    ],
+    [
+     "Transcendant Trail",
+     2350
+    ],
+    [
+     "Ghost Aura",
+     1849
+    ],
+    [
+     "GlowAura",
+     90
+    ],
+    [
+     "CosmicTrail",
+     1599
+    ],
+    [
+     "WindAura",
+     189
+    ],
+    [
+     "WaterAura",
+     395
+    ],
+    [
+     "BlueTrail",
+     35
+    ],
+    [
+     "Electric Aura",
+     799
+    ],
+    [
+     "PurpleTrail",
+     75
+    ],
+    [
+     "Storm Aura",
+     1249
+    ],
+    [
+     "Candy Aura",
+     949
+    ],
+    [
+     "GreenTrail",
+     25
+    ],
+    [
+     "Ascendant Trail",
+     2300
+    ],
+    [
+     "Divine Trail",
+     2100
+    ],
+    [
+     "SupernovaTrail",
+     2289
+    ],
+    [
+     "RedTrail",
+     175
+    ],
+    [
+     "VoidTrail",
+     1989
+    ],
+    [
+     "Chocolate Aura",
+     1099
+    ],
+    [
+     "Alphabet Aura",
+     1449
+    ],
+    [
+     "White Chocolate Trail",
+     295
+    ],
+    [
+     "Eternal Trail",
+     2250
+    ],
+    [
+     "GodlikeTrail",
+     2600
+    ],
+    [
+     "Orange Trail",
+     19
+    ],
+    [
+     "Premium Trade Booth",
+     159
+    ],
+    [
+     "Pink Trail",
+     24
+    ],
+    [
+     "FireAura",
+     749
+    ],
+    [
+     "Caramel Trail",
+     199
+    ],
+    [
+     "Celestial Trail",
+     2200
+    ],
+    [
+     "Cookie Dough Trail",
+     1989
+    ],
+    [
+     "Cyan Trail",
+     75
+    ],
+    [
+     "Fade Trail",
+     1599
+    ],
+    [
+     "Yellow Trail",
+     175
+    ]
+   ]
+  },
+  "Break and Steal an Egg": {
+   "universeId": 10765288803,
+   "playing": 55594,
+   "visits": 278788220,
+   "favorites": 664110,
+   "created": "2026-09-05",
+   "genre": "Simulation/Tycoon",
+   "maxPlayers": 7,
+   "passes": []
+  },
+  "[IMPOSSIBLE 😈] Search For The Needle": {
+   "universeId": 10756011174,
+   "playing": 6184,
+   "visits": 119213106,
+   "favorites": 261703,
+   "created": "2026-08-23",
+   "genre": "Simulation/Incremental Simulator",
+   "maxPlayers": 20,
+   "passes": [
+    [
+     "Permanent Infinite Bag",
+     99
+    ],
+    [
+     "Vacuum (PERMANENT) [OP]",
+     249
+    ],
+    [
+     "2X Class Luck",
+     199
+    ],
+    [
+     "Cow Pet",
+     499
+    ],
+    [
+     "2x Gems [OP] 💎",
+     99
+    ],
+    [
+     "Fast Rolls",
+     179
+    ],
+    [
+     "Permanent Dynamite",
+     149
+    ],
+    [
+     "Permanent Drone",
+     129
+    ],
+    [
+     "Permanent Pitchfork",
+     99
+    ]
+   ]
+  },
+  "Needle In A Haystack": {
+   "universeId": 10761200080,
+   "playing": 642,
+   "visits": 6121049,
+   "favorites": 33177,
+   "created": "2026-08-25",
+   "genre": "Simulation/Incremental Simulator",
+   "maxPlayers": 20,
+   "passes": [
+    [
+     "EVERYTHING",
+     649
+    ],
+    [
+     "VENT IN YOUR POCKET",
+     249
+    ],
+    [
+     "+1 TUNNELER",
+     149
+    ],
+    [
+     "2× HANDS",
+     249
+    ],
+    [
+     "+2 DRONES",
+     199
+    ],
+    [
+     "2× CASH",
+     249
+    ],
+    [
+     "FAST LEGS",
+     99
+    ]
+   ]
+  },
+  "[🎃] Steal A Pet And Ride It!": {
+   "universeId": 10769315427,
+   "playing": 19841,
+   "visits": 5209968,
+   "favorites": 15761,
+   "created": "2026-10-04",
+   "genre": "Simulation/Tycoon",
+   "maxPlayers": 7,
+   "passes": [
+    [
+     "VIP",
+     199
+    ],
+    [
+     "3x Open Speed",
+     299
+    ],
+    [
+     "Auto Collect",
+     49
+    ],
+    [
+     "Sakura Barn",
+     149
+    ],
+    [
+     "Halloween Trail",
+     249
+    ],
+    [
+     "Halloween Treadmill",
+     249
+    ],
+    [
+     "Halloween Aura",
+     199
+    ],
+    [
+     "2x Candy",
+     249
+    ],
+    [
+     "TREEHOUSE BARN",
+     149
+    ],
+    [
+     "Open Pens Barn",
+     99
+    ]
+   ]
+  },
+  "[🎃] Plants & Brainrots 🌻": {
+   "universeId": 8316902627,
+   "playing": 1899,
+   "visits": 4720798173,
+   "favorites": 2007506,
+   "created": "2025-08-01",
+   "genre": "Simulation/Tycoon",
+   "maxPlayers": 5,
+   "passes": [
+    [
+     "VIP",
+     249
+    ],
+    [
+     "Extra Inventory Space",
+     149
+    ]
+   ]
+  },
+  "Dig & Clean 🧼": {
+   "universeId": 10475794799,
+   "playing": 1138,
+   "visits": 129001360,
+   "favorites": 1776150,
+   "created": "2026-07-09",
+   "genre": "Simulation/Tycoon",
+   "maxPlayers": 6,
+   "passes": [
+    [
+     "Instant Clean",
+     349
+    ],
+    [
+     "VIP",
+     349
+    ],
+    [
+     "Auto Clicker",
+     149
+    ],
+    [
+     "Mint Condition+",
+     1499
+    ],
+    [
+     "Teleport",
+     99
+    ],
+    [
+     "2x Dig Power",
+     499
+    ],
+    [
+     "2x Luck",
+     199
+    ],
+    [
+     "2x Gold",
+     509
+    ],
+    [
+     "+100 Storage",
+     99
+    ],
+    [
+     "2x Walkspeed",
+     99
+    ]
+   ]
+  },
+  "The Hollow": {
+   "universeId": 10770728771,
+   "playing": 130697,
+   "visits": 113021247,
+   "favorites": 177219,
+   "created": "2026-10-13",
+   "genre": "Entertainment/Showcase & Hub",
+   "maxPlayers": 20,
+   "passes": []
+  },
+  "DONT SPLASH": {
+   "universeId": 10771421858,
+   "playing": 95657,
+   "visits": 73289934,
+   "favorites": 229284,
+   "created": "2026-10-17",
+   "genre": "Obby & Platformer/Runner",
+   "maxPlayers": 10,
+   "passes": [
+    [
+     "Halloween Pack",
+     79
+    ],
+    [
+     "All Upgrades Maxed",
+     149
+    ],
+    [
+     "Rescue Rope",
+     30
+    ],
+    [
+     "2x Cash",
+     99
+    ],
+    [
+     "4th Tool Slot",
+     99
+    ],
+    [
+     "Max Pebble Skipping",
+     75
+    ],
+    [
+     "Max Rope Reach",
+     75
+    ],
+    [
+     "5th Tool Slot",
+     149
+    ],
+    [
+     "Max Throwing Range",
+     75
+    ],
+    [
+     "Max Rescue Speed",
+     75
+    ],
+    [
+     "Max Flare Radius",
+     75
+    ],
+    [
+     "Max Toy Battery",
+     75
+    ]
+   ]
+  },
+  "[👻] Tap Simulator REBORN": {
+   "universeId": 10629695169,
+   "playing": 40317,
+   "visits": 25807450,
+   "favorites": 131627,
+   "created": "2026-08-04",
+   "genre": "Simulation/Incremental Simulator",
+   "maxPlayers": 10,
+   "passes": [
+    [
+     "x8 Egg Hatch",
+     995
+    ],
+    [
+     "Secret Hunter",
+     1999
+    ],
+    [
+     "Super Luck",
+     799
+    ],
+    [
+     "+3 Pet Equip",
+     749
+    ],
+    [
+     "Lucky",
+     249
+    ],
+    [
+     "Faster Hatch",
+     199
+    ],
+    [
+     "Magic Eggs",
+     1799
+    ],
+    [
+     "+1 Pet Equip",
+     249
+    ],
+    [
+     "Super Storage",
+     349
+    ],
+    [
+     "Extra Storage",
+     79
+    ]
+   ]
+  },
+  "🎉 [PSX] Pet Simulator 99! 🐾": {
+   "universeId": 3317771874,
+   "playing": 76872,
+   "visits": 2685287519,
+   "favorites": 2218069,
+   "created": "2022-02-05",
+   "genre": "Simulation/Incremental Simulator",
+   "maxPlayers": 10,
+   "passes": [
+    [
+     "Huge Hunter! 🔥",
+     3250
+    ],
+    [
+     "VIP! ⭐",
+     400
+    ],
+    [
+     "Auto Farm! ♻️",
+     175
+    ],
+    [
+     "Ultra Lucky! 🍀✨",
+     800
+    ],
+    [
+     "+15 Eggs! 🥚",
+     625
+    ],
+    [
+     "+15 Pets! 🐾",
+     375
+    ],
+    [
+     "Magic Eggs! ✨",
+     1200
+    ],
+    [
+     "Auto Tap! ☝️",
+     350
+    ],
+    [
+     "Double Stars! ⭐",
+     2400
+    ],
+    [
+     "Super Drops! ⭐",
+     2400
+    ],
+    [
+     "Lucky! 🍀",
+     275
+    ],
+    [
+     "Super Shiny Hunter!",
+     1600
+    ],
+    [
+     "Daycare Slots! 💖",
+     625
+    ]
+   ]
+  },
+  "[🎃] Anime Dice": {
+   "universeId": 10708913337,
+   "playing": 70034,
+   "visits": 145129246,
+   "favorites": 190138,
+   "created": "2026-08-15",
+   "genre": "Simulation/Incremental Simulator",
+   "maxPlayers": 9,
+   "passes": [
+    [
+     "Ultra Luck",
+     499
+    ],
+    [
+     "Double Roll",
+     799
+    ],
+    [
+     "VIP",
+     249
+    ],
+    [
+     "Roll Speed",
+     349
+    ],
+    [
+     "More Cash",
+     199
+    ],
+    [
+     "More Traits",
+     329
+    ],
+    [
+     "Luck",
+     199
+    ],
+    [
+     "More Grades",
+     299
+    ]
+   ]
+  },
+  "🐒 +1 Speed Monkey Escape": {
+   "universeId": 10144280947,
+   "playing": 4265,
+   "visits": 646259977,
+   "favorites": 12246037,
+   "created": "2026-05-09",
+   "genre": "Simulation/Incremental Simulator",
+   "maxPlayers": 22,
+   "passes": [
+    [
+     "x1000 Celestial Treadmill [OP]",
+     4999
+    ],
+    [
+     "x25 Galaxy Treadmill",
+     719
+    ],
+    [
+     "x100 Void Treadmill [OP]",
+     1599
+    ],
+    [
+     "x9 Diamond Treadmill",
+     239
+    ],
+    [
+     "x3 Golden Treadmill",
+     69
+    ],
+    [
+     "VIP",
+     99
+    ],
+    [
+     "Shadow Tail",
+     349
+    ],
+    [
+     "Toxic Tail",
+     199
+    ],
+    [
+     "Steampunk Trail",
+     3199
+    ],
+    [
+     "Steampunk Aura",
+     3199
+    ],
+    [
+     "Starter Pack [OP]",
+     9
+    ],
+    [
+     "Spectral Trail",
+     799
+    ],
+    [
+     "Divine Trail",
+     299
+    ],
+    [
+     "Yin Yang Trail",
+     1199
+    ],
+    [
+     "x2 Charms Shop Luck",
+     99
+    ],
+    [
+     "Spectral Aura",
+     799
+    ],
+    [
+     "Rainbow Trail",
+     129
+    ],
+    [
+     "Fairy Trail",
+     499
+    ],
+    [
+     "Void Trail",
+     2799
+    ],
+    [
+     "Sparkle Aura",
+     299
+    ],
+    [
+     "Galaxy Trail",
+     199
+    ],
+    [
+     "Void Aura",
+     2799
+    ],
+    [
+     "Bloodmoon Trail",
+     1499
+    ],
+    [
+     "Green Trail",
+     79
+    ],
+    [
+     "Rainbow Aura",
+     129
+    ],
+    [
+     "Lunar Aura",
+     199
+    ],
+    [
+     "Electric Aura",
+     2399
+    ],
+    [
+     "Blue Trail",
+     39
+    ],
+    [
+     "Fairy Aura",
+     499
+    ],
+    [
+     "Sakura Trail",
+     1799
+    ],
+    [
+     "Red Trail",
+     19
+    ],
+    [
+     "Amber Aura",
+     19
+    ],
+    [
+     "Ice Cold Aura",
+     39
+    ],
+    [
+     "Mecha Tail",
+     1299
+    ],
+    [
+     "Nature Aura",
+     79
+    ],
+    [
+     "Bone Tail",
+     899
+    ],
+    [
+     "Yin Yang Aura",
+     1199
+    ],
+    [
+     "Flash Trail",
+     2399
+    ],
+    [
+     "Sakura Aura",
+     1799
+    ],
+    [
+     "Bloodmoon Aura",
+     1499
+    ]
+   ]
+  },
+  "[🎃] Catch And Tame!": {
+   "universeId": 9091133975,
+   "playing": 1499,
+   "visits": 468342650,
+   "favorites": 1292901,
+   "created": "2025-11-02",
+   "genre": "Simulation/Tycoon",
+   "maxPlayers": 5,
+   "passes": [
+    [
+     "Pet Radar",
+     249
+    ],
+    [
+     "Auto Clicker!",
+     99
+    ],
+    [
+     "Ultra Luck!",
+     899
+    ],
+    [
+     "VIP",
+     199
+    ],
+    [
+     "BETTER LUCK! 🍀",
+     299
+    ],
+    [
+     "Collect All",
+     99
+    ],
+    [
+     "Fishing Luck",
+     699
+    ],
+    [
+     "STARTER PACK!",
+     9
+    ],
+    [
+     "Luckyblock Luck!",
+     299
+    ],
+    [
+     "EXTRA SPEED! ",
+     49
+    ],
+    [
+     "2x FOOD STOCK! 🥩",
+     199
+    ]
+   ]
+  },
+  "[🎃] Rebirth Champions: Ultimate": {
+   "universeId": 7178032757,
+   "playing": 5296,
+   "visits": 249942856,
+   "favorites": 153574,
+   "created": "2025-02-01",
+   "genre": "Simulation/Incremental Simulator",
+   "maxPlayers": 10,
+   "passes": [
+    [
+     "XP Booster",
+     799
+    ],
+    [
+     "Divine Hunter",
+     799
+    ],
+    [
+     "Auto Rebirth",
+     149
+    ],
+    [
+     "Extra Egg!",
+     399
+    ],
+    [
+     "Ultra Luck",
+     799
+    ],
+    [
+     "Secrets Hunter",
+     799
+    ],
+    [
+     "VIP",
+     599
+    ],
+    [
+     "+3 Pets Equipped",
+     399
+    ],
+    [
+     "Magic Eggs",
+     799
+    ],
+    [
+     "Insane Lumberjack",
+     399
+    ],
+    [
+     "x3 Fragments Luck",
+     399
+    ],
+    [
+     "Faster Eggs Open",
+     299
+    ],
+    [
+     "x2 Dungeon Coins",
+     399
+    ],
+    [
+     "Shiny Hunter",
+     799
+    ],
+    [
+     "x2 Hive Capacity",
+     399
+    ],
+    [
+     "Mega Luck",
+     199
+    ],
+    [
+     "+2 Pets Equipped",
+     199
+    ],
+    [
+     "Insane Farmer",
+     299
+    ],
+    [
+     "Auto Clicker",
+     79
+    ],
+    [
+     "x2 Space Coins",
+     399
+    ]
+   ]
+  },
+  "🧸 My Small Business": {
+   "universeId": 10771507608,
+   "playing": 37626,
+   "visits": 4934404,
+   "favorites": 38369,
+   "created": "2026-10-17",
+   "genre": "Simulation/Tycoon",
+   "maxPlayers": 6,
+   "passes": [
+    [
+     "More Design Tools",
+     179
+    ],
+    [
+     "Plushie Goodie",
+     84
+    ],
+    [
+     "Shop Cat",
+     179
+    ],
+    [
+     "Faster Printer",
+     114
+    ],
+    [
+     "Auto Arrange",
+     74
+    ],
+    [
+     "Goodie Designer",
+     99
+    ],
+    [
+     "Holographic Products",
+     199
+    ],
+    [
+     "x2 Coins",
+     399
+    ],
+    [
+     "Box Designer",
+     149
+    ],
+    [
+     "VIP",
+     199
+    ],
+    [
+     "x2 XP",
+     199
+    ],
+    [
+     "Bigger Catalog",
+     99
+    ],
+    [
+     "Luxury Pack",
+     99
+    ],
+    [
+     "Coastal Pack",
+     74
+    ]
+   ]
+  },
+  "Cook the Chicken (by slapping it)": {
+   "universeId": 10769621465,
+   "playing": 11147,
+   "visits": 3797784,
+   "favorites": 11268,
+   "created": "2026-10-06",
+   "genre": "Simulation/Incremental Simulator",
+   "maxPlayers": 16,
+   "passes": []
+  },
+  "[🎃] +1 Upgrade Per Kill": {
+   "universeId": 10768372920,
+   "playing": 14886,
+   "visits": 7004531,
+   "favorites": 114085,
+   "created": "2026-09-27",
+   "genre": "Action/Battlegrounds & Fighting",
+   "maxPlayers": 25,
+   "passes": [
+    [
+     "Scorcher Class",
+     399
+    ],
+    [
+     "VIP",
+     279
+    ],
+    [
+     "Skirmisher Class",
+     99
+    ],
+    [
+     "Seer Class",
+     199
+    ],
+    [
+     "Bomber Class",
+     299
+    ],
+    [
+     "Ghost Class",
+     179
+    ],
+    [
+     "Trickster Class",
+     49
+    ],
+    [
+     "Firestarter Class",
+     149
+    ],
+    [
+     "Trapper Class",
+     79
+    ],
+    [
+     "Archer Class",
+     25
+    ]
+   ]
+  },
+  "[🎃] Adopt Me!": {
+   "universeId": 383310974,
+   "playing": 206435,
+   "visits": 45244290148,
+   "favorites": 29816017,
+   "created": "2017-07-14",
+   "genre": "Roleplay & Avatar Sim/Pet Care",
+   "maxPlayers": 35,
+   "passes": [
+    [
+     "1.25x Candy Multiplier",
+     50
+    ],
+    [
+     "VIP",
+     480
+    ],
+    [
+     "Premium Plots",
+     285
+    ],
+    [
+     "+1 Pet Pen Slot",
+     295
+    ],
+    [
+     "Cozy Home Lure",
+     765
+    ],
+    [
+     "Millionaire Pack",
+     795
+    ]
+   ]
+  }
+ }
+}

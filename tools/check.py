@@ -162,7 +162,8 @@ def check_source_rules() -> list:
 
 def check_python_tools() -> list:
     errors = []
-    for script, cmd in (("assets/catalog.py", "selftest"), ("assets/catalog.py", "validate"), ("tools/analytics.py", "selftest")):
+    for script, cmd in (("assets/catalog.py", "selftest"), ("assets/catalog.py", "validate"), ("tools/analytics.py", "selftest"),
+                        ("tools/roblox_research.py", "selftest")):
         ok, out = run([sys.executable, script, cmd])
         if not ok:
             errors.append(f"{script} {cmd}: {out}")
