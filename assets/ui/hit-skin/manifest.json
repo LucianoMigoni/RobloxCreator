@@ -1,0 +1,92 @@
+{
+ "pack": "hit-skin",
+ "kind": "ui-texture",
+ "count": 9,
+ "source": "código propio: tools/ui_textures.py",
+ "license": "propio",
+ "style": "Material de la UI de los hits: studs, damero, franjas de brillo, rayos y destellos",
+ "notes": "Subir con tools/roblox_upload.py; UIKit las toma de AssetIds.textures. Sin subir, la UI se ve igual pero plana.",
+ "items": [
+  {
+   "name": "studs",
+   "file": "studs.png",
+   "size": [
+    64,
+    64
+   ],
+   "usage": "Mosaico: TileSize 64x64 px a 1080p; ImageTransparency 0.55-0.8 sobre paneles y botones"
+  },
+  {
+   "name": "checker",
+   "file": "checker.png",
+   "size": [
+    64,
+    64
+   ],
+   "usage": "Mosaico: TileSize 48-64 px; ImageTransparency 0.9-0.94 en tarjetas y botones"
+  },
+  {
+   "name": "dots",
+   "file": "dots.png",
+   "size": [
+    64,
+    64
+   ],
+   "usage": "Mosaico: TileSize 40-64 px; ImageTransparency 0.85-0.92 en fondos de tarjeta"
+  },
+  {
+   "name": "stripes",
+   "file": "stripes.png",
+   "size": [
+    512,
+    128
+   ],
+   "usage": "Estirada sobre la cabecera de una ventana o un botón grande; ImageTransparency 0.55-0.75"
+  },
+  {
+   "name": "sunburst",
+   "file": "sunburst.png",
+   "size": [
+    512,
+    512
+   ],
+   "usage": "Detrás de una oferta o premio, girando (Rotation += 30 grados/s); ImageColor3 al gusto"
+  },
+  {
+   "name": "glow",
+   "file": "glow.png",
+   "size": [
+    256,
+    256
+   ],
+   "usage": "Halo detrás de íconos y tarjetas raras; ImageColor3 del color de la rareza"
+  },
+  {
+   "name": "sparkle",
+   "file": "sparkle.png",
+   "size": [
+    128,
+    128
+   ],
+   "usage": "Destellos en las esquinas de tarjetas destacadas, con pulso de escala"
+  },
+  {
+   "name": "shadow",
+   "file": "shadow.png",
+   "size": [
+    128,
+    128
+   ],
+   "usage": "9 cortes detrás de ventanas: ScaleType Slice, SliceCenter Rect(48,48,80,80)"
+  },
+  {
+   "name": "arrows",
+   "file": "arrows.png",
+   "size": [
+    256,
+    64
+   ],
+   "usage": "Beam en el piso hacia el objetivo: TextureMode Wrap, TextureSpeed 1-2, Color rojo o amarillo"
+  }
+ ]
+}

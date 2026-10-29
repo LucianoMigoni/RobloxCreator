@@ -1,0 +1,21 @@
+{
+  "_que_es": "Sistemas (hud-icons, hoja C). Primero la base: node tools/render3d/icons.cjs render daily quests settings trade inventory timer lock invite teleport --out <carpeta>; después python tools/iconsheet.py compose <los 9 png en orden> --out base.png y python tools/imagegen.py generate skills/_shared/iconos/recetas/hud-c-sistemas.json --ref base.png.",
+  "kind": "iconset",
+  "grid": "3x3",
+  "names": [
+    "daily",
+    "quests",
+    "settings",
+    "trade",
+    "inventory",
+    "timer",
+    "lock",
+    "invite",
+    "teleport"
+  ],
+  "ia": {
+    "aspect": "1:1",
+    "mode": "redraw",
+    "prompt": "Keep the same 9 objects, in this order: 1) white daily calendar with a red top band, two metal rings and a yellow star on the page, 2) brown clipboard with white paper and a big green check mark, 3) silver gear with a blue jewel in the center, 4) two thick trade arrows, green pointing right on top and orange pointing left below, 5) orange backpack with a front pocket and a gold buckle, 6) red alarm clock with two bells and a white face, 7) golden padlock with a silver shackle and a dark keyhole, 8) two smiling round friend heads, blue and green, with a small green square badge showing a white plus sign, 9) round purple portal ring with small cyan gems and a pink swirl inside."
+  }
+}

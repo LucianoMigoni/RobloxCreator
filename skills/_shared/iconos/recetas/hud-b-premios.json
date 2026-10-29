@@ -1,0 +1,21 @@
+{
+  "_que_es": "Premios y objetos (hud-icons, hoja B). Primero la base: node tools/render3d/icons.cjs render gem coins egg chest potion boost star trophy medal --out <carpeta>; después python tools/iconsheet.py compose <los 9 png en orden> --out base.png y python tools/imagegen.py generate skills/_shared/iconos/recetas/hud-b-premios.json --ref base.png.",
+  "kind": "iconset",
+  "grid": "3x3",
+  "names": [
+    "gem",
+    "coins",
+    "egg",
+    "chest",
+    "potion",
+    "boost",
+    "star",
+    "trophy",
+    "medal"
+  ],
+  "ia": {
+    "aspect": "1:1",
+    "mode": "redraw",
+    "prompt": "Keep the same 9 objects, in this order: 1) faceted blue diamond gem, 2) pile of three shiny gold coins with a star on the front coin, 3) cream egg with orange and yellow spots, 4) wooden treasure chest with gold trims and a gold lock plate, 5) round glass potion bottle with glowing pink liquid and a cork, 6) chunky yellow-orange lightning bolt, 7) chunky glossy yellow star, 8) golden trophy cup with two handles, a small star and a brown base, 9) orange rosette medal with a gold center, a red star and red and blue ribbons."
+  }
+}

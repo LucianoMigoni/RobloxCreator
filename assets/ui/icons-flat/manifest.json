@@ -1,0 +1,424 @@
+{
+ "pack": "icons-flat",
+ "kind": "icon",
+ "count": 59,
+ "source": "Material Symbols (Google), @material-symbols/svg-700@0.48.2, estilo rounded relleno",
+ "license": "Apache-2.0 (svg/LICENSE-material-symbols.txt)",
+ "style": "Plano: blanco con contorno oscuro grueso (botones de color) o blanco liso (barra de Roblox, teñible)",
+ "notes": "Para objetos (billetes, regalo, huevos) usar los 3D de assets/ui/icons3d.",
+ "items": [
+  {
+   "name": "shop",
+   "material": "shopping_cart",
+   "file": "shop.png",
+   "plain": "plain/shop.png",
+   "svg": "svg/shop.svg"
+  },
+  {
+   "name": "shop_basket",
+   "material": "shopping_basket",
+   "file": "shop_basket.png",
+   "plain": "plain/shop_basket.png",
+   "svg": "svg/shop_basket.svg"
+  },
+  {
+   "name": "index",
+   "material": "menu_book",
+   "file": "index.png",
+   "plain": "plain/index.png",
+   "svg": "svg/index.svg"
+  },
+  {
+   "name": "rebirth",
+   "material": "autorenew",
+   "file": "rebirth.png",
+   "plain": "plain/rebirth.png",
+   "svg": "svg/rebirth.svg"
+  },
+  {
+   "name": "settings",
+   "material": "settings",
+   "file": "settings.png",
+   "plain": "plain/settings.png",
+   "svg": "svg/settings.svg"
+  },
+  {
+   "name": "daily",
+   "material": "calendar_month",
+   "file": "daily.png",
+   "plain": "plain/daily.png",
+   "svg": "svg/daily.svg"
+  },
+  {
+   "name": "quests",
+   "material": "assignment",
+   "file": "quests.png",
+   "plain": "plain/quests.png",
+   "svg": "svg/quests.svg"
+  },
+  {
+   "name": "gift",
+   "material": "redeem",
+   "file": "gift.png",
+   "plain": "plain/gift.png",
+   "svg": "svg/gift.svg"
+  },
+  {
+   "name": "trade",
+   "material": "swap_horiz",
+   "file": "trade.png",
+   "plain": "plain/trade.png",
+   "svg": "svg/trade.svg"
+  },
+  {
+   "name": "inventory",
+   "material": "backpack",
+   "file": "inventory.png",
+   "plain": "plain/inventory.png",
+   "svg": "svg/inventory.svg"
+  },
+  {
+   "name": "teleport",
+   "material": "cyclone",
+   "file": "teleport.png",
+   "plain": "plain/teleport.png",
+   "svg": "svg/teleport.svg"
+  },
+  {
+   "name": "spin",
+   "material": "attractions",
+   "file": "spin.png",
+   "plain": "plain/spin.png",
+   "svg": "svg/spin.svg"
+  },
+  {
+   "name": "codes",
+   "material": "confirmation_number",
+   "file": "codes.png",
+   "plain": "plain/codes.png",
+   "svg": "svg/codes.svg"
+  },
+  {
+   "name": "friends",
+   "material": "group",
+   "file": "friends.png",
+   "plain": "plain/friends.png",
+   "svg": "svg/friends.svg"
+  },
+  {
+   "name": "invite",
+   "material": "person_add",
+   "file": "invite.png",
+   "plain": "plain/invite.png",
+   "svg": "svg/invite.svg"
+  },
+  {
+   "name": "speed",
+   "material": "sprint",
+   "file": "speed.png",
+   "plain": "plain/speed.png",
+   "svg": "svg/speed.svg"
+  },
+  {
+   "name": "strength",
+   "material": "fitness_center",
+   "file": "strength.png",
+   "plain": "plain/strength.png",
+   "svg": "svg/strength.svg"
+  },
+  {
+   "name": "trophy",
+   "material": "trophy",
+   "file": "trophy.png",
+   "plain": "plain/trophy.png",
+   "svg": "svg/trophy.svg"
+  },
+  {
+   "name": "star",
+   "material": "star",
+   "file": "star.png",
+   "plain": "plain/star.png",
+   "svg": "svg/star.svg"
+  },
+  {
+   "name": "lock",
+   "material": "lock",
+   "file": "lock.png",
+   "plain": "plain/lock.png",
+   "svg": "svg/lock.svg"
+  },
+  {
+   "name": "music",
+   "material": "music_note",
+   "file": "music.png",
+   "plain": "plain/music.png",
+   "svg": "svg/music.svg"
+  },
+  {
+   "name": "sound",
+   "material": "volume_up",
+   "file": "sound.png",
+   "plain": "plain/sound.png",
+   "svg": "svg/sound.svg"
+  },
+  {
+   "name": "mute",
+   "material": "volume_off",
+   "file": "mute.png",
+   "plain": "plain/mute.png",
+   "svg": "svg/mute.svg"
+  },
+  {
+   "name": "notifications",
+   "material": "notifications",
+   "file": "notifications.png",
+   "plain": "plain/notifications.png",
+   "svg": "svg/notifications.svg"
+  },
+  {
+   "name": "search",
+   "material": "search",
+   "file": "search.png",
+   "plain": "plain/search.png",
+   "svg": "svg/search.svg"
+  },
+  {
+   "name": "map",
+   "material": "map",
+   "file": "map.png",
+   "plain": "plain/map.png",
+   "svg": "svg/map.svg"
+  },
+  {
+   "name": "base",
+   "material": "home",
+   "file": "base.png",
+   "plain": "plain/base.png",
+   "svg": "svg/base.svg"
+  },
+  {
+   "name": "pets",
+   "material": "pets",
+   "file": "pets.png",
+   "plain": "plain/pets.png",
+   "svg": "svg/pets.svg"
+  },
+  {
+   "name": "egg",
+   "material": "egg",
+   "file": "egg.png",
+   "plain": "plain/egg.png",
+   "svg": "svg/egg.svg"
+  },
+  {
+   "name": "timer",
+   "material": "timer",
+   "file": "timer.png",
+   "plain": "plain/timer.png",
+   "svg": "svg/timer.svg"
+  },
+  {
+   "name": "moon",
+   "material": "dark_mode",
+   "file": "moon.png",
+   "plain": "plain/moon.png",
+   "svg": "svg/moon.svg"
+  },
+  {
+   "name": "fire",
+   "material": "local_fire_department",
+   "file": "fire.png",
+   "plain": "plain/fire.png",
+   "svg": "svg/fire.svg"
+  },
+  {
+   "name": "heart",
+   "material": "favorite",
+   "file": "heart.png",
+   "plain": "plain/heart.png",
+   "svg": "svg/heart.svg"
+  },
+  {
+   "name": "close",
+   "material": "close",
+   "file": "close.png",
+   "plain": "plain/close.png",
+   "svg": "svg/close.svg"
+  },
+  {
+   "name": "plus",
+   "material": "add",
+   "file": "plus.png",
+   "plain": "plain/plus.png",
+   "svg": "svg/plus.svg"
+  },
+  {
+   "name": "check",
+   "material": "check",
+   "file": "check.png",
+   "plain": "plain/check.png",
+   "svg": "svg/check.svg"
+  },
+  {
+   "name": "info",
+   "material": "info",
+   "file": "info.png",
+   "plain": "plain/info.png",
+   "svg": "svg/info.svg"
+  },
+  {
+   "name": "question",
+   "material": "help",
+   "file": "question.png",
+   "plain": "plain/question.png",
+   "svg": "svg/question.svg"
+  },
+  {
+   "name": "vip",
+   "material": "workspace_premium",
+   "file": "vip.png",
+   "plain": "plain/vip.png",
+   "svg": "svg/vip.svg"
+  },
+  {
+   "name": "cash",
+   "material": "payments",
+   "file": "cash.png",
+   "plain": "plain/cash.png",
+   "svg": "svg/cash.svg"
+  },
+  {
+   "name": "coins",
+   "material": "paid",
+   "file": "coins.png",
+   "plain": "plain/coins.png",
+   "svg": "svg/coins.svg"
+  },
+  {
+   "name": "gem",
+   "material": "diamond",
+   "file": "gem.png",
+   "plain": "plain/gem.png",
+   "svg": "svg/gem.svg"
+  },
+  {
+   "name": "boost",
+   "material": "bolt",
+   "file": "boost.png",
+   "plain": "plain/boost.png",
+   "svg": "svg/boost.svg"
+  },
+  {
+   "name": "potion",
+   "material": "science",
+   "file": "potion.png",
+   "plain": "plain/potion.png",
+   "svg": "svg/potion.svg"
+  },
+  {
+   "name": "chest",
+   "material": "inventory_2",
+   "file": "chest.png",
+   "plain": "plain/chest.png",
+   "svg": "svg/chest.svg"
+  },
+  {
+   "name": "sell",
+   "material": "sell",
+   "file": "sell.png",
+   "plain": "plain/sell.png",
+   "svg": "svg/sell.svg"
+  },
+  {
+   "name": "leaderboard",
+   "material": "leaderboard",
+   "file": "leaderboard.png",
+   "plain": "plain/leaderboard.png",
+   "svg": "svg/leaderboard.svg"
+  },
+  {
+   "name": "pickaxe",
+   "material": "hardware",
+   "file": "pickaxe.png",
+   "plain": "plain/pickaxe.png",
+   "svg": "svg/pickaxe.svg"
+  },
+  {
+   "name": "fishing",
+   "material": "phishing",
+   "file": "fishing.png",
+   "plain": "plain/fishing.png",
+   "svg": "svg/fishing.svg"
+  },
+  {
+   "name": "battle",
+   "material": "swords",
+   "file": "battle.png",
+   "plain": "plain/battle.png",
+   "svg": "svg/battle.svg"
+  },
+  {
+   "name": "play",
+   "material": "play_arrow",
+   "file": "play.png",
+   "plain": "plain/play.png",
+   "svg": "svg/play.svg"
+  },
+  {
+   "name": "hide",
+   "material": "visibility_off",
+   "file": "hide.png",
+   "plain": "plain/hide.png",
+   "svg": "svg/hide.svg"
+  },
+  {
+   "name": "camera",
+   "material": "photo_camera",
+   "file": "camera.png",
+   "plain": "plain/camera.png",
+   "svg": "svg/camera.svg"
+  },
+  {
+   "name": "skip",
+   "material": "fast_forward",
+   "file": "skip.png",
+   "plain": "plain/skip.png",
+   "svg": "svg/skip.svg"
+  },
+  {
+   "name": "rocket",
+   "material": "rocket_launch",
+   "file": "rocket.png",
+   "plain": "plain/rocket.png",
+   "svg": "svg/rocket.svg"
+  },
+  {
+   "name": "key",
+   "material": "key",
+   "file": "key.png",
+   "plain": "plain/key.png",
+   "svg": "svg/key.svg"
+  },
+  {
+   "name": "emote",
+   "material": "mood",
+   "file": "emote.png",
+   "plain": "plain/emote.png",
+   "svg": "svg/emote.svg"
+  },
+  {
+   "name": "upgrade",
+   "material": "arrow_circle_up",
+   "file": "upgrade.png",
+   "plain": "plain/upgrade.png",
+   "svg": "svg/upgrade.svg"
+  },
+  {
+   "name": "auto",
+   "material": "autoplay",
+   "file": "auto.png",
+   "plain": "plain/auto.png",
+   "svg": "svg/auto.svg"
+  }
+ ]
+}

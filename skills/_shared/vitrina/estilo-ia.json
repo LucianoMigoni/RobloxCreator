@@ -1,28 +1,29 @@
 {
-  "_que_es": "Bloques en inglés que tools/imagegen.py arma alrededor de la escena de cada receta (campo \"ia\"). Con estos bloques, Nano Banana Pro hizo miniaturas al nivel de los hits en la prueba del 2026-10-29 (vitrina-hits.md §6). Cambiarlos solo después de probar el cambio.",
-  "style": {
-    "thumbnail": "High-quality Roblox game thumbnail (16:9) in the polished 3D GFX style of the top Roblox games: a glossy, colorful Blender-quality render like the ones professional Roblox GFX artists make, not a screenshot.",
-    "ad": "High-quality Roblox game ad image (16:9) in the polished 3D GFX style of the top Roblox games: a glossy, colorful Blender-quality render like the ones professional Roblox GFX artists make, not a screenshot.",
-    "icon": "Roblox game icon (square) in the polished 3D GFX style of the top Roblox game icons: a glossy, colorful Blender-quality render."
-  },
-  "references": "The attached images are the game's own assets. Keep their exact design: the same shapes, proportions, colors and details. Do not redesign them; only change pose, scale, lighting and effects.",
-  "light": "Lighting: warm key light, strong white rim light outlining every character, soft bloom, very saturated high-contrast colors, gentle depth of field on the background.",
-  "composition": {
-    "thumbnail": "Composition: keep the top quarter simple (a title is added there later) and nothing important in the bottom 20% of the frame.",
-    "ad": "Composition: keep the top quarter simple (a title is added there later).",
-    "icon": "Composition: one giant subject filling about 70% of the square, centered, with a clear silhouette that reads at 150 pixels."
-  },
-  "negative": "No text, no letters, no numbers, no logos, no user interface, no watermark, no frame.",
-  "avatars": {
-    "AVATAR": "a classic blocky Roblox avatar (R15 blocky body, cylinder head, smooth plastic shading, messy brown 'bacon' hair, black jacket over a blue t-shirt, dark pants, white sneakers) with an expressive Roblox-style cartoon face",
-    "AVATAR_GIRL": "a classic blocky Roblox avatar girl (R15 blocky body, cylinder head, smooth plastic shading, long pink hair in two ponytails, white hoodie with a pastel rainbow, light blue jeans, white sneakers) with an expressive Roblox-style cartoon face",
-    "AVATAR_NOOB": "the classic Roblox noob avatar (blocky body, yellow head and arms, blue torso, green legs, smooth plastic shading) with an expressive Roblox-style cartoon face"
-  },
-  "iconset": {
-    "_que_es": "Bloques para las hojas de íconos (recetas de skills/_shared/iconos/recetas). Con estos, GPT Image 2.5 hizo los 45 íconos de assets/ui/hit-icons el 2026-10-29.",
-    "style": "A 3x3 sprite sheet of nine separate game UI icons for a top Roblox game. Each icon is centered in its own invisible cell with a generous empty margin; all icons have the same size, the same slight three-quarter front view and exactly the same art style.\n\nStyle: polished mobile-game HUD icons like the ones in the most popular Roblox games: chunky cartoon shapes, a thick dark navy outline around every icon (about 4% of the icon size), very saturated colors, smooth gradient shading with a darker bottom side, a glossy white highlight on the upper left, a slight 3D bevel, crisp clean edges, readable at 48 pixels.",
-    "references": "Use the attached sheet only as the STYLE reference: match its exact art style (thick dark navy outline, very saturated colors, glossy white highlights, smooth gradient shading, slight 3D bevel, chunky cartoon shapes) but draw NEW icons.",
-    "background": "Transparent background (if transparency is not possible: a plain flat white background).",
-    "negative": "No text, no letters, no numbers, no labels, no grid lines, no frames, no shadows on the background."
-  }
+ "_que_es": "Bloques en inglés que tools/imagegen.py arma alrededor de la escena de cada receta (campo \"ia\"). Con estos bloques, Nano Banana Pro hizo miniaturas al nivel de los hits en la prueba del 2026-10-29 (vitrina-hits.md §6). Cambiarlos solo después de probar el cambio.",
+ "style": {
+  "thumbnail": "High-quality Roblox game thumbnail (16:9) in the polished 3D GFX style of the top Roblox games: a glossy, colorful Blender-quality render like the ones professional Roblox GFX artists make, not a screenshot.",
+  "ad": "High-quality Roblox game ad image (16:9) in the polished 3D GFX style of the top Roblox games: a glossy, colorful Blender-quality render like the ones professional Roblox GFX artists make, not a screenshot.",
+  "icon": "Roblox game icon (square) in the polished 3D GFX style of the top Roblox game icons: a glossy, colorful Blender-quality render."
+ },
+ "references": "The attached images are the game's own assets. Keep their exact design: the same shapes, proportions, colors and details. Do not redesign them; only change pose, scale, lighting and effects.",
+ "light": "Lighting: warm key light, strong white rim light outlining every character, soft bloom, very saturated high-contrast colors, gentle depth of field on the background.",
+ "composition": {
+  "thumbnail": "Composition: keep the top quarter simple (a title is added there later) and nothing important in the bottom 20% of the frame.",
+  "ad": "Composition: keep the top quarter simple (a title is added there later).",
+  "icon": "Composition: one giant subject filling about 70% of the square, centered, with a clear silhouette that reads at 150 pixels."
+ },
+ "negative": "No text, no letters, no numbers, no logos, no user interface, no watermark, no frame.",
+ "avatars": {
+  "AVATAR": "a classic blocky Roblox avatar (R15 blocky body, cylinder head, smooth plastic shading, messy brown 'bacon' hair, black jacket over a blue t-shirt, dark pants, white sneakers) with an expressive Roblox-style cartoon face",
+  "AVATAR_GIRL": "a classic blocky Roblox avatar girl (R15 blocky body, cylinder head, smooth plastic shading, long pink hair in two ponytails, white hoodie with a pastel rainbow, light blue jeans, white sneakers) with an expressive Roblox-style cartoon face",
+  "AVATAR_NOOB": "the classic Roblox noob avatar (blocky body, yellow head and arms, blue torso, green legs, smooth plastic shading) with an expressive Roblox-style cartoon face"
+ },
+ "iconset": {
+  "_que_es": "Bloques para las hojas de íconos (recetas de skills/_shared/iconos/recetas). Versión 2 (2026-10-29): con estos, GPT Image 2.5 hizo los 36 íconos de assets/ui/hud-icons a partir de renders propios.",
+  "style": "A 3x3 sheet of nine separate game icons, polished and professional, exactly like the HUD icons of today's top Roblox games (Pet Simulator 99, Anime Dice, Steal An Egg). One icon per cell, each centered with a generous empty margin, all the same size and the same slight three-quarter view.\n\nStyle: chunky toy-like 3D render with cartoon cel shading, very saturated colors, bright crisp white glossy highlights, smooth gradients, a thick uniform dark navy outline (#1a1426) around each whole icon and its main parts, clean simple shapes readable at 64 pixels. Correct anatomy for hands and paws.",
+  "references": "Use the attached sheet only as the STYLE reference: match its exact art style (thick dark navy outline, cel shading, saturated colors, glossy white highlights, chunky toy shapes) but draw NEW icons.",
+  "redraw": "The attached sheet is our own rough 3D render of these nine icons: redraw each one in the style above, keeping the same objects, the same order, the same main colors and roughly the same pose, but with professional finish and detail.",
+  "background": "Transparent background (if transparency is not possible: a plain flat white background).",
+  "negative": "No text, no letters, no numbers, no labels, no watermark, no grid lines, no frames or tiles behind the icons, no shadows on the background."
+ }
 }

@@ -1,1564 +1,1667 @@
 {
-  "schemaVersion": 1,
-  "fields": {
-    "id": "único, kebab-case (ej. 'tree-pine-lowpoly-01')",
-    "path": "relativo a assets/ (ej. '3d/nature/tree-pine-01.fbx')",
-    "type": "model3d | icon | button | panel | font | texture | image | sound",
-    "tags": "{ style: [...], genre: [...], theme: [...] }",
-    "polycount": "int, obligatorio si type=model3d (triángulos)",
-    "robloxAssetId": "string con el ID si ya se subió a Roblox, si no null",
-    "source": "blender-generated | studio-generated | ai-generated | code-generated | creator-store | user | third-party",
-    "sourceUrl": "URL de origen o null",
-    "license": "nombre de la licencia (ej. 'CC0-1.0', 'propio', 'Roblox Creator Store')",
-    "commercialUse": "bool: true solo si la licencia permite uso en juegos monetizados",
-    "author": "autor o 'RobloxCreator'",
-    "notes": "opcional: escala, pivote, variantes"
+ "schemaVersion": 1,
+ "fields": {
+  "id": "único, kebab-case (ej. 'tree-pine-lowpoly-01')",
+  "path": "relativo a assets/ (ej. '3d/nature/tree-pine-01.fbx')",
+  "type": "model3d | icon | button | panel | font | texture | image | sound",
+  "tags": "{ style: [...], genre: [...], theme: [...] }",
+  "polycount": "int, obligatorio si type=model3d (triángulos)",
+  "robloxAssetId": "string con el ID si ya se subió a Roblox, si no null",
+  "source": "blender-generated | studio-generated | ai-generated | code-generated | creator-store | user | third-party",
+  "sourceUrl": "URL de origen o null",
+  "license": "nombre de la licencia (ej. 'CC0-1.0', 'propio', 'Roblox Creator Store')",
+  "commercialUse": "bool: true solo si la licencia permite uso en juegos monetizados",
+  "author": "autor o 'RobloxCreator'",
+  "notes": "opcional: escala, pivote, variantes"
+ },
+ "assets": [
+  {
+   "id": "coin-gold-lowpoly-01",
+   "path": "3d/props/coin-gold-lowpoly-01.fbx",
+   "type": "model3d",
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon"
+    ],
+    "genre": [
+     "simulation",
+     "tycoon",
+     "obby",
+     "any"
+    ],
+    "theme": [
+     "coin",
+     "currency",
+     "pickup",
+     "gold"
+    ]
+   },
+   "polycount": 288,
+   "robloxAssetId": null,
+   "source": "blender-generated",
+   "sourceUrl": null,
+   "license": "propio",
+   "commercialUse": true,
+   "author": "RobloxCreator",
+   "notes": "Moneda de 2 x 0.28 x 2 studs (1 unidad de Blender = 1 stud), de canto sobre el eje Y, pivote en el centro, escala 1 y rotación 0. Malla cerrada, sin N-gons. Material dorado básico sin textura: en Studio poner Color dorado y Material Metal o SmoothPlastic. Exportado con los ajustes de /art/modeling/export-requirements. Falta importarla en Studio (3D Importer, Scale Unit: Studs) y confirmar que mide 2 studs."
   },
-  "assets": [
-    {
-      "id": "coin-gold-lowpoly-01",
-      "path": "3d/props/coin-gold-lowpoly-01.fbx",
-      "type": "model3d",
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon"
-        ],
-        "genre": [
-          "simulation",
-          "tycoon",
-          "obby",
-          "any"
-        ],
-        "theme": [
-          "coin",
-          "currency",
-          "pickup",
-          "gold"
-        ]
-      },
-      "polycount": 288,
-      "robloxAssetId": null,
-      "source": "blender-generated",
-      "sourceUrl": null,
-      "license": "propio",
-      "commercialUse": true,
-      "author": "RobloxCreator",
-      "notes": "Moneda de 2 x 0.28 x 2 studs (1 unidad de Blender = 1 stud), de canto sobre el eje Y, pivote en el centro, escala 1 y rotación 0. Malla cerrada, sin N-gons. Material dorado básico sin textura: en Studio poner Color dorado y Material Metal o SmoothPlastic. Exportado con los ajustes de /art/modeling/export-requirements. Falta importarla en Studio (3D Importer, Scale Unit: Studs) y confirmar que mide 2 studs."
-    },
-    {
-      "id": "kenney-cube-pets",
-      "path": "3d/kenney/cube-pets",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 24,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "cube",
-          "pets"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/cube-pets",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "24 archivos; triángulos por modelo 422–951. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 951
-    },
-    {
-      "id": "kenney-platformer-kit",
-      "path": "3d/kenney/platformer-kit",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 153,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "platformer"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/platformer-kit",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "153 archivos; triángulos por modelo 12–1096. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 1096
-    },
-    {
-      "id": "kenney-food-kit",
-      "path": "3d/kenney/food-kit",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 200,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "food"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/food-kit",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "200 archivos; triángulos por modelo 12–1376. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 1376
-    },
-    {
-      "id": "kenney-holiday-kit",
-      "path": "3d/kenney/holiday-kit",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 99,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "holiday"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/holiday-kit",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "99 archivos; triángulos por modelo 10–1150. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 1150
-    },
-    {
-      "id": "kenney-graveyard-kit",
-      "path": "3d/kenney/graveyard-kit",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 91,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "graveyard"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/graveyard-kit",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "91 archivos; triángulos por modelo 54–1141. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 1141
-    },
-    {
-      "id": "kenney-mini-arcade",
-      "path": "3d/kenney/mini-arcade",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 20,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "mini",
-          "arcade"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/mini-arcade",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "20 archivos; triángulos por modelo 24–730. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 730
-    },
-    {
-      "id": "kenney-nature-kit",
-      "path": "3d/kenney/nature-kit",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 329,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "nature"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/nature-kit",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "329 archivos; triángulos por modelo 2–720. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 720
-    },
-    {
-      "id": "kenney-survival-kit",
-      "path": "3d/kenney/survival-kit",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 80,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "survival"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/survival-kit",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "80 archivos; triángulos por modelo 28–758. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 758
-    },
-    {
-      "id": "kenney-pirate-kit",
-      "path": "3d/kenney/pirate-kit",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 72,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "pirate"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/pirate-kit",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "72 archivos; triángulos por modelo 44–2282. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 2282
-    },
-    {
-      "id": "kenney-watercraft-kit",
-      "path": "3d/kenney/watercraft-kit",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 46,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "watercraft"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/watercraft-kit",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "46 archivos; triángulos por modelo 40–2796. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 2796
-    },
-    {
-      "id": "kenney-mini-market",
-      "path": "3d/kenney/mini-market",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 20,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "mini",
-          "market"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/mini-market",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "20 archivos; triángulos por modelo 24–892. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 892
-    },
-    {
-      "id": "kenney-furniture-kit",
-      "path": "3d/kenney/furniture-kit",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 140,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "furniture"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/furniture-kit",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "140 archivos; triángulos por modelo 12–992. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 992
-    },
-    {
-      "id": "kenney-blocky-characters",
-      "path": "3d/kenney/blocky-characters",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 18,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "blocky",
-          "characters"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/blocky-characters",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "18 archivos; triángulos por modelo 72–72. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 72
-    },
-    {
-      "id": "kenney-mini-characters",
-      "path": "3d/kenney/mini-characters",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 26,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "mini",
-          "characters"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/mini-characters",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "26 archivos; triángulos por modelo 48–1040. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 1040
-    },
-    {
-      "id": "kenney-coaster-kit",
-      "path": "3d/kenney/coaster-kit",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 183,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "coaster"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/coaster-kit",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "183 archivos; triángulos por modelo 8–2276. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 2276
-    },
-    {
-      "id": "kenney-minigolf-kit",
-      "path": "3d/kenney/minigolf-kit",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 126,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "minigolf"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/minigolf-kit",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "126 archivos; triángulos por modelo 6–806. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 806
-    },
-    {
-      "id": "kenney-marble-kit",
-      "path": "3d/kenney/marble-kit",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 162,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "marble"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/marble-kit",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "162 archivos; triángulos por modelo 28–1160. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 1160
-    },
-    {
-      "id": "kenney-tower-defense-kit",
-      "path": "3d/kenney/tower-defense-kit",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 160,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "tower",
-          "defense"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/tower-defense-kit",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "160 archivos; triángulos por modelo 24–1104. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 1104
-    },
-    {
-      "id": "kenney-castle-kit",
-      "path": "3d/kenney/castle-kit",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 76,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "castle"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/castle-kit",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "76 archivos; triángulos por modelo 2–1598. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 1598
-    },
-    {
-      "id": "kenney-fantasy-town-kit",
-      "path": "3d/kenney/fantasy-town-kit",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 167,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "fantasy",
-          "town"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/fantasy-town-kit",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "167 archivos; triángulos por modelo 4–1628. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 1628
-    },
-    {
-      "id": "kenney-space-kit",
-      "path": "3d/kenney/space-kit",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 153,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "space"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/space-kit",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "153 archivos; triángulos por modelo 2–876. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 876
-    },
-    {
-      "id": "kenney-toy-car-kit",
-      "path": "3d/kenney/toy-car-kit",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 157,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "toy",
-          "car"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/toy-car-kit",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "157 archivos; triángulos por modelo 32–1272. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 1272
-    },
-    {
-      "id": "kenney-prototype-kit",
-      "path": "3d/kenney/prototype-kit",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 145,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "prototype"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/prototype-kit",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "145 archivos; triángulos por modelo 4–860. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 860
-    },
-    {
-      "id": "kenney-brick-kit",
-      "path": "3d/kenney/brick-kit",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 296,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "brick"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/brick-kit",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "296 archivos; triángulos por modelo 12–1236. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 1236
-    },
-    {
-      "id": "kenney-hexagon-kit",
-      "path": "3d/kenney/hexagon-kit",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 72,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "hexagon"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/hexagon-kit",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "72 archivos; triángulos por modelo 20–1208. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 1208
-    },
-    {
-      "id": "kenney-racing-kit",
-      "path": "3d/kenney/racing-kit",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 112,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "racing"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/racing-kit",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "112 archivos; triángulos por modelo 2–1430. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 1430
-    },
-    {
-      "id": "kenney-train-kit",
-      "path": "3d/kenney/train-kit",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 103,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "train"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/train-kit",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "103 archivos; triángulos por modelo 36–1944. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 1944
-    },
-    {
-      "id": "kenney-building-kit",
-      "path": "3d/kenney/building-kit",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 79,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "building"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/building-kit",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "79 archivos; triángulos por modelo 10–446. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 446
-    },
-    {
-      "id": "kenney-mini-arena",
-      "path": "3d/kenney/mini-arena",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 22,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "mini",
-          "arena"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/mini-arena",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "22 archivos; triángulos por modelo 2–549. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 549
-    },
-    {
-      "id": "kenney-mini-forest",
-      "path": "3d/kenney/mini-forest",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 22,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "mini",
-          "forest"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/mini-forest",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "22 archivos; triángulos por modelo 58–847. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 847
-    },
-    {
-      "id": "kenney-mini-skate",
-      "path": "3d/kenney/mini-skate",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 42,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "mini",
-          "skate"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/mini-skate",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "42 archivos; triángulos por modelo 2–908. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 908
-    },
-    {
-      "id": "kenney-city-kit-suburban",
-      "path": "3d/kenney/city-kit-suburban",
-      "type": "pack",
-      "packType": "model3d",
-      "count": 40,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "city",
-          "suburban"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/city-kit-suburban",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "40 archivos; triángulos por modelo 12–2062. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
-      "polycount": 2062
-    },
-    {
-      "id": "kenney-interface-sounds",
-      "path": "audio/kenney/interface-sounds",
-      "type": "pack",
-      "packType": "sound",
-      "count": 100,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "interface",
-          "sounds"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/interface-sounds",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "100 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
-    },
-    {
-      "id": "kenney-casino-audio",
-      "path": "audio/kenney/casino-audio",
-      "type": "pack",
-      "packType": "sound",
-      "count": 54,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "casino",
-          "audio"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/casino-audio",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "54 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
-    },
-    {
-      "id": "kenney-music-jingles",
-      "path": "audio/kenney/music-jingles",
-      "type": "pack",
-      "packType": "sound",
-      "count": 85,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "music",
-          "jingles"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/music-jingles",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "85 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
-    },
-    {
-      "id": "kenney-particle-pack",
-      "path": "vfx/kenney/particle-pack",
-      "type": "pack",
-      "packType": "image",
-      "count": 80,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "particle",
-          "pack"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/particle-pack",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "80 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
-    },
-    {
-      "id": "fluent-emoji-3d",
-      "path": "ui/fluent-emoji-3d",
-      "type": "pack",
-      "packType": "icon",
-      "count": 179,
-      "tags": {
-        "style": [
-          "3d",
-          "glossy",
-          "emoji"
-        ],
-        "genre": [
-          "any"
-        ],
-        "theme": [
-          "icon",
-          "hud",
-          "button",
-          "item"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://github.com/microsoft/fluentui-emoji",
-      "license": "MIT",
-      "commercialUse": true,
-      "author": "Microsoft Corporation",
-      "notes": "PNG 256×256 con fondo transparente. Subir con Asset Manager o tools/upload_asset.py y usar como Image de ImageLabel/ImageButton. MIT: mantener el aviso en los créditos del juego."
-    },
-    {
-      "id": "kenney-fish-pack",
-      "path": "ui/kenney/fish-pack",
-      "type": "pack",
-      "packType": "image",
-      "count": 126,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "fish",
-          "pack"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/fish-pack",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "126 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
-    },
-    {
-      "id": "roblox-audio-library",
-      "path": "audio/roblox-library",
-      "type": "pack",
-      "packType": "sound",
-      "count": 249,
-      "tags": {
-        "style": [
-          "sfx",
-          "ui"
-        ],
-        "genre": [
-          "any"
-        ],
-        "theme": [
-          "click",
-          "purchase",
-          "coin",
-          "notification",
-          "whoosh",
-          "music"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "creator-store",
-      "sourceUrl": "https://create.roblox.com/store/audio",
-      "license": "Roblox (audio publicado por la cuenta Roblox)",
-      "commercialUse": true,
-      "author": "Roblox",
-      "notes": "Sonidos de la cuenta oficial Roblox (id 1), públicos y gratis: se usan con su rbxassetid sin subir nada. Roles elegidos en template/src/shared/Config/SoundConfig.luau. Repetir la búsqueda: el filtro creatorTargetId=1 de la API del Creator Store."
-    },
-    {
-      "id": "kenney-ui-audio",
-      "path": "audio/kenney/ui-audio",
-      "type": "pack",
-      "packType": "sound",
-      "count": 51,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "ui",
-          "audio"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/ui-audio",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "51 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
-    },
-    {
-      "id": "kenney-digital-audio",
-      "path": "audio/kenney/digital-audio",
-      "type": "pack",
-      "packType": "sound",
-      "count": 62,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "digital",
-          "audio"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/digital-audio",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "62 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
-    },
-    {
-      "id": "kenney-impact-sounds",
-      "path": "audio/kenney/impact-sounds",
-      "type": "pack",
-      "packType": "sound",
-      "count": 130,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "impact",
-          "sounds"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "130 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
-    },
-    {
-      "id": "kenney-rpg-audio",
-      "path": "audio/kenney/rpg-audio",
-      "type": "pack",
-      "packType": "sound",
-      "count": 51,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "rpg",
-          "audio"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "51 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
-    },
-    {
-      "id": "kenney-voiceover-pack",
-      "path": "audio/kenney/voiceover-pack",
-      "type": "pack",
-      "packType": "sound",
-      "count": 50,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "voiceover",
-          "pack"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/voiceover-pack",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "50 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
-    },
-    {
-      "id": "kenney-voiceover-pack-fighter",
-      "path": "audio/kenney/voiceover-pack-fighter",
-      "type": "pack",
-      "packType": "sound",
-      "count": 46,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "voiceover",
-          "pack",
-          "fighter"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/voiceover-pack-fighter",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "46 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
-    },
-    {
-      "id": "kenney-sci-fi-sounds",
-      "path": "audio/kenney/sci-fi-sounds",
-      "type": "pack",
-      "packType": "sound",
-      "count": 73,
-      "tags": {
-        "style": [
-          "lowpoly",
-          "cartoon",
-          "kenney"
-        ],
-        "genre": [],
-        "theme": [
-          "sci",
-          "fi",
-          "sounds"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://kenney.nl/assets/sci-fi-sounds",
-      "license": "CC0-1.0",
-      "commercialUse": true,
-      "author": "Kenney (www.kenney.nl)",
-      "notes": "73 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
-    },
-    {
-      "id": "roblox-music-library",
-      "path": "audio/roblox-music",
-      "type": "pack",
-      "packType": "sound",
-      "count": 497,
-      "tags": {
-        "style": [
-          "music"
-        ],
-        "genre": [
-          "any"
-        ],
-        "theme": [
-          "lobby",
-          "happy",
-          "halloween",
-          "christmas",
-          "boss",
-          "chiptune"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "creator-store",
-      "sourceUrl": "https://create.roblox.com/store/audio",
-      "license": "Música con licencia de Roblox (APM / DistroKid)",
-      "commercialUse": true,
-      "author": "APM Music / DistroKid (vía Roblox)",
-      "notes": "Temas de los socios oficiales de música de Roblox, públicos y gratis para usar en experiencias con su rbxassetid. La palabra clave de cada tema dice para qué sirve (lobby, Halloween, jefe...)."
-    },
-    {
-      "id": "font-luckiest-guy",
-      "path": "fonts/luckiest-guy/LuckiestGuy-Regular.ttf",
-      "type": "font",
-      "tags": {
-        "style": [
-          "hit",
-          "bold",
-          "cartoon"
-        ],
-        "genre": [
-          "any"
-        ],
-        "theme": [
-          "titulos",
-          "numeros"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://fonts.google.com/specimen/Luckiest+Guy",
-      "license": "Apache-2.0",
-      "commercialUse": true,
-      "author": "Astigmatic (Brian J. Bonislawsky)",
-      "notes": "La letra de cómic redonda de los títulos y números gigantes de los hits. Para miniaturas, íconos y anuncios (tools/thumbs.py). En el juego se usan las fuentes de Roblox (Enum.Font / Font.new)."
-    },
-    {
-      "id": "font-lilita-one",
-      "path": "fonts/lilita-one/LilitaOne-Regular.ttf",
-      "type": "font",
-      "tags": {
-        "style": [
-          "hit",
-          "bold",
-          "cartoon"
-        ],
-        "genre": [
-          "any"
-        ],
-        "theme": [
-          "titulos",
-          "etiquetas"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://fonts.google.com/specimen/Lilita+One",
-      "license": "OFL-1.1",
-      "commercialUse": true,
-      "author": "Juan Montoreano",
-      "notes": "Gruesa y legible a tamaño chico: rarezas, etiquetas y textos cortos. Para miniaturas, íconos y anuncios (tools/thumbs.py). En el juego se usan las fuentes de Roblox (Enum.Font / Font.new)."
-    },
-    {
-      "id": "font-titan-one",
-      "path": "fonts/titan-one/TitanOne-Regular.ttf",
-      "type": "font",
-      "tags": {
-        "style": [
-          "hit",
-          "bold",
-          "cartoon"
-        ],
-        "genre": [
-          "any"
-        ],
-        "theme": [
-          "titulos",
-          "numeros"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://fonts.google.com/specimen/Titan+One",
-      "license": "OFL-1.1",
-      "commercialUse": true,
-      "author": "Rodrigo Fuenzalida",
-      "notes": "Muy pesada: números de plata por segundo y palabras de una sola línea. Para miniaturas, íconos y anuncios (tools/thumbs.py). En el juego se usan las fuentes de Roblox (Enum.Font / Font.new)."
-    },
-    {
-      "id": "font-bangers",
-      "path": "fonts/bangers/Bangers-Regular.ttf",
-      "type": "font",
-      "tags": {
-        "style": [
-          "hit",
-          "bold",
-          "cartoon"
-        ],
-        "genre": [
-          "any"
-        ],
-        "theme": [
-          "accion",
-          "eventos"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://fonts.google.com/specimen/Bangers",
-      "license": "OFL-1.1",
-      "commercialUse": true,
-      "author": "Vernon Adams",
-      "notes": "Estilo historieta para acción, eventos y anuncios. Para miniaturas, íconos y anuncios (tools/thumbs.py). En el juego se usan las fuentes de Roblox (Enum.Font / Font.new)."
-    },
-    {
-      "id": "font-fredoka",
-      "path": "fonts/fredoka/Fredoka-Variable.ttf",
-      "type": "font",
-      "tags": {
-        "style": [
-          "hit",
-          "bold",
-          "cartoon"
-        ],
-        "genre": [
-          "any"
-        ],
-        "theme": [
-          "textos",
-          "redonda"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "third-party",
-      "sourceUrl": "https://fonts.google.com/specimen/Fredoka",
-      "license": "OFL-1.1",
-      "commercialUse": true,
-      "author": "Milena Brandão, Hafontia",
-      "notes": "Redonda y amable (variable, usar Bold): subtítulos y textos de apoyo. Para miniaturas, íconos y anuncios (tools/thumbs.py). En el juego se usan las fuentes de Roblox (Enum.Font / Font.new)."
-    },
-    {
-      "id": "hit-icons",
-      "path": "ui/hit-icons",
-      "type": "pack",
-      "packType": "icon",
-      "count": 45,
-      "tags": {
-        "style": [
-          "3d",
-          "glossy",
-          "hit",
-          "cartoon"
-        ],
-        "genre": [
-          "any",
-          "simulation",
-          "tycoon"
-        ],
-        "theme": [
-          "icon",
-          "hud",
-          "button",
-          "currency",
-          "egg",
-          "boost",
-          "gamepass"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "ai-generated",
-      "sourceUrl": null,
-      "license": "propio (IA, Higgsfield Plus)",
-      "commercialUse": true,
-      "author": "RobloxCreator",
-      "notes": "45 íconos 512×512 con fondo transparente, estilo HUD de los hits (reemplazan a Fluent Emoji en HUD y tienda). Monedas, botones de menú, boosts, sistemas y 9 huevos por rareza. Detalle en manifest.json; para hacer más del mismo estilo: skills/_shared/iconos/README.md."
-    },
-    {
-      "id": "hit-vfx",
-      "path": "vfx/hit",
-      "type": "pack",
-      "packType": "image",
-      "count": 20,
-      "tags": {
-        "style": [
-          "cartoon",
-          "hit",
-          "glow"
-        ],
-        "genre": [
-          "any"
-        ],
-        "theme": [
-          "particle",
-          "sparkle",
-          "beam",
-          "trail",
-          "flipbook",
-          "vfx"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "code-generated",
-      "sourceUrl": null,
-      "license": "propio",
-      "commercialUse": true,
-      "author": "RobloxCreator",
-      "notes": "Texturas para ParticleEmitter, Beam y Trail hechas con tools/vfx_textures.py (destellos, brillos, ondas, rayos, confeti y humo en flipbook). Blancas para teñir con Color; uso sugerido de cada una en manifest.json."
-    },
-    {
-      "id": "hit-sfx",
-      "path": "audio/hit-sfx",
-      "type": "pack",
-      "packType": "sound",
-      "count": 48,
-      "tags": {
-        "style": [
-          "cartoon",
-          "hit"
-        ],
-        "genre": [
-          "any",
-          "simulation",
-          "tycoon"
-        ],
-        "theme": [
-          "coin",
-          "purchase",
-          "ui",
-          "reveal",
-          "level-up",
-          "spin",
-          "rebirth",
-          "egg"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "ai-generated",
-      "sourceUrl": null,
-      "license": "ElevenLabs (según el plan del workspace)",
-      "commercialUse": false,
-      "author": "RobloxCreator (generado con ElevenLabs)",
-      "notes": "12 sonidos con 4 tomas (A-D) cada uno. commercialUse false hasta confirmar que el workspace de ElevenLabs tenía plan pago al generarlos; si no, regenerarlos con plan pago. Elegir una toma por sonido."
-    },
-    {
-      "id": "hit-voices",
-      "path": "audio/hit-voices",
-      "type": "pack",
-      "packType": "sound",
-      "count": 20,
-      "tags": {
-        "style": [
-          "cartoon",
-          "hit",
-          "announcer"
-        ],
-        "genre": [
-          "any"
-        ],
-        "theme": [
-          "voice",
-          "announcer",
-          "rarity",
-          "rebirth",
-          "level-up",
-          "jackpot"
-        ]
-      },
-      "robloxAssetId": null,
-      "source": "ai-generated",
-      "sourceUrl": null,
-      "license": "propio (IA, Higgsfield Plus)",
-      "commercialUse": true,
-      "author": "RobloxCreator",
-      "notes": "Anuncios en inglés (LEGENDARY!, LEVEL UP!, JACKPOT!...) en dos voces: grave y caricatura. Volver a verificar los términos de Higgsfield antes de publicar el primer juego."
-    }
-  ]
+  {
+   "id": "kenney-cube-pets",
+   "path": "3d/kenney/cube-pets",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 24,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "cube",
+     "pets"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/cube-pets",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "24 archivos; triángulos por modelo 422–951. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 951
+  },
+  {
+   "id": "kenney-platformer-kit",
+   "path": "3d/kenney/platformer-kit",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 153,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "platformer"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/platformer-kit",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "153 archivos; triángulos por modelo 12–1096. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 1096
+  },
+  {
+   "id": "kenney-food-kit",
+   "path": "3d/kenney/food-kit",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 200,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "food"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/food-kit",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "200 archivos; triángulos por modelo 12–1376. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 1376
+  },
+  {
+   "id": "kenney-holiday-kit",
+   "path": "3d/kenney/holiday-kit",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 99,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "holiday"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/holiday-kit",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "99 archivos; triángulos por modelo 10–1150. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 1150
+  },
+  {
+   "id": "kenney-graveyard-kit",
+   "path": "3d/kenney/graveyard-kit",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 91,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "graveyard"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/graveyard-kit",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "91 archivos; triángulos por modelo 54–1141. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 1141
+  },
+  {
+   "id": "kenney-mini-arcade",
+   "path": "3d/kenney/mini-arcade",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 20,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "mini",
+     "arcade"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/mini-arcade",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "20 archivos; triángulos por modelo 24–730. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 730
+  },
+  {
+   "id": "kenney-nature-kit",
+   "path": "3d/kenney/nature-kit",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 329,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "nature"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/nature-kit",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "329 archivos; triángulos por modelo 2–720. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 720
+  },
+  {
+   "id": "kenney-survival-kit",
+   "path": "3d/kenney/survival-kit",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 80,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "survival"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/survival-kit",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "80 archivos; triángulos por modelo 28–758. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 758
+  },
+  {
+   "id": "kenney-pirate-kit",
+   "path": "3d/kenney/pirate-kit",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 72,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "pirate"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/pirate-kit",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "72 archivos; triángulos por modelo 44–2282. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 2282
+  },
+  {
+   "id": "kenney-watercraft-kit",
+   "path": "3d/kenney/watercraft-kit",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 46,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "watercraft"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/watercraft-kit",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "46 archivos; triángulos por modelo 40–2796. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 2796
+  },
+  {
+   "id": "kenney-mini-market",
+   "path": "3d/kenney/mini-market",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 20,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "mini",
+     "market"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/mini-market",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "20 archivos; triángulos por modelo 24–892. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 892
+  },
+  {
+   "id": "kenney-furniture-kit",
+   "path": "3d/kenney/furniture-kit",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 140,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "furniture"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/furniture-kit",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "140 archivos; triángulos por modelo 12–992. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 992
+  },
+  {
+   "id": "kenney-blocky-characters",
+   "path": "3d/kenney/blocky-characters",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 18,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "blocky",
+     "characters"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/blocky-characters",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "18 archivos; triángulos por modelo 72–72. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 72
+  },
+  {
+   "id": "kenney-mini-characters",
+   "path": "3d/kenney/mini-characters",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 26,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "mini",
+     "characters"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/mini-characters",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "26 archivos; triángulos por modelo 48–1040. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 1040
+  },
+  {
+   "id": "kenney-coaster-kit",
+   "path": "3d/kenney/coaster-kit",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 183,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "coaster"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/coaster-kit",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "183 archivos; triángulos por modelo 8–2276. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 2276
+  },
+  {
+   "id": "kenney-minigolf-kit",
+   "path": "3d/kenney/minigolf-kit",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 126,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "minigolf"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/minigolf-kit",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "126 archivos; triángulos por modelo 6–806. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 806
+  },
+  {
+   "id": "kenney-marble-kit",
+   "path": "3d/kenney/marble-kit",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 162,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "marble"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/marble-kit",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "162 archivos; triángulos por modelo 28–1160. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 1160
+  },
+  {
+   "id": "kenney-tower-defense-kit",
+   "path": "3d/kenney/tower-defense-kit",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 160,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "tower",
+     "defense"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/tower-defense-kit",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "160 archivos; triángulos por modelo 24–1104. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 1104
+  },
+  {
+   "id": "kenney-castle-kit",
+   "path": "3d/kenney/castle-kit",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 76,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "castle"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/castle-kit",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "76 archivos; triángulos por modelo 2–1598. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 1598
+  },
+  {
+   "id": "kenney-fantasy-town-kit",
+   "path": "3d/kenney/fantasy-town-kit",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 167,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "fantasy",
+     "town"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/fantasy-town-kit",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "167 archivos; triángulos por modelo 4–1628. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 1628
+  },
+  {
+   "id": "kenney-space-kit",
+   "path": "3d/kenney/space-kit",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 153,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "space"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/space-kit",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "153 archivos; triángulos por modelo 2–876. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 876
+  },
+  {
+   "id": "kenney-toy-car-kit",
+   "path": "3d/kenney/toy-car-kit",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 157,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "toy",
+     "car"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/toy-car-kit",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "157 archivos; triángulos por modelo 32–1272. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 1272
+  },
+  {
+   "id": "kenney-prototype-kit",
+   "path": "3d/kenney/prototype-kit",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 145,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "prototype"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/prototype-kit",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "145 archivos; triángulos por modelo 4–860. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 860
+  },
+  {
+   "id": "kenney-brick-kit",
+   "path": "3d/kenney/brick-kit",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 296,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "brick"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/brick-kit",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "296 archivos; triángulos por modelo 12–1236. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 1236
+  },
+  {
+   "id": "kenney-hexagon-kit",
+   "path": "3d/kenney/hexagon-kit",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 72,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "hexagon"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/hexagon-kit",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "72 archivos; triángulos por modelo 20–1208. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 1208
+  },
+  {
+   "id": "kenney-racing-kit",
+   "path": "3d/kenney/racing-kit",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 112,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "racing"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/racing-kit",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "112 archivos; triángulos por modelo 2–1430. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 1430
+  },
+  {
+   "id": "kenney-train-kit",
+   "path": "3d/kenney/train-kit",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 103,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "train"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/train-kit",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "103 archivos; triángulos por modelo 36–1944. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 1944
+  },
+  {
+   "id": "kenney-building-kit",
+   "path": "3d/kenney/building-kit",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 79,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "building"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/building-kit",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "79 archivos; triángulos por modelo 10–446. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 446
+  },
+  {
+   "id": "kenney-mini-arena",
+   "path": "3d/kenney/mini-arena",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 22,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "mini",
+     "arena"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/mini-arena",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "22 archivos; triángulos por modelo 2–549. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 549
+  },
+  {
+   "id": "kenney-mini-forest",
+   "path": "3d/kenney/mini-forest",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 22,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "mini",
+     "forest"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/mini-forest",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "22 archivos; triángulos por modelo 58–847. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 847
+  },
+  {
+   "id": "kenney-mini-skate",
+   "path": "3d/kenney/mini-skate",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 42,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "mini",
+     "skate"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/mini-skate",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "42 archivos; triángulos por modelo 2–908. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 908
+  },
+  {
+   "id": "kenney-city-kit-suburban",
+   "path": "3d/kenney/city-kit-suburban",
+   "type": "pack",
+   "packType": "model3d",
+   "count": 40,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "city",
+     "suburban"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/city-kit-suburban",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "40 archivos; triángulos por modelo 12–2062. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`).",
+   "polycount": 2062
+  },
+  {
+   "id": "kenney-interface-sounds",
+   "path": "audio/kenney/interface-sounds",
+   "type": "pack",
+   "packType": "sound",
+   "count": 100,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "interface",
+     "sounds"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "100 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
+  },
+  {
+   "id": "kenney-casino-audio",
+   "path": "audio/kenney/casino-audio",
+   "type": "pack",
+   "packType": "sound",
+   "count": 54,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "casino",
+     "audio"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/casino-audio",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "54 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
+  },
+  {
+   "id": "kenney-music-jingles",
+   "path": "audio/kenney/music-jingles",
+   "type": "pack",
+   "packType": "sound",
+   "count": 85,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "music",
+     "jingles"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/music-jingles",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "85 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
+  },
+  {
+   "id": "kenney-particle-pack",
+   "path": "vfx/kenney/particle-pack",
+   "type": "pack",
+   "packType": "image",
+   "count": 80,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "particle",
+     "pack"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/particle-pack",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "80 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
+  },
+  {
+   "id": "fluent-emoji-3d",
+   "path": "ui/fluent-emoji-3d",
+   "type": "pack",
+   "packType": "icon",
+   "count": 179,
+   "tags": {
+    "style": [
+     "3d",
+     "glossy",
+     "emoji"
+    ],
+    "genre": [
+     "any"
+    ],
+    "theme": [
+     "icon",
+     "hud",
+     "button",
+     "item"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://github.com/microsoft/fluentui-emoji",
+   "license": "MIT",
+   "commercialUse": true,
+   "author": "Microsoft Corporation",
+   "notes": "PNG 256×256 con fondo transparente. Subir con Asset Manager o tools/upload_asset.py y usar como Image de ImageLabel/ImageButton. MIT: mantener el aviso en los créditos del juego."
+  },
+  {
+   "id": "kenney-fish-pack",
+   "path": "ui/kenney/fish-pack",
+   "type": "pack",
+   "packType": "image",
+   "count": 126,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "fish",
+     "pack"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/fish-pack",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "126 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
+  },
+  {
+   "id": "roblox-audio-library",
+   "path": "audio/roblox-library",
+   "type": "pack",
+   "packType": "sound",
+   "count": 249,
+   "tags": {
+    "style": [
+     "sfx",
+     "ui"
+    ],
+    "genre": [
+     "any"
+    ],
+    "theme": [
+     "click",
+     "purchase",
+     "coin",
+     "notification",
+     "whoosh",
+     "music"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "creator-store",
+   "sourceUrl": "https://create.roblox.com/store/audio",
+   "license": "Roblox (audio publicado por la cuenta Roblox)",
+   "commercialUse": true,
+   "author": "Roblox",
+   "notes": "Sonidos de la cuenta oficial Roblox (id 1), públicos y gratis: se usan con su rbxassetid sin subir nada. Roles elegidos en template/src/shared/Config/SoundConfig.luau. Repetir la búsqueda: el filtro creatorTargetId=1 de la API del Creator Store."
+  },
+  {
+   "id": "kenney-ui-audio",
+   "path": "audio/kenney/ui-audio",
+   "type": "pack",
+   "packType": "sound",
+   "count": 51,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "ui",
+     "audio"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/ui-audio",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "51 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
+  },
+  {
+   "id": "kenney-digital-audio",
+   "path": "audio/kenney/digital-audio",
+   "type": "pack",
+   "packType": "sound",
+   "count": 62,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "digital",
+     "audio"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/digital-audio",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "62 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
+  },
+  {
+   "id": "kenney-impact-sounds",
+   "path": "audio/kenney/impact-sounds",
+   "type": "pack",
+   "packType": "sound",
+   "count": 130,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "impact",
+     "sounds"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "130 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
+  },
+  {
+   "id": "kenney-rpg-audio",
+   "path": "audio/kenney/rpg-audio",
+   "type": "pack",
+   "packType": "sound",
+   "count": 51,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "rpg",
+     "audio"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "51 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
+  },
+  {
+   "id": "kenney-voiceover-pack",
+   "path": "audio/kenney/voiceover-pack",
+   "type": "pack",
+   "packType": "sound",
+   "count": 50,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "voiceover",
+     "pack"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/voiceover-pack",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "50 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
+  },
+  {
+   "id": "kenney-voiceover-pack-fighter",
+   "path": "audio/kenney/voiceover-pack-fighter",
+   "type": "pack",
+   "packType": "sound",
+   "count": 46,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "voiceover",
+     "pack",
+     "fighter"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/voiceover-pack-fighter",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "46 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
+  },
+  {
+   "id": "kenney-sci-fi-sounds",
+   "path": "audio/kenney/sci-fi-sounds",
+   "type": "pack",
+   "packType": "sound",
+   "count": 73,
+   "tags": {
+    "style": [
+     "lowpoly",
+     "cartoon",
+     "kenney"
+    ],
+    "genre": [],
+    "theme": [
+     "sci",
+     "fi",
+     "sounds"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://kenney.nl/assets/sci-fi-sounds",
+   "license": "CC0-1.0",
+   "commercialUse": true,
+   "author": "Kenney (www.kenney.nl)",
+   "notes": "73 archivos. Detalle por archivo en manifest.json (`python assets/catalog.py find <palabra>`)."
+  },
+  {
+   "id": "roblox-music-library",
+   "path": "audio/roblox-music",
+   "type": "pack",
+   "packType": "sound",
+   "count": 497,
+   "tags": {
+    "style": [
+     "music"
+    ],
+    "genre": [
+     "any"
+    ],
+    "theme": [
+     "lobby",
+     "happy",
+     "halloween",
+     "christmas",
+     "boss",
+     "chiptune"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "creator-store",
+   "sourceUrl": "https://create.roblox.com/store/audio",
+   "license": "Música con licencia de Roblox (APM / DistroKid)",
+   "commercialUse": true,
+   "author": "APM Music / DistroKid (vía Roblox)",
+   "notes": "Temas de los socios oficiales de música de Roblox, públicos y gratis para usar en experiencias con su rbxassetid. La palabra clave de cada tema dice para qué sirve (lobby, Halloween, jefe...)."
+  },
+  {
+   "id": "font-luckiest-guy",
+   "path": "fonts/luckiest-guy/LuckiestGuy-Regular.ttf",
+   "type": "font",
+   "tags": {
+    "style": [
+     "hit",
+     "bold",
+     "cartoon"
+    ],
+    "genre": [
+     "any"
+    ],
+    "theme": [
+     "titulos",
+     "numeros"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://fonts.google.com/specimen/Luckiest+Guy",
+   "license": "Apache-2.0",
+   "commercialUse": true,
+   "author": "Astigmatic (Brian J. Bonislawsky)",
+   "notes": "La letra de cómic redonda de los títulos y números gigantes de los hits. Para miniaturas, íconos y anuncios (tools/thumbs.py). En el juego se usan las fuentes de Roblox (Enum.Font / Font.new)."
+  },
+  {
+   "id": "font-lilita-one",
+   "path": "fonts/lilita-one/LilitaOne-Regular.ttf",
+   "type": "font",
+   "tags": {
+    "style": [
+     "hit",
+     "bold",
+     "cartoon"
+    ],
+    "genre": [
+     "any"
+    ],
+    "theme": [
+     "titulos",
+     "etiquetas"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://fonts.google.com/specimen/Lilita+One",
+   "license": "OFL-1.1",
+   "commercialUse": true,
+   "author": "Juan Montoreano",
+   "notes": "Gruesa y legible a tamaño chico: rarezas, etiquetas y textos cortos. Para miniaturas, íconos y anuncios (tools/thumbs.py). En el juego se usan las fuentes de Roblox (Enum.Font / Font.new)."
+  },
+  {
+   "id": "font-titan-one",
+   "path": "fonts/titan-one/TitanOne-Regular.ttf",
+   "type": "font",
+   "tags": {
+    "style": [
+     "hit",
+     "bold",
+     "cartoon"
+    ],
+    "genre": [
+     "any"
+    ],
+    "theme": [
+     "titulos",
+     "numeros"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://fonts.google.com/specimen/Titan+One",
+   "license": "OFL-1.1",
+   "commercialUse": true,
+   "author": "Rodrigo Fuenzalida",
+   "notes": "Muy pesada: números de plata por segundo y palabras de una sola línea. Para miniaturas, íconos y anuncios (tools/thumbs.py). En el juego se usan las fuentes de Roblox (Enum.Font / Font.new)."
+  },
+  {
+   "id": "font-bangers",
+   "path": "fonts/bangers/Bangers-Regular.ttf",
+   "type": "font",
+   "tags": {
+    "style": [
+     "hit",
+     "bold",
+     "cartoon"
+    ],
+    "genre": [
+     "any"
+    ],
+    "theme": [
+     "accion",
+     "eventos"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://fonts.google.com/specimen/Bangers",
+   "license": "OFL-1.1",
+   "commercialUse": true,
+   "author": "Vernon Adams",
+   "notes": "Estilo historieta para acción, eventos y anuncios. Para miniaturas, íconos y anuncios (tools/thumbs.py). En el juego se usan las fuentes de Roblox (Enum.Font / Font.new)."
+  },
+  {
+   "id": "font-fredoka",
+   "path": "fonts/fredoka/Fredoka-Variable.ttf",
+   "type": "font",
+   "tags": {
+    "style": [
+     "hit",
+     "bold",
+     "cartoon"
+    ],
+    "genre": [
+     "any"
+    ],
+    "theme": [
+     "textos",
+     "redonda"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://fonts.google.com/specimen/Fredoka",
+   "license": "OFL-1.1",
+   "commercialUse": true,
+   "author": "Milena Brandão, Hafontia",
+   "notes": "Redonda y amable (variable, usar Bold): subtítulos y textos de apoyo. Para miniaturas, íconos y anuncios (tools/thumbs.py). En el juego se usan las fuentes de Roblox (Enum.Font / Font.new)."
+  },
+  {
+   "id": "hit-icons",
+   "path": "ui/hit-icons",
+   "type": "pack",
+   "packType": "icon",
+   "count": 45,
+   "tags": {
+    "style": [
+     "3d",
+     "glossy",
+     "hit",
+     "cartoon"
+    ],
+    "genre": [
+     "any",
+     "simulation",
+     "tycoon"
+    ],
+    "theme": [
+     "icon",
+     "hud",
+     "button",
+     "currency",
+     "egg",
+     "boost",
+     "gamepass"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "ai-generated",
+   "sourceUrl": null,
+   "license": "propio (IA, Higgsfield Plus)",
+   "commercialUse": true,
+   "author": "RobloxCreator",
+   "notes": "45 íconos 512×512 con fondo transparente, estilo HUD de los hits (reemplazan a Fluent Emoji en HUD y tienda). Monedas, botones de menú, boosts, sistemas y 9 huevos por rareza. Detalle en manifest.json; para hacer más del mismo estilo: skills/_shared/iconos/README.md."
+  },
+  {
+   "id": "hit-vfx",
+   "path": "vfx/hit",
+   "type": "pack",
+   "packType": "image",
+   "count": 20,
+   "tags": {
+    "style": [
+     "cartoon",
+     "hit",
+     "glow"
+    ],
+    "genre": [
+     "any"
+    ],
+    "theme": [
+     "particle",
+     "sparkle",
+     "beam",
+     "trail",
+     "flipbook",
+     "vfx"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "code-generated",
+   "sourceUrl": null,
+   "license": "propio",
+   "commercialUse": true,
+   "author": "RobloxCreator",
+   "notes": "Texturas para ParticleEmitter, Beam y Trail hechas con tools/vfx_textures.py (destellos, brillos, ondas, rayos, confeti y humo en flipbook). Blancas para teñir con Color; uso sugerido de cada una en manifest.json."
+  },
+  {
+   "id": "hit-sfx",
+   "path": "audio/hit-sfx",
+   "type": "pack",
+   "packType": "sound",
+   "count": 48,
+   "tags": {
+    "style": [
+     "cartoon",
+     "hit"
+    ],
+    "genre": [
+     "any",
+     "simulation",
+     "tycoon"
+    ],
+    "theme": [
+     "coin",
+     "purchase",
+     "ui",
+     "reveal",
+     "level-up",
+     "spin",
+     "rebirth",
+     "egg"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "ai-generated",
+   "sourceUrl": null,
+   "license": "ElevenLabs (según el plan del workspace)",
+   "commercialUse": false,
+   "author": "RobloxCreator (generado con ElevenLabs)",
+   "notes": "12 sonidos con 4 tomas (A-D) cada uno. commercialUse false hasta confirmar que el workspace de ElevenLabs tenía plan pago al generarlos; si no, regenerarlos con plan pago. Elegir una toma por sonido."
+  },
+  {
+   "id": "hit-voices",
+   "path": "audio/hit-voices",
+   "type": "pack",
+   "packType": "sound",
+   "count": 20,
+   "tags": {
+    "style": [
+     "cartoon",
+     "hit",
+     "announcer"
+    ],
+    "genre": [
+     "any"
+    ],
+    "theme": [
+     "voice",
+     "announcer",
+     "rarity",
+     "rebirth",
+     "level-up",
+     "jackpot"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "ai-generated",
+   "sourceUrl": null,
+   "license": "propio (IA, Higgsfield Plus)",
+   "commercialUse": true,
+   "author": "RobloxCreator",
+   "notes": "Anuncios en inglés (LEGENDARY!, LEVEL UP!, JACKPOT!...) en dos voces: grave y caricatura. Volver a verificar los términos de Higgsfield antes de publicar el primer juego."
+  },
+  {
+   "id": "hud-icons",
+   "path": "ui/hud-icons",
+   "type": "pack",
+   "packType": "icon",
+   "count": 36,
+   "tags": {
+    "style": [
+     "3d",
+     "glossy",
+     "hit",
+     "cartoon",
+     "cel-shaded"
+    ],
+    "genre": [
+     "any",
+     "simulation",
+     "tycoon"
+    ],
+    "theme": [
+     "icon",
+     "hud",
+     "button",
+     "currency",
+     "shop",
+     "index",
+     "rebirth",
+     "gamepass",
+     "event"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "ai-generated",
+   "sourceUrl": null,
+   "license": "propio (IA sobre renders propios, Higgsfield Plus)",
+   "commercialUse": true,
+   "author": "RobloxCreator",
+   "notes": "36 íconos 512×512 con fondo transparente al nivel de Anime Dice, PS99 y Steal An Egg: base 3D propia (tools/render3d/icons.cjs) redibujada con GPT Image 2.5. Reemplazan a hit-icons donde hay el mismo nombre. Detalle y método en manifest.json y skills/_shared/iconos/README.md."
+  },
+  {
+   "id": "icons-flat",
+   "path": "ui/icons-flat",
+   "type": "pack",
+   "packType": "icon",
+   "count": 59,
+   "tags": {
+    "style": [
+     "flat",
+     "glyph",
+     "outline",
+     "hit"
+    ],
+    "genre": [
+     "any"
+    ],
+    "theme": [
+     "icon",
+     "hud",
+     "button",
+     "topbar",
+     "menu"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "third-party",
+   "sourceUrl": "https://github.com/google/material-design-icons",
+   "license": "Apache-2.0",
+   "commercialUse": true,
+   "author": "Google (Material Symbols)",
+   "notes": "Íconos planos para botones chicos y la barra de Roblox, como el carrito y el libro de Steal An Egg: blanco con contorno oscuro (<nombre>.png) y blanco liso (plain/, para teñir con ImageColor3). SVG y licencia en svg/. Los genera tools/flat_icons.py."
+  },
+  {
+   "id": "hit-skin",
+   "path": "ui/hit-skin",
+   "type": "pack",
+   "packType": "texture",
+   "count": 9,
+   "tags": {
+    "style": [
+     "hit",
+     "roblox",
+     "studs",
+     "pattern"
+    ],
+    "genre": [
+     "any"
+    ],
+    "theme": [
+     "ui",
+     "texture",
+     "panel",
+     "button",
+     "sunburst"
+    ]
+   },
+   "robloxAssetId": null,
+   "source": "code-generated",
+   "sourceUrl": null,
+   "license": "propio",
+   "commercialUse": true,
+   "author": "RobloxCreator",
+   "notes": "Material de la UI de los hits: studs de Roblox, damero, lunares, franjas de brillo de cabecera, rayos de sol, halo, destello, sombra de 9 cortes y flechas para un Beam de camino. Las genera tools/ui_textures.py; uso de cada una en manifest.json."
+  }
+ ]
 }

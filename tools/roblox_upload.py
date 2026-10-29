@@ -241,7 +241,7 @@ def cmd_upload(args) -> int:
 
 def asset_groups(lock: dict) -> tuple:
     """(grupos para AssetIds, decals sin id de imagen). Agrupa por tipo y carpeta del archivo."""
-    groups = {"icons": {}, "sounds": {}, "voices": {}, "vfx": {}, "models": {}}
+    groups = {"icons": {}, "flat": {}, "flatPlain": {}, "textures": {}, "sounds": {}, "voices": {}, "vfx": {}, "models": {}}
     pending = []
     for rel_path, entry in sorted(lock.get("assets", {}).items()):
         name = Path(rel_path).stem
@@ -251,7 +251,14 @@ def asset_groups(lock: dict) -> tuple:
             groups["voices" if any("voice" in part for part in parts) else "sounds"][name] = entry["rbxassetid"]
         elif kind == "Decal" and entry.get("assetId"):
             if entry.get("imageId"):
-                groups["vfx" if "vfx" in parts else "icons"][name] = f"rbxassetid://{entry['imageId']}"
+                # Los íconos planos repiten nombres de los 3D ("shop"): van en su propio grupo.
+                if "icons-flat" in parts:
+                    group = "flatPlain" if "plain" in parts else "flat"
+                elif "hit-skin" in parts:
+                    group = "textures"
+                else:
+                    group = "vfx" if "vfx" in parts else "icons"
+                groups[group][name] = f"rbxassetid://{entry['imageId']}"
             else:
                 pending.append((rel_path, entry["assetId"]))
         elif kind == "Model" and entry.get("assetId"):
@@ -268,7 +275,7 @@ def render_luau(groups: dict) -> str:
         "",
         "return {",
     ]
-    for group in ("icons", "sounds", "voices", "vfx", "models"):
+    for group in ("icons", "flat", "flatPlain", "textures", "sounds", "voices", "vfx", "models"):
         items = groups.get(group, {})
         if not items:
             lines.append(f"	{group} = {{}} :: {{ [string]: string }},")
@@ -417,11 +424,16 @@ def selftest() -> int:
         "assets/ui/hit-icons/gem.png": {"assetType": "Decal", "assetId": "14", "rbxassetid": "rbxassetid://14"},
         "assets/vfx/hit/sparkle.png": {"assetType": "Decal", "assetId": "15", "rbxassetid": "rbxassetid://15", "imageId": "115"},
         "assets/3d/pets/dragon.glb": {"assetType": "Model", "assetId": "16", "rbxassetid": "rbxassetid://16"},
+        "assets/ui/icons-flat/cash.png": {"assetType": "Decal", "assetId": "17", "rbxassetid": "rbxassetid://17", "imageId": "117"},
+        "assets/ui/icons-flat/plain/cash.png": {"assetType": "Decal", "assetId": "18", "rbxassetid": "rbxassetid://18", "imageId": "118"},
+        "assets/ui/hit-skin/studs.png": {"assetType": "Decal", "assetId": "19", "rbxassetid": "rbxassetid://19", "imageId": "119"},
     }}
     groups, pending = asset_groups(lock)
     assert groups["sounds"] == {"coin_pickup_A": "rbxassetid://11"} and groups["voices"] == {"deep_legendary": "rbxassetid://12"}
     assert groups["icons"] == {"cash": "rbxassetid://113"} and groups["vfx"] == {"sparkle": "rbxassetid://115"}, groups
     assert groups["models"] == {"dragon": "rbxassetid://16"} and pending == [("assets/ui/hit-icons/gem.png", "14")]
+    assert groups["flat"] == {"cash": "rbxassetid://117"} and groups["flatPlain"] == {"cash": "rbxassetid://118"}, groups
+    assert groups["textures"] == {"studs": "rbxassetid://119"}, groups
     text = render_luau(groups)
     assert 'cash = "rbxassetid://113",' in text and "voices = {" in text and text.startswith("--!strict")
     assert "{ 14 }" in resolver_script(pending)

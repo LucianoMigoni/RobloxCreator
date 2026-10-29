@@ -101,7 +101,9 @@ def build_prompt(recipe: dict, values: dict, has_refs: bool, style: dict, avatar
     merged.update(values)
     if kind == "iconset":
         block = style["iconset"]
-        parts = [block["style"]] + ([block["references"]] if has_refs else [])
+        # "redraw": la referencia es nuestra base 3D de esos mismos íconos (tools/render3d/icons.cjs).
+        ref_text = block["redraw"] if recipe["ia"].get("mode") == "redraw" else block["references"]
+        parts = [block["style"]] + ([ref_text] if has_refs else [])
         return "\n\n".join(parts + [fill(recipe["ia"]["prompt"], merged), block["background"], block["negative"]])
     parts = [style["style"][kind]]
     if has_refs:
@@ -354,6 +356,8 @@ def selftest() -> int:
     icons = {"kind": "iconset", "grid": "3x3", "names": list("abcdefghi"), "ia": {"aspect": "1:1", "prompt": "Icons: 1) a coin."}}
     sheet = build_prompt(icons, {}, True, style)
     assert sheet.startswith(style["iconset"]["style"]) and style["iconset"]["references"] in sheet
+    redraw = build_prompt({**icons, "ia": {**icons["ia"], "mode": "redraw"}}, {}, True, style)
+    assert style["iconset"]["redraw"] in redraw and style["iconset"]["references"] not in redraw
     assert sheet.endswith(style["iconset"]["negative"]) and style["light"] not in sheet
     body, ctype = multipart({"model": "m"}, [("image[]", "a.png", "image/png", b"PNG")], boundary="B")
     assert ctype == "multipart/form-data; boundary=B" and b'name="image[]"; filename="a.png"' in body

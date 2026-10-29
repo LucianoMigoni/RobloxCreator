@@ -162,8 +162,14 @@ Fuentes: https://ai.google.dev/gemini-api/docs/image-generation, https://ai.goog
 - **Plan:** Plus 49 USD/mes (39 en plan anual), 1 000 créditos por mes. Leonel activó la prueba de 3 días el 2026-10-29 (100 créditos). **Se renueva sola a 49 USD/mes:** si no se va a usar, cancelar la renovación antes de que termine (lo puede hacer Claude con `cancel_trial_auto_renewal`, solo si Leonel lo pide).
 - **Lo que se hizo con la prueba (2026-10-29):**
   - Los 45 íconos de `assets/ui/hit-icons` (GPT Image 2.5, 2,75 créditos por hoja de 9).
+  - Los 36 de `assets/ui/hud-icons`: nuestros renders 3D redibujados con GPT Image 2.5 (una hoja en 2k a 2,75 créditos y tres en 1k a 1,5).
   - Las 20 voces de `assets/audio/hit-voices` (`elevenlabs_v4`, 0,23 créditos por frase).
   - Miniaturas de prueba de las recetas y la prueba de 3D.
+- **Estado (2026-10-29, noche):**
+  - Quedan 0,31 créditos.
+  - La renovación de la prueba está cancelada; la prueba termina el 2026-11-01.
+  - No se pueden comprar créditos sueltos para esta cuenta: solo planes, desde 29 USD/mes en plan anual.
+  - Lo que sigue (huevos por rareza, mascotas, miniaturas) va por la API de OpenAI con `tools/imagegen.py`, que es más barata por imagen.
 - **Cómo se usa:**
   - Imágenes: subir las referencias con `media_upload` y `media_confirm`; generar con `generate_image` (`nano_banana_pro` o `gpt_image_2_5`) y el prompt de `imagegen.py prompt`; bajar el resultado y seguir con `thumbs.py compose --base` o `iconsheet.py slice`.
   - Voces: `generate_audio_batch` con `model: elevenlabs_v4` y `dialogue: [{text: "[excited] LEGENDARY!", voice_type: "preset", voice_id}]` (voces de `list_voices`). Con muchos pedidos juntos devuelve 429 al enviar: no se cobra; reenviar de a 4.

@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>html, body { margin: 0; background: transparent; } canvas { display: block; }</style>
+<script type="importmap">{"imports": {"three": "/three/build/three.module.js", "three/addons/": "/three/examples/jsm/"}}</script>
+</head>
+<body>
+<script type="module">
+// Estudio de íconos: sombreado de dibujo (toon.js), casco oscuro por pieza y, en 2D, el contorno grueso de
+// afuera. Fondo transparente.
+import * as THREE from 'three';
+import { mergeVertices } from 'three/addons/utils/BufferGeometryUtils.js';
+import { MODELS, loadFont } from '/icons/models.js';
+import { toon, updateLight } from '/icons/toon.js';
+
+const RENDER = 1024; // se dibuja al doble y se achica, para bordes suaves
+const OUTLINE = '#1a1426'; // el mismo oscuro que el contorno de la UI (UIKit.STROKE_COLOR)
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(1);
+renderer.setSize(RENDER, RENDER);
+renderer.outputColorSpace = THREE.LinearSRGBColorSpace; // los colores de toon.js ya son los que se ven
+renderer.toneMapping = THREE.NoToneMapping;
+renderer.setClearColor(0x000000, 0);
+document.body.appendChild(renderer.domElement);
+
+// El sombreado lo hace toon.js: la escena no lleva luces ni reflejos.
+const studio = () => new THREE.Scene();
+
+function outlineMaterial(thickness) {
+  // Casco invertido de grosor fijo en pantalla: marca el borde de cada pieza, como en los íconos de los hits.
+  return new THREE.ShaderMaterial({
+    uniforms: { thickness: { value: thickness }, color: { value: new THREE.Color(OUTLINE) } },
+    vertexShader: `
+      uniform float thickness;
+      void main() {
+        vec4 clip = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+        vec3 n = normalize(normalMatrix * normal);
+        vec2 dir = n.xy;
+        float len = length(dir);
+        if (len > 1e-4) clip.xy += dir / len * thickness * clip.w;
+        gl_Position = clip;
+      }`,
+    fragmentShader: `uniform vec3 color; void main() { gl_FragColor = vec4(color, 1.0); }`,
+    side: THREE.BackSide,
+  });
+}
+
+function addOutlines(root, thickness) {
+  const meshes = [];
+  root.traverse((o) => { if (o.isMesh && !o.userData.noOutline) meshes.push(o); });
+  for (const mesh of meshes) {
+    let g = mesh.geometry.clone();
+    for (const key of Object.keys(g.attributes)) if (key !== 'position') g.deleteAttribute(key);
+    g = mergeVertices(g, 1e-4);
+    g.computeVertexNormals();
+    const hull = new THREE.Mesh(g, outlineMaterial(mesh.userData.outline ?? thickness));
+    hull.userData.isOutline = true;
+    hull.renderOrder = -1;
+    mesh.add(hull);
+  }
+}
+
+function toGlyph(root) {
+  const hidden = [];
+  root.traverse((o) => {
+    if (o.userData.glyphHide) hidden.push(o);
+    else if (o.isMesh && !o.userData.isOutline) {
+      o.material = toon(0xffffff, { spec: 0.35, shade: [0.8, 0.8, 0.9] });
+      o.userData.noOutline = false; // en la versión plana también se marcan el vidrio y el líquido
+    }
+  });
+  for (const o of hidden) o.parent.remove(o); // insignias: queda solo el símbolo
+}
+
+// Encuadre por lo que se ve en pantalla: el ícono ocupa `fill` del cuadro y queda centrado.
+function frame(camera, root, fill) {
+  camera.zoom = 1;
+  camera.clearViewOffset();
+  camera.updateProjectionMatrix();
+  camera.updateMatrixWorld(true);
+  root.updateMatrixWorld(true);
+  const v = new THREE.Vector3();
+  let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+  root.traverse((o) => {
+    if (!o.isMesh || o.userData.isOutline) return;
+    const pos = o.geometry.attributes.position;
+    for (let i = 0; i < pos.count; i++) {
+      v.fromBufferAttribute(pos, i).applyMatrix4(o.matrixWorld).project(camera);
+      minX = Math.min(minX, v.x); maxX = Math.max(maxX, v.x);
+      minY = Math.min(minY, v.y); maxY = Math.max(maxY, v.y);
+    }
+  });
+  const scale = (fill * 2) / Math.max(maxX - minX, maxY - minY);
+  camera.zoom = scale;
+  camera.updateProjectionMatrix();
+  const cx = ((minX + maxX) / 2) * scale, cy = ((minY + maxY) / 2) * scale;
+  camera.setViewOffset(RENDER, RENDER, (cx * RENDER) / 2, (-cy * RENDER) / 2, RENDER, RENDER);
+}
+
+function outline2D(src, px) {
+  const W = src.width;
+  const sil = document.createElement('canvas');
+  sil.width = sil.height = W;
+  const s = sil.getContext('2d');
+  s.drawImage(src, 0, 0);
+  s.globalCompositeOperation = 'source-in';
+  s.fillStyle = OUTLINE;
+  s.fillRect(0, 0, W, W);
+  const out = document.createElement('canvas');
+  out.width = out.height = W;
+  const o = out.getContext('2d');
+  for (const r of [px * 0.35, px * 0.7, px]) {
+    const steps = Math.max(16, Math.round(r * 1.6));
+    for (let i = 0; i < steps; i++) {
+      const a = (i / steps) * Math.PI * 2;
+      o.drawImage(sil, Math.cos(a) * r, Math.sin(a) * r);
+    }
+  }
+  o.drawImage(src, 0, 0);
+  return out;
+}
+
+window.iconNames = () => Object.keys(MODELS);
+
+// Ícono plano desde un SVG de una sola tinta: blanco, centrado y, si `outlined`, con el contorno grueso
+// de los botones de Steal An Egg.
+window.renderFlat = async (svgText, size = 256, outlined = true) => {
+  const white = svgText.replace('<svg ', '<svg fill="#ffffff" ');
+  const img = new Image();
+  img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(white);
+  await img.decode();
+  const W = 1024;
+  const box = W * (outlined ? 0.76 : 0.9);
+  const c = document.createElement('canvas');
+  c.width = c.height = W;
+  c.getContext('2d').drawImage(img, (W - box) / 2, (W - box) / 2, box, box);
+  const src = outlined ? outline2D(c, W * 0.07) : c;
+  const out = document.createElement('canvas');
+  out.width = out.height = size;
+  const ctx = out.getContext('2d');
+  ctx.imageSmoothingQuality = 'high';
+  ctx.drawImage(src, 0, 0, size, size);
+  return out.toDataURL('image/png');
+};
+
+window.renderIcon = async (name, style = '3d', size = 512) => {
+  const spec = await MODELS[name]();
+  const root = spec.object;
+  const glyph = style === 'glyph';
+  if (glyph) toGlyph(root);
+  addOutlines(root, glyph ? 0.022 : (spec.inner ?? 0.016));
+  const scene = studio();
+  scene.add(root);
+  const camera = new THREE.PerspectiveCamera(24, 1, 0.05, 100);
+  const yaw = THREE.MathUtils.degToRad(spec.yaw ?? 25);
+  const pitch = THREE.MathUtils.degToRad(spec.pitch ?? 18);
+  const dist = 8;
+  camera.position.set(Math.sin(yaw) * Math.cos(pitch) * dist, Math.sin(pitch) * dist, Math.cos(yaw) * Math.cos(pitch) * dist);
+  camera.lookAt(0, 0, 0);
+  frame(camera, root, spec.fill ?? 0.8);
+  updateLight(camera);
+  renderer.render(scene, camera);
+  const lined = outline2D(renderer.domElement, RENDER * (glyph ? 0.042 : 0.042));
+  const out = document.createElement('canvas');
+  out.width = out.height = size;
+  const ctx = out.getContext('2d');
+  ctx.imageSmoothingQuality = 'high';
+  ctx.drawImage(lined, 0, 0, size, size);
+  scene.remove(root);
+  return out.toDataURL('image/png');
+};
+
+await loadFont();
+window.__ready = true;
+</script>
+</body>
+</html>

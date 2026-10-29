@@ -1,0 +1,21 @@
+{
+  "_que_es": "Géneros y eventos (hud-icons, hoja D). Primero la base: node tools/render3d/icons.cjs render pets moon fire dice treadmill pickaxe fishing magnet heart --out <carpeta>; después python tools/iconsheet.py compose <los 9 png en orden> --out base.png y python tools/imagegen.py generate skills/_shared/iconos/recetas/hud-d-generos.json --ref base.png.",
+  "kind": "iconset",
+  "grid": "3x3",
+  "names": [
+    "pets",
+    "moon",
+    "fire",
+    "dice",
+    "treadmill",
+    "pickaxe",
+    "fishing",
+    "magnet",
+    "heart"
+  ],
+  "ia": {
+    "aspect": "1:1",
+    "mode": "redraw",
+    "prompt": "Keep the same 9 objects, in this order: 1) pink pet paw print with four toe pads, 2) pale yellow crescent moon with small gray night clouds, 3) chunky orange flame with a yellow inner flame, 4) white rounded dice showing black pips and one red pip on top, 5) small treadmill with a blue belt, gray base and red console, 6) pickaxe with a silver head and a brown wooden handle, 7) cute orange cartoon fish with a big eye, 8) red horseshoe magnet with silver tips, 9) glossy pink-red heart."
+  }
+}

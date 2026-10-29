@@ -1,0 +1,21 @@
+{
+  "_que_es": "Menú principal y monedas (hud-icons, hoja A, 2k). Primero la base: node tools/render3d/icons.cjs render shop rebirth index cash crown luck_blue speed strength gift --out <carpeta>; después python tools/iconsheet.py compose <los 9 png en orden> --out base.png y python tools/imagegen.py generate skills/_shared/iconos/recetas/hud-a-menu.json --ref base.png.",
+  "kind": "iconset",
+  "grid": "3x3",
+  "names": [
+    "shop",
+    "rebirth",
+    "index",
+    "cash",
+    "crown",
+    "luck_blue",
+    "speed",
+    "strength",
+    "gift"
+  ],
+  "ia": {
+    "aspect": "1:1",
+    "mode": "redraw",
+    "prompt": "Keep the same 9 objects, in this order: 1) pink shopping basket full of colorful items, 2) two curved rebirth arrows forming a circle (red and blue), 3) closed blue book with a gold star on the cover and cream pages, 4) thick stack of green dollar bills with a yellow paper band, 5) golden VIP crown with three rounded points, red and blue gems, 6) glossy light-blue four-leaf clover with two white sparkles, 7) blue sneaker with white sole and white laces, with a small yellow square badge showing a white plus sign, 8) golden flexing arm emoji style (big round bicep, forearm up, closed fist with four curled fingers and a thumb), 9) red gift box with a yellow ribbon and big yellow bow."
+  }
+}

@@ -78,9 +78,11 @@ Instalación en cada máquina: `SETUP.md` (y `setup.ps1`, que crea el enlace de 
   - `roblox_upload.py`: subir assets.
   - `imagegen.py`: la imagen de miniaturas, ícono y anuncios con IA, a partir de referencias del juego.
   - `thumbs.py`: textos encima, revisión y hoja de contacto de miniaturas e íconos.
-  - `iconsheet.py`: corta las hojas de íconos hechas con IA en íconos sueltos con fondo transparente (`skills/_shared/iconos/`).
+  - `iconsheet.py`: corta las hojas de íconos hechas con IA en íconos sueltos con fondo transparente y arma la hoja de referencia (`skills/_shared/iconos/`).
   - `vfx_textures.py`: texturas de partículas, beams y trails estilo hit.
-  - `render3d/`: renders de los `.glb` para usar de referencia.
+  - `ui_textures.py`: material de la UI estilo hit (studs, damero, franjas, rayos, flechas de camino).
+  - `flat_icons.py`: íconos planos para botones chicos y la barra de Roblox (Material Symbols).
+  - `render3d/`: renders de los `.glb` para usar de referencia, y la base 3D de los íconos (`icons.cjs`).
   - `campaigns.py`: planes y campañas de Ads Manager.
   - `analytics.py`: métricas.
   - Claves solo en variables de entorno: `ROBLOX_OPEN_CLOUD_API_KEY`, `ROBLOX_ADS_API_KEY`, `ROBLOX_ANALYTICS_API_KEY`, `GEMINI_API_KEY` y `OPENAI_API_KEY`.

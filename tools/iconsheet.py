@@ -2,6 +2,7 @@
 
   python tools/iconsheet.py slice hoja.png --grid 3x3 --names coins,cash,gem,... --out carpeta [--size 512]
   python tools/iconsheet.py preview carpeta --sheet revision.jpg
+  python tools/iconsheet.py compose a.png b.png ... --out referencia.png
   python tools/iconsheet.py selftest
 
 - slice: encuentra las filas y columnas por los huecos vacíos entre íconos (la IA no los alinea
@@ -9,6 +10,8 @@
   transparente (GPT Image con background transparent) usa ese alfa; si no, saca el fondo liso desde
   los bordes (como Nano Banana con fondo blanco) y limpia el halo claro del borde.
 - preview: cada ícono sobre fondo oscuro y claro, y a 96 y 48 px (el tamaño real en un botón del HUD).
+- compose: arma la hoja 3x3 de referencia con nuestros renders (tools/render3d/icons.cjs) sobre gris
+  claro, para que la IA redibuje esos mismos íconos con la terminación de los hits (modo "redraw").
 
 Los íconos son nuestros si la imagen se generó en un plan pago o con API (skills/_shared/conectores.md).
 Necesita Pillow.
@@ -221,9 +224,31 @@ def selftest() -> int:
         except SheetError:
             pass
         preview(tmp / "icons", tmp / "rev.jpg")
+        icons = sorted((tmp / "icons").glob("*.png"))
+        ref = compose(icons, tmp / "ref.png", cell=200)
+        assert Image.open(ref).size == (600, 400), "compose: 6 íconos en 3 columnas = 3x2"
         assert (tmp / "rev.jpg").exists()
     print("selftest OK")
     return 0
+
+
+def compose(paths: list, out: Path, cell: int = 340, background=(233, 237, 243)) -> Path:
+    """Hoja 3x3 (o la grilla que haga falta) con un ícono por celda, centrado y con margen."""
+    if not paths:
+        raise SheetError("compose: no hay imágenes")
+    cols = 3
+    rows = (len(paths) + cols - 1) // cols
+    sheet = Image.new("RGB", (cell * cols, cell * rows), background)
+    inner = int(cell * 0.82)
+    for i, path in enumerate(paths):
+        im = Image.open(path).convert("RGBA")
+        im.thumbnail((inner, inner), Image.LANCZOS)
+        x = (i % cols) * cell + (cell - im.width) // 2
+        y = (i // cols) * cell + (cell - im.height) // 2
+        sheet.paste(im, (x, y), im)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    sheet.save(out)
+    return out
 
 
 def main(argv=None) -> int:
@@ -240,6 +265,10 @@ def main(argv=None) -> int:
     p = sub.add_parser("preview")
     p.add_argument("folder")
     p.add_argument("--sheet", required=True)
+    c = sub.add_parser("compose")
+    c.add_argument("images", nargs="+")
+    c.add_argument("--out", required=True)
+    c.add_argument("--cell", type=int, default=340)
     sub.add_parser("selftest")
     args = parser.parse_args(argv)
     try:
@@ -252,6 +281,9 @@ def main(argv=None) -> int:
         if args.cmd == "preview":
             preview(Path(args.folder), Path(args.sheet))
             print(f"  [ok] {args.sheet}")
+            return 0
+        if args.cmd == "compose":
+            print(f"  [ok] {compose([Path(p) for p in args.images], Path(args.out), args.cell)}")
             return 0
     except (SheetError, OSError, ValueError) as e:
         print(e, file=sys.stderr)

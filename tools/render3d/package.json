@@ -1,7 +1,7 @@
 {
   "name": "robloxcreator-render3d",
   "private": true,
-  "description": "Renderiza modelos .glb del catálogo a PNG con fondo transparente, para usarlos de referencia en tools/imagegen.py.",
+  "description": "Renderiza modelos .glb del catálogo a PNG con fondo transparente (render.cjs) y la base 3D de los íconos del HUD (icons.cjs), para usarlos de referencia en tools/imagegen.py.",
   "dependencies": {
     "playwright": "1.49.1",
     "three": "0.170.0"
