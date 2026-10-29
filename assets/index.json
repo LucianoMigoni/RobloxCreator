@@ -1294,6 +1294,136 @@
       "commercialUse": true,
       "author": "APM Music / DistroKid (vía Roblox)",
       "notes": "Temas de los socios oficiales de música de Roblox, públicos y gratis para usar en experiencias con su rbxassetid. La palabra clave de cada tema dice para qué sirve (lobby, Halloween, jefe...)."
+    },
+    {
+      "id": "font-luckiest-guy",
+      "path": "fonts/luckiest-guy/LuckiestGuy-Regular.ttf",
+      "type": "font",
+      "tags": {
+        "style": [
+          "hit",
+          "bold",
+          "cartoon"
+        ],
+        "genre": [
+          "any"
+        ],
+        "theme": [
+          "titulos",
+          "numeros"
+        ]
+      },
+      "robloxAssetId": null,
+      "source": "third-party",
+      "sourceUrl": "https://fonts.google.com/specimen/Luckiest+Guy",
+      "license": "Apache-2.0",
+      "commercialUse": true,
+      "author": "Astigmatic (Brian J. Bonislawsky)",
+      "notes": "La letra de cómic redonda de los títulos y números gigantes de los hits. Para miniaturas, íconos y anuncios (tools/thumbs.py). En el juego se usan las fuentes de Roblox (Enum.Font / Font.new)."
+    },
+    {
+      "id": "font-lilita-one",
+      "path": "fonts/lilita-one/LilitaOne-Regular.ttf",
+      "type": "font",
+      "tags": {
+        "style": [
+          "hit",
+          "bold",
+          "cartoon"
+        ],
+        "genre": [
+          "any"
+        ],
+        "theme": [
+          "titulos",
+          "etiquetas"
+        ]
+      },
+      "robloxAssetId": null,
+      "source": "third-party",
+      "sourceUrl": "https://fonts.google.com/specimen/Lilita+One",
+      "license": "OFL-1.1",
+      "commercialUse": true,
+      "author": "Juan Montoreano",
+      "notes": "Gruesa y legible a tamaño chico: rarezas, etiquetas y textos cortos. Para miniaturas, íconos y anuncios (tools/thumbs.py). En el juego se usan las fuentes de Roblox (Enum.Font / Font.new)."
+    },
+    {
+      "id": "font-titan-one",
+      "path": "fonts/titan-one/TitanOne-Regular.ttf",
+      "type": "font",
+      "tags": {
+        "style": [
+          "hit",
+          "bold",
+          "cartoon"
+        ],
+        "genre": [
+          "any"
+        ],
+        "theme": [
+          "titulos",
+          "numeros"
+        ]
+      },
+      "robloxAssetId": null,
+      "source": "third-party",
+      "sourceUrl": "https://fonts.google.com/specimen/Titan+One",
+      "license": "OFL-1.1",
+      "commercialUse": true,
+      "author": "Rodrigo Fuenzalida",
+      "notes": "Muy pesada: números de plata por segundo y palabras de una sola línea. Para miniaturas, íconos y anuncios (tools/thumbs.py). En el juego se usan las fuentes de Roblox (Enum.Font / Font.new)."
+    },
+    {
+      "id": "font-bangers",
+      "path": "fonts/bangers/Bangers-Regular.ttf",
+      "type": "font",
+      "tags": {
+        "style": [
+          "hit",
+          "bold",
+          "cartoon"
+        ],
+        "genre": [
+          "any"
+        ],
+        "theme": [
+          "accion",
+          "eventos"
+        ]
+      },
+      "robloxAssetId": null,
+      "source": "third-party",
+      "sourceUrl": "https://fonts.google.com/specimen/Bangers",
+      "license": "OFL-1.1",
+      "commercialUse": true,
+      "author": "Vernon Adams",
+      "notes": "Estilo historieta para acción, eventos y anuncios. Para miniaturas, íconos y anuncios (tools/thumbs.py). En el juego se usan las fuentes de Roblox (Enum.Font / Font.new)."
+    },
+    {
+      "id": "font-fredoka",
+      "path": "fonts/fredoka/Fredoka-Variable.ttf",
+      "type": "font",
+      "tags": {
+        "style": [
+          "hit",
+          "bold",
+          "cartoon"
+        ],
+        "genre": [
+          "any"
+        ],
+        "theme": [
+          "textos",
+          "redonda"
+        ]
+      },
+      "robloxAssetId": null,
+      "source": "third-party",
+      "sourceUrl": "https://fonts.google.com/specimen/Fredoka",
+      "license": "OFL-1.1",
+      "commercialUse": true,
+      "author": "Milena Brandão, Hafontia",
+      "notes": "Redonda y amable (variable, usar Bold): subtítulos y textos de apoyo. Para miniaturas, íconos y anuncios (tools/thumbs.py). En el juego se usan las fuentes de Roblox (Enum.Font / Font.new)."
     }
   ]
 }

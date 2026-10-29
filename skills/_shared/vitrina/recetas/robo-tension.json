@@ -1,0 +1,21 @@
+{
+  "_receta": "Robo con tensión (Steal An Egg): el avatar se lleva el premio mientras la criatura gigante duerme o persigue. Flecha YOU!, alerta !!, nombre del premio en arcoíris y su valor por segundo.",
+  "_valores": "hero = premio (huevo, mascota), creature = criatura gigante, avatar = avatar del jugador, name = nombre del premio, value = $ por segundo",
+  "kind": "thumbnail",
+  "background": {"gradient": ["#7fe0ff", "#2f8bff"], "angle": 90},
+  "rays": {"center": [0.72, 0.42], "count": 18, "color": "#ffffff", "opacity": 0.12},
+  "layers": [
+    {"type": "image", "path": "{{creature}}", "x": 0.3, "y": 0.58, "height": 0.62, "flip": true,
+     "shadow": {"offset": [0, 0.04], "blur": 0.03, "color": "#00000066"}},
+    {"type": "text", "text": "!!", "font": "luckiest-guy", "size": 0.16, "x": 0.12, "y": 0.3, "fill": "#ff2a2a", "rotate": 12},
+    {"type": "image", "path": "{{avatar}}", "x": 0.74, "y": 0.6, "height": 0.6,
+     "outline": {"color": "#ffffff", "width": 0.015}, "shadow": {"offset": [0, 0.03]}},
+    {"type": "image", "path": "{{hero}}", "x": 0.64, "y": 0.5, "height": 0.36,
+     "glow": {"color": "#fff27a", "radius": 0.08, "opacity": 0.9}, "outline": {"color": "#ffffff", "width": 0.02}},
+    {"type": "text", "text": "{{name}}", "font": "luckiest-guy", "size": 0.1, "x": 0.3, "y": 0.1, "fill": "rainbow"},
+    {"type": "text", "text": "{{value}}", "font": "titan-one", "size": 0.085, "x": 0.3, "y": 0.21, "fill": "#7dff4f"},
+    {"type": "text", "text": "YOU!", "font": "luckiest-guy", "size": 0.09, "x": 0.9, "y": 0.18, "fill": "#ffffff", "rotate": -8},
+    {"type": "arrow", "from": [0.88, 0.27], "to": [0.8, 0.36], "curve": -0.35, "color": "#ff2a2a"}
+  ],
+  "vignette": 0.18
+}

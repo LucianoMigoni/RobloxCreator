@@ -1,0 +1,14 @@
+{
+  "_receta": "Ícono 512x512: un solo sujeto gigante (60-70 % del cuadro) con brillo y borde, fondo saturado con rayos. Se tiene que entender a 150 px: nada de escenas ni texto chico.",
+  "_valores": "hero = sujeto, top = texto opcional corto (número o 1 palabra); dejar vacío con --set top=",
+  "kind": "icon",
+  "background": {"gradient": ["#ffd84d", "#ff6a3d"], "angle": 90},
+  "rays": {"center": [0.5, 0.55], "count": 16, "color": "#fff6c9", "opacity": 0.25},
+  "layers": [
+    {"type": "image", "path": "{{hero}}", "x": 0.5, "y": 0.56, "height": 0.7,
+     "glow": {"color": "#ffffff", "radius": 0.07, "opacity": 0.8}, "outline": {"color": "#ffffff", "width": 0.02},
+     "shadow": {"offset": [0, 0.03]}},
+    {"type": "text", "text": "{{top}}", "font": "luckiest-guy", "size": 0.16, "x": 0.5, "y": 0.13, "fill": "rainbow", "max_width": 0.92}
+  ],
+  "vignette": 0.15
+}

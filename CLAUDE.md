@@ -4,6 +4,7 @@ Centro para crear juegos de Roblox rápido y con buenas probabilidades de éxito
 
 ## Reglas generales
 
+- **Qué juegos hacemos y cómo:** antes de diseñar o construir, leer `skills/_shared/como-son-nuestros-juegos.md`. Ahí está todo lo que el equipo definió: juegos estilo top hit para chicos, retención y dopamina, monetización agresiva dentro de las reglas, HUD, mapas, vitrina, campañas y lo que nunca se hace.
 - **No inventes APIs.** Toda API de Roblox que uses o menciones se verifica en https://create.roblox.com/docs (WebFetch de la página `.md`, o `http_get` del MCP de Studio). Si ese sitio no es accesible (p. ej. en sesiones en la nube), la misma documentación está en el repo oficial `Roblox/creator-docs`: guías en `content/en-us/<ruta>.md` y referencia de la API en `content/en-us/reference/engine/classes/<Clase>.yaml` (vía `raw.githubusercontent.com`). Si no se pudo verificar, dilo.
 - **Diseñar para el algoritmo.** Home recomienda según lo que hacen los jugadores que llegan desde ahí: si juegan tras ver el juego, si rebotan antes de 60 o 180 s, y cuánto vuelven, juegan, juegan con amigos y gastan en D1, D2–7 y D8–28. Castiga la metadata engañosa y los juegos no únicos. Resumen verificado y qué implica en cada fase: `skills/_shared/algoritmo-descubrimiento.md`.
 - **No inventes herramientas MCP.** Detecta qué hay instalado y usa los nombres exactos: `skills/_shared/mcp-tools.md`.
@@ -17,7 +18,7 @@ Centro para crear juegos de Roblox rápido y con buenas probabilidades de éxito
   Además:
   - Los conceptos se piensan para jugadores de todo el mundo, sin chistes ni referencias locales, y se investigan con los Charts de "Todas las ubicaciones".
   - Para llegar a otros idiomas, el idioma de origen es inglés y se activa la traducción automática de Roblox (18 idiomas; `roblox-publishing`).
-  - Por eso: nada de texto dentro de imágenes (no se traduce), y `AutoLocalize` activado en la UI.
+  - Por eso: nada de texto dentro de imágenes (no se traduce), y `AutoLocalize` activado en la UI. Excepción: ícono, miniaturas y anuncios llevan números y símbolos, y como mucho 3 palabras en inglés simple, como los hits (`skills/_shared/vitrina-hits.md` §4).
   - La documentación y la comunicación del equipo siguen en español.
 - **Público menor de edad.** Monetización dentro de las reglas oficiales de Roblox (ver `roblox-monetization`): pagar puede dar ventajas importantes, pero nada de urgencia falsa ni de aleatorios pagos sin probabilidades. Contenido apto (ver `roblox-compliance`). Todo juego nuevo sale primero solo para 16+; llegar a menores de 16 exige cuestionario de madurez completo, requisitos en la cuenta dueña y una evaluación con jugadores 16+ (`roblox-compliance`): decidir el público desde la fase 1.
 - **Puerta de revisión:** al terminar cada fase, mostrar el resultado al usuario y esperar su visto bueno antes de seguir.
@@ -34,10 +35,11 @@ Centro para crear juegos de Roblox rápido y con buenas probabilidades de éxito
 | 6 | QA y rendimiento | `roblox-qa-performance` | Build jugable | `qa.md` (checklist + resultados) |
 | 7 | Cumplimiento | `roblox-compliance` | Juego completo | `cumplimiento.md` |
 | 8 | Publicación | `roblox-publishing` | Juego aprobado | `lanzamiento.md`, icono/miniaturas |
+| 8b | Campañas | `roblox-campaigns` | Juego publicado con vitrina lista; cada update grande | `campanas/<fecha>-<nombre>.md` (+ `.json`), creatividades |
 | 9 | Métricas | `roblox-metrics-growth` | Juego publicado (o pre-lanzamiento en modo mejora) | `metricas.md` |
 | 10 | Live ops | `roblox-liveops` | Métricas + roadmap | `liveops.md`, changelogs |
 
-Las diez fases tienen su skill. Los skills citan la documentación oficial con la fecha en que se verificó: antes de una decisión grande (concepto, lanzamiento), volver a verificar lo que cambió.
+Las diez fases tienen su skill, y las campañas (8b) el suyo. Los skills citan la documentación oficial con la fecha en que se verificó: antes de una decisión grande (concepto, lanzamiento), volver a verificar lo que cambió.
 
 Saltos permitidos: un juego existente puede entrar en la fase 9 (modo mejora). `roblox-ui-designer` y `roblox-security` se vuelven a llamar cada vez que otra fase cree UI o RemoteEvents nuevos.
 
@@ -68,6 +70,16 @@ Instalación en cada máquina: `SETUP.md` (y `setup.ps1`, que crea el enlace de 
 - **Rojo 7.7.1**, **luau-lsp 1.70.1** (análisis de tipos) y **Luau 0.742** (intérprete para los tests de `template/tests/`): fijados en `rokit.toml` de la raíz; Rojo también en `template/rokit.toml` (y en cada juego). Para actualizar, cambiar la versión en todos a la vez: `tools/check.py` exige que coincidan.
 - **Plugin de Rojo** en `%LOCALAPPDATA%\Roblox\Plugins\RojoManagedPlugin.rbxm` (reinstalar tras actualizar Rojo: `rojo plugin install`).
 - **MCP de Roblox Studio** registrado como `Roblox_Studio` (scope usuario).
+- **Conectores** (los dos integrantes los tienen): Blender (MCP oficial de Blender Lab), Meshy (`.mcp.json` del repo, clave en `MESHY_API_KEY`), Open Cloud (`tools/roblox_upload.py`) y Obsidian. Qué hace cada uno y por qué ForgeGUI no: `skills/_shared/conectores.md`.
+- **Herramientas del hub** (`tools/`):
+  - `check.py`: el chequeo de cada PR.
+  - `roblox_research.py`: Charts, datos e imágenes de los hits.
+  - `assets_import.py`: Kenney y Fluent al catálogo.
+  - `roblox_upload.py`: subir assets.
+  - `thumbs.py`: miniaturas e íconos estilo hit.
+  - `campaigns.py`: planes y campañas de Ads Manager.
+  - `analytics.py`: métricas.
+  - Claves solo en variables de entorno: `ROBLOX_OPEN_CLOUD_API_KEY`, `ROBLOX_ADS_API_KEY` y `ROBLOX_ANALYTICS_API_KEY`.
 
 Mapeo de Rojo en la plantilla: `src/shared` → `ReplicatedStorage.Shared`, `src/server` → `ServerScriptService.Server`, `src/client` → `StarterPlayer.StarterPlayerScripts.Client`. Sufijos: `.server.luau` = Script, `.client.luau` = LocalScript, `.luau` = ModuleScript.
 

@@ -70,6 +70,8 @@ foreach ($candidate in @('python', 'py', 'python3')) {
     if ($version) { $python = $candidate; Write-Ok "${candidate}: $version"; break }
 }
 if (-not $python) { Write-Missing 'Python 3 no esta instalado (paso 1)' }
+elseif (Invoke-Probe $python @('-c', 'import PIL')) { Write-Ok 'Pillow instalado (tools/thumbs.py)' }
+else { Write-Missing "Pillow no esta instalado: $python -m pip install pillow (paso 1)" }
 
 # ---------------------------------------------------------------------------
 Write-Step '2. Enlace .claude\skills -> skills (SETUP.md, paso 11)'
@@ -190,6 +192,9 @@ if (Test-EnvVar 'ROBLOX_OPEN_CLOUD_API_KEY') { Write-Ok 'ROBLOX_OPEN_CLOUD_API_K
 else { Write-Missing 'ROBLOX_OPEN_CLOUD_API_KEY no esta definida (SETUP.md paso 8)' }
 if ((Test-EnvVar 'ROBLOX_CREATOR_GROUP_ID') -or (Test-EnvVar 'ROBLOX_CREATOR_USER_ID')) { Write-Ok 'dueno de los assets definido' }
 else { Write-Missing 'falta ROBLOX_CREATOR_GROUP_ID (o ROBLOX_CREATOR_USER_ID) para subir assets (SETUP.md paso 8)' }
+# La clave de anuncios gasta dinero y es de cada usuario: se informa, no cuenta como pendiente.
+if (Test-EnvVar 'ROBLOX_ADS_API_KEY') { Write-Ok 'ROBLOX_ADS_API_KEY definida (campanas por API)' }
+else { Write-Info 'ROBLOX_ADS_API_KEY no esta definida: hace falta solo para crear campanas por API (SETUP.md paso 8)' }
 
 # ---------------------------------------------------------------------------
 Write-Step '6. Chequeo del hub: tools/check.py, el mismo que corre GitHub (SETUP.md, paso 12)'

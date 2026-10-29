@@ -20,7 +20,7 @@ powershell -ExecutionPolicy Bypass -File .\setup.ps1
 |---|---|---|
 | Git for Windows | Repo; además trae Git Bash, que Claude Code usa como terminal | https://git-scm.com/downloads/win |
 | GitHub CLI | PRs y revisiones desde la terminal | https://cli.github.com. Después: `gh auth login` |
-| Python 3 | `assets/catalog.py` | https://www.python.org/downloads/ (marcar **Add python.exe to PATH**) |
+| Python 3 | `assets/catalog.py` y las herramientas de `tools/` | https://www.python.org/downloads/ (marcar **Add python.exe to PATH**). Después: `python -m pip install pillow` (miniaturas con `tools/thumbs.py`) |
 | Roblox Studio | Construir y probar | https://create.roblox.com → descargar Studio |
 | Claude Code | La IA del hub | PowerShell: `irm https://claude.ai/install.ps1 \| iex` (o `winget install Anthropic.ClaudeCode`) |
 | Obsidian | Leer y editar las notas del repo | https://obsidian.md/download (ver **Obsidian** abajo) |
@@ -121,6 +121,10 @@ Meshy guarda lo que genera en `meshy_output/` (Git lo ignora). Al repo pasa solo
 3. Probar sin subir nada: `python tools/roblox_upload.py upload assets/audio/kenney/ui-audio/click1.ogg --lock games/<juego>/assets.lock.json --dry-run`.
 
 El audio tiene cupo: 100 subidas por mes con la cuenta verificada con ID, 10 sin verificar. Antes de subir sonidos, buscar en la biblioteca de Roblox ya catalogada (`python assets/catalog.py find <palabra>`).
+
+### Clave para campañas (Ads Manager)
+
+`tools/campaigns.py` crea y maneja campañas con la Ads API de Open Cloud, que es experimental y **gasta dinero real** (solo con `--yes`). Pide una clave **de tu usuario**, porque la API no acepta claves de grupo: Creator Dashboard → Open Cloud → API Keys, con los permisos `ad.campaign:read`, `ad.campaign:write` y `ad.billing:read`. Guardarla con `setx ROBLOX_ADS_API_KEY TU_CLAVE`. El medio de pago (tarjeta o ad credits) se carga en Ads Manager. Para medir las miniaturas, `tools/campaigns.py thumbs` usa la clave de analíticas (`ROBLOX_ANALYTICS_API_KEY`).
 
 ## 9. ForgeGUI (evaluado: no se instala)
 

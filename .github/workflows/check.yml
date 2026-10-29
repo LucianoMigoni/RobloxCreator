@@ -1,5 +1,5 @@
 # Corre tools/check.py en cada push: rojo build, luau-lsp con los tipos de Roblox, tests de
-# Luau, reglas de seguridad, catálogo de assets, JSON y PowerShell. Versiones de rokit.toml.
+# Luau, reglas de seguridad, catálogo de assets, herramientas Python, JSON y PowerShell. Versiones de rokit.toml.
 name: Chequeo
 
 on:
@@ -33,6 +33,14 @@ jobs:
           unzip -o -q "$RUNNER_TEMP/luau.zip" -d "$bin"
           chmod +x "$bin/rojo" "$bin/luau-lsp" "$bin/luau"
           echo "$bin" >> "$GITHUB_PATH"
+
+      # Python propio del job: el del sistema no deja instalar paquetes con pip (PEP 668).
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pillow (para tools/thumbs.py)
+        run: python3 -m pip install --quiet pillow==12.3.0
 
       - name: Chequeo
         run: python3 tools/check.py

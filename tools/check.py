@@ -5,6 +5,7 @@
 Necesita `rojo`, `luau-lsp` y `luau` en el PATH: `rokit install` en la raíz los instala con las
 versiones de rokit.toml. Las definiciones de tipos de Roblox se descargan una vez a .cache/.
 """
+import importlib.util
 import json
 import os
 import re
@@ -162,9 +163,15 @@ def check_source_rules() -> list:
 
 def check_python_tools() -> list:
     errors = []
-    for script, cmd in (("assets/catalog.py", "selftest"), ("assets/catalog.py", "validate"), ("tools/analytics.py", "selftest"),
-                        ("tools/roblox_research.py", "selftest"), ("tools/roblox_upload.py", "selftest"),
-                        ("tools/assets_import.py", "selftest")):
+    scripts = [("assets/catalog.py", "selftest"), ("assets/catalog.py", "validate"), ("tools/analytics.py", "selftest"),
+               ("tools/roblox_research.py", "selftest"), ("tools/roblox_upload.py", "selftest"),
+               ("tools/assets_import.py", "selftest"), ("tools/campaigns.py", "selftest")]
+    # tools/thumbs.py necesita Pillow: GitHub lo instala; en una PC sin Pillow se avisa y se omite.
+    if importlib.util.find_spec("PIL"):
+        scripts.append(("tools/thumbs.py", "selftest"))
+    else:
+        print("  (sin Pillow: se omite tools/thumbs.py; instalar con `python -m pip install pillow`)")
+    for script, cmd in scripts:
         ok, out = run([sys.executable, script, cmd])
         if not ok:
             errors.append(f"{script} {cmd}: {out}")

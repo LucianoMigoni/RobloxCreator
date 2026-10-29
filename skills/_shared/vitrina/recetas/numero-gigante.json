@@ -1,0 +1,15 @@
+{
+  "_receta": "Número gigante arriba (Steal a Brainrot): la ganancia por segundo enorme, la criatura con su nombre y rareza, el avatar orgulloso al costado.",
+  "_valores": "creature = criatura, avatar = avatar, value = número grande ($997,151,167/s), name = nombre de la criatura, rarity = SECRET/MYTHIC",
+  "kind": "thumbnail",
+  "background": {"gradient": ["#8be9ff", "#45b5ff", "#3fd16b"], "angle": 90},
+  "layers": [
+    {"type": "image", "path": "{{creature}}", "x": 0.33, "y": 0.62, "height": 0.62,
+     "glow": {"color": "#ff4fd8", "radius": 0.06, "opacity": 0.7}, "shadow": {"offset": [0, 0.04]}},
+    {"type": "image", "path": "{{avatar}}", "x": 0.78, "y": 0.62, "height": 0.66, "shadow": {"offset": [0, 0.03]}},
+    {"type": "text", "text": "{{value}}", "font": "titan-one", "size": 0.16, "x": 0.5, "y": 0.11, "fill": "#ffffff",
+     "stroke": {"color": "#141414", "width": 0.11}, "max_width": 0.94},
+    {"type": "text", "text": "{{name}}", "font": "lilita-one", "size": 0.075, "x": 0.33, "y": 0.27, "fill": "#ffffff"},
+    {"type": "text", "text": "{{rarity}}", "font": "luckiest-guy", "size": 0.075, "x": 0.33, "y": 0.35, "fill": "rainbow"}
+  ]
+}

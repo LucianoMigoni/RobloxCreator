@@ -9,14 +9,16 @@ Copiar en `games/<juego>/docs/lanzamiento.md` y completar. Lo marcado **(hub)** 
 - *Use Translated Content* activado, con los idiomas elegidos en la pestaña Languages (Roblox traduce automáticamente a 18 idiomas el nombre, la descripción y los textos del juego);
 - *Capture text from experience UI while users play* activado.
 
-La traducción automática **no** cubre el texto dentro de imágenes (icono, miniaturas) ni los nombres y descripciones de badges y pases (fuente: `/production/localization/automatic-translations`, verificado el 2026-10-26). Por eso el icono y las miniaturas van sin texto o con muy poco.
+La traducción automática **no** cubre el texto dentro de imágenes (icono, miniaturas) ni los nombres y descripciones de badges y pases (fuente: `/production/localization/automatic-translations`, verificado el 2026-10-26). Por eso el icono y las miniaturas llevan números y símbolos, y como mucho 3 palabras en inglés simple (`skills/_shared/vitrina-hits.md` §4).
 
 **Nombre:** …
+- Estilo hit (`skills/_shared/vitrina-hits.md` §3): la fórmula a la vista ("Steal a ___", "+1 ___"), de 2 a 5 palabras, y adelante una etiqueta de temporada o update con un emoji (`[🎃 UPD]`) que cambia con cada update. El nombre base no cambia.
 - Estable: no se piensa renombrar después del lanzamiento.
 - Sin palabras repetidas; como mucho uno o dos emojis bien ubicados.
 - No se parece al de un juego existente (juego "no único" = menos exposición).
 
 **Descripción**
+- Estructura de los hits (`skills/_shared/vitrina-hits.md` §3): "🥚 Welcome to <Name>!" (o la novedad del update), "How to Play:" con 4 a 7 líneas de emoji + verbo en el orden del loop, el gancho que vende ("Money generates while you're offline!"), "Like the game and join the group for updates!" (sin premio por el like) y plataformas.
 - Primera oración: qué es el juego y qué hace el jugador. Es lo primero que se ve.
 - Después: mecánicas principales y lo que lo diferencia, con las palabras clave que un jugador usaría para buscarlo.
 - Sin listas de palabras sueltas, sin nombres de otros juegos, sin promesas de Robux ni recompensas, apta para todo público.
@@ -35,12 +37,15 @@ La traducción automática **no** cubre el texto dentro de imágenes (icono, min
 - [ ] Assets con licencia comercial (catálogo) y registrados si son nuevos.
 
 ## 3. Miniaturas
-| # | Hipótesis (qué la haría elegir) | Captura de | Estado |
+Se arman con `tools/thumbs.py` y las recetas de `skills/_shared/vitrina/recetas/` (robo con tensión, número gigante, objeto gigante, rareza SECRET, +1, temporada), con renders y capturas del juego. Revisar cada una con `tools/thumbs.py check --kind thumbnail --previews …` y la hoja de contacto en el PR.
+
+| # | Hipótesis (qué la haría elegir) | Receta | Captura o render de | Estado |
 |---|---|---|---|
-| 1 | La mecánica principal en acción | … | |
-| 2 | Amigos jugando juntos (co-play) **(hub)** | … | |
-| 3 | El mundo o el escenario más llamativo | … | |
-| 4 | La progresión o la recompensa (sin prometer Robux) | … | |
+| 1 | La mecánica principal en acción | `robo-tension` / `mas-uno` | … | |
+| 2 | El número que impresiona (ganancia por segundo) | `numero-gigante` | … | |
+| 3 | La rareza (SECRET, la probabilidad) | `rareza-secret` | … | |
+| 4 | El premio gigante (huevo, cofre) | `objeto-gigante` | … | |
+| 5 | Amigos jugando juntos (co-play) **(hub)** | captura real | … | |
 
 - [ ] 16:9, ideal 1920×1080, menos de 3 MB para la personalización.
 - [ ] Nada esencial en la parte de abajo.
@@ -57,11 +62,11 @@ La traducción automática **no** cubre el texto dentro de imágenes (icono, min
 | … | Lanzamiento a 16+ | … | QA, cumplimiento y monetización sin bloqueantes |
 | … | Cuestionario completo y requisitos de cuenta para menores de 16 | … | Etiqueta Minimal, Mild o Moderate; ver `roblox-compliance` |
 | … | Evaluación para Kids y Select | … | 250 jugadas únicas de jugadores 16+ muy comprometidos en 60 días (panel **Audience Reach**) |
-| … | Promoción | … | Qué canal, cuánto y qué se mide |
+| … | Promoción | … | Plan de `roblox-campaigns` (`docs/campanas/`): etapas, presupuesto, creatividades y reglas de corte |
 | D1, D7, D28 | Revisión con `roblox-metrics-growth` | … | Datos con fuente y fecha |
 
 Notas **(hub)**:
 - El FAQ del algoritmo dice que no hay castigo por un mal arranque: un lanzamiento chico sirve para encontrar errores, no para "proteger" el algoritmo.
 - Si el público objetivo incluye menores de 16, el primer público real es 16+ (la evaluación se cuenta con ellos): la vitrina y el primer minuto tienen que funcionar también para ese público.
 - La evaluación no exige una fuente de jugadores en particular. Los traídos por ads, amigos o redes ayudan a que Home elija el juego como candidato, pero no cuentan para el ranking de Recommended for You.
-- Ads: Ads Manager (cuenta de 13+ con email verificado). Antes de pagar, definir presupuesto, qué métrica se espera mover y cuándo se revisa.
+- Ads: los arma `roblox-campaigns` (plan por etapas con `tools/campaigns.py plan`, datos y costos en `skills/_shared/anuncios-2026.md`). Antes de pagar: presupuesto, métrica que se espera mover y fecha de revisión.

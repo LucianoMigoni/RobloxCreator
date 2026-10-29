@@ -14,7 +14,9 @@ Que la vitrina del juego (icono, miniaturas, nombre, descripción) haga que jueg
 - Cuando `roblox-metrics-growth` ve PTR bajo con bounce normal (la vitrina no convence).
 
 **Lo llaman:** el usuario, `roblox-liveops` (updates grandes), `roblox-metrics-growth` (PTR bajo).
-**Llama a:** `roblox-qa-performance`, `roblox-compliance` y `roblox-monetization` (deben estar al día antes de publicar), `roblox-metrics-growth` (después del lanzamiento).
+**Llama a:** `roblox-qa-performance`, `roblox-compliance` y `roblox-monetization` (deben estar al día antes de publicar), `roblox-campaigns` (publicidad del lanzamiento) y `roblox-metrics-growth` (después del lanzamiento).
+
+**Cómo lo hacen los hits:** `skills/_shared/vitrina-hits.md` tiene los patrones medidos de íconos, miniaturas, títulos y descripciones, la política de texto en imágenes y el kit `tools/thumbs.py` con recetas.
 
 ## Base oficial
 Verificado el 2026-10-25 en `/production/publishing/publish-games-and-places`, `/thumbnails`, `/experience-icons`, `/experience-genres`, `/kids-and-select` y `/discovery` (repo `Roblox/creator-docs`, commit `4e795e6`). Detalle y plantilla en `references/metadata.md`.
@@ -32,9 +34,12 @@ Verificado el 2026-10-25 en `/production/publishing/publish-games-and-places`, `
 ## Flujo
 1. **Puerta:** `docs/qa.md`, `docs/cumplimiento.md` y `docs/monetizacion.md` al día y sin bloqueantes. Si falta algo, volver al skill dueño.
 2. **Metadata** con `references/metadata.md`: nombre, descripción (primera oración y palabras clave), género y subgénero, y todo contra la spec (lo que se promete existe en el juego).
-3. **Icono:** propuesta, revisada a 512 y a 150 px. Assets del catálogo con `commercialUse: true` o generados y registrados (`CLAUDE.md`, catálogo).
-4. **Miniaturas:** de 3 a 5, cada una con una hipótesis distinta (la mecánica, el mundo, los amigos jugando, la progresión). Capturas reales del juego con la cámara libre de Studio (Shift + P en playtest solo). Video de gameplay si se puede grabar uno auténtico.
-5. **Plan de lanzamiento** con fechas en `docs/lanzamiento.md`: testers, lanzamiento a 16+, evaluación para menores de 16 si el público lo pide, promoción y primeras revisiones de métricas (`references/metadata.md`).
+3. **Icono:** receta `icono-heroe` (`tools/thumbs.py compose`) con un render propio, revisada a 512 y a 150 px (`tools/thumbs.py check --kind icon --previews …`). Assets del catálogo con `commercialUse: true` o generados y registrados (`CLAUDE.md`, catálogo).
+4. **Miniaturas:** de 3 a 5, cada una con una hipótesis distinta: la mecánica, el número, la rareza, el premio y los amigos jugando.
+   - Se arman con las recetas de `skills/_shared/vitrina/recetas/`, con renders (Blender) y capturas reales (cámara libre de Studio: Shift + P en playtest solo).
+   - Se revisan con `tools/thumbs.py check`.
+   - Video de gameplay si se puede grabar uno auténtico.
+5. **Plan de lanzamiento** con fechas en `docs/lanzamiento.md`: testers, lanzamiento a 16+, evaluación para menores de 16 si el público lo pide, promoción (plan de `roblox-campaigns`) y primeras revisiones de métricas (`references/metadata.md`).
 6. **Publicar** (persona): subir icono y miniaturas, activar la personalización, lanzar. Anotar la fecha, la versión y el `UniverseId`.
 7. **Después:** `roblox-metrics-growth` a D1, D7 y D28, y la tabla **Thumbnail Performance** de la pestaña Home Page para ver qué miniatura gana en cada grupo.
 
@@ -49,5 +54,5 @@ Verificado el 2026-10-25 en `/production/publishing/publish-games-and-places`, `
 
 ## Límites
 - No publica solo: lanzar, pagar tarifas y subir imágenes lo hace una persona con la cuenta dueña.
-- No compra ads ni promete jugadores: el plan dice qué se prueba y cómo se mide.
+- Las campañas pagas las arma `roblox-campaigns`; este skill deja la vitrina lista para que conviertan. No promete jugadores: el plan dice qué se prueba y cómo se mide.
 - No inventa datos de PTR o CTR: se leen de Creator Analytics después del lanzamiento.

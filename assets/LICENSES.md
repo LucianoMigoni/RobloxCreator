@@ -58,3 +58,8 @@ Reglas:
 | kenney-voiceover-pack-fighter | Kenney, paquete "voiceover-pack-fighter" | CC0 1.0 (dominio público) | sí | Kenney (www.kenney.nl) | https://kenney.nl/assets/voiceover-pack-fighter | 2026-10-28 |
 | kenney-sci-fi-sounds | Kenney, paquete "sci-fi-sounds" | CC0 1.0 (dominio público) | sí | Kenney (www.kenney.nl) | https://kenney.nl/assets/sci-fi-sounds | 2026-10-28 |
 | roblox-music-library | Creator Store de Roblox, música de APMOfficial y DistrokidOfficial | Música con licencia de Roblox para experiencias | sí, dentro de Roblox | APM Music / DistroKid | https://create.roblox.com/store/audio | 2026-10-28 |
+| font-luckiest-guy | Google Fonts | Apache License 2.0 (texto en LICENSE.txt junto al archivo) | sí | Astigmatic (Brian J. Bonislawsky) | https://fonts.google.com/specimen/Luckiest+Guy | 2026-10-28 |
+| font-lilita-one | Google Fonts | SIL Open Font License 1.1 (texto en OFL.txt junto al archivo) | sí | Juan Montoreano | https://fonts.google.com/specimen/Lilita+One | 2026-10-28 |
+| font-titan-one | Google Fonts | SIL Open Font License 1.1 (texto en OFL.txt junto al archivo) | sí | Rodrigo Fuenzalida | https://fonts.google.com/specimen/Titan+One | 2026-10-28 |
+| font-bangers | Google Fonts | SIL Open Font License 1.1 (texto en OFL.txt junto al archivo) | sí | Vernon Adams | https://fonts.google.com/specimen/Bangers | 2026-10-28 |
+| font-fredoka | Google Fonts | SIL Open Font License 1.1 (texto en OFL.txt junto al archivo) | sí | Milena Brandão, Hafontia | https://fonts.google.com/specimen/Fredoka | 2026-10-28 |

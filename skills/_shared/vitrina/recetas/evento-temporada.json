@@ -1,0 +1,15 @@
+{
+  "_receta": "Update de temporada: el héroe con la decoración del evento (calabazas, nieve) y la etiqueta UPDATE. Se activa como una miniatura más en la personalización cuando sale el update.",
+  "_valores": "hero = criatura o huevo del evento, prop = decoración (jack_o_lantern.png), label = UPDATE / HALLOWEEN",
+  "kind": "thumbnail",
+  "background": {"gradient": ["#1b0b3a", "#ff7a00"], "angle": 90},
+  "rays": {"center": [0.5, 0.5], "count": 18, "color": "#ffd28a", "opacity": 0.12},
+  "layers": [
+    {"type": "image", "path": "{{prop}}", "x": 0.16, "y": 0.68, "height": 0.36, "rotate": 8},
+    {"type": "image", "path": "{{prop}}", "x": 0.86, "y": 0.66, "height": 0.3, "flip": true, "rotate": -6},
+    {"type": "image", "path": "{{hero}}", "x": 0.5, "y": 0.55, "height": 0.66,
+     "glow": {"color": "#ffb000", "radius": 0.08, "opacity": 0.9}, "outline": {"color": "#ffffff", "width": 0.015}},
+    {"type": "text", "text": "{{label}}", "font": "bangers", "size": 0.13, "x": 0.5, "y": 0.12, "fill": {"gradient": ["#ffe36b", "#ff7a00"], "angle": 90}}
+  ],
+  "vignette": 0.3
+}
