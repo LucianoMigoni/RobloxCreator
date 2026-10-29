@@ -1,0 +1,320 @@
+{
+ "pack": "hit-icons",
+ "kind": "icon",
+ "count": 45,
+ "source": "IA: GPT Image 2.5 (Higgsfield, plan Plus) con una referencia de estilo propia; cortados con tools/iconsheet.py",
+ "license": "propio (generado con IA)",
+ "author": "RobloxCreator",
+ "created": "2026-10-29",
+ "style": "Estilo HUD de los hits: volumen brillante, contorno oscuro grueso, colores saturados, fondo transparente, 512×512",
+ "notes": "Para botones del HUD, tienda y Game Passes. Subir con tools/roblox_upload.py y usar en ImageLabel/ImageButton. Para hacer más del mismo estilo: skills/_shared/iconos/README.md.",
+ "sheets": [
+  {
+   "set": "A",
+   "group": "Monedas y premios",
+   "sheet": "gpt-setA.png",
+   "sha256": "e0b7ae37b7857af8dfbb977ebd774fdf1fd28c37ecccc31b132ad5a67a9bc5c2",
+   "grid": "3x3"
+  },
+  {
+   "set": "B",
+   "group": "Botones de menú",
+   "sheet": "gpt-setB.png",
+   "sha256": "47b7310c1d37018ce0e374069f020d326ca84c067fc8bc2e3d1720cb142c6581",
+   "grid": "3x3"
+  },
+  {
+   "set": "C",
+   "group": "Boosts y Game Passes",
+   "sheet": "gpt-setC.png",
+   "sha256": "1aca55dfc0be7dde5d9d4c39366b5e8a70495edbcd6f01837120b4e2d673f400",
+   "grid": "3x3"
+  },
+  {
+   "set": "D",
+   "group": "Sistemas",
+   "sheet": "gpt-setD.png",
+   "sha256": "4d962f76e8906dabbf8263a956cacdc984d2b587a164b8c881071c33e99799b8",
+   "grid": "3x3"
+  },
+  {
+   "set": "E",
+   "group": "Huevos por rareza",
+   "sheet": "gpt-setE.png",
+   "sha256": "c07bd557e70c7ef9a3b56c3f66c61686439054d1eda96707e26d5f7d058f9df4",
+   "grid": "3x3"
+  }
+ ],
+ "items": [
+  {
+   "name": "coins",
+   "file": "coins.png",
+   "set": "A",
+   "group": "Monedas y premios"
+  },
+  {
+   "name": "cash",
+   "file": "cash.png",
+   "set": "A",
+   "group": "Monedas y premios"
+  },
+  {
+   "name": "gem",
+   "file": "gem.png",
+   "set": "A",
+   "group": "Monedas y premios"
+  },
+  {
+   "name": "gift",
+   "file": "gift.png",
+   "set": "A",
+   "group": "Monedas y premios"
+  },
+  {
+   "name": "chest",
+   "file": "chest.png",
+   "set": "A",
+   "group": "Monedas y premios"
+  },
+  {
+   "name": "trophy",
+   "file": "trophy.png",
+   "set": "A",
+   "group": "Monedas y premios"
+  },
+  {
+   "name": "egg_gold",
+   "file": "egg_gold.png",
+   "set": "A",
+   "group": "Monedas y premios"
+  },
+  {
+   "name": "crown",
+   "file": "crown.png",
+   "set": "A",
+   "group": "Monedas y premios"
+  },
+  {
+   "name": "star",
+   "file": "star.png",
+   "set": "A",
+   "group": "Monedas y premios"
+  },
+  {
+   "name": "shop",
+   "file": "shop.png",
+   "set": "B",
+   "group": "Botones de menú"
+  },
+  {
+   "name": "index",
+   "file": "index.png",
+   "set": "B",
+   "group": "Botones de menú"
+  },
+  {
+   "name": "rebirth",
+   "file": "rebirth.png",
+   "set": "B",
+   "group": "Botones de menú"
+  },
+  {
+   "name": "quests",
+   "file": "quests.png",
+   "set": "B",
+   "group": "Botones de menú"
+  },
+  {
+   "name": "daily",
+   "file": "daily.png",
+   "set": "B",
+   "group": "Botones de menú"
+  },
+  {
+   "name": "spin",
+   "file": "spin.png",
+   "set": "B",
+   "group": "Botones de menú"
+  },
+  {
+   "name": "codes",
+   "file": "codes.png",
+   "set": "B",
+   "group": "Botones de menú"
+  },
+  {
+   "name": "settings",
+   "file": "settings.png",
+   "set": "B",
+   "group": "Botones de menú"
+  },
+  {
+   "name": "teleport",
+   "file": "teleport.png",
+   "set": "B",
+   "group": "Botones de menú"
+  },
+  {
+   "name": "speed",
+   "file": "speed.png",
+   "set": "C",
+   "group": "Boosts y Game Passes"
+  },
+  {
+   "name": "luck",
+   "file": "luck.png",
+   "set": "C",
+   "group": "Boosts y Game Passes"
+  },
+  {
+   "name": "money_boost",
+   "file": "money_boost.png",
+   "set": "C",
+   "group": "Boosts y Game Passes"
+  },
+  {
+   "name": "strength",
+   "file": "strength.png",
+   "set": "C",
+   "group": "Boosts y Game Passes"
+  },
+  {
+   "name": "magnet",
+   "file": "magnet.png",
+   "set": "C",
+   "group": "Boosts y Game Passes"
+  },
+  {
+   "name": "timer",
+   "file": "timer.png",
+   "set": "C",
+   "group": "Boosts y Game Passes"
+  },
+  {
+   "name": "friends",
+   "file": "friends.png",
+   "set": "C",
+   "group": "Boosts y Game Passes"
+  },
+  {
+   "name": "shield",
+   "file": "shield.png",
+   "set": "C",
+   "group": "Boosts y Game Passes"
+  },
+  {
+   "name": "lock",
+   "file": "lock.png",
+   "set": "C",
+   "group": "Boosts y Game Passes"
+  },
+  {
+   "name": "inventory",
+   "file": "inventory.png",
+   "set": "D",
+   "group": "Sistemas"
+  },
+  {
+   "name": "pets",
+   "file": "pets.png",
+   "set": "D",
+   "group": "Sistemas"
+  },
+  {
+   "name": "base",
+   "file": "base.png",
+   "set": "D",
+   "group": "Sistemas"
+  },
+  {
+   "name": "map",
+   "file": "map.png",
+   "set": "D",
+   "group": "Sistemas"
+  },
+  {
+   "name": "potion",
+   "file": "potion.png",
+   "set": "D",
+   "group": "Sistemas"
+  },
+  {
+   "name": "battle",
+   "file": "battle.png",
+   "set": "D",
+   "group": "Sistemas"
+  },
+  {
+   "name": "fishing",
+   "file": "fishing.png",
+   "set": "D",
+   "group": "Sistemas"
+  },
+  {
+   "name": "search",
+   "file": "search.png",
+   "set": "D",
+   "group": "Sistemas"
+  },
+  {
+   "name": "notifications",
+   "file": "notifications.png",
+   "set": "D",
+   "group": "Sistemas"
+  },
+  {
+   "name": "egg_common",
+   "file": "egg_common.png",
+   "set": "E",
+   "group": "Huevos por rareza"
+  },
+  {
+   "name": "egg_uncommon",
+   "file": "egg_uncommon.png",
+   "set": "E",
+   "group": "Huevos por rareza"
+  },
+  {
+   "name": "egg_rare",
+   "file": "egg_rare.png",
+   "set": "E",
+   "group": "Huevos por rareza"
+  },
+  {
+   "name": "egg_epic",
+   "file": "egg_epic.png",
+   "set": "E",
+   "group": "Huevos por rareza"
+  },
+  {
+   "name": "egg_legendary",
+   "file": "egg_legendary.png",
+   "set": "E",
+   "group": "Huevos por rareza"
+  },
+  {
+   "name": "egg_mythic",
+   "file": "egg_mythic.png",
+   "set": "E",
+   "group": "Huevos por rareza"
+  },
+  {
+   "name": "egg_secret",
+   "file": "egg_secret.png",
+   "set": "E",
+   "group": "Huevos por rareza"
+  },
+  {
+   "name": "egg_halloween",
+   "file": "egg_halloween.png",
+   "set": "E",
+   "group": "Huevos por rareza"
+  },
+  {
+   "name": "egg_winter",
+   "file": "egg_winter.png",
+   "set": "E",
+   "group": "Huevos por rareza"
+  }
+ ]
+}

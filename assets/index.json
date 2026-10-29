@@ -7,7 +7,7 @@
     "tags": "{ style: [...], genre: [...], theme: [...] }",
     "polycount": "int, obligatorio si type=model3d (triángulos)",
     "robloxAssetId": "string con el ID si ya se subió a Roblox, si no null",
-    "source": "blender-generated | studio-generated | creator-store | user | third-party",
+    "source": "blender-generated | studio-generated | ai-generated | code-generated | creator-store | user | third-party",
     "sourceUrl": "URL de origen o null",
     "license": "nombre de la licencia (ej. 'CC0-1.0', 'propio', 'Roblox Creator Store')",
     "commercialUse": "bool: true solo si la licencia permite uso en juegos monetizados",
@@ -1424,6 +1424,141 @@
       "commercialUse": true,
       "author": "Milena Brandão, Hafontia",
       "notes": "Redonda y amable (variable, usar Bold): subtítulos y textos de apoyo. Para miniaturas, íconos y anuncios (tools/thumbs.py). En el juego se usan las fuentes de Roblox (Enum.Font / Font.new)."
+    },
+    {
+      "id": "hit-icons",
+      "path": "ui/hit-icons",
+      "type": "pack",
+      "packType": "icon",
+      "count": 45,
+      "tags": {
+        "style": [
+          "3d",
+          "glossy",
+          "hit",
+          "cartoon"
+        ],
+        "genre": [
+          "any",
+          "simulation",
+          "tycoon"
+        ],
+        "theme": [
+          "icon",
+          "hud",
+          "button",
+          "currency",
+          "egg",
+          "boost",
+          "gamepass"
+        ]
+      },
+      "robloxAssetId": null,
+      "source": "ai-generated",
+      "sourceUrl": null,
+      "license": "propio (IA, Higgsfield Plus)",
+      "commercialUse": true,
+      "author": "RobloxCreator",
+      "notes": "45 íconos 512×512 con fondo transparente, estilo HUD de los hits (reemplazan a Fluent Emoji en HUD y tienda). Monedas, botones de menú, boosts, sistemas y 9 huevos por rareza. Detalle en manifest.json; para hacer más del mismo estilo: skills/_shared/iconos/README.md."
+    },
+    {
+      "id": "hit-vfx",
+      "path": "vfx/hit",
+      "type": "pack",
+      "packType": "image",
+      "count": 20,
+      "tags": {
+        "style": [
+          "cartoon",
+          "hit",
+          "glow"
+        ],
+        "genre": [
+          "any"
+        ],
+        "theme": [
+          "particle",
+          "sparkle",
+          "beam",
+          "trail",
+          "flipbook",
+          "vfx"
+        ]
+      },
+      "robloxAssetId": null,
+      "source": "code-generated",
+      "sourceUrl": null,
+      "license": "propio",
+      "commercialUse": true,
+      "author": "RobloxCreator",
+      "notes": "Texturas para ParticleEmitter, Beam y Trail hechas con tools/vfx_textures.py (destellos, brillos, ondas, rayos, confeti y humo en flipbook). Blancas para teñir con Color; uso sugerido de cada una en manifest.json."
+    },
+    {
+      "id": "hit-sfx",
+      "path": "audio/hit-sfx",
+      "type": "pack",
+      "packType": "sound",
+      "count": 48,
+      "tags": {
+        "style": [
+          "cartoon",
+          "hit"
+        ],
+        "genre": [
+          "any",
+          "simulation",
+          "tycoon"
+        ],
+        "theme": [
+          "coin",
+          "purchase",
+          "ui",
+          "reveal",
+          "level-up",
+          "spin",
+          "rebirth",
+          "egg"
+        ]
+      },
+      "robloxAssetId": null,
+      "source": "ai-generated",
+      "sourceUrl": null,
+      "license": "ElevenLabs (según el plan del workspace)",
+      "commercialUse": false,
+      "author": "RobloxCreator (generado con ElevenLabs)",
+      "notes": "12 sonidos con 4 tomas (A-D) cada uno. commercialUse false hasta confirmar que el workspace de ElevenLabs tenía plan pago al generarlos; si no, regenerarlos con plan pago. Elegir una toma por sonido."
+    },
+    {
+      "id": "hit-voices",
+      "path": "audio/hit-voices",
+      "type": "pack",
+      "packType": "sound",
+      "count": 20,
+      "tags": {
+        "style": [
+          "cartoon",
+          "hit",
+          "announcer"
+        ],
+        "genre": [
+          "any"
+        ],
+        "theme": [
+          "voice",
+          "announcer",
+          "rarity",
+          "rebirth",
+          "level-up",
+          "jackpot"
+        ]
+      },
+      "robloxAssetId": null,
+      "source": "ai-generated",
+      "sourceUrl": null,
+      "license": "propio (IA, Higgsfield Plus)",
+      "commercialUse": true,
+      "author": "RobloxCreator",
+      "notes": "Anuncios en inglés (LEGENDARY!, LEVEL UP!, JACKPOT!...) en dos voces: grave y caricatura. Volver a verificar los términos de Higgsfield antes de publicar el primer juego."
     }
   ]
 }

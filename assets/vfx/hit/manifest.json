@@ -1,0 +1,211 @@
+{
+ "pack": "hit-vfx",
+ "kind": "image",
+ "source": "tools/vfx_textures.py",
+ "license": "propio",
+ "author": "RobloxCreator",
+ "count": 20,
+ "notes": "Blancas o grises para teñir con ParticleEmitter.Color (salvo confetti_4x4, que trae color). Subir con tools/roblox_upload.py y usar el id en Texture.",
+ "items": [
+  {
+   "name": "sparkle",
+   "file": "sparkle.png",
+   "size": [
+    512,
+    512
+   ],
+   "use": "ParticleEmitter. El destello de todo: premios, rarezas, monedas. LightEmission 1, rotación al azar.",
+   "kb": 28
+  },
+  {
+   "name": "sparkle_soft",
+   "file": "sparkle_soft.png",
+   "size": [
+    512,
+    512
+   ],
+   "use": "ParticleEmitter. Destello sin rayos para estelas mágicas y auras.",
+   "kb": 27
+  },
+  {
+   "name": "twinkle_4x4",
+   "file": "twinkle_4x4.png",
+   "size": [
+    1024,
+    1024
+   ],
+   "use": "ParticleEmitter con FlipbookLayout Grid4x4 y FlipbookMode OneShot: el destello aparece, gira y se apaga.",
+   "kb": 210
+  },
+  {
+   "name": "star",
+   "file": "star.png",
+   "size": [
+    512,
+    512
+   ],
+   "use": "ParticleEmitter. Estrella con volumen para ráfagas de recompensa y subidas de nivel.",
+   "kb": 50
+  },
+  {
+   "name": "glow",
+   "file": "glow.png",
+   "size": [
+    512,
+    512
+   ],
+   "use": "ParticleEmitter (o BillboardGui). Brillo suave detrás de ítems, auras de rareza.",
+   "kb": 18
+  },
+  {
+   "name": "glow_core",
+   "file": "glow_core.png",
+   "size": [
+    512,
+    512
+   ],
+   "use": "ParticleEmitter. Brillo con centro intenso: orbes, chispas grandes.",
+   "kb": 15
+  },
+  {
+   "name": "ring",
+   "file": "ring.png",
+   "size": [
+    512,
+    512
+   ],
+   "use": "ParticleEmitter con Size creciente y Transparency que sube: onda expansiva de huevo, renacer o compra.",
+   "kb": 51
+  },
+  {
+   "name": "ring_soft",
+   "file": "ring_soft.png",
+   "size": [
+    512,
+    512
+   ],
+   "use": "ParticleEmitter. Onda gruesa y suave para auras y zonas.",
+   "kb": 51
+  },
+  {
+   "name": "rays",
+   "file": "rays.png",
+   "size": [
+    512,
+    512
+   ],
+   "use": "ParticleEmitter con RotSpeed lento (o ImageLabel en UI): rayos detrás del premio.",
+   "kb": 82
+  },
+  {
+   "name": "rays_thin",
+   "file": "rays_thin.png",
+   "size": [
+    512,
+    512
+   ],
+   "use": "ParticleEmitter. Estallido de rayos finos para revelaciones SECRET.",
+   "kb": 122
+  },
+  {
+   "name": "beam",
+   "file": "beam.png",
+   "size": [
+    512,
+    128
+   ],
+   "use": "Beam (textura a lo largo): pilares de luz de rareza, rayos entre objetos.",
+   "kb": 1
+  },
+  {
+   "name": "trail",
+   "file": "trail.png",
+   "size": [
+    512,
+    64
+   ],
+   "use": "Trail: estela de velocidad detrás del avatar o de un ítem que vuela.",
+   "kb": 3
+  },
+  {
+   "name": "smoke_2x2",
+   "file": "smoke_2x2.png",
+   "size": [
+    1024,
+    1024
+   ],
+   "use": "ParticleEmitter con FlipbookLayout Grid2x2, FlipbookStartRandom y FlipbookFramerate 0: polvo al correr, puf al aparecer.",
+   "kb": 120
+  },
+  {
+   "name": "confetti_4x4",
+   "file": "confetti_4x4.png",
+   "size": [
+    1024,
+    1024
+   ],
+   "use": "ParticleEmitter con FlipbookLayout Grid4x4, FlipbookStartRandom y FlipbookFramerate 0: confeti de 4 formas y 4 colores. Color blanco (ya trae color).",
+   "kb": 128
+  },
+  {
+   "name": "heart",
+   "file": "heart.png",
+   "size": [
+    512,
+    512
+   ],
+   "use": "ParticleEmitter. Corazones para likes, regalos y mascotas.",
+   "kb": 46
+  },
+  {
+   "name": "bubble",
+   "file": "bubble.png",
+   "size": [
+    512,
+    512
+   ],
+   "use": "ParticleEmitter. Burbujas para agua, pesca y pociones.",
+   "kb": 32
+  },
+  {
+   "name": "bolt",
+   "file": "bolt.png",
+   "size": [
+    512,
+    512
+   ],
+   "use": "ParticleEmitter. Rayo para boosts de velocidad y golpes.",
+   "kb": 46
+  },
+  {
+   "name": "swirl",
+   "file": "swirl.png",
+   "size": [
+    512,
+    512
+   ],
+   "use": "ParticleEmitter con RotSpeed: remolino mágico para renacer, fusión o portal.",
+   "kb": 46
+  },
+  {
+   "name": "dust",
+   "file": "dust.png",
+   "size": [
+    128,
+    128
+   ],
+   "use": "ParticleEmitter. Punto suave chico para chispitas y polvo fino.",
+   "kb": 5
+  },
+  {
+   "name": "glint",
+   "file": "glint.png",
+   "size": [
+    512,
+    512
+   ],
+   "use": "ParticleEmitter (una partícula, vida corta): brillo que cruza un ítem 'shiny'.",
+   "kb": 21
+  }
+ ]
+}

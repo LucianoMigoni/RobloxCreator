@@ -198,7 +198,7 @@ else { Write-Info 'ROBLOX_ADS_API_KEY no esta definida: hace falta solo para cre
 # Miniaturas, icono y anuncios con IA: alcanza con una de las dos claves.
 $imageKeys = @('GEMINI_API_KEY', 'OPENAI_API_KEY') | Where-Object { Test-EnvVar $_ }
 if ($imageKeys) { Write-Ok ("imagenes con IA: " + ($imageKeys -join ', ')) }
-else { Write-Missing 'falta GEMINI_API_KEY u OPENAI_API_KEY para las miniaturas con IA (SETUP.md paso 8)' }
+else { Write-Missing 'falta OPENAI_API_KEY (y, para comparar miniaturas, GEMINI_API_KEY) para miniaturas e iconos con IA (SETUP.md paso 8)' }
 if (Test-Path (Join-Path $root 'tools\render3d\node_modules')) { Write-Ok 'render de modelos instalado (tools/render3d)' }
 else { Write-Info 'render de modelos sin instalar: cd tools/render3d; npm install; npx playwright install chromium (SETUP.md paso 8)' }
 

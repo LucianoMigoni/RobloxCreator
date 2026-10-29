@@ -25,15 +25,27 @@ Detalle y fuentes:
   1. Las fórmulas que hoy están arriba en los Charts, con un giro propio.
   2. Ideas de juegos de fuera de Roblox adaptadas al formato hit, como "la aguja en un pajar" convertida en *Search For The Needle*.
 
-  En los dos casos: **adaptar, nunca clonar**. Mecánica, criaturas, arte y título propios (Roblox baja la exposición de los juegos "no únicos").
-- **Inglés e internacional:** todo lo que ve el jugador está en inglés, con traducción automática de Roblox. Docs y equipo en español.
+  En los dos casos se copia el diseño de los hits sin culpa (mecánicas, sistemas, HUD, monetización, fórmula del título) y se hace propio lo que tiene dueño: criaturas, arte, sonidos, nombres y miniaturas (sección 2). Roblox baja la exposición de los juegos "no únicos".
+- **Inglés, internacional, con foco en EE. UU.:** todo lo que ve el jugador está en inglés, con traducción automática de Roblox. El público es de todo el mundo, pero **el dinero está en EE. UU.**:
+  - inglés de EE. UU. y voces con acento estadounidense;
+  - eventos y updates en el horario pico de EE. UU.;
+  - campañas que arrancan por EE. UU.;
+  - Charts mirados en "Todas las ubicaciones" y en EE. UU.
+
+  Docs y equipo en español.
 - **Móvil primero:** la mayoría juega en el teléfono. Teléfono base de QA: Samsung Galaxy A06.
 
 ## 2. Reglas de oro (todo juego las cumple)
 
 **Por encima de todo, el máximo estándar posible.** Cada pieza (imagen, ícono, sonido, efecto, mapa, UI) se pone al lado de la de los hits. Se elige la más llamativa, la que más hace entrar y la que más vende. Si no está al nivel de un hit, no está terminada.
 
-**Parecerse a los hits sin copiarlos.** Se usa todo lo que usan los hits: tácticas, mecánicas, estructura, ritmo, monetización y nivel de terminación. Lo propio es el arte, las criaturas, los nombres y el giro del concepto. Nunca una copia literal: Roblox recomienda menos los juegos "no únicos" y un reclamo de copyright los baja.
+**Copiar de los hits todo lo que se puede copiar.** Se copia sin culpa:
+- mecánicas, loop y sistemas;
+- layout del HUD y de los menús;
+- monetización, ritmo y tácticas de retención;
+- la fórmula del título ("Steal a ___") y el género entero.
+
+Es lo que hacen los hits entre ellos. Lo que tiene dueño no se copia literal: arte, modelos, íconos, sonidos, música, personajes, nombres, marcas y miniaturas. Eso se hace propio, al mismo nivel o mejor. Copiarlo trae un reclamo de copyright (DMCA), strikes en la cuenta y la baja del juego, y Home recomienda menos los juegos "no únicos".
 
 1. **Primer minuto:**
    - Algo bueno pasa en los primeros 10 s.
@@ -91,8 +103,17 @@ Referencia completa con capturas de los hits en `hits-2026.md` §3.7. Lo que lle
 - **Catálogo** (`assets/index.json`, `python assets/catalog.py find <palabra>`):
   - Miles de modelos 3D low-poly CC0, 127 de ellos animados.
   - Sonidos de UI, monedas, voces de anunciador ("level up", "you win"), 249 SFX de Roblox y 497 temas de música con licencia.
-  - Partículas y 179 íconos 3D (Fluent Emoji). El equipo los vio "muy emoji" (2026-10-29): se reemplazan por íconos y partículas estilo hit (`team/tareas.md`). Mientras tanto, solo como relleno de prueba.
-- **Generar lo que falta:** la criatura estrella con Meshy y la terminación en Blender (`conectores.md`). Todo asset nuevo se registra con su licencia en el mismo cambio.
+- **Estilo hit propio (2026-10-29),** reemplaza a los emojis 3D de Fluent, que quedan solo como relleno de prueba:
+  - `hit-icons`: 45 íconos de HUD, tienda, boosts y huevos. Para hacer más del mismo estilo: `skills/_shared/iconos/README.md`.
+  - `hit-vfx`: 20 texturas de partículas, beams y trails hechas con `tools/vfx_textures.py`.
+  - `hit-sfx`: 12 efectos con 4 tomas cada uno, hechos con ElevenLabs. Se publican solo con plan pago confirmado.
+  - `hit-voices`: 20 anuncios en inglés ("LEGENDARY!", "LEVEL UP!") en voz grave y voz caricatura.
+- **Generar lo que falta** (herramientas elegidas en `conectores.md`, "Qué usamos"):
+  - la criatura estrella: imagen con IA → Meshy → Blender;
+  - imágenes e íconos: GPT Image con `tools/imagegen.py`;
+  - sonidos y voces: ElevenLabs.
+
+  Todo asset nuevo se registra con su licencia en el mismo cambio.
 - **Plantilla:** `template/` trae la economía, la retención, la tienda, los boosts y la UI estilo hit. Cada juego copia la plantilla y elige su kit de género.
 
 ## 6. Monetización
@@ -223,4 +244,6 @@ Para entender la intención detrás de cada regla:
   - Las miniaturas estaban malas al lado de las de los hits: investigar cómo hacerlas bien, quizá con ChatGPT. Respuesta: IA con referencias del juego (`vitrina-hits.md` §6).
   - Los íconos y las partículas se ven "muy emojis 3D": copiar los de los hits. Revisar también los sonidos y mandarle los mejores para opinar.
   - "Buscar siempre el mayor estándar de calidad posible, enfocado en lo que buscamos: lo más cash grab, llamativo y que la gente entre." Es la primera regla de la sección 2.
-  - "Que se asemeje a los top hits, sin ser copias literales, pero que use todo lo que usan ellos en tácticas, mecánicas y estándares." Es la segunda.
+  - "Que se asemeje a los top hits, sin ser copias literales, pero que use todo lo que usan ellos en tácticas, mecánicas y estándares", y enseguida: "no necesariamente evitando copiarlos". Es la segunda regla: se copia el diseño entero, no los assets con dueño.
+  - "Apuntamos a público internacional, en USA está el dinero": inglés siempre, también en las voces (sección 1).
+  - Herramientas: preguntó por Meshy, ForgeGUI, Blender y ChatGPT. Quedó: API de OpenAI para imágenes, Meshy directo y Blender para 3D, ElevenLabs para sonidos y voces, ForgeGUI no (`conectores.md`, "Qué usamos").

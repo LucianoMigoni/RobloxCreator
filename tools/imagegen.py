@@ -1,4 +1,4 @@
-"""Imágenes de IA para la vitrina (miniaturas, ícono y anuncios) desde una receta y las referencias del juego.
+"""Imágenes de IA para la vitrina (miniaturas, ícono y anuncios) y hojas de íconos del HUD, desde una receta.
 
   python tools/imagegen.py prompt receta.json [--set clave=valor ...] [--ref render.png ...] [--avatar AVATAR_GIRL]
   python tools/imagegen.py generate receta.json --out carpeta [--provider gemini|openai] [--model ID] [--n 4]
@@ -16,13 +16,17 @@
 Las referencias son renders o capturas del juego: así la imagen muestra lo que hay adentro (regla
 oficial; skills/_shared/vitrina-hits.md §2 y §6).
 
+Hojas de íconos (recetas "kind": "iconset" de skills/_shared/iconos/recetas): 9 íconos en 3x3 con el
+estilo HUD de los hits; la referencia es skills/_shared/iconos/referencia-estilo.png. Con OpenAI salen
+con fondo transparente. Después se cortan con tools/iconsheet.py slice.
+
 Proveedores (documentación oficial revisada el 2026-10-29):
-- gemini (por defecto): Nano Banana con la Interactions API (POST /v1beta/interactions).
-  Modelos: gemini-3-pro-image (Nano Banana Pro, el que mejor salió en la prueba) y
-  gemini-nano-banana-2.1 (más barato). Hasta 14 referencias. Clave: GEMINI_API_KEY.
-- openai: GPT Image con /v1/images/generations, o /v1/images/edits si hay referencias.
-  Modelos: gpt-image-2.5-flare, gpt-image-2.5-sunburst (más preciso al editar) y gpt-image-2.
-  Clave: OPENAI_API_KEY.
+- openai (por defecto): GPT Image con /v1/images/generations, o /v1/images/edits si hay referencias.
+  Modelos: gpt-image-2.5-flare (el que mejor salió en las recetas), gpt-image-2.5-sunburst (más
+  preciso al editar) y gpt-image-2. Clave: OPENAI_API_KEY.
+- gemini: Nano Banana con la Interactions API (POST /v1beta/interactions), para comparar o para
+  respetar un modelo exacto. Modelos: gemini-3-pro-image (Nano Banana Pro) y gemini-nano-banana-2.1
+  (más barato). Hasta 14 referencias. Clave: GEMINI_API_KEY.
 Las claves van solo en variables de entorno y nunca se imprimen.
 """
 import argparse
@@ -55,6 +59,7 @@ FORMATS = {
     "thumbnail": {"openai": "2560x1440", "aspect": "16:9"},
     "ad": {"openai": "2560x1440", "aspect": "16:9"},
     "icon": {"openai": "1536x1536", "aspect": "1:1"},
+    "iconset": {"openai": "1536x1536", "aspect": "1:1"},
 }
 GEMINI_SIZE = "2K"
 # USD por imagen de 2K en Gemini (pricing oficial del 2026-10-29).
@@ -94,6 +99,10 @@ def build_prompt(recipe: dict, values: dict, has_refs: bool, style: dict, avatar
     merged["AVATAR"] = style["avatars"][avatar]
     merged.update(recipe.get("_defaults", {}))
     merged.update(values)
+    if kind == "iconset":
+        block = style["iconset"]
+        parts = [block["style"]] + ([block["references"]] if has_refs else [])
+        return "\n\n".join(parts + [fill(recipe["ia"]["prompt"], merged), block["background"], block["negative"]])
     parts = [style["style"][kind]]
     if has_refs:
         parts.append(style["references"])
@@ -162,14 +171,17 @@ def http(url: str, headers: dict, body: bytes, content_type: str, attempts: int 
     raise GenError("sin respuesta")
 
 
-def openai_request(key: str, model: str, prompt: str, refs: list, size: str, quality: str, n: int) -> tuple:
+def openai_request(key: str, model: str, prompt: str, refs: list, size: str, quality: str, n: int,
+                   background: str = "auto") -> tuple:
     headers = {"Authorization": f"Bearer {key}"}
     if refs:
-        fields = {"model": model, "prompt": prompt, "size": size, "quality": quality, "n": str(n), "output_format": "png"}
+        fields = {"model": model, "prompt": prompt, "size": size, "quality": quality, "n": str(n), "output_format": "png",
+                  "background": background}
         files = [("image[]", name, mime, data) for name, mime, data in refs]
         body, ctype = multipart(fields, files)
         return f"{OPENAI_URL}/edits", headers, body, ctype
-    payload = {"model": model, "prompt": prompt, "size": size, "quality": quality, "n": n, "output_format": "png"}
+    payload = {"model": model, "prompt": prompt, "size": size, "quality": quality, "n": n, "output_format": "png",
+               "background": background}
     return f"{OPENAI_URL}/generations", headers, json.dumps(payload).encode("utf-8"), "application/json"
 
 
@@ -236,7 +248,7 @@ def cmd_generate(args, send=http, env=os.environ) -> int:
     recipe_path = Path(args.recipe)
     recipe = json.loads(recipe_path.read_text(encoding="utf-8"))
     kind = recipe.get("kind", "thumbnail")
-    provider = args.provider
+    provider = args.provider or "openai"
     model = args.model or PROVIDERS[provider]["model"]
     values = dict(v.split("=", 1) for v in args.set or [])
     try:
@@ -262,7 +274,9 @@ def cmd_generate(args, send=http, env=os.environ) -> int:
     images, usage = [], {}
     try:
         if provider == "openai":
-            url, headers, body, ctype = openai_request(key, model, prompt, refs, FORMATS[kind]["openai"], args.quality, args.n)
+            background = "transparent" if kind == "iconset" else "auto"
+            url, headers, body, ctype = openai_request(key, model, prompt, refs, FORMATS[kind]["openai"], args.quality,
+                                                       args.n, background)
             resp = send(url, headers, body, ctype)
             images, usage = openai_images(resp), resp.get("usage") or {}
         else:
@@ -295,7 +309,11 @@ def cmd_generate(args, send=http, env=os.environ) -> int:
         }
         path.with_suffix(path.suffix + ".json").write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
         print(f"  [ok] {path}")
-    print(f"  Siguiente: python tools/thumbs.py compose {recipe_path.as_posix()} --base <variante> --set ... --out <final>")
+    if kind == "iconset":
+        print(f"  Siguiente: python tools/iconsheet.py slice <hoja> --grid {recipe.get('grid', '3x3')} "
+              f"--names {','.join(recipe.get('names', []))} --out <carpeta>")
+    else:
+        print(f"  Siguiente: python tools/thumbs.py compose {recipe_path.as_posix()} --base <variante> --set ... --out <final>")
     return 0
 
 
@@ -324,11 +342,19 @@ def selftest() -> int:
         except GenError:
             pass
     # Las recetas del repo arman su prompt con valores de ejemplo.
-    for path in sorted((ROOT / "skills" / "_shared" / "vitrina" / "recetas").glob("*.json")):
+    shared = ROOT / "skills" / "_shared"
+    for path in sorted((shared / "vitrina" / "recetas").glob("*.json")) + sorted((shared / "iconos" / "recetas").glob("*.json")):
         r = json.loads(path.read_text(encoding="utf-8"))
         names = set(part.split("}}")[0] for part in r["ia"]["prompt"].split("{{")[1:]) - set(style["avatars"])
         build_prompt(r, {n: "x" for n in names}, False, style)
         assert FORMATS[r["kind"]]["aspect"] == r["ia"]["aspect"], path.name
+        if r["kind"] == "iconset":
+            rows, cols = (int(x) for x in r["grid"].split("x"))
+            assert len(r["names"]) == rows * cols == r["ia"]["prompt"].count(") "), path.name
+    icons = {"kind": "iconset", "grid": "3x3", "names": list("abcdefghi"), "ia": {"aspect": "1:1", "prompt": "Icons: 1) a coin."}}
+    sheet = build_prompt(icons, {}, True, style)
+    assert sheet.startswith(style["iconset"]["style"]) and style["iconset"]["references"] in sheet
+    assert sheet.endswith(style["iconset"]["negative"]) and style["light"] not in sheet
     body, ctype = multipart({"model": "m"}, [("image[]", "a.png", "image/png", b"PNG")], boundary="B")
     assert ctype == "multipart/form-data; boundary=B" and b'name="image[]"; filename="a.png"' in body
     assert openai_cost({"input_tokens": 1000, "input_tokens_details": {"text_tokens": 200, "image_tokens": 800},
@@ -372,6 +398,14 @@ def selftest() -> int:
         args = argparse.Namespace(provider="openai", n=1, **dict(base, out=str(tmp / "o2"), ref=[]))
         assert cmd_generate(args, send=fake, env={"OPENAI_API_KEY": "k"}) == 0
         assert sent[0][0] == f"{OPENAI_URL}/generations" and json.loads(sent[0][2])["quality"] == "medium"
+        assert json.loads(sent[0][2])["background"] == "auto"
+        # Hoja de íconos: fondo transparente en OpenAI.
+        sent.clear()
+        (tmp / "i.json").write_text(json.dumps(icons), encoding="utf-8")
+        args = argparse.Namespace(provider=None, n=1, **dict(base, recipe=str(tmp / "i.json"), out=str(tmp / "o3"), ref=[], set=[]))
+        assert cmd_generate(args, send=fake, env={"OPENAI_API_KEY": "k"}) == 0
+        payload = json.loads(sent[0][2])
+        assert payload["background"] == "transparent" and payload["size"] == "1536x1536"
         # Sin clave o por encima del tope no se llama a la API.
         sent.clear()
         assert cmd_generate(argparse.Namespace(provider="gemini", n=1, **base), send=fake, env={}) == 2
@@ -392,7 +426,7 @@ def main(argv=None) -> int:
         p.add_argument("--avatar", default="AVATAR", help="AVATAR, AVATAR_GIRL o AVATAR_NOOB (estilo-ia.json)")
         if name == "generate":
             p.add_argument("--out", required=True)
-            p.add_argument("--provider", choices=sorted(PROVIDERS), default="gemini")
+            p.add_argument("--provider", choices=sorted(PROVIDERS), help="openai (por defecto) o gemini")
             p.add_argument("--model")
             p.add_argument("--n", type=int, default=4)
             p.add_argument("--quality", default="medium", choices=["low", "medium", "high", "xhigh", "max"],

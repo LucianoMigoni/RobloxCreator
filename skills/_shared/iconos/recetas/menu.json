@@ -1,0 +1,20 @@
+{
+  "_que_es": "Botones de menú del HUD (set B). Hoja 3x3 de íconos estilo HUD de los hits: python tools/imagegen.py prompt skills/_shared/iconos/recetas/menu.json --ref skills/_shared/iconos/referencia-estilo.png",
+  "kind": "iconset",
+  "grid": "3x3",
+  "names": [
+    "shop",
+    "index",
+    "rebirth",
+    "quests",
+    "daily",
+    "spin",
+    "codes",
+    "settings",
+    "teleport"
+  ],
+  "ia": {
+    "aspect": "1:1",
+    "prompt": "Icons for the HUD buttons, left to right and top to bottom: 1) a small shop stall with a red-and-white striped awning, 2) an open book with a paw print on the page (collection index), 3) two thick green circular arrows forming a loop (rebirth), 4) a paper scroll with a big green check mark (quests), 5) a calendar page with a red ring binding and a gold star (daily rewards), 6) a colorful prize wheel with a red pointer (spin), 7) a purple ticket with a star (codes), 8) a silver gear with a blue center (settings), 9) a swirling purple portal (teleport)."
+  }
+}

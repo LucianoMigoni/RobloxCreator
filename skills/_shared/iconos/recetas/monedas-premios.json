@@ -1,0 +1,20 @@
+{
+  "_que_es": "Monedas, premios y tesoros (set A, el que dio la referencia de estilo). Hoja 3x3 de íconos estilo HUD de los hits: python tools/imagegen.py prompt skills/_shared/iconos/recetas/monedas-premios.json --ref skills/_shared/iconos/referencia-estilo.png",
+  "kind": "iconset",
+  "grid": "3x3",
+  "names": [
+    "coins",
+    "cash",
+    "gem",
+    "gift",
+    "chest",
+    "trophy",
+    "egg_gold",
+    "crown",
+    "star"
+  ],
+  "ia": {
+    "aspect": "1:1",
+    "prompt": "Icons, left to right and top to bottom: 1) a stack of three shiny gold coins with a star emblem, 2) a thick stack of green cash bills with a paper band, 3) a faceted bright blue diamond gem, 4) a gift box with a red ribbon and a big bow, 5) a wooden treasure chest overflowing with gold coins, 6) a golden trophy cup, 7) a spotted golden egg, 8) a royal golden crown with red and blue jewels, 9) a yellow five-point star."
+  }
+}

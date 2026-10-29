@@ -17,5 +17,12 @@
     "AVATAR": "a classic blocky Roblox avatar (R15 blocky body, cylinder head, smooth plastic shading, messy brown 'bacon' hair, black jacket over a blue t-shirt, dark pants, white sneakers) with an expressive Roblox-style cartoon face",
     "AVATAR_GIRL": "a classic blocky Roblox avatar girl (R15 blocky body, cylinder head, smooth plastic shading, long pink hair in two ponytails, white hoodie with a pastel rainbow, light blue jeans, white sneakers) with an expressive Roblox-style cartoon face",
     "AVATAR_NOOB": "the classic Roblox noob avatar (blocky body, yellow head and arms, blue torso, green legs, smooth plastic shading) with an expressive Roblox-style cartoon face"
+  },
+  "iconset": {
+    "_que_es": "Bloques para las hojas de íconos (recetas de skills/_shared/iconos/recetas). Con estos, GPT Image 2.5 hizo los 45 íconos de assets/ui/hit-icons el 2026-10-29.",
+    "style": "A 3x3 sprite sheet of nine separate game UI icons for a top Roblox game. Each icon is centered in its own invisible cell with a generous empty margin; all icons have the same size, the same slight three-quarter front view and exactly the same art style.\n\nStyle: polished mobile-game HUD icons like the ones in the most popular Roblox games: chunky cartoon shapes, a thick dark navy outline around every icon (about 4% of the icon size), very saturated colors, smooth gradient shading with a darker bottom side, a glossy white highlight on the upper left, a slight 3D bevel, crisp clean edges, readable at 48 pixels.",
+    "references": "Use the attached sheet only as the STYLE reference: match its exact art style (thick dark navy outline, very saturated colors, glossy white highlights, smooth gradient shading, slight 3D bevel, chunky cartoon shapes) but draw NEW icons.",
+    "background": "Transparent background (if transparency is not possible: a plain flat white background).",
+    "negative": "No text, no letters, no numbers, no labels, no grid lines, no frames, no shadows on the background."
   }
 }

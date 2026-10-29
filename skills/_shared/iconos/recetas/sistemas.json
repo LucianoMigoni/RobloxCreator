@@ -1,0 +1,20 @@
+{
+  "_que_es": "Sistemas del juego (set D). Hoja 3x3 de íconos estilo HUD de los hits: python tools/imagegen.py prompt skills/_shared/iconos/recetas/sistemas.json --ref skills/_shared/iconos/referencia-estilo.png",
+  "kind": "iconset",
+  "grid": "3x3",
+  "names": [
+    "inventory",
+    "pets",
+    "base",
+    "map",
+    "potion",
+    "battle",
+    "fishing",
+    "search",
+    "notifications"
+  ],
+  "ia": {
+    "aspect": "1:1",
+    "prompt": "Icons, left to right and top to bottom: 1) a brown backpack (inventory), 2) a pink pet paw print (pets), 3) a small house with a red roof (base), 4) a treasure map with a red X (map), 5) a round potion bottle with bubbling pink liquid (potion), 6) a cartoon sword with a blue hilt (battle), 7) a fishing rod with a hooked blue fish (fishing), 8) a magnifying glass (search), 9) a golden bell with a red notification dot (notifications)."
+  }
+}

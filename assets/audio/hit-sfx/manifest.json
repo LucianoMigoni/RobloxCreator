@@ -1,0 +1,396 @@
+{
+ "pack": "hit-sfx",
+ "kind": "sound",
+ "count": 48,
+ "source": "IA: ElevenLabs Sound Effects (eleven_text_to_sound_v2), conector de ElevenLabs, flow GPqig4Z805sqUdjeS1Rp",
+ "license": "ElevenLabs: uso comercial solo si el workspace tenía plan pago al generar",
+ "author": "RobloxCreator (generado con ElevenLabs)",
+ "created": "2026-10-29",
+ "notes": "12 sonidos con 4 tomas (A-D). Elegir una por sonido y borrar el resto. No publicar hasta confirmar el plan de ElevenLabs (commercialUse false en index.json).",
+ "items": [
+  {
+   "name": "coin_pickup_A",
+   "file": "coin_pickup_1.mp3",
+   "sound": "coin_pickup",
+   "take": "A",
+   "seconds": 0.8,
+   "prompt": "Bright cartoon coin pickup, single shiny metallic ding, crisp and satisfying, close-mic"
+  },
+  {
+   "name": "coin_pickup_B",
+   "file": "coin_pickup_2.mp3",
+   "sound": "coin_pickup",
+   "take": "B",
+   "seconds": 0.8,
+   "prompt": "Bright cartoon coin pickup, single shiny metallic ding, crisp and satisfying, close-mic"
+  },
+  {
+   "name": "coin_pickup_C",
+   "file": "coin_pickup_3.mp3",
+   "sound": "coin_pickup",
+   "take": "C",
+   "seconds": 0.8,
+   "prompt": "Bright cartoon coin pickup, single shiny metallic ding, crisp and satisfying, close-mic"
+  },
+  {
+   "name": "coin_pickup_D",
+   "file": "coin_pickup_4.mp3",
+   "sound": "coin_pickup",
+   "take": "D",
+   "seconds": 0.8,
+   "prompt": "Bright cartoon coin pickup, single shiny metallic ding, crisp and satisfying, close-mic"
+  },
+  {
+   "name": "cash_register_A",
+   "file": "cash_register_1.mp3",
+   "sound": "cash_register",
+   "take": "A",
+   "seconds": 1.48,
+   "prompt": "Cash register ka-ching with a bright bell and coins jingling, short and satisfying"
+  },
+  {
+   "name": "cash_register_B",
+   "file": "cash_register_2.mp3",
+   "sound": "cash_register",
+   "take": "B",
+   "seconds": 1.48,
+   "prompt": "Cash register ka-ching with a bright bell and coins jingling, short and satisfying"
+  },
+  {
+   "name": "cash_register_C",
+   "file": "cash_register_3.mp3",
+   "sound": "cash_register",
+   "take": "C",
+   "seconds": 1.48,
+   "prompt": "Cash register ka-ching with a bright bell and coins jingling, short and satisfying"
+  },
+  {
+   "name": "cash_register_D",
+   "file": "cash_register_4.mp3",
+   "sound": "cash_register",
+   "take": "D",
+   "seconds": 1.48,
+   "prompt": "Cash register ka-ching with a bright bell and coins jingling, short and satisfying"
+  },
+  {
+   "name": "coins_burst_A",
+   "file": "coins_burst_1.mp3",
+   "sound": "coins_burst",
+   "take": "A",
+   "seconds": 2,
+   "prompt": "Burst of many gold coins spilling and jingling onto a pile, cheerful and bright"
+  },
+  {
+   "name": "coins_burst_B",
+   "file": "coins_burst_2.mp3",
+   "sound": "coins_burst",
+   "take": "B",
+   "seconds": 2,
+   "prompt": "Burst of many gold coins spilling and jingling onto a pile, cheerful and bright"
+  },
+  {
+   "name": "coins_burst_C",
+   "file": "coins_burst_3.mp3",
+   "sound": "coins_burst",
+   "take": "C",
+   "seconds": 2,
+   "prompt": "Burst of many gold coins spilling and jingling onto a pile, cheerful and bright"
+  },
+  {
+   "name": "coins_burst_D",
+   "file": "coins_burst_4.mp3",
+   "sound": "coins_burst",
+   "take": "D",
+   "seconds": 2,
+   "prompt": "Burst of many gold coins spilling and jingling onto a pile, cheerful and bright"
+  },
+  {
+   "name": "button_pop_A",
+   "file": "button_pop_1.mp3",
+   "sound": "button_pop",
+   "take": "A",
+   "seconds": 0.48,
+   "prompt": "Soft bubbly UI button pop, short clean plastic click with a tiny bounce, mobile game menu"
+  },
+  {
+   "name": "button_pop_B",
+   "file": "button_pop_2.mp3",
+   "sound": "button_pop",
+   "take": "B",
+   "seconds": 0.48,
+   "prompt": "Soft bubbly UI button pop, short clean plastic click with a tiny bounce, mobile game menu"
+  },
+  {
+   "name": "button_pop_C",
+   "file": "button_pop_3.mp3",
+   "sound": "button_pop",
+   "take": "C",
+   "seconds": 0.48,
+   "prompt": "Soft bubbly UI button pop, short clean plastic click with a tiny bounce, mobile game menu"
+  },
+  {
+   "name": "button_pop_D",
+   "file": "button_pop_4.mp3",
+   "sound": "button_pop",
+   "take": "D",
+   "seconds": 0.48,
+   "prompt": "Soft bubbly UI button pop, short clean plastic click with a tiny bounce, mobile game menu"
+  },
+  {
+   "name": "purchase_success_A",
+   "file": "purchase_success_1.mp3",
+   "sound": "purchase_success",
+   "take": "A",
+   "seconds": 1.48,
+   "prompt": "Magical purchase success chime, bright rising arpeggio of bells with a sparkly shimmer tail"
+  },
+  {
+   "name": "purchase_success_B",
+   "file": "purchase_success_2.mp3",
+   "sound": "purchase_success",
+   "take": "B",
+   "seconds": 1.48,
+   "prompt": "Magical purchase success chime, bright rising arpeggio of bells with a sparkly shimmer tail"
+  },
+  {
+   "name": "purchase_success_C",
+   "file": "purchase_success_3.mp3",
+   "sound": "purchase_success",
+   "take": "C",
+   "seconds": 1.48,
+   "prompt": "Magical purchase success chime, bright rising arpeggio of bells with a sparkly shimmer tail"
+  },
+  {
+   "name": "purchase_success_D",
+   "file": "purchase_success_4.mp3",
+   "sound": "purchase_success",
+   "take": "D",
+   "seconds": 1.48,
+   "prompt": "Magical purchase success chime, bright rising arpeggio of bells with a sparkly shimmer tail"
+  },
+  {
+   "name": "level_up_A",
+   "file": "level_up_1.mp3",
+   "sound": "level_up",
+   "take": "A",
+   "seconds": 2,
+   "prompt": "Cheerful video game level up jingle, short triumphant brass and glockenspiel flourish"
+  },
+  {
+   "name": "level_up_B",
+   "file": "level_up_2.mp3",
+   "sound": "level_up",
+   "take": "B",
+   "seconds": 2,
+   "prompt": "Cheerful video game level up jingle, short triumphant brass and glockenspiel flourish"
+  },
+  {
+   "name": "level_up_C",
+   "file": "level_up_3.mp3",
+   "sound": "level_up",
+   "take": "C",
+   "seconds": 2,
+   "prompt": "Cheerful video game level up jingle, short triumphant brass and glockenspiel flourish"
+  },
+  {
+   "name": "level_up_D",
+   "file": "level_up_4.mp3",
+   "sound": "level_up",
+   "take": "D",
+   "seconds": 2,
+   "prompt": "Cheerful video game level up jingle, short triumphant brass and glockenspiel flourish"
+  },
+  {
+   "name": "egg_crack_A",
+   "file": "egg_crack_1.mp3",
+   "sound": "egg_crack",
+   "take": "A",
+   "seconds": 1.48,
+   "prompt": "Cartoon egg shell cracking open with a bright pop and a short magical sparkle shimmer"
+  },
+  {
+   "name": "egg_crack_B",
+   "file": "egg_crack_2.mp3",
+   "sound": "egg_crack",
+   "take": "B",
+   "seconds": 1.48,
+   "prompt": "Cartoon egg shell cracking open with a bright pop and a short magical sparkle shimmer"
+  },
+  {
+   "name": "egg_crack_C",
+   "file": "egg_crack_3.mp3",
+   "sound": "egg_crack",
+   "take": "C",
+   "seconds": 1.48,
+   "prompt": "Cartoon egg shell cracking open with a bright pop and a short magical sparkle shimmer"
+  },
+  {
+   "name": "egg_crack_D",
+   "file": "egg_crack_4.mp3",
+   "sound": "egg_crack",
+   "take": "D",
+   "seconds": 1.48,
+   "prompt": "Cartoon egg shell cracking open with a bright pop and a short magical sparkle shimmer"
+  },
+  {
+   "name": "rare_reveal_A",
+   "file": "rare_reveal_1.mp3",
+   "sound": "rare_reveal",
+   "take": "A",
+   "seconds": 2.48,
+   "prompt": "Rising magical whoosh building tension into a bright glittering shimmer burst, rare item reveal"
+  },
+  {
+   "name": "rare_reveal_B",
+   "file": "rare_reveal_2.mp3",
+   "sound": "rare_reveal",
+   "take": "B",
+   "seconds": 2.48,
+   "prompt": "Rising magical whoosh building tension into a bright glittering shimmer burst, rare item reveal"
+  },
+  {
+   "name": "rare_reveal_C",
+   "file": "rare_reveal_3.mp3",
+   "sound": "rare_reveal",
+   "take": "C",
+   "seconds": 2.48,
+   "prompt": "Rising magical whoosh building tension into a bright glittering shimmer burst, rare item reveal"
+  },
+  {
+   "name": "rare_reveal_D",
+   "file": "rare_reveal_4.mp3",
+   "sound": "rare_reveal",
+   "take": "D",
+   "seconds": 2.48,
+   "prompt": "Rising magical whoosh building tension into a bright glittering shimmer burst, rare item reveal"
+  },
+  {
+   "name": "legendary_reveal_A",
+   "file": "legendary_reveal_1.mp3",
+   "sound": "legendary_reveal",
+   "take": "A",
+   "seconds": 3,
+   "prompt": "Huge legendary reveal, deep cinematic boom followed by triumphant choir hit and glittering chimes"
+  },
+  {
+   "name": "legendary_reveal_B",
+   "file": "legendary_reveal_2.mp3",
+   "sound": "legendary_reveal",
+   "take": "B",
+   "seconds": 3,
+   "prompt": "Huge legendary reveal, deep cinematic boom followed by triumphant choir hit and glittering chimes"
+  },
+  {
+   "name": "legendary_reveal_C",
+   "file": "legendary_reveal_3.mp3",
+   "sound": "legendary_reveal",
+   "take": "C",
+   "seconds": 3,
+   "prompt": "Huge legendary reveal, deep cinematic boom followed by triumphant choir hit and glittering chimes"
+  },
+  {
+   "name": "legendary_reveal_D",
+   "file": "legendary_reveal_4.mp3",
+   "sound": "legendary_reveal",
+   "take": "D",
+   "seconds": 3,
+   "prompt": "Huge legendary reveal, deep cinematic boom followed by triumphant choir hit and glittering chimes"
+  },
+  {
+   "name": "spin_wheel_A",
+   "file": "spin_wheel_1.mp3",
+   "sound": "spin_wheel",
+   "take": "A",
+   "seconds": 4,
+   "prompt": "Prize wheel spinning with fast plastic ticking clicks that gradually slow down and stop"
+  },
+  {
+   "name": "spin_wheel_B",
+   "file": "spin_wheel_2.mp3",
+   "sound": "spin_wheel",
+   "take": "B",
+   "seconds": 4,
+   "prompt": "Prize wheel spinning with fast plastic ticking clicks that gradually slow down and stop"
+  },
+  {
+   "name": "spin_wheel_C",
+   "file": "spin_wheel_3.mp3",
+   "sound": "spin_wheel",
+   "take": "C",
+   "seconds": 4,
+   "prompt": "Prize wheel spinning with fast plastic ticking clicks that gradually slow down and stop"
+  },
+  {
+   "name": "spin_wheel_D",
+   "file": "spin_wheel_4.mp3",
+   "sound": "spin_wheel",
+   "take": "D",
+   "seconds": 4,
+   "prompt": "Prize wheel spinning with fast plastic ticking clicks that gradually slow down and stop"
+  },
+  {
+   "name": "rebirth_whoosh_A",
+   "file": "rebirth_whoosh_1.mp3",
+   "sound": "rebirth_whoosh",
+   "take": "A",
+   "seconds": 2,
+   "prompt": "Powerful magical energy whoosh rising fast into a bright shimmering power-up burst"
+  },
+  {
+   "name": "rebirth_whoosh_B",
+   "file": "rebirth_whoosh_2.mp3",
+   "sound": "rebirth_whoosh",
+   "take": "B",
+   "seconds": 2,
+   "prompt": "Powerful magical energy whoosh rising fast into a bright shimmering power-up burst"
+  },
+  {
+   "name": "rebirth_whoosh_C",
+   "file": "rebirth_whoosh_3.mp3",
+   "sound": "rebirth_whoosh",
+   "take": "C",
+   "seconds": 2,
+   "prompt": "Powerful magical energy whoosh rising fast into a bright shimmering power-up burst"
+  },
+  {
+   "name": "rebirth_whoosh_D",
+   "file": "rebirth_whoosh_4.mp3",
+   "sound": "rebirth_whoosh",
+   "take": "D",
+   "seconds": 2,
+   "prompt": "Powerful magical energy whoosh rising fast into a bright shimmering power-up burst"
+  },
+  {
+   "name": "error_buzz_A",
+   "file": "error_buzz_1.mp3",
+   "sound": "error_buzz",
+   "take": "A",
+   "seconds": 0.6,
+   "prompt": "Friendly cartoon error buzz, short low double beep, soft and not harsh"
+  },
+  {
+   "name": "error_buzz_B",
+   "file": "error_buzz_2.mp3",
+   "sound": "error_buzz",
+   "take": "B",
+   "seconds": 0.6,
+   "prompt": "Friendly cartoon error buzz, short low double beep, soft and not harsh"
+  },
+  {
+   "name": "error_buzz_C",
+   "file": "error_buzz_3.mp3",
+   "sound": "error_buzz",
+   "take": "C",
+   "seconds": 0.6,
+   "prompt": "Friendly cartoon error buzz, short low double beep, soft and not harsh"
+  },
+  {
+   "name": "error_buzz_D",
+   "file": "error_buzz_4.mp3",
+   "sound": "error_buzz",
+   "take": "D",
+   "seconds": 0.6,
+   "prompt": "Friendly cartoon error buzz, short low double beep, soft and not harsh"
+  }
+ ]
+}

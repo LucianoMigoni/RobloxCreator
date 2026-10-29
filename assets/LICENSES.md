@@ -4,6 +4,7 @@ Una fila por asset de `index.json`, mismo `id`. Un asset sin fila aquí no se us
 
 Reglas:
 - Generado por nosotros (Blender o Studio): licencia `propio`, uso comercial sí.
+- Generado con IA (`source: ai-generated`): anotar la herramienta y el plan con que se generó. Uso comercial solo si los términos de esa herramienta lo permiten en ese plan; si depende del plan y no está confirmado, `commercialUse: false`.
 - Creator Store: verificar los términos vigentes de Roblox para assets del Creator Store antes de usarlo; anotar creador y asset ID. No sacarlo de Roblox.
 - Terceros: copiar la licencia exacta y la URL. Si la licencia no permite uso comercial o no está clara: `commercialUse: false` y no usar en juegos publicados.
 - Nunca: iconos, logos, personajes o pantallas copiados de juegos existentes o marcas.
@@ -63,3 +64,7 @@ Reglas:
 | font-titan-one | Google Fonts | SIL Open Font License 1.1 (texto en OFL.txt junto al archivo) | sí | Rodrigo Fuenzalida | https://fonts.google.com/specimen/Titan+One | 2026-10-28 |
 | font-bangers | Google Fonts | SIL Open Font License 1.1 (texto en OFL.txt junto al archivo) | sí | Vernon Adams | https://fonts.google.com/specimen/Bangers | 2026-10-28 |
 | font-fredoka | Google Fonts | SIL Open Font License 1.1 (texto en OFL.txt junto al archivo) | sí | Milena Brandão, Hafontia | https://fonts.google.com/specimen/Fredoka | 2026-10-28 |
+| hit-icons | IA: GPT Image 2.5 en Higgsfield (plan Plus), con referencia de estilo propia; cortados con `tools/iconsheet.py` | propio (Higgsfield: el contenido generado es del usuario) | sí (volver a verificar los términos de Higgsfield antes del primer juego publicado) | RobloxCreator (Leonel con Claude) | — (sin subir) | 2026-10-29 |
+| hit-vfx | Código propio: `tools/vfx_textures.py` | propio | sí | RobloxCreator (Leonel con Claude) | — (sin subir) | 2026-10-29 |
+| hit-sfx | IA: ElevenLabs Sound Effects (`eleven_text_to_sound_v2`), desde el conector de ElevenLabs | según el plan del workspace de ElevenLabs al generar | **no, hasta confirmar** que el plan era pago (en plan gratis no hay uso comercial) | RobloxCreator (Leonel con Claude) | — (sin subir) | 2026-10-29 |
+| hit-voices | IA: Higgsfield (plan Plus), modelo `elevenlabs_v4`, voces preset Barrett y Pixie | propio (Higgsfield: el contenido generado es del usuario) | sí (volver a verificar los términos de Higgsfield antes del primer juego publicado) | RobloxCreator (Leonel con Claude) | — (sin subir) | 2026-10-29 |

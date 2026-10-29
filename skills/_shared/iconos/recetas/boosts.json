@@ -1,0 +1,20 @@
+{
+  "_que_es": "Boosts y Game Passes (set C). Hoja 3x3 de íconos estilo HUD de los hits: python tools/imagegen.py prompt skills/_shared/iconos/recetas/boosts.json --ref skills/_shared/iconos/referencia-estilo.png",
+  "kind": "iconset",
+  "grid": "3x3",
+  "names": [
+    "speed",
+    "luck",
+    "money_boost",
+    "strength",
+    "magnet",
+    "timer",
+    "friends",
+    "shield",
+    "lock"
+  ],
+  "ia": {
+    "aspect": "1:1",
+    "prompt": "Icons for the boosts, left to right and top to bottom: 1) a red sneaker with small white wings and speed lines (speed), 2) a four-leaf clover with a sparkle (luck), 3) a bulging money bag with a dollar sign (money boost), 4) a flexed cartoon arm (strength), 5) a red horseshoe magnet with little lightning sparks (magnet), 6) an hourglass with golden sand (timer), 7) two smiling round cartoon heads side by side, one blue and one green (friends), 8) a golden shield with a purple gem (protection), 9) a golden padlock (locked)."
+  }
+}

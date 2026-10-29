@@ -10,7 +10,7 @@ Centro para crear juegos de Roblox rápido y con buenas probabilidades de éxito
 - **No inventes herramientas MCP.** Detecta qué hay instalado y usa los nombres exactos: `skills/_shared/mcp-tools.md`.
 - **Servidor autoritativo.** Monedas, daño, compras, inventario y progreso se calculan y validan en el servidor. El cliente solo pide y muestra.
 - **Móvil primero.** La mayoría juega en teléfono: toda UI y todo control se diseña para dedo y pantallas chicas.
-- **Juegos en inglés, para público internacional.** Todo lo que ve el jugador está en inglés:
+- **Juegos en inglés, para público internacional, con foco en EE. UU.** (ahí está el gasto: `skills/_shared/como-son-nuestros-juegos.md` §1). Todo lo que ve el jugador está en inglés:
   - nombre, descripción, icono y miniaturas;
   - textos de UI (`Config/UiText.luau`), nombres de criaturas, ítems, Game Passes, Developer Products y badges;
   - notificaciones, anuncios y notas de update.
@@ -70,7 +70,7 @@ Instalación en cada máquina: `SETUP.md` (y `setup.ps1`, que crea el enlace de 
 - **Rojo 7.7.1**, **luau-lsp 1.70.1** (análisis de tipos) y **Luau 0.742** (intérprete para los tests de `template/tests/`): fijados en `rokit.toml` de la raíz; Rojo también en `template/rokit.toml` (y en cada juego). Para actualizar, cambiar la versión en todos a la vez: `tools/check.py` exige que coincidan.
 - **Plugin de Rojo** en `%LOCALAPPDATA%\Roblox\Plugins\RojoManagedPlugin.rbxm` (reinstalar tras actualizar Rojo: `rojo plugin install`).
 - **MCP de Roblox Studio** registrado como `Roblox_Studio` (scope usuario).
-- **Conectores** (los dos integrantes los tienen): Blender (MCP oficial de Blender Lab), Meshy (`.mcp.json` del repo, clave en `MESHY_API_KEY`), Open Cloud (`tools/roblox_upload.py`), imágenes con IA (Nano Banana y GPT Image con `tools/imagegen.py`; Higgsfield desde Claude) y Obsidian. Qué hace cada uno y por qué ForgeGUI no: `skills/_shared/conectores.md`.
+- **Conectores** (los dos integrantes los tienen): Blender (MCP oficial de Blender Lab), Meshy (`.mcp.json` del repo, clave en `MESHY_API_KEY`), Open Cloud (`tools/roblox_upload.py`), imágenes con IA (GPT Image y Nano Banana con `tools/imagegen.py`; Higgsfield opcional desde Claude), ElevenLabs (efectos y voces, conector de claude.ai) y Obsidian. Qué usamos para cada cosa y por qué ForgeGUI no: `skills/_shared/conectores.md`.
 - **Herramientas del hub** (`tools/`):
   - `check.py`: el chequeo de cada PR.
   - `roblox_research.py`: Charts, datos e imágenes de los hits.
@@ -78,6 +78,8 @@ Instalación en cada máquina: `SETUP.md` (y `setup.ps1`, que crea el enlace de 
   - `roblox_upload.py`: subir assets.
   - `imagegen.py`: la imagen de miniaturas, ícono y anuncios con IA, a partir de referencias del juego.
   - `thumbs.py`: textos encima, revisión y hoja de contacto de miniaturas e íconos.
+  - `iconsheet.py`: corta las hojas de íconos hechas con IA en íconos sueltos con fondo transparente (`skills/_shared/iconos/`).
+  - `vfx_textures.py`: texturas de partículas, beams y trails estilo hit.
   - `render3d/`: renders de los `.glb` para usar de referencia.
   - `campaigns.py`: planes y campañas de Ads Manager.
   - `analytics.py`: métricas.

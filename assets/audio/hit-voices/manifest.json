@@ -1,0 +1,152 @@
+{
+ "pack": "hit-voices",
+ "kind": "sound",
+ "count": 20,
+ "source": "IA: Higgsfield (plan Plus), modelo elevenlabs_v4, voces preset Barrett y Pixie, etiqueta [excited]",
+ "license": "propio (generado con IA en Higgsfield Plus)",
+ "author": "RobloxCreator",
+ "created": "2026-10-29",
+ "notes": "Anuncios cortos en inglés para rarezas, renacer, subir de nivel y premios. Se usan pocos y cortos, sobre el sonido del evento (no lo reemplazan).",
+ "items": [
+  {
+   "name": "deep_legendary",
+   "file": "deep_legendary.mp3",
+   "text": "LEGENDARY!",
+   "voice": "Barrett (grave, anunciador)",
+   "seconds": 1.65
+  },
+  {
+   "name": "deep_mythic",
+   "file": "deep_mythic.mp3",
+   "text": "MYTHIC!",
+   "voice": "Barrett (grave, anunciador)",
+   "seconds": 1.31
+  },
+  {
+   "name": "deep_secret",
+   "file": "deep_secret.mp3",
+   "text": "SECRET!!",
+   "voice": "Barrett (grave, anunciador)",
+   "seconds": 1.23
+  },
+  {
+   "name": "deep_epic",
+   "file": "deep_epic.mp3",
+   "text": "EPIC!",
+   "voice": "Barrett (grave, anunciador)",
+   "seconds": 1.07
+  },
+  {
+   "name": "deep_rebirth",
+   "file": "deep_rebirth.mp3",
+   "text": "REBIRTH!",
+   "voice": "Barrett (grave, anunciador)",
+   "seconds": 1.23
+  },
+  {
+   "name": "deep_level_up",
+   "file": "deep_level_up.mp3",
+   "text": "LEVEL UP!",
+   "voice": "Barrett (grave, anunciador)",
+   "seconds": 1.41
+  },
+  {
+   "name": "deep_double_money",
+   "file": "deep_double_money.mp3",
+   "text": "DOUBLE MONEY!",
+   "voice": "Barrett (grave, anunciador)",
+   "seconds": 1.57
+  },
+  {
+   "name": "deep_jackpot",
+   "file": "deep_jackpot.mp3",
+   "text": "JACKPOT!",
+   "voice": "Barrett (grave, anunciador)",
+   "seconds": 1.31
+  },
+  {
+   "name": "deep_new_record",
+   "file": "deep_new_record.mp3",
+   "text": "NEW RECORD!",
+   "voice": "Barrett (grave, anunciador)",
+   "seconds": 1.49
+  },
+  {
+   "name": "deep_so_lucky",
+   "file": "deep_so_lucky.mp3",
+   "text": "SO LUCKY!",
+   "voice": "Barrett (grave, anunciador)",
+   "seconds": 1.8
+  },
+  {
+   "name": "cartoon_legendary",
+   "file": "cartoon_legendary.mp3",
+   "text": "LEGENDARY!",
+   "voice": "Pixie (caricatura)",
+   "seconds": 1.72
+  },
+  {
+   "name": "cartoon_mythic",
+   "file": "cartoon_mythic.mp3",
+   "text": "MYTHIC!",
+   "voice": "Pixie (caricatura)",
+   "seconds": 1.31
+  },
+  {
+   "name": "cartoon_secret",
+   "file": "cartoon_secret.mp3",
+   "text": "SECRET!!",
+   "voice": "Pixie (caricatura)",
+   "seconds": 1.41
+  },
+  {
+   "name": "cartoon_epic",
+   "file": "cartoon_epic.mp3",
+   "text": "EPIC!",
+   "voice": "Pixie (caricatura)",
+   "seconds": 1.15
+  },
+  {
+   "name": "cartoon_rebirth",
+   "file": "cartoon_rebirth.mp3",
+   "text": "REBIRTH!",
+   "voice": "Pixie (caricatura)",
+   "seconds": 1.31
+  },
+  {
+   "name": "cartoon_level_up",
+   "file": "cartoon_level_up.mp3",
+   "text": "LEVEL UP!",
+   "voice": "Pixie (caricatura)",
+   "seconds": 1.41
+  },
+  {
+   "name": "cartoon_double_money",
+   "file": "cartoon_double_money.mp3",
+   "text": "DOUBLE MONEY!",
+   "voice": "Pixie (caricatura)",
+   "seconds": 1.72
+  },
+  {
+   "name": "cartoon_jackpot",
+   "file": "cartoon_jackpot.mp3",
+   "text": "JACKPOT!",
+   "voice": "Pixie (caricatura)",
+   "seconds": 1.31
+  },
+  {
+   "name": "cartoon_new_record",
+   "file": "cartoon_new_record.mp3",
+   "text": "NEW RECORD!",
+   "voice": "Pixie (caricatura)",
+   "seconds": 1.57
+  },
+  {
+   "name": "cartoon_so_lucky",
+   "file": "cartoon_so_lucky.mp3",
+   "text": "SO LUCKY!",
+   "voice": "Pixie (caricatura)",
+   "seconds": 1.8
+  }
+ ]
+}

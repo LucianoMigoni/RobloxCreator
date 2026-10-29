@@ -12,7 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 TYPES = {"model3d", "icon", "button", "panel", "font", "texture", "image", "sound", "pack"}
-SOURCES = {"blender-generated", "studio-generated", "creator-store", "user", "third-party"}
+SOURCES = {"blender-generated", "studio-generated", "ai-generated", "code-generated", "creator-store", "user", "third-party"}
 REQUIRED = ("id", "path", "type", "tags", "robloxAssetId", "source", "license", "commercialUse", "author")
 
 

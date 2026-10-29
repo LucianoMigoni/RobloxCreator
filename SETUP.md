@@ -128,10 +128,10 @@ El audio tiene cupo: 100 subidas por mes con la cuenta verificada con ID, 10 sin
 
 ### Imágenes con IA para miniaturas, ícono y anuncios
 
-`tools/imagegen.py` genera la imagen con Nano Banana Pro (Google) o GPT Image (OpenAI) a partir de referencias del juego (`skills/_shared/vitrina-hits.md` §6). Con una de las dos claves alcanza; el equipo usa Google por defecto.
+`tools/imagegen.py` genera la imagen con GPT Image (OpenAI) o Nano Banana Pro (Google) a partir de referencias del juego (`skills/_shared/vitrina-hits.md` §6), y las hojas de íconos del HUD (`skills/_shared/iconos/`). La clave que hace falta es la de OpenAI (decisión del 2026-10-29); la de Google se recomienda para comparar miniaturas (se paga solo por uso).
 
-1. **Google (Nano Banana Pro):** https://aistudio.google.com/apikey → **Create API key** en un proyecto con facturación activa. Guardarla con `setx GEMINI_API_KEY TU_CLAVE`.
-2. **OpenAI (GPT Image 2.5, el de ChatGPT):** https://platform.openai.com/api-keys → **Create new secret key**. Guardarla con `setx OPENAI_API_KEY TU_CLAVE`. La consola puede pedir verificar la organización antes de usar los modelos de imagen.
+1. **OpenAI (GPT Image 2.5, el de ChatGPT):** https://platform.openai.com/api-keys → **Create new secret key**, con saldo cargado en Billing (no sirve la suscripción de ChatGPT). Guardarla con `setx OPENAI_API_KEY TU_CLAVE`. La consola puede pedir verificar la organización antes de usar los modelos de imagen. Para que Claude la use también en las sesiones en la nube: en el entorno de la nube (menú del entorno en la barra de título → Edit), como secreto o variable `OPENAI_API_KEY`.
+2. **Google (Nano Banana Pro), recomendada para miniaturas:** https://aistudio.google.com/apikey → **Create API key** en un proyecto con facturación activa. Guardarla con `setx GEMINI_API_KEY TU_CLAVE`.
 3. Probar sin gastar: `python tools/imagegen.py prompt skills/_shared/vitrina/recetas/icono-heroe.json --set "subject_desc=a golden egg" --set "colors=purple and gold"` imprime el prompt. Sin clave, ese prompt se pega en ChatGPT o Gemini con las referencias adjuntas.
 4. **Render de modelos** (referencias sin abrir Blender), una vez: `cd tools/render3d`, `npm install` y `npx playwright install chromium`.
 

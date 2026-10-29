@@ -1,0 +1,20 @@
+{
+  "_que_es": "Huevos por rareza y de evento (set E). Hoja 3x3 de íconos estilo HUD de los hits: python tools/imagegen.py prompt skills/_shared/iconos/recetas/huevos.json --ref skills/_shared/iconos/referencia-estilo.png",
+  "kind": "iconset",
+  "grid": "3x3",
+  "names": [
+    "egg_common",
+    "egg_uncommon",
+    "egg_rare",
+    "egg_epic",
+    "egg_legendary",
+    "egg_mythic",
+    "egg_secret",
+    "egg_halloween",
+    "egg_winter"
+  ],
+  "ia": {
+    "aspect": "1:1",
+    "prompt": "Icons: nine eggs for the egg shop of a pet game, one per rarity, all with the same egg shape and size. Left to right and top to bottom: 1) a plain white egg with gray spots (common), 2) a green egg with a leaf pattern (uncommon), 3) a blue egg with wavy stripes (rare), 4) a purple egg with glowing crystal shards (epic), 5) a golden egg with orange flame patterns (legendary), 6) a hot-pink egg with a heart pattern and sparkles (mythic), 7) a black egg with a glowing rainbow crack (secret), 8) an orange pumpkin egg with a carved jack-o-lantern face (Halloween event), 9) an icy light-blue egg with snowflakes (winter event)."
+  }
+}

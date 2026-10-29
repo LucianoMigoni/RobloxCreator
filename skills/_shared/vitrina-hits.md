@@ -150,6 +150,7 @@ El avatar sale de `estilo-ia.json`: `AVATAR` (el clásico de pelo "bacon", el qu
 La imagen la genera la IA **a partir de referencias del juego**, y el texto se agrega después. Prueba del 2026-10-29 (`skills/_shared/vitrina/ejemplos/`):
 - Con el estilo de `estilo-ia.json`, Nano Banana Pro hizo miniaturas al nivel de las de Steal a Brainrot y Fish It!.
 - Con el render del león de Kenney Cube Pets como referencia, respetó su diseño exacto (melena de bloques, cara, ojos, colores) en la miniatura y en el ícono.
+- Con las recetas `numero-gigante`, `mas-uno`, `objeto-gigante` y `evento-temporada`, GPT Image 2.5 salió un poco más nítido y saturado y no dibujó letras. Nano Banana Pro puso letras en las teclas del mundo teclado de `mas-uno`. Por eso **GPT Image 2.5 va primero** y Nano Banana Pro queda para comparar y para respetar un modelo exacto.
 
 ```bash
 # 1. Referencias: render de cada modelo del juego (o captura de Studio / render de Blender)
@@ -177,12 +178,12 @@ python tools/thumbs.py sheet games/<juego>/marketing/thumb-*.jpg --out games/<ju
 
    | Camino | Cómo | Costo |
    |---|---|---|
-   | API de Google | `imagegen.py generate --provider gemini` (Nano Banana Pro `gemini-3-pro-image`; más barato: `gemini-nano-banana-2.1`). Clave `GEMINI_API_KEY` | 0,134 USD por imagen 2K (0,05 con Nano Banana 2.1) |
-   | API de OpenAI | `imagegen.py generate --provider openai` (`gpt-image-2.5-flare`; `-sunburst` edita con más precisión). Clave `OPENAI_API_KEY` | Por tokens: unos 0,04 USD en calidad media |
+   | API de OpenAI (primera opción) | `imagegen.py generate` (`gpt-image-2.5-flare`; `--model gpt-image-2.5-sunburst` edita con más precisión). Clave `OPENAI_API_KEY` | Por tokens: unos 0,04 USD en calidad media y 0,17 en alta |
+   | API de Google (para comparar) | `imagegen.py generate --provider gemini` (Nano Banana Pro `gemini-3-pro-image`; más barato: `gemini-nano-banana-2.1`). Clave `GEMINI_API_KEY` | 0,134 USD por imagen 2K (0,05 con Nano Banana 2.1) |
    | ChatGPT o Gemini a mano | `imagegen.py prompt`, pegar el prompt, adjuntar las referencias y pedir 16:9 o cuadrado | Incluido en la suscripción |
-   | Desde Claude | Conector Higgsfield (`generate_image`, modelo `nano_banana_pro`, con las referencias subidas) o Meshy (`meshy_image_to_image`) | Higgsfield: 2 créditos por imagen; GPT Image 2.5 pide plan pago |
+   | Desde Claude | Conector Higgsfield (`generate_image`, modelo `gpt_image_2_5` o `nano_banana_pro`, con las referencias subidas) | Plan Plus: 2,75 créditos (GPT Image 2.5 alta) o 2 (Nano Banana Pro) por imagen |
 
-   Una serie de 4 hipótesis × 4 variantes son unas 16 imágenes: unos 2 USD con Nano Banana Pro.
+   Una serie de 4 hipótesis × 4 variantes son unas 16 imágenes: unos 0,70 USD con GPT Image 2.5 en calidad media, 2,60 en alta, o 2 USD con Nano Banana Pro.
 3. **Filtro de calidad.** Se descarta la variante que tenga:
    - letras o números sueltos;
    - manos con dedos (los avatares de Roblox tienen manos de bloque);

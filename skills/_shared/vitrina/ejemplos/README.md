@@ -1,6 +1,6 @@
 # Ejemplos de la vitrina: antes y después (2026-10-29)
 
-La vara de calidad para miniaturas e íconos. Se hicieron para comparar con los hits: no son de ningún juego nuestro y **no se publican**. Se generaron en el plan gratis de Higgsfield, que es solo para pruebas.
+La vara de calidad para miniaturas e íconos. Se hicieron para comparar con los hits: no son de ningún juego nuestro y **no se publican**. Las primeras se generaron en el plan gratis de Higgsfield, que es solo para pruebas; la comparación de recetas, en la prueba del plan Plus.
 
 | Archivo | Qué es |
 |---|---|
@@ -9,6 +9,7 @@ La vara de calidad para miniaturas e íconos. Se hicieron para comparar con los 
 | `despues-secret-leon.jpg` | Receta `rareza-secret`, con el render del león como referencia |
 | `despues-icono-leon.png` | Receta `icono-heroe`, con la misma referencia |
 | `referencia-leon.png` | Render de `assets/3d/kenney/cube-pets/animal-lion.glb` con `tools/render3d/` |
+| `recetas-nano-banana-vs-gpt.jpg` | Las recetas `numero-gigante` y `mas-uno` con Nano Banana Pro y con GPT Image 2.5, y `objeto-gigante` y `evento-temporada` con Nano Banana Pro, sin textos |
 
 ## Cómo se hicieron
 
@@ -29,7 +30,7 @@ La vara de calidad para miniaturas e íconos. Se hicieron para comparar con los 
 
 ## Lo que se aprendió
 
-- **El modelo:** GPT Image 2.5 (el de ChatGPT) no se pudo probar en Higgsfield: pide plan pago. Queda para comparar con clave de OpenAI.
+- **El modelo:** con el plan Plus se comparó GPT Image 2.5 (el de ChatGPT) en las recetas. Salió un poco más nítido y saturado y no dibujó letras; Nano Banana Pro puso letras en las teclas de `mas-uno`. Desde entonces GPT Image 2.5 va primero (`vitrina-hits.md` §6).
 - **La composición:** la IA no siempre deja libre el cuarto de arriba. Por eso los textos se acomodan con `--at` mirando cada imagen.
 - **El color:** la del león salió más pastel (saturación 114 contra 160 de los hits). Si se publica, subir `final.grade` o pedir "very saturated" en `world_desc`.
 - **Las señales de IA:** el avatar del león tiene manos con dedos. Los avatares de Roblox tienen manos de bloque: al elegir, se descarta o se regenera (`vitrina-hits.md` §6, paso 3).
