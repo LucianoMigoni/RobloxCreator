@@ -6,7 +6,9 @@ Para que la gente haga clic y entre. Investigado el 2026-10-28 con:
 - La documentación oficial (`/production/publishing/thumbnails`, `/experience-icons` y `/discovery`).
 - Los anuncios del DevForum de 2026.
 
-Lo usan `roblox-publishing` (fase 8) y `roblox-campaigns` (creatividades). Herramienta: `tools/thumbs.py`.
+Lo usan `roblox-publishing` (fase 8) y `roblox-campaigns` (creatividades). Herramientas: `tools/imagegen.py` (la imagen, con IA y referencias del juego), `tools/thumbs.py` (textos, revisión y hoja de contacto) y `tools/render3d/` (referencias desde los modelos).
+
+**Método desde el 2026-10-29 (§6):** la imagen la hace la IA con las referencias del juego y el texto se pone encima. El método anterior armaba emojis 3D sobre degradés: al lado de los hits parecían stickers. Ejemplos de antes y después en `skills/_shared/vitrina/ejemplos/`.
 
 ## 1. Por qué importa
 
@@ -59,6 +61,25 @@ Lo usan `roblox-publishing` (fase 8) y `roblox-campaigns` (creatividades). Herra
 - **Serie:** 4 a 10 miniaturas con la misma composición y distinta criatura o bioma. Así arman la personalización: cada una es una hipótesis.
 - Saturación mediana de **160** y contraste (desvío de luminancia) de **55** en las 76 medidas. `tools/thumbs.py check` compara contra esos valores.
 
+### Cómo están hechas (lo que hay que igualar)
+
+Son **escenas 3D de Roblox**, no dibujos planos ni stickers:
+- **Steal a Brainrot:** escenas armadas con el mapa real (bases, alfombras, pasto con studs), avatares posados con la luz del juego y el número gigante arriba.
+- **Fish It!:** GFX de Blender:
+  - el avatar con la cara exagerada (llorando) tira de la caña;
+  - una criatura gigante con brillo sale del agua pintada.
+  - Toda la serie repite la composición y cambia la criatura.
+- **Steal An Egg (ícono):** el avatar levanta el huevo del evento y detrás asoma la criatura gigante.
+
+Lo que tienen en común:
+- el avatar clásico con una **cara exagerada** (miedo, llanto, sorpresa);
+- **acción en curso** (robar, pescar, levantar);
+- el mundo del juego de fondo con desenfoque;
+- luz de contorno blanca y brillo en el objeto deseado;
+- cámara baja para que lo grande se vea gigante.
+
+Las hacen artistas de GFX (render en Blender de los avatares y modelos del juego, retoque en Photoshop) que cobran de 500 a más de 50 000 Robux por miniatura. Hoy el mismo resultado sale con IA usando referencias del juego (§6).
+
 ### Títulos (23 juegos de los Charts, 2026-10-28)
 
 - **Etiqueta al principio con emoji**, de temporada o update: `[🎃]`, `[🎃UPD]`, `[💀]`, `[👻]`, `[IMPOSSIBLE 😈]`, `🎉 [PSX]`. A veces otro emoji al final: "Grow a Garden 🌶️", "Fish It! 🐟".
@@ -107,58 +128,87 @@ How to Play:
 
 ## 5. Recetas (`skills/_shared/vitrina/recetas/`)
 
-Cada receta es un JSON por capas que arma `tools/thumbs.py`. Las partes variables van entre `{{ }}` y se completan con `--set`.
+Cada receta es la composición de un hit en un JSON con tres partes:
+- **`ia`:** la escena que se le pide a la IA, en inglés, con valores entre `{{ }}` (`creature_desc`, `world_desc`...). `tools/imagegen.py` la envuelve con el estilo de `skills/_shared/vitrina/estilo-ia.json`.
+- **Textos y flechas** (`layers` de tipo `text` y `arrow`, cada uno con su `id`): el número, la rareza, "YOU!". Los pone `tools/thumbs.py` encima de la imagen de IA (`--base`), así el número queda exacto y la fuente es la misma en toda la serie.
+- **Boceto** (`layers` de tipo `image`, `background`, `rays`): la composición armada con renders. Sirve como referencia de composición para la IA o para una prueba rápida sin IA.
 
-| Receta | Para | Valores |
-|---|---|---|
-| `robo-tension.json` | Juegos de robar (Steal ___) | `creature`, `avatar`, `hero`, `name`, `value` |
-| `numero-gigante.json` | Ganancia por segundo enorme | `creature`, `avatar`, `value`, `name`, `rarity` |
-| `objeto-gigante.json` | Huevos, cofres, el pez dorado | `hero`, `avatar`, `label` |
-| `rareza-secret.json` | Revelación rara / gacha | `creature`, `sparkle`, `odds`, `rarity` |
-| `mas-uno.json` | "+1 por paso" | `avatar`, `speed` |
-| `evento-temporada.json` | Update de Halloween, Navidad o verano | `hero`, `prop`, `label` |
-| `icono-heroe.json` | Ícono 512×512 | `hero`, `top` (vacío si no lleva texto) |
+| Receta | Para | Valores para la IA (en inglés) | Textos |
+|---|---|---|---|
+| `robo-tension.json` | Juegos de robar (Steal ___) | `creature_desc`, `prize_desc`, `world_desc` | `name`, `value` + YOU! |
+| `numero-gigante.json` | Ganancia por segundo enorme | `creature_desc`, `world_desc` | `value`, `name`, `rarity` |
+| `objeto-gigante.json` | Huevos, cofres, el pez dorado | `prize_desc`, `world_desc` | `label` |
+| `rareza-secret.json` | Revelación rara / gacha | `creature_desc` | `odds`, `rarity` |
+| `mas-uno.json` | "+1 por paso" | `world_desc` | `speed` + los "+1" |
+| `evento-temporada.json` | Update de Halloween, Navidad o verano | `creature_desc`, `season_desc` | `label` |
+| `icono-heroe.json` | Ícono 512×512 | `subject_desc`, `colors` | `top` (vacío si no lleva texto) |
 
-```bash
-python tools/thumbs.py compose skills/_shared/vitrina/recetas/robo-tension.json --out games/<juego>/marketing/thumb-robo-trex.png \
-  --set creature=games/<juego>/marketing/renders/trex.png --set avatar=games/<juego>/marketing/renders/avatar-run.png \
-  --set hero=games/<juego>/marketing/renders/egg-gold.png --set "name=GOLDEN EGG" --set "value=\$89,121/s"
-python tools/thumbs.py check games/<juego>/marketing/thumb-robo-trex.png --kind thumbnail --previews games/<juego>/marketing/previews
-python tools/thumbs.py sheet games/<juego>/marketing/thumb-*.png --out games/<juego>/marketing/hoja.jpg
-```
-
-- Capas: fondo (degradé o captura desenfocada), rayos, imágenes (con brillo, borde y sombra), texto (fuentes del catálogo, relleno de color, degradé o `"rainbow"`, contorno y sombra) y flechas curvas.
-- Fuentes del catálogo (OFL o Apache, uso comercial): `luckiest-guy`, `titan-one`, `lilita-one`, `bangers` y `fredoka`. Los emojis no se dibujan con estas fuentes: un emoji va como imagen (`assets/ui/fluent-emoji-3d/`).
+El avatar sale de `estilo-ia.json`: `AVATAR` (el clásico de pelo "bacon", el que los chicos reconocen), `AVATAR_GIRL` o `AVATAR_NOOB` (`--avatar`). Variar el avatar entre miniaturas también es una hipótesis para la personalización.
 
 ## 6. Cómo se producen las imágenes
 
-Las imágenes de entrada son **del juego**: así lo que promete la vitrina coincide con lo que hay adentro, que es regla oficial y señal del algoritmo.
+La imagen la genera la IA **a partir de referencias del juego**, y el texto se agrega después. Prueba del 2026-10-29 (`skills/_shared/vitrina/ejemplos/`):
+- Con el estilo de `estilo-ia.json`, Nano Banana Pro hizo miniaturas al nivel de las de Steal a Brainrot y Fish It!.
+- Con el render del león de Kenney Cube Pets como referencia, respetó su diseño exacto (melena de bloques, cara, ojos, colores) en la miniatura y en el ícono.
 
-1. **Renders** de la criatura, el objeto y el avatar con fondo transparente:
-   - En **Blender** (MCP): escena con luz de tres puntos cálida y luz de contorno fuerte, cámara un poco desde abajo para que el sujeto se vea gigante, PNG con transparencia a 2048 px. `render_thumbnail_to_path` para una prueba rápida y `render_viewport_to_path` para la final.
-   - En **Studio** (MCP): `screen_capture` en playtest con la cámara libre (Shift + P). Sirve para fondos reales y escenas con el mapa.
-2. **El avatar:** el clásico de Roblox (el que los chicos reconocen) con pose de acción: correr cargando el premio, levantarlo, asustarse. Se posa en Studio o en Blender.
-3. **Componer** con una receta. Hacer **de 3 a 5 variantes con hipótesis distintas:**
-   - la mecánica (robar);
-   - el premio (la criatura SECRET);
-   - el número (la ganancia);
-   - la temporada;
-   - jugar con amigos.
-4. **Revisar** con `check`:
+```bash
+# 1. Referencias: render de cada modelo del juego (o captura de Studio / render de Blender)
+node tools/render3d/render.cjs assets/3d/kenney/cube-pets/animal-lion.glb games/<juego>/marketing/refs/lion.png
+# 2. Prompt (para ChatGPT, Gemini o Higgsfield) o generación directa con clave de API
+python tools/imagegen.py prompt skills/_shared/vitrina/recetas/rareza-secret.json \
+  --set "creature_desc=the lion pet from the reference, giant and glowing" --ref games/<juego>/marketing/refs/lion.png
+python tools/imagegen.py generate skills/_shared/vitrina/recetas/rareza-secret.json --out games/<juego>/marketing/ia \
+  --n 4 --set "creature_desc=..." --ref games/<juego>/marketing/refs/lion.png
+# 3. Textos encima de la variante elegida (--at acomoda cada texto o flecha a esa imagen)
+python tools/thumbs.py compose skills/_shared/vitrina/recetas/rareza-secret.json --base games/<juego>/marketing/ia/<variante>.png \
+  --set "odds=1 in 1,000,000" --set rarity=SECRET --at odds=0.7,0.08 --at rarity=0.3,0.07 --out games/<juego>/marketing/thumb-secret.jpg
+# 4. Revisar y elegir
+python tools/thumbs.py check games/<juego>/marketing/thumb-secret.jpg --kind thumbnail --previews games/<juego>/marketing/previews
+python tools/thumbs.py sheet games/<juego>/marketing/thumb-*.jpg --out games/<juego>/marketing/hoja.jpg
+```
+
+1. **Referencias del juego:**
+   - Cada criatura, huevo u objeto que aparece:
+     - `tools/render3d/render.cjs` desde el `.glb` (sin abrir Blender; funciona también en sesiones en la nube);
+     - o un render en Blender (MCP), con luz de tres puntos y fondo transparente.
+   - El escenario: una captura del mapa en Studio (`screen_capture` en playtest, cámara libre).
+   - El avatar clásico lo conoce la IA. Si el juego tiene un personaje propio, va su render.
+2. **Generar de 4 a 8 variantes por hipótesis** (mecánica, premio, número, temporada, amigos):
+
+   | Camino | Cómo | Costo |
+   |---|---|---|
+   | API de Google | `imagegen.py generate --provider gemini` (Nano Banana Pro `gemini-3-pro-image`; más barato: `gemini-nano-banana-2.1`). Clave `GEMINI_API_KEY` | 0,134 USD por imagen 2K (0,05 con Nano Banana 2.1) |
+   | API de OpenAI | `imagegen.py generate --provider openai` (`gpt-image-2.5-flare`; `-sunburst` edita con más precisión). Clave `OPENAI_API_KEY` | Por tokens: unos 0,04 USD en calidad media |
+   | ChatGPT o Gemini a mano | `imagegen.py prompt`, pegar el prompt, adjuntar las referencias y pedir 16:9 o cuadrado | Incluido en la suscripción |
+   | Desde Claude | Conector Higgsfield (`generate_image`, modelo `nano_banana_pro`, con las referencias subidas) o Meshy (`meshy_image_to_image`) | Higgsfield: 2 créditos por imagen; GPT Image 2.5 pide plan pago |
+
+   Una serie de 4 hipótesis × 4 variantes son unas 16 imágenes: unos 2 USD con Nano Banana Pro.
+3. **Filtro de calidad.** Se descarta la variante que tenga:
+   - letras o números sueltos;
+   - manos con dedos (los avatares de Roblox tienen manos de bloque);
+   - un avatar con proporciones raras;
+   - partes derretidas o duplicadas;
+   - una criatura distinta de la referencia;
+   - algo que no existe en el juego.
+
+   La comunidad desconfía de lo que "parece IA" (DevForum, temas 4920507 y 4806311): estas son las señales que la delatan.
+4. **Textos** con `thumbs.py compose ... --base` (el número exacto, la rareza, la flecha YOU!). `--at id=x,y` mueve un texto y `--at id=x0,y0,x1,y1` una flecha para que no tapen caras ni el objeto; `--hide id` saca una capa.
+5. **Revisar** con `check`:
    - El ícono se tiene que entender a 150 px.
    - En el mosaico de Home, nada importante tapado abajo.
-   - Saturación y contraste cerca de los hits.
-5. **Hoja de contacto** con `sheet` para elegir en el PR, que es la puerta de revisión.
-6. **Subir:**
+   - Saturación y contraste cerca de los hits; si la imagen salió apagada, subir `final.grade` en la receta.
+6. **Hoja de contacto** con `sheet` para elegir en el PR, que es la puerta de revisión.
+7. **Subir:**
    - Las miniaturas desde Creator Hub → Places → Thumbnails (pestaña Home Page para la personalización).
    - El ícono desde Places → Icon.
    - Las creatividades de anuncios a la biblioteca de Ads Manager o con la Assets API (`roblox-campaigns`).
-7. **Medir:** tabla *Thumbnail Performance* de Creator Hub, o `python tools/campaigns.py thumbs --universe <id>` con la Analytics API. Se deja jugar a la personalización. **Con cada update grande se suman miniaturas nuevas** y no se tocan hasta el siguiente (guía oficial).
+8. **Medir:** tabla *Thumbnail Performance* de Creator Hub, o `python tools/campaigns.py thumbs --universe <id>` con la Analytics API. Se deja jugar a la personalización. **Con cada update grande se suman miniaturas nuevas** y no se tocan hasta el siguiente (guía oficial).
 
-**IA para imágenes:**
-- Meshy (`meshy_text_to_image`) o el generador de Ads Manager sirven para **bocetos y fondos**, nunca para mostrar algo que no está en el juego.
-- La comunidad de Roblox castiga lo que "parece IA": en el DevForum, a los juegos con miniaturas de IA les señalan CTR bajo y desconfianza (temas 4920507 y 4806311).
-- La imagen final sale de renders y capturas del juego.
+**Reglas de la IA:**
+- **Todo lo que aparece existe en el juego.** Es regla oficial y señal del algoritmo; las referencias lo aseguran. Si la IA inventa algo (otra criatura, un arma, un lugar), la variante se descarta.
+- **Nunca miniaturas de otros juegos como referencia**, ni siquiera de estilo: el estilo ya está en `estilo-ia.json`. Tampoco logos, personajes ni "brainrots" ajenos.
+- **Las imágenes de Gemini llevan SynthID**, una marca de agua invisible. No se encontró una regla oficial de Roblox que obligue a declarar IA en miniaturas (revisado el 2026-10-29). Rige la de no engañar.
+- **Lo generado en el plan gratis de un servicio** queda solo como prueba. Para publicar, el plan pago o la API (ver la licencia en `skills/_shared/conectores.md`).
 
 ## 7. Video de gameplay
 
@@ -169,6 +219,7 @@ Las imágenes de entrada son **del juego**: así lo que promete la vitrina coinc
 
 ## 8. Checklist de la vitrina
 
+- [ ] Imágenes hechas con referencias del juego y sin señales de IA (§6, paso 3).
 - [ ] Ícono 512×512: un sujeto gigante y saturado, entendible a 150 px; texto solo número o una palabra.
 - [ ] De 3 a 5 miniaturas 16:9 de 1920×1080 y menos de 3 MB, una por hipótesis, sin nada esencial abajo, activas en la personalización.
 - [ ] Todo lo que muestran existe en el juego (criaturas, número, mecánica).

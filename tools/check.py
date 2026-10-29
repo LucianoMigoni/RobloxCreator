@@ -165,7 +165,8 @@ def check_python_tools() -> list:
     errors = []
     scripts = [("assets/catalog.py", "selftest"), ("assets/catalog.py", "validate"), ("tools/analytics.py", "selftest"),
                ("tools/roblox_research.py", "selftest"), ("tools/roblox_upload.py", "selftest"),
-               ("tools/assets_import.py", "selftest"), ("tools/campaigns.py", "selftest")]
+               ("tools/assets_import.py", "selftest"), ("tools/campaigns.py", "selftest"),
+               ("tools/imagegen.py", "selftest")]
     # tools/thumbs.py necesita Pillow: GitHub lo instala; en una PC sin Pillow se avisa y se omite.
     if importlib.util.find_spec("PIL"):
         scripts.append(("tools/thumbs.py", "selftest"))
@@ -175,6 +176,12 @@ def check_python_tools() -> list:
         ok, out = run([sys.executable, script, cmd])
         if not ok:
             errors.append(f"{script} {cmd}: {out}")
+    # El renderizador de modelos es JavaScript: con Node se revisa que el script compile.
+    node = shutil.which("node")
+    if node:
+        ok, out = run([node, "--check", "tools/render3d/render.cjs"])
+        if not ok:
+            errors.append(f"tools/render3d/render.cjs: {out}")
     return errors
 
 

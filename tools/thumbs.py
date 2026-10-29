@@ -1,13 +1,17 @@
 """Miniaturas, íconos y creatividades de anuncios estilo hit, armados por capas desde una receta JSON.
 
-  python tools/thumbs.py compose receta.json [--out salida.png] [--set clave=valor ...]
+  python tools/thumbs.py compose receta.json [--out salida.png] [--set clave=valor ...] [--base ia.png]
   python tools/thumbs.py check imagen.png --kind thumbnail|icon|ad [--previews carpeta]
   python tools/thumbs.py sheet a.png b.png ... --out hoja.jpg [--cols 3]
   python tools/thumbs.py selftest
 
 - compose: arma la imagen. Las recetas de skills/_shared/vitrina/recetas/ traen las composiciones de
   los hits ("robo con tensión", "número gigante", "huevo gigante"...); `{{clave}}` en la receta se
-  reemplaza con --set clave=valor (por ejemplo la ruta del render del personaje).
+  reemplaza con --set clave=valor (por ejemplo la ruta del render del personaje) o con el valor de
+  "_defaults". Sin --base sale el boceto (fondo, renders y textos); con --base ia.png la imagen
+  generada por IA (tools/imagegen.py) es el fondo y solo se dibujan los textos y las flechas.
+  Cada imagen de IA sale distinta: --at id=x,y mueve un texto (id de la capa en la receta),
+  --at id=x0,y0,x1,y1 mueve una flecha y --hide id saca una capa.
 - check: tamaño, peso y proporción oficiales, zona de abajo que tapa el contador de jugadores,
   saturación y contraste comparados con los hits, y vistas previas al tamaño real en que se ven
   (ícono a 150 px, mosaico de Home). Salida: avisos y PNG en --previews.
@@ -15,8 +19,8 @@
 
 Reglas oficiales (skills/_shared/vitrina-hits.md): miniatura 16:9, ideal 1920x1080 y menos de 3 MB
 para Home; ícono cuadrado de 512x512 o más que se lea a 150x150. Las imágenes de entrada son renders
-o capturas propias del juego y assets del catálogo con uso comercial: nada de arte de otros juegos.
-Necesita Pillow (pip install pillow).
+o capturas propias del juego, assets del catálogo con uso comercial o imágenes de IA hechas con esas
+referencias: nada de arte de otros juegos. Necesita Pillow (pip install pillow).
 """
 import argparse
 import json
@@ -25,7 +29,7 @@ import sys
 from pathlib import Path
 
 try:
-    from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont, ImageStat
+    from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter, ImageFont, ImageStat
 except ImportError:  # pragma: no cover - el mensaje lo ve quien no tiene Pillow
     print("Falta Pillow: pip install pillow", file=sys.stderr)
     raise
@@ -102,6 +106,62 @@ def substitute(spec, values: dict):
             spec = spec.replace("{{" + key + "}}", val)
         return spec
     return spec
+
+
+# Claves cuyo valor es un número (o una lista de números): un "{{you_x}}" ya reemplazado se convierte,
+# para mover la flecha o un texto según dónde quedó el avatar en la imagen de IA.
+NUMERIC_KEYS = {"x", "y", "size", "height", "width", "curve", "rotate", "max_width", "opacity", "angle",
+                "radius", "blur", "darken", "vignette", "from", "to", "center", "offset", "focus"}
+
+
+def coerce_numbers(spec, key=None):
+    if isinstance(spec, dict):
+        return {k: coerce_numbers(v, k) for k, v in spec.items()}
+    if isinstance(spec, list):
+        return [coerce_numbers(v, key) for v in spec]
+    if isinstance(spec, str) and key in NUMERIC_KEYS:
+        try:
+            return float(spec)
+        except ValueError:
+            raise ThumbError(f"{key} tiene que ser un número: {spec!r}")
+    return spec
+
+
+def adjust_layers(spec: dict, moves=(), hidden=()) -> dict:
+    """Mueve u oculta capas por su "id" (--at y --hide), para acomodar los textos a cada imagen."""
+    layers = {l.get("id"): l for l in spec.get("layers", []) if l.get("id")}
+    for name in list(hidden) + [m.split("=", 1)[0] for m in moves]:
+        if name not in layers:
+            raise ThumbError(f"no hay una capa con id {name!r} (hay: {', '.join(sorted(layers)) or 'ninguna'})")
+    for move in moves:
+        name, _, coords = move.partition("=")
+        try:
+            nums = [float(v) for v in coords.split(",")]
+        except ValueError:
+            raise ThumbError(f"--at {move}: van números separados por coma")
+        layer = layers[name]
+        if layer.get("type") == "arrow":
+            if len(nums) != 4:
+                raise ThumbError(f"--at {move}: una flecha lleva x0,y0,x1,y1")
+            layer["from"], layer["to"] = nums[:2], nums[2:]
+        else:
+            if len(nums) != 2:
+                raise ThumbError(f"--at {move}: un texto o imagen lleva x,y")
+            layer["x"], layer["y"] = nums
+    spec["layers"] = [l for l in spec.get("layers", []) if l.get("id") not in set(hidden)]
+    return spec
+
+
+def final_spec(spec: dict, base_image: str) -> dict:
+    """La receta sobre una imagen de IA: esa imagen de fondo, sin rayos ni renders; quedan textos y flechas."""
+    final = spec.get("final", {})
+    out = {k: v for k, v in spec.items() if k not in ("background", "rays", "layers")}
+    out["background"] = {"image": base_image, "focus": final.get("focus", [0.5, 0.5])}
+    if final.get("grade"):
+        out["background"]["grade"] = final["grade"]
+    out["layers"] = [l for l in spec.get("layers", []) if l.get("type") != "image" and l.get("final", True)]
+    out["vignette"] = final.get("vignette", spec.get("vignette", 0))
+    return out
 
 
 def gradient(size, colors, angle=90.0):
@@ -334,10 +394,22 @@ def compose(spec: dict, base: Path) -> Image.Image:
     if "image" in bg:
         canvas = Image.open(resolve(bg["image"], base)).convert("RGBA")
         ratio = max(size[0] / canvas.width, size[1] / canvas.height)
-        canvas = canvas.resize((int(canvas.width * ratio) + 1, int(canvas.height * ratio) + 1), Image.LANCZOS)
-        left = (canvas.width - size[0]) // 2
-        top = (canvas.height - size[1]) // 2
+        canvas = canvas.resize((math.ceil(canvas.width * ratio), math.ceil(canvas.height * ratio)), Image.LANCZOS)
+        if ratio > 1:
+            # Agrandar ablanda los bordes (salidas de IA de 1K): se recupera nitidez.
+            canvas = canvas.filter(ImageFilter.UnsharpMask(radius=2, percent=60, threshold=2))
+        fx, fy = bg.get("focus", [0.5, 0.5])
+        left = round((canvas.width - size[0]) * min(1, max(0, fx)))
+        top = round((canvas.height - size[1]) * min(1, max(0, fy)))
         canvas = canvas.crop((left, top, left + size[0], top + size[1]))
+        grade = bg.get("grade")
+        if grade:
+            alpha = canvas.getchannel("A")
+            rgb = canvas.convert("RGB")
+            rgb = ImageEnhance.Color(rgb).enhance(grade.get("saturation", 1.0))
+            rgb = ImageEnhance.Contrast(rgb).enhance(grade.get("contrast", 1.0))
+            canvas = rgb.convert("RGBA")
+            canvas.putalpha(alpha)
         if bg.get("blur"):
             canvas = canvas.filter(ImageFilter.GaussianBlur(bg["blur"] * size[1] / 1080))
         if bg.get("darken"):
@@ -443,13 +515,18 @@ def save(img: Image.Image, out: Path, kind: str):
 def cmd_compose(args) -> int:
     spec_path = Path(args.spec)
     spec = json.loads(spec_path.read_text(encoding="utf-8"))
-    values = dict(v.split("=", 1) for v in args.set or [])
+    values = dict(spec.get("_defaults", {}))
+    values.update(dict(v.split("=", 1) for v in args.set or []))
+    if getattr(args, "base", None):
+        spec = final_spec(spec, str(Path(args.base).resolve()))
+    spec = {k: v for k, v in spec.items() if k not in ("ia", "final") and not k.startswith("_")}
     spec = substitute(spec, values)
     missing = sorted(set(part.split("}}")[0] for part in json.dumps(spec).split("{{")[1:]))
     if missing:
         print(f"Faltan valores: {', '.join(missing)} (usar --set clave=valor)", file=sys.stderr)
         return 2
     try:
+        spec = adjust_layers(coerce_numbers(spec), getattr(args, "at", None) or [], getattr(args, "hide", None) or [])
         img = compose(spec, spec_path.parent)
     except (ThumbError, OSError) as e:
         print(e, file=sys.stderr)
@@ -504,7 +581,7 @@ def selftest() -> int:
             "vignette": 0.25,
         }
         (tmp / "r.json").write_text(json.dumps(spec), encoding="utf-8")
-        args = argparse.Namespace(spec=str(tmp / "r.json"), out=str(tmp / "out.png"), set=[f"hero={tmp / 'hero.png'}"])
+        args = argparse.Namespace(spec=str(tmp / "r.json"), out=str(tmp / "out.png"), set=[f"hero={tmp / 'hero.png'}"], base=None)
         assert cmd_compose(args) == 0
         out = Image.open(tmp / "out.png")
         assert out.size == (1920, 1080), out.size
@@ -524,6 +601,37 @@ def selftest() -> int:
         assert any("proporción" in w for w in warns) and any("saturación" in w for w in warns), warns
         sheet([tmp / "out.png", tmp / "icon.png"], tmp / "sheet.jpg", cols=2, cell_w=200)
         assert (tmp / "sheet.jpg").exists()
+        # Final sobre imagen de IA: fondo recortado a 16:9 desde el foco, sin renders (no pide {{hero}})
+        # y la flecha ubicada con un valor numérico por --set.
+        ia = Image.new("RGB", (1200, 900), (30, 160, 60))
+        ImageDraw.Draw(ia).rectangle((0, 0, 1200, 300), fill=(250, 40, 40))
+        ia.save(tmp / "ia.png")
+        spec["_defaults"] = {"you_x": "0.5"}
+        spec["final"] = {"focus": [0.5, 0.0], "grade": {"saturation": 1.1, "contrast": 1.05}}
+        spec["layers"][-1] = {"type": "arrow", "id": "you", "from": [0.2, 0.6], "to": ["{{you_x}}", 0.5]}
+        spec["layers"][2]["id"] = "rarity"
+        spec["ia"] = {"aspect": "16:9", "prompt": "{{scene}}"}
+        (tmp / "r.json").write_text(json.dumps(spec), encoding="utf-8")
+        args = argparse.Namespace(spec=str(tmp / "r.json"), out=str(tmp / "final.png"), set=["you_x=0.66"],
+                                  base=str(tmp / "ia.png"), at=["you=0.1,0.1,0.2,0.2"], hide=["rarity"])
+        assert cmd_compose(args) == 0
+        args.at = ["nope=0.1,0.1"]
+        assert cmd_compose(args) == 1
+        args.at = ["you=0.1,0.1"]
+        assert cmd_compose(args) == 1
+        args.at = ["you=0.1,0.1,0.2,0.2"]
+        assert cmd_compose(args) == 0
+        final = Image.open(tmp / "final.png").convert("RGB")
+        assert final.size == (1920, 1080), final.size
+        r, g, b = final.getpixel((40, 40))
+        assert r > 200 and g < 80, (r, g, b)  # foco arriba: la franja roja quedó en el borde superior
+        r, g, b = final.getpixel((int(0.7 * 1920), int(0.5 * 1080)))
+        assert g > r, (r, g, b)  # sin el render amarillo del boceto
+        try:
+            coerce_numbers({"x": "abc"})
+            raise AssertionError("tenía que fallar")
+        except ThumbError:
+            pass
     print("selftest OK")
     return 0
 
@@ -535,6 +643,9 @@ def main(argv=None) -> int:
     c.add_argument("spec")
     c.add_argument("--out")
     c.add_argument("--set", action="append", help="clave=valor para {{clave}} en la receta")
+    c.add_argument("--base", help="imagen de IA (tools/imagegen.py) como fondo: solo se agregan textos y flechas")
+    c.add_argument("--at", action="append", help="id=x,y (texto) o id=x0,y0,x1,y1 (flecha): mueve esa capa")
+    c.add_argument("--hide", action="append", help="id de una capa que no va")
     k = sub.add_parser("check")
     k.add_argument("image")
     k.add_argument("--kind", choices=sorted(KINDS), default="thumbnail")

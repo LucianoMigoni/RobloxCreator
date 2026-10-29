@@ -31,6 +31,10 @@ Detalle y fuentes:
 
 ## 2. Reglas de oro (todo juego las cumple)
 
+**Por encima de todo, el máximo estándar posible.** Cada pieza (imagen, ícono, sonido, efecto, mapa, UI) se pone al lado de la de los hits. Se elige la más llamativa, la que más hace entrar y la que más vende. Si no está al nivel de un hit, no está terminada.
+
+**Parecerse a los hits sin copiarlos.** Se usa todo lo que usan los hits: tácticas, mecánicas, estructura, ritmo, monetización y nivel de terminación. Lo propio es el arte, las criaturas, los nombres y el giro del concepto. Nunca una copia literal: Roblox recomienda menos los juegos "no únicos" y un reclamo de copyright los baja.
+
 1. **Primer minuto:**
    - Algo bueno pasa en los primeros 10 s.
    - A los 30 s el jugador ya ganó algo y ve un número que sube.
@@ -87,7 +91,7 @@ Referencia completa con capturas de los hits en `hits-2026.md` §3.7. Lo que lle
 - **Catálogo** (`assets/index.json`, `python assets/catalog.py find <palabra>`):
   - Miles de modelos 3D low-poly CC0, 127 de ellos animados.
   - Sonidos de UI, monedas, voces de anunciador ("level up", "you win"), 249 SFX de Roblox y 497 temas de música con licencia.
-  - Partículas y 179 íconos 3D (Fluent Emoji).
+  - Partículas y 179 íconos 3D (Fluent Emoji). El equipo los vio "muy emoji" (2026-10-29): se reemplazan por íconos y partículas estilo hit (`team/tareas.md`). Mientras tanto, solo como relleno de prueba.
 - **Generar lo que falta:** la criatura estrella con Meshy y la terminación en Blender (`conectores.md`). Todo asset nuevo se registra con su licencia en el mismo cambio.
 - **Plantilla:** `template/` trae la economía, la retención, la tienda, los boosts y la UI estilo hit. Cada juego copia la plantilla y elige su kit de género.
 
@@ -125,8 +129,9 @@ Referencia completa con capturas de los hits en `hits-2026.md` §3.7. Lo que lle
 
 ## 7. Vitrina: ícono, miniaturas, título y descripción
 
-Detalle, plantillas y herramienta en `skills/_shared/vitrina-hits.md`. Lo esencial:
+Detalle, plantillas y herramientas en `skills/_shared/vitrina-hits.md`. Lo esencial:
 
+- **Cómo se hacen:** la imagen con IA (Nano Banana Pro o GPT Image) a partir de referencias del juego: renders de los modelos y capturas del mapa. El texto va encima con `tools/thumbs.py` (`vitrina-hits.md` §6). Nunca emojis sobre un degradé: al lado de los hits parecen stickers.
 - **Ícono:** un sujeto gigante y brillante (el huevo, la mascota, el pez), el avatar con cara exagerada si entra, fondo de color saturado y limpio. Se tiene que leer a 150 px.
 - **Miniaturas (de 3 a 5 activas):** una escena con tensión o deseo ("robale el huevo al T-Rex dormido"):
   - Flecha y "YOU!" sobre el avatar, "!!" de peligro.
@@ -214,3 +219,8 @@ Para entender la intención detrás de cada regla:
   - Sumar un creador de campañas para publicitar los juegos: cómo funciona, qué campañas rinden, cuánto poner, cómo llevarlas.
   - Pensar las imágenes de juegos y campañas, y dejar todo listo para las mejores miniaturas y descripciones, para que la gente haga clic y entre.
 - **2026-10-28 (Leonel):** anotar todo lo que se define (cómo queremos los juegos y cómo tienen que ser) para que Claude tenga todo el contexto al construir. Este documento es esa respuesta.
+- **2026-10-29 (Leonel):**
+  - Las miniaturas estaban malas al lado de las de los hits: investigar cómo hacerlas bien, quizá con ChatGPT. Respuesta: IA con referencias del juego (`vitrina-hits.md` §6).
+  - Los íconos y las partículas se ven "muy emojis 3D": copiar los de los hits. Revisar también los sonidos y mandarle los mejores para opinar.
+  - "Buscar siempre el mayor estándar de calidad posible, enfocado en lo que buscamos: lo más cash grab, llamativo y que la gente entre." Es la primera regla de la sección 2.
+  - "Que se asemeje a los top hits, sin ser copias literales, pero que use todo lo que usan ellos en tácticas, mecánicas y estándares." Es la segunda.

@@ -25,7 +25,7 @@ powershell -ExecutionPolicy Bypass -File .\setup.ps1
 | Claude Code | La IA del hub | PowerShell: `irm https://claude.ai/install.ps1 \| iex` (o `winget install Anthropic.ClaudeCode`) |
 | Obsidian | Leer y editar las notas del repo | https://obsidian.md/download (ver **Obsidian** abajo) |
 | Blender 5.1 o más nuevo | Modelos 3D, renders para íconos y miniaturas (paso 6) | https://www.blender.org/download/ |
-| Node.js LTS | Corre el MCP de Meshy (paso 7) | `winget install OpenJS.NodeJS.LTS` |
+| Node.js LTS | Corre el MCP de Meshy (paso 7) y el render de modelos para miniaturas (paso 8) | `winget install OpenJS.NodeJS.LTS` |
 | uv | Corre el MCP de Blender desde la terminal (paso 6, forma B) | `winget install --id=astral-sh.uv -e` |
 
 Después de instalar Git, una vez: `git config --global user.name "Tu Nombre"` y `git config --global user.email "tu@mail"` (el mail de tu cuenta de GitHub), para que los commits salgan a tu nombre.
@@ -125,6 +125,15 @@ El audio tiene cupo: 100 subidas por mes con la cuenta verificada con ID, 10 sin
 ### Clave para campañas (Ads Manager)
 
 `tools/campaigns.py` crea y maneja campañas con la Ads API de Open Cloud, que es experimental y **gasta dinero real** (solo con `--yes`). Pide una clave **de tu usuario**, porque la API no acepta claves de grupo: Creator Dashboard → Open Cloud → API Keys, con los permisos `ad.campaign:read`, `ad.campaign:write` y `ad.billing:read`. Guardarla con `setx ROBLOX_ADS_API_KEY TU_CLAVE`. El medio de pago (tarjeta o ad credits) se carga en Ads Manager. Para medir las miniaturas, `tools/campaigns.py thumbs` usa la clave de analíticas (`ROBLOX_ANALYTICS_API_KEY`).
+
+### Imágenes con IA para miniaturas, ícono y anuncios
+
+`tools/imagegen.py` genera la imagen con Nano Banana Pro (Google) o GPT Image (OpenAI) a partir de referencias del juego (`skills/_shared/vitrina-hits.md` §6). Con una de las dos claves alcanza; el equipo usa Google por defecto.
+
+1. **Google (Nano Banana Pro):** https://aistudio.google.com/apikey → **Create API key** en un proyecto con facturación activa. Guardarla con `setx GEMINI_API_KEY TU_CLAVE`.
+2. **OpenAI (GPT Image 2.5, el de ChatGPT):** https://platform.openai.com/api-keys → **Create new secret key**. Guardarla con `setx OPENAI_API_KEY TU_CLAVE`. La consola puede pedir verificar la organización antes de usar los modelos de imagen.
+3. Probar sin gastar: `python tools/imagegen.py prompt skills/_shared/vitrina/recetas/icono-heroe.json --set "subject_desc=a golden egg" --set "colors=purple and gold"` imprime el prompt. Sin clave, ese prompt se pega en ChatGPT o Gemini con las referencias adjuntas.
+4. **Render de modelos** (referencias sin abrir Blender), una vez: `cd tools/render3d`, `npm install` y `npx playwright install chromium`.
 
 ## 9. ForgeGUI (evaluado: no se instala)
 

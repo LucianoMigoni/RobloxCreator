@@ -52,7 +52,7 @@ Base: `skills/_shared/anuncios-2026.md` (cómo funciona Ads Manager hoy, costos 
    - Genera etapas con fechas (cada empuje arranca un jueves), presupuesto por etapa, 10 espacios de creatividades con su hipótesis, LaunchData y reglas de corte.
    - Revisarlo con el usuario: presupuesto total, países, dispositivos y si conviene la revisión rápida de Kids y Select (100 000 Robux devolvibles) en vez de la etapa `kids`.
 3. **Creatividades:**
-   - Una por espacio, con `tools/thumbs.py` y las recetas de `skills/_shared/vitrina/recetas/`, usando renders y capturas del juego.
+   - Una por espacio: imagen con IA y referencias del juego (`tools/imagegen.py`, recetas de `skills/_shared/vitrina/recetas/`) y textos con `tools/thumbs.py compose --base` (`skills/_shared/vitrina-hits.md` §6).
    - `tools/thumbs.py check` sin avisos de tamaño. Hoja de contacto en el PR.
    - Subirlas a la biblioteca de Ads Manager (o con `tools/roblox_upload.py`) y anotar cada assetId en el `.json` (`creativeAssetIds`).
 4. **El juego listo para recibir:**

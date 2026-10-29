@@ -34,9 +34,9 @@ Verificado el 2026-10-25 en `/production/publishing/publish-games-and-places`, `
 ## Flujo
 1. **Puerta:** `docs/qa.md`, `docs/cumplimiento.md` y `docs/monetizacion.md` al día y sin bloqueantes. Si falta algo, volver al skill dueño.
 2. **Metadata** con `references/metadata.md`: nombre, descripción (primera oración y palabras clave), género y subgénero, y todo contra la spec (lo que se promete existe en el juego).
-3. **Icono:** receta `icono-heroe` (`tools/thumbs.py compose`) con un render propio, revisada a 512 y a 150 px (`tools/thumbs.py check --kind icon --previews …`). Assets del catálogo con `commercialUse: true` o generados y registrados (`CLAUDE.md`, catálogo).
+3. **Icono:** receta `icono-heroe`: imagen con IA (`tools/imagegen.py`) y el render del sujeto como referencia, revisada a 512 y a 150 px (`tools/thumbs.py check --kind icon --previews …`). Assets del catálogo con `commercialUse: true` o generados y registrados (`CLAUDE.md`, catálogo).
 4. **Miniaturas:** de 3 a 5, cada una con una hipótesis distinta: la mecánica, el número, la rareza, el premio y los amigos jugando.
-   - Se arman con las recetas de `skills/_shared/vitrina/recetas/`, con renders (Blender) y capturas reales (cámara libre de Studio: Shift + P en playtest solo).
+   - La imagen la genera la IA con la receta (`tools/imagegen.py`) y referencias del juego: renders de los modelos (`tools/render3d/` o Blender) y capturas reales (cámara libre de Studio: Shift + P en playtest solo). Los textos van encima con `tools/thumbs.py compose --base`. Método y filtro de calidad en `skills/_shared/vitrina-hits.md` §6.
    - Se revisan con `tools/thumbs.py check`.
    - Video de gameplay si se puede grabar uno auténtico.
 5. **Plan de lanzamiento** con fechas en `docs/lanzamiento.md`: testers, lanzamiento a 16+, evaluación para menores de 16 si el público lo pide, promoción (plan de `roblox-campaigns`) y primeras revisiones de métricas (`references/metadata.md`).

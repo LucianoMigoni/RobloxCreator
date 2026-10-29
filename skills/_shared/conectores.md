@@ -11,6 +11,9 @@ Evaluado el 2026-10-28 con la documentación oficial de cada herramienta (fuente
 | **ForgeGUI** | Bocetos de HUD y tienda; miniaturas | Opcional: su MCP (forgegui.net) por OAuth | Desde 16,90 USD/mes | Sin verificar | **No por ahora** (ver abajo) |
 | **Obsidian** | Notas del equipo; el repo es el vault | Ya configurado (obsidian-git) | Gratis | — | Mantener, sin MCP |
 | **Open Cloud** (Assets API) | Subir audio y modelos del catálogo a Roblox y anotar sus ids | `tools/roblox_upload.py` + `ROBLOX_OPEN_CLOUD_API_KEY` | Gratis, con cupos | Sí | Nuevo |
+| **Imágenes con IA** (Gemini y OpenAI) | Miniaturas, ícono y anuncios al nivel de los hits, con referencias del juego | `tools/imagegen.py` + `GEMINI_API_KEY` y/o `OPENAI_API_KEY` | 0,05 a 0,13 USD por imagen | Sí (términos de cada API) | **Conectar** (2026-10-29) |
+| **Higgsfield** (conector de claude.ai) | Las mismas imágenes desde Claude, sin clave en la máquina | Conector de la cuenta de claude.ai | Créditos: Nano Banana Pro 2 por imagen | Para publicar, plan pago | Opcional |
+| **Render de modelos** (`tools/render3d/`) | Referencias de los `.glb` del catálogo o de Meshy para la IA | Node + `npm install` en la carpeta | Gratis | Sí | Nuevo |
 
 ## De dónde sale cada asset (orden de preferencia)
 
@@ -76,7 +79,7 @@ Fuentes: README de https://github.com/meshy-dev/meshy-mcp-server (v0.6.6 en npm,
   - Para publicar en Roblox pide **cargarle una clave personal de Roblox: no hacerlo nunca**.
   - Su página de precios usa cuenta regresiva y "53% OFF": la misma urgencia que nosotros no usamos.
   - Los términos se cargan por JavaScript y no se pudieron leer. Los planes pagos dicen "Private commercial-use workflow" y "No watermarks".
-- **Por qué no hace falta:** Meshy `meshy_text_to_image` usa los mismos modelos de imagen que ofrece ForgeGUI (Nano Banana, GPT Image), con fondo transparente y licencia propia, dentro de la suscripción que ya pagamos. Para miniaturas, el kit del repo (render en Blender o Studio + composición) da más control.
+- **Por qué no hace falta:** Meshy `meshy_text_to_image` usa los mismos modelos de imagen que ofrece ForgeGUI (Nano Banana, GPT Image), con fondo transparente y licencia propia, dentro de la suscripción que ya pagamos. Para miniaturas, `tools/imagegen.py` usa esos mismos modelos directo, con nuestras recetas y referencias del juego (ver "Imágenes con IA").
 - **Si igual se quiere probar:**
   - Conectarlo desde https://forgegui.net/forgegui-mcp, sin claves en el repo.
   - Usar sus imágenes solo como boceto, o revisar cada una con búsqueda inversa de imágenes (Google Lens) antes de publicarla.
@@ -89,6 +92,56 @@ Fuentes: https://forgegui.net/forgegui-mcp, https://forgegui.net/pricing, https:
 - Ya está: el repo entero es el vault, `.obsidian/app.json` oculta código y binarios, y obsidian-git hace pull al abrir (`SETUP.md`).
 - Claude Code lee y escribe las notas directo en disco. Un MCP de Obsidian no agrega nada; los comunitarios piden además el plugin Local REST API con otra clave.
 - Uso: `team/`, `ROADMAP.md`, los `docs/` de cada juego y los planes de campaña (`games/<juego>/docs/campanas/`) se leen y comentan desde Obsidian.
+
+## Imágenes con IA: Gemini (Nano Banana) y OpenAI (GPT Image)
+
+- **Para qué:** miniaturas, ícono y creatividades de anuncios al nivel de los hits (`skills/_shared/vitrina-hits.md` §6). La IA recibe **referencias del juego** (renders y capturas) y respeta su diseño; los textos los pone `tools/thumbs.py`.
+- **Herramienta:** `tools/imagegen.py`.
+  - `prompt` arma el prompt desde la receta para pegarlo en ChatGPT o Gemini.
+  - `generate` llama a la API y guarda las variantes con su `.json` (prompt, modelo, referencias, costo).
+- **Modelos y precios** (documentación oficial, 2026-10-29):
+
+  | Proveedor | Modelo | Para qué | Precio |
+  |---|---|---|---|
+  | Google | `gemini-3-pro-image` (Nano Banana Pro) | Por defecto: el mejor resultado en la prueba; hasta 14 referencias | 0,134 USD por imagen 1K/2K, 0,24 a 4K (la mitad en batch) |
+  | Google | `gemini-nano-banana-2.1` | Más barato y rápido, para muchas variantes | 0,05 USD a 2K |
+  | OpenAI | `gpt-image-2.5-flare` | El de ChatGPT, rápido | Por tokens (30 USD por millón de salida): unos 0,04 en calidad media |
+  | OpenAI | `gpt-image-2.5-sunburst` | Edición más precisa (mantener una referencia) | Igual que Flare |
+  | OpenAI | `gpt-image-2` | Fondo transparente (íconos) | Igual |
+
+- **Claves:**
+  - Google: https://aistudio.google.com/apikey → variable `GEMINI_API_KEY`.
+  - OpenAI: https://platform.openai.com/api-keys → variable `OPENAI_API_KEY` (la consola puede pedir verificar la organización antes de usar GPT Image).
+  - Las dos van solo en variables de entorno (`SETUP.md`). `--max-usd` (3 por defecto) frena una corrida cara por error.
+- **Sin clave:** `imagegen.py prompt` + ChatGPT (Plus o más, GPT Image 2.5) o Gemini (Nano Banana Pro) en el navegador, adjuntando las referencias.
+- **Detalles de la API:**
+  - Gemini usa la Interactions API (`POST /v1beta/interactions`, desde mayo de 2026): la respuesta trae la imagen en `steps[].content[]`. Toda imagen lleva SynthID (marca de agua invisible).
+  - OpenAI: `POST /v1/images/generations`, o `/v1/images/edits` con `image[]` cuando hay referencias.
+    - Tamaños múltiplos de 16, hasta 3840 px.
+    - 2560×1440 es el 16:9 más grande sin ser experimental.
+    - El texto y la posición exacta siguen siendo puntos débiles: por eso los textos los pone `thumbs.py`.
+
+Fuentes: https://ai.google.dev/gemini-api/docs/image-generation, https://ai.google.dev/gemini-api/docs/pricing, https://developers.openai.com/api/docs/guides/image-generation, https://developers.openai.com/api/docs/changelog (2026-10-29).
+
+## Higgsfield (conector de claude.ai, opcional)
+
+- **Qué es:** plataforma de generación de imágenes y video con muchos modelos (Nano Banana Pro, GPT Image 2.5, FLUX 3). Leonel lo tiene como conector de claude.ai: Claude genera con `generate_image` sin tocar claves.
+- **Cómo se usa para la vitrina:**
+  - Subir las referencias con `media_upload` y `media_confirm`.
+  - Generar con `generate_image`, modelo `nano_banana_pro`, `aspect_ratio` 16:9 o 1:1, y el prompt de `imagegen.py prompt`.
+  - Bajar el resultado y seguir con `thumbs.py compose --base`.
+- **Costo (2026-10-29):**
+  - Nano Banana Pro a 2K: 2 créditos.
+  - GPT Image 2.5: de 1 a 2,75 créditos, pero **pide plan pago** (el plan gratis lo rechaza).
+  - El plan gratis trajo 6,7 créditos: alcanzó para 3 imágenes de prueba.
+- **Licencia:** lo hecho en el plan gratis queda como prueba (`skills/_shared/vitrina/ejemplos/`). Para publicar, plan pago o las APIs de arriba.
+
+## Render de modelos (`tools/render3d/`)
+
+- **Qué hace:** renderiza un `.glb` o `.gltf` a PNG con fondo transparente, con luz principal cálida y luz de contorno (three.js en Chromium sin pantalla). Es la referencia que la IA tiene que respetar, sin abrir Blender ni Studio, y funciona en las sesiones de Claude en la nube.
+- **Instalar una vez:** `cd tools/render3d && npm install && npx playwright install chromium`.
+- **Usar:** `node tools/render3d/render.cjs assets/3d/kenney/cube-pets/animal-lion.glb salida.png [--size 1024] [--yaw 30] [--pitch 14]`.
+- Para un render final (pose, materiales, luz de estudio) sigue siendo mejor Blender.
 
 ## Open Cloud: subir assets desde el repo
 

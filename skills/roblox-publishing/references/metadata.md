@@ -37,10 +37,10 @@ La traducción automática **no** cubre el texto dentro de imágenes (icono, min
 - [ ] Assets con licencia comercial (catálogo) y registrados si son nuevos.
 
 ## 3. Miniaturas
-Se arman con `tools/thumbs.py` y las recetas de `skills/_shared/vitrina/recetas/` (robo con tensión, número gigante, objeto gigante, rareza SECRET, +1, temporada), con renders y capturas del juego. Revisar cada una con `tools/thumbs.py check --kind thumbnail --previews …` y la hoja de contacto en el PR.
+Se hacen con las recetas de `skills/_shared/vitrina/recetas/` (robo con tensión, número gigante, objeto gigante, rareza SECRET, +1, temporada): la imagen con IA (`tools/imagegen.py`) a partir de renders y capturas del juego, y los textos con `tools/thumbs.py compose --base` (`skills/_shared/vitrina-hits.md` §6). Revisar cada una con `tools/thumbs.py check --kind thumbnail --previews …` y la hoja de contacto en el PR.
 
 | # | Hipótesis (qué la haría elegir) | Receta | Captura o render de | Estado |
-|---|---|---|---|
+|---|---|---|---|---|
 | 1 | La mecánica principal en acción | `robo-tension` / `mas-uno` | … | |
 | 2 | El número que impresiona (ganancia por segundo) | `numero-gigante` | … | |
 | 3 | La rareza (SECRET, la probabilidad) | `rareza-secret` | … | |

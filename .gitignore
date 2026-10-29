@@ -37,3 +37,7 @@ meshy_output/
 # Claves locales (nunca al repo): las claves van en variables de entorno
 .env
 *.env
+
+# Renderizador de modelos (npm install en tools/render3d)
+tools/render3d/node_modules/
+tools/render3d/package-lock.json

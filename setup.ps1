@@ -164,7 +164,7 @@ if (-not $mcpServer) {
 }
 
 # ---------------------------------------------------------------------------
-Write-Step '5. Blender, Meshy y Open Cloud (SETUP.md, pasos 6 a 8)'
+Write-Step '5. Blender, Meshy, Open Cloud e imagenes con IA (SETUP.md, pasos 6 a 8)'
 
 # Variables de entorno: setx las guarda en el usuario, pero la terminal abierta no las ve hasta reabrirla.
 function Test-EnvVar([string]$name) {
@@ -195,6 +195,12 @@ else { Write-Missing 'falta ROBLOX_CREATOR_GROUP_ID (o ROBLOX_CREATOR_USER_ID) p
 # La clave de anuncios gasta dinero y es de cada usuario: se informa, no cuenta como pendiente.
 if (Test-EnvVar 'ROBLOX_ADS_API_KEY') { Write-Ok 'ROBLOX_ADS_API_KEY definida (campanas por API)' }
 else { Write-Info 'ROBLOX_ADS_API_KEY no esta definida: hace falta solo para crear campanas por API (SETUP.md paso 8)' }
+# Miniaturas, icono y anuncios con IA: alcanza con una de las dos claves.
+$imageKeys = @('GEMINI_API_KEY', 'OPENAI_API_KEY') | Where-Object { Test-EnvVar $_ }
+if ($imageKeys) { Write-Ok ("imagenes con IA: " + ($imageKeys -join ', ')) }
+else { Write-Missing 'falta GEMINI_API_KEY u OPENAI_API_KEY para las miniaturas con IA (SETUP.md paso 8)' }
+if (Test-Path (Join-Path $root 'tools\render3d\node_modules')) { Write-Ok 'render de modelos instalado (tools/render3d)' }
+else { Write-Info 'render de modelos sin instalar: cd tools/render3d; npm install; npx playwright install chromium (SETUP.md paso 8)' }
 
 # ---------------------------------------------------------------------------
 Write-Step '6. Chequeo del hub: tools/check.py, el mismo que corre GitHub (SETUP.md, paso 12)'

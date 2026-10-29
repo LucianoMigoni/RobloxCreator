@@ -1,14 +1,18 @@
 {
   "_receta": "Objeto deseado gigante (huevo, cofre, pez dorado) en el centro con rayos y brillo; el avatar lo levanta. Sirve para miniatura y, recortada, para ícono.",
-  "_valores": "hero = objeto, avatar = avatar levantándolo, label = 1-2 palabras (EPIC EGG)",
+  "_valores": "Boceto: hero = objeto, avatar = avatar levantándolo. Texto: label = 1-2 palabras (EPIC EGG). IA (en inglés): prize_desc, world_desc.",
   "kind": "thumbnail",
   "background": {"gradient": ["#ffb347", "#ff5f6d"], "angle": 90},
   "rays": {"center": [0.5, 0.42], "count": 20, "color": "#fff3b0", "opacity": 0.2},
   "layers": [
-    {"type": "image", "path": "{{hero}}", "x": 0.5, "y": 0.42, "height": 0.62,
-     "glow": {"color": "#fff27a", "radius": 0.1, "opacity": 0.95}, "outline": {"color": "#ffffff", "width": 0.018}},
+    {"type": "image", "path": "{{hero}}", "x": 0.5, "y": 0.42, "height": 0.62, "glow": {"color": "#fff27a", "radius": 0.1, "opacity": 0.95}, "outline": {"color": "#ffffff", "width": 0.018}},
     {"type": "image", "path": "{{avatar}}", "x": 0.5, "y": 0.8, "height": 0.4, "shadow": {"offset": [0, 0.03]}},
-    {"type": "text", "text": "{{label}}", "font": "luckiest-guy", "size": 0.11, "x": 0.2, "y": 0.14, "fill": "rainbow", "rotate": 6}
+    {"type": "text", "text": "{{label}}", "font": "luckiest-guy", "size": 0.11, "x": 0.2, "y": 0.14, "fill": "rainbow", "rotate": 6, "id": "label"}
   ],
-  "vignette": 0.22
+  "vignette": 0.22,
+  "ia": {
+    "aspect": "16:9",
+    "prompt": "In the center, {{prize_desc}}, gigantic, glowing and bursting with light rays and sparkles. Below it, {{AVATAR}} lifts it above their head with both arms, amazed (huge eyes, open mouth). Setting: {{world_desc}}, with radiant sunburst light behind the object. The object fills the center ~55% of the frame."
+  },
+  "final": {"focus": [0.5, 0.5], "grade": {"saturation": 1.06, "contrast": 1.05}}
 }
