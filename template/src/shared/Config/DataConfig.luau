@@ -20,11 +20,32 @@ local DataConfig = {
 	CLOSE_TIMEOUT_SECONDS = 25, -- BindToClose da 30 s en total
 
 	-- Datos de un jugador nuevo. Agregar campos acá es seguro: Reconcile los completa en jugadores existentes.
+	-- Los kits agregan los suyos en `kits[<nombre>]` con DataService.registerKit (antes de start).
 	DEFAULT_DATA = {
-		coins = 0,
+		currencies = {} :: { [string]: number }, -- EconomyConfig.CURRENCIES; DataService completa el saldo inicial
 		inventory = {} :: { string },
-		onboardingStep = 0, -- último paso del embudo completado (OnboardingConfig.STEPS)
 		processedReceipts = {} :: { [string]: number }, -- PurchaseId → hora: compras de Robux ya otorgadas
+		firstPlayedAt = 0,
+		lastSeen = 0, -- os.time() del servidor al salir (ganancias sin conexión)
+		lastIncome = 0, -- plata por segundo al salir
+		objective = { index = 1, progress = 0 },
+		daily = { lastClaimDay = -1, streak = 0 },
+		playtime = { day = -1, seconds = 0, claimed = {} :: { number } },
+		quests = { day = -1, ids = {} :: { string }, progress = {} :: { [string]: number }, claimed = {} :: { [string]: boolean }, bonusClaimed = false },
+		spins = { tickets = 0, nextFreeAt = 0 },
+		codes = {} :: { [string]: boolean },
+		groupClaimed = false,
+		referralRewarded = false,
+		rebirths = 0,
+		index = {} :: { [string]: boolean }, -- lo descubierto: "unidad|variante"
+		boosts = {} :: { [string]: number }, -- impulso personal → hora en que termina
+		boughtOnce = {} :: { [string]: boolean }, -- productos de una sola vez ya comprados
+		giftedPasses = {} :: { [string]: boolean }, -- pases que otro jugador le regaló
+		pendingOffline = 0, -- ganancias sin conexión de la última entrada (para la oferta de duplicarlas)
+		campaignCodes = {} :: { [string]: boolean }, -- LaunchData de campañas y links ya premiados
+		giftTokens = {} :: { [string]: number }, -- regalos de pases pagados que todavía no se entregaron
+		settings = { music = true, sfx = true, lowGraphics = false }, -- Ajustes del jugador (SettingsService)
+		kits = {} :: { [string]: any },
 	},
 }
 

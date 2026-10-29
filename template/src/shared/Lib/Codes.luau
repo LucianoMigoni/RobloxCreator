@@ -6,6 +6,7 @@ local Codes = {}
 
 export type Code = {
 	expiresAt: number?, -- os.time UTC; nil = no vence
+	reward: any?, -- lo que da (Types.Reward); acá no se mira
 }
 
 function Codes.normalize(text: string): string

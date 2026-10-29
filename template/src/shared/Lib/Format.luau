@@ -101,6 +101,21 @@ function Format.duration(seconds: number): string
 	return string.format("%ds", s)
 end
 
+-- Duración corta para premios y botones: "2d", "1h", "1h 30m", "15m", "45s" (sin ceros de relleno).
+function Format.short(seconds: number): string
+	local s = math.max(0, math.floor(seconds))
+	local d, h, m = s // 86400, (s % 86400) // 3600, (s % 3600) // 60
+	s %= 60
+	if d > 0 then
+		return if h > 0 then string.format("%dd %dh", d, h) else string.format("%dd", d)
+	elseif h > 0 then
+		return if m > 0 then string.format("%dh %dm", h, m) else string.format("%dh", h)
+	elseif m > 0 then
+		return if s > 0 then string.format("%dm %ds", m, s) else string.format("%dm", m)
+	end
+	return string.format("%ds", s)
+end
+
 -- "09:20:37" o "00:17", como los relojes de eventos.
 function Format.clock(seconds: number): string
 	local s = math.max(0, math.floor(seconds))

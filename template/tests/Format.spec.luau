@@ -51,4 +51,13 @@ TestKit.run("Format", {
 		equal(Format.clock(17), "00:17")
 		equal(Format.duration(-5), "0s")
 	end,
+
+	["duración corta de premios"] = function()
+		equal(Format.short(3600), "1h")
+		equal(Format.short(5400), "1h 30m")
+		equal(Format.short(900), "15m")
+		equal(Format.short(45), "45s")
+		equal(Format.short(2 * 86400), "2d")
+		equal(Format.short(90), "1m 30s")
+	end,
 })

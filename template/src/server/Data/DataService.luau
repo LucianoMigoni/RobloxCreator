@@ -12,6 +12,7 @@ local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local DataConfig = require(ReplicatedStorage.Shared.Config.DataConfig)
+local EconomyConfig = require(ReplicatedStorage.Shared.Config.EconomyConfig)
 local Reconcile = require("./Reconcile")
 local SessionLock = require("./SessionLock")
 
@@ -35,6 +36,11 @@ DataService.StateChanged = stateChanged.Event
 
 local store: DataStore? = nil
 local started = false
+-- Valores por defecto efectivos: DEFAULT_DATA + saldo inicial de cada moneda + datos de los kits.
+local defaults: { [string]: any } = Reconcile.deepCopy(DataConfig.DEFAULT_DATA) :: any
+for id, currency in EconomyConfig.CURRENCIES do
+	defaults.currencies[id] = currency.start
+end
 
 local function keyFor(player: Player): string
 	return DataConfig.KEY_PREFIX .. player.UserId
@@ -81,7 +87,7 @@ local function load(player: Player, profile: Profile)
 				return nil
 			end
 			local base = if typeof(current) == "table" then Reconcile.deepCopy(current) else {}
-			loaded = Reconcile.fill(base, DataConfig.DEFAULT_DATA) :: Data
+			loaded = Reconcile.fill(base, defaults) :: Data
 			return loaded, userIds, SessionLock.apply(metadata, profile.lockId, now, false)
 		end)
 		if not ok then
@@ -89,6 +95,9 @@ local function load(player: Player, profile: Profile)
 			return
 		end
 		if status == "ok" and loaded then
+			if loaded.firstPlayedAt == 0 then
+				loaded.firstPlayedAt = os.time()
+			end
 			profile.data = loaded
 			profile.state = "loaded"
 			return
@@ -144,7 +153,7 @@ end
 
 local function onPlayerAdded(player: Player)
 	local profile: Profile = {
-		data = Reconcile.deepCopy(DataConfig.DEFAULT_DATA),
+		data = Reconcile.deepCopy(defaults) :: Data,
 		state = "loading",
 		lockId = HttpService:GenerateGUID(false),
 		saving = false,
@@ -187,6 +196,13 @@ local function onClose()
 	while pending > 0 and os.clock() < deadline do
 		task.wait()
 	end
+end
+
+-- Un kit agrega sus datos en data.kits[name]. Llamar antes de start(): con jugadores ya cargados no se
+-- completarían sus datos.
+function DataService.registerKit(name: string, kitDefaults: { [string]: any })
+	assert(not started, "DataService.registerKit después de start: registrar el kit antes")
+	defaults.kits[name] = Reconcile.deepCopy(kitDefaults)
 end
 
 function DataService.start()

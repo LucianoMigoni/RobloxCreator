@@ -3,12 +3,21 @@
   python tools/roblox_upload.py upload <archivo> [<archivo>...] --lock games/<juego>/assets.lock.json
          [--name "Nombre"] [--description "..."] [--group-id ID | --user-id ID] [--dry-run]
   python tools/roblox_upload.py status <operationId>
+  python tools/roblox_upload.py image-id <archivo.png> <imageId> --lock games/<juego>/assets.lock.json
+  python tools/roblox_upload.py luau --lock games/<juego>/assets.lock.json --out games/<juego>/src/shared/Config/AssetIds.luau
   python tools/roblox_upload.py selftest
 
 - upload: sube cada archivo, espera a que Roblox termine de procesarlo y guarda su assetId en el
   archivo de bloqueo. Si el archivo no cambió desde la última subida (mismo SHA-256), no lo sube de
   nuevo: el cupo de audio es de 100 por mes con ID verificado.
 - status: consulta una operación pendiente (por si la moderación tardó más que la espera).
+- luau: escribe Config/AssetIds.luau del juego con los ids por nombre de archivo: íconos
+  (assets/ui/...), efectos y voces (assets/audio/..., las voces en carpetas "voices"), texturas de
+  partículas (carpetas "vfx") y modelos. La UI y AudioConfig los usan solos.
+- image-id: anota el id de IMAGEN de una imagen subida. Open Cloud sube las imágenes como Decal y el id
+  de Decal no sirve en ImageLabel.Image (DevForum 3594046): `luau` imprime un script para la barra de
+  comandos de Studio (o run_code del MCP) que resuelve cada Decal con InsertService:LoadAsset y lee su
+  Texture. También sirve el id que da el Asset Manager de Studio o upload_image del MCP.
 
 La clave va SOLO en la variable de entorno ROBLOX_OPEN_CLOUD_API_KEY (Creator Dashboard → Open Cloud →
 API Keys, permiso "assets" de lectura y escritura). El dueño de lo subido sale de --group-id/--user-id
@@ -230,6 +239,96 @@ def cmd_upload(args) -> int:
     return 1 if failed else 0
 
 
+def asset_groups(lock: dict) -> tuple:
+    """(grupos para AssetIds, decals sin id de imagen). Agrupa por tipo y carpeta del archivo."""
+    groups = {"icons": {}, "sounds": {}, "voices": {}, "vfx": {}, "models": {}}
+    pending = []
+    for rel_path, entry in sorted(lock.get("assets", {}).items()):
+        name = Path(rel_path).stem
+        parts = set(Path(rel_path).parts)
+        kind = entry.get("assetType")
+        if kind == "Audio" and entry.get("assetId"):
+            groups["voices" if any("voice" in part for part in parts) else "sounds"][name] = entry["rbxassetid"]
+        elif kind == "Decal" and entry.get("assetId"):
+            if entry.get("imageId"):
+                groups["vfx" if "vfx" in parts else "icons"][name] = f"rbxassetid://{entry['imageId']}"
+            else:
+                pending.append((rel_path, entry["assetId"]))
+        elif kind == "Model" and entry.get("assetId"):
+            groups["models"][name] = entry["rbxassetid"]
+    return groups, pending
+
+
+def render_luau(groups: dict) -> str:
+    lines = [
+        "--!strict",
+        "-- Ids de Roblox de los assets propios del juego, por nombre de archivo sin extensión. Lo escribe",
+        "-- `python tools/roblox_upload.py luau` desde games/<juego>/assets.lock.json: no editar a mano.",
+        "-- Lo que falta: Icons muestra el emoji y AudioConfig usa los sonidos de la biblioteca de Roblox.",
+        "",
+        "return {",
+    ]
+    for group in ("icons", "sounds", "voices", "vfx", "models"):
+        items = groups.get(group, {})
+        if not items:
+            lines.append(f"	{group} = {{}} :: {{ [string]: string }},")
+            continue
+        lines.append(f"	{group} = {{")
+        for name, value in sorted(items.items()):
+            key = name if name.replace("_", "a").isalnum() and not name[0].isdigit() else f'["{name}"]'
+            lines.append(f'		{key} = "{value}",')
+        lines.append("	} :: { [string]: string },")
+    lines.append("}")
+    return "\n".join(lines) + "\n"
+
+
+def resolver_script(pending: list) -> str:
+    ids = ", ".join(str(asset_id) for _, asset_id in pending)
+    return (
+        "local InsertService = game:GetService(\"InsertService\")\n"
+        f"for _, id in {{ {ids} }} do\n"
+        "\tlocal ok, model = pcall(InsertService.LoadAsset, InsertService, id)\n"
+        "\tlocal decal = ok and model:FindFirstChildWhichIsA(\"Decal\", true)\n"
+        "\tprint(id, decal and decal.Texture or \"(no se pudo cargar)\")\n"
+        "\tif ok then model:Destroy() end\n"
+        "end\n"
+    )
+
+
+def cmd_luau(args) -> int:
+    lock = load_lock(Path(args.lock))
+    groups, pending = asset_groups(lock)
+    out = Path(args.out)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(render_luau(groups), encoding="utf-8")
+    counts = ", ".join(f"{len(v)} {k}" for k, v in groups.items() if v) or "nada todavía"
+    print(f"  [ok] {out}: {counts}")
+    if pending:
+        print(f"  {len(pending)} imágenes subidas como Decal todavía sin id de imagen (ImageLabel no usa el de Decal).")
+        print("  En Studio (barra de comandos o run_code del MCP) correr:\n")
+        print(resolver_script(pending))
+        print("  y anotar cada Texture con: python tools/roblox_upload.py image-id <archivo> <id> --lock ...")
+    return 0
+
+
+def cmd_image_id(args) -> int:
+    lock_path = Path(args.lock)
+    lock = load_lock(lock_path)
+    key = rel(Path(args.file))
+    entry = lock["assets"].get(key)
+    if not entry:
+        print(f"{key} no está en {lock_path}: subirlo primero.", file=sys.stderr)
+        return 2
+    image_id = str(args.image_id).replace("rbxassetid://", "").strip()
+    if not image_id.isdigit():
+        print(f"id inválido: {args.image_id}", file=sys.stderr)
+        return 2
+    entry["imageId"] = image_id
+    save_lock(lock_path, lock)
+    print(f"  [ok] {key}: imagen rbxassetid://{image_id}")
+    return 0
+
+
 def cmd_status(args) -> int:
     key = os.environ.get(KEY_ENV, "")
     if not key:
@@ -310,6 +409,23 @@ def selftest() -> int:
         finally:
             os.chdir(cwd)
 
+    # AssetIds: audio directo, imágenes solo con id de imagen, voces y partículas por carpeta.
+    lock = {"assets": {
+        "assets/audio/hit-sfx/coin_pickup_A.mp3": {"assetType": "Audio", "assetId": "11", "rbxassetid": "rbxassetid://11"},
+        "assets/audio/hit-voices/deep_legendary.mp3": {"assetType": "Audio", "assetId": "12", "rbxassetid": "rbxassetid://12"},
+        "assets/ui/hit-icons/cash.png": {"assetType": "Decal", "assetId": "13", "rbxassetid": "rbxassetid://13", "imageId": "113"},
+        "assets/ui/hit-icons/gem.png": {"assetType": "Decal", "assetId": "14", "rbxassetid": "rbxassetid://14"},
+        "assets/vfx/hit/sparkle.png": {"assetType": "Decal", "assetId": "15", "rbxassetid": "rbxassetid://15", "imageId": "115"},
+        "assets/3d/pets/dragon.glb": {"assetType": "Model", "assetId": "16", "rbxassetid": "rbxassetid://16"},
+    }}
+    groups, pending = asset_groups(lock)
+    assert groups["sounds"] == {"coin_pickup_A": "rbxassetid://11"} and groups["voices"] == {"deep_legendary": "rbxassetid://12"}
+    assert groups["icons"] == {"cash": "rbxassetid://113"} and groups["vfx"] == {"sparkle": "rbxassetid://115"}, groups
+    assert groups["models"] == {"dragon": "rbxassetid://16"} and pending == [("assets/ui/hit-icons/gem.png", "14")]
+    text = render_luau(groups)
+    assert 'cash = "rbxassetid://113",' in text and "voices = {" in text and text.startswith("--!strict")
+    assert "{ 14 }" in resolver_script(pending)
+
     slept = []
     op = wait_operation("operations/x", "k", lambda *a, **k: {"done": False}, timeout=3, sleep=slept.append)
     assert op == {"done": False} and sum(slept) >= 3, slept
@@ -330,12 +446,23 @@ def main(argv=None) -> int:
     u.add_argument("--dry-run", action="store_true", help="muestra qué subiría, sin subir")
     s = sub.add_parser("status")
     s.add_argument("operation")
+    lu = sub.add_parser("luau")
+    lu.add_argument("--lock", required=True)
+    lu.add_argument("--out", required=True, help="games/<juego>/src/shared/Config/AssetIds.luau")
+    im = sub.add_parser("image-id")
+    im.add_argument("file")
+    im.add_argument("image_id")
+    im.add_argument("--lock", required=True)
     sub.add_parser("selftest")
     args = parser.parse_args(argv)
     if args.cmd == "upload":
         return cmd_upload(args)
     if args.cmd == "status":
         return cmd_status(args)
+    if args.cmd == "luau":
+        return cmd_luau(args)
+    if args.cmd == "image-id":
+        return cmd_image_id(args)
     return selftest()
 
 

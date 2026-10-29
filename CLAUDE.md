@@ -104,9 +104,9 @@ games/<juego>/
 ├── default.project.json      # Rojo
 ├── rokit.toml                # versión de Rojo (igual a la de la raíz)
 ├── src/
-│   ├── server/               # ServerScriptService: Main.server.luau arranca Data, Net, Economy, Shop, Onboarding
-│   ├── client/               # StarterPlayerScripts: Main.client.luau + Controllers/ (UI, input, cámara)
-│   └── shared/               # ReplicatedStorage: Config/, UIKit, Net, Types
+│   ├── server/               # ServerScriptService: Main.server.luau arranca datos, economía, impulsos, retención, tienda, social y el kit
+│   ├── client/               # StarterPlayerScripts: Main.client.luau + Controllers/ (HUD y ventanas) + UI/ (Juice, Sound, Effects) + Kits/
+│   └── shared/               # ReplicatedStorage: Config/, Lib/, UIKit, Icons, Net, Types
 ├── tests/                    # lógica pura probada con el CLI de Luau (la corre tools/check.py)
 └── docs/                     # spec.md, decisiones.md, métricas, auditorías
 ```

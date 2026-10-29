@@ -2,7 +2,7 @@
 -- Ítems del jugador (ids de ShopConfig.ITEMS). Solo el servidor los cambia.
 
 local DataService = require("../Data/DataService")
-local PlayerStateService = require("../PlayerStateService")
+local Signals = require("../Signals")
 
 local InventoryService = {}
 
@@ -18,7 +18,7 @@ function InventoryService.add(player: Player, itemId: string): boolean
 		return false
 	end
 	table.insert(data.inventory, itemId)
-	PlayerStateService.push(player)
+	Signals.dirty(player)
 	return true
 end
 
