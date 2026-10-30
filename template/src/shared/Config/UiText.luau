@@ -144,4 +144,12 @@ return {
 	PLOT_LOCK = "LOCK",
 	PLOT_LOCKED = "LOCKED %s",
 	PLOT_DEFAULT = "Base",
+
+	-- Armador: prompts del mundo y avisos
+	PROMPT_BUY = "Buy",
+	PROMPT_STEAL = "Steal",
+	PROMPT_SELL = "Sell All",
+	PROMPT_MERGE = "Merge",
+	PROMPT_OPEN = "Open",
+	STEAL_ANNOUNCE = "%s stole %s from %s!",
 }

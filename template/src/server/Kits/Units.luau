@@ -20,6 +20,7 @@ local IndexService = require("../Retention/IndexService")
 local AnnounceService = require("../Social/AnnounceService")
 local Signals = require("../Signals")
 local Bonus = require("./Bonus")
+local Gates = require("./Gates")
 
 export type Unit = KitTypes.Unit
 
@@ -84,6 +85,11 @@ end
 
 function Units.def(kind: string): KitTypes.UnitDef?
 	return defs[kind]
+end
+
+-- Todas las definiciones por id (para los sorteos de Lib/UnitMath.entries).
+function Units.defs(): { [string]: KitTypes.UnitDef }
+	return defs
 end
 
 -- Rarezas en orden (RarityConfig.TIERS), mutaciones y tamaños como los usa Lib/UnitMath.
@@ -350,7 +356,18 @@ function Units.start(_recipe: KitTypes.KitConfig)
 					table.insert(keys, UnitMath.key(def.id, nil))
 				end
 			end
-			table.insert(list, { id = zone.id, name = zone.name, keys = keys, reward = zone.reward, image = zone.image })
+			local id = zone.id
+			table.insert(list, {
+				id = id,
+				name = zone.name,
+				keys = keys,
+				reward = zone.reward,
+				image = zone.image,
+				-- Con el bloque Zones, la zona del índice se abre con la zona del mundo del mismo id.
+				isUnlocked = function(player: Player): boolean
+					return Gates.open(player, id)
+				end,
+			})
 		end
 		IndexService.setZones(list)
 	end

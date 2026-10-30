@@ -23,8 +23,10 @@ local KitCheck = require(ReplicatedStorage.Shared.Lib.KitCheck)
 local Types = require(ReplicatedStorage.Shared.Types)
 local PlayerStateService = require("../PlayerStateService")
 local RewardService = require("../Rewards/RewardService")
+local Equip = require("./Equip")
 local KitFx = require("./KitFx")
 local Plots = require("./Plots")
+local Sell = require("./Sell")
 local Units = require("./Units")
 
 -- Entrega un premio del bloque: (jugador, valor después del prefijo, cantidad) → si pudo y la línea
@@ -46,6 +48,8 @@ local Kits = {}
 local BLOCKS: { Block } = {
 	{ key = "units", init = Units.init, start = Units.start, snapshot = Units.snapshot, items = Units.items },
 	{ key = "plots", init = Plots.init, start = Plots.start, snapshot = Plots.snapshot, income = Plots.income },
+	{ key = "equip", init = Equip.init, start = Equip.start, snapshot = Equip.snapshot },
+	{ key = "sell", init = Sell.init, start = Sell.start, snapshot = Sell.snapshot },
 }
 
 local active: { Block } = {}

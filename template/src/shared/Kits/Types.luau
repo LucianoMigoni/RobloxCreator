@@ -134,21 +134,32 @@ export type RollsConfig = {
 	luckStat: string?, -- estadística de suerte de BoostService ("Luck")
 }
 
+-- Lo que sale de una tirada (para la animación del cliente) y lo que ve del bloque (state.kit.rolls).
+export type RollResult = { uid: number, kind: string, variant: string?, size: string?, isNew: boolean }
+export type RollsState = { nextFree: { [string]: number } }
+
 export type MergeConfig = {
 	mode: "tier" | "variant", -- tier: N iguales → el siguiente nivel; variant: N normales → 1 dorado...
 	count: number, -- cuántos iguales hacen falta
 	mutationChance: number?, -- tier: chance de que el resultado salga con mutación
 	variantChain: { string }?, -- variant: "Normal" → "Gold" → "Diamond" → "Rainbow"
 	seconds: number?, -- el resultado tarda en estar listo ("Finish Now" lo adelanta)
-	machine: boolean?, -- máquina en el mundo (KitMergeMachine); el botón del inventario está siempre
+	machine: boolean?, -- hay que estar en la máquina del mundo (KitMergeMachine) para fusionar
 }
+
+-- Lo que ve el cliente del bloque Merge (state.kit.merge): la fusión que se está haciendo.
+export type MergeState = { pending: { kind: string, variant: string?, size: string?, readyAt: number }? }
 
 export type SellConfig = {
 	currency: string?, -- moneda que se cobra (la principal si falta)
 	multiplier: number?,
 	keepFrom: string?, -- "Sell all" no vende desde esta rareza
 	stat: string?, -- multiplicador de BoostService que se aplica (Money)
+	anywherePass: string?, -- pase para vender desde cualquier lado (sin él, en el puesto KitSellPad)
 }
+
+-- Lo que ve el cliente del bloque Sell (state.kit.sell).
+export type SellState = { anywhere: boolean }
 
 export type EquipConfig = {
 	slots: number,
@@ -158,6 +169,9 @@ export type EquipConfig = {
 	slotPass: string?, -- pase que suma espacios
 	passSlots: number?,
 }
+
+-- Lo que ve el cliente del bloque Equip (state.kit.equip).
+export type EquipState = { slots: number, power: number }
 
 export type StatDef = {
 	id: string, -- "Speed", "Strength", "Taps"

@@ -588,6 +588,7 @@ local function checkSell(ctx: Ctx)
 	currency(ctx, "sell.currency", sell.currency)
 	optionalNumber(ctx, "sell.multiplier", sell.multiplier, 0)
 	rarity(ctx, "sell.keepFrom", sell.keepFrom)
+	pass(ctx, "sell.anywherePass", sell.anywherePass)
 	local units = ctx.recipe.units
 	if units then
 		local any = false

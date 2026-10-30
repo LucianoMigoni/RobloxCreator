@@ -6,6 +6,10 @@ Para la IA (o persona) que retome el trabajo desde un push, por ejemplo el Claud
 
 ## 0. Cómo retomar, paso a paso
 
+**Para la persona que retoma (por ejemplo, en el Claude de Luciano):** abrir Claude Code en la carpeta del repo y escribirle: *"Leé `team/traspaso.md` y seguí con el plan desde donde quedó, igual que se venía trabajando."* Nada más: este archivo tiene el resto. Si es Claude Code en Windows, la primera vez correr `powershell -ExecutionPolicy Bypass -File .\setup.ps1` (`SETUP.md`).
+
+**Para la IA que retoma:**
+
 1. **Rama:** `git fetch origin && git switch leonelblumberg/quirky-dijkstra-2kxnwz && git pull`. Todo el trabajo está en esa rama: `main` sigue en el primer commit, sin ningún merge. Que una sola persona a la vez pushee a esta rama; si se trabaja en paralelo, sacar `luciano/<tarea>` desde ella.
 2. **Leer, en este orden:**
    1. este archivo;
@@ -22,7 +26,8 @@ Para la IA (o persona) que retome el trabajo desde un push, por ejemplo el Claud
    - anotar las decisiones en `team/decisiones.md`.
 
    Después, push.
-6. **Tabla de tareas:** el usuario quiere verla. En Claude Code, con `TaskCreate` y `TaskUpdate`, una tarea por fila de la sección 4, y actualizarla mientras se trabaja.
+6. **Tabla de tareas:** el usuario quiere verla. En Claude Code, al empezar, crear con `TaskCreate` una tarea por fila de la sección 4 (con su número y estado: las ✅ como completadas) y actualizarla con `TaskUpdate` mientras se trabaja. Si pide "enumerame las tareas", mostrar solo la lista, sin comentarios.
+7. **Dónde quedó:** la sección 4 marca la próxima tarea (la primera que no tiene ✅) y la sección 7 tiene el diseño ya decidido de los bloques que faltan del hito 2. Seguir ese diseño: es el que se venía usando.
 
 ## 1. El objetivo
 
@@ -49,9 +54,13 @@ Dicho en el chat, en sus palabras cuando importa:
   - "Buscá siempre el mayor estándar de calidad (lo más cash grab, llamativo y buscando que la gente entre)."
 - **Copiar de los hits:** "Que se asemeje a los top hits, no siendo copias literales pero que use todo lo que usan ellos en tácticas, mecánicas, estándares" y "no necesariamente evitando copiarlos". Se copia el diseño entero; los assets con dueño (arte, nombres, modelos, sonidos) se hacen propios.
 - **Avisos en el trabajo:**
-  - Mostrar la tabla de tareas: "pone el cuadro de las tareas", "me gusta verla".
-  - Pushear después de cada hito y dejar este traspaso al día.
+  - Mostrar la tabla de tareas: "pone el cuadro de las tareas", "me gusta verla". Si pide "enumerame (únicamente) las tareas", solo la lista.
+  - Pushear después de cada hito ("Acordate de los push en los hitos") y dejar este traspaso al día en el mismo commit.
+  - Mientras trabaja, avisarle cada tanto en una línea qué se está haciendo.
+  - "Cuando termines algo importante o que tenga sentido mostrar, mandame alguna pequeña foto o algo para ver. Solo si es relevante y tiene sentido": al terminar algo visual (UI de los bloques, mapa, juego de prueba), mandar una imagen chica (render con Playwright o captura). Lo que no se ve (servidor, lógica) no lleva imagen.
   - Cuando pide una muestra, mandar imágenes reales (renders o capturas), no descripciones.
+  - **Cortes:** si dice "terminá este hito y no sigas", cortar apenas se suba el hito o la parte en curso, dejar este traspaso completo y no empezar nada más (el 2026-10-30 se siguió de más y lo marcó: "¿no tenés que cortar cuando esté el hito que dijimos?"). Si no queda claro dónde cortar, preguntar.
+- **Lo que depende de las personas** (claves, conectores, cuentas, pruebas) se mantiene en `team/pendientes.md`: "Añadí también las cosas que hay que hacer después, qué API keys necesitás (como ChatGPT y Google), qué conectores hay que poner".
 - **El juego de prueba de Luciano no les gustó:** "lo de luciano no nos había gustado", "seguí trabajando con lo que teníamos", "acordate que la idea era rehacerlo". No se usa su código como base: `games/prueba` se rehace con el armador.
 - **Idioma:**
   - Hablarle en español.
@@ -102,6 +111,9 @@ Estado: ✅ hecho · 🔄 en curso (sección 4) · 👤 depende de una persona.
 - 🔄 Traspaso completo y push en cada hito → este archivo.
 - ✅ "Añadí también las cosas que hay que hacer después: qué API keys necesitás (como ChatGPT y Google), qué conectores hay que poner, etc." → `team/pendientes.md` (tarea #71; se repite en el reporte final).
 - ✅ "Enumerame (únicamente) las tareas" → cuando pida la tabla, mostrar solo la lista de tareas, sin comentarios.
+- ✅ "Cuando termines algo importante... mandame alguna pequeña foto" → sección 2.
+- ✅ "Acordate de los push en los hitos" → push por hito y por bloque.
+- ✅ "Terminá este hito y dejá todo listo para el traspaso... para que pueda continuar en el Claude de Luciano sin problemas y de la misma forma que hacemos acá" + "No continúes luego de esto" + "Dejá también las instrucciones para que pueda seguir trabajando" → se cortó después de los bloques Plots, Sell y Equip; este archivo quedó listo para retomar (sección 0).
 
 ## 4. Plan en curso
 
@@ -113,12 +125,12 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
 | 41 | Base del armador: tipos, validación de recetas, cargador de bloques (servidor y cliente), ayudas del mundo, despachador de premios, estado del kit | 1 | ✅ |
 | 42 | Bloque Units | 1 | ✅ (el inventario en ventana va con la UI de los bloques, #61) |
 | 43 | Bloque Plots | 2 | ✅ |
-| 44 | Bloque Belt | 2 | pendiente |
+| 44 | Bloque Belt | 2 | **sigue esta** (diseño en la sección 7) |
 | 45 | Bloque Steal (hecho de cero) | 2 | pendiente |
 | 46 | Bloque Rolls | 2 | pendiente |
 | 47 | Bloque Merge | 2 | pendiente |
-| 48 | Bloque Sell | 2 | pendiente |
-| 49 | Bloque Equip | 2 | pendiente |
+| 48 | Bloque Sell | 2 | ✅ servidor (su UI va en #61) |
+| 49 | Bloque Equip | 2 | ✅ servidor (mascotas que siguen y su UI van en #61) |
 | 50 | Bloque Stats | 3 | pendiente |
 | 51 | Bloque Zones | 3 | pendiente |
 | 52 | Bloque Stages | 3 | pendiente |
@@ -166,6 +178,12 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
   - `server/Kits/Plots.luau`: base libre al cargar los datos (atributos `Owner`/`OwnerName` en el KitPlot, cartel "Leo's Base", reaparecer en `KitSpawn`), espacios abiertos = receta + comprados + pase (`slotPass`/`passSlots`) + `Bonus "slots"` (sin pasar los KitSlot que hay), modelos de lo colocado sobre cada espacio (`Plots.Shown` para Steal), cobro al pisar `KitCollectPad` (lo juntado vive en `data.kits.plots.stored` y el pad muestra "Collect $X"), cobro directo con `autoCollectPass` o `collect = "auto"`, compra de espacios en `KitSlotShop` o `BuySlot`, traba con `KitLockButton` o `LockBase` (láseres `KitBarrier`), colocar solo lo nuevo con `autoPlace`, remotes `PlaceUnit(uid, slot?)` y `StoreUnit(uid)`. Ingreso = lo colocado × `BoostService.multiplier(player, "Money")`. Avisa si Max Players supera las bases.
   - `World.luau`: si cambia solo el texto de un cartel, actualiza la etiqueta sin rehacerlo.
   - **Pendiente para Zones (#51):** las zonas del índice todavía no se cierran por zona del mundo: al hacer el bloque Zones, pasar `isUnlocked = function(player) return Zones.isUnlocked(player, zone.id) end` en `Units.start` (requerir Zones desde Units no arma círculo).
+- **Hito 2, parte 2 (2026-10-30): bloques Sell y Equip, y el registro de zonas.** Chequeo en verde. Acá se cortó para el traspaso.
+  - `server/Kits/Gates.luau`: `Gates.open(player, zona)` dice si el jugador tiene abierta una zona; el bloque Zones (#51) registra su función con `Gates.register`; sin Zones, todo abierto. Ya lo usan las zonas del índice (`Units.start`: `isUnlocked`), así que la nota de Zones de más arriba queda resuelta así.
+  - `server/Kits/Sell.luau`: `Sell.value`, `Sell.units(player, uids)`, `Sell.all(player)` (con `Lib/UnitPick.sellAll`: ni cuidadas, ni equipadas, ni colocadas, por debajo de `keepFrom`); paga valor × `multiplier` × `BoostService.multiplier(player, stat or "Money")` en `currency` (o la principal); vende todo al pisar `KitSellPad` (con cartel "Sell All"); remotes `SellUnits(uids)` y `SellAll()`; con `anywherePass` (campo nuevo) y puestos en el mapa, desde la UI solo cerca de un puesto o con el pase. Señal "Sell" y efecto `KitFx` "Sold".
+  - `server/Kits/Equip.luau`: espacios = `slots` + pase (`slotPass`/`passSlots`) + `Bonus "equip"`, tope `maxSlots`; poder = Σ `Units.power` de las equipadas, sumado como "add" a `equip.stat` en BoostService (proveedor registrado); lo colocado no se equipa; remotes `EquipUnit`, `UnequipUnit`, `EquipBest`; atributo del jugador `Equipped` = "kind|variant|size;..." para que el cliente dibuje las que siguen. Señal "Equip".
+  - `Units.defs()` (todas las definiciones, para los sorteos) y textos nuevos de prompts y avisos en `UiText` (`PROMPT_BUY`, `PROMPT_STEAL`, `PROMPT_SELL`, `PROMPT_MERGE`, `PROMPT_OPEN`, `STEAL_ANNOUNCE`).
+  - Tipos nuevos en `Kits/Types`: `SellState`, `EquipState`, `MergeState`, `RollResult`, `RollsState`.
 
 ## 6. Qué existe hoy (mapa)
 
@@ -205,6 +223,41 @@ Para seguir igual (completa `bloques.md`):
 - **Tienda:** `ShopConfig` suma pases y productos con `kit = "<bloque>"`; la tienda oculta los de bloques apagados.
 - **Monedas nuevas por receta** (Wins, Taps): en `currencies` de la receta, con el color en hex; `EconomyConfig` las suma a `CURRENCIES`.
 
+### Piezas comunes que ya existen (usarlas, no rehacerlas)
+
+- `server/Kits/KitWorld.luau` (etiquetas, atributos, prompts con distancia medida, pads, carteles), `Bonus.luau` (bonos de mejoras: `Bonus.get(player, efecto)`), `Gates.luau` (zonas abiertas), `KitFx.luau` (efectos al cliente: `KitFx.send(player, "Nombre", datos)`), `shared/Kits/UnitModel.luau` (modelo de cada unidad), `shared/Lib/*` puros con tests.
+- Cada bloque del servidor: módulo `server/Kits/<Bloque>.luau` con `init(recipe)` (guarda su config y registra datos con `DataService.registerKit("<clave>", {...})`), `start(recipe)` (remotes, etiquetas, bucles), `snapshot(player)` y, si corresponde, `income` e `items` (`{ Prefijo = función }`); y una fila en `BLOCKS` de `server/Kits/Kits.luau` en el orden de `KitCheck.BLOCKS`.
+- Remotes con `Remotes.onInvoke`/`onEvent` (validador por argumento + límite). Plata con `CurrencyService.add/spend` y su tipo de transacción (`Gameplay` lo ganado jugando, `Shop` lo gastado). Avances con `Signals.track(player, "<Evento>", n)` y `Signals.dirty(player)` al cambiar algo que el cliente ve.
+
+### Diseño decidido de los bloques que faltan del hito 2 (seguirlo así)
+
+- **#44 Belt** (`server/Kits/Belt.luau`, datos: ninguno):
+  - cada `KitBelt`: cada `spawnEvery` s, si hay menos de `maxOnBelt` (8 si falta), sortear del `pool` con `UnitMath.entries` + `Rarity.roll` (suerte 1) y mutación/tamaño con `UnitMath.rollVariant` si la receta los usa;
+  - modelo con `UnitModel.make` que avanza por el eje X de la parte, de punta a punta en `walkSeconds` (`PivotTo` con `Lerp` en un bucle de `RunService.Heartbeat`), y al llegar al final se borra;
+  - precio = `def.price` o `def.value × (priceMultiplier or 1)`, × `UnitMath.multiplier` de su variante; prompt "Buy" con `ObjectText` "<Huge Gold Dragon> · $X" (`KitWorld.prompt` + `onPrompt`);
+  - comprar: inventario con lugar (`Units.isFull`), `CurrencyService.spend(..., Shop, "Belt")`, `Units.add(player, kind, { source = "Belt", variant, size })`; el primero que compra se lo lleva; señal "UnitBought"; `KitFx` "Bought". Con `plots.autoPlace` va solo a la base.
+- **#45 Steal** (`server/Kits/Steal.luau`, hecho de cero; datos: ninguno; estado en memoria):
+  - en `Plots.Shown(owner, unit, model)` poner un prompt "Steal" (`HoldDuration = holdSeconds`) en el modelo; el cliente lo esconde a su dueño (#61);
+  - al dispararlo, `StealRules.check` con: dueño, si ya lleva algo, `Plots.isLocked`, hora de entrada de la víctima (guardarla en `PlayerAdded`) contra `protectNewSeconds`, hora del último robo de esa unidad contra `recentSeconds`, si es la de más ingreso de esa base (`protectBest`) y `Units.isFull(ladrón)`; el ladrón necesita base propia;
+  - **llevarla:** la unidad sigue en los datos de la víctima mientras se la lleva; copia visual soldada sobre la cabeza del ladrón; velocidad × `carrySpeed`; el modelo de la base queda semitransparente y la víctima recibe `KitFx` "BeingStolen";
+  - **entregar:** cuando la raíz del ladrón entra en su propia base (punto dentro de `GetBoundingBox` del KitPlot, revisado cada 0.25 s): `Units.transfer(victima, ladron, uid, "Steal")`, se coloca si hay espacio, señales "Steal" (ladrón) y "Stolen" (víctima), aviso al servidor `UiText.STEAL_ANNOUNCE` si es rara, y la unidad nueva queda protegida `recentSeconds`;
+  - **se cae** si el ladrón muere, se va, lo empujan o pasan 90 s, o si la víctima se va: vuelve todo como estaba;
+  - **empujón:** remote `PushPlayer(userId)` con espera de 1.5 s: el objetivo dentro de `pushRange` (medido en el servidor) recibe `ApplyImpulse` en su raíz (la documentación dice que el servidor puede hacerlo en partes del cliente con dueño automático) y suelta lo que lleva; señal "Push";
+  - **velocidad:** para no pisarse con el bloque Stats (`walkSpeed`), usar un factor por fuente: agregar a `KitWorld` un `setSpeedFactor(player, fuente, factor)` que aplique `WalkSpeed = base × Π factores` (base = atributo `BaseWalkSpeed` del jugador o 16); Stats pondrá `BaseWalkSpeed`.
+- **#46 Rolls** (`server/Kits/Rolls.luau`, datos `{ nextFree = { [id] = os.time } }`):
+  - remote `RequestRoll(id, count, auto?)`: id con `Validate.oneOf`, `count` entero 1–100; `RollRules.amount` con `ShopService.ownsPass`; si `auto`, pedir `rolls.autoPass` si existe;
+  - `paidRandom` y atributo `PaidRandomRestricted` del jugador → rechazar "RESTRICTED"; zona con `Gates.open`; si hay `KitRollStation` con ese `Roll` en el mapa, estar a menos de 20 studs de una;
+  - lugar en el inventario para `count`; cobrar `RollRules.cost` con `CurrencyService.spend(..., Shop, "Roll_<id>", moneda)` o usar la gratis (`RollRules.freeReady`, después `nextFree = ahora + cooldown`);
+  - cada tirada: `UnitMath.entries(def.pool, Units.defs(), Units.rarities(), units.luckyFrom)` + `Rarity.roll` con suerte `BoostService.multiplier(player, luckStat or "Luck")`, y `Units.add(player, id, { source = "Roll", roll = true })`;
+  - devolver la lista de `RollResult` y mandarla con `KitFx` "Rolled" (animación del huevo en el cliente); señales "Roll" y "Hatch";
+  - premio `"Roll:<id>"` = tiradas gratis de esa (sin precio, espera ni distancia; `force` porque puede venir de Robux).
+- **#47 Merge** (`server/Kits/Merge.luau`, datos `{ pending = { kind, variant?, size?, readyAt }? }`):
+  - remote `MergeUnits(kind, variant?)`; con `machine`, cerca de un `KitMergeMachine` (si hay en el mapa); una fusión pendiente a la vez ("BUSY");
+  - modo `tier`: `count` unidades del mismo `kind` (cualquier variante, `UnitPick.group(list, kind, nil, count)`) → 1 del `tier` siguiente; con `mutationChance`, la nueva sale con mutación al azar ("MAX" si no hay nivel siguiente);
+  - modo `variant`: `count` iguales de la mutación actual (`UnitPick.group(list, kind, actual, count)`) → 1 de la siguiente en `variantChain`, con el tamaño de la primera;
+  - se sacan las usadas (`Units.remove(..., "Merge")`); el resultado llega ya o a `readyAt = ahora + seconds` (un bucle de 1 s lo entrega solo); premio `"Merge:Skip"` = listo ya;
+  - señal "Merge" y `KitFx` "Merged".
+
 ## 8. Lo que depende de las personas
 
 Lista completa y con casillas en **`team/pendientes.md`** (pedido del usuario del 2026-10-30: "que api keys necesitás, qué conectores hay que poner, etc."). Mantenerla al día en cada hito y repetirla en el reporte final (#70). En resumen:
@@ -223,6 +276,9 @@ Lista completa y con casillas en **`team/pendientes.md`** (pedido del usuario de
 - **Teléfono:** nada en la zona del joystick (≈ 41 % izquierdo, desde el 43 % del alto) ni en la del salto.
 - **Sintaxis de Luau:** una línea que empieza con `(` después de otra que termina en `)` es sintaxis ambigua y luau-lsp la marca como error. Usar una variable local o empezar con `;`.
 - **luau-lsp y tablas:** un literal con tipos mezclados (`{ child, child:FindFirstChild("X") }`) falla en modo estricto. Anotar `{ Instance? }`.
+- **luau-lsp y listas opcionales:** `for _, x in lista or {} do` falla ("Cannot call a value of type {X} in union"). Usar `lista or ({} :: { X })` o, mejor, `local l = lista; if l then for ... end end`. Lo mismo con un mapa (`{ [string]: F }`).
+- **`pcall` de una función sin retorno:** `local ok, err = pcall(f, x)` falla ("Function only returns 1 value"). Castear: `pcall(f :: (T) -> ...any, x)`.
+- **Literales en los tests:** listas de tablas con campos distintos (una con `reward`, otra sin) se infieren mal; castear la lista (`:: { Types.IndexZone }`). Y `local a, b = {}, {}` que después reciben números: anotar `{ number }`.
 - **Tests sin Roblox:** el CLI de Luau no tiene `Color3`, `Vector3` ni servicios. Lo que se prueba (recetas, `Lib/`) va sin tipos de Roblox.
 - **Glifo de Robux** (`utf8.char(0xE002)` con Builder Sans): sale del DevForum, no de la documentación. Confirmar en Studio.
 - **En la nube de Claude:**
