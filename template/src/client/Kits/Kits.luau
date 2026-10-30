@@ -8,6 +8,8 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local KitConfig = require(ReplicatedStorage.Shared.Config.KitConfig)
 local KitCheck = require(ReplicatedStorage.Shared.Lib.KitCheck)
+local Net = require(ReplicatedStorage.Shared.Net)
+local Bus = require("../Bus")
 local HudController = require("../Controllers/HudController")
 local ActionBar = require("./ActionBar")
 local Units = require("./Units")
@@ -26,6 +28,14 @@ function Kits.start(hud: HudController.Hud)
 		return
 	end
 	ActionBar.start(hud)
+	-- Efectos que manda el servidor (server/Kits/KitFx): cada bloque los escucha con Bus.on("Kit:<nombre>").
+	task.spawn(function()
+		Net.event("KitFx").OnClientEvent:Connect(function(name: any, payload: any)
+			if typeof(name) == "string" then
+				Bus.emit("Kit:" .. name, payload)
+			end
+		end)
+	end)
 	for _, block in BLOCKS do
 		if (KitConfig :: any)[block.key] ~= nil then
 			-- El cast deja leer el error: pcall de una función sin retorno solo tipa el booleano.

@@ -234,11 +234,22 @@ function World.start()
 			return
 		end
 		local list = {}
-		for _, name in { "Text", "Variant", "Icon", "Width" } do
+		for _, name in { "Variant", "Icon", "Width" } do
 			table.insert(list, instance:GetAttributeChangedSignal(name):Connect(function()
 				draw(instance)
 			end))
 		end
+		-- El texto cambia seguido (lo juntado en una base): se actualiza sin rehacer el cartel.
+		table.insert(list, instance:GetAttributeChangedSignal("Text"):Connect(function()
+			local gui = signs[instance]
+			local label = if gui then gui:FindFirstChild("Text", true) else nil
+			local text = instance:GetAttribute("Text")
+			if label and label:IsA("TextLabel") and typeof(text) == "string" then
+				label.Text = text
+			else
+				draw(instance)
+			end
+		end))
 		watchers[instance] = list
 		draw(instance)
 	end

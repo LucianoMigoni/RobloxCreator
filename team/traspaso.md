@@ -112,7 +112,7 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
 | 40 | Diseñar el armador: bloques, recetas, etiquetas del mapa (`skills/roblox-game-kits/references/bloques.md`) | 0 | ✅ |
 | 41 | Base del armador: tipos, validación de recetas, cargador de bloques (servidor y cliente), ayudas del mundo, despachador de premios, estado del kit | 1 | ✅ |
 | 42 | Bloque Units | 1 | ✅ (el inventario en ventana va con la UI de los bloques, #61) |
-| 43 | Bloque Plots | 2 | pendiente |
+| 43 | Bloque Plots | 2 | ✅ |
 | 44 | Bloque Belt | 2 | pendiente |
 | 45 | Bloque Steal (hecho de cero) | 2 | pendiente |
 | 46 | Bloque Rolls | 2 | pendiente |
@@ -159,6 +159,12 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
   - `server/Kits/Units.luau`: inventario en `data.kits.units`; `add(player, kind, { source, variant?, size?, weight?, roll?, force?, quiet? })` → `(unit?, motivo?, esNueva)`; `remove`, `transfer` (robos), `place` (espacio de la base), `equip`, `lock`; `income`/`value`/`power`/`name`/`rank`/`tier`; `rollVariants` (suerte = `BoostService.multiplier(player, "Luck")`); `max` = `maxInventory` + `Bonus.get(player, "inventory")`. Señales `Added`, `Removed`, `Changed` y `Signals.track` "UnitGot" y "RareFound" (Rare o más). Avisa al servidor desde `announceFrom` (o mutación ×5 o más), global si la rareza es `global`. Índice: total = unidades × mutaciones; zonas de `units.zones` con las claves Normal. Remote `LockUnit(uid, on)`. Premio "Unit:<unidad>[:<mutación>[:<tamaño>]]" siempre entregado (puede venir de Robux). Al cargar, lo que no está en la receta pasa a `orphans`.
   - `server/Kits/Bonus.luau`: bonos entre bloques sin `require` en círculo (`register`, `get`, `notify`, `Changed`).
   - `client/Kits/Units.luau`: piezas del índice (`Bus.handle("IndexEntries")`) con rareza, "1 in N" (sorteo × mutación) y lo que da; `Units.model(def)` busca `ReplicatedStorage.Assets.Units[def.model]`.
+- **Hito 2, parte 1 (2026-10-30): bloque Plots.** Chequeo en verde.
+  - Lógica pura con tests: `Lib/Ladder.luau` (escaleras de precios), `Lib/UnitPick.luau` (vender todo, grupos para fusionar, las mejores), `Lib/StealRules.luau` (motivos OWN, CARRYING, LOCKED, PROTECTED, RECENT, BEST, FULL), `Lib/RollRules.luau` (cantidades con pase, precio, gratis con espera, la mayor cantidad).
+  - `shared/Kits/UnitModel.luau`: modelo de una unidad (asset de `ReplicatedStorage.Assets.Units` o bola del color de la unidad o de su mutación), escalado por tamaño, anclado, atributos Kind/Variant/Size y etiqueta `KitUnit`; `standOn(model, cframe)`.
+  - `server/Kits/KitFx.luau`: un solo remote `KitFx` (nombre, datos) para efectos de los bloques; el cliente los reemite con `Bus.emit("Kit:<nombre>")`.
+  - `server/Kits/Plots.luau`: base libre al cargar los datos (atributos `Owner`/`OwnerName` en el KitPlot, cartel "Leo's Base", reaparecer en `KitSpawn`), espacios abiertos = receta + comprados + pase (`slotPass`/`passSlots`) + `Bonus "slots"` (sin pasar los KitSlot que hay), modelos de lo colocado sobre cada espacio (`Plots.Shown` para Steal), cobro al pisar `KitCollectPad` (lo juntado vive en `data.kits.plots.stored` y el pad muestra "Collect $X"), cobro directo con `autoCollectPass` o `collect = "auto"`, compra de espacios en `KitSlotShop` o `BuySlot`, traba con `KitLockButton` o `LockBase` (láseres `KitBarrier`), colocar solo lo nuevo con `autoPlace`, remotes `PlaceUnit(uid, slot?)` y `StoreUnit(uid)`. Ingreso = lo colocado × `BoostService.multiplier(player, "Money")`. Avisa si Max Players supera las bases.
+  - `World.luau`: si cambia solo el texto de un cartel, actualiza la etiqueta sin rehacerlo.
   - **Pendiente para Zones (#51):** las zonas del índice todavía no se cierran por zona del mundo: al hacer el bloque Zones, pasar `isUnlocked = function(player) return Zones.isUnlocked(player, zone.id) end` en `Units.start` (requerir Zones desde Units no arma círculo).
 
 ## 6. Qué existe hoy (mapa)

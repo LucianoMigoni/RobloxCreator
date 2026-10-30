@@ -133,4 +133,15 @@ return {
 	-- Armador: unidades
 	UNIT_ANNOUNCE = "%s got %s %s!", -- jugador, "a"/"an", "SECRET Huge Gold Dragon"
 	INVENTORY_FULL = "Your inventory is full!",
+
+	-- Armador: bases
+	PLOT_SIGN = "%s's %s", -- "Leo's Base"
+	PLOT_FREE = "Empty %s",
+	PLOT_COLLECT = "Collect %s",
+	PLOT_BUY_SLOT = "New Slot",
+	PLOT_MAX_SLOTS = "Max slots!",
+	PLOT_NO_SLOT = "No free slot! Buy more slots",
+	PLOT_LOCK = "LOCK",
+	PLOT_LOCKED = "LOCKED %s",
+	PLOT_DEFAULT = "Base",
 }

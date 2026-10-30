@@ -449,6 +449,10 @@ local function checkPlots(ctx: Ctx)
 		add(ctx, "plots.collect", "tiene que ser \"pad\" o \"auto\"")
 	end
 	pass(ctx, "plots.autoCollectPass", plots.autoCollectPass)
+	pass(ctx, "plots.slotPass", plots.slotPass)
+	if plots.slotPass ~= nil then
+		number(ctx, "plots.passSlots", plots.passSlots, 1, true)
+	end
 	local lock = plots.lock
 	if lock then
 		number(ctx, "plots.lock.seconds", lock.seconds, 1)

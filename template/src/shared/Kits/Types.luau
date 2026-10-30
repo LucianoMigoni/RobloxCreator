@@ -78,9 +78,22 @@ export type PlotsConfig = {
 	slotPrices: { number }?, -- precio de cada espacio extra, en orden (moneda principal)
 	collect: "pad" | "auto", -- pisar el pad para cobrar, o directo a la moneda
 	autoCollectPass: string?, -- pase (ShopConfig.PASSES) que cobra solo
-	offline: boolean?, -- las bases pagan sin conexión (RetentionConfig.OFFLINE)
 	lock: { seconds: number, cooldown: number }?, -- traba con láser (juegos de robar)
 	autoPlace: boolean?, -- lo que se consigue va solo al primer espacio libre
+	slotPass: string?, -- pase que suma espacios ("ExtraSlots")
+	passSlots: number?, -- cuántos suma ese pase
+}
+
+-- Lo que ve el cliente del bloque Plots (state.kit.plots).
+export type PlotsState = {
+	plot: string?, -- nombre del Model de su base (nil mientras no tiene)
+	slots: number, -- espacios abiertos
+	maxSlots: number,
+	nextPrice: number?, -- precio del próximo espacio (nil = no hay más para comprar)
+	stored: number, -- plata juntada esperando el cobro
+	auto: boolean, -- cobra solo (pase o modo "auto")
+	lockedUntil: number, -- os.time() en que se apaga la traba
+	lockReadyAt: number, -- desde cuándo se puede volver a trabar
 }
 
 export type BeltConfig = {
