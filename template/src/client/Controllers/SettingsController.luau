@@ -48,8 +48,9 @@ function SettingsController.start(hud: Hud.Hud)
 	end
 
 	for i, item in { { key = "music", label = UiText.SETTINGS_MUSIC }, { key = "sfx", label = UiText.SETTINGS_SFX }, { key = "lowGraphics", label = UiText.SETTINGS_LOW } } do
-		local row = UIKit.new("Frame", { Name = item.key, LayoutOrder = i, Size = UDim2.fromScale(0.95, 0.24), ZIndex = 22 }, list) :: Frame
-		UIKit.style(row, "Info", 0.3, 3)
+		local row = UIKit.new("Frame", { Name = item.key, LayoutOrder = i, Size = UDim2.new(0.95, 0, 0, 80), ZIndex = 22 }, list) :: Frame
+		UIKit.fitHeight(row, 6.9, 64)
+		UIKit.style(row, "Info", 0.3, 0.05)
 		UIKit.label(row, "Label", item.label, {
 			Position = UDim2.fromScale(0.05, 0.15),
 			Size = UDim2.fromScale(0.6, 0.7),
@@ -84,7 +85,7 @@ function SettingsController.start(hud: Hud.Hud)
 			apply()
 		end
 	end)
-	local hudButton = hud.addButton("left", { name = "Settings", label = UiText.SETTINGS, icon = "settings", variant = "Neutral", layoutOrder = 9 })
+	local hudButton = hud.addTopbarButton({ name = "Settings", icon = "settings", layoutOrder = 9 })
 	hudButton.Activated:Connect(function()
 		Sound.play("Click")
 		UIKit.toggle(window)

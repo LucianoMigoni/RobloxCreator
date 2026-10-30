@@ -12,12 +12,14 @@ local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local SocialService = game:GetService("SocialService")
 
+local BoostConfig = require(ReplicatedStorage.Shared.Config.BoostConfig)
 local GameConfig = require(ReplicatedStorage.Shared.Config.GameConfig)
 local RetentionConfig = require(ReplicatedStorage.Shared.Config.RetentionConfig)
 local UiText = require(ReplicatedStorage.Shared.Config.UiText)
 local Net = require(ReplicatedStorage.Shared.Net)
 local Types = require(ReplicatedStorage.Shared.Types)
 local UIKit = require(ReplicatedStorage.Shared.UIKit)
+local Bus = require("../Bus")
 local PlayerState = require("../PlayerState")
 local Juice = require("../UI/Juice")
 local Sound = require("../UI/Sound")
@@ -60,16 +62,21 @@ function SocialController.start(hud: Hud.Hud)
 		end)
 	end
 
-	-- Invitar amigos
-	local invite = hud.addButton("right", { name = "Invite", label = UiText.INVITE, icon = "friends", variant = "Pink", layoutOrder = 5 })
-	invite.Activated:Connect(function()
-		Sound.play("Click")
+	-- Invitar amigos: el bono por amigo en el servidor es real (BoostConfig.FRIENDS), así que se dice.
+	local function invite()
 		task.spawn(function()
 			local ok, can = pcall(SocialService.CanSendGameInviteAsync, SocialService, player)
 			if ok and can then
 				pcall(SocialService.PromptGameInvite, SocialService, player)
 			end
 		end)
+	end
+	Bus.handle("Invite", invite)
+	local bonus = string.format(UiText.INVITE_BONUS, math.floor(BoostConfig.FRIENDS.perFriend * 100 + 0.5))
+	local corner = hud.addCorner("Invite", "invite", UiText.INVITE_FRIENDS, bonus, 3, UiText.INVITE)
+	corner.Activated:Connect(function()
+		Sound.play("Click")
+		invite()
 	end)
 
 	-- Recordatorios sin premio

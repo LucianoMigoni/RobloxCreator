@@ -63,7 +63,8 @@ function RewardController.start(hud: Hud.Hud)
 			BackgroundTransparency = 1,
 			AnchorPoint = Vector2.new(0.5, 0.5),
 			Position = UDim2.fromScale(0.5, 0.48),
-			Size = UDim2.fromScale(0.42, 0.62),
+			-- En el teléfono, más grande: así el botón llega a 44 px.
+			Size = if UIKit.isSmallScreen() then UDim2.fromScale(0.6, 0.86) else UDim2.fromScale(0.42, 0.62),
 			ZIndex = 80,
 		}, screen) :: Frame
 		UIKit.new("UIAspectRatioConstraint", { AspectRatio = 1.05 }, frame)
@@ -103,7 +104,7 @@ function RewardController.start(hud: Hud.Hud)
 				Size = UDim2.fromScale(0.95, math.min(0.3, 0.9 / rows)),
 				ZIndex = 82,
 			}, list) :: Frame
-			UIKit.style(row, if line.kind == "currency" then "Accept" elseif line.kind == "boost" then "Premium" else "Info", 0.45, 3)
+			UIKit.style(row, if line.kind == "currency" then "Accept" elseif line.kind == "boost" then "Premium" else "Info", 0.45, 0.06)
 			UIKit.icon(row, line.icon, {
 				AnchorPoint = Vector2.new(0.5, 0.5),
 				Position = UDim2.fromScale(0.1, 0.5),
@@ -133,7 +134,7 @@ function RewardController.start(hud: Hud.Hud)
 			variant = "Accept",
 			anchorPoint = Vector2.new(0.5, 1),
 			position = UDim2.fromScale(0.5, 1.02),
-			size = UDim2.fromScale(0.55, 0.14),
+			size = UDim2.fromScale(0.55, 0.17),
 			aspectRatio = 3.4,
 			parent = frame,
 		})

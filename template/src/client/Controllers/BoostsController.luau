@@ -55,8 +55,9 @@ function BoostsController.start(hud: Hud.Hud)
 		local order = 0
 		for _, stat in stats do
 			order += 1
-			local header = UIKit.new("Frame", { Name = stat, LayoutOrder = order, Size = UDim2.fromScale(0.96, 0.16), ZIndex = 22 }, list) :: Frame
-			UIKit.style(header, "Premium", 0.3, 3)
+			local header = UIKit.new("Frame", { Name = stat, LayoutOrder = order, Size = UDim2.new(0.96, 0, 0, 60), ZIndex = 22 }, list) :: Frame
+			UIKit.fitHeight(header, 10, 48)
+			UIKit.style(header, "Premium", 0.3, 0.05)
 			UIKit.icon(header, STAT_ICON[stat] or "star", {
 				AnchorPoint = Vector2.new(0.5, 0.5),
 				Position = UDim2.fromScale(0.06, 0.5),
@@ -72,8 +73,9 @@ function BoostsController.start(hud: Hud.Hud)
 			}, 44, UIKit.TitleFont)
 			for _, source in Multipliers.breakdown(sources, stat) do
 				order += 1
-				local row = UIKit.new("Frame", { Name = source.label, LayoutOrder = order, Size = UDim2.fromScale(0.9, 0.11), ZIndex = 22 }, list) :: Frame
-				UIKit.style(row, if source.kind == "add" then "Info" else "Accept", 0.4, 2)
+				local row = UIKit.new("Frame", { Name = source.label, LayoutOrder = order, Size = UDim2.new(0.9, 0, 0, 44), ZIndex = 22 }, list) :: Frame
+				UIKit.fitHeight(row, 13.5, 36)
+				UIKit.style(row, if source.kind == "add" then "Info" else "Accept", 0.4, 0.045)
 				UIKit.label(row, "Text", Multipliers.describe(source), {
 					Position = UDim2.fromScale(0.04, 0.12),
 					Size = UDim2.fromScale(0.92, 0.76),
@@ -86,8 +88,9 @@ function BoostsController.start(hud: Hud.Hud)
 		for _, pass in ShopConfig.PASSES do
 			if #pass.effects > 0 and player:GetAttribute(pass.attribute) ~= true then
 				order += 1
-				local row = UIKit.new("TextButton", { Name = "Get" .. pass.key, Text = "", LayoutOrder = order, Size = UDim2.fromScale(0.9, 0.11), ZIndex = 22 }, list) :: TextButton
-				UIKit.style(row, "Neutral", 0.4, 2)
+				local row = UIKit.new("TextButton", { Name = "Get" .. pass.key, Text = "", LayoutOrder = order, Size = UDim2.new(0.9, 0, 0, 44), ZIndex = 22 }, list) :: TextButton
+				UIKit.fitHeight(row, 13.5, 48)
+				UIKit.style(row, "Neutral", 0.4, 0.045)
 				UIKit.label(row, "Text", pass.name .. "  ·  " .. pass.desc, {
 					Position = UDim2.fromScale(0.04, 0.12),
 					Size = UDim2.fromScale(0.92, 0.76),
@@ -101,7 +104,7 @@ function BoostsController.start(hud: Hud.Hud)
 			end
 		end
 		if order == 0 then
-			UIKit.label(list, "Empty", UiText.BOOSTS_EMPTY, { Size = UDim2.fromScale(0.9, 0.2), ZIndex = 22 }, 30)
+			UIKit.fitHeight(UIKit.label(list, "Empty", UiText.BOOSTS_EMPTY, { Size = UDim2.new(0.9, 0, 0, 80), ZIndex = 22 }, 30), 7.5)
 		end
 	end
 

@@ -33,7 +33,7 @@ function CodesController.start(hud: Hud.Hud)
 		ClearTextOnFocus = false,
 		ZIndex = 22,
 	}, body) :: TextBox
-	UIKit.style(box, "Light", 0.3, 3)
+	UIKit.style(box, "Light", 0.3, 0.05)
 	box.FontFace = UIKit.TitleFont
 	box.TextScaled = true
 	box.TextColor3 = UIKit.STROKE_COLOR
@@ -79,7 +79,7 @@ function CodesController.start(hud: Hud.Hud)
 			Juice.shake(box)
 		end
 	end)
-	local hudButton = hud.addButton("left", { name = "Codes", label = UiText.CODES, icon = "codes", variant = "Cyan", layoutOrder = 7 })
+	local hudButton = hud.addTopbarButton({ name = "Codes", label = UiText.CODES, icon = "codes", layoutOrder = 3 })
 	hudButton.Activated:Connect(function()
 		Sound.play("Click")
 		result.Text = UiText.CODE_HINT

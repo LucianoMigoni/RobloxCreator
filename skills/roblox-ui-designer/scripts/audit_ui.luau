@@ -25,6 +25,16 @@ local function ignored(inst: Instance): boolean
 	return gui ~= nil and IGNORE[gui.Name] == true
 end
 
+-- Medidas en píxeles a propósito: la barra de Roblox (su alto lo fija Roblox), los carteles del mundo
+-- (BillboardGui) y las filas de listas con scroll cuyo alto calcula UIKit.fitHeight (atributo FitHeight).
+local function pixelsAllowed(inst: Instance): boolean
+	if inst:GetAttribute("FitHeight") ~= nil or inst:FindFirstAncestorWhichIsA("BillboardGui") then
+		return true
+	end
+	local gui = inst:FindFirstAncestorWhichIsA("ScreenGui")
+	return gui ~= nil and gui.ScreenInsets == Enum.ScreenInsets.TopbarSafeInsets
+end
+
 -- Producto de los UIScale del objeto y sus ancestros; 0 = cerrado/no medible.
 local function effectiveScale(inst: Instance): number
 	local scale = 1
@@ -55,7 +65,7 @@ for _, inst in root:GetDescendants() do
 		local size = inst.Size
 		local inGrid = inst.Parent ~= nil and inst.Parent:FindFirstChildOfClass("UIGridLayout") ~= nil
 
-		if not inGrid and inst.AutomaticSize == Enum.AutomaticSize.None and (size.X.Offset ~= 0 or size.Y.Offset ~= 0) then
+		if not inGrid and not pixelsAllowed(inst) and inst.AutomaticSize == Enum.AutomaticSize.None and (size.X.Offset ~= 0 or size.Y.Offset ~= 0) then
 			add("ERROR", inst, "Size usa Offset " .. tostring(size) .. ": pasar a Scale")
 		end
 

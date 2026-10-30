@@ -61,7 +61,7 @@ function RebirthController.start(hud: Hud.Hud)
 		variant = "Purple",
 		anchorPoint = Vector2.new(0.5, 1),
 		position = UDim2.fromScale(0.5, 0.98),
-		size = UDim2.fromScale(0.4, 0.18),
+		size = UDim2.fromScale(0.44, 0.2),
 		aspectRatio = 3.2,
 		parent = body,
 	})

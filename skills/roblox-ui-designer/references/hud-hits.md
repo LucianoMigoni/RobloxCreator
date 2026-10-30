@@ -48,14 +48,14 @@ Al abrir una ventana, el mundo se desenfoca (`BlurEffect`) y el HUD sigue a la v
 
 - [ ] Objetivo de una línea arriba al centro, que cambia con el progreso.
 - [ ] Menú de pocos botones grandes con color por función, y globito de aviso.
-- [ ] Plata enorme abajo a la izquierda, sin fondo, con ícono 3D, y "Friend Boost" con "+".
+- [ ] Plata enorme abajo a la izquierda, sin fondo, con ícono 3D, y "Friend Boost" con "+" (en táctil, arriba a la derecha: ver §En el teléfono).
 - [ ] Al menos dos ofertas flotando a la derecha (una barata y el VIP), con precio leído en vivo.
 - [ ] Un reloj de evento o de premio gratis a la vista.
 - [ ] Botones propios en la barra de Roblox (Daily o Claim) con globito.
 - [ ] Flechas en el piso hasta el primer objetivo, y carteles en el mundo para lo que se compra o se junta.
 - [ ] Tienda en una sola lista con oferta destacada, probabilidades, regalo y ancla.
 - [ ] Índice con siluetas, probabilidad, progreso por zona y premio.
-- [ ] Nada encimado ni pegado al borde. Todo se tiene que leer en un teléfono acostado.
+- [ ] Nada encimado ni pegado al borde. Todo se tiene que leer en un teléfono acostado, y nada cae en las zonas del joystick y del salto.
 
 ## Material visual
 
@@ -107,6 +107,17 @@ Todo va en escala respecto del alto de pantalla, con 44 px como mínimo para el 
 | Oferta flotante | 230 × 230 px con rayos, ícono de 150 px, precio de 40 px; 30 px de aire entre ofertas |
 | Ventana grande | unos 1240 × 830 a 900 px, cabecera de 104 px, X de 92 px montada en la esquina; no tapa la plata |
 | Tarjeta del índice | 168 × 184 px; fila de probabilidades de 124 × 138 px |
+
+## En el teléfono
+
+Las capturas de los hits son de PC. En el teléfono manda la guía oficial: las esquinas de abajo son del joystick (≈ 41 % izquierdo, desde el 43 % del alto) y del botón de salto, y ahí no van botones ni información importante (`technical-rules.md`). La plantilla lo resuelve así (muestra en `hud-hits/muestra-telefono.jpg`, con y sin las zonas marcadas):
+
+- **Menú:** grilla de 4×2 cuadrados arriba a la izquierda, de 44 px o más. Ahí van también los botones de la derecha, el evento (con su reloj en lugar del nombre) e invitar. Entran 8: más botones bajan a la zona del joystick.
+- **Plata:** arriba a la derecha, alineada a la derecha ("$1.25K" y el ícono después), con lo que se gana por segundo, las gemas y "Friend Boost" debajo.
+- **Ofertas:** debajo de la plata, más chicas, terminando antes del botón de salto.
+- **Impulsos:** arriba al centro, debajo del objetivo.
+- **Lugar del kit:** abajo, entre el joystick y el salto.
+- **Ventanas:** casi a pantalla completa, con menos columnas (2 en la tienda) para que cada botón llegue a 44 px.
 
 ## Tienda
 

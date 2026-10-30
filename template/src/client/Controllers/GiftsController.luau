@@ -25,7 +25,8 @@ type Cell = { card: Frame, button: TextButton, check: TextLabel }
 
 function GiftsController.start(hud: Hud.Hud)
 	local window, body = UIKit.window(hud.screen, { name = "Gifts", title = UiText.GIFTS_TITLE, icon = "gift", variant = "Accept" })
-	local grid = UIKit.grid(body, "Grid", UDim2.fromScale(0.29, 0), 0.95)
+	-- En el teléfono, 2 columnas: el botón del pie llega a 44 px.
+	local grid = UIKit.grid(body, "Grid", UDim2.fromScale(if UIKit.isSmallScreen() then 0.47 else 0.29, 0), 0.95)
 	grid.ZIndex = 21
 	local cells: { Cell } = {}
 
@@ -85,7 +86,7 @@ function GiftsController.start(hud: Hud.Hud)
 		cells[i] = { card = card, button = button, check = check }
 	end
 
-	local hudButton = hud.addButton("right", { name = "Gifts", label = UiText.GIFTS, icon = "gift", variant = "Accept", layoutOrder = 1 })
+	local hudButton = hud.addButton("left", { name = "Gifts", label = UiText.GIFTS, icon = "gift", variant = "Orange", layoutOrder = 4 })
 	local stopWiggle: Juice.Stop? = nil
 
 	local function refresh()
@@ -112,12 +113,12 @@ function GiftsController.start(hud: Hud.Hud)
 		end
 		UIKit.setBadge(hudButton, if ready > 0 then ready else nil)
 		if ready > 0 then
-			UIKit.setText(hudButton, UiText.READY)
+			UIKit.setTimer(hudButton, nil)
 			if not stopWiggle then
 				stopWiggle = Juice.wiggle(hudButton, 7)
 			end
 		else
-			UIKit.setText(hudButton, if nextIn then Format.clock(nextIn) else UiText.GIFTS)
+			UIKit.setTimer(hudButton, if nextIn then Format.clock(nextIn) else nil)
 			if stopWiggle then
 				stopWiggle()
 				stopWiggle = nil

@@ -44,7 +44,7 @@ function AnnounceController.start(hud: Hud.Hud)
 			Size = UDim2.fromScale(0.62, 0.09),
 			ZIndex = 70,
 		}, hud.screen) :: Frame
-		UIKit.style(banner, "Neutral", 0.5, 3)
+		UIKit.style(banner, "Neutral", 0.5, 0.06)
 		UIKit.new("UIAspectRatioConstraint", { AspectRatio = 8 }, banner)
 		local label = UIKit.label(banner, "Text", item.text, {
 			AnchorPoint = Vector2.new(0.5, 0.5),

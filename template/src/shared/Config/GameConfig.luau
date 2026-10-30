@@ -10,6 +10,9 @@ return {
 	GROUP_ID = 0,
 	-- Qué se ve en la tabla de jugadores de Roblox (arriba a la derecha), en este orden.
 	LEADERSTATS = { "Money", "Rebirths" },
+	-- Menú de la izquierda: "wide" (botones anchos con ícono plano, como Steal An Egg) o "tile"
+	-- (cuadrados con ícono 3D, como Anime Dice). Muestra: roblox-ui-designer/references/hud-hits/.
+	HUD_MENU = "wide",
 	-- Mascota de la marca para los avisos grandes ("LEVEL UP!"): rbxassetid de una imagen, o "" para no usar.
 	MASCOT_IMAGE = "",
 }

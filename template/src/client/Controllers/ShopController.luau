@@ -1,7 +1,12 @@
 --!strict
--- Tienda estilo hit (ShopConfig): pestañas por categoría, tarjetas con ícono grande, efecto en una
--- línea y píldora de precio verde con R$. El precio que se muestra es el del Dashboard
--- (GetProductInfoAsync); `robux` de la configuración es solo el de respaldo.
+-- Tienda estilo hit (ShopConfig, roblox-ui-designer/references/hud-hits.md §Tienda): una sola lista con
+-- secciones, sin pestañas, como Steal An Egg, Anime Dice y Throw Food For Animals:
+-- 1. Destacado: la oferta de ShopConfig.FEATURED con arte, reloj (solo si termina de verdad) y precio;
+--    el anuncio con premio y la suscripción VIP.
+-- 2. Impulsos, impulsos para todo el servidor, plata y gemas (lo que daría hoy: "≈ $1.2M"), giros, pases
+--    (con regalo al lado) y lo del kit.
+-- Precios: los del Dashboard (GetProductInfoAsync), porque Roblox los ajusta por región y con pruebas de
+-- precio; `robux` de la configuración es solo el de respaldo.
 -- - Productos: PromptProductPurchase; el servidor entrega por ProcessReceipt y muestra el premio.
 -- - Pases: PromptGamePassPurchase; "OWNED" si ya lo tiene. Botón de regalo si hay producto `giftOf`.
 -- - Suscripción del juego: PromptSubscriptionPurchase.
@@ -14,11 +19,13 @@ local AdService = game:GetService("AdService")
 local MarketplaceService = game:GetService("MarketplaceService")
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Workspace = game:GetService("Workspace")
 
 local EconomyConfig = require(ReplicatedStorage.Shared.Config.EconomyConfig)
 local ShopConfig = require(ReplicatedStorage.Shared.Config.ShopConfig)
 local UiText = require(ReplicatedStorage.Shared.Config.UiText)
 local Format = require(ReplicatedStorage.Shared.Lib.Format)
+local RewardText = require(ReplicatedStorage.Shared.Lib.RewardText)
 local Net = require(ReplicatedStorage.Shared.Net)
 local Types = require(ReplicatedStorage.Shared.Types)
 local UIKit = require(ReplicatedStorage.Shared.UIKit)
@@ -32,26 +39,18 @@ local ShopController = {}
 
 local player = Players.LocalPlayer
 
-local TABS: { UIKit.Tab } = {
-	{ id = "Featured", label = UiText.TAB_FEATURED, icon = "star" },
-	{ id = "Passes", label = UiText.TAB_PASSES, icon = "crown" },
-	{ id = "Boosts", label = UiText.TAB_BOOSTS, icon = "money_boost" },
-	{ id = "Currency", label = UiText.TAB_CURRENCY, icon = "cash" },
-	{ id = "Server", label = UiText.TAB_SERVER, icon = "friends" },
-	{ id = "Spins", label = UiText.TAB_SPINS, icon = "spin" },
+-- Secciones en orden. Las categorías de ShopConfig.Product van a la suya; "Featured" va arriba.
+type Section = { id: string, title: string, columns: number, aspect: number, variant: UIKit.Variant }
+local SECTIONS: { Section } = {
+	{ id = "Boosts", title = UiText.SECTION_BOOSTS, columns = 4, aspect = 0.78, variant = "Accept" },
+	{ id = "Server", title = UiText.SECTION_SERVER, columns = 2, aspect = 1.25, variant = "Pink" },
+	{ id = "Currency", title = UiText.SECTION_CASH, columns = 3, aspect = 0.86, variant = "Info" },
+	{ id = "Spins", title = UiText.SECTION_SPINS, columns = 3, aspect = 0.86, variant = "Cyan" },
+	{ id = "Passes", title = UiText.SECTION_PASSES, columns = 3, aspect = 0.8, variant = "Purple" },
+	{ id = "Kit", title = UiText.SECTION_SPECIAL, columns = 3, aspect = 0.86, variant = "Premium" },
 }
 
-local VARIANT_BY_TAB: { [string]: UIKit.Variant } = {
-	Featured = "Orange",
-	Passes = "Purple",
-	Boosts = "Accept",
-	Currency = "Info",
-	Server = "Pink",
-	Spins = "Cyan",
-	Kit = "Premium",
-}
-
-local prices: { [string]: number } = {} -- "product:123" / "pass:45" → precio del Dashboard
+local prices: { [string]: number } = {} -- "Product:123" / "GamePass:45" → precio del Dashboard
 local function fetchPrice(kind: Enum.InfoType, id: number, onPrice: (number) -> ())
 	local key = kind.Name .. ":" .. id
 	local cached = prices[key]
@@ -68,31 +67,21 @@ local function fetchPrice(kind: Enum.InfoType, id: number, onPrice: (number) -> 
 	end)
 end
 
-function ShopController.start(hud: Hud.Hud)
-	local window, body = UIKit.window(hud.screen, { name = "Shop", title = UiText.SHOP_TITLE, icon = "shop", variant = "Close" })
-	local content = UIKit.new("Frame", {
-		Name = "Content",
-		BackgroundTransparency = 1,
-		AnchorPoint = Vector2.new(0.5, 1),
-		Position = UDim2.fromScale(0.5, 1),
-		Size = UDim2.fromScale(1, 0.84),
-		ZIndex = 21,
-	}, body) :: Frame
-
-	local hasKit = false
+local function productByKey(key: string): ShopConfig.Product?
 	for _, product in ShopConfig.PRODUCTS do
-		if product.category == "Kit" then
-			hasKit = true
+		if product.key == key then
+			return product
 		end
 	end
-	local tabs = table.clone(TABS)
-	if hasKit then
-		table.insert(tabs, 2, { id = "Kit", label = UiText.TAB_KIT, icon = "egg_gold" })
-	end
+	return nil
+end
 
-	local current = "Featured"
+function ShopController.start(hud: Hud.Hud)
+	local window, body = UIKit.window(hud.screen, { name = "Shop", title = UiText.SHOP, icon = "shop", variant = "Accept" })
 	local adAvailable = false
-	local grid: ScrollingFrame? = nil
+	local list: ScrollingFrame? = nil
+	local anchors: { [string]: Frame } = {}
+	local stopClocks: (() -> ())? = nil
 
 	local function incomeAmount(minutes: number): number
 		local perSecond = player:GetAttribute("Income")
@@ -111,48 +100,48 @@ function ShopController.start(hud: Hud.Hud)
 		return product.desc
 	end
 
-	local function priceButton(card: Frame, text: string, onActivated: () -> ())
-		local footer = card:FindFirstChild("Footer") :: Frame
-		local button = UIKit.pricePill(footer, "Buy", text, nil, {
-			AnchorPoint = Vector2.new(0.5, 0.5),
-			Position = UDim2.fromScale(0.5, 0.5),
-			Size = UDim2.fromScale(0.95, 1),
-			ZIndex = 4,
-		})
-		button.Activated:Connect(function()
-			Sound.play("Click")
-			onActivated()
-		end)
-		return button
+	local function soon(footer: Frame)
+		UIKit.label(footer, "Soon", UiText.UNAVAILABLE, { Size = UDim2.fromScale(1, 1), ZIndex = 4 }, 24)
 	end
 
-	local function productCard(parent: Instance, product: ShopConfig.Product, order: number)
+	local function buyButton(footer: Frame, robux: number, width: number?): TextButton
+		return UIKit.priceButton(footer, "Buy", robux, {
+			AnchorPoint = Vector2.new(0, 0.5),
+			Position = UDim2.fromScale(0, 0.5),
+			Size = UDim2.fromScale(width or 1, 1),
+			ZIndex = 4,
+		})
+	end
+
+	local function productCard(parent: Instance, product: ShopConfig.Product, variant: UIKit.Variant, order: number)
 		local card = UIKit.card(parent, {
 			name = product.key,
 			title = product.name,
 			desc = describe(product),
 			icon = product.icon,
-			variant = VARIANT_BY_TAB[product.category] or "Info",
+			variant = variant,
 			layoutOrder = order,
 		})
 		if product.tag then
-			UIKit.ribbon(card, product.tag, "Orange")
+			UIKit.ribbon(card, product.tag, "Close")
 			Juice.shine(card, 3)
 		end
+		local footer = card:FindFirstChild("Footer") :: Frame
 		if product.productId == 0 then
-			local footer = card:FindFirstChild("Footer") :: Frame
-			UIKit.label(footer, "Soon", UiText.UNAVAILABLE, { Size = UDim2.fromScale(1, 1), ZIndex = 4 }, 22)
+			soon(footer)
 			return
 		end
-		local button = priceButton(card, tostring(product.robux), function()
+		local button = buyButton(footer, product.robux)
+		button.Activated:Connect(function()
+			Sound.play("Click")
 			MarketplaceService:PromptProductPurchase(player, product.productId)
 		end)
 		fetchPrice(Enum.InfoType.Product, product.productId, function(price)
-			UIKit.setText(button, "R$ " .. Format.commas(price))
+			UIKit.setPrice(button, price)
 		end)
 	end
 
-	local function passCard(parent: Instance, pass: ShopConfig.Pass, order: number, owned: boolean, giftKey: string?)
+	local function passCard(parent: Instance, pass: ShopConfig.Pass, order: number, owned: boolean, giftable: boolean)
 		local card = UIKit.card(parent, {
 			name = pass.key,
 			title = pass.name,
@@ -163,33 +152,26 @@ function ShopController.start(hud: Hud.Hud)
 		})
 		local footer = card:FindFirstChild("Footer") :: Frame
 		if owned then
-			local done = UIKit.button({ name = "Owned", text = UiText.OWNED, variant = "Neutral", parent = footer, size = UDim2.fromScale(0.95, 1), aspectRatio = 3 })
-			done.AnchorPoint = Vector2.new(0.5, 0.5)
-			done.Position = UDim2.fromScale(0.5, 0.5)
-			done.ZIndex = 4
+			UIKit.label(footer, "Owned", UiText.OWNED, { Size = UDim2.fromScale(1, 1), ZIndex = 4 }, 30)
 		elseif pass.passId == 0 then
-			UIKit.label(footer, "Soon", UiText.UNAVAILABLE, { Size = UDim2.fromScale(1, 1), ZIndex = 4 }, 22)
+			soon(footer)
 		else
-			local button = priceButton(card, tostring(pass.robux), function()
+			local button = buyButton(footer, pass.robux, if giftable then 0.66 else 1)
+			button.Activated:Connect(function()
+				Sound.play("Click")
 				MarketplaceService:PromptGamePassPurchase(player, pass.passId)
 			end)
 			fetchPrice(Enum.InfoType.GamePass, pass.passId, function(price)
-				UIKit.setText(button, "R$ " .. Format.commas(price))
+				UIKit.setPrice(button, price)
 			end)
 		end
-		if giftKey then
-			local gift = UIKit.button({
-				name = "Gift",
-				text = "",
-				variant = "Pink",
-				icon = "gift",
-				anchorPoint = Vector2.new(0.5, 0.5),
-				position = UDim2.fromScale(0.9, 0.1),
-				size = UDim2.fromScale(0.26, 0.26),
-				aspectRatio = 1,
-				parent = card,
+		if giftable then
+			local gift = UIKit.giftButton(footer, {
+				AnchorPoint = Vector2.new(1, 0.5),
+				Position = UDim2.fromScale(1, 0.5),
+				Size = UDim2.fromScale(0.3, 1), -- cuadrado: lo limita el alto del pie
+				ZIndex = 4,
 			})
-			gift.ZIndex = 6
 			gift.Activated:Connect(function()
 				Sound.play("Click")
 				Bus.call("OpenGift", pass.key)
@@ -197,18 +179,129 @@ function ShopController.start(hud: Hud.Hud)
 		end
 	end
 
-	local function adCard(parent: Instance)
+	-- Oferta destacada ancha, con rayos detrás del arte, contenido, reloj si termina y precio con ancla.
+	local function featuredCard(parent: Instance, product: ShopConfig.Product, featured: ShopConfig.Featured, order: number): (() -> ())?
+		local small = UIKit.isSmallScreen()
+		local card = UIKit.new("Frame", { Name = "Featured", Size = UDim2.new(0.96, 0, 0, 200), LayoutOrder = order }, parent) :: Frame
+		UIKit.style(card, "Purple", 0.06, 0.012, "checker")
+		UIKit.fitHeight(card, if small then 2 else 2.6)
+		local art = UIKit.new("Frame", {
+			Name = "Art",
+			BackgroundTransparency = 1,
+			AnchorPoint = Vector2.new(0, 0.5),
+			Position = UDim2.fromScale(0.02, 0.55),
+			Size = UDim2.fromScale(0.28, 0.8),
+			ZIndex = 3,
+		}, card) :: Frame
+		UIKit.sunburst(art, Color3.fromRGB(255, 200, 120), 1.1, 0.35)
+		UIKit.icon(art, product.icon, { Size = UDim2.fromScale(1, 1), ZIndex = 4 })
+		UIKit.ribbon(card, UiText.TAG_NEW, "Close").Position = UDim2.fromScale(0.08, 0.1)
+		local title = UIKit.label(card, "Title", featured.title or product.name, {
+			AnchorPoint = Vector2.new(0, 0),
+			Position = UDim2.fromScale(0.3, 0.06),
+			Size = UDim2.fromScale(0.42, 0.2),
+			TextXAlignment = Enum.TextXAlignment.Left,
+			ZIndex = 4,
+		}, 64)
+		title.TextColor3 = Color3.fromRGB(255, 176, 46)
+		-- Lo que trae, con íconos (RewardText), en una fila.
+		local parts = UIKit.new("Frame", {
+			Name = "Parts",
+			BackgroundTransparency = 1,
+			Position = UDim2.fromScale(0.3, 0.34),
+			Size = UDim2.fromScale(0.68, 0.3),
+			ZIndex = 4,
+		}, card) :: Frame
+		UIKit.new("UIListLayout", {
+			FillDirection = Enum.FillDirection.Horizontal,
+			VerticalAlignment = Enum.VerticalAlignment.Center,
+			Padding = UDim.new(0.02, 0),
+			SortOrder = Enum.SortOrder.LayoutOrder,
+		}, parts)
+		local income = player:GetAttribute("Income")
+		for i, reward in product.grant do
+			for j, part in RewardText.parts(reward, if typeof(income) == "number" then income else 0) do
+				local tile = UIKit.new("Frame", {
+					Name = "Part" .. i .. "_" .. j,
+					Size = UDim2.fromScale(1, 1),
+					SizeConstraint = Enum.SizeConstraint.RelativeYY,
+					LayoutOrder = i * 10 + j,
+					ZIndex = 4,
+				}, parts) :: Frame
+				UIKit.style(tile, "Dark", 0.18, 0.04)
+				UIKit.icon(tile, part.icon, { Position = UDim2.fromScale(0.12, 0.04), Size = UDim2.fromScale(0.76, 0.66), ZIndex = 5 })
+				UIKit.label(tile, "Text", part.text, {
+					AnchorPoint = Vector2.new(0.5, 1),
+					Position = UDim2.fromScale(0.5, 0.97),
+					Size = UDim2.fromScale(0.94, 0.3),
+					ZIndex = 6,
+				}, 26)
+			end
+		end
+		-- Reloj y "Limited time!" solo si la oferta termina de verdad.
+		local stop: (() -> ())? = nil
+		local endsAt = featured.endsAt
+		if endsAt then
+			UIKit.label(card, "Limited", UiText.LIMITED, {
+				Position = UDim2.fromScale(0.3, 0.24),
+				Size = UDim2.fromScale(0.3, 0.1),
+				TextXAlignment = Enum.TextXAlignment.Left,
+				ZIndex = 4,
+			}, 34)
+			local clock = UIKit.label(card, "Clock", "", {
+				AnchorPoint = Vector2.new(1, 0),
+				Position = UDim2.fromScale(0.97, 0.07),
+				Size = UDim2.fromScale(0.3, 0.16),
+				TextXAlignment = Enum.TextXAlignment.Right,
+				ZIndex = 4,
+			}, 48)
+			local running = true
+			task.spawn(function()
+				while running and card.Parent do
+					clock.Text = Format.duration(math.max(0, endsAt - Workspace:GetServerTimeNow()))
+					task.wait(1)
+				end
+			end)
+			stop = function()
+				running = false
+			end
+		end
+		local footer = UIKit.new("Frame", {
+			Name = "Footer",
+			BackgroundTransparency = 1,
+			AnchorPoint = Vector2.new(1, 1),
+			Position = UDim2.fromScale(0.97, 0.93),
+			Size = if small then UDim2.fromScale(0.34, 0.28) else UDim2.fromScale(0.3, 0.22),
+			ZIndex = 4,
+		}, card) :: Frame
+		if product.productId == 0 then
+			soon(footer)
+		else
+			local button = UIKit.priceButton(footer, "Buy", product.robux, { Size = UDim2.fromScale(1, 1), ZIndex = 5 }, "Accept", featured.anchor)
+			Juice.shine(button, 2.5)
+			button.Activated:Connect(function()
+				Sound.play("Click")
+				MarketplaceService:PromptProductPurchase(player, product.productId)
+			end)
+			fetchPrice(Enum.InfoType.Product, product.productId, function(price)
+				UIKit.setPrice(button, price)
+			end)
+		end
+		return stop
+	end
+
+	local function adCard(parent: Instance, order: number)
 		local card = UIKit.card(parent, {
 			name = "RewardedAd",
 			title = "FREE 2x Money",
 			desc = UiText.AD_INFO,
 			icon = "money_boost",
 			variant = "Accept",
-			layoutOrder = -1,
+			layoutOrder = order,
 		})
-		UIKit.ribbon(card, "FREE", "Accept")
+		UIKit.ribbon(card, "FREE", "Close")
 		local footer = card:FindFirstChild("Footer") :: Frame
-		local watch = UIKit.button({ name = "Watch", text = UiText.WATCH_AD, variant = "Info", parent = footer, size = UDim2.fromScale(0.95, 1), aspectRatio = 3 })
+		local watch = UIKit.button({ name = "Watch", text = UiText.WATCH_AD, variant = "Pink", parent = footer, size = UDim2.fromScale(1, 1), aspectRatio = 3.2 })
 		watch.AnchorPoint = Vector2.new(0.5, 0.5)
 		watch.Position = UDim2.fromScale(0.5, 0.5)
 		watch.ZIndex = 4
@@ -225,90 +318,135 @@ function ShopController.start(hud: Hud.Hud)
 	end
 
 	local function render()
-		if grid then
-			grid:Destroy()
+		if stopClocks then
+			stopClocks()
+			stopClocks = nil
 		end
+		if list then
+			list:Destroy()
+		end
+		local scroll = UIKit.list(body, "List")
+		scroll.ZIndex = 21
+		list = scroll
+		table.clear(anchors)
 		local state = PlayerState.get()
 		local restricted = player:GetAttribute("PaidRandomRestricted") == true
-		local list = UIKit.grid(content, "Grid", UDim2.fromScale(0.3, 0), 0.78)
-		list.ZIndex = 21
-		grid = list
 		local order = 0
-		if current == "Passes" then
-			local gifts: { [string]: boolean } = {}
-			for _, product in ShopConfig.PRODUCTS do
-				if product.giftOf and product.productId ~= 0 then
-					gifts[product.giftOf] = true
-				end
-			end
-			for _, pass in ShopConfig.PASSES do
-				order += 1
-				local owned = player:GetAttribute(pass.attribute) == true
-				passCard(list, pass, order, owned, if gifts[pass.key] then pass.key else nil)
-			end
-			return
-		end
-		if current == "Featured" then
-			if adAvailable then
-				adCard(list)
-			end
-			for _, sub in ShopConfig.SUBSCRIPTIONS do
-				order += 1
-				local card = UIKit.card(list, { name = sub.key, title = sub.name, desc = sub.desc, icon = sub.icon, variant = "Premium", layoutOrder = order })
-				UIKit.ribbon(card, "VIP", "Purple")
-				Juice.shine(card, 3)
-				local footer = card:FindFirstChild("Footer") :: Frame
-				if player:GetAttribute(sub.attribute) == true then
-					UIKit.label(footer, "Owned", UiText.OWNED_PASS, { Size = UDim2.fromScale(1, 1), ZIndex = 4 }, 24)
-				elseif sub.subscriptionId == "" then
-					UIKit.label(footer, "Soon", UiText.UNAVAILABLE, { Size = UDim2.fromScale(1, 1), ZIndex = 4 }, 22)
-				else
-					priceButton(card, UiText.BUY, function()
-						MarketplaceService:PromptSubscriptionPurchase(player, sub.subscriptionId)
-					end)
-				end
-			end
-		end
-		for _, product in ShopConfig.PRODUCTS do
-			local hidden = product.giftOf ~= nil
-				or (product.random and restricted)
-				or (product.once and state ~= nil and state.boughtOnce[product.key] == true)
+		local function hidden(product: ShopConfig.Product): boolean
+			return product.giftOf ~= nil
+				or (product.random == true and restricted)
+				or (product.once == true and state ~= nil and state.boughtOnce[product.key] == true)
 				or product.key == "OfflineDouble" -- se ofrece en el cartel de bienvenida
-			if product.category == current and not hidden then
-				order += 1
-				productCard(list, product, order)
+		end
+
+		-- 1. Destacado
+		local head = UIKit.section(scroll, UiText.SECTION_FEATURED, 0, Color3.fromRGB(255, 217, 58))
+		anchors.Featured = head
+		order = 1
+		local featured = ShopConfig.FEATURED
+		local featuredProduct = if featured then productByKey(featured.key) else nil
+		if featured and featuredProduct and not hidden(featuredProduct) then
+			stopClocks = featuredCard(scroll, featuredProduct, featured, order)
+			order += 1
+		end
+		local small = UIKit.isSmallScreen()
+		local extras = UIKit.row(scroll, "FeaturedRow", order, if small then 2 else 3, 0.86)
+		order += 1
+		local extraCount = 0
+		if adAvailable then
+			adCard(extras, 1)
+			extraCount += 1
+		end
+		for i, sub in ShopConfig.SUBSCRIPTIONS do
+			local card = UIKit.card(extras, { name = sub.key, title = sub.name, desc = sub.desc, icon = sub.icon, variant = "Premium", layoutOrder = 10 + i })
+			UIKit.ribbon(card, "VIP", "Purple")
+			Juice.shine(card, 3)
+			local footer = card:FindFirstChild("Footer") :: Frame
+			if player:GetAttribute(sub.attribute) == true then
+				UIKit.label(footer, "Owned", UiText.OWNED_PASS, { Size = UDim2.fromScale(1, 1), ZIndex = 4 }, 30)
+			elseif sub.subscriptionId == "" then
+				soon(footer)
+			else
+				local buy = UIKit.button({ name = "Buy", text = UiText.BUY, variant = "Accept", parent = footer, size = UDim2.fromScale(1, 1), aspectRatio = 3.2 })
+				buy.ZIndex = 4
+				buy.Activated:Connect(function()
+					Sound.play("Click")
+					MarketplaceService:PromptSubscriptionPurchase(player, sub.subscriptionId)
+				end)
+			end
+			extraCount += 1
+		end
+		if extraCount == 0 then
+			extras:Destroy()
+		end
+
+		-- 2. El resto, por categoría
+		local gifts: { [string]: boolean } = {}
+		for _, product in ShopConfig.PRODUCTS do
+			if product.giftOf and product.productId ~= 0 then
+				gifts[product.giftOf] = true
+			end
+		end
+		for _, section in SECTIONS do
+			local items = 0
+			local row: Frame? = nil
+			local function ensureRow(): Frame
+				if not row then
+					local title = UIKit.section(scroll, section.title, order)
+					anchors[section.id] = title
+					order += 1
+					-- En el teléfono, 2 columnas y tarjetas más altas: el botón de compra llega a 44 px.
+					row = if small
+						then UIKit.row(scroll, section.id, order, math.min(section.columns, 2), math.min(section.aspect, 0.95))
+						else UIKit.row(scroll, section.id, order, section.columns, section.aspect)
+					order += 1
+				end
+				return row :: Frame
+			end
+			if section.id == "Passes" then
+				for _, pass in ShopConfig.PASSES do
+					items += 1
+					passCard(ensureRow(), pass, items, player:GetAttribute(pass.attribute) == true, gifts[pass.key] == true)
+				end
+			else
+				for _, product in ShopConfig.PRODUCTS do
+					if product.category == section.id and product.key ~= (featured and featured.key) and not hidden(product) then
+						items += 1
+						productCard(ensureRow(), product, section.variant, items)
+					end
+				end
 			end
 		end
 	end
 
-	local tabControl = UIKit.tabs(body, tabs, function(id: string)
-		Sound.play("Tab")
-		current = id
-		render()
-	end)
-	tabControl.frame.ZIndex = 22
-
-	local function open(tab: string?)
-		if tab then
-			current = tab
-			tabControl.select(tab)
-		end
+	-- Abre la tienda en una sección ("Currency", "Passes"...): baja hasta su título.
+	local function open(section: string?)
 		render()
 		UIKit.open(window)
+		if section then
+			task.defer(function()
+				local anchor = anchors[section]
+				local scroll = list
+				if anchor and scroll then
+					local y = anchor.AbsolutePosition.Y - scroll.AbsolutePosition.Y + scroll.CanvasPosition.Y
+					scroll.CanvasPosition = Vector2.new(0, math.max(0, y))
+				end
+			end)
+		end
 		-- Regla de AdService: preguntar si hay anuncio cuando se abre la tienda, no antes.
 		task.spawn(function()
 			local ok, result = pcall(AdService.GetAdAvailabilityNowAsync, AdService, Enum.AdFormat.RewardedVideo)
 			local available = ok and typeof(result) == "table" and result.AdAvailabilityResult == Enum.AdAvailabilityResult.IsAvailable
 			if available ~= adAvailable then
 				adAvailable = available
-				if current == "Featured" and UIKit.isOpen(window) then
+				if UIKit.isOpen(window) then
 					render()
 				end
 			end
 		end)
 	end
 
-	local button = hud.addButton("left", { name = "Shop", label = UiText.SHOP, icon = "shop", variant = "Close", layoutOrder = 1 })
+	local button = hud.addButton("left", { name = "Shop", label = UiText.SHOP, icon = "shop", variant = if hud.menuStyle == "tile" then "Rainbow" else "Accept", layoutOrder = 1 })
 	button.Activated:Connect(function()
 		Sound.play("Click")
 		if UIKit.isOpen(window) then

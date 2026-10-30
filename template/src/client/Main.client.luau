@@ -24,12 +24,17 @@ local SettingsController = require("./Controllers/SettingsController")
 local ShopController = require("./Controllers/ShopController")
 local SocialController = require("./Controllers/SocialController")
 local SpinController = require("./Controllers/SpinController")
+local Bus = require("./Bus")
 local PlayerState = require("./PlayerState")
 local Sound = require("./UI/Sound")
 local Windows = require("./UI/Windows")
+local World = require("./UI/World")
 
 local screen = UIKit.screen("Hud", Players.LocalPlayer:WaitForChild("PlayerGui"))
 Windows.start(screen)
+World.start()
+-- Flechas en el piso hasta el objetivo: el kit llama Bus.call("ShowPath", parte) y nil para sacarlas.
+Bus.handle("ShowPath", World.path)
 local hud = HudController.start(screen)
 
 RewardController.start(hud)

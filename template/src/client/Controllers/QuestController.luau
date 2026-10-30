@@ -36,7 +36,7 @@ end
 function QuestController.start(hud: Hud.Hud)
 	local window, body = UIKit.window(hud.screen, { name = "Quests", title = UiText.QUESTS_TITLE, icon = "quests", variant = "Orange" })
 	local list = UIKit.list(body, "List")
-	list.Size = UDim2.fromScale(1, 0.8)
+	list.Size = UDim2.fromScale(1, 0.77)
 	list.ZIndex = 21
 	local bonus = UIKit.button({
 		name = "Bonus",
@@ -45,12 +45,12 @@ function QuestController.start(hud: Hud.Hud)
 		icon = "chest",
 		anchorPoint = Vector2.new(0.5, 1),
 		position = UDim2.fromScale(0.5, 0.99),
-		size = UDim2.fromScale(0.6, 0.16),
-		aspectRatio = 6,
+		size = UDim2.fromScale(0.6, 0.2),
+		aspectRatio = 4.6,
 		parent = body,
 	})
 	bonus.ZIndex = 22
-	local hudButton = hud.addButton("left", { name = "Quests", label = UiText.QUESTS, icon = "quests", variant = "Orange", layoutOrder = 4 })
+	local hudButton = hud.addTopbarButton({ name = "Quests", label = UiText.QUESTS, icon = "quests", layoutOrder = 2 })
 	local quests: { ids: { string }, progress: { [string]: number }, claimed: { [string]: boolean }, bonusClaimed: boolean }? = nil
 	local stops: { Juice.Stop } = {}
 
@@ -63,18 +63,19 @@ function QuestController.start(hud: Hud.Hud)
 		local progress = q.progress[id] or 0
 		local done = progress >= def.target
 		local claimed = q.claimed[id] == true
-		local frame = UIKit.new("Frame", { Name = id, LayoutOrder = order, Size = UDim2.fromScale(0.96, 0.27), ZIndex = 22 }, list) :: Frame
-		UIKit.style(frame, if claimed then "Neutral" elseif done then "Accept" else "Info", 0.2, 3)
+		local frame = UIKit.new("Frame", { Name = id, LayoutOrder = order, Size = UDim2.new(0.96, 0, 0, 90), ZIndex = 22 }, list) :: Frame
+		UIKit.fitHeight(frame, 7.4, 64) -- 64 px: el botón (70% del alto) llega a 44 en el teléfono
+		UIKit.style(frame, if claimed then "Neutral" elseif done then "Accept" else "Info", 0.2, 0.04)
 		local target = if def.money then Format.money(def.target, EconomyConfig.CURRENCIES[EconomyConfig.MAIN].symbol) else Format.number(def.target)
 		UIKit.label(frame, "Text", string.format(def.text, target), {
 			Position = UDim2.fromScale(0.03, 0.08),
-			Size = UDim2.fromScale(0.6, 0.38),
+			Size = UDim2.fromScale(0.58, 0.38),
 			TextXAlignment = Enum.TextXAlignment.Left,
 			ZIndex = 24,
 		}, 34, UIKit.TitleFont)
 		local bar = UIKit.progressBar(frame, "Progress", {
 			Position = UDim2.fromScale(0.03, 0.56),
-			Size = UDim2.fromScale(0.6, 0.32),
+			Size = UDim2.fromScale(0.58, 0.32),
 			ZIndex = 24,
 		}, "Premium")
 		local shown = math.min(progress, def.target)
@@ -82,7 +83,7 @@ function QuestController.start(hud: Hud.Hud)
 		local parts = RewardText.parts(def.reward, 0)
 		UIKit.icon(frame, RewardText.icon(def.reward), {
 			AnchorPoint = Vector2.new(0.5, 0.5),
-			Position = UDim2.fromScale(0.7, 0.5),
+			Position = UDim2.fromScale(0.68, 0.5), -- entre la barra (hasta 0.61) y el botón (desde 0.75)
 			Size = UDim2.fromScale(0.75, 0.75),
 			SizeConstraint = Enum.SizeConstraint.RelativeYY,
 			ZIndex = 24,

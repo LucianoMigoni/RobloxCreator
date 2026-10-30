@@ -101,7 +101,7 @@ function GiftController.start(hud: Hud.Hud)
 			if other ~= player and not (attribute and other:GetAttribute(attribute) == true) then
 				count += 1
 				local card = UIKit.new("TextButton", { Name = other.Name, Text = "", LayoutOrder = count, ZIndex = 22 }, list) :: TextButton
-				UIKit.style(card, "Pink", 0.15, 3)
+				UIKit.style(card, "Pink", 0.15, 0.035)
 				local photo = UIKit.new("ImageLabel", {
 					Name = "Photo",
 					BackgroundTransparency = 1,

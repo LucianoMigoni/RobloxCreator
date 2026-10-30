@@ -60,7 +60,7 @@ local function offerWindow(hud: Hud.Hud, name: string, title: string, info: stri
 	}, list)
 	for i, part in lines do
 		local row = UIKit.new("Frame", { Name = "Line" .. i, LayoutOrder = i, Size = UDim2.fromScale(1, math.min(0.3, 0.9 / #lines)), ZIndex = 22 }, list) :: Frame
-		UIKit.style(row, "Info", 0.45, 3)
+		UIKit.style(row, "Info", 0.45, 0.06)
 		UIKit.icon(row, part.icon, {
 			AnchorPoint = Vector2.new(0.5, 0.5),
 			Position = UDim2.fromScale(0.08, 0.5),
@@ -78,7 +78,7 @@ local function offerWindow(hud: Hud.Hud, name: string, title: string, info: stri
 	local buy = UIKit.pricePill(body, "Buy", tostring(offer.robux), nil, {
 		AnchorPoint = Vector2.new(0.5, 1),
 		Position = UDim2.fromScale(0.5, 0.98),
-		Size = UDim2.fromScale(0.42, 0.19),
+		Size = UDim2.fromScale(0.42, 0.22),
 		ZIndex = 22,
 	})
 	Juice.shine(buy, 2.2)
@@ -89,7 +89,7 @@ local function offerWindow(hud: Hud.Hud, name: string, title: string, info: stri
 	task.spawn(function()
 		local ok, info2 = pcall(MarketplaceService.GetProductInfoAsync, MarketplaceService, offer.productId, Enum.InfoType.Product)
 		if ok and typeof(info2) == "table" and typeof(info2.PriceInRobux) == "number" then
-			UIKit.setText(buy, "R$ " .. Format.commas(info2.PriceInRobux))
+			UIKit.setPrice(buy, info2.PriceInRobux)
 		end
 	end)
 	return window
@@ -111,9 +111,16 @@ function OfferController.start(hud: Hud.Hud)
 			end
 		end
 		local window = offerWindow(hud, "StarterPack", UiText.STARTER_TITLE, UiText.STARTER_INFO, lines, starter)
-		local button = hud.addButton("right", { name = "StarterPack", label = UiText.OFFER, icon = starter.icon, variant = "Orange", layoutOrder = 2 })
-		UIKit.ribbon(button, "R$ " .. starter.robux, "Accept")
-		Juice.wiggle(button, 6)
+		local button = hud.addOffer({ name = "StarterPack", label = UiText.OFFER, icon = starter.icon, tag = UiText.TAG_NEW, layoutOrder = 2 })
+		UIKit.setPrice(button:FindFirstChild("Price") :: Instance, starter.robux)
+		if starter.productId ~= 0 then
+			task.spawn(function()
+				local ok, info = pcall(MarketplaceService.GetProductInfoAsync, MarketplaceService, starter.productId, Enum.InfoType.Product)
+				if ok and typeof(info) == "table" and typeof(info.PriceInRobux) == "number" then
+					UIKit.setPrice(button:FindFirstChild("Price") :: Instance, info.PriceInRobux)
+				end
+			end)
+		end
 		button.Activated:Connect(function()
 			Sound.play("Click")
 			UIKit.toggle(window)

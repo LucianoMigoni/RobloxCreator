@@ -87,7 +87,7 @@ function PlayerStateService.snapshot(player: Player): Types.PlayerSnapshot?
 		objective = objective,
 		rebirths = data.rebirths,
 		rebirthCost = RebirthService.cost(data.rebirths),
-		index = { found = found, total = total, keys = clone(data.index) },
+		index = { found = found, total = total, keys = clone(data.index), zones = IndexService.zones(player) },
 		groupClaimed = data.groupClaimed,
 		ownedPasses = owned,
 		boughtOnce = clone(data.boughtOnce),

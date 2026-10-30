@@ -53,7 +53,7 @@ function SpinController.start(hud: Hud.Hud)
 		Size = UDim2.fromScale(1, 1),
 		ZIndex = 22,
 	}, wheelHolder) :: Frame
-	UIKit.style(wheel, "Panel", 1, 6)
+	UIKit.style(wheel, "Panel", 1, 0.015)
 
 	-- Cada casilla es un "pétalo" del centro al borde, girado a su ángulo, con el premio y la probabilidad.
 	for i, segment in segments do
@@ -107,7 +107,7 @@ function SpinController.start(hud: Hud.Hud)
 		Size = UDim2.fromScale(0.16, 0.16),
 		ZIndex = 27,
 	}, wheel) :: Frame
-	UIKit.style(hub, "Premium", 1, 4)
+	UIKit.style(hub, "Premium", 1, 0.04)
 	-- Puntero rojo arriba (no gira).
 	local pointer = UIKit.new("Frame", {
 		Name = "Pointer",
@@ -117,15 +117,15 @@ function SpinController.start(hud: Hud.Hud)
 		Rotation = 45,
 		ZIndex = 30,
 	}, wheelHolder) :: Frame
-	UIKit.style(pointer, "Close", 0.15, 4)
+	UIKit.style(pointer, "Close", 0.15, 0.06)
 
 	-- Panel derecho: botón, tiradas y próxima gratis.
 	local side = UIKit.new("Frame", {
 		Name = "Side",
 		BackgroundTransparency = 1,
 		AnchorPoint = Vector2.new(1, 0.5),
-		Position = UDim2.fromScale(0.99, 0.5),
-		Size = UDim2.fromScale(0.36, 0.9),
+		Position = UDim2.fromScale(0.995, 0.5),
+		Size = UDim2.fromScale(0.32, 0.9), -- la rueda ocupa hasta el 65% del ancho
 		ZIndex = 21,
 	}, body) :: Frame
 	local spinButton = UIKit.button({
@@ -135,7 +135,7 @@ function SpinController.start(hud: Hud.Hud)
 		anchorPoint = Vector2.new(0.5, 0),
 		position = UDim2.fromScale(0.5, 0.18),
 		size = UDim2.fromScale(0.95, 0.24),
-		aspectRatio = 2.6,
+		aspectRatio = 2.2,
 		parent = side,
 	})
 	spinButton.ZIndex = 22
@@ -147,13 +147,13 @@ function SpinController.start(hud: Hud.Hud)
 	}, 30)
 	local buy = UIKit.button({
 		name = "BuySpins",
-		text = UiText.TAB_SPINS,
+		text = UiText.BUY_SPINS,
 		variant = "Info",
 		icon = "spin",
 		anchorPoint = Vector2.new(0.5, 0),
 		position = UDim2.fromScale(0.5, 0.66),
-		size = UDim2.fromScale(0.85, 0.17),
-		aspectRatio = 3.2,
+		size = UDim2.fromScale(0.95, 0.22),
+		aspectRatio = 2.2,
 		parent = side,
 	})
 	buy.ZIndex = 22
@@ -162,7 +162,7 @@ function SpinController.start(hud: Hud.Hud)
 		Bus.call("OpenShop", "Spins")
 	end)
 
-	local hudButton = hud.addButton("left", { name = "Spin", label = UiText.SPIN, icon = "spin", variant = "Premium", layoutOrder = 6 })
+	local hudButton = hud.addButton("left", { name = "Spin", label = UiText.SPIN, icon = "spin", variant = "Premium", layoutOrder = 5 })
 	local spins: { tickets: number, nextFreeAt: number } = { tickets = 0, nextFreeAt = math.huge }
 	local spinning = false
 	local stopButtonPulse: Juice.Stop? = nil

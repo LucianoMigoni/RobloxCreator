@@ -25,7 +25,7 @@ local DailyController = {}
 local player = Players.LocalPlayer
 
 function DailyController.start(hud: Hud.Hud)
-	local window, body = UIKit.window(hud.screen, { name = "Daily", title = UiText.DAILY_TITLE, icon = "daily", variant = "Pink" })
+	local window, body = UIKit.window(hud.screen, { name = "Daily", title = UiText.DAILY_TITLE, icon = "daily", variant = "Purple" })
 	local row = UIKit.new("Frame", {
 		Name = "Days",
 		BackgroundTransparency = 1,
@@ -51,7 +51,7 @@ function DailyController.start(hud: Hud.Hud)
 		variant = "Accept",
 		anchorPoint = Vector2.new(0.5, 1),
 		position = UDim2.fromScale(0.5, 0.99),
-		size = UDim2.fromScale(0.36, 0.17),
+		size = UDim2.fromScale(0.42, 0.2),
 		aspectRatio = 3.4,
 		parent = body,
 	})
@@ -67,7 +67,7 @@ function DailyController.start(hud: Hud.Hud)
 			Size = UDim2.fromScale(if big then 0.17 else 0.12, if big then 0.95 else 0.82),
 			ZIndex = 22,
 		}, row) :: Frame
-		UIKit.style(cell, if big then "Premium" else "Info", 0.15, 3)
+		UIKit.style(cell, if big then "Premium" else "Info", 0.15, 0.035)
 		UIKit.label(cell, "Day", string.format(UiText.DAY, i), {
 			AnchorPoint = Vector2.new(0.5, 0),
 			Position = UDim2.fromScale(0.5, 0.03),
@@ -98,7 +98,7 @@ function DailyController.start(hud: Hud.Hud)
 		cells[i] = cell
 	end
 
-	local hudButton = hud.addButton("left", { name = "Daily", label = UiText.DAILY, icon = "daily", variant = "Pink", layoutOrder = 5 })
+	local hudButton = hud.addTopbarButton({ name = "Daily", label = UiText.DAILY, icon = "daily", layoutOrder = 1 })
 	local status: { canClaim: boolean, slot: number, streak: number, nextIn: number }? = nil
 	local receivedAt = 0
 	local stopPulse: Juice.Stop? = nil

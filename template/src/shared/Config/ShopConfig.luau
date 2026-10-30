@@ -53,6 +53,12 @@ export type Subscription = {
 
 export type Item = { name: string, price: number, currency: string? }
 
+-- Oferta destacada arriba de la tienda (como el huevo de Halloween de Steal An Egg o el paquete de inicio
+-- de PS99): uno de PRODUCTS, con arte y reloj. `endsAt` (UTC, os.time) solo si de verdad termina: con
+-- él se muestran "Limited time!" y la cuenta regresiva. `anchor`: precio tachado, solo si ese precio
+-- existió (por ejemplo, lo que cuesta comprar las partes por separado).
+export type Featured = { key: string, title: string?, endsAt: number?, anchor: number? }
+
 return {
 	PRODUCTS = {
 		-- Impulsos baratos de compra repetida ("10 MINUTOS 5 R$, 30 MINUTOS 14 R$, 1 HORA 25 R$").
@@ -97,6 +103,8 @@ return {
 	-- Anuncio con premio ("¡Ver anuncio!"): el premio es un Developer Product propio, nunca aleatorio.
 	-- Requisitos del creador y del juego en /production/promotion/rewarded-video-ads.
 	AD_REWARD = { productId = 0, grant = { { boost = "Money2x", seconds = 600 } } :: { Types.Reward } },
+
+	FEATURED = { key = "StarterPack" } :: Featured?,
 
 	-- Compras con monedas del juego (cosméticos simples); los kits tienen sus propias tiendas.
 	ITEMS = {} :: { [string]: Item },

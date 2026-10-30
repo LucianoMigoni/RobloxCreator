@@ -19,31 +19,22 @@ return {
 	AD = "FREE",
 	INVENTORY = "Items",
 
-	-- Títulos de ventanas
-	SHOP_TITLE = "SHOP",
-	DAILY_TITLE = "DAILY REWARDS",
-	GIFTS_TITLE = "FREE GIFTS",
-	QUESTS_TITLE = "QUESTS",
-	SPIN_TITLE = "SPIN THE WHEEL",
-	REBIRTH_TITLE = "REBIRTH",
-	CODES_TITLE = "CODES",
-	INDEX_TITLE = "INDEX",
-	SETTINGS_TITLE = "SETTINGS",
-	BOOSTS_TITLE = "YOUR BOOSTS",
-	GIFT_TITLE = "GIFT A FRIEND",
-	STARTER_TITLE = "STARTER PACK",
-	OFFLINE_TITLE = "WELCOME BACK!",
-	GROUP_TITLE = "GROUP REWARD",
-	INVENTORY_TITLE = "YOUR ITEMS",
-
-	-- Pestañas de la tienda (ShopConfig.Category)
-	TAB_FEATURED = "Featured",
-	TAB_PASSES = "Passes",
-	TAB_BOOSTS = "Boosts",
-	TAB_CURRENCY = "Currency",
-	TAB_SERVER = "Server",
-	TAB_SPINS = "Spins",
-	TAB_KIT = "Special",
+	-- Títulos de ventanas (como los hits: "Pet Index", "Shop")
+	SHOP_TITLE = "Shop",
+	DAILY_TITLE = "Daily Rewards",
+	GIFTS_TITLE = "Free Gifts",
+	QUESTS_TITLE = "Quests",
+	SPIN_TITLE = "Spin the Wheel",
+	REBIRTH_TITLE = "Rebirth",
+	CODES_TITLE = "Codes",
+	INDEX_TITLE = "Index",
+	SETTINGS_TITLE = "Settings",
+	BOOSTS_TITLE = "Your Boosts",
+	GIFT_TITLE = "Gift a Friend",
+	STARTER_TITLE = "Starter Pack",
+	OFFLINE_TITLE = "Welcome Back!",
+	GROUP_TITLE = "Group Reward",
+	INVENTORY_TITLE = "Your Items",
 
 	-- Botones y estados
 	CLAIM = "CLAIM!",
@@ -55,6 +46,7 @@ return {
 	REBIRTH_NOW = "REBIRTH!",
 	REDEEM = "REDEEM",
 	BUY = "BUY",
+	BUY_SPINS = "Get Spins",
 	OWNED = "OWNED",
 	GIFT = "GIFT",
 	SEND = "SEND",
@@ -96,7 +88,6 @@ return {
 	EVENT_NOW = "%s %s",
 	INCOME = "+%s/s",
 	OBJECTIVE_DONE = "Objective complete!",
-	INDEX_PROGRESS = "%d / %d found",
 	GIFT_CHOOSE = "Choose a player to gift",
 	GIFT_NOBODY = "No other players in this server",
 	GIFT_SENT = "Gift sent!",
@@ -112,4 +103,30 @@ return {
 	EMPTY_INVENTORY = "Nothing here yet",
 	OWNED_PASS = "Owned",
 	UNAVAILABLE = "Coming soon",
+
+	-- HUD estilo hit
+	FRIEND_BOOST = "Friend Boost +%d%%",
+	INVITE_FRIENDS = "Invite friends!",
+	INVITE_BONUS = "+%d%% money each",
+	EVENT_IN = "%s in",
+	TAG_NEW = "NEW!",
+	TAG_OP = "OP!",
+	TAG_BEST = "BEST VALUE!",
+
+	-- Secciones de la tienda (una sola lista, como en los hits)
+	SECTION_FEATURED = "FEATURED",
+	SECTION_BOOSTS = "Boosts",
+	SECTION_SERVER = "Boost the whole server!",
+	SECTION_CASH = "Cash & Gems",
+	SECTION_SPINS = "Lucky Spins",
+	SECTION_PASSES = "Game Passes",
+	SECTION_SPECIAL = "Special",
+	LIMITED = "Limited time!", -- monetization-ok: solo en ofertas con fin real (ShopConfig.FEATURED.endsAt)
+
+	-- Índice
+	UNLOCKED = "Unlocked: %d/%d",
+	ZONE_REWARD = "Zone Reward",
+	UNKNOWN = "???",
+	ZONE_LOCKED = "Unlock this zone first!",
+	ZONE_PROGRESS = "%d/%d",
 }

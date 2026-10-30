@@ -23,6 +23,18 @@ export type RewardLine = { icon: string, text: string, kind: string, color: Colo
 -- Lo que manda RewardShown: título grande, las partes del premio y quién lo dio (para el sonido).
 export type RewardPopup = { title: string, lines: { RewardLine }, source: string }
 
+-- Una zona del índice como la ve el jugador: su avance, si está abierta y su premio por completarla.
+export type IndexZone = {
+	id: string,
+	name: string,
+	image: string?, -- rbxassetid de la foto de la zona
+	found: number,
+	total: number,
+	unlocked: boolean,
+	claimed: boolean,
+	reward: Reward?,
+}
+
 -- Una fuente de multiplicador como la ve el HUD.
 export type MultiplierView = { stat: string, kind: string, value: number, label: string }
 
@@ -43,7 +55,8 @@ export type PlayerSnapshot = {
 	objective: { text: string, progress: number, target: number, money: boolean }?,
 	rebirths: number,
 	rebirthCost: number,
-	index: { found: number, total: number, keys: { [string]: boolean } }, -- keys: "unidad|variante" descubiertas
+	-- keys: "unidad|variante" descubiertas; zones: vacío si el kit no usa zonas.
+	index: { found: number, total: number, keys: { [string]: boolean }, zones: { IndexZone } },
 	groupClaimed: boolean,
 	ownedPasses: { string },
 	boughtOnce: { [string]: boolean }, -- productos de una sola vez ya comprados (no se vuelven a ofrecer)

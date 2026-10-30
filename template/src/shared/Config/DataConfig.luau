@@ -38,6 +38,7 @@ local DataConfig = {
 		referralRewarded = false,
 		rebirths = 0,
 		index = {} :: { [string]: boolean }, -- lo descubierto: "unidad|variante"
+		indexClaimed = {} :: { [string]: boolean }, -- zonas del índice con el premio ya cobrado
 		boosts = {} :: { [string]: number }, -- impulso personal → hora en que termina
 		boughtOnce = {} :: { [string]: boolean }, -- productos de una sola vez ya comprados
 		giftedPasses = {} :: { [string]: boolean }, -- pases que otro jugador le regaló
