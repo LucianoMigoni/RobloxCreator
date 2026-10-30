@@ -10,6 +10,7 @@ Formato y flujo: `team/README.md`. Detalle de cada paso del hub: `ROADMAP.md`.
 
 ## Pendiente
 
+- [ ] Claves de API, conectores, cuentas de Roblox y pruebas: lista completa con casillas en `team/pendientes.md` (arriba de todo, lo mínimo para arrancar) — hub · @leonel @luciano · rama — · juego: hub
 - [ ] Conectar Meshy cuando se hagan las criaturas del primer juego: plan Pro (confirmar que sus créditos sirven para la API), clave en `MESHY_API_KEY` y aprobar el servidor `meshy` de `.mcp.json` (`SETUP.md` paso 7) — hub · @luciano @leonel · rama — · juego: hub
 - [ ] MCP de Blender en la máquina de Leonel (forma A o B de `SETUP.md` paso 6) y Pillow en las dos (`python -m pip install pillow`) — hub · @leonel @luciano · rama — · juego: hub
 - [ ] Clave de la API de OpenAI (`OPENAI_API_KEY`, GPT Image: miniaturas e íconos) en las dos máquinas y en el entorno de la nube de Claude; `GEMINI_API_KEY` recomendada para comparar miniaturas. También el render de modelos (`cd tools/render3d && npm install && npx playwright install chromium`) (`SETUP.md` paso 8) — hub · @luciano @leonel · rama — · juego: hub

@@ -1,6 +1,6 @@
 # Cómo trabajamos
 
-Dos personas, cada una con su IA, sobre un solo repo. El tablero (`tareas.md`) dice quién hace qué. Las decisiones quedan en `decisiones.md` y todo entra a `main` por Pull Request.
+Dos personas, cada una con su IA, sobre un solo repo. El tablero (`tareas.md`) dice quién hace qué. Las decisiones quedan en `decisiones.md` y todo entra a `main` por Pull Request. Lo que depende de las personas (claves de API, conectores, cuentas de Roblox y pruebas en Studio) está junto en `pendientes.md`, y el trabajo largo en curso, para retomarlo desde otra sesión, en `traspaso.md`.
 
 ## Flujo diario
 

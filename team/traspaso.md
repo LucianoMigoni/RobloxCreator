@@ -100,6 +100,8 @@ Estado: ✅ hecho · 🔄 en curso (sección 4) · 👤 depende de una persona.
 - 🔄 "Qué tiene la app, qué falta?" → respondido; el plan está en la sección 4.
 - 🔄 Armador genérico para cualquier top hit, terminar todo, analizarlo y reportar qué conectar → sección 4.
 - 🔄 Traspaso completo y push en cada hito → este archivo.
+- ✅ "Añadí también las cosas que hay que hacer después: qué API keys necesitás (como ChatGPT y Google), qué conectores hay que poner, etc." → `team/pendientes.md` (tarea #71; se repite en el reporte final).
+- ✅ "Enumerame (únicamente) las tareas" → cuando pida la tabla, mostrar solo la lista de tareas, sin comentarios.
 
 ## 4. Plan en curso
 
@@ -108,7 +110,7 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
 | # | Tarea | Hito | Estado |
 |---|---|---|---|
 | 40 | Diseñar el armador: bloques, recetas, etiquetas del mapa (`skills/roblox-game-kits/references/bloques.md`) | 0 | ✅ |
-| 41 | Base del armador: tipos, validación de recetas, cargador de bloques (servidor y cliente), ayudas del mundo, despachador de premios, estado del kit | 1 | pendiente |
+| 41 | Base del armador: tipos, validación de recetas, cargador de bloques (servidor y cliente), ayudas del mundo, despachador de premios, estado del kit | 1 | en curso: `Kits/Types.luau`, `Kits/Tags.luau` y `Config/KitConfig.luau` hechos |
 | 42 | Bloque Units | 1 | pendiente |
 | 43 | Bloque Plots | 2 | pendiente |
 | 44 | Bloque Belt | 2 | pendiente |
@@ -138,6 +140,7 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
 | 68 | Íconos que faltan, listos para generar | 7 | pendiente |
 | 69 | Revisión completa | 8 | pendiente |
 | 70 | Push y reporte final: qué conectar, claves, cuentas, pruebas | 8 | pendiente |
+| 71 | Lista de lo que hay que hacer después: claves, conectores, cuentas y pruebas (`team/pendientes.md`) | 1 | ✅ (mantenerla al día) |
 
 ## 5. Bitácora de hitos
 
@@ -183,19 +186,13 @@ Para seguir igual (completa `bloques.md`):
 
 ## 8. Lo que depende de las personas
 
-- **Claves** (variables de entorno o secretos del entorno de Claude; nunca en el repo ni en el chat):
-  - `OPENAI_API_KEY` (íconos y miniaturas con GPT Image);
-  - `GEMINI_API_KEY` (Nano Banana, opcional);
-  - `MESHY_API_KEY` (plan Pro, modelos 3D);
-  - `ROBLOX_OPEN_CLOUD_API_KEY` + `ROBLOX_CREATOR_GROUP_ID` (subir íconos, texturas y sonidos);
-  - `ROBLOX_ADS_API_KEY` (campañas);
-  - `ROBLOX_ANALYTICS_API_KEY` (métricas).
-- **Cuentas:**
-  - ElevenLabs con plan pago antes de publicar sonidos;
-  - decidir la cuenta dueña de los juegos (personal o grupo) y sus requisitos para menores de 16.
-- **Prueba en Studio de la UI v3** (tarea de Luciano en `team/tareas.md`) y, después, de los bloques del armador.
-- **Elegir las tomas de sonido** (`assets/audio/hit-sfx`, `hit-voices`).
-- **PR de la rama a `main`**, revisión y merge (cuando el usuario lo pida).
+Lista completa y con casillas en **`team/pendientes.md`** (pedido del usuario del 2026-10-30: "que api keys necesitás, qué conectores hay que poner, etc."). Mantenerla al día en cada hito y repetirla en el reporte final (#70). En resumen:
+
+- **Claves** (variables de entorno de cada PC o *Network secrets* del entorno de la nube; nunca en el repo ni en el chat): `OPENAI_API_KEY` (obligatoria para íconos y miniaturas), `GEMINI_API_KEY` (recomendada), `MESHY_API_KEY` (plan Pro), `ROBLOX_OPEN_CLOUD_API_KEY` + `ROBLOX_CREATOR_GROUP_ID`, `ROBLOX_ANALYTICS_API_KEY` y `ROBLOX_ADS_API_KEY`. En la nube no hay ninguna cargada (revisado el 2026-10-30).
+- **Conectores:** MCP de Roblox Studio, Rojo, MCP de Blender y MCP de Meshy en cada PC; ElevenLabs, Higgsfield y GitHub ya conectados en la cuenta de Leonel (Luciano los conecta en claude.ai). Meshy no arranca en la nube (`.mcp.json` usa `cmd`).
+- **Roblox:** grupo dueño (`GameConfig.GROUP_ID`), 2FA y documento verificado, productos y pases con sus ids en `ShopConfig`, suscripción en Robux, anuncio con premio recién cuando se cumplan sus requisitos, cuestionario de madurez, traducción automática, *Max Players* = bases de la receta.
+- **Pruebas en Studio:** UI v3 (Luciano) y, después, los bloques del armador y el juego de prueba rehecho.
+- **Decisiones:** tomas de sonido, receta del primer juego, PR de la rama a `main`.
 
 ## 9. Trampas aprendidas (no repetir)
 
