@@ -2,6 +2,8 @@
 
 Centro para crear juegos de Roblox rápido y con buenas probabilidades de éxito. Este archivo dice qué skill usar en cada fase, cómo empezar un juego y las convenciones. Los detalles viven en cada `skills/<skill>/SKILL.md`.
 
+> **Trabajo en curso:** si retomás un trabajo (por ejemplo, desde el push de otra sesión), leé primero `team/traspaso.md`: tiene todo lo que pidió el usuario, el plan con su estado y cómo seguir.
+
 ## Reglas generales
 
 - **Qué juegos hacemos y cómo:** antes de diseñar o construir, leer `skills/_shared/como-son-nuestros-juegos.md`. Ahí está todo lo que el equipo definió: juegos estilo top hit para chicos, retención y dopamina, monetización agresiva dentro de las reglas, HUD, mapas, vitrina, campañas y lo que nunca se hace.
