@@ -5,6 +5,7 @@
 -- eventos de economía (roblox-metrics-growth).
 
 local Types = require("../Types")
+local KitConfig = require("./KitConfig")
 
 type Reward = Types.Reward
 
@@ -50,18 +51,19 @@ return {
 		{ seconds = 3600, reward = { currency = "Gems", amount = 25, boost = "Luck2x", seconds = 1800 } :: Reward },
 	},
 
-	-- Misiones diarias: 3 por día del pool, iguales en todos los servidores. Los kits mandan sus
-	-- eventos (Steal, Hatch, CatchFish, Steps...) con QuestService.track.
+	-- Misiones diarias: 3 por día del pool, iguales en todos los servidores. Los bloques del armador
+	-- mandan sus eventos (Steal, Hatch, Catch, Steps...) con Signals.track; la receta reemplaza el pool
+	-- con sus misiones en `quests`.
 	QUESTS = {
 		count = 3,
-		pool = {
+		pool = (KitConfig.quests or {
 			{ id = "earn", text = "Earn %s", stat = "MoneyEarned", target = 10_000, money = true, reward = { currency = "Gems", amount = 5 } },
 			{ id = "play", text = "Play for %s minutes", stat = "Minutes", target = 15, reward = { spins = 1 } },
 			{ id = "spin", text = "Spin the wheel %s times", stat = "Spin", target = 2, reward = { boost = "Money2x", seconds = 600 } },
 			{ id = "collect", text = "Collect cash %s times", stat = "Collect", target = 20, reward = { currency = "Money", incomeMinutes = 5 } },
 			{ id = "rare", text = "Get %s Rare or better", stat = "RareFound", target = 3, reward = { boost = "Luck2x", seconds = 900 } },
 			{ id = "upgrade", text = "Buy %s upgrades", stat = "Upgrade", target = 5, reward = { currency = "Gems", amount = 5 } },
-		} :: { QuestDef },
+		}) :: { QuestDef },
 		bonus = { currency = "Gems", amount = 25, spins = 1, label = "ALL QUESTS BONUS" } :: Reward,
 	},
 

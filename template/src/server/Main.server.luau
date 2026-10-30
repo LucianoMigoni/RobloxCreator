@@ -1,6 +1,7 @@
 --!strict
--- Arranque del servidor: cada servicio expone start() y se inicia acá, en orden. Los kits
--- (server/Kits/<GameConfig.KIT>) se registran antes de DataService (agregan sus datos por defecto).
+-- Arranque del servidor: cada servicio expone start() y se inicia acá, en orden. Los bloques del
+-- armador (server/Kits, receta en Config/KitConfig) registran sus datos en Kits.init(), antes de
+-- arrancar el núcleo, y arrancan en Kits.start(), antes de DataService (escuchan la carga de datos).
 
 local BoostService = require("./Boosts/BoostService")
 local DataService = require("./Data/DataService")
@@ -24,8 +25,10 @@ local CampaignService = require("./Social/CampaignService")
 local LeaderboardService = require("./Social/LeaderboardService")
 local SettingsService = require("./Social/SettingsService")
 local CurrencyService = require("./Economy/CurrencyService")
+local Kits = require("./Kits/Kits")
 
 Remotes.start()
+Kits.init()
 -- Primero los que escuchan la carga de datos, después DataService (que dispara StateChanged).
 AnnounceService.start()
 RewardService.start()
@@ -47,4 +50,5 @@ LeaderboardService.start()
 SettingsService.start()
 EventService.start()
 ShopService.start()
+Kits.start()
 DataService.start()

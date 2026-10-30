@@ -1,12 +1,11 @@
 --!strict
 -- Arranque del cliente: arma el HUD estilo hit y conecta cada ventana al estado que manda el servidor.
--- El kit del juego (GameConfig.KIT) agrega lo suyo desde client/Kits/<KIT> con la misma interfaz:
--- Kit.start(hud). Al final se pide el primer estado, cuando todos ya escuchan.
+-- Los bloques del armador que usa la receta (Config/KitConfig) agregan su UI desde client/Kits con la
+-- misma interfaz: start(hud). Al final se pide el primer estado, cuando todos ya escuchan.
 
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local GameConfig = require(ReplicatedStorage.Shared.Config.GameConfig)
 local UIKit = require(ReplicatedStorage.Shared.UIKit)
 local AnnounceController = require("./Controllers/AnnounceController")
 local BoostsController = require("./Controllers/BoostsController")
@@ -24,6 +23,7 @@ local SettingsController = require("./Controllers/SettingsController")
 local ShopController = require("./Controllers/ShopController")
 local SocialController = require("./Controllers/SocialController")
 local SpinController = require("./Controllers/SpinController")
+local Kits = require("./Kits/Kits")
 local Bus = require("./Bus")
 local PlayerState = require("./PlayerState")
 local Sound = require("./UI/Sound")
@@ -53,16 +53,7 @@ SocialController.start(hud)
 GiftController.start(hud)
 BoostsController.start(hud)
 
-local kits = script.Parent:FindFirstChild("Kits")
-local kit = kits and kits:FindFirstChild(GameConfig.KIT)
-if kit and kit:IsA("ModuleScript") then
-	local ok, err = pcall(function()
-		(require :: any)(kit).start(hud)
-	end)
-	if not ok then
-		warn("[Client] el kit " .. GameConfig.KIT .. " no arrancó: " .. tostring(err))
-	end
-end
+Kits.start(hud)
 
 Sound.preload({ "Click", "Open", "Close", "Coin", "Reward", "Purchase", "SpinTick" })
 Sound.playMusic("Lobby")

@@ -1,6 +1,10 @@
 --!strict
 -- Monedas del juego. La principal es la plata de los simuladores; las demás son opcionales (gemas, la
 -- moneda del evento). Cada una se registra aparte en las analíticas de economía (máximo 10 por juego).
+-- La receta del armador suma las suyas (Wins, Taps...) en `currencies` de Config/KitConfig.
+
+local KitTypes = require("../Kits/Types")
+local KitConfig = require("./KitConfig")
 
 export type Currency = {
 	symbol: string, -- se antepone al número: "$" → "$1.2K"; "" para mostrar solo el número
@@ -10,12 +14,17 @@ export type Currency = {
 	purchasable: boolean, -- true si se vende por Robux (entonces lo aleatorio que se compra con ella es "aleatorio pago")
 }
 
+local CURRENCIES: { [string]: Currency } = {
+	Money = { symbol = "$", icon = "cash", color = Color3.fromRGB(85, 230, 95), start = 10, purchasable = true },
+	Gems = { symbol = "", icon = "gem", color = Color3.fromRGB(80, 190, 255), start = 0, purchasable = false },
+}
+for _, c in KitConfig.currencies or ({} :: { KitTypes.CurrencyDef }) do
+	CURRENCIES[c.id] = { symbol = c.symbol, icon = c.icon, color = Color3.fromHex(c.color), start = c.start, purchasable = c.purchasable }
+end
+
 return {
 	MAIN = "Money",
-	CURRENCIES = {
-		Money = { symbol = "$", icon = "cash", color = Color3.fromRGB(85, 230, 95), start = 10, purchasable = true },
-		Gems = { symbol = "", icon = "gem", color = Color3.fromRGB(80, 190, 255), start = 0, purchasable = false },
-	} :: { [string]: Currency },
+	CURRENCIES = CURRENCIES,
 	-- Los simuladores llegan a Qa y más. Por encima de 2^53 se pierde precisión de unidades, que no se ve
 	-- en pantalla (Format muestra 3 o 4 cifras).
 	MAX_BALANCE = 1e300,

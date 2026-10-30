@@ -200,11 +200,15 @@ function World.path(target: Instance?)
 end
 
 
--- Carteles de Studio (etiqueta "HitSign") y flechas que siguen al personaje.
+-- Carteles de Studio o del servidor (etiqueta "HitSign") y flechas que siguen al personaje. Si el
+-- servidor cambia un atributo del cartel ("Leo's Base"), se vuelve a dibujar.
 function World.start()
-	local function add(instance: Instance)
-		if signs[instance] then
-			return
+	local watchers: { [Instance]: { RBXScriptConnection } } = {}
+	local function draw(instance: Instance)
+		local old = signs[instance]
+		if old then
+			old:Destroy()
+			signs[instance] = nil
 		end
 		local text = instance:GetAttribute("Text")
 		if typeof(text) ~= "string" then
@@ -225,11 +229,31 @@ function World.start()
 			signs[instance] = gui
 		end
 	end
+	local function add(instance: Instance)
+		if watchers[instance] then
+			return
+		end
+		local list = {}
+		for _, name in { "Text", "Variant", "Icon", "Width" } do
+			table.insert(list, instance:GetAttributeChangedSignal(name):Connect(function()
+				draw(instance)
+			end))
+		end
+		watchers[instance] = list
+		draw(instance)
+	end
 	for _, instance in CollectionService:GetTagged(SIGN_TAG) do
 		add(instance)
 	end
 	CollectionService:GetInstanceAddedSignal(SIGN_TAG):Connect(add)
 	CollectionService:GetInstanceRemovedSignal(SIGN_TAG):Connect(function(instance: Instance)
+		local connections = watchers[instance]
+		if connections then
+			for _, connection in connections do
+				connection:Disconnect()
+			end
+		end
+		watchers[instance] = nil
 		local gui = signs[instance]
 		if gui then
 			gui:Destroy()

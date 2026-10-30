@@ -1,6 +1,7 @@
 --!strict
 -- Tabla de jugadores de Roblox (leaderstats, arriba a la derecha) con GameConfig.LEADERSTATS: monedas
--- formateadas como en el HUD ("$1.2M") y renacimientos. Mostrar cuánto tiene cada uno empuja a
+-- formateadas como en el HUD ("$1.2M"), renacimientos y estadísticas del armador ("Speed": el bloque
+-- Stats las deja en un atributo del jugador con ese nombre). Mostrar cuánto tiene cada uno empuja a
 -- competir y a comprar.
 
 local Players = game:GetService("Players")
@@ -39,6 +40,16 @@ local function build(player: Player)
 			local value = Instance.new("IntValue")
 			value.Name = stat
 			value.Value = data.rebirths
+			value.Parent = folder
+		else
+			local value = Instance.new("StringValue")
+			value.Name = stat
+			local function update()
+				local current = player:GetAttribute(stat)
+				value.Value = Format.number(if typeof(current) == "number" then current else 0)
+			end
+			update()
+			player:GetAttributeChangedSignal(stat):Connect(update)
 			value.Parent = folder
 		end
 	end

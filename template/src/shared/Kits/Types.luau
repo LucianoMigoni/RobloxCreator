@@ -229,11 +229,12 @@ export type UpgradeDef = {
 	name: string,
 	desc: string, -- "+25% Money per level" (inglés)
 	icon: string?,
-	-- Qué mejora: "stat:<Stat>" (multiplicador de BoostService), "slots", "equip", "bag", "luck",
-	-- "walkSpeed", "inventory", "tiles", "power" (herramienta), "collect" (radio)
+	-- Qué mejora: "stat:<Stat>" (multiplicador de BoostService: Money, Luck, Speed...) o uno de
+	-- Lib/KitCheck.EFFECTS: "slots", "equip", "inventory", "bag", "power", "tiles", "grow",
+	-- "walkSpeed", "reel", "capture".
 	effect: string,
-	per: number, -- cuánto suma cada nivel
-	kind: ("add" | "mult")?, -- para "stat:": suma (+per) o multiplica (×per por nivel)
+	per: number, -- cuánto suma cada nivel (en grow, reel y capture: fracción de tiempo menos)
+	kind: ("add" | "mult")?, -- para "stat:": suma (+per por nivel) o multiplica (×per por nivel)
 	maxLevel: number,
 	prices: { number }?, -- escalera explícita
 	base: number?, -- o precio = base × growth ^ nivel

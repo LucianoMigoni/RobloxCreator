@@ -110,8 +110,8 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
 | # | Tarea | Hito | Estado |
 |---|---|---|---|
 | 40 | Diseñar el armador: bloques, recetas, etiquetas del mapa (`skills/roblox-game-kits/references/bloques.md`) | 0 | ✅ |
-| 41 | Base del armador: tipos, validación de recetas, cargador de bloques (servidor y cliente), ayudas del mundo, despachador de premios, estado del kit | 1 | en curso: `Kits/Types.luau`, `Kits/Tags.luau` y `Config/KitConfig.luau` hechos |
-| 42 | Bloque Units | 1 | pendiente |
+| 41 | Base del armador: tipos, validación de recetas, cargador de bloques (servidor y cliente), ayudas del mundo, despachador de premios, estado del kit | 1 | ✅ |
+| 42 | Bloque Units | 1 | en curso: `Lib/UnitMath.luau` escrito (falta su test), sigue `server/Kits/Units.luau` |
 | 43 | Bloque Plots | 2 | pendiente |
 | 44 | Bloque Belt | 2 | pendiente |
 | 45 | Bloque Steal (hecho de cero) | 2 | pendiente |
@@ -146,6 +146,14 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
 
 - **Antes del armador (hasta el 2026-10-30, commit `0a79d17`):** UI estilo hit completa (UIKit v3, HUD de PC y táctil, tienda en una lista, índice por zonas con premio validado, carteles y flechas en el mundo, ventanas revisadas para el teléfono). Chequeo en verde en GitHub.
 - **Hito 0 (2026-10-30):** diseño del armador (`skills/roblox-game-kits/references/bloques.md`), este traspaso y la tabla de tareas #40 a #70.
+- **Hito 1, parte 1 (2026-10-30): base del armador.** Chequeo en verde.
+  - `shared/Kits/Types.luau` (tipos de la receta), `shared/Kits/Tags.luau` (etiquetas del mapa), `shared/Config/KitConfig.luau` (receta activa; `{ name = "None" }` = solo núcleo).
+  - `shared/Lib/KitCheck.luau` + `tests/KitCheck.spec.luau` (12 casos) + `tests/KitKnown.luau` (listas del núcleo para los tests): revisa ids, rarezas, monedas, pases, impulsos, referencias entre bloques, bloques que necesitan otros (`NEEDS`), premios por ítem (`KitCheck.ITEMS`: Unit, Roll, Item, Upgrade, Zone, Stat, Rod, Tool, Seed, Garden:Skip, Merge:Skip, Stages:Revive) y efectos de mejoras (`KitCheck.EFFECTS`). `KitCheck.BLOCKS` = orden de arranque.
+  - `server/Kits/Kits.luau`: cargador. `BLOCKS` vacío hasta que cada bloque se suma con `{ key, init, start, snapshot?, income?, items? }`. Revisa la receta con las listas reales y avisa con `warn("[Kits] ...")`; registra un solo `setItemHandler` (despacha por prefijo), `setIncomeProvider` (suma) y `setKitProvider` (`state.kit.<key>`). `Main.server`: `Kits.init()` después de `Remotes.start()`, `Kits.start()` justo antes de `DataService.start()`.
+  - `server/Kits/KitWorld.luau`: `tagged`, `text`/`number`/`inherited` (atributos), `part`, `position`, `ancestor`, `humanoid`, `root`, `near` (con margen de 8 studs), `playerFromPart`, `sign` (cartel HitSign desde el servidor), `prompt` + `onPrompt` (mide distancia y frena repeticiones), `onTouch` (pads).
+  - Cliente: `client/Kits/Kits.luau` (cargador de UI por bloque, `start(hud)`), `KitState.luau` (`get`/`on` de `state.kit.<bloque>`), `ActionBar.luau` (botones grandes abajo al centro; se reparten el ancho, atajo de teclado, mantener apretado repite). `Main.client` llama `Kits.start(hud)` (se fue `GameConfig.KIT`).
+  - Núcleo que ahora lee la receta: `EconomyConfig` (suma `currencies`, color con `Color3.fromHex`), `ObjectiveConfig.CHAIN` (`objectives`), `RetentionConfig.QUESTS.pool` (`quests`), `GameConfig.LEADERSTATS` (`leaderstats`); `LeaderboardService` muestra estadísticas del armador (atributo del jugador con el id de la estadística). `World.luau`: los carteles HitSign se redibujan si el servidor cambia sus atributos.
+  - `team/pendientes.md` (claves, conectores, cuentas y pruebas) a pedido del usuario.
 
 ## 6. Qué existe hoy (mapa)
 
@@ -156,6 +164,7 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
   - servidor: datos con bloqueo de sesión, remotes con validación y límite, economía multi-moneda, impulsos, premios, retención (diario, regalos por tiempo, misiones, ruleta, códigos, grupo, sin conexión, renacer, objetivos, índice por zonas), tienda (productos, pases, suscripción, regalos, anuncio con premio), eventos con horario, social;
   - cliente: HUD estilo hit (PC y táctil), ventanas, Juice, Sound, Effects, World (carteles y flechas);
   - tests de la lógica pura en `template/tests/`.
+- **Armador** (en curso): receta en `template/src/shared/Config/KitConfig.luau`; base hecha (sección 5, hito 1).
 - **Juego de prueba** `games/prueba`: hecho sobre la plantilla vieja (v1). Al usuario no le gustó: se rehace (tarea 64).
 
 ## 7. Detalles ya decididos del armador
