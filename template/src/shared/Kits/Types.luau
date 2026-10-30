@@ -44,6 +44,21 @@ export type UnitDef = {
 
 export type IndexZone = { id: string, name: string, image: string?, reward: Reward? }
 
+-- Una unidad del jugador (data.kits.units.list). Normal = sin variant ni size.
+export type Unit = {
+	uid: number,
+	kind: string, -- id de units.list
+	variant: string?, -- mutación (RarityConfig.MUTATIONS): "Gold", "Rainbow"
+	size: string?, -- tamaño (RarityConfig.SIZES): "Big", "Huge"
+	weight: number?, -- kilos (peces)
+	slot: number?, -- colocada en ese espacio de su base (Plots)
+	equipped: boolean?, -- equipada (Equip)
+	locked: boolean?, -- cuidada por el jugador: no se vende ni se fusiona con "todo"
+}
+
+-- Lo que ve el cliente del bloque Units (state.kit.units).
+export type UnitsState = { list: { Unit }, max: number }
+
 export type UnitsConfig = {
 	label: string, -- título del inventario y del índice: "Pets", "Fish", "Critters"
 	list: { UnitDef },

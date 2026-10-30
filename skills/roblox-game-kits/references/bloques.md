@@ -18,11 +18,13 @@ Un juego del hub = **núcleo de la plantilla** (datos, economía, retención, ti
 Cada bloque guarda lo suyo en `data.kits.<bloque>` con `DataService.registerKit` (antes de `DataService.start`). Las unidades del jugador:
 
 ```
-data.kits.units = { list = { Unit }, nextId = number }
-Unit = { uid, kind, variant?, size?, level?, weight?, slot?, equipped?, locked? }
+data.kits.units = { list = { Unit }, nextId = number, orphans = { Unit } }
+Unit = { uid, kind, variant?, size?, weight?, slot?, equipped?, locked? }
 ```
 
-`kind` es el id de `units.list`; `slot` = colocada en ese espacio de la base; `equipped` = equipada.
+`kind` es el id de `units.list`; `variant` y `size`, la mutación y el tamaño (nil = Normal); `weight`, los kilos (peces); `slot` = colocada en ese espacio de la base; `equipped` = equipada; `locked` = cuidada por el jugador (no entra en "vender todo" ni en "fusionar todo"). Si una unidad sale de la receta después de publicar, al cargar pasa a `orphans` (no se borra). La cuenta de valor, ingreso, poder, nombre y sorteos está en `Lib/UnitMath.luau`, igual en servidor y cliente.
+
+Entre bloques no hay `require` en círculo: los bonos de las mejoras pasan por `server/Kits/Bonus.luau` (`Bonus.get(player, "inventory")`) y los cambios de unidades por las señales `Units.Added`, `Units.Removed` y `Units.Changed`.
 
 ## Catálogo
 

@@ -10,13 +10,16 @@ local KitConfig = require(ReplicatedStorage.Shared.Config.KitConfig)
 local KitCheck = require(ReplicatedStorage.Shared.Lib.KitCheck)
 local HudController = require("../Controllers/HudController")
 local ActionBar = require("./ActionBar")
+local Units = require("./Units")
 
 type Block = { key: string, start: (HudController.Hud) -> () }
 
 local Kits = {}
 
 -- Un bloque por fila, en el orden de KitCheck.BLOCKS.
-local BLOCKS: { Block } = {}
+local BLOCKS: { Block } = {
+	{ key = "units", start = Units.start },
+}
 
 function Kits.start(hud: HudController.Hud)
 	if #KitCheck.blocks(KitConfig) == 0 then

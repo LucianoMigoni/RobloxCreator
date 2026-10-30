@@ -111,7 +111,7 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
 |---|---|---|---|
 | 40 | Diseñar el armador: bloques, recetas, etiquetas del mapa (`skills/roblox-game-kits/references/bloques.md`) | 0 | ✅ |
 | 41 | Base del armador: tipos, validación de recetas, cargador de bloques (servidor y cliente), ayudas del mundo, despachador de premios, estado del kit | 1 | ✅ |
-| 42 | Bloque Units | 1 | en curso: `Lib/UnitMath.luau` escrito (falta su test), sigue `server/Kits/Units.luau` |
+| 42 | Bloque Units | 1 | ✅ (el inventario en ventana va con la UI de los bloques, #61) |
 | 43 | Bloque Plots | 2 | pendiente |
 | 44 | Bloque Belt | 2 | pendiente |
 | 45 | Bloque Steal (hecho de cero) | 2 | pendiente |
@@ -154,6 +154,12 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
   - Cliente: `client/Kits/Kits.luau` (cargador de UI por bloque, `start(hud)`), `KitState.luau` (`get`/`on` de `state.kit.<bloque>`), `ActionBar.luau` (botones grandes abajo al centro; se reparten el ancho, atajo de teclado, mantener apretado repite). `Main.client` llama `Kits.start(hud)` (se fue `GameConfig.KIT`).
   - Núcleo que ahora lee la receta: `EconomyConfig` (suma `currencies`, color con `Color3.fromHex`), `ObjectiveConfig.CHAIN` (`objectives`), `RetentionConfig.QUESTS.pool` (`quests`), `GameConfig.LEADERSTATS` (`leaderstats`); `LeaderboardService` muestra estadísticas del armador (atributo del jugador con el id de la estadística). `World.luau`: los carteles HitSign se redibujan si el servidor cambia sus atributos.
   - `team/pendientes.md` (claves, conectores, cuentas y pruebas) a pedido del usuario.
+- **Hito 1, parte 2 (2026-10-30): bloque Units.** Chequeo en verde.
+  - `shared/Lib/UnitMath.luau` + `tests/UnitMath.spec.luau` (8 casos): clave del índice, multiplicador de mutación × tamaño × peso, ingreso/valor/poder, nombre ("Huge Gold Dragon"), artículo "a"/"an", rango de rareza, sorteos con suerte desde `luckyFrom` (`entries`), variantes y peso al azar, mejor probabilidad de cada unidad en los sorteos de la receta (`chances`) y de una variante (`variantChance`).
+  - `server/Kits/Units.luau`: inventario en `data.kits.units`; `add(player, kind, { source, variant?, size?, weight?, roll?, force?, quiet? })` → `(unit?, motivo?, esNueva)`; `remove`, `transfer` (robos), `place` (espacio de la base), `equip`, `lock`; `income`/`value`/`power`/`name`/`rank`/`tier`; `rollVariants` (suerte = `BoostService.multiplier(player, "Luck")`); `max` = `maxInventory` + `Bonus.get(player, "inventory")`. Señales `Added`, `Removed`, `Changed` y `Signals.track` "UnitGot" y "RareFound" (Rare o más). Avisa al servidor desde `announceFrom` (o mutación ×5 o más), global si la rareza es `global`. Índice: total = unidades × mutaciones; zonas de `units.zones` con las claves Normal. Remote `LockUnit(uid, on)`. Premio "Unit:<unidad>[:<mutación>[:<tamaño>]]" siempre entregado (puede venir de Robux). Al cargar, lo que no está en la receta pasa a `orphans`.
+  - `server/Kits/Bonus.luau`: bonos entre bloques sin `require` en círculo (`register`, `get`, `notify`, `Changed`).
+  - `client/Kits/Units.luau`: piezas del índice (`Bus.handle("IndexEntries")`) con rareza, "1 in N" (sorteo × mutación) y lo que da; `Units.model(def)` busca `ReplicatedStorage.Assets.Units[def.model]`.
+  - **Pendiente para Zones (#51):** las zonas del índice todavía no se cierran por zona del mundo: al hacer el bloque Zones, pasar `isUnlocked = function(player) return Zones.isUnlocked(player, zone.id) end` en `Units.start` (requerir Zones desde Units no arma círculo).
 
 ## 6. Qué existe hoy (mapa)
 
@@ -191,7 +197,7 @@ Para seguir igual (completa `bloques.md`):
 - **Mapa:** todo por etiquetas de `CollectionService` (tabla de `bloques.md`); `MapKit` arma el mapa de la receta con esas etiquetas, de colores y estilo hit, y un mapa hecho a mano funciona igual.
 - **Puertas de zonas:** las abre el cliente (choque local) y el servidor rechaza lo que se haga en una zona cerrada.
 - **Tienda:** `ShopConfig` suma pases y productos con `kit = "<bloque>"`; la tienda oculta los de bloques apagados.
-- **Monedas nuevas por receta** (Wins, Taps): en `EconomyConfig.CURRENCIES` de cada juego.
+- **Monedas nuevas por receta** (Wins, Taps): en `currencies` de la receta, con el color en hex; `EconomyConfig` las suma a `CURRENCIES`.
 
 ## 8. Lo que depende de las personas
 

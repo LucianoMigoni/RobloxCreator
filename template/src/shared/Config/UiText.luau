@@ -129,4 +129,8 @@ return {
 	UNKNOWN = "???",
 	ZONE_LOCKED = "Unlock this zone first!",
 	ZONE_PROGRESS = "%d/%d",
+
+	-- Armador: unidades
+	UNIT_ANNOUNCE = "%s got %s %s!", -- jugador, "a"/"an", "SECRET Huge Gold Dragon"
+	INVENTORY_FULL = "Your inventory is full!",
 }

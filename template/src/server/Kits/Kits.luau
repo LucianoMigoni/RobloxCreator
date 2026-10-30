@@ -23,6 +23,7 @@ local KitCheck = require(ReplicatedStorage.Shared.Lib.KitCheck)
 local Types = require(ReplicatedStorage.Shared.Types)
 local PlayerStateService = require("../PlayerStateService")
 local RewardService = require("../Rewards/RewardService")
+local Units = require("./Units")
 
 -- Entrega un premio del bloque: (jugador, valor después del prefijo, cantidad) → si pudo y la línea
 -- del popup ("+1 Dragon").
@@ -40,7 +41,9 @@ export type Block = {
 local Kits = {}
 
 -- Un bloque por fila, en el orden de KitCheck.BLOCKS.
-local BLOCKS: { Block } = {}
+local BLOCKS: { Block } = {
+	{ key = "units", init = Units.init, start = Units.start, snapshot = Units.snapshot, items = Units.items },
+}
 
 local active: { Block } = {}
 local handlers: { [string]: ItemHandler } = {}
