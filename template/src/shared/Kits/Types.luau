@@ -188,6 +188,9 @@ export type StatDef = {
 	multiplier: string?, -- estadística de BoostService que la multiplica (por defecto, su id)
 }
 
+-- Lo que ve el cliente del bloque Stats (state.kit.stats): valor de cada una y el tope elegido (0..1).
+export type StatsState = { values: { [string]: number }, caps: { [string]: number } }
+
 export type ZoneDef = {
 	id: string,
 	name: string, -- "Lake"

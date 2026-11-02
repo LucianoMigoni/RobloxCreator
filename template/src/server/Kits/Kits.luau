@@ -30,6 +30,7 @@ local Merge = require("./Merge")
 local Plots = require("./Plots")
 local Rolls = require("./Rolls")
 local Sell = require("./Sell")
+local Stats = require("./Stats")
 local Steal = require("./Steal")
 local Units = require("./Units")
 
@@ -51,6 +52,7 @@ local Kits = {}
 -- Un bloque por fila, en el orden de KitCheck.BLOCKS.
 local BLOCKS: { Block } = {
 	{ key = "units", init = Units.init, start = Units.start, snapshot = Units.snapshot, items = Units.items },
+	{ key = "stats", init = Stats.init, start = Stats.start, snapshot = Stats.snapshot, items = Stats.items },
 	{ key = "plots", init = Plots.init, start = Plots.start, snapshot = Plots.snapshot, income = Plots.income },
 	{ key = "equip", init = Equip.init, start = Equip.start, snapshot = Equip.snapshot },
 	{ key = "sell", init = Sell.init, start = Sell.start, snapshot = Sell.snapshot },

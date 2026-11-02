@@ -73,6 +73,11 @@ local EMOJI: { [string]: string } = {
 	plus = "➕",
 	check = "✔️",
 	trade = "🔁",
+	-- armador (2026-11-02): todavía sin ícono 3D, ver tarea de íconos
+	merge = "⏫",
+	pad = "🛒",
+	tap = "👆",
+	steps = "👟",
 }
 
 export type Resolved = { image: string?, text: string? }

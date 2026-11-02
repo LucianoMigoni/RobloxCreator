@@ -131,8 +131,8 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
 | 47 | Bloque Merge | 2 | ✅ servidor |
 | 48 | Bloque Sell | 2 | ✅ servidor (su UI va en #61) |
 | 49 | Bloque Equip | 2 | ✅ servidor (mascotas que siguen y su UI van en #61) |
-| 50 | Bloque Stats | 3 | **sigue esta** |
-| 51 | Bloque Zones | 3 | pendiente |
+| 50 | Bloque Stats | 3 | ✅ servidor |
+| 51 | Bloque Zones | 3 | **sigue esta** |
 | 52 | Bloque Stages | 3 | pendiente |
 | 53 | Bloque Fishing | 3 | pendiente |
 | 54 | Bloque Garden | 3 | pendiente |
@@ -192,6 +192,11 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
   - `server/Kits/Steal.luau`: prompt "Steal" en cada unidad colocada (atributo `Owner` para que el cliente del dueño lo esconda), llevarla sobre la cabeza (soldada con `WeldConstraint`), velocidad `carrySpeed`, atributo `BeingStolen` en el modelo de la base, entrega al entrar a la propia base, se cae si muere/se va/lo empujan/pasan 90 s, empujón `PushPlayer(userId)` con `ApplyImpulse`, aviso al servidor desde `announceFrom`. `Steal.isCarrying(player)`.
   - `KitWorld.applySpeed` / `setSpeedFactor(player, fuente, factor?)`: velocidad = `BaseWalkSpeed` (o la de StarterPlayer) × factores. **Para Stats (#50):** poner el atributo `BaseWalkSpeed` y volver a aplicar con `KitWorld.applySpeed` en cada `CharacterAdded`.
   - `Units.transfer` ya no avisa "got a SECRET" (el robo avisa lo suyo).
+
+- **Hito 3, parte 1 (2026-11-02): bloque Stats.** Chequeo en verde.
+  - `server/Kits/Stats.luau`: ganancia por stud caminado (medido cada 0.25 s, tope 1.5 × WalkSpeed: los saltos de posición no cuentan; señal "Steps"), por segundo, por toque (`TapStat(id)`, como mucho `clickRate` por segundo por estadística; el pase `autoPass` toca solo; señal "Tap"), sobre `KitTreadmill` (atributos Stat y Gain, respeta la zona con `Gates`); todo × `BoostService.multiplier(player, multiplier or id)` (se registran los "Mult_<stat>"); con `currency` va a esa moneda; con `walkSpeed` pone `BaseWalkSpeed` y `KitWorld.applySpeed` (también al reaparecer); `SetStatCap(id, 0..1)`; `resetOnRebirth`; atributo del jugador con el id (tabla de jugadores); `Stats.value(player, id)` y `Stats.add` para Zones, Stages y Wild; premio "Stat:<id>"; señal "<id>Gained". Tipo `StatsState`.
+  - El cuadro de tareas de Claude se rehízo en esta sesión (el usuario no lo veía): hitos 0–2 como tareas hechas y una tarea por cada fila pendiente de la sección 4.
+  - El usuario pidió de nuevo: "Acordate de mandarme cada tanto una prueba, tipo foto, audio, etc. con lo que aplique y tenga sentido mostrar" (sección 2).
 
 ## 6. Qué existe hoy (mapa)
 
