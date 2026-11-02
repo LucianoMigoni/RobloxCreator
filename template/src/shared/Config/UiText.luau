@@ -170,4 +170,6 @@ return {
 	GARDEN_SKIPPED = "Plants grown!",
 	PROMPT_SEARCH = "Search",
 	DEPOSIT_SIGN = "Deposit",
+	PROMPT_CATCH = "Catch",
+	WILD_NEEDS = "%s · needs %s %s", -- "Rex · needs 500 Strength"
 }

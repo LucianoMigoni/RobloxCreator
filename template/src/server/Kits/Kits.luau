@@ -37,6 +37,7 @@ local Stages = require("./Stages")
 local Stats = require("./Stats")
 local Steal = require("./Steal")
 local Units = require("./Units")
+local Wild = require("./Wild")
 local Zones = require("./Zones")
 
 -- Entrega un premio del bloque: (jugador, valor después del prefijo, cantidad) → si pudo y la línea
@@ -69,6 +70,7 @@ local BLOCKS: { Block } = {
 	{ key = "fishing", init = Fishing.init, start = Fishing.start, snapshot = Fishing.snapshot, items = Fishing.items },
 	{ key = "garden", init = Garden.init, start = Garden.start, snapshot = Garden.snapshot, items = Garden.items },
 	{ key = "search", init = Search.init, start = Search.start, snapshot = Search.snapshot, items = Search.items },
+	{ key = "wild", init = Wild.init, start = Wild.start },
 	{ key = "stages", init = Stages.init, start = Stages.start, snapshot = Stages.snapshot, items = Stages.items },
 }
 
