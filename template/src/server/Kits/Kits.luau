@@ -33,6 +33,7 @@ local Sell = require("./Sell")
 local Stats = require("./Stats")
 local Steal = require("./Steal")
 local Units = require("./Units")
+local Zones = require("./Zones")
 
 -- Entrega un premio del bloque: (jugador, valor después del prefijo, cantidad) → si pudo y la línea
 -- del popup ("+1 Dragon").
@@ -53,6 +54,7 @@ local Kits = {}
 local BLOCKS: { Block } = {
 	{ key = "units", init = Units.init, start = Units.start, snapshot = Units.snapshot, items = Units.items },
 	{ key = "stats", init = Stats.init, start = Stats.start, snapshot = Stats.snapshot, items = Stats.items },
+	{ key = "zones", init = Zones.init, start = Zones.start, snapshot = Zones.snapshot, items = Zones.items },
 	{ key = "plots", init = Plots.init, start = Plots.start, snapshot = Plots.snapshot, income = Plots.income },
 	{ key = "equip", init = Equip.init, start = Equip.start, snapshot = Equip.snapshot },
 	{ key = "sell", init = Sell.init, start = Sell.start, snapshot = Sell.snapshot },

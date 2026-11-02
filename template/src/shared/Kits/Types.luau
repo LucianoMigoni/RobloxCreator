@@ -203,6 +203,9 @@ export type ZoneDef = {
 
 export type ZonesConfig = { list: { ZoneDef } }
 
+-- Lo que ve el cliente del bloque Zones (state.kit.zones): las abiertas (abre sus puertas en local).
+export type ZonesState = { unlocked: { [string]: boolean } }
+
 export type StagesConfig = {
 	count: number,
 	reward: Price, -- por llegar al final

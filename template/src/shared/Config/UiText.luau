@@ -154,4 +154,9 @@ return {
 	STEAL_ANNOUNCE = "%s stole %s from %s!",
 	MERGE_SKIPPED = "Merge finished!",
 	PROMPT_PUSH = "Push",
+	PROMPT_UNLOCK = "Unlock",
+	ZONE_PRICE = "%s · %s", -- "Lake · $1.2M"
+	ZONE_NEEDS_STAT = "%s · %s %s", -- "Lake · 3.7M Speed"
+	ZONE_NEEDS_REBIRTHS = "%s · %d Rebirths",
+	ZONE_OPENED = "%s unlocked!",
 }
