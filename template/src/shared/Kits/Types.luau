@@ -283,8 +283,12 @@ export type SearchConfig = {
 	piles: { Pile },
 	tools: { SearchTool }, -- la primera es la que se tiene al empezar
 	bag: number, -- capacidad al empezar
-	depositCurrency: string?,
+	depositCurrency: string?, -- al depositar se venden por su valor en esta moneda (si no, van al inventario)
 }
+
+-- Lo que se encontró y espera en la mochila, y lo que ve el cliente (state.kit.search).
+export type Found = { kind: string, variant: string?, size: string?, weight: number? }
+export type SearchState = { tool: string, owned: { [string]: boolean }, bag: { Found }, capacity: number }
 
 export type WildSpawn = { zone: string?, entries: { PoolEntry }, max: number, respawn: number }
 

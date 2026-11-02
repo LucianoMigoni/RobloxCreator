@@ -168,4 +168,6 @@ return {
 	PROMPT_HARVEST = "Harvest",
 	GROWING = "Growing...",
 	GARDEN_SKIPPED = "Plants grown!",
+	PROMPT_SEARCH = "Search",
+	DEPOSIT_SIGN = "Deposit",
 }

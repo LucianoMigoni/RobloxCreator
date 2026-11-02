@@ -31,6 +31,7 @@ local KitFx = require("./KitFx")
 local Merge = require("./Merge")
 local Plots = require("./Plots")
 local Rolls = require("./Rolls")
+local Search = require("./Search")
 local Sell = require("./Sell")
 local Stages = require("./Stages")
 local Stats = require("./Stats")
@@ -67,6 +68,7 @@ local BLOCKS: { Block } = {
 	{ key = "steal", init = Steal.init, start = Steal.start },
 	{ key = "fishing", init = Fishing.init, start = Fishing.start, snapshot = Fishing.snapshot, items = Fishing.items },
 	{ key = "garden", init = Garden.init, start = Garden.start, snapshot = Garden.snapshot, items = Garden.items },
+	{ key = "search", init = Search.init, start = Search.start, snapshot = Search.snapshot, items = Search.items },
 	{ key = "stages", init = Stages.init, start = Stages.start, snapshot = Stages.snapshot, items = Stages.items },
 }
 
