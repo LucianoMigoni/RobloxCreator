@@ -16,6 +16,9 @@
 Las referencias son renders o capturas del juego: así la imagen muestra lo que hay adentro (regla
 oficial; skills/_shared/vitrina-hits.md §2 y §6).
 
+Hojas de la tienda (recetas "kind": "artset" de skills/_shared/tienda/recetas): 9 imágenes cuadradas de
+pases y productos con su fondo de color; la base y el corte con tools/storeart.py.
+
 Hojas de íconos (recetas "kind": "iconset" de skills/_shared/iconos/recetas): 9 íconos en 3x3 con el
 estilo HUD de los hits; la referencia es skills/_shared/iconos/referencia-estilo.png. Con OpenAI salen
 con fondo transparente. Después se cortan con tools/iconsheet.py slice.
@@ -60,6 +63,7 @@ FORMATS = {
     "ad": {"openai": "2560x1440", "aspect": "16:9"},
     "icon": {"openai": "1536x1536", "aspect": "1:1"},
     "iconset": {"openai": "1536x1536", "aspect": "1:1"},
+    "artset": {"openai": "1536x1536", "aspect": "1:1"},
 }
 GEMINI_SIZE = "2K"
 # USD por imagen de 2K en Gemini (pricing oficial del 2026-10-29).
@@ -99,8 +103,8 @@ def build_prompt(recipe: dict, values: dict, has_refs: bool, style: dict, avatar
     merged["AVATAR"] = style["avatars"][avatar]
     merged.update(recipe.get("_defaults", {}))
     merged.update(values)
-    if kind == "iconset":
-        block = style["iconset"]
+    if kind in ("iconset", "artset"):
+        block = style[kind]
         # "redraw": la referencia es nuestra base 3D de esos mismos íconos (tools/render3d/icons.cjs).
         ref_text = block["redraw"] if recipe["ia"].get("mode") == "redraw" else block["references"]
         parts = [block["style"]] + ([ref_text] if has_refs else [])
@@ -345,12 +349,13 @@ def selftest() -> int:
             pass
     # Las recetas del repo arman su prompt con valores de ejemplo.
     shared = ROOT / "skills" / "_shared"
-    for path in sorted((shared / "vitrina" / "recetas").glob("*.json")) + sorted((shared / "iconos" / "recetas").glob("*.json")):
+    recipes = sorted((shared / "vitrina" / "recetas").glob("*.json")) + sorted((shared / "iconos" / "recetas").glob("*.json"))
+    for path in recipes + sorted((shared / "tienda" / "recetas").glob("*.json")):
         r = json.loads(path.read_text(encoding="utf-8"))
         names = set(part.split("}}")[0] for part in r["ia"]["prompt"].split("{{")[1:]) - set(style["avatars"])
         build_prompt(r, {n: "x" for n in names}, False, style)
         assert FORMATS[r["kind"]]["aspect"] == r["ia"]["aspect"], path.name
-        if r["kind"] == "iconset":
+        if r["kind"] in ("iconset", "artset"):
             rows, cols = (int(x) for x in r["grid"].split("x"))
             assert len(r["names"]) == rows * cols == r["ia"]["prompt"].count(") "), path.name
     icons = {"kind": "iconset", "grid": "3x3", "names": list("abcdefghi"), "ia": {"aspect": "1:1", "prompt": "Icons: 1) a coin."}}

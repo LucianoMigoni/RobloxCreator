@@ -1,0 +1,255 @@
+{
+ "pack": "store-art",
+ "kind": "store-image",
+ "count": 27,
+ "source": "Bocetos propios (tools/storeart.py base: degradé + íconos de hud-icons) redibujados con GPT Image 2.5 por la API de OpenAI (tools/imagegen.py, recetas artset de skills/_shared/tienda/recetas); cortados y con la etiqueta estampada por tools/storeart.py finish",
+ "license": "propio (generado con IA a partir de bocetos e íconos propios)",
+ "author": "RobloxCreator",
+ "created": "2026-11-02",
+ "style": "Imágenes de tienda de los hits: degradé radial del color, rayos, destellos y el objeto 3D brillante con contorno grueso; etiqueta (2X, VIP, +4) abajo al centro. 512x512 con esquinas redondeadas transparentes",
+ "notes": "Se suben como imagen de cada Game Pass y Developer Product en el Creator Dashboard (el campo uses dice cuál). Roblox muestra los pases recortados en círculo: el objeto y la etiqueta quedan adentro.",
+ "sheets": [
+  {
+   "recipe": "skills/_shared/tienda/recetas/pases.json",
+   "sheet": "pases-20261102-205951-1.png",
+   "sha256": "222e868e7e3596fffc3a32e61e4fe66c3d29033805f9dac1e00e8f96ad7cedbd",
+   "model": "gpt-image-2.5-flare",
+   "quality": "high"
+  },
+  {
+   "recipe": "skills/_shared/tienda/recetas/productos.json",
+   "sheet": "productos-20261102-205950-1.png",
+   "sha256": "4011d8c6313c7a2ad4ed7cea06af407debeb4cbd93185dfbea925c1374256866",
+   "model": "gpt-image-2.5-flare",
+   "quality": "high"
+  },
+  {
+   "recipe": "skills/_shared/tienda/recetas/productos-2.json",
+   "sheet": "productos-2-20261102-205950-1.png",
+   "sha256": "f77134b212ca1ffa8fcb569d1cedc5300aefbd5425843a3d50fd6fc915454d18",
+   "model": "gpt-image-2.5-flare",
+   "quality": "high"
+  }
+ ],
+ "items": [
+  {
+   "name": "money2x",
+   "file": "money2x.png",
+   "label": "2X",
+   "uses": [
+    "Money2x"
+   ]
+  },
+  {
+   "name": "luck2x",
+   "file": "luck2x.png",
+   "label": "2X",
+   "uses": [
+    "Luck2x"
+   ]
+  },
+  {
+   "name": "speed2x",
+   "file": "speed2x.png",
+   "label": "2X",
+   "uses": [
+    "Speed2x"
+   ]
+  },
+  {
+   "name": "vip",
+   "file": "vip.png",
+   "label": "VIP",
+   "uses": [
+    "VIP",
+    "VIPClub"
+   ]
+  },
+  {
+   "name": "autocollect",
+   "file": "autocollect.png",
+   "label": "",
+   "uses": [
+    "AutoCollect"
+   ]
+  },
+  {
+   "name": "extraslots",
+   "file": "extraslots.png",
+   "label": "+4",
+   "uses": [
+    "ExtraSlots"
+   ]
+  },
+  {
+   "name": "sellanywhere",
+   "file": "sellanywhere.png",
+   "label": "",
+   "uses": [
+    "SellAnywhere"
+   ]
+  },
+  {
+   "name": "autoclicker",
+   "file": "autoclicker.png",
+   "label": "AUTO",
+   "uses": [
+    "AutoClicker"
+   ]
+  },
+  {
+   "name": "giftpass",
+   "file": "giftpass.png",
+   "label": "",
+   "uses": [
+    "GiftMoney2x"
+   ]
+  },
+  {
+   "name": "boost_money",
+   "file": "boost_money.png",
+   "label": "2X",
+   "uses": [
+    "Money2x10",
+    "Money2x30",
+    "Money2x60"
+   ]
+  },
+  {
+   "name": "boost_luck",
+   "file": "boost_luck.png",
+   "label": "2X",
+   "uses": [
+    "Luck2x30"
+   ]
+  },
+  {
+   "name": "server_money",
+   "file": "server_money.png",
+   "label": "2X",
+   "uses": [
+    "ServerMoney"
+   ]
+  },
+  {
+   "name": "server_luck",
+   "file": "server_luck.png",
+   "label": "2X",
+   "uses": [
+    "ServerLuck"
+   ]
+  },
+  {
+   "name": "cash_s",
+   "file": "cash_s.png",
+   "label": "",
+   "uses": [
+    "CashS"
+   ]
+  },
+  {
+   "name": "cash_m",
+   "file": "cash_m.png",
+   "label": "",
+   "uses": [
+    "CashM"
+   ]
+  },
+  {
+   "name": "cash_l",
+   "file": "cash_l.png",
+   "label": "",
+   "uses": [
+    "CashL"
+   ]
+  },
+  {
+   "name": "gems_s",
+   "file": "gems_s.png",
+   "label": "",
+   "uses": [
+    "Gems100"
+   ]
+  },
+  {
+   "name": "gems_l",
+   "file": "gems_l.png",
+   "label": "",
+   "uses": [
+    "Gems1000"
+   ]
+  },
+  {
+   "name": "spins_s",
+   "file": "spins_s.png",
+   "label": "x3",
+   "uses": [
+    "Spins3"
+   ]
+  },
+  {
+   "name": "spins_l",
+   "file": "spins_l.png",
+   "label": "x10",
+   "uses": [
+    "Spins10"
+   ]
+  },
+  {
+   "name": "starter",
+   "file": "starter.png",
+   "label": "",
+   "uses": [
+    "StarterPack"
+   ]
+  },
+  {
+   "name": "offline2x",
+   "file": "offline2x.png",
+   "label": "2X",
+   "uses": [
+    "OfflineDouble"
+   ]
+  },
+  {
+   "name": "finish_merge",
+   "file": "finish_merge.png",
+   "label": "",
+   "uses": [
+    "FinishMerge"
+   ]
+  },
+  {
+   "name": "grow_all",
+   "file": "grow_all.png",
+   "label": "",
+   "uses": [
+    "GrowAll"
+   ]
+  },
+  {
+   "name": "revive",
+   "file": "revive.png",
+   "label": "+1",
+   "uses": [
+    "Revive"
+   ]
+  },
+  {
+   "name": "egg_x3",
+   "file": "egg_x3.png",
+   "label": "x3",
+   "uses": [
+    "pase x3 de las recetas con huevos"
+   ]
+  },
+  {
+   "name": "egg_x8",
+   "file": "egg_x8.png",
+   "label": "x8",
+   "uses": [
+    "pase x8 de las recetas con huevos"
+   ]
+  }
+ ]
+}

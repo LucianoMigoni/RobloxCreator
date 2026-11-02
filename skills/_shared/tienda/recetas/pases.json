@@ -1,0 +1,77 @@
+{
+  "_que_es": "Tienda, Game Passes del núcleo y del armador (2026-11-02). python tools/storeart.py base skills/_shared/tienda/recetas/pases.json --out base.png; python tools/imagegen.py generate skills/_shared/tienda/recetas/pases.json --ref base.png --quality high --n 1 --out <carpeta>; python tools/storeart.py finish skills/_shared/tienda/recetas/pases.json --sheet <hoja>.png --out assets/ui/store-art.",
+  "kind": "artset",
+  "grid": "3x3",
+  "names": [
+    "money2x",
+    "luck2x",
+    "speed2x",
+    "vip",
+    "autocollect",
+    "extraslots",
+    "sellanywhere",
+    "autoclicker",
+    "giftpass"
+  ],
+  "items": [
+    {
+      "name": "money2x",
+      "icon": "money_boost",
+      "color": "#46D64B",
+      "label": "2X"
+    },
+    {
+      "name": "luck2x",
+      "icon": "luck",
+      "color": "#2FE0C8",
+      "label": "2X"
+    },
+    {
+      "name": "speed2x",
+      "icon": "speed",
+      "color": "#2EC5F5",
+      "label": "2X"
+    },
+    {
+      "name": "vip",
+      "icon": "crown",
+      "color": "#FFD23A",
+      "label": "VIP"
+    },
+    {
+      "name": "autocollect",
+      "icon": "magnet",
+      "color": "#A35CFF",
+      "label": ""
+    },
+    {
+      "name": "extraslots",
+      "icon": "base",
+      "color": "#FF9F1A",
+      "label": "+4"
+    },
+    {
+      "name": "sellanywhere",
+      "icon": "cash",
+      "color": "#FF5C8A",
+      "label": ""
+    },
+    {
+      "name": "autoclicker",
+      "icon": "tap",
+      "color": "#FF3B4F",
+      "label": "AUTO"
+    },
+    {
+      "name": "giftpass",
+      "icon": "gift",
+      "color": "#FF5CE1",
+      "label": ""
+    }
+  ],
+  "ia": {
+    "aspect": "1:1",
+    "mode": "redraw",
+    "prompt": "Keep the same 9 tiles, in this order: 1) money2x: a fat golden money bag bursting with green dollar bills and gold coins on a tile of the same color as the draft, 2) luck2x: a shiny green four-leaf clover with golden sparkles on a tile of the same color as the draft, 3) speed2x: a blue sneaker with a white lightning bolt and speed lines on a tile of the same color as the draft, 4) vip: a golden royal crown with red and blue jewels on a tile of the same color as the draft, 5) autocollect: a big red horseshoe magnet pulling gold coins toward it on a tile of the same color as the draft, 6) extraslots: a cozy house with a red roof and a green plus badge on a tile of the same color as the draft, 7) sellanywhere: a flying stack of green cash with little white wings on a tile of the same color as the draft, 8) autoclicker: a yellow pointing hand tapping, with motion lines and a small silver gear on a tile of the same color as the draft, 9) giftpass: a red gift box with a golden ribbon and sparkles on a tile of the same color as the draft."
+  }
+}

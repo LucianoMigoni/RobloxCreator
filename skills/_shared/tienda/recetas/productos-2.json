@@ -1,0 +1,77 @@
+{
+  "_que_es": "Tienda, Developer Products: giros, paquete de inicio, sin conexión y los de los bloques (2026-11-02). python tools/storeart.py base skills/_shared/tienda/recetas/productos-2.json --out base.png; python tools/imagegen.py generate skills/_shared/tienda/recetas/productos-2.json --ref base.png --quality high --n 1 --out <carpeta>; python tools/storeart.py finish skills/_shared/tienda/recetas/productos-2.json --sheet <hoja>.png --out assets/ui/store-art.",
+  "kind": "artset",
+  "grid": "3x3",
+  "names": [
+    "spins_s",
+    "spins_l",
+    "starter",
+    "offline2x",
+    "finish_merge",
+    "grow_all",
+    "revive",
+    "egg_x3",
+    "egg_x8"
+  ],
+  "items": [
+    {
+      "name": "spins_s",
+      "icon": "spin",
+      "color": "#FF5C8A",
+      "label": "x3"
+    },
+    {
+      "name": "spins_l",
+      "icon": "spin",
+      "color": "#FFD23A",
+      "label": "x10"
+    },
+    {
+      "name": "starter",
+      "icon": "gift",
+      "color": "#FF9F1A",
+      "label": ""
+    },
+    {
+      "name": "offline2x",
+      "icon": "timer",
+      "color": "#3B4AC8",
+      "label": "2X"
+    },
+    {
+      "name": "finish_merge",
+      "icon": "merge",
+      "color": "#A35CFF",
+      "label": ""
+    },
+    {
+      "name": "grow_all",
+      "icon": "seed",
+      "color": "#46D64B",
+      "label": ""
+    },
+    {
+      "name": "revive",
+      "icon": "heart",
+      "color": "#FF3B4F",
+      "label": "+1"
+    },
+    {
+      "name": "egg_x3",
+      "icon": "egg_rare",
+      "color": "#2EC5F5",
+      "label": "x3"
+    },
+    {
+      "name": "egg_x8",
+      "icon": "egg_legendary",
+      "color": "#FFD23A",
+      "label": "x8"
+    }
+  ],
+  "ia": {
+    "aspect": "1:1",
+    "mode": "redraw",
+    "prompt": "Keep the same 9 tiles, in this order: 1) spins_s: a colorful prize wheel on a golden stand on a tile of the same color as the draft, 2) spins_l: a colorful prize wheel with sparkles and gold coins flying around on a tile of the same color as the draft, 3) starter: a gift box bursting open with green cash, a blue gem and a yellow lightning bolt popping out on a tile of the same color as the draft, 4) offline2x: a red alarm clock with a yellow crescent moon and little stars on a tile of the same color as the draft, 5) finish_merge: a green upward arrow with a blue ball and a pink ball merging into a golden ball, with a small clock on a tile of the same color as the draft, 6) grow_all: a green sprout in a mound of soil with a small red alarm clock and sparkles on a tile of the same color as the draft, 7) revive: a big glossy red heart with small white wings on a tile of the same color as the draft, 8) egg_x3: three blue spotted eggs side by side on a tile of the same color as the draft, 9) egg_x8: a pile of eight colorful spotted eggs on a tile of the same color as the draft."
+  }
+}

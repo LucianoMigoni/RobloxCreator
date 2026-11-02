@@ -25,5 +25,13 @@
   "redraw": "The attached sheet is our own rough 3D render of these nine icons: redraw each one in the style above, keeping the same objects, the same order, the same main colors and roughly the same pose, but with professional finish and detail.",
   "background": "Transparent background (if transparency is not possible: a plain flat white background).",
   "negative": "No text, no letters, no numbers, no labels, no watermark, no grid lines, no frames or tiles behind the icons, no shadows on the background."
+ },
+ "artset": {
+  "_que_es": "Bloques para las hojas de imágenes de la tienda (Game Passes y Developer Products, recetas de skills/_shared/tienda/recetas). 2026-11-02.",
+  "style": "A 3x3 sheet of nine separate square store images for a Roblox game, exactly like the Game Pass and Developer Product icons of today's top Roblox games. Each cell is a full square tile that fills its cell edge to edge, with a thin plain white gap between tiles and rounded tile corners. Each tile: a vivid radial gradient background in the tile's color, brighter in the center, with soft sunburst rays and a few white sparkles, and one big chunky glossy 3D object in the center filling about 65% of the tile.\n\nStyle: chunky toy-like 3D render with cartoon cel shading, very saturated colors, bright crisp white glossy highlights, a thick uniform dark navy outline (#1a1426) around each object, clean simple shapes readable at 100 pixels.",
+  "redraw": "The attached sheet is our own rough draft of these nine tiles: keep the same objects, the same order, the same background color of each tile and roughly the same layout, but redraw them with professional finish, depth, rays and sparkles. Leave the empty area at the top right of each tile clean, a label will be added there later.",
+  "references": "Use the attached sheet only as the STYLE reference.",
+  "background": "Opaque tiles; the gaps between tiles are plain white.",
+  "negative": "No text, no letters, no numbers, no labels, no watermark, no borders drawn around the whole sheet."
  }
 }

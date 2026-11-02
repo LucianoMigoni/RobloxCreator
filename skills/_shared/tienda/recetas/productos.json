@@ -1,0 +1,77 @@
+{
+  "_que_es": "Tienda, Developer Products: impulsos, impulsos del servidor, plata y gemas (2026-11-02). python tools/storeart.py base skills/_shared/tienda/recetas/productos.json --out base.png; python tools/imagegen.py generate skills/_shared/tienda/recetas/productos.json --ref base.png --quality high --n 1 --out <carpeta>; python tools/storeart.py finish skills/_shared/tienda/recetas/productos.json --sheet <hoja>.png --out assets/ui/store-art.",
+  "kind": "artset",
+  "grid": "3x3",
+  "names": [
+    "boost_money",
+    "boost_luck",
+    "server_money",
+    "server_luck",
+    "cash_s",
+    "cash_m",
+    "cash_l",
+    "gems_s",
+    "gems_l"
+  ],
+  "items": [
+    {
+      "name": "boost_money",
+      "icon": "money_boost",
+      "color": "#46D64B",
+      "label": "2X"
+    },
+    {
+      "name": "boost_luck",
+      "icon": "luck",
+      "color": "#2FE0C8",
+      "label": "2X"
+    },
+    {
+      "name": "server_money",
+      "icon": "money_boost",
+      "color": "#FFD23A",
+      "label": "2X"
+    },
+    {
+      "name": "server_luck",
+      "icon": "luck",
+      "color": "#A35CFF",
+      "label": "2X"
+    },
+    {
+      "name": "cash_s",
+      "icon": "cash",
+      "color": "#6BE36B",
+      "label": ""
+    },
+    {
+      "name": "cash_m",
+      "icon": "money_boost",
+      "color": "#2EC5F5",
+      "label": ""
+    },
+    {
+      "name": "cash_l",
+      "icon": "chest",
+      "color": "#FF9F1A",
+      "label": ""
+    },
+    {
+      "name": "gems_s",
+      "icon": "gem",
+      "color": "#46A0FF",
+      "label": ""
+    },
+    {
+      "name": "gems_l",
+      "icon": "gem",
+      "color": "#A35CFF",
+      "label": ""
+    }
+  ],
+  "ia": {
+    "aspect": "1:1",
+    "mode": "redraw",
+    "prompt": "Keep the same 9 tiles, in this order: 1) boost_money: a golden money bag with a small red alarm clock beside it on a tile of the same color as the draft, 2) boost_luck: a green four-leaf clover with a small red alarm clock beside it on a tile of the same color as the draft, 3) server_money: a golden money bag with a glowing golden aura and three tiny smiling friend heads around it on a tile of the same color as the draft, 4) server_luck: a glowing four-leaf clover with a rainbow aura and three tiny smiling friend heads around it on a tile of the same color as the draft, 5) cash_s: a small stack of green dollar bills on a tile of the same color as the draft, 6) cash_m: a big bag of cash overflowing with bills and coins on a tile of the same color as the draft, 7) cash_l: a huge treasure chest overflowing with gold coins and green cash on a tile of the same color as the draft, 8) gems_s: one big shiny blue diamond gem on a tile of the same color as the draft, 9) gems_l: a pile of shiny blue diamond gems on a tile of the same color as the draft."
+  }
+}

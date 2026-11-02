@@ -169,7 +169,7 @@ def check_python_tools() -> list:
                ("tools/imagegen.py", "selftest"), ("tools/flat_icons.py", "selftest")]
     # thumbs.py, iconsheet.py y vfx_textures.py necesitan Pillow: GitHub lo instala; en una PC sin Pillow se avisa y se omite.
     if importlib.util.find_spec("PIL"):
-        scripts += [("tools/thumbs.py", "selftest"), ("tools/iconsheet.py", "selftest"), ("tools/vfx_textures.py", "selftest"),
+        scripts += [("tools/thumbs.py", "selftest"), ("tools/iconsheet.py", "selftest"), ("tools/storeart.py", "selftest"), ("tools/vfx_textures.py", "selftest"),
                     ("tools/ui_textures.py", "selftest")]
     else:
         print("  (sin Pillow: se omiten thumbs.py, iconsheet.py y vfx_textures.py; instalar con `python -m pip install pillow`)")

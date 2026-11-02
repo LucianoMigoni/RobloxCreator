@@ -1641,6 +1641,38 @@
       "notes": "9 mascotas cúbicas 512x512 con fondo transparente (gato, perro, conejo, pollito, zorro, pingüino, panda, tigre y elefante) para los íconos de unidad de las recetas. Detalle en manifest.json."
     },
     {
+      "id": "store-art",
+      "path": "ui/store-art",
+      "type": "pack",
+      "packType": "image",
+      "count": 27,
+      "tags": {
+        "style": [
+          "3d",
+          "glossy",
+          "hit",
+          "cartoon"
+        ],
+        "genre": [
+          "any"
+        ],
+        "theme": [
+          "shop",
+          "gamepass",
+          "product",
+          "store",
+          "monetization"
+        ]
+      },
+      "robloxAssetId": null,
+      "source": "ai-generated",
+      "sourceUrl": null,
+      "license": "propio (IA sobre bocetos propios, API de OpenAI)",
+      "commercialUse": true,
+      "author": "RobloxCreator",
+      "notes": "27 imágenes de tienda 512x512 para los Game Passes y Developer Products de ShopConfig (y los pases x3/x8 de las recetas). Cuál va con cuál, en manifest.json."
+    },
+    {
       "id": "icons-flat",
       "path": "ui/icons-flat",
       "type": "pack",
