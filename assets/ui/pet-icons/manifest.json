@@ -1,0 +1,69 @@
+{
+ "pack": "pet-icons",
+ "kind": "icon",
+ "count": 9,
+ "source": "Renders propios de assets/3d/kenney/cube-pets (CC0, tools/render3d/render.cjs) redibujados con IA: GPT Image 2.5 por la API de OpenAI (tools/imagegen.py), calidad high, fondo transparente; cortados con tools/iconsheet.py",
+ "license": "propio (generado con IA a partir de renders de modelos CC0)",
+ "author": "RobloxCreator",
+ "created": "2026-11-02",
+ "style": "Mascotas cúbicas de juguete como las de los simuladores de mascotas: ojos grandes brillantes, colores saturados, brillos blancos y contorno oscuro grueso; 512x512 con fondo transparente",
+ "method": "Receta skills/_shared/iconos/recetas/mascotas.json (modo redraw) sobre la hoja de renders recortados.",
+ "notes": "Íconos de unidad para las recetas del armador (units.list[].icon): subir con tools/roblox_upload.py y poner el rbxassetid en el ícono de la unidad. Los modelos 3D de cada mascota siguen siendo los .glb de Kenney.",
+ "sheets": [
+  {
+   "set": "M",
+   "group": "Mascotas",
+   "sheet": "mascotas-20261102-204855-1.png",
+   "resolution": "1536 (API de OpenAI, gpt-image-2.5-flare, high)",
+   "sha256": "64e58cfb9a310f50961ce6682db1f92a51af149374be3f7f6954c6169dcc09c6",
+   "grid": "3x3"
+  }
+ ],
+ "items": [
+  {
+   "name": "cat",
+   "file": "cat.png",
+   "model": "assets/3d/kenney/cube-pets/animal-cat.glb"
+  },
+  {
+   "name": "dog",
+   "file": "dog.png",
+   "model": "assets/3d/kenney/cube-pets/animal-dog.glb"
+  },
+  {
+   "name": "bunny",
+   "file": "bunny.png",
+   "model": "assets/3d/kenney/cube-pets/animal-bunny.glb"
+  },
+  {
+   "name": "chick",
+   "file": "chick.png",
+   "model": "assets/3d/kenney/cube-pets/animal-chick.glb"
+  },
+  {
+   "name": "fox",
+   "file": "fox.png",
+   "model": "assets/3d/kenney/cube-pets/animal-fox.glb"
+  },
+  {
+   "name": "penguin",
+   "file": "penguin.png",
+   "model": "assets/3d/kenney/cube-pets/animal-penguin.glb"
+  },
+  {
+   "name": "panda",
+   "file": "panda.png",
+   "model": "assets/3d/kenney/cube-pets/animal-panda.glb"
+  },
+  {
+   "name": "tiger",
+   "file": "tiger.png",
+   "model": "assets/3d/kenney/cube-pets/animal-tiger.glb"
+  },
+  {
+   "name": "elephant",
+   "file": "elephant.png",
+   "model": "assets/3d/kenney/cube-pets/animal-elephant.glb"
+  }
+ ]
+}

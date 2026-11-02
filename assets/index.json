@@ -1605,6 +1605,42 @@
       "notes": "63 íconos 512×512 con fondo transparente al nivel de Anime Dice, PS99 y Steal An Egg: base 3D propia (tools/render3d/icons.cjs) redibujada con GPT Image 2.5. Reemplazan a hit-icons donde hay el mismo nombre. Detalle y método en manifest.json y skills/_shared/iconos/README.md."
     },
     {
+      "id": "pet-icons",
+      "path": "ui/pet-icons",
+      "type": "pack",
+      "packType": "icon",
+      "count": 9,
+      "tags": {
+        "style": [
+          "3d",
+          "glossy",
+          "hit",
+          "cartoon",
+          "cel-shaded",
+          "blocky"
+        ],
+        "genre": [
+          "simulation",
+          "pets",
+          "any"
+        ],
+        "theme": [
+          "pet",
+          "animal",
+          "icon",
+          "unit",
+          "index"
+        ]
+      },
+      "robloxAssetId": null,
+      "source": "ai-generated",
+      "sourceUrl": null,
+      "license": "propio (IA sobre renders de Kenney Cube Pets, CC0)",
+      "commercialUse": true,
+      "author": "RobloxCreator",
+      "notes": "9 mascotas cúbicas 512x512 con fondo transparente (gato, perro, conejo, pollito, zorro, pingüino, panda, tigre y elefante) para los íconos de unidad de las recetas. Detalle en manifest.json."
+    },
+    {
       "id": "icons-flat",
       "path": "ui/icons-flat",
       "type": "pack",

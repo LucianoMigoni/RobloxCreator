@@ -1,0 +1,21 @@
+{
+  "_que_es": "Mascotas cúbicas para las recetas del armador (2026-11-02). Base: renders de assets/3d/kenney/cube-pets (CC0) con node tools/render3d/render.cjs animal-<nombre>.glb <png> --size 768 --yaw 28 --pitch 12, recortados al borde; python tools/iconsheet.py compose <los 9 png en orden> --out base.png; python tools/imagegen.py generate skills/_shared/iconos/recetas/mascotas.json --ref base.png --quality high --n 1 --out <carpeta>.",
+  "kind": "iconset",
+  "grid": "3x3",
+  "names": [
+    "cat",
+    "dog",
+    "bunny",
+    "chick",
+    "fox",
+    "penguin",
+    "panda",
+    "tiger",
+    "elephant"
+  ],
+  "ia": {
+    "aspect": "1:1",
+    "mode": "redraw",
+    "prompt": "Keep the same 9 cute cube-shaped baby pets, chunky and blocky like the reference, each standing on four tiny stubby legs with huge glossy round eyes, in this order: 1) cat: gray kitten with pointy ears, big yellow eyes and a curly tail, 2) dog: brown puppy with floppy ears, a black nose and a small pink tongue, 3) bunny: orange-brown bunny with two tall ears and a pink nose, 4) chick: round yellow chick with tiny wings and an orange beak and feet, 5) fox: orange fox with pointy ears, a white muzzle and white chest, 6) penguin: dark navy penguin with a white belly, small flippers and an orange beak, 7) panda: white panda with black ears, black eye patches and black legs, 8) tiger: orange tiger cub with dark stripes and a white muzzle, 9) elephant: light gray baby elephant with big round ears and a short curled trunk. Friendly happy faces, no extra limbs."
+  }
+}

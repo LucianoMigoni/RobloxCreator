@@ -2,7 +2,7 @@
 
 Para la IA (o persona) que retome el trabajo desde un push, por ejemplo el Claude de Luciano si a Leonel se le acaban los tokens. **Leé este archivo entero antes de tocar nada:** acá está todo lo que pidió el usuario, cómo quiere que se trabaje, qué está hecho, qué se está haciendo y qué falta, para seguir igual que en el chat original.
 
-Última actualización: 2026-10-30, hito 0 (diseño del armador). Sesión original: Claude Code en la nube de Leonel, rama `leonelblumberg/quirky-dijkstra-2kxnwz`.
+Última actualización: 2026-11-02, UI de los bloques terminada (#61) y 36 íconos nuevos hechos con ChatGPT; sigue MapKit (#62). Sesión original: Claude Code en la nube de Leonel, rama `leonelblumberg/quirky-dijkstra-2kxnwz`.
 
 ## 0. Cómo retomar, paso a paso
 
@@ -27,7 +27,8 @@ Para la IA (o persona) que retome el trabajo desde un push, por ejemplo el Claud
 
    Después, push.
 6. **Tabla de tareas:** el usuario quiere verla. En Claude Code, al empezar, crear con `TaskCreate` una tarea por fila de la sección 4 (con su número y estado: las ✅ como completadas) y actualizarla con `TaskUpdate` mientras se trabaja. Si pide "enumerame las tareas", mostrar solo la lista, sin comentarios.
-7. **Dónde quedó:** la sección 4 marca la próxima tarea (la primera que no tiene ✅) y la sección 7 tiene el diseño ya decidido de los bloques que faltan del hito 2. Seguir ese diseño: es el que se venía usando.
+7. **Clave de OpenAI:** desde el 2026-11-02 está cargada en la configuración del entorno de la nube (la toman las sesiones nuevas). Al empezar, comprobar que exista solo por el nombre (`printenv | cut -d= -f1 | grep OPENAI`), nunca imprimir el valor, y usarla con `tools/imagegen.py` para todo lo visual (íconos, mascotas, miniaturas). Si no está, pedírsela al usuario por la configuración del entorno (`team/claves-ia.md`), no por el chat.
+8. **Dónde quedó:** la sección 4 marca la próxima tarea (la primera que no tiene ✅) y la sección 7 tiene el diseño ya decidido de los bloques que faltan del hito 2. Seguir ese diseño: es el que se venía usando.
 
 ## 1. El objetivo
 
@@ -60,6 +61,13 @@ Dicho en el chat, en sus palabras cuando importa:
   - "Cuando termines algo importante o que tenga sentido mostrar, mandame alguna pequeña foto o algo para ver. Solo si es relevante y tiene sentido": al terminar algo visual (UI de los bloques, mapa, juego de prueba), mandar una imagen chica (render con Playwright o captura). Lo que no se ve (servidor, lógica) no lleva imagen.
   - Cuando pide una muestra, mandar imágenes reales (renders o capturas), no descripciones.
   - **Cortes:** si dice "terminá este hito y no sigas", cortar apenas se suba el hito o la parte en curso, dejar este traspaso completo y no empezar nada más (el 2026-10-30 se siguió de más y lo marcó: "¿no tenés que cortar cuando esté el hito que dijimos?"). Si no queda claro dónde cortar, preguntar.
+- **Lo visual, al nivel de los top hits (2026-11-02):**
+  - "Ahora que tenés esto de ChatGPT, esforzate con la UI, los íconos y toda la GUI. Cualquier cosa, si necesitás más dinero, avisame."
+  - "Hacelo bien completo, siempre buscando que sea profesional."
+  - "Que todos los íconos, UI, GUI sean lo más completos y lindos posible. Que sean como los top hits. Acordate de todo lo que agregamos y todo lo que necesitamos."
+  - Al ver los bocetos 3D sin terminar: "Estos íconos así son muy malos, todos los que sean así rehacelos para que sean de calidad". Nunca se usa un boceto (render de `tools/render3d`) como ícono final: siempre pasa por GPT Image con la receta. Si se muestra un boceto, aclarar que es la base.
+  - Con ChatGPT, mandar una prueba de cada cosa relevante (hoja de íconos, maqueta, miniatura).
+  - Avisar si hace falta más saldo de OpenAI (al 2026-11-02 quedan unos USD 4,2 de los 5; una hoja de 9 íconos en calidad alta cuesta USD 0,086 y una miniatura, USD 0,11).
 - **Lo que depende de las personas** (claves, conectores, cuentas, pruebas) se mantiene en `team/pendientes.md`: "Añadí también las cosas que hay que hacer después, qué API keys necesitás (como ChatGPT y Google), qué conectores hay que poner".
 - **El juego de prueba de Luciano no les gustó:** "lo de luciano no nos había gustado", "seguí trabajando con lo que teníamos", "acordate que la idea era rehacerlo". No se usa su código como base: `games/prueba` se rehace con el armador.
 - **Idioma:**
@@ -115,6 +123,13 @@ Estado: ✅ hecho · 🔄 en curso (sección 4) · 👤 depende de una persona.
 - ✅ "Acordate de los push en los hitos" → push por hito y por bloque.
 - ✅ "Terminá este hito y dejá todo listo para el traspaso... para que pueda continuar en el Claude de Luciano sin problemas y de la misma forma que hacemos acá" + "No continúes luego de esto" + "Dejá también las instrucciones para que pueda seguir trabajando" → se cortó después de los bloques Plots, Sell y Equip; este archivo quedó listo para retomar (sección 0).
 
+**2026-11-02**
+- ✅ "Decime si necesitás ChatGPT, Google o Higgsfield para la UI" → para el código no; para íconos y miniaturas, la clave de OpenAI. Paso a paso en `team/claves-ia.md`.
+- ✅ Clave de OpenAI: el usuario la cargó en el entorno de la nube y, para probarla en esta sesión, la pegó en el chat por decisión propia ("solo tiene 5 dólares"); se guardó solo en un archivo temporal fuera del repo y se probó (modelos y una hoja de prueba).
+- 👤 Gemini: la facturación de Google dio OR_BACR2_59 (sin arreglo oficial): queda para después, es opcional.
+- ✅ "Probá hacer una miniatura completa, tipo foto final con texto, como los top hits" → `skills/_shared/vitrina/ejemplos/despues-robo-dragon-gpt.jpg` (GPT Image 2.5 + `thumbs.py`).
+- ✅ UI de los bloques (#61) y íconos con ChatGPT (#68): ver la sección 5.
+
 ## 4. Plan en curso
 
 Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito se hace push.
@@ -142,14 +157,14 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
 | 58 | Bloque Tycoon | 3 | ✅ servidor |
 | 59 | Bloque Items | 3 | ✅ servidor |
 | 60 | Productos de cada bloque en la tienda | 4 | ✅ |
-| 61 | UI de los bloques | 4 | **sigue esta** |
-| 62 | MapKit | 5 | pendiente |
+| 61 | UI de los bloques | 4 | ✅ (2026-11-02; falta probarla en Studio) |
+| 62 | MapKit | 5 | **sigue esta** |
 | 63 | Nueve recetas con objetivos, misiones y mapa | 5 | pendiente |
 | 64 | Rehacer `games/prueba` con el armador | 6 | pendiente |
 | 65 | Skill del armador y skills que lo usan | 7 | pendiente |
 | 66 | Skill de game feel | 7 | pendiente |
 | 67 | Poner al día CLAUDE.md, ROADMAP, guía central, hits-2026, README, tablero | 7 | pendiente |
-| 68 | Íconos que faltan, listos para generar | 7 | pendiente |
+| 68 | Íconos que faltan | 7 | ✅ 27 de la UI y 9 mascotas con GPT Image (falta subirlos a Roblox) |
 | 69 | Revisión completa | 8 | pendiente |
 | 70 | Push y reporte final: qué conectar, claves, cuentas, pruebas | 8 | pendiente |
 | 71 | Lista de lo que hay que hacer después: claves, conectores, cuentas y pruebas (`team/pendientes.md`) | 1 | ✅ (mantenerla al día) |
@@ -213,6 +228,17 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
 - **Hito 4, parte 1 (2026-11-02): productos de los bloques en la tienda.** Chequeo en verde.
   - `ShopConfig`: campo `kit` en productos y pases (sin ese bloque en la receta no se ofrecen: `ShopConfig.inRecipe(kit)`, usado por `ShopController`). Pases nuevos del núcleo: `SellAnywhere` (sell) y `AutoClicker` (stats); `AutoCollect` y `ExtraSlots` marcados plots. Productos nuevos: `FinishMerge` ("Merge:Skip"), `GrowAll` ("Garden:Skip"), `Revive` ("Stages:Revive"), sección "Kit" (Special).
   - La receta vende lo suyo en `shop = { products, passes }` (tipos `ShopProduct`, `ShopPass`, `KitShop`): se suma a `ShopConfig`; `KitCheck` lo revisa (claves que no choquen con el núcleo, secciones válidas, premios que existan) y sus pases cuentan para el resto de la receta (x3/x8 huevos, auto tirada). Test nuevo en `KitCheck.spec`.
+
+- **Hito 4, parte 2 (2026-11-02): UI de los bloques (#61).** Chequeo en verde, un push por tanda.
+  - `client/Kits/KitUi.luau`: `invoke`/`ask`/`fire`, avisos de error en inglés por código (`UiText.ERR_*`, sin repetir el mismo en 1,2 s), `unitName`/`unitLine`/`showUnit`/`toast`/`announce` (popup desde Epic o si es nueva), precios y `notEnough` (abre la tienda si la moneda se vende), `ownsPass`, `productFor("<Prefijo>:<id>")`, `buyProduct`/`buyPass` (Bus de `ShopController`: `BuyProduct`, `BuyPass`, `RobuxPrice`), `listWindow` (filas con ícono, título, detalle o barra de nivel, calcomanía y 1–2 botones; **se actualizan en el lugar** si no cambia la forma, para no rehacer botones bajo el dedo), `menuButton` (no agrega botón si la ventana está en `map.shops`: el teléfono tiene 8 lugares), reglas de prompts (Steal propio; SlotShop y GardenTile ajenos: se esconden con distancia 0, sin pisar el `Enabled` del servidor) y puestos que abren ventanas (`RollStation`, `KitShopStand` con `Window`/`Label`, `KitUpgradeStation` con `Upgrade`).
+  - `Inventory` (grilla con lo mejor primero, fichas que se crean una vez por unidad; panel con Equip/Unequip, Place/Pick Up, Sell con el valor real, Merge con "2/3", candado; Equip Best, Sell All con oferta del pase, Finish Now, comprar espacio), `Units` (carteles sobre cada unidad del mundo: nombre, rareza, $/s, precio en la cinta, requisito, "Being stolen!"), `Followers` (mascotas que siguen a todos los jugadores, locales y con gráficos bajos solo las propias), `Base` (lo cobrado vuela al contador), `Rolls` (probabilidades con la suerte y las mutaciones, x1/x3/x8 con pase, gratis con reloj, Auto, revelado con temblor, destello, NEW! y rayos), `Stats` (columna del HUD, TAP! con "+N", Auto Clicker, tope de velocidad), `Zones` (puertas locales, ventana Worlds), `Stages` (etapa en el HUD, YOU WIN!, revivir y resumen), `Fishing` (Cast/REEL! con "!" sobre la cabeza, cañas), `Search` (Dig al ritmo de la herramienta, mochila, flechas al depósito), `Wild`, `Garden` (Seed Shop con reposición calculada en el cliente, elegir semilla, Grow All, parcela; relojes sobre las parcelas), `Upgrades`, `Items` (teclas 1–9), `Steal` (flechas a la base, alarma, Push), `Extras` (cinta y tycoon), `Gear` (filas de cañas y herramientas).
+  - Teclas: F toque, R pesca, G cavar, Q empujar, 1–9 objetos (E es de los prompts).
+  - Servidor: `SellUnits`/`SellAll` devuelven `SELL_FAR` o `EMPTY`; la cinta pone `Price` en cada unidad para su cartel.
+  - Maqueta con los íconos nuevos (HTML con el material del kit) enviada al usuario; la captura real sale de Studio.
+- **Íconos con ChatGPT (#68, 2026-11-02).**
+  - 27 íconos nuevos en `assets/ui/hud-icons` (63 en total): los que usa la UI y no tenían imagen (merge, tap, steps, pad, seed, base, map, battle, shield, check, spin, codes, luck, money_boost, friends, search, notifications, egg_gold) y los 9 huevos por rareza. 5 modelos nuevos en `tools/render3d/icons/models.js`; recetas `hud-e-armador`, `hud-f-armador`, `hud-g-huevos`.
+  - 9 mascotas cúbicas en `assets/ui/pet-icons` (receta `mascotas.json`, base: renders de Kenney Cube Pets, CC0) para los íconos de unidad de las recetas.
+  - Todo con la API de OpenAI (`tools/imagegen.py`, `gpt-image-2.5-flare`, calidad alta). Falta subirlos a Roblox (`tools/roblox_upload.py`, con la clave de Open Cloud): mientras tanto la UI muestra el emoji de respaldo.
 
 ## 6. Qué existe hoy (mapa)
 
@@ -287,7 +313,7 @@ Para seguir igual (completa `bloques.md`):
   - se sacan las usadas (`Units.remove(..., "Merge")`); el resultado llega ya o a `readyAt = ahora + seconds` (un bucle de 1 s lo entrega solo); premio `"Merge:Skip"` = listo ya;
   - señal "Merge" y `KitFx` "Merged".
 
-### Plan de la UI de los bloques (#61, la que sigue)
+### UI de los bloques (#61): hecha el 2026-11-02 con este plan (detalle en la sección 5)
 
 - `client/Kits/KitUi.luau` primero: `invoke`/`fire` a los remotes, avisos de error en inglés por código (`KitFx "Error"`: FULL, NOT_ENOUGH, LOCKED, PROTECTED, ZONE, FAR, BAG_FULL, WEAK...), `Bus.call("ShowReward", popup)` para lo conseguido, una ventana de lista para tiendas de bloque (mejoras, cañas, herramientas, semillas; filas como `QuestController`: `UIKit.fitHeight(fila, 7.4, 64)`) y reglas de prompts (el dueño no ve "Steal" en lo suyo; en bases ajenas no se ven SlotShop ni GardenTile; volver a aplicarlas si el servidor cambia `Enabled` o el `Owner` de la base). Abrir ventanas con `ProximityPromptService.PromptTriggered` (prompt "RollStation" con atributo Roll) y prompts locales en `KitShopStand` (atributo Window).
 - Después, un módulo por bloque en `client/Kits/` sumado a `BLOCKS` de `client/Kits/Kits.luau`: inventario de Units (tarjetas con ícono, nombre con su variante, lo que da; acciones Equip, Place/Store, Sell, Lock, Merge; "Equip Best" y "Sell All"), ventana de tiradas con probabilidades (`Rarity.percentages` con la suerte) y animación de revelado, mascotas que siguen (atributo `Equipped`), barra de acción (TAP, Cast/Reel, Dig, Sell All, Push, Lock, objetos con teclas 1–9), tienda de semillas con reloj, puertas y barreras con choque local, etapa en el HUD y popup de revivir/resumen. Al terminar, mandar una imagen (sección 2).
@@ -296,10 +322,11 @@ Para seguir igual (completa `bloques.md`):
 
 Lista completa y con casillas en **`team/pendientes.md`** (pedido del usuario del 2026-10-30: "que api keys necesitás, qué conectores hay que poner, etc."). Mantenerla al día en cada hito y repetirla en el reporte final (#70). En resumen:
 
-- **Claves** (variables de entorno de cada PC o *Network secrets* del entorno de la nube; nunca en el repo ni en el chat): `OPENAI_API_KEY` (obligatoria para íconos y miniaturas), `GEMINI_API_KEY` (recomendada), `MESHY_API_KEY` (plan Pro), `ROBLOX_OPEN_CLOUD_API_KEY` + `ROBLOX_CREATOR_GROUP_ID`, `ROBLOX_ANALYTICS_API_KEY` y `ROBLOX_ADS_API_KEY`. En la nube no hay ninguna cargada (revisado el 2026-10-30).
+- **Claves** (variables de entorno de cada PC o *Network secrets* del entorno de la nube; nunca en el repo ni en el chat): `OPENAI_API_KEY` (obligatoria para íconos y miniaturas), `GEMINI_API_KEY` (recomendada), `MESHY_API_KEY` (plan Pro), `ROBLOX_OPEN_CLOUD_API_KEY` + `ROBLOX_CREATOR_GROUP_ID`, `ROBLOX_ANALYTICS_API_KEY` y `ROBLOX_ADS_API_KEY`. En la nube: `OPENAI_API_KEY` cargada en el entorno el 2026-11-02 (probada); las demás, no. Gemini dio OR_BACR2_59 al activar la facturación.
 - **Conectores:** MCP de Roblox Studio, Rojo, MCP de Blender y MCP de Meshy en cada PC; ElevenLabs, Higgsfield y GitHub ya conectados en la cuenta de Leonel (Luciano los conecta en claude.ai). Meshy no arranca en la nube (`.mcp.json` usa `cmd`).
 - **Roblox:** grupo dueño (`GameConfig.GROUP_ID`), 2FA y documento verificado, productos y pases con sus ids en `ShopConfig`, suscripción en Robux, anuncio con premio recién cuando se cumplan sus requisitos, cuestionario de madurez, traducción automática, *Max Players* = bases de la receta.
-- **Pruebas en Studio:** UI v3 (Luciano) y, después, los bloques del armador y el juego de prueba rehecho.
+- **Pruebas en Studio:** UI v3 (Luciano), los bloques del armador con su UI (2026-11-02) y el juego de prueba rehecho.
+- **Subir a Roblox** los 63 íconos y las 9 mascotas (`tools/roblox_upload.py`) y poner los ids en `AssetIds.icons`.
 - **Decisiones:** tomas de sonido, receta del primer juego, PR de la rama a `main`.
 
 ## 9. Trampas aprendidas (no repetir)
@@ -315,6 +342,10 @@ Lista completa y con casillas en **`team/pendientes.md`** (pedido del usuario de
 - **Literales en los tests:** listas de tablas con campos distintos (una con `reward`, otra sin) se infieren mal; castear la lista (`:: { Types.IndexZone }`). Y `local a, b = {}, {}` que después reciben números: anotar `{ number }`.
 - **Tests sin Roblox:** el CLI de Luau no tiene `Color3`, `Vector3` ni servicios. Lo que se prueba (recetas, `Lib/`) va sin tipos de Roblox.
 - **Glifo de Robux** (`utf8.char(0xE002)` con Builder Sans): sale del DevForum, no de la documentación. Confirmar en Studio.
+- **Chequeo antes de subir:** `python tools/check.py | grep ... && git commit` sube aunque falle (el código de salida es el del último comando del caño). Guardar la salida en un archivo, mirar `$?` y recién ahí commitear (el 2026-11-02 se subió un commit con el chequeo en rojo y se arregló en el siguiente).
+- **Heredoc sin comillas:** `python3 - <<EOF` ejecuta lo que esté entre comillas invertidas (`tools/x.py`) y lo borra del texto. Para escribir Markdown desde un script, `<<'EOF'` (con comillas).
+- **Recetas de íconos:** el autotest de `imagegen.py` cuenta los objetos por ") " en el prompt: nada de paréntesis dentro de las descripciones.
+- **ActionBar:** cada botón con su tecla; la misma tecla en dos botones visibles dispara los dos.
 - **En la nube de Claude:**
   - create.roblox.com está bloqueado: la documentación sale del repo `Roblox/creator-docs`, por `raw.githubusercontent.com`;
   - las imágenes de esa documentación están en Git LFS y se bajan de `media.githubusercontent.com`;
