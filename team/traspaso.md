@@ -287,6 +287,11 @@ Para seguir igual (completa `bloques.md`):
   - se sacan las usadas (`Units.remove(..., "Merge")`); el resultado llega ya o a `readyAt = ahora + seconds` (un bucle de 1 s lo entrega solo); premio `"Merge:Skip"` = listo ya;
   - señal "Merge" y `KitFx` "Merged".
 
+### Plan de la UI de los bloques (#61, la que sigue)
+
+- `client/Kits/KitUi.luau` primero: `invoke`/`fire` a los remotes, avisos de error en inglés por código (`KitFx "Error"`: FULL, NOT_ENOUGH, LOCKED, PROTECTED, ZONE, FAR, BAG_FULL, WEAK...), `Bus.call("ShowReward", popup)` para lo conseguido, una ventana de lista para tiendas de bloque (mejoras, cañas, herramientas, semillas; filas como `QuestController`: `UIKit.fitHeight(fila, 7.4, 64)`) y reglas de prompts (el dueño no ve "Steal" en lo suyo; en bases ajenas no se ven SlotShop ni GardenTile; volver a aplicarlas si el servidor cambia `Enabled` o el `Owner` de la base). Abrir ventanas con `ProximityPromptService.PromptTriggered` (prompt "RollStation" con atributo Roll) y prompts locales en `KitShopStand` (atributo Window).
+- Después, un módulo por bloque en `client/Kits/` sumado a `BLOCKS` de `client/Kits/Kits.luau`: inventario de Units (tarjetas con ícono, nombre con su variante, lo que da; acciones Equip, Place/Store, Sell, Lock, Merge; "Equip Best" y "Sell All"), ventana de tiradas con probabilidades (`Rarity.percentages` con la suerte) y animación de revelado, mascotas que siguen (atributo `Equipped`), barra de acción (TAP, Cast/Reel, Dig, Sell All, Push, Lock, objetos con teclas 1–9), tienda de semillas con reloj, puertas y barreras con choque local, etapa en el HUD y popup de revivir/resumen. Al terminar, mandar una imagen (sección 2).
+
 ## 8. Lo que depende de las personas
 
 Lista completa y con casillas en **`team/pendientes.md`** (pedido del usuario del 2026-10-30: "que api keys necesitás, qué conectores hay que poner, etc."). Mantenerla al día en cada hito y repetirla en el reporte final (#70). En resumen:
