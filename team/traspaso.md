@@ -125,13 +125,13 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
 | 41 | Base del armador: tipos, validación de recetas, cargador de bloques (servidor y cliente), ayudas del mundo, despachador de premios, estado del kit | 1 | ✅ |
 | 42 | Bloque Units | 1 | ✅ (el inventario en ventana va con la UI de los bloques, #61) |
 | 43 | Bloque Plots | 2 | ✅ |
-| 44 | Bloque Belt | 2 | **sigue esta** (diseño en la sección 7) |
-| 45 | Bloque Steal (hecho de cero) | 2 | pendiente |
-| 46 | Bloque Rolls | 2 | pendiente |
-| 47 | Bloque Merge | 2 | pendiente |
+| 44 | Bloque Belt | 2 | ✅ servidor |
+| 45 | Bloque Steal (hecho de cero) | 2 | ✅ servidor |
+| 46 | Bloque Rolls | 2 | ✅ servidor |
+| 47 | Bloque Merge | 2 | ✅ servidor |
 | 48 | Bloque Sell | 2 | ✅ servidor (su UI va en #61) |
 | 49 | Bloque Equip | 2 | ✅ servidor (mascotas que siguen y su UI van en #61) |
-| 50 | Bloque Stats | 3 | pendiente |
+| 50 | Bloque Stats | 3 | **sigue esta** |
 | 51 | Bloque Zones | 3 | pendiente |
 | 52 | Bloque Stages | 3 | pendiente |
 | 53 | Bloque Fishing | 3 | pendiente |
@@ -184,6 +184,14 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
   - `server/Kits/Equip.luau`: espacios = `slots` + pase (`slotPass`/`passSlots`) + `Bonus "equip"`, tope `maxSlots`; poder = Σ `Units.power` de las equipadas, sumado como "add" a `equip.stat` en BoostService (proveedor registrado); lo colocado no se equipa; remotes `EquipUnit`, `UnequipUnit`, `EquipBest`; atributo del jugador `Equipped` = "kind|variant|size;..." para que el cliente dibuje las que siguen. Señal "Equip".
   - `Units.defs()` (todas las definiciones, para los sorteos) y textos nuevos de prompts y avisos en `UiText` (`PROMPT_BUY`, `PROMPT_STEAL`, `PROMPT_SELL`, `PROMPT_MERGE`, `PROMPT_OPEN`, `STEAL_ANNOUNCE`).
   - Tipos nuevos en `Kits/Types`: `SellState`, `EquipState`, `MergeState`, `RollResult`, `RollsState`.
+
+- **Hito 2 terminado (2026-11-02): bloques Belt, Rolls, Merge y Steal.** Chequeo en verde. Se retomó en esta misma sesión ("Continuá donde te quedaste"): el Claude de Luciano no llegó a tomarlo.
+  - `server/Kits/Belt.luau`: cinta con el diseño de la sección 7 (sorteo, modelo que cruza la parte por su eje X con `Heartbeat`, precio con variantes, prompt "Buy", el primero se lo lleva, devuelve la plata si algo falla).
+  - `server/Kits/Rolls.luau`: `RequestRoll(id, count, auto?)` con todas las reglas de la sección 7; `Rolls.draw(player, def, count, force)`; premio "Roll:<id>"; cartel y prompt "Open" (atributo `Roll`) en cada `KitRollStation`: el prompt solo abre la ventana de la tirada en el cliente (#61).
+  - `server/Kits/Merge.luau`: modos "tier" y "variant"; `Merge.nextKind`; fusión pendiente con entrega automática; premio "Merge:Skip" (si no hay nada esperando, queda guardado en `skips` para la próxima: una compra nunca se pierde); cartel en `KitMergeMachine`.
+  - `server/Kits/Steal.luau`: prompt "Steal" en cada unidad colocada (atributo `Owner` para que el cliente del dueño lo esconda), llevarla sobre la cabeza (soldada con `WeldConstraint`), velocidad `carrySpeed`, atributo `BeingStolen` en el modelo de la base, entrega al entrar a la propia base, se cae si muere/se va/lo empujan/pasan 90 s, empujón `PushPlayer(userId)` con `ApplyImpulse`, aviso al servidor desde `announceFrom`. `Steal.isCarrying(player)`.
+  - `KitWorld.applySpeed` / `setSpeedFactor(player, fuente, factor?)`: velocidad = `BaseWalkSpeed` (o la de StarterPlayer) × factores. **Para Stats (#50):** poner el atributo `BaseWalkSpeed` y volver a aplicar con `KitWorld.applySpeed` en cada `CharacterAdded`.
+  - `Units.transfer` ya no avisa "got a SECRET" (el robo avisa lo suyo).
 
 ## 6. Qué existe hoy (mapa)
 

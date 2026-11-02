@@ -266,7 +266,7 @@ function Units.transfer(from: Player, to: Player, uid: number, source: string): 
 		return nil
 	end
 	Units.remove(from, uid, source)
-	local copy = Units.add(to, unit.kind, { source = source, variant = unit.variant, size = unit.size, weight = unit.weight, force = true })
+	local copy = Units.add(to, unit.kind, { source = source, variant = unit.variant, size = unit.size, weight = unit.weight, force = true, quiet = true })
 	return copy
 end
 

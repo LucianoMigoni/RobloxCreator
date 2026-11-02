@@ -6,6 +6,7 @@
 
 local CollectionService = game:GetService("CollectionService")
 local Players = game:GetService("Players")
+local StarterPlayer = game:GetService("StarterPlayer")
 
 local KitWorld = {}
 
@@ -131,6 +132,34 @@ function KitWorld.near(player: Player, target: Instance | Vector3, range: number
 		position = KitWorld.position(target)
 	end
 	return position ~= nil and (root.Position - position).Magnitude <= range + SLACK
+end
+
+local speedFactors: { [Player]: { [string]: number } } = setmetatable({}, { __mode = "k" }) :: any
+
+-- Velocidad de caminar = base × cada factor activo. La base es el atributo "BaseWalkSpeed" del jugador
+-- (lo pone el bloque Stats con walkSpeed) o la de StarterPlayer. Cada bloque pone su factor con su
+-- nombre (`nil` lo saca): robar va más lento, una poción más rápido, y no se pisan.
+function KitWorld.applySpeed(player: Player)
+	local humanoid = KitWorld.humanoid(player)
+	if not humanoid then
+		return
+	end
+	local base = player:GetAttribute("BaseWalkSpeed")
+	local speed = if typeof(base) == "number" then base else StarterPlayer.CharacterWalkSpeed
+	local factors = speedFactors[player]
+	if factors then
+		for _, factor in factors do
+			speed *= factor
+		end
+	end
+	humanoid.WalkSpeed = speed
+end
+
+function KitWorld.setSpeedFactor(player: Player, source: string, factor: number?)
+	local factors = speedFactors[player] or {}
+	speedFactors[player] = factors
+	factors[source] = factor
+	KitWorld.applySpeed(player)
 end
 
 -- El jugador dueño del personaje al que pertenece la parte tocada.

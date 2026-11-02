@@ -152,4 +152,6 @@ return {
 	PROMPT_MERGE = "Merge",
 	PROMPT_OPEN = "Open",
 	STEAL_ANNOUNCE = "%s stole %s from %s!",
+	MERGE_SKIPPED = "Merge finished!",
+	PROMPT_PUSH = "Push",
 }

@@ -148,7 +148,7 @@ export type MergeConfig = {
 }
 
 -- Lo que ve el cliente del bloque Merge (state.kit.merge): la fusión que se está haciendo.
-export type MergeState = { pending: { kind: string, variant: string?, size: string?, readyAt: number }? }
+export type MergeState = { pending: { kind: string, variant: string?, size: string?, readyAt: number }?, skips: number }
 
 export type SellConfig = {
 	currency: string?, -- moneda que se cobra (la principal si falta)
