@@ -1,0 +1,20 @@
+{
+  "_que_es": "Unidades de la receta StealAndPlace (criaturas graciosas para robar), 2026-11-02. Referencia de estilo: la hoja de mascotas (assets/ui/pet-icons). python tools/imagegen.py generate skills/_shared/iconos/recetas/unidades-robo.json --ref <hoja de mascotas> --quality high --n 1 --out <carpeta>; después iconsheet.py slice.",
+  "kind": "iconset",
+  "grid": "3x3",
+  "names": [
+    "banana_buddy",
+    "toast_pal",
+    "cactus_cowboy",
+    "disco_donut",
+    "pizza_pirate",
+    "robo_pickle",
+    "ninja_noodle",
+    "astro_avocado",
+    "taco_king"
+  ],
+  "ia": {
+    "aspect": "1:1",
+    "prompt": "Nine cute chunky baby creatures with big shiny eyes and happy faces, each standing on tiny stubby feet, in this order: 1) banana_buddy: a happy yellow banana creature with tiny arms and black sunglasses, 2) toast_pal: a slice of golden toast creature with a pat of butter on its head, 3) cactus_cowboy: a small green cactus creature wearing a brown cowboy hat, 4) disco_donut: a pink frosted donut creature with rainbow sprinkles and shiny star glasses, 5) pizza_pirate: a pizza slice creature with a black pirate hat and an eye patch, 6) robo_pickle: a green pickle creature with silver robot arms and a little antenna, 7) ninja_noodle: a noodle bowl creature with a black ninja headband and chopsticks, 8) astro_avocado: an avocado creature wearing a white astronaut helmet with a blue visor, 9) taco_king: a golden taco creature with a red royal cape and a golden crown."
+  }
+}

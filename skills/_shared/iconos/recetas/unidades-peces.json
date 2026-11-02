@@ -1,0 +1,20 @@
+{
+  "_que_es": "Unidades de la receta Fishing (peces), 2026-11-02. Referencia de estilo: la hoja de mascotas.",
+  "kind": "iconset",
+  "grid": "3x3",
+  "names": [
+    "sardine",
+    "clownfish",
+    "pufferfish",
+    "salmon",
+    "swordfish",
+    "octopus",
+    "shark",
+    "golden_koi",
+    "baby_kraken"
+  ],
+  "ia": {
+    "aspect": "1:1",
+    "prompt": "Nine cute chunky baby creatures with big shiny eyes and happy faces, each standing on tiny stubby feet, in this order: 1) sardine: a small shiny silver sardine, 2) clownfish: an orange clownfish with white stripes, 3) pufferfish: a round yellow pufferfish with soft spikes, 4) salmon: a pink and orange salmon, 5) swordfish: a blue swordfish with a long pointy nose, 6) octopus: a purple baby octopus with curly tentacles, 7) shark: a friendly gray-blue baby shark, 8) golden_koi: a shiny golden koi fish with flowing fins, 9) baby_kraken: a dark teal baby kraken with glowing cyan eyes and curly tentacles."
+  }
+}

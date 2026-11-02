@@ -1,0 +1,20 @@
+{
+  "_que_es": "Unidades de la receta MergeTycoon (gallinas por nivel, de la 1 a la 9), 2026-11-02. Referencia de estilo: la hoja de mascotas.",
+  "kind": "iconset",
+  "grid": "3x3",
+  "names": [
+    "chick",
+    "hen",
+    "rooster",
+    "golden_hen",
+    "robo_hen",
+    "ninja_hen",
+    "wizard_hen",
+    "king_rooster",
+    "cosmic_hen"
+  ],
+  "ia": {
+    "aspect": "1:1",
+    "prompt": "Nine cute chunky baby creatures with big shiny eyes and happy faces, each standing on tiny stubby feet, in this order: 1) chick: a tiny yellow chick, 2) hen: a white hen with a red comb, 3) rooster: a proud rooster with colorful tail feathers, 4) golden_hen: a shiny golden hen, 5) robo_hen: a silver robot hen with glowing blue eyes, 6) ninja_hen: a black hen with a red ninja headband, 7) wizard_hen: a purple hen with a blue wizard hat with stars, 8) king_rooster: a rooster with a golden crown and a red royal cape, 9) cosmic_hen: a galaxy hen with starry purple and blue feathers."
+  }
+}

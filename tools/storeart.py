@@ -49,8 +49,8 @@ def hex_rgb(value: str) -> tuple:
 
 def load_recipe(path: Path) -> dict:
     recipe = json.loads(path.read_text(encoding="utf-8"))
-    if recipe.get("kind") != "artset":
-        raise ArtError(f"{path.name}: la receta no es \"artset\"")
+    if recipe.get("kind") not in ("artset", "sceneset"):
+        raise ArtError(f"{path.name}: la receta no es \"artset\" ni \"sceneset\"")
     rows, cols = (int(x) for x in recipe["grid"].split("x"))
     items = recipe.get("items", [])
     if len(items) != rows * cols or [i["name"] for i in items] != recipe.get("names"):
@@ -195,7 +195,9 @@ def selftest() -> int:
                 pass
         finally:
             ICON_DIRS.pop(0)
-    for recipe in sorted((ROOT / "skills" / "_shared" / "tienda" / "recetas").glob("*.json")):
+    for recipe in sorted((ROOT / "skills" / "_shared" / "tienda" / "recetas").glob("*.json")) + sorted(
+        (ROOT / "skills" / "_shared" / "iconos" / "recetas").glob("zonas*.json")
+    ):
         r = load_recipe(recipe)
         for item in r["items"]:
             find_icon(item["icon"])

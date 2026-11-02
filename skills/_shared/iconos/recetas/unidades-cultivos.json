@@ -1,0 +1,20 @@
+{
+  "_que_es": "Unidades de la receta GrowGarden (cultivos), 2026-11-02. Referencia de estilo: skills/_shared/iconos/referencia-estilo.png.",
+  "kind": "iconset",
+  "grid": "3x3",
+  "names": [
+    "carrot",
+    "tomato",
+    "corn",
+    "pumpkin",
+    "watermelon",
+    "strawberry",
+    "dragon_fruit",
+    "golden_apple",
+    "rainbow_melon"
+  ],
+  "ia": {
+    "aspect": "1:1",
+    "prompt": "Nine glossy toy-like objects, in this order: 1) carrot: an orange carrot with green leaves, 2) tomato: a shiny red tomato with a green stem, 3) corn: a yellow corn cob with green husks, 4) pumpkin: a round orange pumpkin, 5) watermelon: a striped green watermelon, 6) strawberry: a big red strawberry with tiny seeds, 7) dragon_fruit: a pink dragon fruit with green tips, 8) golden_apple: a shiny solid gold apple with a leaf, 9) rainbow_melon: a glowing melon with rainbow stripes and sparkles."
+  }
+}

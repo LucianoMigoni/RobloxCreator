@@ -1641,6 +1641,86 @@
       "notes": "9 mascotas cúbicas 512x512 con fondo transparente (gato, perro, conejo, pollito, zorro, pingüino, panda, tigre y elefante) para los íconos de unidad de las recetas. Detalle en manifest.json."
     },
     {
+      "id": "unit-icons",
+      "path": "ui/unit-icons",
+      "type": "pack",
+      "packType": "icon",
+      "count": 54,
+      "tags": {
+        "style": [
+          "3d",
+          "glossy",
+          "hit",
+          "cartoon"
+        ],
+        "genre": [
+          "simulation",
+          "fishing",
+          "farming",
+          "tycoon",
+          "any"
+        ],
+        "theme": [
+          "unit",
+          "creature",
+          "fish",
+          "crop",
+          "dinosaur",
+          "chicken",
+          "treasure",
+          "food",
+          "index"
+        ]
+      },
+      "robloxAssetId": null,
+      "source": "ai-generated",
+      "sourceUrl": null,
+      "license": "propio (IA con referencias propias, API de OpenAI)",
+      "commercialUse": true,
+      "author": "RobloxCreator",
+      "notes": "54 unidades de muestra de las recetas (criaturas para robar, peces, gallinas, dinos, cultivos y tesoros), 512x512 con fondo transparente. Detalle en manifest.json."
+    },
+    {
+      "id": "zone-art",
+      "path": "ui/zone-art",
+      "type": "pack",
+      "packType": "image",
+      "count": 9,
+      "tags": {
+        "style": [
+          "3d",
+          "hit",
+          "cartoon",
+          "low-poly"
+        ],
+        "genre": [
+          "any"
+        ],
+        "theme": [
+          "zone",
+          "world",
+          "biome",
+          "index",
+          "meadow",
+          "beach",
+          "candy",
+          "snow",
+          "jungle",
+          "desert",
+          "volcano",
+          "space",
+          "underwater"
+        ]
+      },
+      "robloxAssetId": null,
+      "source": "ai-generated",
+      "sourceUrl": null,
+      "license": "propio (IA con referencias propias, API de OpenAI)",
+      "commercialUse": true,
+      "author": "RobloxCreator",
+      "notes": "9 fotos de zona cuadradas (un bioma cada una) para el índice y la ventana Worlds."
+    },
+    {
       "id": "store-art",
       "path": "ui/store-art",
       "type": "pack",

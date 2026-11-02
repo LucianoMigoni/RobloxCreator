@@ -1,0 +1,20 @@
+{
+  "_que_es": "Unidades de la receta RunAndCatch (dinosaurios), 2026-11-02. Referencia de estilo: la hoja de mascotas.",
+  "kind": "iconset",
+  "grid": "3x3",
+  "names": [
+    "baby_raptor",
+    "stego",
+    "trike",
+    "ankylo",
+    "ptero",
+    "parasaur",
+    "spino",
+    "trex",
+    "crystal_rex"
+  ],
+  "ia": {
+    "aspect": "1:1",
+    "prompt": "Nine cute chunky baby creatures with big shiny eyes and happy faces, each standing on tiny stubby feet, in this order: 1) baby_raptor: a small green baby raptor, 2) stego: a blue baby stegosaurus with orange back plates, 3) trike: an orange baby triceratops with three horns, 4) ankylo: a brown baby ankylosaurus with a club tail, 5) ptero: a red baby pterodactyl with open wings, 6) parasaur: a yellow baby parasaurolophus with a long head crest, 7) spino: a teal baby spinosaurus with a tall sail on its back, 8) trex: a purple baby T-Rex with tiny arms, 9) crystal_rex: a glowing crystal T-Rex made of shiny cyan crystal."
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "_que_es": "Fotos de zona (índice y ventana Worlds), un bioma por cuadro, 2026-11-02. python tools/imagegen.py generate skills/_shared/iconos/recetas/zonas.json --ref <fondo de carga> --quality high --n 1 --out <carpeta>; python tools/storeart.py finish skills/_shared/iconos/recetas/zonas.json --sheet <hoja>.png --out assets/ui/zone-art.",
+  "kind": "sceneset",
+  "grid": "3x3",
+  "names": [
+    "meadow",
+    "beach",
+    "candy",
+    "snow",
+    "jungle",
+    "desert",
+    "volcano",
+    "space",
+    "underwater"
+  ],
+  "items": [
+    {
+      "name": "meadow",
+      "icon": "map",
+      "color": "#46D64B",
+      "label": ""
+    },
+    {
+      "name": "beach",
+      "icon": "map",
+      "color": "#46D64B",
+      "label": ""
+    },
+    {
+      "name": "candy",
+      "icon": "map",
+      "color": "#46D64B",
+      "label": ""
+    },
+    {
+      "name": "snow",
+      "icon": "map",
+      "color": "#46D64B",
+      "label": ""
+    },
+    {
+      "name": "jungle",
+      "icon": "map",
+      "color": "#46D64B",
+      "label": ""
+    },
+    {
+      "name": "desert",
+      "icon": "map",
+      "color": "#46D64B",
+      "label": ""
+    },
+    {
+      "name": "volcano",
+      "icon": "map",
+      "color": "#46D64B",
+      "label": ""
+    },
+    {
+      "name": "space",
+      "icon": "map",
+      "color": "#46D64B",
+      "label": ""
+    },
+    {
+      "name": "underwater",
+      "icon": "map",
+      "color": "#46D64B",
+      "label": ""
+    }
+  ],
+  "ia": {
+    "aspect": "1:1",
+    "prompt": "Nine biomes, in this order: 1) meadow: a sunny meadow with green hills, flowers, blocky trees and a small windmill, 2) beach: a tropical beach with golden sand, palm trees, turquoise water and a beach hut, 3) candy: a candy land with pink hills, giant lollipops, gumdrops and a chocolate river, 4) snow: snowy peaks with pine trees, ice crystals and a cozy wooden cabin, 5) jungle: a lush jungle with giant leaves, vines, a waterfall and ancient stone ruins, 6) desert: a desert with orange dunes, cactuses, a small oasis and a pyramid, 7) volcano: a volcano island with glowing lava rivers, dark rocks and fire crystals, 8) space: a purple alien planet with craters, glowing crystals, rings and stars in the sky, 9) underwater: an underwater coral reef with colorful corals, bubbles and a sunken treasure chest."
+  }
+}

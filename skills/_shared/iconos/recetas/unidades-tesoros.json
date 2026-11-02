@@ -1,0 +1,20 @@
+{
+  "_que_es": "Unidades de la receta SearchAndDig (lo que se encuentra cavando), 2026-11-02. Referencia de estilo: skills/_shared/iconos/referencia-estilo.png.",
+  "kind": "iconset",
+  "grid": "3x3",
+  "names": [
+    "old_boot",
+    "rubber_duck",
+    "toy_robot",
+    "pearl",
+    "gold_ring",
+    "ancient_coin",
+    "magic_crystal",
+    "golden_needle",
+    "rainbow_needle"
+  ],
+  "ia": {
+    "aspect": "1:1",
+    "prompt": "Nine glossy toy-like objects, in this order: 1) old_boot: an old brown boot with a hole and a little worm peeking out, 2) rubber_duck: a yellow rubber duck, 3) toy_robot: a small silver toy robot with a red antenna, 4) pearl: a white pearl inside an open pink seashell, 5) gold_ring: a gold ring with a big blue gem, 6) ancient_coin: an ancient golden coin with a star emblem, 7) magic_crystal: a glowing purple magic crystal cluster, 8) golden_needle: a shiny golden sewing needle with sparkles, 9) rainbow_needle: a glowing rainbow sewing needle with stars around it."
+  }
+}

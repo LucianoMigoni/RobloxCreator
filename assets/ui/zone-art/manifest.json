@@ -1,0 +1,56 @@
+{
+ "pack": "zone-art",
+ "kind": "image",
+ "count": 9,
+ "source": "GPT Image 2.5 por la API de OpenAI (tools/imagegen.py, receta sceneset zonas.json, calidad high) con el fondo de carga propio de referencia; cortados con tools/storeart.py finish",
+ "license": "propio (generado con IA con referencias propias)",
+ "author": "RobloxCreator",
+ "created": "2026-11-02",
+ "style": "Fotos de zona cuadradas: un bioma por imagen, bloques low-poly, colores saturados, esquinas redondeadas",
+ "notes": "Para IndexZone.image (índice) y la ventana Worlds. Subir con tools/roblox_upload.py.",
+ "sheets": [
+  {
+   "recipe": "skills/_shared/iconos/recetas/zonas.json",
+   "sheet": "zonas-20261102-210939-1.png",
+   "sha256": "adb3758e5aab6200e8ad4f637970a500196c79114ec15b61486f96593f6e57d5"
+  }
+ ],
+ "items": [
+  {
+   "name": "meadow",
+   "file": "meadow.png"
+  },
+  {
+   "name": "beach",
+   "file": "beach.png"
+  },
+  {
+   "name": "candy",
+   "file": "candy.png"
+  },
+  {
+   "name": "snow",
+   "file": "snow.png"
+  },
+  {
+   "name": "jungle",
+   "file": "jungle.png"
+  },
+  {
+   "name": "desert",
+   "file": "desert.png"
+  },
+  {
+   "name": "volcano",
+   "file": "volcano.png"
+  },
+  {
+   "name": "space",
+   "file": "space.png"
+  },
+  {
+   "name": "underwater",
+   "file": "underwater.png"
+  }
+ ]
+}

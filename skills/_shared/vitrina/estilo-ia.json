@@ -33,5 +33,13 @@
   "references": "Use the attached sheet only as the STYLE reference.",
   "background": "Opaque tiles; the gaps between tiles are plain white.",
   "negative": "No text, no letters, no numbers, no labels, no watermark, no borders drawn around the whole sheet."
+ },
+ "sceneset": {
+  "_que_es": "Hojas de 9 paisajes cuadrados (fotos de zona del índice y de la ventana Worlds). 2026-11-02.",
+  "style": "A 3x3 sheet of nine separate square landscape images of bright, cheerful Roblox game worlds, like the zone pictures of today's top Roblox games. Each cell is a full square tile that fills its cell edge to edge, with a thin plain white gap between tiles and rounded tile corners. Each tile shows one different biome from a high three-quarter view: blocky low-poly scenery, very saturated colors, soft sunny lighting, a clear landmark in the center and depth in the background. Polished 3D render quality.",
+  "references": "Use the attached image only as the STYLE reference for colors, light and finish.",
+  "redraw": "The attached sheet is our own rough draft: keep the same biomes in the same order and redraw them with professional finish.",
+  "background": "Opaque tiles; the gaps between tiles are plain white.",
+  "negative": "No text, no letters, no numbers, no people, no avatars, no user interface, no watermark."
  }
 }
