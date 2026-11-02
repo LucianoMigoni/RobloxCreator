@@ -25,6 +25,7 @@ local PlayerStateService = require("../PlayerStateService")
 local RewardService = require("../Rewards/RewardService")
 local Belt = require("./Belt")
 local Equip = require("./Equip")
+local Fishing = require("./Fishing")
 local KitFx = require("./KitFx")
 local Merge = require("./Merge")
 local Plots = require("./Plots")
@@ -63,6 +64,7 @@ local BLOCKS: { Block } = {
 	{ key = "rolls", init = Rolls.init, start = Rolls.start, snapshot = Rolls.snapshot, items = Rolls.items },
 	{ key = "belt", init = Belt.init, start = Belt.start },
 	{ key = "steal", init = Steal.init, start = Steal.start },
+	{ key = "fishing", init = Fishing.init, start = Fishing.start, snapshot = Fishing.snapshot, items = Fishing.items },
 	{ key = "stages", init = Stages.init, start = Stages.start, snapshot = Stages.snapshot, items = Stages.items },
 }
 

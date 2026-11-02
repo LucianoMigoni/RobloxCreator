@@ -236,6 +236,9 @@ export type FishingConfig = {
 	castRange: number?, -- distancia máxima al agua
 }
 
+-- Lo que ve el cliente del bloque Fishing (state.kit.fishing): caña puesta y cañas que tiene.
+export type FishingState = { rod: string, owned: { [string]: boolean } }
+
 export type Seed = {
 	id: string,
 	name: string,
