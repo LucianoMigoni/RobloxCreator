@@ -126,6 +126,7 @@ local function spawnUnit(lane: Lane)
 		born = os.clock(),
 		sold = false,
 	}
+	model:SetAttribute("Price", item.price) -- para el cartel de cada cliente
 	model.Parent = part.Parent or part
 	local prompt = KitWorld.prompt(model, {
 		action = UiText.PROMPT_BUY,

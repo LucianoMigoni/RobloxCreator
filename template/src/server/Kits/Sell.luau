@@ -121,19 +121,26 @@ function Sell.start(_recipe: KitTypes.KitConfig)
 	Remotes.onInvoke("SellUnits", {
 		args = { Validate.array(Validate.number({ integer = true, min = 1 }), MAX_BATCH) },
 		rate = { count = 4, perSeconds = 1 },
-	}, function(player: Player, uids: { number }): (boolean, number?)
+	}, function(player: Player, uids: { number }): (boolean, any)
 		if not allowed(player) then
-			return false, nil
+			return false, "SELL_FAR"
 		end
 		local count, amount = Sell.units(player, uids)
-		return count > 0, amount
+		if count == 0 then
+			return false, "EMPTY"
+		end
+		return true, amount
 	end)
-	Remotes.onInvoke("SellAll", { args = {}, rate = { count = 2, perSeconds = 1 } }, function(player: Player): (boolean, number?)
+	-- Sin permiso, "SELL_FAR": el cliente ofrece ir al puesto o el pase; sin nada para vender, "EMPTY".
+	Remotes.onInvoke("SellAll", { args = {}, rate = { count = 2, perSeconds = 1 } }, function(player: Player): (boolean, any)
 		if not allowed(player) then
-			return false, nil
+			return false, "SELL_FAR"
 		end
 		local count, amount = Sell.all(player)
-		return count > 0, amount
+		if count == 0 then
+			return false, "EMPTY"
+		end
+		return true, amount
 	end)
 end
 

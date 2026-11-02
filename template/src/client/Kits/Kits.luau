@@ -12,21 +12,29 @@ local Net = require(ReplicatedStorage.Shared.Net)
 local Bus = require("../Bus")
 local HudController = require("../Controllers/HudController")
 local ActionBar = require("./ActionBar")
+local Base = require("./Base")
+local Followers = require("./Followers")
+local Inventory = require("./Inventory")
+local KitUi = require("./KitUi")
 local Units = require("./Units")
 
 type Block = { key: string, start: (HudController.Hud) -> () }
 
 local Kits = {}
 
--- Un bloque por fila, en el orden de KitCheck.BLOCKS.
+-- En el orden de KitCheck.BLOCKS; un bloque puede tener más de una parte de UI.
 local BLOCKS: { Block } = {
 	{ key = "units", start = Units.start },
+	{ key = "units", start = Inventory.start },
+	{ key = "plots", start = Base.start },
+	{ key = "equip", start = Followers.start },
 }
 
 function Kits.start(hud: HudController.Hud)
 	if #KitCheck.blocks(KitConfig) == 0 then
 		return
 	end
+	KitUi.start(hud)
 	ActionBar.start(hud)
 	-- Efectos que manda el servidor (server/Kits/KitFx): cada bloque los escucha con Bus.on("Kit:<nombre>").
 	task.spawn(function()

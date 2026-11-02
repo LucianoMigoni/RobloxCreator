@@ -461,6 +461,55 @@ function ShopController.start(hud: Hud.Hud)
 	end)
 	Bus.handle("OpenShop", open)
 
+	-- Compras por clave desde la UI de los bloques del armador ("Finish Now", "Extra Life", el pase de
+	-- abrir x3): el mismo camino que la tienda. Devuelve si se abrió la compra.
+	local function passByKey(key: string): ShopConfig.Pass?
+		for _, pass in ShopConfig.PASSES do
+			if pass.key == key then
+				return pass
+			end
+		end
+		return nil
+	end
+	Bus.handle("BuyProduct", function(key: string): boolean
+		local product = productByKey(key)
+		local restricted = product ~= nil and product.random == true and player:GetAttribute("PaidRandomRestricted") == true
+		if not product or product.productId == 0 or restricted then
+			UIKit.notify(hud.screen, UiText.UNAVAILABLE, "Neutral")
+			return false
+		end
+		MarketplaceService:PromptProductPurchase(player, product.productId)
+		return true
+	end)
+	Bus.handle("BuyPass", function(key: string): boolean
+		local pass = passByKey(key)
+		if not pass or pass.passId == 0 then
+			UIKit.notify(hud.screen, UiText.UNAVAILABLE, "Neutral")
+			return false
+		end
+		MarketplaceService:PromptGamePassPurchase(player, pass.passId)
+		return true
+	end)
+	-- Precio en Robux de un producto o pase por clave: primero el de la configuración y después el del
+	-- Dashboard, cuando llega.
+	Bus.handle("RobuxPrice", function(key: string, onPrice: (number) -> ())
+		local product = productByKey(key)
+		if product then
+			onPrice(product.robux)
+			if product.productId ~= 0 then
+				fetchPrice(Enum.InfoType.Product, product.productId, onPrice)
+			end
+			return
+		end
+		local pass = passByKey(key)
+		if pass then
+			onPrice(pass.robux)
+			if pass.passId ~= 0 then
+				fetchPrice(Enum.InfoType.GamePass, pass.passId, onPrice)
+			end
+		end
+	end)
+
 	PlayerState.Changed:Connect(function(_state: Types.PlayerSnapshot)
 		if UIKit.isOpen(window) then
 			render()

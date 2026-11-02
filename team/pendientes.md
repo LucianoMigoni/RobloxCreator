@@ -16,6 +16,8 @@ Lo que el programa necesita de las personas y que Claude no puede hacer solo. Al
 
 ## 1. Claves de API
 
+Paso a paso corto para las de OpenAI y Google: `team/claves-ia.md`.
+
 | Clave (variable) | Para qué | Dónde se crea | Permisos y costo | Quién |
 |---|---|---|---|---|
 | `OPENAI_API_KEY` | Íconos, miniaturas y anuncios con GPT Image (`tools/imagegen.py`) | https://platform.openai.com/api-keys → *Create new secret key* | Saldo cargado en *Billing* (la suscripción de ChatGPT no sirve). Puede pedir verificar la organización para los modelos de imagen | Los dos y la nube |
