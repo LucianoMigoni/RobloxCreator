@@ -328,9 +328,19 @@ export type TycoonConfig = { buildings: { Building } }
 -- Lo que ve el cliente del bloque Tycoon (state.kit.tycoon): edificios comprados.
 export type TycoonState = { built: { [string]: boolean } }
 
-export type ItemDef = { id: string, name: string, icon: string, boost: string, seconds: number }
+export type ItemDef = {
+	id: string,
+	name: string,
+	icon: string,
+	seconds: number, -- cuánto dura el efecto
+	boost: string?, -- impulso de BoostConfig.TIMED que activa ("Luck2x")
+	walkSpeed: number?, -- multiplica la velocidad de caminar mientras dura (habilidad "Sprint")
+}
 
 export type ItemsConfig = { list: { ItemDef }, maxStack: number }
+
+-- Lo que ve el cliente del bloque Items (state.kit.items): cuántos tiene de cada uno.
+export type ItemsState = { counts: { [string]: number } }
 
 export type Quest = {
 	id: string,

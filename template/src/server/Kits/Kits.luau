@@ -27,6 +27,7 @@ local Belt = require("./Belt")
 local Equip = require("./Equip")
 local Fishing = require("./Fishing")
 local Garden = require("./Garden")
+local Items = require("./Items")
 local KitFx = require("./KitFx")
 local Merge = require("./Merge")
 local Plots = require("./Plots")
@@ -61,6 +62,7 @@ local Kits = {}
 local BLOCKS: { Block } = {
 	{ key = "upgrades", init = Upgrades.init, start = Upgrades.start, snapshot = Upgrades.snapshot, items = Upgrades.items },
 	{ key = "units", init = Units.init, start = Units.start, snapshot = Units.snapshot, items = Units.items },
+	{ key = "items", init = Items.init, start = Items.start, snapshot = Items.snapshot, items = Items.items },
 	{ key = "stats", init = Stats.init, start = Stats.start, snapshot = Stats.snapshot, items = Stats.items },
 	{ key = "zones", init = Zones.init, start = Zones.start, snapshot = Zones.snapshot, items = Zones.items },
 	{ key = "plots", init = Plots.init, start = Plots.start, snapshot = Plots.snapshot, income = Plots.income },

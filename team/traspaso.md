@@ -132,16 +132,16 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
 | 48 | Bloque Sell | 2 | ✅ servidor (su UI va en #61) |
 | 49 | Bloque Equip | 2 | ✅ servidor (mascotas que siguen y su UI van en #61) |
 | 50 | Bloque Stats | 3 | ✅ servidor |
-| 51 | Bloque Zones | 3 | **sigue esta** |
-| 52 | Bloque Stages | 3 | pendiente |
-| 53 | Bloque Fishing | 3 | pendiente |
-| 54 | Bloque Garden | 3 | pendiente |
-| 55 | Bloque Search | 3 | pendiente |
-| 56 | Bloque Wild | 3 | pendiente |
-| 57 | Bloque Upgrades | 3 | pendiente |
-| 58 | Bloque Tycoon | 3 | pendiente |
-| 59 | Bloque Items | 3 | pendiente |
-| 60 | Productos de cada bloque en la tienda | 4 | pendiente |
+| 51 | Bloque Zones | 3 | ✅ servidor |
+| 52 | Bloque Stages | 3 | ✅ servidor |
+| 53 | Bloque Fishing | 3 | ✅ servidor |
+| 54 | Bloque Garden | 3 | ✅ servidor |
+| 55 | Bloque Search | 3 | ✅ servidor |
+| 56 | Bloque Wild | 3 | ✅ servidor |
+| 57 | Bloque Upgrades | 3 | ✅ servidor |
+| 58 | Bloque Tycoon | 3 | ✅ servidor |
+| 59 | Bloque Items | 3 | ✅ servidor |
+| 60 | Productos de cada bloque en la tienda | 4 | **sigue esta** |
 | 61 | UI de los bloques | 4 | pendiente |
 | 62 | MapKit | 5 | pendiente |
 | 63 | Nueve recetas con objetivos, misiones y mapa | 5 | pendiente |
@@ -197,6 +197,18 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
   - `server/Kits/Stats.luau`: ganancia por stud caminado (medido cada 0.25 s, tope 1.5 × WalkSpeed: los saltos de posición no cuentan; señal "Steps"), por segundo, por toque (`TapStat(id)`, como mucho `clickRate` por segundo por estadística; el pase `autoPass` toca solo; señal "Tap"), sobre `KitTreadmill` (atributos Stat y Gain, respeta la zona con `Gates`); todo × `BoostService.multiplier(player, multiplier or id)` (se registran los "Mult_<stat>"); con `currency` va a esa moneda; con `walkSpeed` pone `BaseWalkSpeed` y `KitWorld.applySpeed` (también al reaparecer); `SetStatCap(id, 0..1)`; `resetOnRebirth`; atributo del jugador con el id (tabla de jugadores); `Stats.value(player, id)` y `Stats.add` para Zones, Stages y Wild; premio "Stat:<id>"; señal "<id>Gained". Tipo `StatsState`.
   - El cuadro de tareas de Claude se rehízo en esta sesión (el usuario no lo veía): hitos 0–2 como tareas hechas y una tarea por cada fila pendiente de la sección 4.
   - El usuario pidió de nuevo: "Acordate de mandarme cada tanto una prueba, tipo foto, audio, etc. con lo que aplique y tenga sentido mostrar" (sección 2).
+
+- **Hito 3 terminado (2026-11-02): bloques Zones, Stages, Fishing, Garden, Search, Wild, Upgrades, Tycoon e Items.** Chequeo en verde, un push por bloque. Todos con el diseño de `bloques.md` (tabla del catálogo puesta al día con los remotes y premios reales).
+  - **Zones:** en orden, la primera abierta; abiertas para siempre; se compran (`UnlockZone`, prompt en la puerta) o se abren solas al llegar a la estadística o los renacimientos; regiones `KitZone` vigiladas (quien entra sin tenerla vuelve a su base); `KitTeleport`; registra `Gates`; premio "Zone:<id>". Tipo `ZonesState`.
+  - **Stages:** obby con checkpoints que validan el requisito de la estadística, reaparecer en la etapa, meta con premio × multiplicador de su moneda, `returnToStart`; corrida (`run`) con muerte, `Revive()` gratis o comprado ("Stages:Revive" se guarda si no está muerto) y `EndRun()` con resumen (premio × etapas). Reaparece en la etapa 0.15 s después que la base. Tipo `StagesState`.
+  - **Fishing:** `CastLine()` cerca del borde del agua (castRange 40), picada al azar / velocidad de caña × (1 − "reel"), `ReelLine()` en la ventana; suerte = caña × Luck; `BuyRod`; "Rod:<id>". Tipo `FishingState`.
+  - **Garden:** `Lib/GardenShop.luau` + test (reposición por reloj real igual en todos los servidores); parcelas en la base con prompt que cambia (Plant / Growing... / Harvest); crecimiento por `readyAt` (sin conexión); mutación con `mutationChance`; "Seed:<id>" y "Garden:Skip". Tipos `Plant`, `GardenState`.
+  - **Search:** `DigPile()` o el prompt de la pila; mochila; depósito al inventario o vendido con `depositCurrency`; "Tool:<id>". Tipos `Found`, `SearchState`.
+  - **Wild:** criaturas que deambulan por área con `Heartbeat`; captura midiendo en el servidor el tiempo apretado (`PromptButtonHoldBegan`); requisito de estadística; `toBase`.
+  - **Upgrades:** `BuyUpgrade(id)`, "stat:" en BoostService (add/mult por nivel), efectos de bloques por `Bonus` (registrado en `init`); robux solo por "Upgrade:<id>". Tipo `UpgradesState`.
+  - **Tycoon:** botones que se pisan, edificios escondidos en `ServerStorage` hasta comprarse, ingreso por `Plots.addStored` (nuevo). Tipo `TycoonState`.
+  - **Items:** `UseItem(id)`: impulso (`boost`, ahora opcional) y/o `walkSpeed` (campo nuevo) por `seconds`; "Item:<id>" sin tope. Tipo `ItemsState`.
+  - Imagen de prueba enviada al usuario con la lógica real (100.000 huevos con y sin suerte, mutaciones, espacios, robo).
 
 ## 6. Qué existe hoy (mapa)
 

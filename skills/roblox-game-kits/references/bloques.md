@@ -28,28 +28,32 @@ Entre bloques no hay `require` en círculo: los bonos de las mejoras pasan por `
 
 ## Catálogo
 
-| Bloque | Para qué (hits) | Mundo (etiquetas y atributos) | El jugador | Señales |
-|---|---|---|---|---|
-| **Units** | Todo lo coleccionable: mascotas, criaturas, peces, cultivos, dados | — | inventario (ventana) | `UnitGot` |
-| **Plots** | Base que paga $/s (robar, fusión, tycoon) | `KitPlot` (Model) con `KitSlot` (`Index`), `KitCollectPad`, `KitSpawn`, `KitBarrier`, `KitLockButton`, `KitSlotShop` | `PlaceUnit`, `StoreUnit`, `LockBase`, `BuySlot`; cobro al pisar el pad | `Collect`, `Place` |
-| **Belt** | Cinta compartida (*Steal a Brainrot*) | `KitBelt` (la cinta corre por su eje X) | prompt "Buy" | `UnitBought` |
-| **Steal** | Robar a otra base | prompts en las unidades colocadas | prompt "Steal", `PushPlayer` | `Steal` |
-| **Rolls** | Huevos, dados, gacha, puestos de compra en tandas | `KitRollStation` (`Roll`) | `RequestRoll(id, count, auto)`, prompt "Open" | `Roll`, `Hatch` |
-| **Merge** | Fusión por nivel (*Chicken Farm*) o por variante (máquina dorada) | `KitMergeMachine` | `MergeUnits(kind)` | `Merge` |
-| **Sell** | Vender (*Fish It*, cultivo) | `KitSellPad` | `SellUnits`; vender todo al pisar | `Sell` |
-| **Equip** | Mascotas que siguen y multiplican | — | `EquipUnit`, `UnequipUnit`, `EquipBest` | `Equip` |
-| **Stats** | "+1 por paso", fuerza, toques | `KitTreadmill` (`Stat`, `Gain`) | `TapStat(id)`, `SetStatCap(id, fracción)`; pasos medidos en el servidor | `<Stat>Gained`, `Steps` |
-| **Zones** | Mundos y biomas con requisito | `KitGate` (`Zone`), `KitZone` (`Zone`, la región), `KitTeleport` (`Zone`) | `UnlockZone(id)`, prompt en la puerta | `ZoneUnlocked` |
-| **Stages** | Escape y obby; corrida con resumen | `KitCheckpoint` (`Stage`), `KitWinPad`, `KitStageStart` | pisar; `Revive` | `Stage`, `Win`, `RunEnded` |
-| **Fishing** | Pesca | `KitWater` (`Pool`) | `CastLine`, `ReelLine` | `Catch` |
-| **Garden** | Cultivo con tienda que se repone | `KitGardenTile` (`Index`, dentro de la base) | `BuySeed`, `SelectSeed`; prompts plantar y cosechar | `Plant`, `Harvest` |
-| **Search** | Pila con cosas escondidas (la aguja en el pajar) | `KitPile` (`Pile`), `KitDepositPad` | `DigPile`; depositar al pisar | `Dig`, `Deposit` |
-| **Wild** | Capturar con requisito (dinos, huevos en nidos) | `KitWildSpawn` (`Zone`, `Pool`) | prompt "Catch" | `Capture` |
-| **Upgrades** | Mejoras por nivel; escalera de multiplicadores | `KitUpgradeStation` | `BuyUpgrade(id)`; productos `Upgrade:<id>` | `Upgrade` |
-| **Tycoon** | Edificios que se compran en la base | `KitTycoonButton` y `KitBuilding` (`Building`, dentro de la base) | pisar el botón | `Build` |
-| **Items** | Consumibles con tecla (pociones, habilidades) | — | `UseItem(id)` | `ItemUsed` |
+Cada bloque: `template/src/server/Kits/<Bloque>.luau` (servidor) y, cuando tiene UI, `template/src/client/Kits/<Bloque>.luau`. Lo que el cliente ve llega en `state.kit.<clave>` (tipos `<Bloque>State` en `Kits/Types.luau`) y los efectos por `KitFx` (`Bus.on("Kit:<Nombre>")`).
 
-Premios por ítem (`Types.Reward.item`, de productos, ruleta, códigos o misiones): `"Unit:<kind>[:variant]"`, `"Item:<id>"`, `"Upgrade:<id>"`, `"Garden:Skip"`, `"Merge:Skip"`, `"Stages:Revive"`, `"Zone:<id>"`.
+| Bloque (clave) | Para qué (hits) | Mundo (etiquetas y atributos) | Remotes y acciones | Señales |
+|---|---|---|---|---|
+| **Units** (`units`) | Todo lo coleccionable: mascotas, criaturas, peces, cultivos, dados | — | `LockUnit(uid, on)` | `UnitGot`, `RareFound`, `Discover` |
+| **Plots** (`plots`) | Base que paga $/s (robar, fusión, tycoon) | `KitPlot` (Model) con `KitSlot` (`Index`), `KitCollectPad`, `KitSpawn`, `KitBarrier`, `KitLockButton`, `KitSlotShop` y una parte "Sign" | `PlaceUnit(uid, slot?)`, `StoreUnit(uid)`, `BuySlot()`, `LockBase()`; cobro al pisar el pad | `Collect`, `Place`, `SlotBought`, `Lock` |
+| **Belt** (`belt`) | Cinta compartida (*Steal a Brainrot*) | `KitBelt` (la cinta corre por su eje X) | prompt "Buy" | `UnitBought` |
+| **Steal** (`steal`) | Robar a otra base y llevarla a la propia | prompt "Steal" en cada unidad colocada (atributo `Owner`; `BeingStolen` mientras se la llevan) | prompt, `PushPlayer(userId)` | `StealStart`, `Steal`, `Stolen`, `Push` |
+| **Rolls** (`rolls`) | Huevos, dados, gacha, puestos de compra en tandas | `KitRollStation` (`Roll`): cartel y prompt "Open" que abre la ventana | `RequestRoll(id, count, auto?)` | `Roll`, `Hatch` |
+| **Merge** (`merge`) | Fusión por nivel (*Chicken Farm*) o por variante (máquina dorada) | `KitMergeMachine` | `MergeUnits(kind, variant?)` | `Merge` |
+| **Sell** (`sell`) | Vender (*Fish It*, cultivo) | `KitSellPad` (vende todo al pisar) | `SellUnits(uids)`, `SellAll()` | `Sell` |
+| **Equip** (`equip`) | Mascotas que siguen y multiplican | — (atributo del jugador `Equipped`) | `EquipUnit(uid)`, `UnequipUnit(uid)`, `EquipBest()` | `Equip` |
+| **Stats** (`stats`) | "+1 por paso", fuerza, toques | `KitTreadmill` (`Stat`, `Gain`) | `TapStat(id)`, `SetStatCap(id, 0..1)`; pasos medidos en el servidor | `<Stat>Gained`, `Steps`, `Tap` |
+| **Zones** (`zones`) | Mundos y biomas con requisito | `KitGate` (`Zone`), `KitZone` (`Zone`, la región), `KitTeleport` (`Zone`) | `UnlockZone(id)`, prompt "Unlock" en la puerta | `ZoneUnlocked`, `Teleport` |
+| **Stages** (`stages`) | Escape y obby; corrida con resumen | `KitCheckpoint` (`Stage`), `KitWinPad`, `KitStageStart` | pisar; `Revive()`, `EndRun()` | `Stage`, `Win`, `RunStarted`, `RunEnded`, `Revive` |
+| **Fishing** (`fishing`) | Pesca | `KitWater` (`Pool`) | `CastLine()`, `ReelLine()`, `BuyRod(id)` | `Cast`, `Catch`, `RodBought` |
+| **Garden** (`garden`) | Cultivo con tienda que se repone | `KitGardenTile` (`Index`, dentro de la base) | `BuySeed(id, n)`, `SelectSeed(id)`, `PlantSeed(tile, id?)`, `HarvestPlant(tile)`, `BuyTile()`; prompt en cada parcela | `SeedBought`, `Plant`, `Harvest`, `TileBought` |
+| **Search** (`search`) | Pila con cosas escondidas (la aguja en el pajar) | `KitPile` (`Pile`), `KitDepositPad` | `DigPile()` (o el prompt), `BuyTool(id)`; depositar al pisar | `Dig`, `Found`, `Deposit`, `ToolBought` |
+| **Wild** (`wild`) | Capturar con requisito (dinos, huevos en nidos) | `KitWildSpawn` (`Pool` = número de `wild.spawns`, `Zone`) | prompt "Catch" (mantener; el servidor mide el tiempo) | `Capture` |
+| **Upgrades** (`upgrades`) | Mejoras por nivel; escalera de multiplicadores | `KitUpgradeStation` | `BuyUpgrade(id)` | `Upgrade` |
+| **Tycoon** (`tycoon`) | Edificios que se compran en la base | `KitTycoonButton` y `KitBuilding` (`Building`, dentro de la base) | pisar el botón | `Build` |
+| **Items** (`items`) | Consumibles con tecla (pociones, habilidades) | — | `UseItem(id)` | `ItemUsed` |
+
+Premios por ítem (`Types.Reward.item`, de productos, ruleta, códigos, misiones o zonas del índice): `"Unit:<unidad>[:<mutación>[:<tamaño>]]"`, `"Roll:<tirada>"`, `"Item:<objeto>"`, `"Upgrade:<mejora>"`, `"Zone:<zona>"`, `"Stat:<estadística>"` (suma `count`), `"Rod:<caña>"`, `"Tool:<herramienta>"`, `"Seed:<semilla>"`, `"Garden:Skip"`, `"Merge:Skip"`, `"Stages:Revive"`. `Lib/KitCheck.item` los revisa. Lo que llega por Robux nunca se pierde: si no hay dónde usarlo (nada creciendo, nada fusionándose, no está muerto), queda guardado para la próxima.
+
+Piezas comunes: `KitWorld` (etiquetas, prompts y pads con la distancia medida en el servidor, carteles, velocidad por factores), `Bonus` (efectos de las mejoras), `Gates` (zonas abiertas), `KitFx` (efectos al cliente), `UnitModel` (modelo de cada unidad).
 
 ## Las fórmulas, armadas
 

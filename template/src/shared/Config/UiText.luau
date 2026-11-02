@@ -174,4 +174,5 @@ return {
 	WILD_NEEDS = "%s · needs %s %s", -- "Rex · needs 500 Strength"
 	UPGRADES_SIGN = "Upgrades",
 	UPGRADE_LEVEL = "%s Lv. %d",
+	ITEM_FULL = "You can't carry more of these!",
 }

@@ -950,9 +950,14 @@ local function checkItems(ctx: Ctx)
 		id(ctx, path .. ".id", item.id)
 		text(ctx, path .. ".name", item.name)
 		text(ctx, path .. ".icon", item.icon)
-		if not ctx.boosts[item.boost] then
-			add(ctx, path .. ".boost", "impulso '" .. tostring(item.boost) .. "' no existe (BoostConfig.TIMED)")
+		local boost = item.boost
+		if boost ~= nil and not ctx.boosts[boost] then
+			add(ctx, path .. ".boost", "impulso '" .. boost .. "' no existe (BoostConfig.TIMED)")
 		end
+		if boost == nil and item.walkSpeed == nil then
+			add(ctx, path, "no hace nada: falta boost o walkSpeed")
+		end
+		optionalNumber(ctx, path .. ".walkSpeed", item.walkSpeed, 0.1)
 		number(ctx, path .. ".seconds", item.seconds, 1)
 	end
 end
