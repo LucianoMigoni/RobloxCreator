@@ -258,6 +258,17 @@ export type GardenConfig = {
 	mutationChance: number?,
 }
 
+-- Una planta en una parcela y lo que ve el cliente del bloque Garden (state.kit.garden).
+export type Plant = { seed: string, plantedAt: number, readyAt: number }
+export type GardenState = {
+	seeds: { [string]: number }, -- semillas que tiene
+	plants: { [string]: Plant }, -- parcela ("1", "2"...) → planta
+	tiles: number, -- parcelas abiertas
+	maxTiles: number,
+	nextTilePrice: number?,
+	shop: { endsAt: number, stock: { [string]: number }, bought: { [string]: number } },
+}
+
 export type Pile = {
 	id: string,
 	zone: string?,

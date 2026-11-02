@@ -164,4 +164,8 @@ return {
 	WIN_SIGN = "WIN!",
 	START_SIGN = "START",
 	REVIVED = "Extra life!",
+	PROMPT_PLANT = "Plant",
+	PROMPT_HARVEST = "Harvest",
+	GROWING = "Growing...",
+	GARDEN_SKIPPED = "Plants grown!",
 }
