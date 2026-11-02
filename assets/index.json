@@ -1673,6 +1673,39 @@
       "notes": "27 imágenes de tienda 512x512 para los Game Passes y Developer Products de ShopConfig (y los pases x3/x8 de las recetas). Cuál va con cuál, en manifest.json."
     },
     {
+      "id": "loading",
+      "path": "ui/loading",
+      "type": "pack",
+      "packType": "image",
+      "count": 1,
+      "tags": {
+        "style": [
+          "3d",
+          "glossy",
+          "hit",
+          "cartoon"
+        ],
+        "genre": [
+          "any",
+          "simulation",
+          "pets"
+        ],
+        "theme": [
+          "loading",
+          "background",
+          "pets",
+          "world"
+        ]
+      },
+      "robloxAssetId": null,
+      "source": "ai-generated",
+      "sourceUrl": null,
+      "license": "propio (IA sobre arte propio, API de OpenAI)",
+      "commercialUse": true,
+      "author": "RobloxCreator",
+      "notes": "Fondo 1920x1080 de la pantalla de carga de la plantilla: mundo de hit con las mascotas a los costados y el centro libre para el nombre."
+    },
+    {
       "id": "icons-flat",
       "path": "ui/icons-flat",
       "type": "pack",

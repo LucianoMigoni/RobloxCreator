@@ -1,0 +1,12 @@
+{
+  "_receta": "Fondo de la pantalla de carga (template/src/first): un mundo de hit panorámico con las mascotas a los costados y el centro libre para el nombre del juego. Sin textos (el nombre va en un TextLabel y se traduce). Referencia: la hoja de mascotas (assets/ui/pet-icons) para que salgan iguales.",
+  "_valores": "IA (en inglés): world_desc. Cada juego cambia el mundo y las mascotas por las suyas.",
+  "_defaults": {
+    "world_desc": "rolling bright green hills with blocky low-poly trees, a sparkling blue lake, floating islands with waterfalls in the distance, giant glowing eggs on stone pedestals, and gold coins and blue gems scattered on the grass"
+  },
+  "kind": "thumbnail",
+  "ia": {
+    "aspect": "16:9",
+    "prompt": "A wide panoramic view of a sunny, very saturated Roblox world: {{world_desc}}. The cute cube-shaped baby pets from the reference play happily on the left third and the right third of the image, facing the viewer with big shiny eyes. The middle of the image is open bright blue sky with puffy clouds and distant scenery, calm and simple, so a big title can go there. No people and no avatars."
+  }
+}

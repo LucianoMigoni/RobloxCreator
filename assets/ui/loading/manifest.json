@@ -1,0 +1,21 @@
+{
+ "pack": "loading",
+ "kind": "background",
+ "count": 1,
+ "source": "GPT Image 2.5 por la API de OpenAI (tools/imagegen.py, receta skills/_shared/vitrina/recetas/pantalla-carga.json, calidad high) con la hoja de mascotas propia de referencia",
+ "license": "propio (generado con IA a partir de arte propio)",
+ "author": "RobloxCreator",
+ "created": "2026-11-02",
+ "notes": "Fondo de la pantalla de carga de la plantilla (template/src/first): subir con tools/roblox_upload.py y poner el rbxassetid en LoadingConfig.IMAGE. Cada juego hace el suyo con la misma receta y sus unidades.",
+ "items": [
+  {
+   "name": "loading-bg",
+   "file": "loading-bg.jpg",
+   "size": [
+    1920,
+    1080
+   ],
+   "sha256_original": "4053cba5260ada1417914f65a1ea5c42684bed0dc04b96ff74591c63fdd27f54"
+  }
+ ]
+}
