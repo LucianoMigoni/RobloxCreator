@@ -332,16 +332,29 @@ function KitUi.buyPass(key: string)
 	Bus.call("BuyPass", key)
 end
 
+-- Pone `obj` (una calcomanía, un globito) por encima de sus hermanos: él en `z` y lo de adentro arriba.
+function KitUi.raise(obj: GuiObject, z: number)
+	obj.ZIndex = z
+	for _, child in obj:GetDescendants() do
+		if child:IsA("GuiObject") then
+			child.ZIndex = z + 1
+		end
+	end
+end
+
 -- Ventana de lista ------------------------------------------------------------------------------------
 
-local function rowButton(frame: Frame, spec: RowButton, x: number, width: number): GuiButton
+type BuiltButton = { button: GuiButton, spec: RowButton, stop: Juice.Stop? }
+type BuiltRow = { frame: Frame, title: TextLabel, detail: TextLabel?, bar: Frame?, buttons: { BuiltButton } }
+
+local function rowButton(frame: Frame, built: BuiltButton, x: number, width: number)
+	local spec = built.spec
 	local props = {
 		AnchorPoint = Vector2.new(1, 0.5),
 		Position = UDim2.fromScale(x, 0.5),
 		Size = UDim2.fromScale(width, 0.7),
 		ZIndex = 25,
 	}
-	local button: GuiButton
 	local robux = spec.robux
 	if robux then
 		local priced = UIKit.priceButton(frame, "Robux", nil, props, spec.variant)
@@ -350,7 +363,7 @@ local function rowButton(frame: Frame, spec: RowButton, x: number, width: number
 				UIKit.setPrice(priced, price)
 			end
 		end)
-		button = priced
+		built.button = priced
 	else
 		local plain = UIKit.button({
 			name = "Button",
@@ -363,16 +376,36 @@ local function rowButton(frame: Frame, spec: RowButton, x: number, width: number
 		for key, value in props do
 			(plain :: any)[key] = value
 		end
-		button = plain
+		built.button = plain
 	end
-	button.Activated:Connect(function()
-		spec.onClick()
+	-- Lee el botón vigente al tocar: las filas se actualizan en el lugar sin volver a conectar.
+	built.button.Activated:Connect(function()
+		built.spec.onClick()
 	end)
-	return button
 end
 
--- Ventana con una lista de filas, para las tiendas de los bloques. `setRows` la rehace entera (son
--- pocas filas y cambian juntas con el estado).
+local function setPulse(built: BuiltButton)
+	local want = built.spec.pulse == true
+	if want and not built.stop then
+		built.stop = Juice.pulse(built.button, 0.06)
+	elseif not want and built.stop then
+		(built.stop :: Juice.Stop)()
+		built.stop = nil
+	end
+end
+
+-- Forma de una fila: si no cambia, la fila se actualiza en el lugar (no se rehace bajo el dedo).
+local function shapeOf(row: Row): string
+	local parts = { row.id, tostring(row.level ~= nil), tostring(row.detail ~= nil), row.tag or "", row.icon or "" }
+	for i = 1, math.min(#row.buttons, 2) do
+		local b = row.buttons[i]
+		table.insert(parts, if b.robux then "R" .. b.robux else "B" .. (b.icon or ""))
+	end
+	return table.concat(parts, "|")
+end
+
+-- Ventana con una lista de filas, para las tiendas de los bloques. `setRows` actualiza en el lugar lo
+-- que cambió (textos, colores, barras, botones) y solo rehace la lista si cambian las filas.
 function KitUi.listWindow(props: ListProps): ListWindow
 	local h = hud
 	assert(h, "KitUi.listWindow antes de KitUi.start")
@@ -384,7 +417,8 @@ function KitUi.listWindow(props: ListProps): ListWindow
 	}, 34)
 	local list = UIKit.list(body, "List")
 	list.ZIndex = 21
-	local stops: { Juice.Stop } = {}
+	local built: { BuiltRow } = {}
+	local shapes: { string } = {}
 
 	local function setNote(text: string?)
 		note.Visible = text ~= nil
@@ -393,70 +427,119 @@ function KitUi.listWindow(props: ListProps): ListWindow
 		list.Size = UDim2.fromScale(1, if text then 0.89 else 1)
 	end
 
-	local function setRows(rows: { Row })
-		for _, stop in stops do
-			stop()
+	local function update(parts: BuiltRow, row: Row)
+		UIKit.recolor(parts.frame, row.variant or "Info")
+		parts.title.Text = row.title
+		parts.title.TextColor3 = row.titleColor or UIKit.TEXT_COLOR
+		local level = row.level
+		local bar = parts.bar
+		if level and bar then
+			UIKit.setProgress(bar, if level.max > 0 then level.value / level.max else 1, row.detail or (level.value .. "/" .. level.max))
+		elseif parts.detail then
+			parts.detail.Text = row.detail or ""
 		end
-		table.clear(stops)
-		for _, child in list:GetChildren() do
-			if child:IsA("Frame") then
-				child:Destroy()
+		for i, b in parts.buttons do
+			local spec = row.buttons[i]
+			if spec then
+				b.spec = spec
+				if not spec.robux then
+					UIKit.setText(b.button, spec.text or "")
+					UIKit.recolor(b.button, spec.variant or "Accept")
+					local icon = b.button:FindFirstChild("Icon")
+					if icon and spec.icon then
+						UIKit.setIcon(icon, spec.icon)
+					end
+				end
+				setPulse(b)
 			end
 		end
-		for order, row in rows do
-			local frame = UIKit.new("Frame", { Name = row.id, LayoutOrder = order, Size = UDim2.new(0.96, 0, 0, 90), ZIndex = 22 }, list) :: Frame
-			UIKit.fitHeight(frame, 7.4, 64) -- 64 px: el botón (70 % del alto) llega a 44 en el teléfono
-			UIKit.style(frame, row.variant or "Info", 0.2, 0.04)
-			UIKit.icon(frame, row.icon, {
-				AnchorPoint = Vector2.new(0, 0.5),
-				Position = UDim2.fromScale(0.012, 0.5),
-				Size = UDim2.fromScale(0.86, 0.86),
-				SizeConstraint = Enum.SizeConstraint.RelativeYY,
+	end
+
+	local function build(row: Row, order: number): BuiltRow
+		local frame = UIKit.new("Frame", { Name = row.id, LayoutOrder = order, Size = UDim2.new(0.96, 0, 0, 90), ZIndex = 22 }, list) :: Frame
+		UIKit.fitHeight(frame, 7.4, 64) -- 64 px: el botón (70 % del alto) llega a 44 en el teléfono
+		UIKit.style(frame, row.variant or "Info", 0.2, 0.04)
+		UIKit.icon(frame, row.icon, {
+			AnchorPoint = Vector2.new(0, 0.5),
+			Position = UDim2.fromScale(0.012, 0.5),
+			Size = UDim2.fromScale(0.86, 0.86),
+			SizeConstraint = Enum.SizeConstraint.RelativeYY,
+			ZIndex = 24,
+		})
+		local count = math.min(#row.buttons, 2)
+		local width = if count == 2 then 0.2 else 0.22
+		local textWidth = 0.97 - count * (width + 0.015) - 0.14
+		local title = UIKit.label(frame, "Title", row.title, {
+			Position = UDim2.fromScale(0.14, 0.07),
+			Size = UDim2.fromScale(textWidth, 0.44),
+			TextXAlignment = Enum.TextXAlignment.Left,
+			ZIndex = 24,
+		}, 34, UIKit.TitleFont)
+		local parts: BuiltRow = { frame = frame, title = title, buttons = {} }
+		if row.level then
+			parts.bar = UIKit.progressBar(frame, "Level", {
+				Position = UDim2.fromScale(0.14, 0.56),
+				Size = UDim2.fromScale(textWidth, 0.32),
 				ZIndex = 24,
-			})
-			local count = math.min(#row.buttons, 2)
-			local width = if count == 2 then 0.2 else 0.22
-			local textWidth = 0.97 - count * (width + 0.015) - 0.14
-			local title = UIKit.label(frame, "Title", row.title, {
-				Position = UDim2.fromScale(0.14, 0.07),
-				Size = UDim2.fromScale(textWidth, 0.44),
+			}, "Premium")
+		elseif row.detail then
+			parts.detail = UIKit.label(frame, "Detail", row.detail, {
+				Position = UDim2.fromScale(0.14, 0.53),
+				Size = UDim2.fromScale(textWidth, 0.38),
 				TextXAlignment = Enum.TextXAlignment.Left,
 				ZIndex = 24,
-			}, 34, UIKit.TitleFont)
-			if row.titleColor then
-				title.TextColor3 = row.titleColor
-			end
-			local level = row.level
-			if level then
-				local bar = UIKit.progressBar(frame, "Level", {
-					Position = UDim2.fromScale(0.14, 0.56),
-					Size = UDim2.fromScale(textWidth, 0.32),
-					ZIndex = 24,
-				}, "Premium")
-				UIKit.setProgress(bar, if level.max > 0 then level.value / level.max else 1, row.detail or (level.value .. "/" .. level.max))
-			elseif row.detail then
-				UIKit.label(frame, "Detail", row.detail, {
-					Position = UDim2.fromScale(0.14, 0.53),
-					Size = UDim2.fromScale(textWidth, 0.38),
-					TextXAlignment = Enum.TextXAlignment.Left,
-					ZIndex = 24,
-				}, 26)
-			end
-			if row.tag then
-				local ribbon = UIKit.ribbon(frame, row.tag, "Close")
-				ribbon.Position = UDim2.fromScale(0.06, 0.08)
-				ribbon.Size = UDim2.fromScale(0.13, 0.42)
-			end
-			local x = 0.985
-			for i = 1, count do
-				local spec = row.buttons[i]
-				local button = rowButton(frame, spec, x, width)
-				if spec.pulse then
-					table.insert(stops, Juice.pulse(button, 0.06))
+			}, 26)
+		end
+		if row.tag then
+			local ribbon = UIKit.ribbon(frame, row.tag, "Close")
+			ribbon.Position = UDim2.fromScale(0.06, 0.08)
+			ribbon.Size = UDim2.fromScale(0.13, 0.42)
+			KitUi.raise(ribbon, 27)
+		end
+		local x = 0.985
+		for i = 1, count do
+			local b: BuiltButton = { button = frame, spec = row.buttons[i] } :: any
+			rowButton(frame, b, x, width)
+			table.insert(parts.buttons, b)
+			x -= width + 0.015
+		end
+		update(parts, row)
+		return parts
+	end
+
+	local function setRows(rows: { Row })
+		local newShapes: { string } = {}
+		for i, row in rows do
+			newShapes[i] = shapeOf(row)
+		end
+		local same = #newShapes == #shapes
+		if same then
+			for i, shape in newShapes do
+				if shapes[i] ~= shape then
+					same = false
+					break
 				end
-				x -= width + 0.015
 			end
 		end
+		if same then
+			for i, row in rows do
+				update(built[i], row)
+			end
+			return
+		end
+		for _, parts in built do
+			for _, b in parts.buttons do
+				if b.stop then
+					b.stop()
+				end
+			end
+			parts.frame:Destroy()
+		end
+		table.clear(built)
+		for order, row in rows do
+			table.insert(built, build(row, order))
+		end
+		shapes = newShapes
 	end
 
 	return {

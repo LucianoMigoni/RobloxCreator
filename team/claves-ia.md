@@ -16,6 +16,8 @@ Sirven para las imágenes con IA: íconos, miniaturas y anuncios (`tools/imagege
 1. En https://aistudio.google.com/apikey, tocá **Create API key**, elegí o creá un proyecto y copiala. Empieza con `AIza`.
 2. Activá la facturación del proyecto cuando AI Studio lo pida (el modelo de imágenes la necesita).
 
+Si la facturación falla con **OR_BACR2_59** ("Billing setup can't be completed"): no hay arreglo oficial publicado y en los foros de Google no se resuelve cambiando de navegador, tarjeta ni cuenta. Como Gemini es opcional, se deja y se sigue solo con OpenAI. Si se quiere insistir: soporte de facturación de Google Cloud (pasó el 2026-11-02 con la cuenta de Leonel).
+
 ## 3. En Claude (nube)
 
 1. En la app de Claude, con la sesión abierta, tocá el nombre del entorno de la nube en la barra del título y después **Edit**.

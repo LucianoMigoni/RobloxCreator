@@ -244,4 +244,34 @@ return {
 	UNLOCK_FIRST = "Unlock it first!",
 	BEING_STOLEN = "Being stolen!",
 	NEEDS = "Needs %s %s", -- "Needs 500 Strength"
+
+	-- Armador: tiradas (huevos, dados, cofres)
+	OPEN_COUNT = "Open x%d",
+	FREE_IN = "Free in %s",
+	AUTO = "Auto",
+	AUTO_ON = "Auto: ON",
+	MORE_RESULTS = "+%d more",
+	LUCK_NOW = "Luck %s", -- "Luck x2"
+	MUTATIONS = "Mutations: %s",
+	TAP_TO_SKIP = "Tap to skip",
+
+	-- Armador: estadísticas, zonas y etapas
+	TAP = "TAP!",
+	GAIN = "+%s",
+	SPEED_CAP = "%s (%d%%)", -- "1.2K (50%)": tope de velocidad elegido
+	WORLDS = "Worlds",
+	ZONE_OPEN = "Unlocked",
+	ZONE_STAT_PROGRESS = "%s / %s %s", -- "1.2M / 3.7M Speed"
+	ZONE_REBIRTH_PROGRESS = "%d / %d Rebirths",
+	STAGE_NOW = "Stage %d/%d",
+	STAGE_REACHED = "Stage %d!",
+	YOU_WIN = "YOU WIN!",
+	RUN_GO = "GO GO GO!",
+	RUN_OVER = "RUN OVER!",
+	BEST_STAGE = "Best: Stage %d",
+	REVIVE_TITLE = "Revive?",
+	REVIVE_INFO = "You fell at Stage %d!",
+	REVIVE_FREE = "Revive (%d free)",
+	REVIVE = "Revive",
+	END_RUN = "End Run",
 }

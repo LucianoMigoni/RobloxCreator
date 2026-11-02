@@ -16,7 +16,11 @@ local Base = require("./Base")
 local Followers = require("./Followers")
 local Inventory = require("./Inventory")
 local KitUi = require("./KitUi")
+local Rolls = require("./Rolls")
+local Stages = require("./Stages")
+local Stats = require("./Stats")
 local Units = require("./Units")
+local Zones = require("./Zones")
 
 type Block = { key: string, start: (HudController.Hud) -> () }
 
@@ -26,8 +30,12 @@ local Kits = {}
 local BLOCKS: { Block } = {
 	{ key = "units", start = Units.start },
 	{ key = "units", start = Inventory.start },
+	{ key = "stats", start = Stats.start },
+	{ key = "zones", start = Zones.start },
 	{ key = "plots", start = Base.start },
 	{ key = "equip", start = Followers.start },
+	{ key = "rolls", start = Rolls.start },
+	{ key = "stages", start = Stages.start },
 }
 
 function Kits.start(hud: HudController.Hud)
