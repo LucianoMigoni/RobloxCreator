@@ -1,0 +1,21 @@
+{
+  "_que_es": "Huevos por rareza, hoja G (2026-11-02), para las estaciones de tiradas (look egg_<rareza>). Base: node tools/render3d/icons.cjs render egg_common egg_uncommon egg_rare egg_epic egg_legendary egg_mythic egg_secret egg_halloween egg_winter --out <carpeta>; después como la hoja E.",
+  "kind": "iconset",
+  "grid": "3x3",
+  "names": [
+    "egg_common",
+    "egg_uncommon",
+    "egg_rare",
+    "egg_epic",
+    "egg_legendary",
+    "egg_mythic",
+    "egg_secret",
+    "egg_halloween",
+    "egg_winter"
+  ],
+  "ia": {
+    "aspect": "1:1",
+    "mode": "redraw",
+    "prompt": "Keep the same 9 eggs, same size and same upright angle, in this order: 1) common: off-white egg with soft light gray spots, 2) uncommon: mint green egg with darker green spots, 3) rare: sky blue egg with deep blue spots, 4) epic: lavender egg with purple spots and a soft purple glow, 5) legendary: golden yellow egg with orange spots and a warm golden glow, 6) mythic: pink egg with hot pink spots and a pink glow, 7) secret: black egg covered in glowing rainbow spots (red, yellow, green, cyan, purple) with a faint rainbow aura, 8) halloween: orange pumpkin-colored egg with dark purple spots, 9) winter: icy white-blue egg with pale blue frosty spots and tiny snowflake sparkles. Each egg is glossy with a bright white highlight on its upper left."
+  }
+}

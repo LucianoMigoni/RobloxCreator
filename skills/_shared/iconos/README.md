@@ -6,15 +6,15 @@ Los hits usan dos familias de íconos (`skills/roblox-ui-designer/references/hud
    - 3D de juguete con sombreado de dibujo, colores muy saturados y brillos blancos duros;
    - contorno azul muy oscuro y grueso;
    - formas gordas que se leen a 48 px.
-   - Están en `assets/ui/hud-icons/` (36, del 2026-10-29).
+   - Están en `assets/ui/hud-icons/`: 63. Los primeros 36 son del 2026-10-29 (Higgsfield); los 27 del armador, del 2026-11-02 (API de OpenAI con `tools/imagegen.py`).
 2. **Íconos planos** (carrito, libro, engranaje, calendario) para botones chicos y la barra de Roblox.
    - Están en `assets/ui/icons-flat/` y los hace `tools/flat_icons.py` desde Material Symbols.
 
 | Archivo | Qué es |
 |---|---|
-| `hoja.jpg` | Los 36 de `hud-icons` |
+| `hoja.jpg` | Los 63 de `hud-icons` |
 | `referencia-estilo.png` | La hoja A de `hud-icons`. Se adjunta para que un ícono nuevo salga con el mismo estilo |
-| `recetas/hud-*.json` | Las 4 hojas de `hud-icons` (modo `redraw`), con los nombres para cortar |
+| `recetas/hud-*.json` | Las 7 hojas de `hud-icons` (modo `redraw`), con los nombres para cortar: A-D del núcleo, E y F del armador y G con los huevos por rareza |
 | `recetas/*.json` (el resto) | Las hojas de la primera tanda (`hit-icons`). Siguen sirviendo como lista de objetos |
 
 ## Por qué así
@@ -58,6 +58,8 @@ Los hits usan dos familias de íconos (`skills/roblox-ui-designer/references/hud
    4. Correr `python assets/catalog.py validate`.
 
 ## Lo que se aprendió
+
+- **Con la API de OpenAI (2026-11-02):** cada hoja de 9 en calidad alta (1536 px) costó USD 0,086 y salió al nivel de las primeras. Si un ícono sale flojo, se regenera la hoja y se elige el mejor de cada una: la mano de `tap` salió bien recién al pedir la anatomía exacta ("exactly one raised finger, five fingers in total").
 
 - **El modelo:** GPT Image 2.5 respeta la base y devuelve fondo transparente. Nano Banana Pro sirve con fondo blanco: `iconsheet.py` lo saca desde los bordes.
 - **El tamaño:**

@@ -1,0 +1,21 @@
+{
+  "_que_es": "Armador, hoja F (2026-11-02): los del núcleo y la tienda que no tenían imagen. Base: node tools/render3d/icons.cjs render check spin codes luck money_boost friends search notifications egg_gold --out <carpeta>; después como la hoja E.",
+  "kind": "iconset",
+  "grid": "3x3",
+  "names": [
+    "check",
+    "spin",
+    "codes",
+    "luck",
+    "money_boost",
+    "friends",
+    "search",
+    "notifications",
+    "egg_gold"
+  ],
+  "ia": {
+    "aspect": "1:1",
+    "mode": "redraw",
+    "prompt": "Keep the same 9 objects, in this order: 1) check: a glossy green rounded square button with a big white check mark, 2) spin: a prize wheel with eight bright colored slices (pink, orange, yellow, green, cyan, blue, purple, red), a golden rim, a golden center pin and a red pointer on top, on a small wooden stand, 3) codes: a purple ticket with notched edges and a golden star in the middle, 4) luck: a bright green four-leaf clover with heart-shaped leaves and a short curved stem, 5) money_boost: a fat golden money bag tied with a brown string, with a green dollar sign on the front, 6) friends: two smiling round friend heads side by side, one blue and one green, with simple happy faces, 7) search: a golden magnifying glass with a light blue glass lens and a brown wooden handle, 8) notifications: a golden bell with a little red dot on its top right, 9) egg_gold: a shiny solid gold egg with bright metallic highlights."
+  }
+}

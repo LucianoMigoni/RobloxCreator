@@ -1,0 +1,21 @@
+{
+  "_que_es": "Armador, hoja E (2026-11-02): los de la UI de los bloques. Base: node tools/render3d/icons.cjs render merge tap steps pad seed base map battle shield --out <carpeta>; python tools/iconsheet.py compose <los 9 png en orden> --out base.png; python tools/imagegen.py generate skills/_shared/iconos/recetas/hud-e-armador.json --ref base.png --quality high --n 1 --out <carpeta>.",
+  "kind": "iconset",
+  "grid": "3x3",
+  "names": [
+    "merge",
+    "tap",
+    "steps",
+    "pad",
+    "seed",
+    "base",
+    "map",
+    "battle",
+    "shield"
+  ],
+  "ia": {
+    "aspect": "1:1",
+    "mode": "redraw",
+    "prompt": "Keep the same 9 objects, in this order: 1) merge: a thick glossy green arrow pointing up, with a small blue ball at its lower left and a small pink ball at its lower right, and a bigger shiny golden ball with a white sparkle at its tip, 2) tap: a cartoon yellow hand seen from the back, with only the index finger straight up; the middle, ring and little fingers folded down into the palm and the thumb folded across them (exactly one raised finger, five fingers in total), a white sleeve cuff, and three short red impact lines above the fingertip, 3) steps: two bright blue sneaker footprints walking diagonally up and to the right, each a rounded sole with five round toes, 4) pad: a round green arcade floor button on a dark gray base with a gold rim, and a shiny gold coin hovering above it, 5) seed: a little mound of brown soil with a light brown seed peeking out and a green sprout with two rounded leaves, 6) base: a small cozy house with cream walls, a red roof, a brown door and two light blue windows, 7) map: a folded treasure map with green land, a blue lake, a dotted red path and a red X, 8) battle: a cartoon sword with a silver blade, a golden crossguard and a blue grip, pointing up to the right, 9) shield: a royal blue shield with a thick golden border and a golden star in the center."
+  }
+}

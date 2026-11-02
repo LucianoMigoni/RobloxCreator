@@ -990,6 +990,81 @@ export const MODELS = {
     ];
     return { object: group(...parts), yaw: 26, pitch: 14, fill: 0.84 };
   },
+  async merge() {
+    // Fusionar: dos esferas (azul y rosa) que suben por una flecha verde gorda hacia una dorada más grande.
+    const up = mesh(extrude(arrow(1.5, 0.42, 0.98, 0.62), 0.3, 0.1), [plastic(0x34d058), plastic(0x1f9a3c)], [0, 0.02, -0.18], [0, 0, Math.PI / 2]);
+    const parts = [
+      up,
+      mesh(new THREE.SphereGeometry(0.34, 36, 24), plastic(0x3a8dff, { glow: 0.06 }), [-0.62, -0.66, 0.12]),
+      mesh(new THREE.SphereGeometry(0.34, 36, 24), plastic(0xff5ca8, { glow: 0.06 }), [0.62, -0.66, 0.12]),
+      mesh(new THREE.SphereGeometry(0.48, 40, 28), gold(), [0, 0.86, 0.1]),
+      mesh(extrude(star(4, 0.22, 0.07), 0.04, 0.02), plastic(0xffffff, { glow: 0.3 }), [0.3, 1.12, 0.5], [0, 0, 0.2]),
+    ];
+    return { object: group(...parts), yaw: 8, pitch: 8, fill: 0.86 };
+  },
+  async tap() {
+    // Tocar: mano amarilla con el índice para arriba, puño blanco y tres rayitas de impacto en la punta.
+    const skin = plastic(0xffc22e);
+    const cap = (r, len) => new THREE.CapsuleGeometry(r, len, 12, 28);
+    const parts = [
+      mesh(rbox(0.86, 0.78, 0.5, 0.22), skin, [0.02, -0.28, 0]),
+      mesh(cap(0.17, 0.72), skin, [-0.2, 0.42, 0.04]),
+      mesh(cap(0.15, 0.2), skin, [0.08, 0.08, 0.22], [0.35, 0, 0]),
+      mesh(cap(0.15, 0.18), skin, [0.3, 0.04, 0.2], [0.35, 0, 0]),
+      mesh(cap(0.14, 0.14), skin, [0.48, -0.04, 0.16], [0.35, 0, 0]),
+      mesh(cap(0.15, 0.36), skin, [-0.5, -0.24, 0.12], [0, 0, 0.9]),
+      mesh(rbox(0.96, 0.32, 0.6, 0.12), plastic(0xf5f6fa, { roughness: 0.4 }), [0.02, -0.78, 0]),
+    ];
+    for (let i = 0; i < 3; i++) {
+      const a = Math.PI / 2 + (i - 1) * 0.62;
+      parts.push(mesh(rbox(0.09, 0.3, 0.09, 0.04), plastic(0xff4b4b, { glow: 0.1 }), [-0.2 + Math.cos(a) * 0.62, 0.86 + Math.sin(a) * 0.5, 0.05], [0, 0, a - Math.PI / 2]));
+    }
+    return { object: group(...parts), yaw: 12, pitch: 6, fill: 0.84 };
+  },
+  async steps() {
+    // Pasos: dos huellas de zapatilla en diagonal, azules con los dedos redondos.
+    const sole = new THREE.Shape();
+    sole.absellipse(0, 0, 0.3, 0.52, 0, Math.PI * 2, false, 0);
+    const foot = (x, y, rot, color) => {
+      const mat = plastic(color);
+      const g = group(
+        mesh(extrude(sole, 0.14, 0.06), mat, [0, -0.08, 0]),
+        mesh(new THREE.CylinderGeometry(0.2, 0.22, 0.16, 28), mat, [0, -0.78, 0], [Math.PI / 2, 0, 0], [1.1, 1, 0.8]),
+      );
+      const toes = [[-0.2, 0.62, 0.11], [-0.04, 0.7, 0.1], [0.12, 0.68, 0.09], [0.25, 0.58, 0.08], [0.33, 0.44, 0.07]];
+      for (const [tx, ty, r] of toes) g.add(mesh(new THREE.SphereGeometry(r, 20, 14), mat, [tx, ty, 0], [0, 0, 0], [1, 1, 0.7]));
+      g.position.set(x, y, 0);
+      g.rotation.z = rot;
+      return g;
+    };
+    return { object: group(foot(-0.42, -0.32, 0.18, 0x3a8dff), foot(0.42, 0.34, 0.18, 0x2f6fe0)), yaw: 4, pitch: 22, fill: 0.84 };
+  },
+  async pad() {
+    // Puesto de compra en el piso: base redonda oscura, botón verde brillante y "$" blanco encima.
+    const parts = [
+      mesh(new THREE.CylinderGeometry(1.0, 1.08, 0.24, 64), plastic(0x3b4154), [0, -0.3, 0]),
+      mesh(new THREE.CylinderGeometry(0.86, 0.92, 0.22, 64), plastic(0x34d058, { glow: 0.08 }), [0, -0.08, 0]),
+      mesh(new THREE.TorusGeometry(0.95, 0.06, 16, 64), plastic(0xffd21f), [0, -0.19, 0], [Math.PI / 2, 0, 0]),
+      mesh(text('$', 0.8, 0.16, 0.03), plastic(0xffffff, { glow: 0.25 }), [0, 0.3, 0.08], [-0.35, 0, 0]),
+    ];
+    return { object: group(...parts), yaw: 0, pitch: 26, fill: 0.86 };
+  },
+  async seed() {
+    // Semilla: montoncito de tierra, la semilla marrón asomada y un brote con dos hojas.
+    const leaf = new THREE.Shape();
+    leaf.moveTo(0, 0);
+    leaf.bezierCurveTo(0.22, 0.12, 0.5, 0.36, 0.58, 0.62);
+    leaf.bezierCurveTo(0.3, 0.6, 0.06, 0.4, 0, 0);
+    const green = plastic(0x3ad152), dark = plastic(0x23963a);
+    const parts = [
+      mesh(new THREE.SphereGeometry(0.9, 48, 24, 0, Math.PI * 2, 0, Math.PI / 2), plastic(0x8a5a2b, { roughness: 0.7 }), [0, -0.72, 0], [0, 0, 0], [1.1, 0.5, 0.9]),
+      mesh(new THREE.SphereGeometry(0.3, 32, 20), plastic(0xc98b4a), [0.32, -0.42, 0.34], [0, 0, 0.5], [0.8, 1.15, 0.8]),
+      mesh(tube([[0, -0.4, 0], [0.02, 0.0, 0], [-0.04, 0.42, 0]], 0.07), dark),
+      mesh(extrude(leaf, 0.08, 0.04), green, [0.28, 0.62, 0], [0, 0, -0.2], 1.1),
+      mesh(extrude(leaf, 0.08, 0.04), green, [-0.32, 0.5, 0], [0, Math.PI, -0.1], 0.95),
+    ];
+    return { object: group(...parts), yaw: 12, pitch: 12, fill: 0.84 };
+  },
   async plus() { return { object: badge(0x2fcf4a, plus(1, 0.36), [0, 0, 0], 1.4), yaw: 10, pitch: 8, fill: 0.8 }; },
   async check() { return { object: badge(0x2fcf4a, check(), [0, 0, 0], 1.4), yaw: 10, pitch: 8, fill: 0.8 }; },
   async close() { return { object: badge(0xff3b4f, cross(1, 0.36), [0, 0, 0], 1.4), yaw: 10, pitch: 8, fill: 0.8 }; },

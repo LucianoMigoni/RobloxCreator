@@ -1,8 +1,8 @@
 {
  "pack": "hud-icons",
  "kind": "icon",
- "count": 36,
- "source": "Base 3D propia (tools/render3d/icons.cjs) redibujada con IA: GPT Image 2.5 en Higgsfield (plan Plus), calidad high, fondo transparente; cortados con tools/iconsheet.py",
+ "count": 63,
+ "source": "Base 3D propia (tools/render3d/icons.cjs) redibujada con IA: GPT Image 2.5, calidad high, fondo transparente (hojas A-D en Higgsfield Plus el 2026-10-29; E-G con la API de OpenAI y tools/imagegen.py el 2026-11-02); cortados con tools/iconsheet.py",
  "license": "propio (generado con IA a partir de renders propios)",
  "author": "RobloxCreator",
  "created": "2026-10-29",
@@ -41,6 +41,42 @@
    "resolution": "1k",
    "sha256": "c9208b504b7e6f4c160729f2928de8b55e07caccda0ef2c0d2e233926fa24494",
    "grid": "3x3"
+  },
+  {
+   "set": "E",
+   "group": "Armador: UI de los bloques",
+   "sheet": "hud-e-armador-20261102-204239-1.png",
+   "resolution": "1536 (API de OpenAI, gpt-image-2.5-flare, high)",
+   "sha256": "59eef356cc04e5c1da1531a3c2f8354f089d3265a0c36950875cfd6586e90a83",
+   "grid": "3x3",
+   "created": "2026-11-02"
+  },
+  {
+   "set": "E2",
+   "group": "Armador: UI de los bloques (mano de tap)",
+   "sheet": "hud-e-armador-20261102-204407-1.png",
+   "resolution": "1536 (API de OpenAI, gpt-image-2.5-flare, high)",
+   "sha256": "fe9c0a3121ff0fa4bf271bc396a2e713cc45f3f2b9eb6fe7d44500da6e93133e",
+   "grid": "3x3",
+   "created": "2026-11-02"
+  },
+  {
+   "set": "F",
+   "group": "Núcleo y tienda sin imagen",
+   "sheet": "hud-f-armador-20261102-204239-1.png",
+   "resolution": "1536 (API de OpenAI, gpt-image-2.5-flare, high)",
+   "sha256": "617f1f5cf59b1ca6681845f8ab727d2d230c71d613c59b6cbffb6da46d493702",
+   "grid": "3x3",
+   "created": "2026-11-02"
+  },
+  {
+   "set": "G",
+   "group": "Huevos por rareza",
+   "sheet": "hud-g-huevos-20261102-204237-1.png",
+   "resolution": "1536 (API de OpenAI, gpt-image-2.5-flare, high)",
+   "sha256": "da236534a024a902f3183a76fcafc3f00789e661faed2a5cbb8ff19446834380",
+   "grid": "3x3",
+   "created": "2026-11-02"
   }
  ],
  "items": [
@@ -259,6 +295,168 @@
    "file": "heart.png",
    "set": "D",
    "group": "Géneros y eventos"
+  },
+  {
+   "name": "merge",
+   "file": "merge.png",
+   "set": "E",
+   "group": "Armador: UI de los bloques"
+  },
+  {
+   "name": "steps",
+   "file": "steps.png",
+   "set": "E",
+   "group": "Armador: UI de los bloques"
+  },
+  {
+   "name": "pad",
+   "file": "pad.png",
+   "set": "E",
+   "group": "Armador: UI de los bloques"
+  },
+  {
+   "name": "seed",
+   "file": "seed.png",
+   "set": "E",
+   "group": "Armador: UI de los bloques"
+  },
+  {
+   "name": "base",
+   "file": "base.png",
+   "set": "E",
+   "group": "Armador: UI de los bloques"
+  },
+  {
+   "name": "map",
+   "file": "map.png",
+   "set": "E",
+   "group": "Armador: UI de los bloques"
+  },
+  {
+   "name": "battle",
+   "file": "battle.png",
+   "set": "E",
+   "group": "Armador: UI de los bloques"
+  },
+  {
+   "name": "shield",
+   "file": "shield.png",
+   "set": "E",
+   "group": "Armador: UI de los bloques"
+  },
+  {
+   "name": "tap",
+   "file": "tap.png",
+   "set": "E",
+   "group": "Armador: UI de los bloques (mano de tap)"
+  },
+  {
+   "name": "check",
+   "file": "check.png",
+   "set": "F",
+   "group": "Núcleo y tienda sin imagen"
+  },
+  {
+   "name": "spin",
+   "file": "spin.png",
+   "set": "F",
+   "group": "Núcleo y tienda sin imagen"
+  },
+  {
+   "name": "codes",
+   "file": "codes.png",
+   "set": "F",
+   "group": "Núcleo y tienda sin imagen"
+  },
+  {
+   "name": "luck",
+   "file": "luck.png",
+   "set": "F",
+   "group": "Núcleo y tienda sin imagen"
+  },
+  {
+   "name": "money_boost",
+   "file": "money_boost.png",
+   "set": "F",
+   "group": "Núcleo y tienda sin imagen"
+  },
+  {
+   "name": "friends",
+   "file": "friends.png",
+   "set": "F",
+   "group": "Núcleo y tienda sin imagen"
+  },
+  {
+   "name": "search",
+   "file": "search.png",
+   "set": "F",
+   "group": "Núcleo y tienda sin imagen"
+  },
+  {
+   "name": "notifications",
+   "file": "notifications.png",
+   "set": "F",
+   "group": "Núcleo y tienda sin imagen"
+  },
+  {
+   "name": "egg_gold",
+   "file": "egg_gold.png",
+   "set": "F",
+   "group": "Núcleo y tienda sin imagen"
+  },
+  {
+   "name": "egg_common",
+   "file": "egg_common.png",
+   "set": "G",
+   "group": "Huevos por rareza"
+  },
+  {
+   "name": "egg_uncommon",
+   "file": "egg_uncommon.png",
+   "set": "G",
+   "group": "Huevos por rareza"
+  },
+  {
+   "name": "egg_rare",
+   "file": "egg_rare.png",
+   "set": "G",
+   "group": "Huevos por rareza"
+  },
+  {
+   "name": "egg_epic",
+   "file": "egg_epic.png",
+   "set": "G",
+   "group": "Huevos por rareza"
+  },
+  {
+   "name": "egg_legendary",
+   "file": "egg_legendary.png",
+   "set": "G",
+   "group": "Huevos por rareza"
+  },
+  {
+   "name": "egg_mythic",
+   "file": "egg_mythic.png",
+   "set": "G",
+   "group": "Huevos por rareza"
+  },
+  {
+   "name": "egg_secret",
+   "file": "egg_secret.png",
+   "set": "G",
+   "group": "Huevos por rareza"
+  },
+  {
+   "name": "egg_halloween",
+   "file": "egg_halloween.png",
+   "set": "G",
+   "group": "Huevos por rareza"
+  },
+  {
+   "name": "egg_winter",
+   "file": "egg_winter.png",
+   "set": "G",
+   "group": "Huevos por rareza"
   }
  ]
 }
