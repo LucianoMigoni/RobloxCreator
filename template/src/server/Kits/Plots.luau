@@ -262,6 +262,22 @@ local function show(owner: Player, plot: Plot, unit: Units.Unit)
 	shownEvent:Fire(owner, unit, model)
 end
 
+-- Suma plata ganada por otro bloque (edificios del tycoon) al cobro de la base: al pad, o directo si
+-- cobra solo o no tiene base.
+function Plots.addStored(player: Player, amount: number, sku: string)
+	local d = plotData(player)
+	local plot = byPlayer[player]
+	if amount <= 0 then
+		return
+	end
+	if d and plot and not auto(player) then
+		d.stored += amount
+		updatePads(plot)
+	else
+		CurrencyService.add(player, amount, Enum.AnalyticsEconomyTransactionType.Gameplay, sku, nil, true)
+	end
+end
+
 local function collect(player: Player, plot: Plot)
 	if plot.owner ~= player then
 		return

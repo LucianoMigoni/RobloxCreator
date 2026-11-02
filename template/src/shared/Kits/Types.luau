@@ -325,6 +325,9 @@ export type Building = { id: string, name: string, price: Price, income: number,
 
 export type TycoonConfig = { buildings: { Building } }
 
+-- Lo que ve el cliente del bloque Tycoon (state.kit.tycoon): edificios comprados.
+export type TycoonState = { built: { [string]: boolean } }
+
 export type ItemDef = { id: string, name: string, icon: string, boost: string, seconds: number }
 
 export type ItemsConfig = { list: { ItemDef }, maxStack: number }

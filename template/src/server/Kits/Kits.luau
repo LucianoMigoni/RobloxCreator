@@ -36,6 +36,7 @@ local Sell = require("./Sell")
 local Stages = require("./Stages")
 local Stats = require("./Stats")
 local Steal = require("./Steal")
+local Tycoon = require("./Tycoon")
 local Units = require("./Units")
 local Upgrades = require("./Upgrades")
 local Wild = require("./Wild")
@@ -74,6 +75,7 @@ local BLOCKS: { Block } = {
 	{ key = "search", init = Search.init, start = Search.start, snapshot = Search.snapshot, items = Search.items },
 	{ key = "wild", init = Wild.init, start = Wild.start },
 	{ key = "stages", init = Stages.init, start = Stages.start, snapshot = Stages.snapshot, items = Stages.items },
+	{ key = "tycoon", init = Tycoon.init, start = Tycoon.start, snapshot = Tycoon.snapshot, income = Tycoon.income },
 }
 
 local active: { Block } = {}
