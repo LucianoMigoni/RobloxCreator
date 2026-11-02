@@ -141,8 +141,8 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
 | 57 | Bloque Upgrades | 3 | ✅ servidor |
 | 58 | Bloque Tycoon | 3 | ✅ servidor |
 | 59 | Bloque Items | 3 | ✅ servidor |
-| 60 | Productos de cada bloque en la tienda | 4 | **sigue esta** |
-| 61 | UI de los bloques | 4 | pendiente |
+| 60 | Productos de cada bloque en la tienda | 4 | ✅ |
+| 61 | UI de los bloques | 4 | **sigue esta** |
 | 62 | MapKit | 5 | pendiente |
 | 63 | Nueve recetas con objetivos, misiones y mapa | 5 | pendiente |
 | 64 | Rehacer `games/prueba` con el armador | 6 | pendiente |
@@ -209,6 +209,10 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
   - **Tycoon:** botones que se pisan, edificios escondidos en `ServerStorage` hasta comprarse, ingreso por `Plots.addStored` (nuevo). Tipo `TycoonState`.
   - **Items:** `UseItem(id)`: impulso (`boost`, ahora opcional) y/o `walkSpeed` (campo nuevo) por `seconds`; "Item:<id>" sin tope. Tipo `ItemsState`.
   - Imagen de prueba enviada al usuario con la lógica real (100.000 huevos con y sin suerte, mutaciones, espacios, robo).
+
+- **Hito 4, parte 1 (2026-11-02): productos de los bloques en la tienda.** Chequeo en verde.
+  - `ShopConfig`: campo `kit` en productos y pases (sin ese bloque en la receta no se ofrecen: `ShopConfig.inRecipe(kit)`, usado por `ShopController`). Pases nuevos del núcleo: `SellAnywhere` (sell) y `AutoClicker` (stats); `AutoCollect` y `ExtraSlots` marcados plots. Productos nuevos: `FinishMerge` ("Merge:Skip"), `GrowAll` ("Garden:Skip"), `Revive` ("Stages:Revive"), sección "Kit" (Special).
+  - La receta vende lo suyo en `shop = { products, passes }` (tipos `ShopProduct`, `ShopPass`, `KitShop`): se suma a `ShopConfig`; `KitCheck` lo revisa (claves que no choquen con el núcleo, secciones válidas, premios que existan) y sus pases cuentan para el resto de la receta (x3/x8 huevos, auto tirada). Test nuevo en `KitCheck.spec`.
 
 ## 6. Qué existe hoy (mapa)
 

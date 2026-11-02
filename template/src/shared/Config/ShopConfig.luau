@@ -7,6 +7,7 @@
 -- Cada producto dice su efecto exacto en `desc` (regla oficial) y en inglés.
 
 local Types = require("../Types")
+local KitConfig = require("./KitConfig")
 
 export type Category = "Featured" | "Boosts" | "Currency" | "Passes" | "Server" | "Spins" | "Kit"
 
@@ -25,6 +26,8 @@ export type Product = {
 	tag: string?, -- "BEST VALUE" solo si es cierto
 	-- Regalo: el producto da a otro jugador del servidor el pase `giftOf`.
 	giftOf: string?,
+	-- Bloque del armador que lo usa ("plots", "merge"...): sin ese bloque en la receta no se ofrece.
+	kit: string?,
 }
 
 export type Effect = { stat: string, kind: "mult" | "add", value: number }
@@ -39,6 +42,7 @@ export type Pass = {
 	effects: { Effect },
 	-- Atributo que queda en el jugador mientras lo tiene (los kits lo miran para sus ventajas).
 	attribute: string,
+	kit: string?, -- como en Product: sin ese bloque no se ofrece
 }
 
 export type Subscription = {
@@ -59,7 +63,13 @@ export type Item = { name: string, price: number, currency: string? }
 -- existió (por ejemplo, lo que cuesta comprar las partes por separado).
 export type Featured = { key: string, title: string?, endsAt: number?, anchor: number? }
 
-return {
+-- ¿Se ofrece? Lo de un bloque del armador solo si la receta usa ese bloque.
+local function inRecipe(kit: string?): boolean
+	return kit == nil or (KitConfig :: any)[kit] ~= nil
+end
+
+local config = {
+	inRecipe = inRecipe,
 	PRODUCTS = {
 		-- Impulsos baratos de compra repetida ("10 MINUTOS 5 R$, 30 MINUTOS 14 R$, 1 HORA 25 R$").
 		{ key = "Money2x10", productId = 0, name = "2x Money (10 min)", desc = "Doubles all money you earn for 10 minutes", icon = "money_boost", robux = 5, category = "Boosts", grant = { { boost = "Money2x", seconds = 600 } } },
@@ -84,6 +94,11 @@ return {
 		{ key = "OfflineDouble", productId = 0, name = "Double Offline Earnings", desc = "Doubles the money you made while away", icon = "timer", robux = 25, category = "Featured", grant = {} },
 		-- Regalos de pases para otro jugador del servidor (botón de regalo junto a cada pase).
 		{ key = "GiftMoney2x", productId = 0, name = "Gift: 2x Money", desc = "Give the 2x Money pass to a player in this server", icon = "gift", robux = 399, category = "Passes", giftOf = "Money2x", grant = {} },
+		-- De los bloques del armador (solo con ese bloque en la receta). Lo propio de cada receta
+		-- (huevos por Robux, cañas, "+10K Speed") va en `shop` de la receta.
+		{ key = "FinishMerge", productId = 0, name = "Finish Merge Now", desc = "Your merge finishes instantly", icon = "timer", robux = 19, category = "Kit", kit = "merge", grant = { { item = "Merge:Skip" } } },
+		{ key = "GrowAll", productId = 0, name = "Grow All Plants", desc = "Every plant in your garden is ready to harvest now", icon = "timer", robux = 39, category = "Kit", kit = "garden", grant = { { item = "Garden:Skip" } } },
+		{ key = "Revive", productId = 0, name = "Extra Life", desc = "Revive and keep going from where you fell", icon = "heart", robux = 15, category = "Kit", kit = "stages", grant = { { item = "Stages:Revive" } } },
 	} :: { Product },
 
 	PASSES = {
@@ -91,8 +106,10 @@ return {
 		{ key = "Luck2x", passId = 0, name = "2x Luck", desc = "Rare results are 2x more likely forever", icon = "luck", robux = 499, effects = { { stat = "Luck", kind = "mult", value = 2 } }, attribute = "PassLuck2x" },
 		{ key = "Speed2x", passId = 0, name = "2x Speed", desc = "Move 2x faster forever", icon = "speed", robux = 249, effects = { { stat = "Speed", kind = "mult", value = 2 } }, attribute = "PassSpeed2x" },
 		{ key = "VIP", passId = 0, name = "VIP", desc = "+25% money, VIP tag and VIP-only perks", icon = "crown", robux = 349, effects = { { stat = "Money", kind = "add", value = 0.25 } }, attribute = "PassVIP" },
-		{ key = "AutoCollect", passId = 0, name = "Auto Collect", desc = "Your money is collected automatically", icon = "magnet", robux = 149, effects = {}, attribute = "PassAutoCollect" },
-		{ key = "ExtraSlots", passId = 0, name = "+4 Slots", desc = "4 more slots in your base", icon = "base", robux = 299, effects = {}, attribute = "PassExtraSlots" },
+		{ key = "AutoCollect", passId = 0, name = "Auto Collect", desc = "Your money is collected automatically", icon = "magnet", robux = 149, effects = {}, attribute = "PassAutoCollect", kit = "plots" },
+		{ key = "ExtraSlots", passId = 0, name = "+4 Slots", desc = "4 more slots in your base", icon = "base", robux = 299, effects = {}, attribute = "PassExtraSlots", kit = "plots" },
+		{ key = "SellAnywhere", passId = 0, name = "Sell Anywhere", desc = "Sell from anywhere, no need to walk to the shop", icon = "cash", robux = 199, effects = {}, attribute = "PassSellAnywhere", kit = "sell" },
+		{ key = "AutoClicker", passId = 0, name = "Auto Clicker", desc = "Taps for you automatically, even when you're busy", icon = "tap", robux = 249, effects = {}, attribute = "PassAutoClicker", kit = "stats" },
 	} :: { Pass },
 
 	-- Suscripción mensual (oficial de Roblox, se cobra cada mes). Precio y nombre en el Dashboard.
@@ -113,3 +130,20 @@ return {
 	-- PurchaseIds recientes que se guardan para no otorgar dos veces la misma compra de Robux.
 	MAX_RECEIPTS = 100,
 }
+
+-- Lo que vende la receta del armador (`shop`).
+local shop = KitConfig.shop
+local recipeProducts = if shop then shop.products else nil
+local recipePasses = if shop then shop.passes else nil
+if recipeProducts then
+	for _, product in recipeProducts do
+		table.insert(config.PRODUCTS, product :: any)
+	end
+end
+if recipePasses then
+	for _, pass in recipePasses do
+		table.insert(config.PASSES, pass :: any)
+	end
+end
+
+return config

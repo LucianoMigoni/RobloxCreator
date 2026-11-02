@@ -187,6 +187,31 @@ TestKit.run("KitCheck", {
 		expect(errors, "efecto 'fly' no existe")
 	end,
 
+	["lo que vende la receta existe para el resto y se revisa"] = function()
+		local recipe = mini()
+		local rolls = recipe.rolls :: Types.RollsConfig
+		rolls.list[1].amounts = { { count = 1 }, { count = 3, pass = "TripleHatch" } }
+		recipe.shop = {
+			passes = { { key = "TripleHatch", passId = 0, name = "Triple Hatch", desc = "Open 3 eggs at once", icon = "egg", robux = 199, effects = {}, attribute = "PassTripleHatch" } },
+			products = {
+				{ key = "RareEggs", productId = 0, name = "3 Rare Eggs", desc = "Open 3 Basic Eggs", icon = "egg", robux = 49, category = "Kit", grant = { { item = "Roll:Basic", count = 3 } } },
+			},
+		}
+		local errors = KitCheck.check(recipe, KNOWN)
+		if #errors > 0 then
+			error("problemas inesperados:\n  " .. table.concat(errors, "\n  "))
+		end
+		local shop = recipe.shop :: Types.KitShop
+		local passes = shop.passes :: { Types.ShopPass }
+		table.insert(passes, { key = "VIP", passId = 0, name = "VIP", desc = "x", icon = "crown", robux = 99, effects = {}, attribute = "PassVIP2" })
+		local products = shop.products :: { Types.ShopProduct }
+		table.insert(products, { key = "Broken", productId = 0, name = "Broken", desc = "x", icon = "egg", robux = 10, category = "Eggs", grant = { { item = "Roll:Golden" } } })
+		local bad = KitCheck.check(recipe, KNOWN)
+		expect(bad, "'VIP' ya es un pase del núcleo")
+		expect(bad, "'Eggs' no es una sección de la tienda")
+		expect(bad, "'Golden' no existe en rolls")
+	end,
+
 	["monedas de la receta, tabla de jugadores y tema"] = function()
 		local recipe = mini()
 		recipe.currencies = { { id = "Gems", symbol = "", icon = "gem", color = "blue", start = 0, purchasable = false } }

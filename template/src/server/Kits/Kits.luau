@@ -112,11 +112,25 @@ local function known(): KitCheck.Known
 	for id in BoostConfig.TIMED do
 		table.insert(boosts, id)
 	end
+	local shop = KitConfig.shop
+	local fromShop: { [string]: boolean } = {}
+	if shop then
+		for _, pass in shop.passes or ({} :: { KitTypes.ShopPass }) do
+			fromShop[pass.key] = true
+		end
+		for _, product in shop.products or ({} :: { KitTypes.ShopProduct }) do
+			fromShop[product.key] = true
+		end
+	end
 	for _, pass in ShopConfig.PASSES do
-		table.insert(passes, pass.key)
+		if not fromShop[pass.key] then
+			table.insert(passes, pass.key)
+		end
 	end
 	for _, product in ShopConfig.PRODUCTS do
-		table.insert(products, product.key)
+		if not fromShop[product.key] then
+			table.insert(products, product.key)
+		end
 	end
 	return {
 		rarities = rarities,

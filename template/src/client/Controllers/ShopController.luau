@@ -334,6 +334,7 @@ function ShopController.start(hud: Hud.Hud)
 		local order = 0
 		local function hidden(product: ShopConfig.Product): boolean
 			return product.giftOf ~= nil
+				or not ShopConfig.inRecipe(product.kit)
 				or (product.random == true and restricted)
 				or (product.once == true and state ~= nil and state.boughtOnce[product.key] == true)
 				or product.key == "OfflineDouble" -- se ofrece en el cartel de bienvenida
@@ -405,6 +406,9 @@ function ShopController.start(hud: Hud.Hud)
 			end
 			if section.id == "Passes" then
 				for _, pass in ShopConfig.PASSES do
+					if not ShopConfig.inRecipe(pass.kit) then
+						continue
+					end
 					items += 1
 					passCard(ensureRow(), pass, items, player:GetAttribute(pass.attribute) == true, gifts[pass.key] == true)
 				end

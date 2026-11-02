@@ -962,6 +962,63 @@ local function checkItems(ctx: Ctx)
 	end
 end
 
+local SHOP_CATEGORIES = { "Featured", "Boosts", "Currency", "Server", "Spins", "Kit" }
+
+local function checkShop(ctx: Ctx)
+	local shop = ctx.recipe.shop
+	if not shop then
+		return
+	end
+	local products = shop.products
+	if products then
+		unique(ctx, "shop.products", products, function(p)
+			return p.key
+		end)
+		for i, product in products do
+			local path = "shop.products[" .. i .. "]"
+			id(ctx, path .. ".key", product.key)
+			if ctx.known.products and table.find(ctx.known.products :: { string }, product.key) then
+				add(ctx, path .. ".key", "'" .. product.key .. "' ya es un producto del núcleo")
+			end
+			text(ctx, path .. ".name", product.name)
+			text(ctx, path .. ".desc", product.desc)
+			number(ctx, path .. ".productId", product.productId, 0, true)
+			number(ctx, path .. ".robux", product.robux, 1, true)
+			if not table.find(SHOP_CATEGORIES, product.category) then
+				add(ctx, path .. ".category", "'" .. tostring(product.category) .. "' no es una sección de la tienda")
+			end
+			if #product.grant == 0 then
+				add(ctx, path .. ".grant", "no da nada")
+			end
+			for j, grant in product.grant do
+				reward(ctx, path .. ".grant[" .. j .. "]", grant)
+			end
+		end
+	end
+	local passes = shop.passes
+	if passes then
+		unique(ctx, "shop.passes", passes, function(p)
+			return p.key
+		end)
+		for i, pass in passes do
+			local path = "shop.passes[" .. i .. "]"
+			id(ctx, path .. ".key", pass.key)
+			if ctx.known.passes and table.find(ctx.known.passes :: { string }, pass.key) then
+				add(ctx, path .. ".key", "'" .. pass.key .. "' ya es un pase del núcleo")
+			end
+			text(ctx, path .. ".name", pass.name)
+			text(ctx, path .. ".desc", pass.desc)
+			text(ctx, path .. ".attribute", pass.attribute)
+			number(ctx, path .. ".passId", pass.passId, 0, true)
+			number(ctx, path .. ".robux", pass.robux, 1, true)
+			for j, effect in pass.effects do
+				text(ctx, path .. ".effects[" .. j .. "].stat", effect.stat)
+				number(ctx, path .. ".effects[" .. j .. "].value", effect.value, 0)
+			end
+		end
+	end
+end
+
 local function checkRetention(ctx: Ctx)
 	local objectives = ctx.recipe.objectives
 	if objectives then
@@ -1055,6 +1112,22 @@ function KitCheck.check(recipe: Types.KitConfig, known: Known): { string }
 	for _, s in recipe.stats or ({} :: { Types.StatDef }) do
 		ctx.stats[s.id] = true
 	end
+	-- Los pases y productos de la receta existen para el resto de la receta (x3 huevos, revivir...).
+	local shop = recipe.shop
+	local shopPasses = if shop then shop.passes else nil
+	local shopProducts = if shop then shop.products else nil
+	local passSet = ctx.passes
+	if passSet and shopPasses then
+		for _, pass in shopPasses do
+			passSet[pass.key] = true
+		end
+	end
+	local productSet = ctx.products
+	if productSet and shopProducts then
+		for _, product in shopProducts do
+			productSet[product.key] = true
+		end
+	end
 	checkCurrencies(ctx)
 	checkUnits(ctx)
 	checkPlots(ctx)
@@ -1074,6 +1147,7 @@ function KitCheck.check(recipe: Types.KitConfig, known: Known): { string }
 	checkUpgrades(ctx)
 	checkTycoon(ctx)
 	checkItems(ctx)
+	checkShop(ctx)
 	checkRetention(ctx)
 	return ctx.errors
 end

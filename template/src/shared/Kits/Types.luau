@@ -351,6 +351,34 @@ export type Quest = {
 	reward: Reward,
 }
 
+-- Lo que la receta vende por Robux: se suma a ShopConfig (mismos campos que ShopConfig.Product y
+-- Pass). Los ids se crean en el Creator Dashboard; con 0 no se ofrecen.
+export type ShopProduct = {
+	key: string,
+	productId: number,
+	name: string, -- inglés
+	desc: string, -- el efecto exacto, en inglés (regla oficial)
+	icon: string,
+	robux: number, -- precio de referencia del diseño
+	category: string, -- "Featured", "Boosts", "Currency", "Server", "Spins" o "Kit"
+	grant: { Reward },
+	random: boolean?, -- es o alimenta azar pago
+	once: boolean?,
+	tag: string?,
+}
+export type ShopEffect = { stat: string, kind: "mult" | "add", value: number }
+export type ShopPass = {
+	key: string,
+	passId: number,
+	name: string,
+	desc: string,
+	icon: string,
+	robux: number,
+	effects: { ShopEffect },
+	attribute: string, -- atributo del jugador mientras lo tiene ("PassTripleHatch")
+}
+export type KitShop = { products: { ShopProduct }?, passes: { ShopPass }? }
+
 export type MapConfig = {
 	theme: string, -- "meadow", "beach", "candy", "farm", "jungle", "snow", "desert", "space"
 	season: string?, -- "halloween", "christmas", "summer"
@@ -385,6 +413,7 @@ export type KitConfig = {
 	items: ItemsConfig?,
 	objectives: { Objectives.Def }?, -- reemplaza ObjectiveConfig.CHAIN
 	quests: { Quest }?, -- reemplaza el pool de RetentionConfig.QUESTS
+	shop: KitShop?, -- pases y productos propios (x3/x8 huevos, cañas, "+10K Speed"...)
 	map: MapConfig?,
 }
 

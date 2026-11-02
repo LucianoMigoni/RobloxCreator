@@ -10,7 +10,12 @@ local known: KitCheck.Known = {
 	sizes = { "Normal", "Big", "Huge" },
 	currencies = { "Money", "Gems" },
 	boosts = { "Money2x", "Luck2x", "Speed2x", "Wins2x" },
-	passes = { "Money2x", "Luck2x", "Speed2x", "VIP", "AutoCollect", "ExtraSlots" },
+	passes = { "Money2x", "Luck2x", "Speed2x", "VIP", "AutoCollect", "ExtraSlots", "SellAnywhere", "AutoClicker" },
+	products = {
+		"Money2x10", "Money2x30", "Money2x60", "Luck2x30", "ServerLuck", "ServerMoney", "CashS", "CashM", "CashL",
+		"Gems100", "Gems1000", "Spins3", "Spins10", "StarterPack", "OfflineDouble", "GiftMoney2x",
+		"FinishMerge", "GrowAll", "Revive",
+	},
 }
 
 return known
