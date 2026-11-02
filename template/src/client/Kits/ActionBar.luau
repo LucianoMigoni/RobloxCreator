@@ -17,7 +17,7 @@ export type Props = {
 	icon: string?, -- shared/Icons
 	variant: UIKit.Variant?,
 	order: number?,
-	key: Enum.KeyCode?, -- atajo en PC (se ve chico en la esquina del botón)
+	key: Enum.KeyCode?, -- atajo en PC (se ve chico en la esquina del botón): F toque, R pesca, G cavar, Q empujar, 1-9 objetos; E es de los prompts
 	repeatEvery: number?, -- mantener apretado repite cada tantos segundos (toques)
 	onClick: () -> (),
 }

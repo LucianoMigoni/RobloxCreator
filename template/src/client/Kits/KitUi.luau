@@ -275,6 +275,23 @@ function KitUi.showUnit(info: UnitInfo, source: string)
 	})
 end
 
+local rarityOrder: { string } = {}
+for _, tier in RarityConfig.TIERS do
+	table.insert(rarityOrder, tier.id)
+end
+local POPUP_FROM = "Epic" -- desde esta rareza, lo conseguido seguido (peces, pilas, capturas) va en popup
+
+-- Lo que se consigue seguido (pesca, pilas, capturas): popup si es nuevo o desde Epic, aviso corto si no.
+function KitUi.announce(info: UnitInfo, source: string)
+	local def = unitDefs[info.kind]
+	local rank = UnitMath.rank(rarityOrder, if def then def.rarity else nil)
+	if info.isNew or rank >= (table.find(rarityOrder, POPUP_FROM) or math.huge) then
+		KitUi.showUnit(info, source)
+	else
+		KitUi.toast(info)
+	end
+end
+
 -- Aviso corto de lo conseguido arriba al centro ("+1 Gold Carrot").
 function KitUi.toast(info: UnitInfo)
 	local prefix = if info.isNew then UiText.NEW_UNIT .. " " else "+1 "
@@ -320,6 +337,18 @@ function KitUi.ownsPass(key: string?): boolean
 		end
 	end
 	return false
+end
+
+-- El producto de ShopConfig que entrega `item` ("Rod:Golden", "Tool:Drill"), para ofrecerlo por Robux.
+function KitUi.productFor(item: string): string?
+	for _, product in ShopConfig.PRODUCTS do
+		for _, reward in product.grant do
+			if reward.item == item then
+				return product.key
+			end
+		end
+	end
+	return nil
 end
 
 function KitUi.buyProduct(key: string)
@@ -558,10 +587,14 @@ function KitUi.listWindow(props: ListProps): ListWindow
 	}
 end
 
--- Botón del menú del HUD (izquierda) para la ventana de un bloque.
+-- Botón del menú del HUD (izquierda) para la ventana de un bloque. Si el mapa la abre desde un puesto
+-- del lobby (`map.shops` de la receta: "Seeds", "Upgrades", "Rods"...), no ocupa lugar en el menú: en
+-- el teléfono la grilla tiene 8 lugares.
 function KitUi.menuButton(name: string, label: string, icon: string, variant: UIKit.Variant?, order: number): TextButton?
 	local h = hud
-	if not h then
+	local map = KitConfig.map
+	local shops = if map then map.shops else nil
+	if not h or (shops and table.find(shops, name)) then
 		return nil
 	end
 	return h.addButton("left", { name = name, label = label, icon = icon, variant = variant, layoutOrder = order })

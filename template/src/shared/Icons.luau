@@ -78,6 +78,7 @@ local EMOJI: { [string]: string } = {
 	pad = "🛒",
 	tap = "👆",
 	steps = "👟",
+	seed = "🌱",
 }
 
 export type Resolved = { image: string?, text: string? }

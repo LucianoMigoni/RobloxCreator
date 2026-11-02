@@ -8,7 +8,7 @@ Lo que el programa necesita de las personas y que Claude no puede hacer solo. Al
 
 ## Lo mínimo para arrancar
 
-- [ ] `OPENAI_API_KEY` en las dos PCs y en el entorno de la nube (íconos y miniaturas). Saldo cargado (USD 5, 2026-11-02); falta crear la clave y cargarla (`team/claves-ia.md`). Gemini queda para después: la facturación de Google dio OR_BACR2_59.
+- [ ] `OPENAI_API_KEY` en las dos PCs y en el entorno de la nube (íconos y miniaturas). Saldo cargado (USD 5, 2026-11-02). Clave creada y cargada en el entorno de la nube (la toman las sesiones nuevas) y probada el 2026-11-02: lista los modelos de imagen y una hoja de 9 íconos en calidad media costó USD 0,03. Falta en las PCs (`team/claves-ia.md`). Gemini queda para después: la facturación de Google dio OR_BACR2_59.
 - [ ] MCP de Roblox Studio y plugin de Rojo en las dos PCs (`SETUP.md` §4 y §5).
 - [ ] Grupo de Roblox dueño de los juegos, con los dos como miembros con permiso de crear.
 - [ ] Prueba en Studio de la UI y de los bloques del armador (tarea de Luciano en `team/tareas.md`).

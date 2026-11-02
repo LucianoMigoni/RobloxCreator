@@ -274,4 +274,43 @@ return {
 	REVIVE_FREE = "Revive (%d free)",
 	REVIVE = "Revive",
 	END_RUN = "End Run",
+
+	-- Armador: pesca, búsqueda y salvajes
+	CAST = "Cast",
+	REEL = "REEL!",
+	WAITING = "Waiting...",
+	RODS = "Rods",
+	TOOLS = "Tools",
+	EQUIPPED = "Equipped",
+	ROD_STATS = "Luck %s · Speed %s", -- "Luck x1.5 · Speed x1.2"
+	TOOL_STATS = "Power %s · every %ss", -- "Power x2 · every 0.5s"
+	NEW_GEAR = "New gear: %s!",
+	DIG = "Dig",
+	DEPOSITED = "Deposited %d!",
+
+	-- Armador: cultivo, mejoras, tycoon, objetos, robo y cinta
+	SEEDS = "Seeds",
+	SEED_SHOP = "Seed Shop",
+	RESTOCK_IN = "Restock in %s",
+	RESTOCKED = "The Seed Shop restocked!",
+	SEED_STOCK = "Stock %d · You have %d · Grows in %s",
+	SOLD_OUT = "Sold out",
+	SELECT = "Select",
+	SELECTED = "Selected",
+	GROW_ALL = "Grow All Plants",
+	GROW_ALL_INFO = "Every plant ready to harvest now",
+	NEW_TILE = "New Plot",
+	NEW_TILE_INFO = "One more plot to plant in",
+	UPGRADED = "%s Lv. %d!",
+	BUILT = "Built: %s!",
+	ITEM_ACTIVE = "%s for %s!", -- "Speed Potion for 5:00!"
+	CARRYING = "Run to your base with %s!",
+	STEALING_YOURS = "%s is stealing your %s!",
+	STOLE = "You stole %s!",
+	WAS_STOLEN = "%s stole your %s!",
+	DROPPED = "You dropped it!",
+	PUSHED_BY = "%s pushed you!",
+	STOPPED_THIEF = "You stopped the thief!",
+	TOO_SLOW = "Too slow! It went back",
+	OWNER_LEFT = "The owner left!",
 }

@@ -13,13 +13,21 @@ local Bus = require("../Bus")
 local HudController = require("../Controllers/HudController")
 local ActionBar = require("./ActionBar")
 local Base = require("./Base")
+local Extras = require("./Extras")
+local Fishing = require("./Fishing")
 local Followers = require("./Followers")
+local Garden = require("./Garden")
 local Inventory = require("./Inventory")
+local Items = require("./Items")
 local KitUi = require("./KitUi")
 local Rolls = require("./Rolls")
+local Search = require("./Search")
 local Stages = require("./Stages")
 local Stats = require("./Stats")
+local Steal = require("./Steal")
 local Units = require("./Units")
+local Upgrades = require("./Upgrades")
+local Wild = require("./Wild")
 local Zones = require("./Zones")
 
 type Block = { key: string, start: (HudController.Hud) -> () }
@@ -28,14 +36,23 @@ local Kits = {}
 
 -- En el orden de KitCheck.BLOCKS; un bloque puede tener más de una parte de UI.
 local BLOCKS: { Block } = {
+	{ key = "upgrades", start = Upgrades.start },
 	{ key = "units", start = Units.start },
 	{ key = "units", start = Inventory.start },
+	{ key = "items", start = Items.start },
 	{ key = "stats", start = Stats.start },
 	{ key = "zones", start = Zones.start },
 	{ key = "plots", start = Base.start },
 	{ key = "equip", start = Followers.start },
 	{ key = "rolls", start = Rolls.start },
+	{ key = "belt", start = Extras.belt },
+	{ key = "steal", start = Steal.start },
+	{ key = "fishing", start = Fishing.start },
+	{ key = "garden", start = Garden.start },
+	{ key = "search", start = Search.start },
+	{ key = "wild", start = Wild.start },
 	{ key = "stages", start = Stages.start },
+	{ key = "tycoon", start = Extras.tycoon },
 }
 
 function Kits.start(hud: HudController.Hud)

@@ -9,6 +9,7 @@ La vara de calidad para miniaturas e íconos. Se hicieron para comparar con los 
 | `despues-secret-leon.jpg` | Receta `rareza-secret`, con el render del león como referencia |
 | `despues-icono-leon.png` | Receta `icono-heroe`, con la misma referencia |
 | `referencia-leon.png` | Render de `assets/3d/kenney/cube-pets/animal-lion.glb` con `tools/render3d/` |
+| `despues-robo-dragon-gpt.jpg` | Receta `robo-tension` con GPT Image 2.5 (`gpt-image-2.5-flare`, calidad alta, sin referencias) desde `tools/imagegen.py` con la clave de OpenAI, y textos de `thumbs.py` (2026-11-02). USD 0,11 por imagen; `thumbs.py check`: saturación 158 y contraste 64 (hits: 160 y 55) |
 | `recetas-nano-banana-vs-gpt.jpg` | Las recetas `numero-gigante` y `mas-uno` con Nano Banana Pro y con GPT Image 2.5, y `objeto-gigante` y `evento-temporada` con Nano Banana Pro, sin textos |
 
 ## Cómo se hicieron
@@ -29,6 +30,18 @@ La vara de calidad para miniaturas e íconos. Se hicieron para comparar con los 
   ```
 
 ## Lo que se aprendió
+
+- **GPT Image 2.5 con la API (2026-11-02):** las 2 variantes del dragón salieron listas para usar: avatar con manos de bloque, espacio libre arriba para el texto, saturación de hit y ninguna letra dibujada. Comando:
+  ```bash
+  python tools/imagegen.py generate skills/_shared/vitrina/recetas/robo-tension.json \
+    --set "creature_desc=a GIANT cartoon dragon (bright purple with a lime-green belly, chunky toy-like shapes, cute but scary, tiny wings)" \
+    --set "prize_desc=a huge glowing rainbow egg covered in sparkles and little stars" \
+    --set "world_desc=a sunny, very saturated Roblox world with a flat bright-green baseplate ground, blocky low-poly trees, a blue sky with puffy clouds and colorful player bases in the background" \
+    --quality high --n 2 --out <carpeta>
+  python tools/thumbs.py compose skills/_shared/vitrina/recetas/robo-tension.json --base <variante>.png \
+    --set "name=SECRET EGG" --set 'value=$1,000,000/s' --at name=0.7,0.08 --at value=0.7,0.19 \
+    --at you=0.93,0.33 --at you_arrow=0.92,0.41,0.84,0.47 --at alert=0.07,0.23 --out final.png
+  ```
 
 - **El modelo:** con el plan Plus se comparó GPT Image 2.5 (el de ChatGPT) en las recetas. Salió un poco más nítido y saturado y no dibujó letras; Nano Banana Pro puso letras en las teclas de `mas-uno`. Desde entonces GPT Image 2.5 va primero (`vitrina-hits.md` §6).
 - **La composición:** la IA no siempre deja libre el cuarto de arriba. Por eso los textos se acomodan con `--at` mirando cada imagen.
