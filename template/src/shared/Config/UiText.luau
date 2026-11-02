@@ -172,4 +172,6 @@ return {
 	DEPOSIT_SIGN = "Deposit",
 	PROMPT_CATCH = "Catch",
 	WILD_NEEDS = "%s · needs %s %s", -- "Rex · needs 500 Strength"
+	UPGRADES_SIGN = "Upgrades",
+	UPGRADE_LEVEL = "%s Lv. %d",
 }

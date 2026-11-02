@@ -37,6 +37,7 @@ local Stages = require("./Stages")
 local Stats = require("./Stats")
 local Steal = require("./Steal")
 local Units = require("./Units")
+local Upgrades = require("./Upgrades")
 local Wild = require("./Wild")
 local Zones = require("./Zones")
 
@@ -57,6 +58,7 @@ local Kits = {}
 
 -- Un bloque por fila, en el orden de KitCheck.BLOCKS.
 local BLOCKS: { Block } = {
+	{ key = "upgrades", init = Upgrades.init, start = Upgrades.start, snapshot = Upgrades.snapshot, items = Upgrades.items },
 	{ key = "units", init = Units.init, start = Units.start, snapshot = Units.snapshot, items = Units.items },
 	{ key = "stats", init = Stats.init, start = Stats.start, snapshot = Stats.snapshot, items = Stats.items },
 	{ key = "zones", init = Zones.init, start = Zones.start, snapshot = Zones.snapshot, items = Zones.items },

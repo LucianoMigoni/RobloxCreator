@@ -318,6 +318,9 @@ export type UpgradeDef = {
 	robux: boolean?, -- se sube con productos "Upgrade:<id>" (escalera de Chicken Farm)
 }
 
+-- Lo que ve el cliente del bloque Upgrades (state.kit.upgrades): nivel de cada mejora.
+export type UpgradesState = { levels: { [string]: number } }
+
 export type Building = { id: string, name: string, price: Price, income: number, after: string? }
 
 export type TycoonConfig = { buildings: { Building } }
