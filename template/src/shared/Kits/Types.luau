@@ -215,6 +215,15 @@ export type StagesConfig = {
 	returnToStart: boolean?, -- al ganar vuelve al principio
 }
 
+-- Lo que ve el cliente del bloque Stages (state.kit.stages). `run` solo con corrida.
+export type StagesState = {
+	stage: number, -- etapa guardada (obby) o de la corrida
+	best: number,
+	wins: number,
+	revives: number, -- revivir comprados guardados
+	run: { active: boolean, dead: boolean, stage: number, freeLeft: number }?,
+}
+
 export type FishingRod = { id: string, name: string, luck: number, speed: number, price: Price? }
 
 export type FishingPool = { id: string, zone: string?, entries: { PoolEntry } }

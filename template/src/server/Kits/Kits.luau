@@ -30,6 +30,7 @@ local Merge = require("./Merge")
 local Plots = require("./Plots")
 local Rolls = require("./Rolls")
 local Sell = require("./Sell")
+local Stages = require("./Stages")
 local Stats = require("./Stats")
 local Steal = require("./Steal")
 local Units = require("./Units")
@@ -62,6 +63,7 @@ local BLOCKS: { Block } = {
 	{ key = "rolls", init = Rolls.init, start = Rolls.start, snapshot = Rolls.snapshot, items = Rolls.items },
 	{ key = "belt", init = Belt.init, start = Belt.start },
 	{ key = "steal", init = Steal.init, start = Steal.start },
+	{ key = "stages", init = Stages.init, start = Stages.start, snapshot = Stages.snapshot, items = Stages.items },
 }
 
 local active: { Block } = {}

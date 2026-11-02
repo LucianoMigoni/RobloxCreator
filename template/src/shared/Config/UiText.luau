@@ -159,4 +159,9 @@ return {
 	ZONE_NEEDS_STAT = "%s · %s %s", -- "Lake · 3.7M Speed"
 	ZONE_NEEDS_REBIRTHS = "%s · %d Rebirths",
 	ZONE_OPENED = "%s unlocked!",
+	STAGE_SIGN = "Stage %d",
+	STAGE_NEEDS = "Stage %d · %s %s", -- "Stage 5 · 500 Speed"
+	WIN_SIGN = "WIN!",
+	START_SIGN = "START",
+	REVIVED = "Extra life!",
 }
