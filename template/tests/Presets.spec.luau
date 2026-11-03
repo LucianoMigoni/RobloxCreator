@@ -23,6 +23,9 @@ local PRESETS: { [string]: Types.KitConfig } = {
 	Fishing = require("../src/shared/Kits/Presets/Fishing"),
 	SearchAndDig = require("../src/shared/Kits/Presets/SearchAndDig"),
 	GrowGarden = require("../src/shared/Kits/Presets/GrowGarden"),
+	MergeTycoon = require("../src/shared/Kits/Presets/MergeTycoon"),
+	RunAndCatch = require("../src/shared/Kits/Presets/RunAndCatch"),
+	CozyTycoon = require("../src/shared/Kits/Presets/CozyTycoon"),
 }
 
 -- Plata con la que arranca un jugador en una moneda (las de la receta traen su `start`).

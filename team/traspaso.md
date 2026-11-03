@@ -2,7 +2,7 @@
 
 Para la IA (o persona) que retome el trabajo desde un push, por ejemplo el Claude de Luciano si a Leonel se le acaban los tokens. **Leé este archivo entero antes de tocar nada:** acá está todo lo que pidió el usuario, cómo quiere que se trabaje, qué está hecho, qué se está haciendo y qué falta, para seguir igual que en el chat original.
 
-Última actualización: 2026-11-03, MapKit terminado (#62): mapa estilo hit armado por receta, tablas de posiciones del mundo, cofre del grupo y vista previa sin Studio; sigue las nueve recetas (#63). Sesión original: Claude Code en la nube de Leonel, rama `leonelblumberg/quirky-dijkstra-2kxnwz`.
+Última actualización: 2026-11-03, MapKit (#62) con el estilo de los hits y las nueve recetas (#63) terminados; sigue rehacer el juego de prueba con el armador (#64). Sesión original: Claude Code en la nube de Leonel, rama `leonelblumberg/quirky-dijkstra-2kxnwz`.
 
 ## 0. Cómo retomar, paso a paso
 
@@ -166,8 +166,8 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
 | 60 | Productos de cada bloque en la tienda | 4 | ✅ |
 | 61 | UI de los bloques | 4 | ✅ (2026-11-02; falta probarla en Studio) |
 | 62 | MapKit | 5 | ✅ (2026-11-03; falta probarlo en Studio) |
-| 63 | Nueve recetas con objetivos, misiones y mapa | 5 | **sigue esta** |
-| 64 | Rehacer `games/prueba` con el armador | 6 | pendiente |
+| 63 | Nueve recetas con objetivos, misiones y mapa | 5 | ✅ (2026-11-03) |
+| 64 | Rehacer `games/prueba` con el armador | 6 | **sigue esta** |
 | 65 | Skill del armador y skills que lo usan | 7 | pendiente |
 | 66 | Skill de game feel | 7 | pendiente |
 | 67 | Poner al día CLAUDE.md, ROADMAP, guía central, hits-2026, README, tablero | 7 | pendiente |
@@ -301,6 +301,24 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
     - vitrina con la unidad gigante (`map.showcase`, etiqueta `KitShowcase`, `server/Map/Showcase`).
   - **Tests:** `MapPlan.audit` (la revisión común), vitrina, arcos y estilos de base: 12 casos.
   - **Vista previa:** dibuja los studs y la unidad de la vitrina. Ejemplos nuevos en `references/mapa/`.
+- **Nueve recetas (#63, 2026-11-03).** Chequeo en verde, un push cada tres.
+  - **Archivos:** `template/src/shared/Kits/Presets/`:
+    - StealAndPlace, HatchAndCollect, PlusOneEscape;
+    - Fishing, SearchAndDig, GrowGarden;
+    - MergeTycoon, RunAndCatch, CozyTycoon.
+  - **Cada receta trae:**
+    - unidades de muestra con ícono (unit-icons y pet-icons) y emoji de respaldo en `Icons.luau`;
+    - economía que arranca con $10;
+    - de 8 a 9 objetivos que enseñan el loop y 5 misiones;
+    - tienda propia y mapa.
+  - **Núcleo:**
+    - la receta puede traer su `rebirth` (moneda, costo y lo que multiplica; los textos del renacer lo dicen) y su `endless` (objetivo sin fin);
+    - KitCheck valida los eventos de objetivos y misiones contra `KitCheck.SIGNALS`.
+  - **Tests:**
+    - `tests/Presets.spec.luau`: KitCheck, objetivos y misiones, mapa sano y completo, íconos con respaldo y que lo primero se pague;
+    - `tests/MapExpect.luau`: lo que cada bloque busca en el mapa (compartido con MapPlan.spec).
+  - **Vista previa** de los nueve mapas en `skills/roblox-game-kits/references/mapa/recetas.jpg`; se mandó al usuario.
+  - **Pedido del usuario:** "Esto sería simplemente un ejemplo, ¿no? Después cada juego usa esto mucho más preparado y personalizado, ¿no?". Respuesta: sí. Las recetas y su mapa son muestras de cada fórmula. Cada juego copia la receta, hace propio el contenido y fija el mapa en Studio para editarlo (`bloques.md`). Este flujo va en el skill del armador (#65).
 
 ## 6. Qué existe hoy (mapa)
 

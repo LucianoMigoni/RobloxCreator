@@ -131,6 +131,37 @@ Piezas comunes: `KitWorld` (etiquetas, prompts y pads con la distancia medida en
 
 Todas usan además todo el núcleo: diario, regalos por tiempo, misiones, ruleta, códigos, grupo, ganancias sin conexión, renacer, índice, eventos, invitar y tienda.
 
+**Las nueve están hechas** en `template/src/shared/Kits/Presets/<Receta>.luau` (2026-11-03). Cada una trae:
+- unidades de muestra con su ícono (`assets/ui/unit-icons`, `pet-icons`) y emoji de respaldo;
+- economía que arranca con los $10 iniciales;
+- objetivos que enseñan el loop paso a paso (el tutorial sin pantallas) y misiones;
+- tienda propia (pases x3/x8, unidades "OP", "+10K Speed", escalera por Robux) y mapa.
+
+`tests/Presets.spec.luau` revisa las nueve:
+- KitCheck sin errores;
+- mapa sano y completo;
+- íconos con respaldo;
+- que lo primero se pueda pagar.
+
+Vista previa de los mapas: `references/mapa/recetas.jpg`.
+
+**Son muestras.** Un juego real copia la receta a su `KitConfig.luau` y la hace propia: sus nombres, criaturas con modelo 3D, íconos, precios, zonas y eventos. También hace propio el mapa:
+1. Arrancar el juego en Studio.
+2. Copiar la carpeta `Map` que arma MapKit.
+3. Pegarla fija en el lugar.
+4. Editarla a mano, con agua de terreno, partículas y modelos. Basta con mantener las etiquetas.
+
+**Campos de la receta además de los bloques:**
+
+| Campo | Qué hace |
+|---|---|
+| `objectives` | La cadena de objetivos. |
+| `endless` | Los objetivos que siguen después de la cadena; por defecto, "Earn $X". |
+| `quests` | Las misiones. Los eventos de `objectives`, `endless` y `quests` tienen que estar en `KitCheck.SIGNALS` o ser `"<Stat>Gained"`. |
+| `rebirth` | Moneda, costo y qué multiplica el renacer. En +1 Speed se paga con victorias y multiplica la velocidad. |
+| `shop` | Pases y productos propios. |
+| `map` | El mapa (ver "El mapa"). |
+
 ## Ideas de fuera de Roblox
 
 Una idea externa ("la aguja en un pajar", "cocinar a cachetadas") se baja a bloques: ¿qué junta el jugador (Units)?, ¿cómo lo consigue (Rolls, Belt, Fishing, Search, Wild, Garden)?, ¿qué hace con eso (Plots, Sell, Equip, Merge)?, ¿qué sube (Stats, Upgrades)?, ¿adónde va después (Zones, Stages)? Si un verbo no entra en ningún bloque, se hace un bloque nuevo con la misma forma (`init`, `start`, `snapshot`, `item`) y se suma acá.
