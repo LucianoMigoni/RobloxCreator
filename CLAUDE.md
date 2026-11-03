@@ -41,7 +41,7 @@ Centro para crear juegos de Roblox rápido y con buenas probabilidades de éxito
 | 9 | Métricas | `roblox-metrics-growth` | Juego publicado (o pre-lanzamiento en modo mejora) | `metricas.md` |
 | 10 | Live ops | `roblox-liveops` | Métricas + roadmap | `liveops.md`, changelogs |
 
-Las diez fases tienen su skill, y las campañas (8b) el suyo. El armador (`roblox-game-kits`) arma la fase 2 con bloques de juego y nueve recetas de top hits (`skills/roblox-game-kits/references/bloques.md`); los demás skills tienen una sección "Con el armador". Los skills citan la documentación oficial con la fecha en que se verificó: antes de una decisión grande (concepto, lanzamiento), volver a verificar lo que cambió.
+Las diez fases tienen su skill, y las campañas (8b) el suyo. El armador (`roblox-game-kits`) arma la fase 2 con bloques de juego y nueve recetas de top hits (`skills/roblox-game-kits/references/bloques.md`); los demás skills tienen una sección "Con el armador". El "jugo" (sonido, animación y efectos de cada momento) es `roblox-game-feel`: se usa al crear momentos nuevos y en el pase de pulido antes de publicar. Los skills citan la documentación oficial con la fecha en que se verificó: antes de una decisión grande (concepto, lanzamiento), volver a verificar lo que cambió.
 
 Saltos permitidos: un juego existente puede entrar en la fase 9 (modo mejora). `roblox-ui-designer` y `roblox-security` se vuelven a llamar cada vez que otra fase cree UI o RemoteEvents nuevos.
 

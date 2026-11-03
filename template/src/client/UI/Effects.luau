@@ -29,6 +29,19 @@ local CONFETTI_COLORS = {
 }
 -- Partícula de destello incluida en Roblox (la que usa Sparkles).
 local DEFAULT_SPARKLE = "rbxasset://textures/particles/sparkles_main.dds"
+local LOW_DENSITY = 0.35 -- con "Low Graphics" (Ajustes) sale un tercio de las partículas
+
+local density = 1
+
+-- Cuántas partículas sacar de `count`, según la calidad elegida (al menos una).
+local function scaled(count: number): number
+	return math.max(1, math.floor(count * density + 0.5))
+end
+
+-- "Low Graphics" de los Ajustes (Bus "LowGraphics"): menos partículas en teléfonos flojos.
+function Effects.setLowGraphics(on: boolean)
+	density = if on then LOW_DENSITY else 1
+end
 
 local function vfx(name: string): string?
 	local id = AssetIds.vfx[name]
@@ -60,7 +73,7 @@ end
 function Effects.burst(screen: Instance, at: Vector2, kind: string?, count: number?)
 	local confetti = kind == "confetti"
 	local texture = if confetti then nil else (vfx("sparkle") or vfx("star"))
-	local n = count or 14
+	local n = scaled(count or 14)
 	for _ = 1, n do
 		local color = if confetti
 			then CONFETTI_COLORS[math.random(#CONFETTI_COLORS)]
@@ -140,7 +153,7 @@ end
 -- Lluvia de confeti en toda la pantalla.
 function Effects.confetti(screen: GuiBase2d, count: number?)
 	local size = screen.AbsoluteSize
-	for _ = 1, count or 60 do
+	for _ = 1, scaled(count or 60) do
 		local color = CONFETTI_COLORS[math.random(#CONFETTI_COLORS)]
 		local p = piece(screen, nil, color, math.random(10, 18))
 		local x = math.random() * size.X
@@ -228,7 +241,7 @@ function Effects.worldBurst(position: Vector3, kind: string?, color: Color3?, am
 		glow:Emit(2)
 	end
 	part.Parent = Workspace
-	emitter:Emit(amount or 24)
+	emitter:Emit(scaled(amount or 24))
 	Debris:AddItem(part, 3)
 end
 

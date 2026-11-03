@@ -151,6 +151,8 @@ function Steal.start(_hud: HudController.Hud)
 	end)
 	Bus.on("Kit:Pushed", function(payload: any)
 		if typeof(payload) == "table" then
+			Sound.play("Whoosh")
+			Juice.cameraShake(0.6, 0.35)
 			KitUi.notify(string.format(UiText.PUSHED_BY, tostring(payload.by)), "Close", "battle")
 		end
 	end)

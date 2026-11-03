@@ -187,6 +187,25 @@ function KitUi.fire(name: string, ...: any)
 	end)
 end
 
+-- Plata que vuela del centro de la pantalla a su contador del HUD, con el sonido de cada moneda que
+-- llega (cobrar, vender, depositar): la dopamina de ver subir el número.
+function KitUi.coinsTo(currencyId: string?, count: number?)
+	local h = hud
+	local id = currencyId or EconomyConfig.MAIN
+	local currency = EconomyConfig.CURRENCIES[id]
+	local pill = if h then h.currencyPill(id) else nil
+	if not h or not pill or not currency then
+		return
+	end
+	local root = h.screen
+	local size = root.AbsoluteSize
+	Juice.flyTo(root, Vector2.new(size.X / 2, size.Y * 0.6), pill, function(): GuiObject
+		return UIKit.icon(root, currency.icon, { Size = UDim2.fromOffset(36, 36), ZIndex = 70 })
+	end, count or 8, function()
+		Sound.play("Coin")
+	end)
+end
+
 function KitUi.notify(text: string, variant: UIKit.Variant?, icon: string?)
 	local s = screen()
 	if s then

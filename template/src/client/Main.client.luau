@@ -27,6 +27,7 @@ local SpinController = require("./Controllers/SpinController")
 local Kits = require("./Kits/Kits")
 local Bus = require("./Bus")
 local PlayerState = require("./PlayerState")
+local Effects = require("./UI/Effects")
 local Sound = require("./UI/Sound")
 local Windows = require("./UI/Windows")
 local World = require("./UI/World")
@@ -56,6 +57,10 @@ BoostsController.start(hud)
 LeaderboardController.start()
 
 Kits.start(hud)
+-- Menos partículas con "Low Graphics" (Ajustes lo avisa al cargar y en cada cambio).
+Bus.on("LowGraphics", function(on: any)
+	Effects.setLowGraphics(on == true)
+end)
 
 Sound.preload({ "Click", "Open", "Close", "Coin", "Reward", "Purchase", "SpinTick" })
 Sound.playMusic("Lobby")

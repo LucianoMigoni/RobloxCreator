@@ -729,6 +729,7 @@ function Inventory.start(hud: HudController.Hud)
 		local currency = EconomyConfig.CURRENCIES[payload.currency or EconomyConfig.MAIN] or main
 		Sound.play("Cash")
 		KitUi.notify(string.format(UiText.SOLD, payload.count or 0, Format.money(payload.amount or 0, currency.symbol)), "Accept", currency.icon)
+		KitUi.coinsTo(payload.currency or EconomyConfig.MAIN, math.clamp(payload.count or 1, 3, 10))
 	end)
 	Bus.on("Kit:Merged", function(payload: any)
 		if typeof(payload) == "table" and typeof(payload.kind) == "string" then

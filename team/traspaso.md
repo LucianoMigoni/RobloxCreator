@@ -2,7 +2,7 @@
 
 Para la IA (o persona) que retome el trabajo desde un push, por ejemplo el Claude de Luciano si a Leonel se le acaban los tokens. **Leé este archivo entero antes de tocar nada:** acá está todo lo que pidió el usuario, cómo quiere que se trabaje, qué está hecho, qué se está haciendo y qué falta, para seguir igual que en el chat original.
 
-Última actualización: 2026-11-03, MapKit (#62) con el estilo de los hits, las nueve recetas (#63) el juego de prueba rehecho con el armador (#64) y el skill del armador (#65) terminados; sigue el skill de game feel (#66). Sesión original: Claude Code en la nube de Leonel, rama `leonelblumberg/quirky-dijkstra-2kxnwz`.
+Última actualización: 2026-11-03, MapKit (#62) con el estilo de los hits, las nueve recetas (#63) el juego de prueba rehecho con el armador (#64) el skill del armador (#65) y el de game feel (#66) terminados; sigue poner al día la documentación (#67). Sesión original: Claude Code en la nube de Leonel, rama `leonelblumberg/quirky-dijkstra-2kxnwz`.
 
 ## 0. Cómo retomar, paso a paso
 
@@ -169,8 +169,8 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
 | 63 | Nueve recetas con objetivos, misiones y mapa | 5 | ✅ (2026-11-03) |
 | 64 | Rehacer `games/prueba` con el armador | 6 | ✅ (2026-11-03; falta probarlo en Studio) |
 | 65 | Skill del armador y skills que lo usan | 7 | ✅ (2026-11-03) |
-| 66 | Skill de game feel | 7 | **sigue esta** |
-| 67 | Poner al día CLAUDE.md, ROADMAP, guía central, hits-2026, README, tablero | 7 | pendiente |
+| 66 | Skill de game feel | 7 | ✅ (2026-11-03) |
+| 67 | Poner al día CLAUDE.md, ROADMAP, guía central, hits-2026, README, tablero | 7 | **sigue esta** |
 | 68 | Íconos que faltan | 7 | ✅ 27 de la UI y 9 mascotas con GPT Image (falta subirlos a Roblox) |
 | 69 | Revisión completa | 8 | pendiente |
 | 70 | Push y reporte final: qué conectar, claves, cuentas, pruebas | 8 | pendiente |
@@ -339,6 +339,19 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
   - **Sección "Con el armador"** en los demás skills: ideación, clonación, UI, monetización, seguridad, QA, publicación, live ops, métricas, cumplimiento y campañas.
   - **`CLAUDE.md`:** la fase 2 del pipeline nombra al armador.
   - **`template/README.md`:** las recetas, lo que reemplazan del núcleo y el mapa.
+- **Skill de game feel (#66, 2026-11-03).**
+  - **`skills/roblox-game-feel/SKILL.md`:**
+    - la escalera de respuesta: toque, ganancia, logro, celebración y error, con su sonido, pantalla, mundo y cámara;
+    - el flujo de un momento nuevo: `KitFx` → `Bus.on("Kit:X")` → las piezas de KitUi, Juice, Effects y Sound;
+    - reglas: el efecto celebra y el servidor da; sin urgencia falsa; medida; Low Graphics; música a 0,25.
+  - **`references/momentos.md`:** qué hace hoy cada momento del núcleo y de los bloques (sacado del código), e ideas para el próximo pase.
+  - **Código:**
+    - `Effects` respeta Low Graphics: un tercio de las partículas (`Effects.setLowGraphics`, conectado en `Main.client`);
+    - `KitUi.coinsTo` (la plata vuela al contador) en cobrar, vender y depositar;
+    - el empujón ahora suena y sacude.
+  - **Juego de prueba:** se le pasaron a mano los mismos cambios de la plantilla.
+
+    Trampa: cada juego es una copia y no recibe solo las mejoras de la plantilla. Falta una herramienta para sincronizar el núcleo sin pisar lo propio del juego (ver §9).
 
 ## 6. Qué existe hoy (mapa)
 
@@ -455,6 +468,7 @@ Lista completa y con casillas en **`team/pendientes.md`** (pedido del usuario de
   - para leer una receta de afuera del repo, `mapview.cjs` la copia a `tools/render3d/map/.preview/`.
 - **Tests con tipos:** `tools/check.py` también revisa los tipos de `tests/`, así que valen las mismas trampas de luau-lsp.
 - **Comparar textos ya refinados:** después de `a.kind == "decor"`, luau-lsp toma `a.kind` como el literal "decor" y marca error al compararlo con otro ("Type "area" cannot be compared with "decor""). Juntarlos en un texto o usar variables nuevas.
+- **Juegos que se quedan atrás:** cada `games/<juego>` es una copia de la plantilla. Una mejora de la plantilla hay que pasarla a mano: copiar los archivos del núcleo que cambiaron, nunca `Config/KitConfig.luau` ni lo propio del juego. Pendiente: una herramienta `tools/sync_template.py` que lo haga y muestre las diferencias.
 - **Investigar un hit sin navegador:**
   - miniaturas oficiales: `thumbnails.roblox.com/v1/games/multiget/thumbnails?universeIds=<id>`;
   - ids de videos: `curl` de `youtube.com/results?search_query=...` con `"videoRenderer":{"videoId"`;

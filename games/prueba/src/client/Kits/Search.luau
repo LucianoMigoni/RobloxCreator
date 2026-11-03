@@ -236,6 +236,7 @@ function Search.start(hud: HudController.Hud)
 		if currency and (payload.amount or 0) > 0 then
 			Sound.play("Cash")
 			KitUi.notify(string.format(UiText.SOLD, count, Format.money(payload.amount, currency.symbol)), "Accept", currency.icon)
+			KitUi.coinsTo(currencyId, math.clamp(count, 3, 10))
 		else
 			Sound.play("Reward")
 			KitUi.notify(string.format(UiText.DEPOSITED, count), "Accept", "inventory")

@@ -8,10 +8,8 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local EconomyConfig = require(ReplicatedStorage.Shared.Config.EconomyConfig)
 local UiText = require(ReplicatedStorage.Shared.Config.UiText)
 local Format = require(ReplicatedStorage.Shared.Lib.Format)
-local UIKit = require(ReplicatedStorage.Shared.UIKit)
 local Bus = require("../Bus")
 local HudController = require("../Controllers/HudController")
-local Juice = require("../UI/Juice")
 local Sound = require("../UI/Sound")
 local KitUi = require("./KitUi")
 
@@ -28,16 +26,7 @@ function Base.start(hud: HudController.Hud)
 		end
 		Sound.play("CoinsBurst")
 		KitUi.notify(string.format(UiText.COLLECTED, Format.money(amount, main.symbol)), "Accept", main.icon)
-		local pill = hud.currencyPill(EconomyConfig.MAIN)
-		local screen = hud.screen
-		if pill then
-			local size = screen.AbsoluteSize
-			Juice.flyTo(screen, Vector2.new(size.X / 2, size.Y * 0.6), pill, function(): GuiObject
-				return UIKit.icon(screen, main.icon, { Size = UDim2.fromOffset(36, 36), ZIndex = 70 })
-			end, COINS, function()
-				Sound.play("Coin")
-			end)
-		end
+		KitUi.coinsTo(EconomyConfig.MAIN, COINS)
 	end)
 	Bus.on("Kit:SlotBought", function()
 		Sound.play("Purchase")

@@ -36,6 +36,7 @@ Que el juego cargue rápido, no se caiga en un teléfono modesto y no tenga erro
 - **El loop:** se prueba siguiendo la cadena de objetivos, que enseña el loop. Cada paso tiene que completarse sin ayuda.
 - **El mapa:** lo arma MapKit al arrancar. Los tests ya revisan que nada choque, que todo esté sobre un piso y que haya menos de 5000 partes. En Studio, medir los FPS con el emulador de teléfono y el mapa completo.
 - **Robar y empujar:** Test → Clients and Servers, con dos jugadores.
+- **Pase de pulido:** recorrer `skills/roblox-game-feel/references/momentos.md`, con y sin Low Graphics.
 
 ## Checklist
 Ver `references/checklist.md`. Bloqueantes: errores en consola, una auditoría con ERROR, crash o carga de más de 60 s en el dispositivo base, y compras o datos que fallan.

@@ -22,6 +22,7 @@ Diseño completo de bloques, etiquetas del mapa y fórmulas: `references/bloques
 **Lo llaman:** `roblox-game-cloner` (fase 2), `roblox-ideation` (qué fórmula usa cada concepto) o el usuario.
 **Llama a:**
 - `roblox-ui-designer`: solo si hay UI nueva;
+- `roblox-game-feel`: sonido, animación y efectos de cada momento nuevo;
 - `roblox-security`: remotes nuevos;
 - `roblox-monetization`: precios y tienda;
 - `roblox-qa-performance`: prueba en Studio;
