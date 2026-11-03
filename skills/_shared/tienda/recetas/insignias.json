@@ -1,0 +1,77 @@
+{
+  "_que_es": "Insignias de BadgeConfig (2026-11-02): imagen de 512x512 para cada una, recortada en círculo por Roblox. python tools/storeart.py base skills/_shared/tienda/recetas/insignias.json --out base.png; python tools/imagegen.py generate skills/_shared/tienda/recetas/insignias.json --ref base.png --quality high --n 1 --out <carpeta>; python tools/storeart.py finish skills/_shared/tienda/recetas/insignias.json --sheet <hoja>.png --out assets/ui/badge-art.",
+  "kind": "artset",
+  "grid": "3x3",
+  "names": [
+    "welcome",
+    "first_rare",
+    "secret",
+    "rebirth",
+    "collector",
+    "streak",
+    "playtime",
+    "friends",
+    "met_dev"
+  ],
+  "items": [
+    {
+      "name": "welcome",
+      "icon": "star",
+      "color": "#FFD23A",
+      "label": ""
+    },
+    {
+      "name": "first_rare",
+      "icon": "egg_rare",
+      "color": "#2EC5F5",
+      "label": ""
+    },
+    {
+      "name": "secret",
+      "icon": "egg_secret",
+      "color": "#3B2A6B",
+      "label": ""
+    },
+    {
+      "name": "rebirth",
+      "icon": "rebirth",
+      "color": "#FF5C8A",
+      "label": ""
+    },
+    {
+      "name": "collector",
+      "icon": "index",
+      "color": "#46A0FF",
+      "label": ""
+    },
+    {
+      "name": "streak",
+      "icon": "daily",
+      "color": "#FF9F1A",
+      "label": ""
+    },
+    {
+      "name": "playtime",
+      "icon": "timer",
+      "color": "#46D64B",
+      "label": ""
+    },
+    {
+      "name": "friends",
+      "icon": "friends",
+      "color": "#2FE0C8",
+      "label": ""
+    },
+    {
+      "name": "met_dev",
+      "icon": "crown",
+      "color": "#A35CFF",
+      "label": ""
+    }
+  ],
+  "ia": {
+    "aspect": "1:1",
+    "mode": "redraw",
+    "prompt": "Keep the same 9 tiles, in this order: 1) welcome: a big shiny golden star with a happy sparkle on a tile of the same color as the draft, 2) first_rare: a blue spotted rare egg with a soft glowing aura on a tile of the same color as the draft, 3) secret: a black egg with glowing rainbow spots and a rainbow aura on a tile of the same color as the draft, 4) rebirth: two thick circular arrows, blue and pink, with sparkles on a tile of the same color as the draft, 5) collector: a blue book with a golden star on the cover and sparkles on a tile of the same color as the draft, 6) streak: a calendar with a golden star and a small orange flame on a tile of the same color as the draft, 7) playtime: a red alarm clock with golden sparkles on a tile of the same color as the draft, 8) friends: two smiling friend heads, blue and green, side by side on a tile of the same color as the draft, 9) met_dev: a golden crown with a small silver hammer and wrench crossed in front on a tile of the same color as the draft. Keep each object well inside the center, Roblox shows badges cropped to a circle."
+  }
+}

@@ -46,6 +46,7 @@ local DataConfig = {
 		campaignCodes = {} :: { [string]: boolean }, -- LaunchData de campañas y links ya premiados
 		giftTokens = {} :: { [string]: number }, -- regalos de pases pagados que todavía no se entregaron
 		settings = { music = true, sfx = true, lowGraphics = false }, -- Ajustes del jugador (SettingsService)
+		badges = {} :: { [string]: boolean }, -- insignias ya entregadas (Social/Badges)
 		kits = {} :: { [string]: any },
 	},
 }

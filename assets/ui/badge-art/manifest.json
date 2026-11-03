@@ -1,0 +1,64 @@
+{
+ "pack": "badge-art",
+ "kind": "badge-image",
+ "count": 9,
+ "source": "Bocetos propios (tools/storeart.py) redibujados con GPT Image 2.5 por la API de OpenAI (tools/imagegen.py, receta skills/_shared/tienda/recetas/insignias.json, calidad high)",
+ "license": "propio (generado con IA a partir de bocetos e íconos propios)",
+ "author": "RobloxCreator",
+ "created": "2026-11-03",
+ "notes": "Imagen de cada insignia de BadgeConfig (template/src/shared/Config/BadgeConfig.luau, campo image) para crearlas en el Creator Dashboard (512x512; Roblox las recorta en círculo).",
+ "sheets": [
+  {
+   "recipe": "skills/_shared/tienda/recetas/insignias.json",
+   "sheet": "insignias-20261103-005944-1.png",
+   "sha256": "1e8b5b96480aeb21bd57c69fec786a33b68d338b9bb49fc060084108a5e45c53"
+  }
+ ],
+ "items": [
+  {
+   "name": "welcome",
+   "file": "welcome.png",
+   "badge": "Welcome"
+  },
+  {
+   "name": "first_rare",
+   "file": "first_rare.png",
+   "badge": "FirstRare"
+  },
+  {
+   "name": "secret",
+   "file": "secret.png",
+   "badge": "Secret"
+  },
+  {
+   "name": "rebirth",
+   "file": "rebirth.png",
+   "badge": "Rebirth"
+  },
+  {
+   "name": "collector",
+   "file": "collector.png",
+   "badge": "Collector"
+  },
+  {
+   "name": "streak",
+   "file": "streak.png",
+   "badge": "Streak"
+  },
+  {
+   "name": "playtime",
+   "file": "playtime.png",
+   "badge": "PlayHour"
+  },
+  {
+   "name": "friends",
+   "file": "friends.png",
+   "badge": "Friends"
+  },
+  {
+   "name": "met_dev",
+   "file": "met_dev.png",
+   "badge": "MetDev"
+  }
+ ]
+}

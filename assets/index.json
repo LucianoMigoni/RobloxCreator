@@ -1753,6 +1753,35 @@
       "notes": "27 imágenes de tienda 512x512 para los Game Passes y Developer Products de ShopConfig (y los pases x3/x8 de las recetas). Cuál va con cuál, en manifest.json."
     },
     {
+      "id": "badge-art",
+      "path": "ui/badge-art",
+      "type": "pack",
+      "packType": "image",
+      "count": 9,
+      "tags": {
+        "style": [
+          "3d",
+          "glossy",
+          "hit",
+          "cartoon"
+        ],
+        "genre": [
+          "any"
+        ],
+        "theme": [
+          "badge",
+          "achievement"
+        ]
+      },
+      "robloxAssetId": null,
+      "source": "ai-generated",
+      "sourceUrl": null,
+      "license": "propio (IA sobre bocetos propios, API de OpenAI)",
+      "commercialUse": true,
+      "author": "RobloxCreator",
+      "notes": "9 imágenes de insignias 512x512 (BadgeConfig) para crear en el Dashboard."
+    },
+    {
       "id": "loading",
       "path": "ui/loading",
       "type": "pack",

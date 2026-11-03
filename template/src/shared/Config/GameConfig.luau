@@ -8,6 +8,9 @@ return {
 	NAME = "My Hit Game",
 	-- Grupo de Roblox del juego: premio por unirse y bono permanente (0 = sin grupo todavía).
 	GROUP_ID = 0,
+	-- UserId de los creadores del juego: estar en un servidor con uno da la insignia "Met the Dev"
+	-- (BadgeConfig). Si el juego es de un usuario, el dueño ya cuenta.
+	DEV_USER_IDS = {} :: { number },
 	-- Qué se ve en la tabla de jugadores de Roblox (arriba a la derecha), en este orden: monedas,
 	-- "Rebirths" o estadísticas del armador ("Speed"). La receta puede traer la suya.
 	LEADERSTATS = (KitConfig.leaderstats or { "Money", "Rebirths" }) :: { string },

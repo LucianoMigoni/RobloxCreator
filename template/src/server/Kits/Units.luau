@@ -230,8 +230,12 @@ function Units.add(player: Player, kind: string, opts: AddOptions): (Unit?, stri
 	table.insert(d.list, unit)
 	local isNew = IndexService.discover(player, UnitMath.key(kind, variant))
 	Signals.track(player, "UnitGot", 1)
-	if UnitMath.rank(rarities, def.rarity) >= UnitMath.rank(rarities, RARE) then
+	local rank = UnitMath.rank(rarities, def.rarity)
+	if rank >= UnitMath.rank(rarities, RARE) then
 		Signals.track(player, "RareFound", 1)
+	end
+	if rank == #rarities then
+		Signals.track(player, "SecretFound", 1) -- la rareza más alta (insignia "Secret Hunter")
 	end
 	if not opts.quiet then
 		announce(player, def, unit)

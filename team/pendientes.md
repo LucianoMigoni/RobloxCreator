@@ -13,6 +13,9 @@ Lo que el programa necesita de las personas y que Claude no puede hacer solo. Al
 - [ ] Grupo de Roblox dueño de los juegos, con los dos como miembros con permiso de crear.
 - [ ] Prueba en Studio de la UI y de los bloques del armador (tarea de Luciano en `team/tareas.md`).
 - [ ] Productos y pases creados en el Creator Dashboard para el primer juego, con sus ids en `ShopConfig`.
+- [ ] Imágenes de esos pases y productos: las de `assets/ui/store-art` (qué va con cuál: `uses` de su `manifest.json`).
+- [ ] Insignias creadas en el Dashboard (Monetization → Badges; 5 gratis cada 24 h, después 100 Robux cada una) con nombre, descripción e imagen de `assets/ui/badge-art`, y sus ids en `BadgeConfig`.
+- [ ] Subir a Roblox los íconos (`hud-icons`, `pet-icons`, `unit-icons`), las fotos de zona y el fondo de carga (`tools/roblox_upload.py`, con `ROBLOX_OPEN_CLOUD_API_KEY`) y poner los ids en `AssetIds` y `LoadingConfig.IMAGE`; mientras tanto el juego muestra emojis de respaldo.
 
 ## 1. Claves de API
 

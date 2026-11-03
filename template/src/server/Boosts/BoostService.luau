@@ -206,6 +206,11 @@ function BoostService.refresh(player: Player)
 	Signals.dirty(player)
 end
 
+-- Cuántos amigos tiene en este servidor (lo usa la insignia "Better Together").
+function BoostService.friends(player: Player): number
+	return friendCount[player] or 0
+end
+
 local function countFriends(player: Player)
 	local count = 0
 	for _, other in Players:GetPlayers() do
