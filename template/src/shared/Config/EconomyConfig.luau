@@ -14,9 +14,11 @@ export type Currency = {
 	purchasable: boolean, -- true si se vende por Robux (entonces lo aleatorio que se compra con ella es "aleatorio pago")
 }
 
+-- La plata y las gemas tienen paquetes en la tienda (ShopConfig), así que son `purchasable`. tools/check.py
+-- falla si un producto vende por Robux una moneda sin esa marca.
 local CURRENCIES: { [string]: Currency } = {
 	Money = { symbol = "$", icon = "cash", color = Color3.fromRGB(85, 230, 95), start = 10, purchasable = true },
-	Gems = { symbol = "", icon = "gem", color = Color3.fromRGB(80, 190, 255), start = 0, purchasable = false },
+	Gems = { symbol = "", icon = "gem", color = Color3.fromRGB(80, 190, 255), start = 0, purchasable = true },
 }
 for _, c in KitConfig.currencies or ({} :: { KitTypes.CurrencyDef }) do
 	CURRENCIES[c.id] = { symbol = c.symbol, icon = c.icon, color = Color3.fromHex(c.color), start = c.start, purchasable = c.purchasable }

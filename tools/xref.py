@@ -105,6 +105,10 @@ class Project:
         return out
 
 
+# `Gems = { ..., purchasable = false }` (EconomyConfig) o `{ id = "Wins", ..., purchasable = false }` (receta).
+CURRENCY_FLAG = re.compile(r'(?:\b(\w+)\s*=\s*\{|\bid\s*=\s*"(\w+)")[^{}\n]*?\bpurchasable\s*=\s*(true|false)')
+
+
 def where(files: set) -> str:
     return ", ".join(sorted(files)[:3]) + ("…" if len(files) > 3 else "")
 
@@ -169,6 +173,32 @@ def check_project(base: Path) -> list:
         for name, files in sorted(p.find(r'Sound\.playMusic\(\s*"(\w+)"').items()):
             if name not in music:
                 errors.append(f"música \"{name}\" ({where(files)}): no está en AudioConfig.MUSIC")
+
+    # Monedas que se venden por Robux: lo aleatorio que se paga con ellas es aleatorio pago (Lib/PaidRandom),
+    # y eso lo decide la marca `purchasable` de la moneda.
+    config = base / "src/shared/Config"
+    flags: dict = {}
+    for name in ("EconomyConfig.luau", "KitConfig.luau"):
+        path = config / name
+        if path.exists():
+            text = code_of(path.read_text(encoding="utf-8"))
+            for m in CURRENCY_FLAG.finditer(text):
+                flags[m.group(1) or m.group(2)] = m.group(3) == "true"
+    for name in ("ShopConfig.luau", "KitConfig.luau"):
+        path = config / name
+        if not path.exists():
+            continue
+        rel = path.relative_to(base).as_posix()
+        for line in code_of(path.read_text(encoding="utf-8")).splitlines():
+            # El premio del anuncio es un Developer Product gratis: lo que da no se compra con Robux.
+            if "productId" not in line or re.match(r"\s*AD_REWARD\b", line):
+                continue
+            key = re.search(r'\bkey\s*=\s*"(\w+)"', line)
+            for currency in re.findall(r'\bcurrency\s*=\s*"(\w+)"', line):
+                if flags.get(currency) is False:
+                    product = key.group(1) if key else "?"
+                    errors.append(f"moneda \"{currency}\" ({rel}, producto \"{product}\"): se vende por Robux y no tiene "
+                                  f"purchasable = true; lo aleatorio que se pague con ella no se trataría como aleatorio pago")
 
     # Íconos con respaldo.
     icons_path = base / "src/shared/Icons.luau"
@@ -302,12 +332,24 @@ def selftest() -> int:
             'Bus.call("OpenShop")\nBus.handle("OpenIndex", f)\nBus.on("Ping", f)\n'
             'Sound.play("Click")\nSound.play("Boom")\nSound.voice("Legendary")\nSound.voice("Epic")\n'
             'Sound.playMusic("Lobby")\nlocal x = { icon = "coins" }\nlocal y = { icon = "nope_icon" }\n')
+        (base / "src/shared/Config/EconomyConfig.luau").write_text(
+            'local CURRENCIES = {\n\tMoney = { symbol = "$", color = Color3.fromRGB(1, 2, 3), purchasable = true },\n'
+            '\tGems = { symbol = "", start = 0, purchasable = false },\n}\n')
+        (base / "src/shared/Config/ShopConfig.luau").write_text(
+            'PRODUCTS = {\n\t{ key = "Cash", productId = 0, grant = { { currency = "Money", incomeMinutes = 30 } } },\n'
+            '\t{ key = "Gems100", productId = 0, grant = { { currency = "Gems", amount = 100 } } },\n},\n'
+            'AD_REWARD = { productId = 0, grant = { { currency = "Gems", amount = 5 } } },\n')
+        (base / "src/shared/Config/KitConfig.luau").write_text(
+            'currencies = {\n\t{ id = "Wins", symbol = "", start = 0, purchasable = false },\n},\n'
+            'shop = { products = {\n\t{ key = "Wins10", productId = 0, grant = { { currency = "Wins", amount = 10 } } },\n} },\n')
         errors = "\n".join(check_project(base))
         expect = ['"Lost"', '"Kit:Ghost"', 'remote "Dead"', 'remote "Nope"', 'Bus.call("OpenShop")',
-                  'Bus.on("Ping")', 'sonido "Boom"', 'voz "Epic"', 'ícono "nope_icon"']
+                  'Bus.on("Ping")', 'sonido "Boom"', 'voz "Epic"', 'ícono "nope_icon"',
+                  'moneda "Gems" (src/shared/Config/ShopConfig.luau, producto "Gems100")', 'moneda "Wins"']
         for fragment in expect:
             assert fragment in errors, (fragment, errors)
-        for fragment in ['"Rolled"', '"BuyRod"', '"Commented"', 'sonido "Click"', 'ícono "coins"', 'música']:
+        for fragment in ['"Rolled"', '"BuyRod"', '"Commented"', 'sonido "Click"', 'ícono "coins"', 'música',
+                         'moneda "Money"']:
             assert fragment not in errors, (fragment, errors)
         assert len(errors.splitlines()) == len(expect), errors
     assert code_of('local a = "x -- y" -- comentario') == 'local a = "x -- y" ', code_of('local a = "x -- y" -- comentario')

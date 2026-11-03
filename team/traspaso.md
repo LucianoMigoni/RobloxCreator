@@ -436,6 +436,7 @@ Las mascotas de cuatro patas no se rigean con Meshy, porque su rig es para human
   - Nueve pasos en orden (nube, PC, Studio, grupo, Dashboard, subidas, lanzamiento, después del lanzamiento y PR), con quién, tiempo, comandos y la frase para pedirle cada cosa a Claude.
   - Verificado en `Roblox/creator-docs` ese día: Server & Clients y el botón Client/Server para probar, Experience Settings → Security para el acceso a API, grupo de 100 Robux, insignias en Engagement → Badges, y la venta fuera del juego (Monetization → Shop → Listed; ver `roblox-monetization`).
   - Al resolver un punto, marcarlo en los dos archivos.
+  - **Arreglo de paso:** las gemas se vendían por Robux pero estaban marcadas `purchasable = false`. Ahora son `true` en la plantilla y en `games/prueba`, y `tools/xref.py` revisa que toda moneda que da un producto tenga la marca.
 
 ## 6. Qué existe hoy (mapa)
 

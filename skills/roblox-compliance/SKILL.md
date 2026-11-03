@@ -46,7 +46,7 @@ Verificado el 2026-10-25 en `/production/promotion/content-maturity`, `/producti
 7. **Escribir `docs/cumplimiento.md`** con el inventario, las respuestas propuestas, la etiqueta esperada, los textos filtrados, las políticas y los pendientes, y mostrarlo. **El cuestionario lo envía una persona** del equipo en el Creator Dashboard (**Publish settings → Content rating**) después de revisar las respuestas.
 
 ## Con el armador (`roblox-game-kits`)
-- **Aleatorio pago** (`template/src/shared/Lib/PaidRandom.luau`, regla oficial verificada el 2026-11-03): es lo que se paga con Robux o con una moneda que se vende por Robux y da un resultado al azar. La plata del núcleo se vende por Robux, así que cuenta. El armador ya lo resuelve:
+- **Aleatorio pago** (`template/src/shared/Lib/PaidRandom.luau`, regla oficial verificada el 2026-11-03): es lo que se paga con Robux o con una moneda que se vende por Robux y da un resultado al azar. La plata y las gemas del núcleo se venden por Robux, así que cuentan. Cada moneda lo dice con `purchasable` en `Config/EconomyConfig.luau` (o en `currencies` de la receta), y `tools/check.py` falla si un producto vende por Robux una moneda sin esa marca. El armador ya lo resuelve:
   - **huevos y tiradas:** con un precio en una moneda que se vende, son aleatorio pago solos (`paidRandom = true` lo fuerza para otra moneda). Las probabilidades se ven en la ventana con la suerte activa, y a quien PolicyService se lo restringe no se le venden;
   - **fusión con `mutationChance`:** el botón "Merge Odds" del inventario muestra todos los resultados, y a quien está restringido nunca le sale mutación;
   - **cosecha:** la tienda de semillas muestra las probabilidades de mutación y tamaño, y a quien está restringido la cosecha le sale sin azar;
