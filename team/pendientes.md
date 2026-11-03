@@ -53,7 +53,7 @@ Lo que se registra con `claude mcp add` en una PC no viaja a la nube: en la nube
 **Una vez:**
 - [ ] Decidir la cuenta dueña de los juegos: un grupo (recomendado). Poner su id en `GameConfig.GROUP_ID` de cada juego (da el premio y el bono por unirse) y darles a los dos un rol que pueda crear experiencias y assets.
 - [ ] 2FA y verificación con documento en la cuenta que publica: la piden los anuncios con premio y llegar a menores de 16, y sube el cupo de audio de 10 a 100 subidas por mes.
-- [ ] Elegir las tomas de sonido (`assets/audio/hit-sfx` y `hit-voices`) y subirlas.
+- [ ] Elegir las tomas de sonido (`assets/audio/hit-sfx` y `hit-voices`) y subirlas. Las voces de anunciador ("LEGENDARY!", "SO LUCKY!", "NEW RECORD!", "DOUBLE MONEY!") ya están conectadas a sus momentos: suenan en cuanto sus ids estén en `AssetIds.voices`.
 
 **En cada juego:**
 - [ ] *Max Players* del lugar = `plots.count` de la receta, si usa bases (una base por jugador).
@@ -71,6 +71,11 @@ Lo que se registra con `claude mcp add` en una PC no viaja a la nube: en la nube
 - [ ] El mapa que arma MapKit con una receta: que se vea como la vista previa (`skills/roblox-game-kits/references/mapa/`), que cada bloque encuentre lo suyo y que los puestos, la ruleta y el cofre abran lo que corresponde. Las tablas de posiciones del mundo se llenan con datos de todos los servidores solo con el lugar publicado (en una copia de prueba con *Enable Studio Access to API Services*); sin eso muestran a los jugadores del servidor.
 - [ ] El juego de prueba rehecho con el armador (`games/prueba`): seguir el loop de su README (comprar, juntar, fusionar, robar con dos jugadores, trabar, renacer) y anotar lo que falte en `games/prueba/docs/decisiones.md`.
 - [ ] Guardado con dos ventanas de Studio a la vez (la segunda queda en "errored" mientras la primera tiene el bloqueo).
+- [ ] Lo que sumó la revisión del 2026-11-03, en `games/prueba`:
+  - el botón "LOCK" de la barra de acción: aparece estando en la base y cuenta la traba ("LOCKED 0:45") y la espera ("LOCK IN 1:30");
+  - "Merge Odds" en el inventario: Normal 94 %, Gold 5 %, Rainbow 1 % y la línea de Lucky Fuse;
+  - los pases Long Lock (traba de 120 s) y Fast Thief (más rápido llevando lo robado), con ids de prueba;
+  - con un jugador restringido (forzar el atributo `PaidRandomRestricted` en la barra de comandos): los huevos pagados con plata no se venden, y la fusión y la cosecha salen siempre Normal.
 
 ## 5. Decisiones que esperan al usuario
 
