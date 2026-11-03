@@ -63,6 +63,19 @@ Piezas comunes: `KitWorld` (etiquetas, prompts y pads con la distancia medida en
   - que cada bloque encuentre lo suyo;
   - que nada choque y que lo que se usa esté sobre un piso;
   - que el mismo nombre de receta dé siempre el mismo mapa.
+- **Estilo:** sale de mirar las miniaturas oficiales y fotogramas de videos de gameplay de *Steal An Egg*, *Steal a Brainrot* y *Fish It!* (2026-11-03). Lo que hace rico a sus mapas, y lo que copia MapPlan:
+  - **Piso y colores:** plástico con studs (`SurfaceType.Studs`) y colores muy saturados (verde lima). Alrededor, cerros en terrazas color arena con el borde verde que encierran el mapa, o mar en los juegos de agua.
+  - **Bases:**
+    - corrales con cerco de postes y travesaños de color (Steal An Egg);
+    - o edificios de paredes altas con vidrio (Steal a Brainrot);
+    - en los dos casos, pedestales para las unidades, placa de cobro verde y láser en la entrada.
+  - **Puestos:** de madera, con toldo a rayas y un aro brillante en el piso. La cinta es una alfombra roja con studs y arco.
+  - **Adornos:**
+    - faroles, flores y arbustos;
+    - una máquina de fusión de bloques de colores;
+    - islas con cerco de madera, muelles de tablas y un arco con el nombre de la zona;
+    - la criatura más rara, gigante, en la plaza (vitrina).
+  - **Lo que no se puede con partes:** el agua de terreno de Fish It!, las ruinas y los efectos de partículas. Eso se agrega a mano en Studio sobre el mapa armado (carpeta `Map` propia).
 - **Opciones de `map`:**
 
   | Opción | Qué hace |
@@ -74,6 +87,9 @@ Piezas comunes: `KitWorld` (etiquetas, prompts y pads con la distancia medida en
   | `leaderboard` | Tablas de los dos primeros `leaderstats`. |
   | `groupChest` | Cofre del grupo. Se pone solo con `GameConfig.GROUP_ID`. |
   | `nextUpdate` | Arco con el cartel "NEXT UPDATE: …". |
+  | `bases` | `"pen"` (corral, por defecto) o `"building"` (paredes altas). |
+  | `backdrop` | `"hills"`, `"ocean"` o `"none"`. Por defecto: mar en playa, bajo el agua y pesca; cerros en lo demás. |
+  | `showcase` | Unidad gigante de la vitrina. Por defecto, la última de `units.list`; `""` para ninguna. |
 - **Distribución:**
   - **Plaza:** spawn en el centro, mirando a −Z, y cuatro pasos en cruz.
   - **Alrededor de la plaza:** puestos, tablas, ruleta y cofre en anillos, mirando al centro.
@@ -88,14 +104,16 @@ Piezas comunes: `KitWorld` (etiquetas, prompts y pads con la distancia medida en
   | `KitShopStand` | `Window`, `Label` | Prompt local que abre esa ventana. "Robux" abre la tienda en la sección Currency. |
   | `KitLeaderboard` | `Stat` | `Social/GlobalLeaderboardService` guarda y lee los mejores con OrderedDataStore, con los valores codificados con `Lib/Ranking`. Deja la lista en el atributo `Top`, y `LeaderboardController` la dibuja en la parte con atributo `Face`. |
   | `KitGroupChest` | — | Prompt que cobra el premio por unirse al grupo (`Bus "ClaimGroup"`). |
+  | `KitShowcase` | `Unit` | `server/Map/Showcase` pone encima el modelo de esa unidad escalado ×4, mirando al spawn, con su cartel. |
 - **`KitZone`:** es una caja que cubre la zona. Al teletransportarse se llega al centro de su cara de abajo, así que esa cara tiene que estar en el piso.
 - **Vista previa sin Studio:**
   - Comando: `node tools/render3d/mapview.cjs --recipe <receta.luau> --out <prefijo>`.
   - Genera dos imágenes: `-hero.png` (en perspectiva) y `-top.png` (vista desde arriba).
   - Sirve para revisar el armado y para mostrarlo en el PR.
   - Ejemplos en `references/mapa/`:
-    - `completo-heroe.jpg` y `completo-arriba.jpg`: la receta de prueba con todo prendido.
-    - `temas.jpg`: robar en dulces, obby en el espacio y huevos en la playa.
+    - `completo-heroe.jpg` y `completo-arriba.jpg`: la receta de prueba con todo prendido;
+    - `robar-pradera.jpg`: robar y colocar con cerros, corrales, alfombra roja y vitrina;
+    - `temas.jpg`: robar en dulces (cerros de chocolate), obby en el espacio y huevos en la playa (con mar).
 
 ## Las fórmulas, armadas
 

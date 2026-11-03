@@ -42,6 +42,7 @@ return {
 	SHOP_STAND = "KitShopStand",
 	LEADERBOARD = "KitLeaderboard",
 	GROUP_CHEST = "KitGroupChest",
+	SHOWCASE = "KitShowcase", -- pedestal con la unidad gigante (atributo Unit)
 
 	-- Atributos que pone el servidor.
 	OWNER = "Owner", -- UserId del dueño de una base (0 = libre)

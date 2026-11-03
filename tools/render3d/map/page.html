@@ -89,6 +89,33 @@ function grain(kind) {
 }
 const GRAINS = {};
 
+// Studs de Roblox (SurfaceType.Studs) en la cara de arriba: uno por stud, con brillo y sombra.
+let STUDS = null;
+function studsTexture() {
+  if (STUDS) return STUDS;
+  const c = document.createElement('canvas');
+  c.width = c.height = 32;
+  const g = c.getContext('2d');
+  g.fillStyle = '#f0f0f0';
+  g.fillRect(0, 0, 32, 32);
+  g.fillStyle = '#c8c8c8';
+  g.beginPath();
+  g.arc(17, 17, 9.5, 0, Math.PI * 2);
+  g.fill();
+  g.fillStyle = '#ffffff';
+  g.beginPath();
+  g.arc(15.5, 15.5, 8.5, 0, Math.PI * 2);
+  g.fill();
+  g.strokeStyle = 'rgba(0,0,0,0.12)';
+  g.lineWidth = 1;
+  g.strokeRect(0.5, 0.5, 31, 31);
+  STUDS = new THREE.CanvasTexture(c);
+  STUDS.wrapS = STUDS.wrapT = THREE.RepeatWrapping;
+  STUDS.colorSpace = THREE.SRGBColorSpace;
+  STUDS.anisotropy = 8;
+  return STUDS;
+}
+
 function lighten(hex, amount) {
   return '#' + new THREE.Color(hex).lerp(new THREE.Color('#ffffff'), amount).getHexString();
 }
@@ -223,6 +250,13 @@ function build(plan) {
     if ((p.transparency || 0) >= 1) continue;
     const shape = p.mesh === 'Sphere' ? 'Ball' : p.shape || 'Block';
     let mat = material(p);
+    if (p.studs && shape === 'Block') {
+      const map = studsTexture().clone();
+      map.needsUpdate = true;
+      map.repeat.set(p.size.x, p.size.z);
+      const top = new THREE.MeshLambertMaterial({ color: new THREE.Color(p.color), map });
+      mat = [mat, mat, top, mat, mat, mat]; // BoxGeometry: +X, −X, +Y (arriba), −Y, +Z, −Z
+    }
     if (p.attrs && p.attrs.Face && groups[p.group] && (groups[p.group].tags || []).includes('KitLeaderboard')) {
       const face = new THREE.MeshBasicMaterial({ map: boardTexture(groups[p.group].attrs.Stat) });
       mat = [mat, mat, mat, mat, mat, face]; // BoxGeometry: +X, −X, +Y, −Y, +Z, −Z (Front)
@@ -249,6 +283,23 @@ function build(plan) {
     for (const tag of tags) {
       if (SERVER_SIGNS[tag]) sign(scene, p, SERVER_SIGNS[tag](p.attrs || {}));
     }
+  }
+  // Vitrina: la unidad gigante que pone el servidor (acá, una bola de su color con su cartel).
+  const units = Object.fromEntries((plan.units || []).map((u) => [u.id, u]));
+  const RARITY = { Common: '#B8C0CC', Uncommon: '#46D64B', Rare: '#2EC5F5', Epic: '#A35CFF', Legendary: '#FFD23A', Mythic: '#FF3B4F', Secret: '#1a1426' };
+  for (const g of plan.groups) {
+    if (!(g.tags || []).includes('KitShowcase')) continue;
+    const top = plan.parts.filter((p) => p.group === g.key).reduce((a, p) => Math.max(a, p.pos.y + p.size.y / 2), 0);
+    const base = firstPart[g.key];
+    const unit = units[g.attrs && g.attrs.Unit] || {};
+    const color = unit.color || RARITY[unit.rarity] || '#FFD23A';
+    const ball = new THREE.Mesh(GEOMETRY.Ball, new THREE.MeshLambertMaterial({ color: new THREE.Color(color) }));
+    ball.scale.set(12, 12, 12);
+    ball.position.set(base.pos.x, top + 6, base.pos.z);
+    ball.castShadow = true;
+    scene.add(ball);
+    const label = String(unit.name || g.attrs.Unit).toUpperCase() + (unit.rarity ? ' · ' + String(unit.rarity).toUpperCase() : '');
+    sign(scene, { pos: { x: base.pos.x, y: top + 6, z: base.pos.z }, size: { y: 12 } }, { Text: label, Variant: 'Rainbow' in VARIANTS ? 'Rainbow' : 'Purple', Width: 16 });
   }
   for (const g of plan.groups) {
     const tags = g.tags || [];

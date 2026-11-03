@@ -82,7 +82,9 @@ local function makePart(spec: MapPlan.Part): BasePart
 	part.Color = color(spec.color)
 	part.Material = material(spec.material)
 	part.Transparency = spec.transparency or 0
-	part.TopSurface = Enum.SurfaceType.Smooth
+	-- Studs arriba: el look clásico de los hits (SurfaceType.Studs; lo obsoleto de SurfaceType es la
+	-- unión entre partes, no el dibujo: referencia de SurfaceType en creator-docs, 2026-11-03).
+	part.TopSurface = if spec.studs then Enum.SurfaceType.Studs else Enum.SurfaceType.Smooth
 	part.BottomSurface = Enum.SurfaceType.Smooth
 	apply(part, spec.tags, spec.attrs)
 	return part

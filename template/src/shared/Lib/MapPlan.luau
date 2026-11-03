@@ -4,6 +4,17 @@
 -- server/Map/MapKit lo convierte en partes. Un mapa hecho a mano en Studio funciona igual si usa las
 -- mismas etiquetas (Kits/Tags); MapKit solo arma uno si el lugar no tiene carpeta "Map".
 --
+-- El estilo sale de mirar Steal An Egg, Steal a Brainrot y Fish It! (miniaturas y videos, 2026-11-03;
+-- notas en skills/roblox-game-kits/references/bloques.md, "El mapa"):
+-- - piso de plástico con studs, colores muy saturados;
+-- - corrales con cerco (o edificios de paredes altas) y pedestales para las unidades;
+-- - puestos de madera con toldo a rayas y un aro brillante en el piso;
+-- - alfombra roja con studs como cinta, placa de cobro verde;
+-- - faroles, flores y arbustos;
+-- - cerros de fondo o mar;
+-- - islas con cerco de madera y arco con su nombre;
+-- - la unidad más rara, gigante, en la plaza.
+--
 -- Distribución (Y arriba; el piso arriba en y = 0; pisos flotantes con su barranco abajo):
 -- - Centro: plaza con el spawn (mirando al sur) y cuatro pasos en cruz que nada sólido tapa. Los
 --   puestos (`map.shops` o los que piden los bloques), las tablas de posiciones, la ruleta y el cofre
@@ -41,6 +52,7 @@ export type Part = {
 	rotZ: number?,
 	color: string, -- hex
 	material: string?, -- nombre de Enum.Material
+	studs: boolean?, -- studs arriba (SurfaceType.Studs, el look clásico de los hits)
 	transparency: number?,
 	collide: boolean?, -- por defecto true
 	tags: { string }?,
@@ -72,8 +84,11 @@ export type Palette = {
 	path: string,
 	edge: string,
 	cliff: string, -- barranco debajo de cada piso
+	hill: string, -- cerros de fondo
+	fence: string, -- cercos de las islas
 	trunk: string,
 	leaves: { string },
+	flowers: { string },
 	rock: string,
 	water: string,
 	decor: string, -- "tree", "palm", "lollipop", "pine", "cactus", "crystal", "coral"
@@ -90,6 +105,9 @@ export type Plan = {
 }
 
 local ACCENTS = { "#FF5C8A", "#2EC5F5", "#FFD23A", "#46D64B", "#A35CFF", "#FF9F1A", "#2FE0C8", "#FF3B4F" }
+local SIGN_VARIANTS = { "Accept", "Info", "Purple", "Pink", "Orange", "Cyan", "Premium" }
+local WOOD = "#C98B4F"
+local WOOD_DARK = "#8A5A2B"
 
 -- Medidas (studs).
 local PLAZA_RADIUS = 50
@@ -102,21 +120,22 @@ local FIRST_ISLAND_X = 185 -- centro de la primera isla (puente de ~30 desde el 
 local ISLAND_STEP = 200 -- de centro a centro (puentes de 50 entre islas)
 local SOUTH_ROW_Z = -98 -- fila de puestos del sur
 local ARCH_Z = -56 -- arco del cartel NEXT UPDATE
+local SHOWCASE = { r = 24, a = 135 } -- pedestal de la unidad gigante, adelante y a la derecha del spawn
 local CELL = 9 -- espacios y parcelas de las bases
 local COLUMNS = 4
 
 MapPlan.THEMES = {
-	meadow = { ground = "#5BD35B", path = "#F1E3B5", edge = "#3FA944", cliff = "#8A5A2B", trunk = "#8A5A2B", leaves = { "#3AD152", "#2FBF45", "#7EE35F" }, rock = "#A3A9B8", water = "#3BA7FF", decor = "tree" },
-	beach = { ground = "#F7DE8F", path = "#FFF3CF", edge = "#E9C46A", cliff = "#C9A060", trunk = "#B07A3A", leaves = { "#3AD152", "#2FBF45" }, rock = "#D9C08A", water = "#2EC5F5", decor = "palm" },
-	candy = { ground = "#FFA3D7", path = "#FFFFFF", edge = "#FF7AC4", cliff = "#B0662E", trunk = "#FFFFFF", leaves = { "#FF5C8A", "#A35CFF", "#2FE0C8", "#FFD23A" }, rock = "#FFCCE8", water = "#B488FF", decor = "lollipop" },
-	snow = { ground = "#F2F7FF", path = "#CFE3F7", edge = "#BFD9F2", cliff = "#8FB4D9", trunk = "#7A5A3A", leaves = { "#2E8B57", "#3BA06A" }, rock = "#AFC6DD", water = "#9AD8FF", decor = "pine" },
-	jungle = { ground = "#3FAE4A", path = "#B08A5A", edge = "#2F8A3A", cliff = "#6B4423", trunk = "#6B4423", leaves = { "#1F8A3A", "#2FA84A", "#4CC35A" }, rock = "#7D8B7A", water = "#3BC9A8", decor = "tree" },
-	desert = { ground = "#F2C46B", path = "#F7DCA0", edge = "#E3A54C", cliff = "#C97A45", trunk = "#4CAF50", leaves = { "#4CAF50", "#3E9B45" }, rock = "#D98C5F", water = "#3BA7FF", decor = "cactus" },
-	volcano = { ground = "#4A3B3B", path = "#6B5050", edge = "#2E2424", cliff = "#2A1F1F", trunk = "#3A2E2E", leaves = { "#FF6A1A", "#FFB21A" }, rock = "#5A4A4A", water = "#FF5A1A", decor = "crystal" },
-	space = { ground = "#3B2A6B", path = "#6B5BD6", edge = "#2A1E4E", cliff = "#22183F", trunk = "#2A1E4E", leaves = { "#2EE0C8", "#FF5CE1", "#A35CFF" }, rock = "#4E3E8A", water = "#2EE0C8", decor = "crystal", night = true },
-	farm = { ground = "#7FD957", path = "#C8A06A", edge = "#5FB83E", cliff = "#8A5A2B", trunk = "#8A5A2B", leaves = { "#3AD152", "#2FBF45" }, rock = "#A3A9B8", water = "#3BA7FF", decor = "tree" },
-	city = { ground = "#6B7080", path = "#D5D9E2", edge = "#4A4E5C", cliff = "#3A3E4A", trunk = "#7A5A3A", leaves = { "#3AD152", "#2FBF45" }, rock = "#9AA0AD", water = "#3BA7FF", decor = "tree" },
-	underwater = { ground = "#2E8BC9", path = "#7FD6F2", edge = "#1F6FA8", cliff = "#1A5A8A", trunk = "#1F6FA8", leaves = { "#FF5C8A", "#FF9F1A", "#A35CFF" }, rock = "#3F7FA8", water = "#2EC5F5", decor = "coral" },
+	meadow = { ground = "#6BDF3A", path = "#F3E2B0", edge = "#48B52C", cliff = "#9C6B3E", hill = "#D9A066", fence = "#8B5A2B", trunk = "#8A5A2B", leaves = { "#3AD152", "#2FBF45", "#7EE35F" }, flowers = { "#FF5C8A", "#FFD23A", "#FFFFFF", "#A35CFF" }, rock = "#A3A9B8", water = "#3BA7FF", decor = "tree" },
+	beach = { ground = "#F7DE8F", path = "#FFF3CF", edge = "#E9C46A", cliff = "#C9A060", hill = "#E8C27A", fence = "#C68A4E", trunk = "#B07A3A", leaves = { "#3AD152", "#2FBF45" }, flowers = { "#FF5C8A", "#FF9F1A", "#FFFFFF" }, rock = "#D9C08A", water = "#2EC5F5", decor = "palm" },
+	candy = { ground = "#FFA3D7", path = "#FFFFFF", edge = "#FF7AC4", cliff = "#7A4A2E", hill = "#8B5A3C", fence = "#FF7AC4", trunk = "#FFFFFF", leaves = { "#FF5C8A", "#A35CFF", "#2FE0C8", "#FFD23A" }, flowers = { "#2FE0C8", "#FFD23A", "#A35CFF" }, rock = "#FFCCE8", water = "#B488FF", decor = "lollipop" },
+	snow = { ground = "#F2F7FF", path = "#CFE3F7", edge = "#BFD9F2", cliff = "#8FB4D9", hill = "#9CC3E6", fence = "#7A5A3A", trunk = "#7A5A3A", leaves = { "#2E8B57", "#3BA06A" }, flowers = { "#2EC5F5", "#A35CFF", "#FFFFFF" }, rock = "#AFC6DD", water = "#9AD8FF", decor = "pine" },
+	jungle = { ground = "#3FBF4A", path = "#C89A60", edge = "#2F8A3A", cliff = "#6B4423", hill = "#8A6A45", fence = "#6B4423", trunk = "#6B4423", leaves = { "#1F8A3A", "#2FA84A", "#4CC35A" }, flowers = { "#FF5C8A", "#FF9F1A", "#FFD23A" }, rock = "#7D8B7A", water = "#3BC9A8", decor = "tree" },
+	desert = { ground = "#F2C46B", path = "#F7DCA0", edge = "#E3A54C", cliff = "#C97A45", hill = "#E0995A", fence = "#A86B3C", trunk = "#4CAF50", leaves = { "#4CAF50", "#3E9B45" }, flowers = { "#FF5C8A", "#FFD23A" }, rock = "#D98C5F", water = "#3BA7FF", decor = "cactus" },
+	volcano = { ground = "#5A4646", path = "#7A5C5C", edge = "#2E2424", cliff = "#2A1F1F", hill = "#3A2C2C", fence = "#3A2E2E", trunk = "#3A2E2E", leaves = { "#FF6A1A", "#FFB21A" }, flowers = { "#FF6A1A", "#FFB21A" }, rock = "#5A4A4A", water = "#FF5A1A", decor = "crystal" },
+	space = { ground = "#4B3A8B", path = "#7B6BE6", edge = "#2A1E4E", cliff = "#22183F", hill = "#6B5BD6", fence = "#6B5BD6", trunk = "#2A1E4E", leaves = { "#2EE0C8", "#FF5CE1", "#A35CFF" }, flowers = { "#2EE0C8", "#FF5CE1" }, rock = "#4E3E8A", water = "#2EE0C8", decor = "crystal", night = true },
+	farm = { ground = "#7FE04F", path = "#D9B27A", edge = "#5FB83E", cliff = "#8A5A2B", hill = "#C98F55", fence = "#A0522D", trunk = "#8A5A2B", leaves = { "#3AD152", "#2FBF45" }, flowers = { "#FF5C8A", "#FFD23A", "#FFFFFF" }, rock = "#A3A9B8", water = "#3BA7FF", decor = "tree" },
+	city = { ground = "#7C8294", path = "#E1E5EE", edge = "#4A4E5C", cliff = "#3A3E4A", hill = "#B9BFCC", fence = "#9AA0AD", trunk = "#7A5A3A", leaves = { "#3AD152", "#2FBF45" }, flowers = { "#FF5C8A", "#2EC5F5" }, rock = "#9AA0AD", water = "#3BA7FF", decor = "tree" },
+	underwater = { ground = "#2E9BD9", path = "#8FE0F7", edge = "#1F6FA8", cliff = "#1A5A8A", hill = "#3F8FC0", fence = "#1F6FA8", trunk = "#1F6FA8", leaves = { "#FF5C8A", "#FF9F1A", "#A35CFF" }, flowers = { "#FF5C8A", "#FF9F1A", "#A35CFF" }, rock = "#3F7FA8", water = "#2EC5F5", decor = "coral" },
 } :: { [string]: Palette }
 
 -- Bioma de una zona por su nombre (en inglés); si no se reconoce, nil.
@@ -231,6 +250,36 @@ function MapPlan.onFloor(plan: Plan, f: Footprint): boolean
 	return false
 end
 
+-- Problemas del armado: avisos, piezas que chocan, piezas sólidas en un paso, áreas que se pisan,
+-- decoración encima de algo y piezas fuera de un piso. Vacío = sano (lo usan los tests).
+function MapPlan.audit(plan: Plan): { string }
+	local out = table.clone(plan.warnings)
+	local list = plan.footprints
+	for i = 1, #list do
+		local a = list[i]
+		if a.kind == "piece" and not MapPlan.onFloor(plan, a) then
+			table.insert(out, a.name .. " no está sobre un piso")
+		end
+		for j = i + 1, #list do
+			local c = list[j]
+			if MapPlan.overlaps(a, c) then
+				-- Por el par de clases (como texto, para que el chequeo de tipos no las refine).
+				local pair = a.kind .. "+" .. c.kind
+				local decorOnSomething = (string.find(pair, "decor", 1, true) ~= nil) and not (string.find(pair, "area", 1, true) ~= nil)
+				local bad = pair == "piece+piece"
+					or pair == "area+area"
+					or (pair == "piece+corridor" and a.solid)
+					or (pair == "corridor+piece" and c.solid)
+					or decorOnSomething
+				if bad then
+					table.insert(out, a.name .. " (" .. a.kind .. ") choca con " .. c.name .. " (" .. c.kind .. ")")
+				end
+			end
+		end
+	end
+	return out
+end
+
 local function reserve(b: Builder, name: string, kind: string, solid: boolean, cx: number, cz: number, hx: number, hz: number)
 	table.insert(b.plan.footprints, rect(name, kind, solid, cx, cz, hx, hz))
 end
@@ -288,17 +337,46 @@ local function signAttrs(text: string, variant: string, icon: string?, width: nu
 	return attrs
 end
 
--- Piso con su barranco abajo (islas flotantes).
-local function ground(b: Builder, name: string, groupKey: string, palette: Palette, cx: number, cz: number, hx: number, hz: number, material: string?)
-	part(b, { name = name, group = groupKey, size = v(hx * 2, 2, hz * 2), pos = v(cx, -1, cz), color = palette.ground, material = material or "Grass" })
+-- Piso con studs y su barranco abajo (islas flotantes).
+local function ground(b: Builder, name: string, groupKey: string, palette: Palette, cx: number, cz: number, hx: number, hz: number)
+	part(b, { name = name, group = groupKey, size = v(hx * 2, 2, hz * 2), pos = v(cx, -1, cz), color = palette.ground, material = "Plastic", studs = true })
 	part(b, { name = name .. "Cliff", group = groupKey, size = v(hx * 2 - 4, 18, hz * 2 - 4), pos = v(cx, -11, cz), color = palette.cliff, material = "Slate" })
 	floorAt(b, name, cx, cz, hx, hz)
 end
 
--- Camino de color sobre el piso (y un paso reservado que nada sólido tapa).
+-- Camino de color con studs (y un paso reservado que nada sólido tapa).
 local function path(b: Builder, name: string, groupKey: string, color: string, x0: number, x1: number, z0: number, z1: number)
-	part(b, { name = name, group = groupKey, size = v(x1 - x0, 0.5, z1 - z0), pos = v((x0 + x1) / 2, 0.2, (z0 + z1) / 2), color = color, material = "SmoothPlastic" })
+	part(b, { name = name, group = groupKey, size = v(x1 - x0, 0.5, z1 - z0), pos = v((x0 + x1) / 2, 0.2, (z0 + z1) / 2), color = color, material = "Plastic", studs = true })
 	reserve(b, name, "corridor", false, (x0 + x1) / 2, (z0 + z1) / 2, (x1 - x0) / 2, (z1 - z0) / 2)
+end
+
+-- Cerco recto de postes y dos travesaños, de (x0, z0) a (x1, z1), parado en la altura `base`.
+local function fence(b: Builder, groupKey: string, x0: number, z0: number, x1: number, z1: number, rail: string, post: string, base: number)
+	local dx, dz = x1 - x0, z1 - z0
+	local length = math.sqrt(dx * dx + dz * dz)
+	if length < 1 then
+		return
+	end
+	local n = math.max(1, math.ceil(length / 7))
+	for i = 0, n do
+		local t = i / n
+		part(b, { name = "FencePost", group = groupKey, size = v(0.9, 4.4, 0.9), pos = v(x0 + dx * t, base + 2.2, z0 + dz * t), color = post, material = "SmoothPlastic" })
+	end
+	-- El travesaño corre por su eje X: girado para seguir la dirección del cerco.
+	local rotY = math.deg(math.atan2(-dz, dx))
+	for _, h in { 1.7, 3.3 } do
+		part(b, { name = "FenceRail", group = groupKey, size = v(length, 0.55, 0.4), pos = v(x0 + dx / 2, base + h, z0 + dz / 2), rotY = rotY, color = rail, material = "SmoothPlastic" })
+	end
+end
+
+-- Farol: poste oscuro con una luz cálida arriba (solo si queda libre).
+local function lamp(b: Builder, groupKey: string, x: number, z: number)
+	if not free(b, x, z, 0.8, 0.8) then
+		return
+	end
+	part(b, { name = "LampPost", group = groupKey, shape = "Cylinder", size = v(8, 0.7, 0.7), pos = v(x, 4, z), rotZ = 90, color = "#3A3E4A", material = "Metal" })
+	part(b, { name = "LampLight", group = groupKey, shape = "Ball", size = v(2, 2, 2), pos = v(x, 8.6, z), color = "#FFE9A8", material = "Neon" })
+	reserve(b, "Lamp", "piece", true, x, z, 0.8, 0.8)
 end
 
 -- Decoración ------------------------------------------------------------------------------------------
@@ -306,9 +384,31 @@ end
 -- Lo que ocupa un adorno de escala 1 (radio, en studs).
 local DECOR_RADIUS = 5.5
 
+local function bush(b: Builder, groupKey: string, palette: Palette, x: number, z: number, s: number)
+	part(b, { name = "Bush", group = groupKey, mesh = "Sphere", size = v(6 * s, 4 * s, 5 * s), pos = v(x, 1.6 * s, z), color = pick(b, palette.leaves), material = "SmoothPlastic", collide = false })
+	part(b, { name = "Bush", group = groupKey, mesh = "Sphere", size = v(4 * s, 3.2 * s, 4 * s), pos = v(x + 2.2 * s, 1.3 * s, z + 1.4 * s), color = pick(b, palette.leaves), material = "SmoothPlastic", collide = false })
+end
+
+local function flowers(b: Builder, groupKey: string, palette: Palette, x: number, z: number, s: number)
+	for i = 0, 2 do
+		local a = math.rad(i * 120 + 30)
+		local fx, fz = x + math.cos(a) * 1.4 * s, z + math.sin(a) * 1.4 * s
+		part(b, { name = "Stem", group = groupKey, shape = "Cylinder", size = v(1.6 * s, 0.3 * s, 0.3 * s), pos = v(fx, 0.8 * s, fz), rotZ = 90, color = "#2FBF45", material = "SmoothPlastic", collide = false })
+		part(b, { name = "Flower", group = groupKey, shape = "Ball", size = v(1.1 * s, 1.1 * s, 1.1 * s), pos = v(fx, 1.8 * s, fz), color = pick(b, palette.flowers), material = "SmoothPlastic", collide = false })
+	end
+end
+
 local function decor(b: Builder, groupKey: string, palette: Palette, x: number, z: number, scale: number)
-	local leaf = pick(b, palette.leaves)
 	local s = scale
+	local roll = b.random()
+	if roll < 0.22 then
+		bush(b, groupKey, palette, x, z, s)
+		return
+	elseif roll < 0.36 then
+		flowers(b, groupKey, palette, x, z, s)
+		return
+	end
+	local leaf = pick(b, palette.leaves)
 	local kind = palette.decor
 	if kind == "palm" then
 		part(b, { name = "Trunk", group = groupKey, shape = "Cylinder", size = v(14 * s, 1.6 * s, 1.6 * s), pos = v(x, 7 * s, z), rotZ = 80, color = palette.trunk, material = "Wood" })
@@ -385,10 +485,57 @@ local function flushDecor(b: Builder)
 	table.clear(b.pending)
 end
 
+-- Un cerro escalonado: dos o tres mesetas con studs, cada una más chica, con su borde del color del
+-- piso (las terrazas de Steal An Egg). Arranca debajo del piso, como los barrancos.
+local function mesa(b: Builder, groupKey: string, palette: Palette, x: number, z: number, sx: number, sz: number, h: number)
+	local tops: { number } = if h > 26 then { h * 0.42, h * 0.74, h } elseif h > 14 then { h * 0.58, h } else { h }
+	local bottom = -18
+	local ox, oz = 0, 0
+	for k, top in tops do
+		local shrink = 1 - (k - 1) * 0.24
+		local w, d = sx * shrink, sz * shrink
+		local height = top - bottom
+		part(b, { name = "Hill", group = groupKey, size = v(w, height, d), pos = v(x + ox, bottom + height / 2, z + oz), color = palette.hill, material = "Plastic", studs = true })
+		part(b, { name = "HillTop", group = groupKey, size = v(w + 0.6, 1.2, d + 0.6), pos = v(x + ox, top + 0.6, z + oz), color = palette.ground, material = "Plastic", studs = true })
+		bottom = top
+		ox += (b.random() - 0.5) * sx * 0.12
+		oz += (b.random() - 0.5) * sz * 0.12
+	end
+end
+
+-- Cerros de fondo a lo largo de un borde, hacia afuera (nx, nz), salvo en `gaps` (tramos del borde,
+-- en distancia desde el comienzo, que quedan abiertos).
+local function ridge(b: Builder, groupKey: string, palette: Palette, ax: number, az: number, bx: number, bz: number, nx: number, nz: number, gaps: { { number } }?)
+	local dx, dz = bx - ax, bz - az
+	local length = math.sqrt(dx * dx + dz * dz)
+	local ux, uz = dx / length, dz / length
+	local t = 0
+	while t < length do
+		local w = 18 + b.random() * 14
+		local d = 16 + b.random() * 12
+		local h = 10 + b.random() * 30
+		local mid = t + w / 2
+		local open = false
+		for _, gap in gaps or ({} :: { { number } }) do
+			if mid + w / 2 > gap[1] and mid - w / 2 < gap[2] then
+				open = true
+			end
+		end
+		if not open then
+			local out = d / 2 + 1
+			local x, z = ax + ux * mid + nx * out, az + uz * mid + nz * out
+			-- El ancho va a lo largo del borde: girado si el borde corre por Z.
+			local sx, sz = if math.abs(ux) > 0.5 then w else d, if math.abs(ux) > 0.5 then d else w
+			mesa(b, groupKey, palette, x, z, sx, sz, h)
+		end
+		t += w - 4
+	end
+end
+
 -- Piezas -----------------------------------------------------------------------------------------------
 
--- Puesto que abre una ventana (KitShopStand): mostrador, techo de color inclinado hacia el cliente y
--- cartel. `faceY`: hacia dónde mira el mostrador, f = (sin faceY, cos faceY).
+-- Puesto que abre una ventana (KitShopStand): mostrador de madera, toldo a rayas que baja hacia el
+-- cliente, cartel y aro brillante en el piso. `faceY`: hacia dónde mira, f = (sin faceY, cos faceY).
 local function stand(b: Builder, parent: string, window: string, label: string, icon: string?, color: string, x: number, z: number, faceY: number)
 	local g = group(b, "Stand_" .. window, parent, true, { "KitShopStand", "HitSign" }, {
 		Window = window,
@@ -400,15 +547,21 @@ local function stand(b: Builder, parent: string, window: string, label: string, 
 	})
 	local rad = math.rad(faceY)
 	local fx, fz = math.sin(rad), math.cos(rad)
-	part(b, { name = "Counter", group = g, size = v(12, 4, 4), pos = v(x, 2, z), rotY = faceY, color = "#FFFFFF", material = "SmoothPlastic" })
+	local tx, tz = math.cos(rad), -math.sin(rad)
+	part(b, { name = "Counter", group = g, size = v(12, 4, 4), pos = v(x, 2, z), rotY = faceY, color = WOOD, material = "WoodPlanks" })
 	part(b, { name = "Front", group = g, size = v(12.2, 1.2, 4.2), pos = v(x, 4.2, z), rotY = faceY, color = color, material = "SmoothPlastic" })
 	for _, side in { -1, 1 } do
-		local px = x + math.cos(rad) * 5.4 * side - fx * 3
-		local pz = z - math.sin(rad) * 5.4 * side - fz * 3
-		part(b, { name = "Post", group = g, shape = "Cylinder", size = v(9, 1, 1), pos = v(px, 4.5, pz), rotZ = 90, color = "#FFFFFF", material = "SmoothPlastic" })
+		local px = x + tx * 5.4 * side - fx * 3
+		local pz = z + tz * 5.4 * side - fz * 3
+		part(b, { name = "Post", group = g, shape = "Cylinder", size = v(9, 1, 1), pos = v(px, 4.5, pz), rotZ = 90, color = WOOD_DARK, material = "Wood" })
 	end
-	-- La cuña baja hacia su frente (−Z): girada 180 más, baja hacia el cliente como un toldo.
-	part(b, { name = "Roof", group = g, shape = "Wedge", size = v(14, 2.5, 7), pos = v(x - fx * 2, 10, z - fz * 2), rotY = faceY + 180, color = color, material = "SmoothPlastic" })
+	-- Toldo a rayas: la cuña baja hacia su frente (−Z), así que va girada 180 más que el mostrador.
+	local stripes = 6
+	for i = 0, stripes - 1 do
+		local offset = -7 + 14 / stripes * (i + 0.5)
+		part(b, { name = "Awning", group = g, shape = "Wedge", size = v(14 / stripes, 2.5, 7), pos = v(x - fx * 2 + tx * offset, 10, z - fz * 2 + tz * offset), rotY = faceY + 180, color = if i % 2 == 0 then color else "#FFFFFF", material = "SmoothPlastic" })
+	end
+	part(b, { name = "Glow", group = g, shape = "Cylinder", size = v(0.2, 8, 8), pos = v(x + fx * 6, 0.5, z + fz * 6), rotZ = 90, color = "#FFD23A", material = "Neon", transparency = 0.35, collide = false })
 	return g
 end
 
@@ -426,6 +579,7 @@ local function leaderboard(b: Builder, stat: string, x: number, z: number, a: nu
 	local tx, tz = math.cos(rad), -math.sin(rad) -- a lo ancho
 	part(b, { name = "Board", group = g, size = v(16, 18, 1), pos = v(x, 12, z), rotY = a, color = "#2D2F3A", material = "SmoothPlastic", attrs = { Face = "Front" } })
 	part(b, { name = "Frame", group = g, size = v(17.6, 19.6, 0.8), pos = v(x + ox, 12, z + oz), rotY = a, color = "#FFD23A", material = "SmoothPlastic" })
+	part(b, { name = "Crown", group = g, shape = "Wedge", size = v(17.6, 2.4, 1.6), pos = v(x + ox, 23, z + oz), rotY = a + 180, color = "#FFD23A", material = "SmoothPlastic" })
 	for _, s in { -1, 1 } do
 		part(b, { name = "Leg", group = g, size = v(1.6, 3, 1.6), pos = v(x + ox + tx * 6 * s, 1.5, z + oz + tz * 6 * s), rotY = a, color = "#FFD23A", material = "SmoothPlastic" })
 	end
@@ -453,6 +607,7 @@ local function chest(b: Builder, x: number, z: number, a: number)
 	part(b, { name = "Chest", group = g, size = v(7, 5, 5), pos = v(x, 2.5, z), rotY = a, color = "#B07A3A", material = "WoodPlanks" })
 	part(b, { name = "Lid", group = g, size = v(7.4, 1.6, 5.4), pos = v(x, 5.8, z), rotY = a, color = "#FFD23A", material = "SmoothPlastic" })
 	part(b, { name = "Lock", group = g, size = v(1.4, 1.8, 0.6), pos = v(x - math.sin(math.rad(a)) * 2.8, 4.6, z - math.cos(math.rad(a)) * 2.8), rotY = a, color = "#FFD23A", material = "Neon" })
+	part(b, { name = "Glow", group = g, shape = "Cylinder", size = v(0.2, 9, 9), pos = v(x, 0.5, z), rotZ = 90, color = "#A35CFF", material = "Neon", transparency = 0.4, collide = false })
 end
 
 -- Lugares del lobby, en orden (radio, ángulo; ángulo 180 = sur, adelante del spawn). Cada cosa toma el
@@ -518,8 +673,8 @@ end
 MapPlan.plotLayout = plotLayout
 
 -- Base de un jugador (KitPlot). `side`: 1 si la entrada mira a +X, −1 si a −X. Coordenadas locales: u
--- de atrás (−half) hacia la entrada (+half), w a lo largo de la avenida.
-local function plot(b: Builder, recipe: Types.KitConfig, index: number, cx: number, cz: number, side: number, layout: PlotLayout)
+-- de atrás (−half) hacia la entrada (+half), w a lo largo de la avenida. `style`: "pen" o "building".
+local function plot(b: Builder, recipe: Types.KitConfig, index: number, cx: number, cz: number, side: number, layout: PlotLayout, style: string)
 	local plots = recipe.plots :: Types.PlotsConfig
 	local palette = b.plan.palette
 	local accent = ACCENTS[(index - 1) % #ACCENTS + 1]
@@ -535,32 +690,57 @@ local function plot(b: Builder, recipe: Types.KitConfig, index: number, cx: numb
 	end
 	reserve(b, "Plot" .. index, "area", true, cx, cz, half + 1, half + 1)
 	local fx, fz = at(0, 0)
-	part(b, { name = "Floor", group = g, size = v(size, 1, size), pos = v(fx, 0.5, fz), color = palette.path, material = "SmoothPlastic" })
-	part(b, { name = "Trim", group = g, size = v(size + 2, 0.6, size + 2), pos = v(fx, 0.3, fz), color = accent, material = "SmoothPlastic" })
-	-- Paredes bajas con la entrada abierta (16) hacia la avenida.
-	local bx, bz = at(-half, 0)
-	part(b, { name = "Wall", group = g, size = v(1, 4, size), pos = v(bx, 3, bz), color = accent, material = "SmoothPlastic" })
-	for _, s in { -1, 1 } do
-		local wx, wz = at(0, s * half)
-		part(b, { name = "Wall", group = g, size = v(size, 4, 1), pos = v(wx, 3, wz), color = accent, material = "SmoothPlastic" })
-		local ex, ez = at(half, s * (half + 8) / 2)
-		part(b, { name = "Wall", group = g, size = v(1, 4, half - 8), pos = v(ex, 3, ez), color = accent, material = "SmoothPlastic" })
+	part(b, { name = "Floor", group = g, size = v(size, 1, size), pos = v(fx, 0.5, fz), color = palette.path, material = "Plastic", studs = true })
+	part(b, { name = "Trim", group = g, size = v(size + 2, 0.6, size + 2), pos = v(fx, 0.3, fz), color = accent, material = "Plastic", studs = true })
+	if style == "building" then
+		-- Paredes altas del color de la base, franja de vidrio y borde blanco arriba; abierta adelante.
+		local height = 12
+		local walls: { { u: number, w: number, su: number, sw: number } } = {
+			{ u = -half, w = 0, su = 1.5, sw = size },
+			{ u = 0, w = half, su = size, sw = 1.5 },
+			{ u = 0, w = -half, su = size, sw = 1.5 },
+			{ u = half, w = (half + 8) / 2, su = 1.5, sw = half - 8 },
+			{ u = half, w = -(half + 8) / 2, su = 1.5, sw = half - 8 },
+		}
+		for _, wall in walls do
+			local wx, wz = at(wall.u, wall.w)
+			local sx, sz = wall.su, wall.sw -- u corre por X y w por Z, de los dos lados de la avenida
+			part(b, { name = "Wall", group = g, size = v(sx, height, sz), pos = v(wx, 1 + height / 2, wz), color = accent, material = "Plastic", studs = true })
+			part(b, { name = "WallTop", group = g, size = v(sx + 0.6, 0.8, sz + 0.6), pos = v(wx, 1 + height + 0.4, wz), color = "#FFFFFF", material = "SmoothPlastic" })
+			part(b, { name = "Window", group = g, size = v(sx + 0.3, 3, sz + 0.3), pos = v(wx, 8.5, wz), color = "#9FE3FF", material = "Glass", transparency = 0.2 })
+		end
+	else
+		-- Corral: postes blancos y travesaños del color de la base, abierto adelante (16).
+		local corners = {
+			{ -half, -half, -half, half }, -- atrás
+			{ -half, half, half, half }, -- costado
+			{ -half, -half, half, -half }, -- costado
+			{ half, half, half, 8 }, -- adelante
+			{ half, -half, half, -8 },
+		}
+		for _, c in corners do
+			local x0, z0 = at(c[1], c[2])
+			local x1, z1 = at(c[3], c[4])
+			fence(b, g, x0, z0, x1, z1, accent, "#FFFFFF", 1)
+		end
 	end
 	-- Entrada: láser de la traba (lo prende el servidor), postes y cartel del dueño; adentro, un paso libre.
 	local lx, lz = at(half, 0)
+	local signY = if style == "building" then 15.5 else 12.5
 	part(b, { name = "Barrier", group = g, size = v(1, 9, 16), pos = v(lx, 5.5, lz), color = "#FF3B4F", material = "Neon", transparency = 1, collide = false, tags = { "KitBarrier" } })
 	for _, s in { -1, 1 } do
 		local px, pz = at(half, s * 8.5)
-		part(b, { name = "SignPost", group = g, size = v(1, 13, 1), pos = v(px, 6.5, pz), color = "#FFFFFF", material = "SmoothPlastic" })
+		part(b, { name = "SignPost", group = g, size = v(1, signY, 1), pos = v(px, signY / 2, pz), color = "#FFFFFF", material = "SmoothPlastic" })
 		hold("SignPost" .. s, true, half, s * 8.5, 0.5, 0.5)
 	end
-	part(b, { name = "Sign", group = g, size = v(1, 3.5, 18), pos = v(lx, 13.5, lz), color = accent, material = "SmoothPlastic" })
+	part(b, { name = "Sign", group = g, size = v(1, 3.5, 18), pos = v(lx, signY + 1, lz), color = WOOD, material = "WoodPlanks" })
 	local ux, uz = at(half - 12, 0)
 	reserve(b, "Plot" .. index .. ".Entry", "corridor", false, ux, uz, 12, 7)
-	-- Cobro, traba y reaparecer, cerca de la entrada.
+	-- Placa de cobro (verde con borde blanco), traba y reaparecer, cerca de la entrada.
 	local cxp, czp = at(half - 7, half - 9)
-	pad(b, g, "CollectPad", 7, cxp, czp, "#46D64B", { "KitCollectPad" }, nil, 1)
-	hold("CollectPad", false, half - 7, half - 9, 3.5, 3.5)
+	part(b, { name = "CollectBorder", group = g, size = v(9, 0.3, 9), pos = v(cxp, 1.1, czp), color = "#FFFFFF", material = "SmoothPlastic" })
+	part(b, { name = "CollectPad", group = g, size = v(8, 0.4, 8), pos = v(cxp, 1.25, czp), color = "#46D64B", material = "Neon", transparency = 0.05, tags = { "KitCollectPad" } })
+	hold("CollectPad", false, half - 7, half - 9, 4.5, 4.5)
 	if plots.lock then
 		local kx, kz = at(half - 7, -(half - 9))
 		pad(b, g, "LockButton", 5, kx, kz, "#2EC5F5", { "KitLockButton" }, nil, 1)
@@ -568,15 +748,16 @@ local function plot(b: Builder, recipe: Types.KitConfig, index: number, cx: numb
 	end
 	local sx, sz = at(half - 14, 0)
 	part(b, { name = "Spawn", group = g, size = v(4, 1, 4), pos = v(sx, 1.5, sz), color = "#FFFFFF", transparency = 1, collide = false, tags = { "KitSpawn" } })
-	-- Espacios para las unidades, al fondo, de a 4 por fila.
+	-- Pedestales para las unidades, al fondo, de a 4 por fila (el de arriba es el espacio).
 	for i = 1, plots.maxSlots do
 		local row = (i - 1) // COLUMNS
 		local col = (i - 1) % COLUMNS
 		local u = -half + 9.5 + row * CELL
 		local w = (col - (COLUMNS - 1) / 2) * CELL
 		local x, z = at(u, w)
-		part(b, { name = "Slot" .. i, group = g, size = v(7, 0.4, 7), pos = v(x, 1.2, z), color = "#FFFFFF", material = "SmoothPlastic", tags = { "KitSlot" }, attrs = { Index = i } })
-		hold("Slot" .. i, false, u, w, 3.5, 3.5)
+		part(b, { name = "Pedestal", group = g, size = v(7.6, 0.8, 7.6), pos = v(x, 1.4, z), color = accent, material = "SmoothPlastic" })
+		part(b, { name = "Slot" .. i, group = g, size = v(7, 0.4, 7), pos = v(x, 2, z), color = "#FFFFFF", material = "SmoothPlastic", tags = { "KitSlot" }, attrs = { Index = i } })
+		hold("Slot" .. i, false, u, w, 3.8, 3.8)
 	end
 	if plots.slotPrices and #plots.slotPrices > 0 then
 		local ox, oz = at(-half + 2, 0)
@@ -611,10 +792,11 @@ local function plot(b: Builder, recipe: Types.KitConfig, index: number, cx: numb
 			local hx, hz = at(u, wb)
 			local house = group(b, "Building_" .. building.id, g, true, { "KitBuilding" }, { Building = building.id })
 			local color = ACCENTS[(i + index) % #ACCENTS + 1]
-			part(b, { name = "Walls", group = house, size = v(9, 7, 9), pos = v(hx, 4.5, hz), color = "#FFFFFF", material = "SmoothPlastic" })
+			part(b, { name = "Walls", group = house, size = v(9, 7, 9), pos = v(hx, 4.5, hz), color = "#FFFFFF", material = "Plastic", studs = true })
+			part(b, { name = "Door", group = house, size = v(0.4, 4, 3), pos = v(hx + side * 4.6, 3, hz), color = WOOD, material = "WoodPlanks" })
 			part(b, { name = "Roof", group = house, shape = "Wedge", size = v(10, 4, 5), pos = v(hx, 10, hz - 2.5), color = color, material = "SmoothPlastic" })
 			part(b, { name = "Roof", group = house, shape = "Wedge", size = v(10, 4, 5), pos = v(hx, 10, hz + 2.5), rotY = 180, color = color, material = "SmoothPlastic" })
-			hold("Building_" .. building.id, true, u, wb, 4.5, 4.5)
+			hold("Building_" .. building.id, true, u, wb, 4.7, 4.5)
 		end
 	end
 end
@@ -656,9 +838,25 @@ local function fill(b: Builder, recipe: Types.KitConfig, zone: Zone, first: bool
 	ground(b, "Island_" .. (id or "Main"), g, palette, cx, 0, half, half)
 	reserve(b, "Island_" .. (id or "Main"), "area", true, cx, 0, half, half)
 	path(b, "Path", g, palette.path, cx - half, cx + half, -7, 7)
+	-- Cerco de madera por el borde, abierto donde llega el camino.
+	local e = half - 1.5
+	fence(b, g, cx - e, e, cx + e, e, palette.fence, palette.fence, 0)
+	fence(b, g, cx - e, -e, cx + e, -e, palette.fence, palette.fence, 0)
+	for _, sx in { -1, 1 } do
+		fence(b, g, cx + sx * e, -e, cx + sx * e, -9, palette.fence, palette.fence, 0)
+		fence(b, g, cx + sx * e, 9, cx + sx * e, e, palette.fence, palette.fence, 0)
+	end
 	if id then
 		-- Región de la zona: su cara de abajo es el piso de la isla (ahí llega el teletransporte).
 		part(b, { name = "Region", group = g, size = v(ISLAND, 80, ISLAND), pos = v(cx, 40, 0), color = "#FFFFFF", transparency = 1, collide = false, tags = { "KitZone" }, attrs = { Zone = id } })
+		-- Arco de la entrada con el nombre de la zona.
+		local arch = group(b, "ZoneArch_" .. id, g, true, { "HitSign" }, signAttrs(string.upper(zone.name), SIGN_VARIANTS[(index - 1) % #SIGN_VARIANTS + 1], "map", 18))
+		local ax = cx - half + 5
+		part(b, { name = "Beam", group = arch, size = v(2.4, 2.4, 22), pos = v(ax, 16, 0), color = palette.fence, material = "WoodPlanks" })
+		for _, s in { -1, 1 } do
+			part(b, { name = "Pillar", group = arch, size = v(2.4, 16, 2.4), pos = v(ax, 8, s * 10), color = palette.fence, material = "WoodPlanks" })
+			reserve(b, "ZoneArch_" .. id, "piece", true, ax, s * 10, 1.2, 1.2)
+		end
 	end
 	local function belongs(z: string?): boolean
 		return z == zone.id or (first and z == nil)
@@ -689,14 +887,16 @@ local function fill(b: Builder, recipe: Types.KitConfig, zone: Zone, first: bool
 				local x = cx - half + 25 + col * 18
 				local z = s * 17
 				local st = group(b, "Roll_" .. def.id, g, true, { "KitRollStation" }, { Roll = def.id })
-				part(b, { name = "Pedestal", group = st, shape = "Cylinder", size = v(3, 10, 10), pos = v(x, 1.5, z), rotZ = 90, color = palette.rock, material = "SmoothPlastic" })
-				part(b, { name = "Egg", group = st, mesh = "Sphere", size = v(7, 9, 7), pos = v(x, 7.5, z), color = ACCENTS[(k + index) % #ACCENTS + 1], material = "SmoothPlastic" })
-				reserve(b, "Roll_" .. def.id, "piece", true, x, z, 5, 5)
+				part(b, { name = "Pedestal", group = st, shape = "Cylinder", size = v(3, 10, 10), pos = v(x, 1.5, z), rotZ = 90, color = "#FFFFFF", material = "SmoothPlastic" })
+				part(b, { name = "Rim", group = st, shape = "Cylinder", size = v(0.6, 11, 11), pos = v(x, 3.1, z), rotZ = 90, color = "#FFD23A", material = "SmoothPlastic" })
+				part(b, { name = "Egg", group = st, mesh = "Sphere", size = v(7, 9, 7), pos = v(x, 7.9, z), color = ACCENTS[(k + index) % #ACCENTS + 1], material = "SmoothPlastic" })
+				part(b, { name = "Spots", group = st, mesh = "Sphere", size = v(7.3, 2.2, 7.3), pos = v(x, 8.6, z), color = "#FFFFFF", material = "SmoothPlastic" })
+				reserve(b, "Roll_" .. def.id, "piece", true, x, z, 5.5, 5.5)
 				k += 1
 			end
 		end
 	end
-	-- Cintas de correr, con la ganancia de esta zona.
+	-- Cintas de correr, con la ganancia de esta zona, bajo una carpa.
 	local treadmills = recipe.map and recipe.map.treadmills
 	if treadmills then
 		local lot = lotFor("treadmills", "Treadmills")
@@ -707,9 +907,15 @@ local function fill(b: Builder, recipe: Types.KitConfig, zone: Zone, first: bool
 				part(b, { name = "Treadmill", group = g, size = v(8, 1, 14), pos = v(x, 0.5, lot.cz), color = "#2D2F3A", material = "DiamondPlate", tags = { "KitTreadmill", "HitSign" }, attrs = { Stat = treadmills.stat, Gain = gain, Text = "+" .. tostring(gain), Variant = "Info", Icon = "treadmill", Width = 7 } })
 				part(b, { name = "Rail", group = g, size = v(8, 4, 1), pos = v(x, 2.5, lot.cz + 7.5), color = "#9AA0AD", material = "Metal" })
 			end
+			part(b, { name = "Tent", group = g, size = v(46, 1, 22), pos = v(lot.cx, 13, lot.cz), color = "#FFFFFF", material = "SmoothPlastic" })
+			for _, px in { -22, 22 } do
+				for _, pz in { -10, 10 } do
+					part(b, { name = "TentPole", group = g, size = v(1, 12.5, 1), pos = v(lot.cx + px, 6.25, lot.cz + pz), color = "#3A3E4A", material = "Metal" })
+				end
+			end
 		end
 	end
-	-- Agua de pesca: un lote por estanque, con su muelle desde el camino.
+	-- Agua de pesca: un lote por estanque, con muelle de tablas desde el camino.
 	local fishing = recipe.fishing
 	if fishing then
 		for _, pool in fishing.pools do
@@ -719,7 +925,12 @@ local function fill(b: Builder, recipe: Types.KitConfig, zone: Zone, first: bool
 					local s = if lot.cz > 0 then 1 else -1
 					part(b, { name = "Shore", group = g, shape = "Cylinder", size = v(0.6, 44, 44), pos = v(lot.cx, 0.3, lot.cz), rotZ = 90, color = MapPlan.THEMES.beach.ground, material = "Sand" })
 					part(b, { name = "Water_" .. pool.id, group = g, shape = "Cylinder", size = v(0.8, 38, 38), pos = v(lot.cx, 0.4, lot.cz), rotZ = 90, color = palette.water, material = "Glass", transparency = 0.25, collide = false, tags = { "KitWater" }, attrs = { Pool = pool.id } })
-					part(b, { name = "Dock", group = g, size = v(6, 1, 12), pos = v(lot.cx, 1.2, s * 30), color = "#B07A3A", material = "WoodPlanks" })
+					part(b, { name = "Pier", group = g, size = v(6, 0.8, 20), pos = v(lot.cx, 1.2, s * 34), color = WOOD, material = "WoodPlanks" })
+					for _, px in { -2.6, 2.6 } do
+						for _, pz in { 27, 41 } do
+							part(b, { name = "PierPost", group = g, shape = "Cylinder", size = v(3.4, 0.8, 0.8), pos = v(lot.cx + px, 0.9, s * pz), rotZ = 90, color = WOOD_DARK, material = "Wood" })
+						end
+					end
 				end
 			end
 		end
@@ -753,7 +964,7 @@ local function fill(b: Builder, recipe: Types.KitConfig, zone: Zone, first: bool
 			reserve(b, "Deposit", "piece", false, cx + half - 17, -17, 4, 4)
 		end
 	end
-	-- Áreas de salvajes: un pasto por grupo.
+	-- Áreas de salvajes: un pasto con cerco por grupo, abierto hacia el camino.
 	local wild = recipe.wild
 	if wild then
 		for i, spawnDef in wild.spawns do
@@ -761,6 +972,14 @@ local function fill(b: Builder, recipe: Types.KitConfig, zone: Zone, first: bool
 				local lot = lotFor("wild", "WildArea" .. i)
 				if lot then
 					part(b, { name = "WildArea" .. i, group = g, size = v(lot.hx * 2 - 6, 0.4, lot.hz * 2 - 6), pos = v(lot.cx, 0.25, lot.cz), color = palette.edge, material = "Grass", tags = { "KitWildSpawn" }, attrs = { Pool = i, Zone = spawnDef.zone or "" } })
+					local x0, x1 = lot.cx - lot.hx + 1, lot.cx + lot.hx - 1
+					local near = if lot.cz > 0 then lot.cz - lot.hz + 1 else lot.cz + lot.hz - 1
+					local far = if lot.cz > 0 then lot.cz + lot.hz - 1 else lot.cz - lot.hz + 1
+					fence(b, g, x0, far, x1, far, palette.fence, palette.fence, 0)
+					fence(b, g, x0, near, x0, far, palette.fence, palette.fence, 0)
+					fence(b, g, x1, near, x1, far, palette.fence, palette.fence, 0)
+					fence(b, g, x0, near, lot.cx - 8, near, palette.fence, palette.fence, 0)
+					fence(b, g, lot.cx + 8, near, x1, near, palette.fence, palette.fence, 0)
 				end
 			end
 		end
@@ -797,7 +1016,7 @@ end
 
 local SHOP_STYLE: { [string]: { label: string, icon: string, color: string } } = {
 	Shop = { label = "Shop", icon = "shop", color = "#46D64B" },
-	Sell = { label = "Sell", icon = "cash", color = "#FFD23A" },
+	Sell = { label = "Sell", icon = "cash", color = "#FF3B4F" },
 	Upgrades = { label = "Upgrades", icon = "boost", color = "#FF9F1A" },
 	Seeds = { label = "Seeds", icon = "seed", color = "#46D64B" },
 	Rods = { label = "Rods", icon = "fishing", color = "#2EC5F5" },
@@ -828,23 +1047,56 @@ local function zoneList(recipe: Types.KitConfig, palette: Palette): { Zone }
 	return out
 end
 
+-- La unidad de la vitrina: la que dice `map.showcase`, o la última de la lista ("" = ninguna).
+function MapPlan.showcase(recipe: Types.KitConfig): string?
+	local units = recipe.units
+	local map = recipe.map
+	local wanted = if map then map.showcase else nil
+	if not units or #units.list == 0 or wanted == "" then
+		return nil
+	end
+	if wanted then
+		for _, u in units.list do
+			if u.id == wanted then
+				return wanted
+			end
+		end
+		return nil
+	end
+	return units.list[#units.list].id
+end
+
+-- Lo de alrededor: lo que pide la receta o, si no, mar en los temas de agua y cerros en los demás.
+local function backdropOf(recipe: Types.KitConfig, theme: string): string
+	local map = recipe.map
+	if map and map.backdrop then
+		return map.backdrop
+	end
+	if theme == "beach" or theme == "underwater" or recipe.fishing then
+		return "ocean"
+	end
+	return "hills"
+end
+
 function MapPlan.build(recipe: Types.KitConfig): Plan
 	local map = recipe.map
 	local theme = if map then map.theme else "meadow"
 	local b = newBuilder(theme, seedOf(recipe.name))
 	local palette = b.plan.palette
 	group(b, "Lobby", "Map")
-
-	-- Piso del lobby, plaza, spawn y los cuatro pasos en cruz.
-	local lobbyCx, lobbyCz = (LOBBY.x0 + LOBBY.x1) / 2, (LOBBY.z0 + LOBBY.z1) / 2
-	ground(b, "Ground", "Lobby", palette, lobbyCx, lobbyCz, (LOBBY.x1 - LOBBY.x0) / 2, (LOBBY.z1 - LOBBY.z0) / 2)
-	part(b, { name = "Plaza", group = "Lobby", shape = "Cylinder", size = v(0.4, PLAZA_RADIUS * 2, PLAZA_RADIUS * 2), pos = v(0, 0.2, 0), rotZ = 90, color = palette.path, material = "SmoothPlastic" })
-	part(b, { name = "PlazaRing", group = "Lobby", shape = "Cylinder", size = v(0.3, PLAZA_RADIUS * 2 + 6, PLAZA_RADIUS * 2 + 6), pos = v(0, 0.15, 0), rotZ = 90, color = palette.edge, material = "SmoothPlastic" })
-	part(b, { name = "Spawn", group = "Lobby", size = v(12, 1, 12), pos = v(0, 0.9, 0), color = "#FFFFFF", material = "SmoothPlastic", spawn = true })
-	reserve(b, "Spawn", "piece", false, 0, 0, 6, 6)
 	local plots = recipe.plots
 	local layout = if plots then plotLayout(recipe) else nil
 	local zones = zoneList(recipe, palette)
+
+	-- Piso del lobby, plaza con un anillo de color, spawn y los cuatro pasos en cruz.
+	local lobbyCx, lobbyCz = (LOBBY.x0 + LOBBY.x1) / 2, (LOBBY.z0 + LOBBY.z1) / 2
+	ground(b, "Ground", "Lobby", palette, lobbyCx, lobbyCz, (LOBBY.x1 - LOBBY.x0) / 2, (LOBBY.z1 - LOBBY.z0) / 2)
+	part(b, { name = "PlazaRing", group = "Lobby", shape = "Cylinder", size = v(0.3, PLAZA_RADIUS * 2 + 6, PLAZA_RADIUS * 2 + 6), pos = v(0, 0.15, 0), rotZ = 90, color = palette.edge, material = "Plastic" })
+	part(b, { name = "Plaza", group = "Lobby", shape = "Cylinder", size = v(0.4, PLAZA_RADIUS * 2, PLAZA_RADIUS * 2), pos = v(0, 0.2, 0), rotZ = 90, color = palette.path, material = "Plastic" })
+	part(b, { name = "PlazaInner", group = "Lobby", shape = "Cylinder", size = v(0.45, 60, 60), pos = v(0, 0.22, 0), rotZ = 90, color = ACCENTS[3], material = "Plastic" })
+	part(b, { name = "PlazaCenter", group = "Lobby", shape = "Cylinder", size = v(0.5, 54, 54), pos = v(0, 0.25, 0), rotZ = 90, color = palette.path, material = "Plastic" })
+	part(b, { name = "Spawn", group = "Lobby", size = v(12, 1, 12), pos = v(0, 0.9, 0), color = "#FFFFFF", material = "SmoothPlastic", spawn = true })
+	reserve(b, "Spawn", "piece", false, 0, 0, 6, 6)
 	local r = PLAZA_RADIUS - 2
 	path(b, "PathNorth", "Lobby", palette.path, -9, 9, r, if plots then PLOTS_Z else LOBBY.z1)
 	path(b, "PathSouth", "Lobby", palette.path, -9, 9, SOUTH_ROW_Z + 10, -r)
@@ -867,6 +1119,17 @@ function MapPlan.build(recipe: Types.KitConfig): Plan
 		end
 	end
 
+	-- Vitrina: la unidad más rara, gigante, en un pedestal dorado al lado del spawn (Map/Showcase la pone).
+	local showcase = MapPlan.showcase(recipe)
+	if showcase then
+		local sx, sz = math.sin(math.rad(SHOWCASE.a)) * SHOWCASE.r, math.cos(math.rad(SHOWCASE.a)) * SHOWCASE.r
+		local g = group(b, "Showcase", "Lobby", true, { "KitShowcase" }, { Unit = showcase })
+		part(b, { name = "Top", group = g, shape = "Cylinder", size = v(0.6, 10.4, 10.4), pos = v(sx, 4.3, sz), rotZ = 90, color = "#FFFFFF", material = "SmoothPlastic" })
+		part(b, { name = "Pedestal", group = g, shape = "Cylinder", size = v(4, 11, 11), pos = v(sx, 2, sz), rotZ = 90, color = "#FFD23A", material = "SmoothPlastic" })
+		part(b, { name = "Glow", group = g, shape = "Cylinder", size = v(0.2, 15, 15), pos = v(sx, 0.5, sz), rotZ = 90, color = "#FFD23A", material = "Neon", transparency = 0.4, collide = false })
+		reserve(b, "Showcase", "piece", true, sx, sz, 6, 6)
+	end
+
 	-- Arco con el cartel de la próxima actualización sobre el paso del sur.
 	if map and map.nextUpdate then
 		local g = group(b, "NextUpdate", "Lobby", true, { "HitSign" }, signAttrs("NEXT UPDATE: " .. map.nextUpdate, "Pink", "timer", 20))
@@ -874,6 +1137,20 @@ function MapPlan.build(recipe: Types.KitConfig): Plan
 		for _, s in { -1, 1 } do
 			part(b, { name = "Post", group = g, size = v(2, 15, 2), pos = v(s * 12, 7.5, ARCH_Z), color = "#FFFFFF", material = "SmoothPlastic" })
 			reserve(b, "ArchPost", "piece", true, s * 12, ARCH_Z, 1, 1)
+		end
+	end
+
+	-- Faroles a los dos lados de los pasos, afuera de la plaza.
+	for _, s in { -1, 1 } do
+		for _, z in { 58, 78 } do
+			lamp(b, "Lobby", s * 12, z)
+		end
+		for _, z in { -66, -82 } do
+			lamp(b, "Lobby", s * 12, z)
+		end
+		for _, x in { 56, 74 } do
+			lamp(b, "Lobby", x, s * 12)
+			lamp(b, "Lobby", -x, s * 12)
 		end
 	end
 
@@ -889,17 +1166,24 @@ function MapPlan.build(recipe: Types.KitConfig): Plan
 	if recipe.upgrades then
 		table.insert(south, function(x)
 			local g = group(b, "UpgradeStation", "Lobby", true, { "KitUpgradeStation" }, nil)
-			part(b, { name = "Machine", group = g, size = v(8, 8, 6), pos = v(x, 4, SOUTH_ROW_Z), color = "#FF9F1A", material = "SmoothPlastic" })
+			part(b, { name = "Machine", group = g, size = v(8, 8, 6), pos = v(x, 4, SOUTH_ROW_Z), color = "#FF9F1A", material = "Plastic", studs = true })
 			part(b, { name = "Screen", group = g, size = v(6, 3, 0.4), pos = v(x, 5.5, SOUTH_ROW_Z + 3.1), color = "#2EC5F5", material = "Neon" })
+			part(b, { name = "Glow", group = g, shape = "Cylinder", size = v(0.2, 9, 9), pos = v(x, 0.5, SOUTH_ROW_Z + 7.5), rotZ = 90, color = "#FFD23A", material = "Neon", transparency = 0.35, collide = false })
 			reserve(b, "UpgradeStation", "piece", true, x, SOUTH_ROW_Z, 4, 3.3)
 		end)
 	end
 	if recipe.merge then
 		table.insert(south, function(x)
+			-- Máquina de fusión de bloques de colores, como la de Steal An Egg.
 			local g = group(b, "MergeMachine", "Lobby", true, { "KitMergeMachine" }, nil)
-			part(b, { name = "Base", group = g, shape = "Cylinder", size = v(2, 14, 14), pos = v(x, 1, SOUTH_ROW_Z), rotZ = 90, color = "#A35CFF", material = "SmoothPlastic" })
-			part(b, { name = "Orb", group = g, shape = "Ball", size = v(8, 8, 8), pos = v(x, 7, SOUTH_ROW_Z), color = "#FF5CE1", material = "Neon", transparency = 0.2 })
-			reserve(b, "MergeMachine", "piece", true, x, SOUTH_ROW_Z, 7, 7)
+			part(b, { name = "Base", group = g, size = v(12, 2, 10), pos = v(x, 1, SOUTH_ROW_Z), color = "#2D2F3A", material = "Plastic", studs = true })
+			for k = 0, 5 do
+				local bx = x - 4 + (k % 3) * 4
+				local by = 3.5 + (k // 3) * 3
+				part(b, { name = "Block", group = g, size = v(3, 3, 3), pos = v(bx, by, SOUTH_ROW_Z - 2), color = ACCENTS[k + 1], material = "Plastic", studs = true })
+			end
+			part(b, { name = "Orb", group = g, shape = "Ball", size = v(5, 5, 5), pos = v(x, 10.5, SOUTH_ROW_Z - 2), color = "#FF5CE1", material = "Neon", transparency = 0.2 })
+			reserve(b, "MergeMachine", "piece", true, x, SOUTH_ROW_Z, 6, 5)
 		end)
 	end
 	for i, place in south do
@@ -939,35 +1223,45 @@ function MapPlan.build(recipe: Types.KitConfig): Plan
 		end
 	end
 	if map and map.groupChest then
-		local a, x, z = slot(b, taken, "GroupChest", 9, 7)
+		local a, x, z = slot(b, taken, "GroupChest", 9, 9)
 		if a then
 			chest(b, x, z, a)
 		end
 	end
 
-	-- Bases al norte, a los dos lados de la avenida, con la cinta en el medio.
+	-- Bases al norte, a los dos lados de la avenida, con la alfombra roja de la cinta en el medio.
+	local plotsHalfWidth = 0
 	if plots and layout then
 		local size = layout.size
 		group(b, "Plots", "Map")
 		local rows = math.ceil(plots.count / 2)
 		local length = rows * (size + PLOT_GAP) - PLOT_GAP
-		local halfWidth = AVENUE + size + 22
-		ground(b, "PlotsGround", "Plots", palette, 0, PLOTS_Z + length / 2, halfWidth, length / 2 + 16)
+		plotsHalfWidth = AVENUE + size + 22
+		local style = if map and map.bases then map.bases else "pen"
+		ground(b, "PlotsGround", "Plots", palette, 0, PLOTS_Z + length / 2, plotsHalfWidth, length / 2 + 16)
 		for i = 1, plots.count do
 			local row = (i - 1) // 2
 			local side = if i % 2 == 1 then 1 else -1
 			local px = -side * (AVENUE + size / 2)
 			local pz = PLOTS_Z + size / 2 + row * (size + PLOT_GAP)
-			plot(b, recipe, i, px, pz, side, layout)
+			plot(b, recipe, i, px, pz, side, layout, style)
 		end
-		part(b, { name = "Avenue", group = "Plots", size = v(AVENUE * 2, 0.4, length + 24), pos = v(0, 0.2, PLOTS_Z + length / 2), color = palette.path, material = "SmoothPlastic" })
+		part(b, { name = "Avenue", group = "Plots", size = v(AVENUE * 2, 0.4, length + 24), pos = v(0, 0.2, PLOTS_Z + length / 2), color = palette.path, material = "Plastic", studs = true })
 		if recipe.belt then
 			-- Las unidades caminan por el eje X de la cinta: girada 90, de la punta norte hacia el lobby.
-			part(b, { name = "Belt", group = "Plots", size = v(length, 1, 9), pos = v(0, 0.8, PLOTS_Z + length / 2), rotY = 90, color = "#2D2F3A", material = "DiamondPlate", tags = { "KitBelt" } })
+			part(b, { name = "Belt", group = "Plots", size = v(length, 0.6, 9), pos = v(0, 0.5, PLOTS_Z + length / 2), rotY = 90, color = "#E53935", material = "Plastic", studs = true, tags = { "KitBelt" } })
 			for _, s in { -1, 1 } do
-				part(b, { name = "BeltRail", group = "Plots", size = v(1, 1.6, length), pos = v(s * 5, 1.2, PLOTS_Z + length / 2), color = "#FFD23A", material = "SmoothPlastic" })
+				part(b, { name = "BeltLine", group = "Plots", size = v(0.8, 0.5, length), pos = v(s * 4.9, 0.45, PLOTS_Z + length / 2), color = "#FFFFFF", material = "SmoothPlastic" })
 			end
+			-- Arco al principio de la cinta, donde aparecen las unidades.
+			local endZ = PLOTS_Z + length + 4
+			for _, s in { -1, 1 } do
+				part(b, { name = "BeltArchPost", group = "Plots", size = v(2, 14, 2), pos = v(s * 7, 7, endZ), color = "#FFD23A", material = "SmoothPlastic" })
+			end
+			part(b, { name = "BeltArch", group = "Plots", size = v(16, 2.4, 2.4), pos = v(0, 15, endZ), color = "#FF3B4F", material = "SmoothPlastic" })
+			part(b, { name = "BeltArchLight", group = "Plots", size = v(14, 0.6, 2.6), pos = v(0, 13.6, endZ), color = "#FFD23A", material = "Neon" })
 			reserve(b, "Belt", "piece", true, 0, PLOTS_Z + length / 2, 5.5, length / 2)
+			reserve(b, "BeltArch", "piece", true, 0, endZ, 8, 1.2)
 			reserve(b, "AvenueWest", "corridor", false, -12, PLOTS_Z + length / 2, 5, length / 2)
 			reserve(b, "AvenueEast", "corridor", false, 12, PLOTS_Z + length / 2, 5, length / 2)
 		else
@@ -982,9 +1276,9 @@ function MapPlan.build(recipe: Types.KitConfig): Plan
 		local half = ISLAND / 2
 		local function bridge(x0: number, x1: number): number
 			local cx = (x0 + x1) / 2
-			part(b, { name = "Bridge", group = "Zones", size = v(x1 - x0, 2, 16), pos = v(cx, -1, 0), color = palette.path, material = "WoodPlanks" })
+			part(b, { name = "Bridge", group = "Zones", size = v(x1 - x0, 2, 16), pos = v(cx, -1, 0), color = WOOD, material = "WoodPlanks" })
 			for _, s in { -1, 1 } do
-				part(b, { name = "Rail", group = "Zones", size = v(x1 - x0, 2.5, 1), pos = v(cx, 1.25, s * 8.5), color = palette.trunk, material = "Wood" })
+				part(b, { name = "Rail", group = "Zones", size = v(x1 - x0, 2.5, 1), pos = v(cx, 1.25, s * 8.5), color = WOOD_DARK, material = "Wood" })
 			end
 			floorAt(b, "Bridge", cx, 0, (x1 - x0) / 2, 8)
 			reserve(b, "Bridge", "corridor", false, cx, 0, (x1 - x0) / 2, 8)
@@ -1014,26 +1308,49 @@ function MapPlan.build(recipe: Types.KitConfig): Plan
 			local width = 20
 			local top = ((i - 1) % 4) * 1.5
 			x -= gap + width / 2
-			part(b, { name = "Stage" .. i, group = "Stages", size = v(width, 2, 22), pos = v(x, top - 1, 0), color = ACCENTS[(i - 1) % #ACCENTS + 1], material = "SmoothPlastic" })
+			part(b, { name = "Stage" .. i, group = "Stages", size = v(width, 2, 22), pos = v(x, top - 1, 0), color = ACCENTS[(i - 1) % #ACCENTS + 1], material = "Plastic", studs = true })
 			floorAt(b, "Stage" .. i, x, 0, width / 2, 11)
 			pad(b, "Stages", "Checkpoint" .. i, 6, x, 0, "#FFFFFF", { "KitCheckpoint" }, { Stage = i }, top)
 			reserve(b, "Checkpoint" .. i, "piece", false, x, 0, 3, 3)
 			x -= width / 2
 		end
 		local wx = x - 6 - 15
-		part(b, { name = "WinPlatform", group = "Stages", size = v(30, 2, 30), pos = v(wx, -1, 0), color = "#FFD23A", material = "SmoothPlastic" })
+		part(b, { name = "WinPlatform", group = "Stages", size = v(30, 2, 30), pos = v(wx, -1, 0), color = "#FFD23A", material = "Plastic", studs = true })
 		floorAt(b, "WinPlatform", wx, 0, 15, 15)
 		pad(b, "Stages", "Win", 14, wx, 0, "#FFD23A", { "KitWinPad" })
 		reserve(b, "WinPad", "piece", false, wx, 0, 7, 7)
 	end
 
+	-- Alrededor: cerros de fondo por los bordes de afuera (sin tapar puentes ni etapas) o mar.
+	local backdrop = backdropOf(recipe, theme)
+	if backdrop == "hills" then
+		group(b, "Backdrop", "Map")
+		local zGap = { { (-20 - LOBBY.z0), (20 - LOBBY.z0) } } -- el centro del borde (puente o etapas)
+		ridge(b, "Backdrop", palette, LOBBY.x0, LOBBY.z0, LOBBY.x1, LOBBY.z0, 0, -1, nil)
+		ridge(b, "Backdrop", palette, LOBBY.x0, LOBBY.z0, LOBBY.x0, LOBBY.z1, -1, 0, zGap)
+		ridge(b, "Backdrop", palette, LOBBY.x1, LOBBY.z0, LOBBY.x1, LOBBY.z1, 1, 0, if #zones > 0 then zGap else nil)
+		if plots and layout then
+			local rows = math.ceil(plots.count / 2)
+			local length = rows * (layout.size + PLOT_GAP) - PLOT_GAP
+			local z0, z1 = PLOTS_Z - 16, PLOTS_Z + length + 16
+			ridge(b, "Backdrop", palette, -plotsHalfWidth, z0, -plotsHalfWidth, z1, -1, 0, nil)
+			ridge(b, "Backdrop", palette, plotsHalfWidth, z0, plotsHalfWidth, z1, 1, 0, nil)
+			ridge(b, "Backdrop", palette, -plotsHalfWidth, z1, plotsHalfWidth, z1, 0, 1, nil)
+		else
+			ridge(b, "Backdrop", palette, LOBBY.x0, LOBBY.z1, LOBBY.x1, LOBBY.z1, 0, 1, nil)
+		end
+	elseif backdrop == "ocean" then
+		-- Mar debajo de todo: quien se cae lo atraviesa y reaparece (no choca).
+		part(b, { name = "Ocean", group = "Map", size = v(3000, 1, 3000), pos = v(600, -7, 0), color = palette.water, material = "Glass", transparency = 0.15, collide = false })
+	end
+
 	-- Decoración al final: alrededor de la plaza y por el borde del lobby, donde quede libre.
-	for i = 1, 22 do
-		local a = (i / 22) * math.pi * 2 + (b.random() - 0.5) * 0.2
+	for i = 1, 26 do
+		local a = (i / 26) * math.pi * 2 + (b.random() - 0.5) * 0.2
 		local rr = 60 + b.random() * 14
 		decorLater(b, "Lobby", palette, math.sin(a) * rr, math.cos(a) * rr, 0.9 + b.random() * 0.4)
 	end
-	ring(b, "Lobby", palette, lobbyCx, lobbyCz, (LOBBY.x1 - LOBBY.x0) / 2, (LOBBY.z1 - LOBBY.z0) / 2, -9, 18)
+	ring(b, "Lobby", palette, lobbyCx, lobbyCz, (LOBBY.x1 - LOBBY.x0) / 2, (LOBBY.z1 - LOBBY.z0) / 2, -9, 16)
 	flushDecor(b)
 	return b.plan
 end

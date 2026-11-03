@@ -135,6 +135,7 @@ Estado: ✅ hecho · 🔄 en curso (sección 4) · 👤 depende de una persona.
 
 **2026-11-03**
 - 🔄 "Continuá con todo lo que falta" → MapKit (#62) ✅; siguen las recetas, el juego de prueba, los skills, los docs, la revisión y el reporte final (sección 4).
+- ✅ "Los mapas están muy básicos, investigá por ejemplo el de Steal An Egg. Pero bueno, si es una base únicamente, quizás tiene sentido" + "Buscá videos de gameplay si hace falta" + "Buscá del de pescar también" → miniaturas oficiales y fotogramas de videos de Steal An Egg, Steal a Brainrot y Fish It! (con `roblox_research.py` y `i.ytimg.com/vi/<id>/hq1-3.jpg`), y MapPlan rehecho con ese estilo (sección 5). Antes y después enviado al usuario.
 
 ## 4. Plan en curso
 
@@ -287,6 +288,19 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
     - Comando: `node tools/render3d/mapview.cjs --recipe <receta.luau> --out <prefijo>`. Vuelca el plan con `map/dump.luau` y lo dibuja con three.js, con los carteles del juego.
     - Ejemplos en `skills/roblox-game-kits/references/mapa/`; se mandaron al usuario.
   - **Documentación:** sección "El mapa" de `bloques.md`.
+- **Mapa estilo hit (2026-11-03, pedido del usuario).** Chequeo en verde.
+  - **Investigación:** miniaturas oficiales y fotogramas de videos de gameplay de Steal An Egg, Steal a Brainrot y Fish It! (las capturas de otros juegos no se guardan en el repo ni se usan de referencia para la IA). Notas en `bloques.md`, "El mapa".
+  - **MapPlan:**
+    - piso y caminos de plástico con studs, paletas más saturadas y plaza con anillo de color;
+    - corrales con cerco o edificios (`map.bases`), con pedestales, placa de cobro verde y cartel de madera;
+    - puestos de madera con toldo a rayas y aro brillante, y tabla con corona;
+    - alfombra roja con arco como cinta y máquina de fusión de bloques de colores;
+    - faroles, arbustos y flores;
+    - cerros en terrazas o mar (`map.backdrop`);
+    - islas con cerco de madera y arco con el nombre de la zona, carpa sobre las cintas de correr, muelle de tablas y corral para los salvajes;
+    - vitrina con la unidad gigante (`map.showcase`, etiqueta `KitShowcase`, `server/Map/Showcase`).
+  - **Tests:** `MapPlan.audit` (la revisión común), vitrina, arcos y estilos de base: 12 casos.
+  - **Vista previa:** dibuja los studs y la unidad de la vitrina. Ejemplos nuevos en `references/mapa/`.
 
 ## 6. Qué existe hoy (mapa)
 
@@ -402,6 +416,11 @@ Lista completa y con casillas en **`team/pendientes.md`** (pedido del usuario de
   - no puede salir de la carpeta de arriba del todo;
   - para leer una receta de afuera del repo, `mapview.cjs` la copia a `tools/render3d/map/.preview/`.
 - **Tests con tipos:** `tools/check.py` también revisa los tipos de `tests/`, así que valen las mismas trampas de luau-lsp.
+- **Comparar textos ya refinados:** después de `a.kind == "decor"`, luau-lsp toma `a.kind` como el literal "decor" y marca error al compararlo con otro ("Type "area" cannot be compared with "decor""). Juntarlos en un texto o usar variables nuevas.
+- **Investigar un hit sin navegador:**
+  - miniaturas oficiales: `thumbnails.roblox.com/v1/games/multiget/thumbnails?universeIds=<id>`;
+  - ids de videos: `curl` de `youtube.com/results?search_query=...` con `"videoRenderer":{"videoId"`;
+  - fotogramas de esos videos: `i.ytimg.com/vi/<id>/hq1.jpg` a `hq3.jpg`.
 - **En la nube de Claude:**
   - create.roblox.com está bloqueado: la documentación sale del repo `Roblox/creator-docs`, por `raw.githubusercontent.com`;
   - las imágenes de esa documentación están en Git LFS y se bajan de `media.githubusercontent.com`;

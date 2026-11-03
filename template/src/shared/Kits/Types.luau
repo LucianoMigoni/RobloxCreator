@@ -392,6 +392,15 @@ export type MapConfig = {
 	leaderboard: boolean?, -- tablas de posiciones
 	groupChest: boolean?,
 	nextUpdate: string?, -- texto del cartel NEXT UPDATE ("Saturday 3PM EST")
+	-- Cómo son las bases: "pen" (corral con cerco, como Steal An Egg; por defecto) o "building"
+	-- (paredes altas con vidrio, como Steal a Brainrot).
+	bases: string?,
+	-- Lo de alrededor: "hills" (cerros de fondo), "ocean" (mar; por defecto en playa, bajo el agua y con
+	-- pesca) o "none".
+	backdrop: string?,
+	-- Unidad gigante en un pedestal de la plaza (lo que todos quieren tener). Por defecto la última de
+	-- units.list; "" para ninguna.
+	showcase: string?,
 }
 
 export type KitConfig = {

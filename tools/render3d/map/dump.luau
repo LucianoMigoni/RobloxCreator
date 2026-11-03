@@ -65,5 +65,10 @@ end
 
 local plan = MapPlan.build(recipe)
 local out = {}
-encode({ recipe = recipe.name, theme = plan.theme, palette = plan.palette, groups = plan.groups, parts = plan.parts, warnings = plan.warnings }, out)
+-- Las unidades (nombre, rareza y color) para dibujar la vitrina como en el juego.
+local units = {}
+for _, u in (recipe.units and recipe.units.list) or {} do
+	table.insert(units, { id = u.id, name = u.name, rarity = u.rarity, color = u.color })
+end
+encode({ recipe = recipe.name, theme = plan.theme, palette = plan.palette, groups = plan.groups, parts = plan.parts, warnings = plan.warnings, units = units }, out)
 print(table.concat(out))

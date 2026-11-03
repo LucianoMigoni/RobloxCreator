@@ -29,10 +29,12 @@ local SettingsService = require("./Social/SettingsService")
 local CurrencyService = require("./Economy/CurrencyService")
 local Kits = require("./Kits/Kits")
 local MapKit = require("./Map/MapKit")
+local Showcase = require("./Map/Showcase")
 
 Remotes.start()
 -- El mapa de la receta (si el lugar no trae uno hecho a mano), antes de que los bloques busquen sus partes.
 MapKit.build()
+Showcase.start()
 Kits.init()
 -- Primero los que escuchan la carga de datos, después DataService (que dispara StateChanged).
 AnnounceService.start()

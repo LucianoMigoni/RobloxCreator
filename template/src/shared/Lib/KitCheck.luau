@@ -1073,6 +1073,15 @@ local function checkRetention(ctx: Ctx)
 			add(ctx, "map.treadmills.gains", "falta la ganancia de al menos una zona")
 		end
 	end
+	if map and map.bases ~= nil and map.bases ~= "pen" and map.bases ~= "building" then
+		add(ctx, "map.bases", "tiene que ser \"pen\" o \"building\"")
+	end
+	if map and map.backdrop ~= nil and not table.find({ "hills", "ocean", "none" }, map.backdrop) then
+		add(ctx, "map.backdrop", "tiene que ser \"hills\", \"ocean\" o \"none\"")
+	end
+	if map and map.showcase ~= nil and map.showcase ~= "" and ctx.units[map.showcase] == nil then
+		add(ctx, "map.showcase", "unidad '" .. map.showcase .. "' no existe en units.list")
+	end
 	if map and not table.find(KitCheck.THEMES, map.theme) then
 		add(ctx, "map.theme", "tema '" .. tostring(map.theme) .. "' no existe (" .. table.concat(KitCheck.THEMES, ", ") .. ")")
 	end

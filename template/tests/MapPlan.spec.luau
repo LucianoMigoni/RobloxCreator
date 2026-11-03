@@ -408,27 +408,60 @@ TestKit.run("MapPlan", {
 
 	["nada choca y lo que se usa está sobre un piso"] = function()
 		for name, make in RECIPES do
-			local plan = MapPlan.build(make())
-			local list = plan.footprints
-			for i = 1, #list do
-				local a = list[i]
-				if a.kind == "piece" then
-					truthy(MapPlan.onFloor(plan, a), name .. ": " .. a.name .. " no está sobre un piso")
-				end
-				for j = i + 1, #list do
-					local c = list[j]
-					if MapPlan.overlaps(a, c) then
-						local kinds = a.kind .. "+" .. c.kind
-						local bad = kinds == "piece+piece"
-							or kinds == "area+area"
-							or ((kinds == "piece+corridor" or kinds == "corridor+piece") and (a.solid and a.kind == "piece" or c.solid and c.kind == "piece"))
-							or (a.kind == "decor" and c.kind ~= "area")
-							or (c.kind == "decor" and a.kind ~= "area")
-						truthy(not bad, name .. ": " .. a.name .. " (" .. a.kind .. ") choca con " .. c.name .. " (" .. c.kind .. ")")
-					end
+			local problems = MapPlan.audit(MapPlan.build(make()))
+			equal(#problems, 0, name .. ": " .. table.concat(problems, "; "))
+		end
+	end,
+
+	["vitrina y arcos de las zonas"] = function()
+		for name, make in RECIPES do
+			local recipe = make()
+			local plan = MapPlan.build(recipe)
+			local wanted = MapPlan.showcase(recipe)
+			local _, showcases = tagged(plan, "KitShowcase")
+			equal(#showcases, if wanted then 1 else 0, name .. ": vitrina")
+			if wanted then
+				local attrs = showcases[1].attrs
+				equal(if attrs then attrs.Unit else nil, wanted, name .. ": unidad de la vitrina")
+			end
+			local arches = 0
+			for _, g in plan.groups do
+				if string.sub(g.name, 1, 9) == "ZoneArch_" then
+					arches += 1
+					truthy(hasTag(g.tags, "HitSign") and g.attrs and typeof(g.attrs.Text) == "string", name .. ": arco con cartel")
 				end
 			end
+			equal(arches, if recipe.zones then #recipe.zones.list else 0, name .. ": un arco por zona")
 		end
+		-- La vitrina usa la unidad pedida o la última; "" la saca.
+		local recipe = steal()
+		recipe.units = { label = "Snacks", maxInventory = 10, list = { { id = "A", name = "A", rarity = "Common" }, { id = "B", name = "B", rarity = "Secret" } } }
+		equal(MapPlan.showcase(recipe), "B")
+		local map = recipe.map :: Types.MapConfig
+		map.showcase = "A"
+		equal(MapPlan.showcase(recipe), "A")
+		map.showcase = ""
+		equal(MapPlan.showcase(recipe), nil)
+	end,
+
+	["bases en corral o en edificio"] = function()
+		local recipe = steal()
+		local pen = MapPlan.build(recipe)
+		local map = recipe.map :: Types.MapConfig
+		map.bases = "building"
+		local building = MapPlan.build(recipe)
+		local function count2(plan: MapPlan.Plan, partName: string): number
+			local n = 0
+			for _, p in plan.parts do
+				if p.name == partName then
+					n += 1
+				end
+			end
+			return n
+		end
+		truthy(count2(pen, "FenceRail") > 0 and count2(pen, "Wall") == 0, "corral: cercos")
+		truthy(count2(building, "Wall") > 0, "edificio: paredes")
+		equal(#MapPlan.audit(building), 0, "edificio sano")
 	end,
 
 	["el mismo nombre da el mismo mapa"] = function()
