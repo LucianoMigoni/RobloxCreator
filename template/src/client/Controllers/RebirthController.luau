@@ -43,7 +43,7 @@ function RebirthController.start(hud: Hud.Hud)
 		ZIndex = 22,
 	}, 64, UIKit.TitleFont)
 	fromTo.TextColor3 = Color3.fromRGB(140, 255, 120)
-	UIKit.label(body, "Info", UiText.REBIRTH_INFO, {
+	UIKit.label(body, "Info", string.format(UiText.REBIRTH_INFO, string.lower(cfg.currency), string.lower(cfg.stat)), {
 		AnchorPoint = Vector2.new(0.5, 0),
 		Position = UDim2.fromScale(0.5, 0.5),
 		Size = UDim2.fromScale(0.85, 0.09),
@@ -83,7 +83,7 @@ function RebirthController.start(hud: Hud.Hud)
 		local have = if typeof(money) == "number" then money else 0
 		local now = Progression.rebirthMultiplier(cfg.perRebirth, rebirths)
 		local nextMult = Progression.rebirthMultiplier(cfg.perRebirth, rebirths + 1)
-		fromTo.Text = string.format(UiText.REBIRTH_FROM_TO, Format.multiplier(now), Format.multiplier(nextMult))
+		fromTo.Text = string.format(UiText.REBIRTH_FROM_TO, Format.multiplier(now), Format.multiplier(nextMult), cfg.stat)
 		UIKit.setProgress(progress, have / cost, Format.money(math.min(have, cost), currency.symbol) .. " / " .. Format.money(cost, currency.symbol))
 		local can = have >= cost
 		UIKit.recolor(button, if can then "Accept" else "Neutral")

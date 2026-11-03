@@ -110,7 +110,7 @@ function BoostService.sources(player: Player): { Source }
 	local data = DataService.get(player)
 	if data and data.rebirths > 0 then
 		table.insert(out, {
-			stat = "Money",
+			stat = RetentionConfig.REBIRTH.stat,
 			kind = "mult",
 			value = Progression.rebirthMultiplier(RetentionConfig.REBIRTH.perRebirth, data.rebirths),
 			label = "Rebirth",

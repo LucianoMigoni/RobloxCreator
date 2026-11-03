@@ -17,7 +17,8 @@ return {
 		{ id = "quest", text = "Complete a quest", stat = "QuestClaimed", target = 1 },
 		{ id = "rebirth", text = "Rebirth once", stat = "Rebirth", target = 1 },
 	}) :: { Objectives.Def },
-	ENDLESS = { text = "Earn %s", stat = "MoneyEarned", base = 50_000, growth = 3, money = true } :: Objectives.Endless,
+	-- Después de la cadena, objetivos que crecen solos. La receta puede traer los suyos (KitConfig.endless).
+	ENDLESS = (KitConfig.endless or { text = "Earn %s", stat = "MoneyEarned", base = 50_000, growth = 3, money = true }) :: Objectives.Endless,
 	-- Premio de cada objetivo cumplido (chico: el premio real es la sensación de avanzar).
 	REWARD = { currency = "Money", incomeMinutes = 1 } :: Types.Reward,
 	FUNNEL_STEPS = 6,

@@ -95,7 +95,17 @@ return {
 	OFFLINE = { rate = 0.5, capSeconds = 4 * 3600, minSeconds = 120 },
 
 	-- Renacer: cuesta cada vez más y suma un multiplicador permanente de plata.
-	REBIRTH = { currency = "Money", base = 50_000, growth = 3, perRebirth = 0.5, reward = { currency = "Gems", amount = 10 } :: Reward },
+	-- Renacer: cuesta cada vez más (`base` × `growth`^renacimientos) de `currency`, la deja en 0 y suma un
+	-- multiplicador permanente a `stat`. La receta puede traer el suyo (KitConfig.rebirth): en +1 Speed se
+	-- paga con victorias y multiplica la velocidad.
+	REBIRTH = {
+		currency = if KitConfig.rebirth then KitConfig.rebirth.currency else "Money",
+		base = if KitConfig.rebirth then KitConfig.rebirth.base else 50_000,
+		growth = if KitConfig.rebirth then KitConfig.rebirth.growth else 3,
+		stat = if KitConfig.rebirth and KitConfig.rebirth.stat then KitConfig.rebirth.stat else "Money",
+		perRebirth = 0.5,
+		reward = { currency = "Gems", amount = 10 } :: Reward,
+	},
 
 	-- Sistema oficial de referidos (Player:GetJoinData().ReferredByPlayerId): premio para los dos.
 	REFERRAL = {

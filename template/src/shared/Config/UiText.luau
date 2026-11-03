@@ -76,8 +76,8 @@ return {
 	STREAK = "Streak: %d days",
 	DAY = "Day %d",
 	GIFT_IN = "%s",
-	REBIRTH_INFO = "Reset your money to get a permanent money boost",
-	REBIRTH_FROM_TO = "%s  ->  %s Money",
+	REBIRTH_INFO = "Reset your %s to get a permanent %s boost", -- moneda que se pierde, lo que multiplica
+	REBIRTH_FROM_TO = "%s  ->  %s %s",
 	REBIRTH_COST = "Cost: %s",
 	REBIRTH_DONE = "Rebirths: %d",
 	NOT_MEMBER = "Join the group first, then claim!",

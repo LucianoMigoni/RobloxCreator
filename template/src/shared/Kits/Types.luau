@@ -7,6 +7,7 @@ local Objectives = require("../Lib/Objectives")
 local SharedTypes = require("../Types")
 
 export type Reward = SharedTypes.Reward
+export type ObjectiveDef = Objectives.Def
 
 -- Precio en una moneda de EconomyConfig.CURRENCIES (o de `currencies` de la receta).
 export type Price = { currency: string, amount: number }
@@ -403,6 +404,8 @@ export type MapConfig = {
 	showcase: string?,
 }
 
+export type RebirthConfig = { currency: string, base: number, growth: number, stat: string? }
+
 export type KitConfig = {
 	name: string, -- receta ("StealAndPlace") o nombre del juego
 	currencies: { CurrencyDef }?,
@@ -426,6 +429,10 @@ export type KitConfig = {
 	tycoon: TycoonConfig?,
 	items: ItemsConfig?,
 	objectives: { Objectives.Def }?, -- reemplaza ObjectiveConfig.CHAIN
+	endless: Objectives.Endless?, -- reemplaza ObjectiveConfig.ENDLESS ("Earn $X" después de la cadena)
+	-- Renacer propio (reemplaza RetentionConfig.REBIRTH): moneda con la que se paga, costo y lo que
+	-- multiplica (por defecto "Money"). Para juegos sin plata: +1 Speed lo paga con victorias.
+	rebirth: RebirthConfig?,
 	quests: { Quest }?, -- reemplaza el pool de RetentionConfig.QUESTS
 	shop: KitShop?, -- pases y productos propios (x3/x8 huevos, cañas, "+10K Speed"...)
 	map: MapConfig?,

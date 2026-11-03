@@ -23,6 +23,19 @@ local KitCheck = {}
 KitCheck.THEMES = { "meadow", "beach", "candy", "farm", "jungle", "snow", "desert", "space", "city", "volcano", "underwater" }
 KitCheck.SHOPS = { "Shop", "Sell", "Upgrades", "Seeds", "Rods", "Tools", "Index", "Spin", "Robux" }
 
+-- Eventos de Signals.track del servidor: los únicos que mueven objetivos y misiones. Además, "<Stat>Gained"
+-- por cada estadística de la receta. Mantener al día al agregar un Signals.track nuevo.
+KitCheck.SIGNALS = {
+	-- núcleo
+	"MoneyEarned", "Minutes", "DailyClaimed", "QuestClaimed", "Spin", "Rebirth", "Purchase", "Collect",
+	"Discover", "IndexZone", "RareFound", "SecretFound", "UnitGot",
+	-- bloques
+	"Place", "SlotBought", "Lock", "UnitBought", "StealStart", "Steal", "Stolen", "Push", "Roll", "Hatch",
+	"Merge", "Sell", "Equip", "Steps", "Tap", "ZoneUnlocked", "Teleport", "Stage", "Win", "RunStarted",
+	"RunEnded", "Revive", "Cast", "Catch", "RodBought", "SeedBought", "Plant", "Harvest", "TileBought",
+	"Dig", "Found", "Deposit", "ToolBought", "Capture", "Upgrade", "Build", "ItemUsed",
+}
+
 -- Efectos de las mejoras (además de "stat:<Stat>") y el bloque que los usa.
 KitCheck.EFFECTS = {
 	slots = "plots", -- espacios de la base
@@ -1020,6 +1033,18 @@ local function checkShop(ctx: Ctx)
 	end
 end
 
+-- El evento de un objetivo o misión existe (KitCheck.SIGNALS o "<Stat>Gained" de una estadística).
+local function signal(ctx: Ctx, path: string, value: string?)
+	if typeof(value) ~= "string" or table.find(KitCheck.SIGNALS, value) then
+		return
+	end
+	local stat = string.match(value, "^(.+)Gained$")
+	if stat and ctx.stats[stat] then
+		return
+	end
+	add(ctx, path, "evento '" .. value .. "' no existe (KitCheck.SIGNALS o \"<Stat>Gained\")")
+end
+
 local function checkRetention(ctx: Ctx)
 	local objectives = ctx.recipe.objectives
 	if objectives then
@@ -1031,7 +1056,24 @@ local function checkRetention(ctx: Ctx)
 			id(ctx, path .. ".id", o.id)
 			text(ctx, path .. ".text", o.text)
 			text(ctx, path .. ".stat", o.stat)
+			signal(ctx, path .. ".stat", o.stat)
 			number(ctx, path .. ".target", o.target, 1)
+		end
+	end
+	local endless = ctx.recipe.endless
+	if endless then
+		text(ctx, "endless.text", endless.text)
+		signal(ctx, "endless.stat", endless.stat)
+		number(ctx, "endless.base", endless.base, 1)
+		number(ctx, "endless.growth", endless.growth, 1)
+	end
+	local rebirth = ctx.recipe.rebirth
+	if rebirth then
+		currency(ctx, "rebirth.currency", rebirth.currency)
+		number(ctx, "rebirth.base", rebirth.base, 1)
+		number(ctx, "rebirth.growth", rebirth.growth, 1)
+		if rebirth.stat ~= nil then
+			text(ctx, "rebirth.stat", rebirth.stat)
 		end
 	end
 	local quests = ctx.recipe.quests
@@ -1047,6 +1089,7 @@ local function checkRetention(ctx: Ctx)
 			id(ctx, path .. ".id", q.id)
 			text(ctx, path .. ".text", q.text)
 			text(ctx, path .. ".stat", q.stat)
+			signal(ctx, path .. ".stat", q.stat)
 			number(ctx, path .. ".target", q.target, 1)
 			reward(ctx, path .. ".reward", q.reward)
 		end
