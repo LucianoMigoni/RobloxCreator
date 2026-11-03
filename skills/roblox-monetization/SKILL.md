@@ -43,7 +43,12 @@ Que el juego gane dinero sin engañar ni presionar a nadie. Pagar **puede dar ve
   - estadística: `"Stat:<stat>"` (+10K Speed);
   - la escalera por Robux: una mejora con `robux = true` y el producto `"Upgrade:<id>"`;
   - los pases x3 y x8, en `amounts` de cada tirada.
-- **Tiradas pagadas con una moneda que se compra con Robux:** `paidRandom = true`, con PolicyService y probabilidades a la vista.
+- **Aleatorio pago:** lo resuelve el armador solo (`Lib/PaidRandom`; detalle en `roblox-compliance`, "Con el armador"):
+  - huevos pagados con una moneda que se vende por Robux, incluida la plata;
+  - fusiones con chance de mutación;
+  - semillas que mutan.
+
+  Las probabilidades se ven antes de pagar, y a quien PolicyService se lo restringe no se le vende o se le da sin azar.
 
 ## Checklist
 - [ ] Cada producto tiene un propósito claro y visible en el juego.

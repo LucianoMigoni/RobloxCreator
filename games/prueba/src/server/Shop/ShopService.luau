@@ -65,6 +65,10 @@ local function deliverGift(from: Player, target: Player, pass: ShopConfig.Pass):
 	end
 	data.giftedPasses[pass.key] = true
 	setPass(target, pass)
+	-- Un regalo pagado se guarda ya en el que lo recibe: si el servidor se cae antes de su guardado, se
+	-- perdería un pase que el otro ya pagó.
+	Signals.dirty(target)
+	task.spawn(DataService.saveAsync, target)
 	AnnounceService.server({ text = from.DisplayName .. " gifted " .. pass.name .. " to " .. target.DisplayName .. "!", sound = "Victory" })
 	return true
 end
@@ -186,6 +190,7 @@ local function sendGiftToken(player: Player, targetId: number, passKey: string):
 		return false, "TARGET_LOADING"
 	end
 	Signals.dirty(player)
+	task.spawn(DataService.saveAsync, player)
 	return true
 end
 

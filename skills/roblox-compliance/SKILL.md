@@ -46,7 +46,14 @@ Verificado el 2026-10-25 en `/production/promotion/content-maturity`, `/producti
 7. **Escribir `docs/cumplimiento.md`** con el inventario, las respuestas propuestas, la etiqueta esperada, los textos filtrados, las políticas y los pendientes, y mostrarlo. **El cuestionario lo envía una persona** del equipo en el Creator Dashboard (**Publish settings → Content rating**) después de revisar las respuestas.
 
 ## Con el armador (`roblox-game-kits`)
-- **Tiradas pagas:** las que se pagan con una moneda que se compra con Robux van con `paidRandom = true`. El bloque Rolls ya consulta PolicyService y muestra las probabilidades.
+- **Aleatorio pago** (`template/src/shared/Lib/PaidRandom.luau`, regla oficial verificada el 2026-11-03): es lo que se paga con Robux o con una moneda que se vende por Robux y da un resultado al azar. La plata del núcleo se vende por Robux, así que cuenta. El armador ya lo resuelve:
+  - **huevos y tiradas:** con un precio en una moneda que se vende, son aleatorio pago solos (`paidRandom = true` lo fuerza para otra moneda). Las probabilidades se ven en la ventana con la suerte activa, y a quien PolicyService se lo restringe no se le venden;
+  - **fusión con `mutationChance`:** el botón "Merge Odds" del inventario muestra todos los resultados, y a quien está restringido nunca le sale mutación;
+  - **cosecha:** la tienda de semillas muestra las probabilidades de mutación y tamaño, y a quien está restringido la cosecha le sale sin azar;
+  - **impulsos de suerte:** la descripción dice el efecto en números ("2x more likely"), y las ventanas de probabilidades ya lo incluyen;
+  - **lo que no es pago:** pescar, cavar y capturar son acciones gratis, así que sus resultados no piden probabilidades. Las cañas y herramientas que suben la suerte muestran cuánto ("Luck x1.5").
+
+  Una mecánica nueva con azar pagado usa `PaidRandom` igual: probabilidades antes de pagar y nada de azar para quien está restringido. También un peso al azar en lo que se cosecha.
 - **Cuestionario de madurez:** responderlo según los bloques de la receta. Por ejemplo, robar y empujar en Steal no hacen daño y no hay chat propio ni intercambio entre jugadores.
 
 ## Checklist

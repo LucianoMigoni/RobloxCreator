@@ -124,7 +124,7 @@ export type RollDef = {
 	pool: { PoolEntry },
 	amounts: { RollAmount }, -- {1, 3, 8} (huevos) o {1, 5, 25, 100} (puestos de compra)
 	zone: string?,
-	paidRandom: boolean?, -- se paga con moneda comprada con Robux: PolicyService y probabilidades
+	paidRandom: boolean?, -- aleatorio pago aunque la moneda no se venda por Robux (con `price` en una que se vende, ya lo es: Lib/PaidRandom)
 	look: string?, -- "egg", "dice", "chest", "pad": cómo se ve en el mundo y al revelar
 	toBase: boolean?, -- lo que sale va directo a la base (puestos de Chicken Farm)
 }

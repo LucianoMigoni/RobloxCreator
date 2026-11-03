@@ -19,6 +19,8 @@ local RarityConfig = require(ReplicatedStorage.Shared.Config.RarityConfig)
 local UiText = require(ReplicatedStorage.Shared.Config.UiText)
 local KitTypes = require(ReplicatedStorage.Shared.Kits.Types)
 local Format = require(ReplicatedStorage.Shared.Lib.Format)
+local PaidRandom = require(ReplicatedStorage.Shared.Lib.PaidRandom)
+local Rarity = require(ReplicatedStorage.Shared.Lib.Rarity)
 local UnitMath = require(ReplicatedStorage.Shared.Lib.UnitMath)
 local UIKit = require(ReplicatedStorage.Shared.UIKit)
 local Bus = require("../Bus")
@@ -119,6 +121,26 @@ function Inventory.start(hud: HudController.Hud)
 	finishNow.Visible = false
 	local buySlot = topButton("BuySlot", "", "Info", "base", 3)
 	buySlot.Visible = false
+	-- Con chance de mutación, la fusión es aleatorio pago (Lib/PaidRandom): todos los resultados y su
+	-- probabilidad a un toque, antes de fusionar. A quien PolicyService lo restringe le sale siempre Normal.
+	local mutationChance = if mergeCfg and mergeCfg.mode == "tier" then mergeCfg.mutationChance else nil
+	local mergeOdds = topButton("MergeOdds", UiText.MERGE_ODDS, "Purple", "merge", 0)
+	mergeOdds.Visible = mutationChance ~= nil and mutationChance > 0
+	local oddsWindow = if mergeOdds.Visible then KitUi.listWindow({ name = "MergeOdds", title = UiText.MERGE_ODDS, icon = "merge", variant = "Purple" }) else nil
+	-- Los botones de arriba se reparten el ancho si son más de tres.
+	local topButtons = { equipBest, sellAll, finishNow, buySlot, mergeOdds }
+	local function fitTop()
+		local shown = 0
+		for _, button in topButtons do
+			if button.Visible then
+				shown += 1
+			end
+		end
+		local width = math.min(0.31, (1 - 0.02 * math.max(0, shown - 1)) / math.max(1, shown))
+		for _, button in topButtons do
+			button.Size = UDim2.fromScale(width, 0.92)
+		end
+	end
 
 	-- Grilla a la izquierda y panel de la elegida a la derecha.
 	local content = UIKit.new("Frame", {
@@ -460,6 +482,7 @@ function Inventory.start(hud: HudController.Hud)
 		if price then
 			UIKit.setText(buySlot, string.format(UiText.BUY_SLOT, Format.money(price, main.symbol)))
 		end
+		fitTop()
 	end
 
 	local function render()
@@ -653,6 +676,21 @@ function Inventory.start(hud: HudController.Hud)
 	end)
 	finishNow.Activated:Connect(function()
 		KitUi.buyProduct("FinishMerge")
+	end)
+	mergeOdds.Activated:Connect(function()
+		local w = oddsWindow
+		if not w or not mutationChance then
+			return
+		end
+		Sound.play("Click")
+		local chance = if player:GetAttribute("PaidRandomRestricted") == true then 0 else mutationChance
+		local rows: { KitUi.Row } = {}
+		for _, p in Rarity.percentages(PaidRandom.mergeOdds(chance, mutations)) do
+			table.insert(rows, { id = p.id, icon = "merge", title = p.id, titleColor = KitUi.variantColor(p.id), detail = p.text, buttons = {} })
+		end
+		w.setRows(rows)
+		w.setNote(UiText.MERGE_ODDS_NOTE)
+		w.open()
 	end)
 	buySlot.Activated:Connect(function()
 		Sound.play("Click")

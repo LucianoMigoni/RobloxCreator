@@ -10,11 +10,13 @@
 local CollectionService = game:GetService("CollectionService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
+local EconomyConfig = require(ReplicatedStorage.Shared.Config.EconomyConfig)
 local UiText = require(ReplicatedStorage.Shared.Config.UiText)
 local Tags = require(ReplicatedStorage.Shared.Kits.Tags)
 local KitTypes = require(ReplicatedStorage.Shared.Kits.Types)
 local Rarity = require(ReplicatedStorage.Shared.Lib.Rarity)
 local RollRules = require(ReplicatedStorage.Shared.Lib.RollRules)
+local PaidRandom = require(ReplicatedStorage.Shared.Lib.PaidRandom)
 local UnitMath = require(ReplicatedStorage.Shared.Lib.UnitMath)
 local Types = require(ReplicatedStorage.Shared.Types)
 local BoostService = require("../Boosts/BoostService")
@@ -113,7 +115,7 @@ local function request(player: Player, id: string, count: number, auto: boolean?
 	if auto and autoPass and not owns(autoPass) then
 		return false, "AUTO"
 	end
-	if def.paidRandom and player:GetAttribute("PaidRandomRestricted") == true then
+	if PaidRandom.roll(def, EconomyConfig.isPurchasable) and Units.restricted(player) then
 		return false, "RESTRICTED"
 	end
 	if not Gates.open(player, def.zone) then

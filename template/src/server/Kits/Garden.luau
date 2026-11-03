@@ -13,6 +13,7 @@
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
+local EconomyConfig = require(ReplicatedStorage.Shared.Config.EconomyConfig)
 local UiText = require(ReplicatedStorage.Shared.Config.UiText)
 local Tags = require(ReplicatedStorage.Shared.Kits.Tags)
 local KitTypes = require(ReplicatedStorage.Shared.Kits.Types)
@@ -267,9 +268,12 @@ function Garden.harvest(player: Player, index: number): (boolean, string?)
 	if Units.isFull(player) then
 		return false, "FULL"
 	end
+	-- Una semilla pagada con una moneda que se compra con Robux da un resultado al azar: aleatorio pago
+	-- (Lib/PaidRandom). A quien PolicyService se lo restringe, la cosecha sale sin azar.
+	local fixed = EconomyConfig.isPurchasable(seed.price.currency) and Units.restricted(player)
 	local variant: string? = nil
 	local chance = cfg.mutationChance
-	if chance and rng:NextNumber() < chance then
+	if chance and not fixed and rng:NextNumber() < chance then
 		local mutations = Units.variants()
 		local pool = {}
 		for _, v in mutations do
@@ -281,7 +285,7 @@ function Garden.harvest(player: Player, index: number): (boolean, string?)
 			return rng:NextNumber()
 		end)
 	end
-	local unit, reason, isNew = Units.add(player, seed.unit, { source = "Harvest", roll = true, variant = variant })
+	local unit, reason, isNew = Units.add(player, seed.unit, { source = "Harvest", roll = true, fixed = fixed, variant = variant })
 	if not unit then
 		return false, reason
 	end

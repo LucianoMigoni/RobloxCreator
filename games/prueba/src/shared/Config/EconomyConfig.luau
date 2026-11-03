@@ -22,9 +22,16 @@ for _, c in KitConfig.currencies or ({} :: { KitTypes.CurrencyDef }) do
 	CURRENCIES[c.id] = { symbol = c.symbol, icon = c.icon, color = Color3.fromHex(c.color), start = c.start, purchasable = c.purchasable }
 end
 
+-- ¿Se vende por Robux? Lo aleatorio que se paga con ella es aleatorio pago (Lib/PaidRandom).
+local function isPurchasable(id: string): boolean
+	local currency = CURRENCIES[id]
+	return currency ~= nil and currency.purchasable
+end
+
 return {
 	MAIN = "Money",
 	CURRENCIES = CURRENCIES,
+	isPurchasable = isPurchasable,
 	-- Los simuladores llegan a Qa y más. Por encima de 2^53 se pierde precisión de unidades, que no se ve
 	-- en pantalla (Format muestra 3 o 4 cifras).
 	MAX_BALANCE = 1e300,

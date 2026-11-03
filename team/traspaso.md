@@ -385,6 +385,15 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
   - `KitUi.cheer`: la rareza desde `units.announceFrom` ("LEGENDARY!") o una mutación desde x3 ("SO LUCKY!"), en cada popup de unidad y en el mejor resultado de un huevo.
   - "NEW RECORD!" la primera vez que una corrida pasa el mejor anterior; "DOUBLE MONEY!" cuando arranca un x2 de plata.
   - `Sound.voice` espera `AudioConfig.VOICE_COOLDOWN` (2,5 s) entre voces. Tabla de qué voz suena dónde: `skills/roblox-game-feel/references/momentos.md`.
+- **Revisión completa (#69), parte 3: compras, robo, datos y aleatorio pago (2026-11-03).**
+  - **Recibos:** bien. Se otorgan una sola vez, se confirman solo si quedaron guardados, y el canal de anuncios con premio (`ProductPurchaseChannel.AdReward`) está verificado en la documentación oficial.
+  - **Robo y regalos:** después de un robo se guarda ya a la víctima, y después de un regalo de pase, al que lo recibe. Antes, una caída del servidor justo ahí podía duplicar una unidad o perder un regalo pagado.
+  - **Fusión:** bien. Consume las unidades antes de dar el resultado.
+  - **Aleatorio pago** (regla oficial releída hoy). La plata del núcleo se vende por Robux, así que un huevo pagado con plata es aleatorio pago, y el chequeo solo lo pedía para monedas de la receta. Nuevo `Lib/PaidRandom` (con tests):
+    - las tiradas con precio en una moneda que se vende son aleatorio pago solas;
+    - la fusión con `mutationChance` muestra "Merge Odds" y, a quien PolicyService se lo restringe, nunca le da mutación;
+    - la tienda de semillas muestra las probabilidades de mutación y tamaño de la cosecha, y la cosecha de quien está restringido sale sin azar (`Units.add` con `fixed`).
+    Detalle en `roblox-compliance`, "Con el armador".
 
 ## 6. Qué existe hoy (mapa)
 

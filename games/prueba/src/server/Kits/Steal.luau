@@ -17,6 +17,7 @@ local UiText = require(ReplicatedStorage.Shared.Config.UiText)
 local KitTypes = require(ReplicatedStorage.Shared.Kits.Types)
 local UnitModel = require(ReplicatedStorage.Shared.Kits.UnitModel)
 local StealRules = require(ReplicatedStorage.Shared.Lib.StealRules)
+local DataService = require("../Data/DataService")
 local Remotes = require("../Net/Remotes")
 local Validate = require("../Net/Validate")
 local AnnounceService = require("../Social/AnnounceService")
@@ -201,6 +202,9 @@ local function deliver(thief: Player, carry: Carry)
 		return
 	end
 	stolenAt[key(thief, got.uid)] = os.time()
+	-- La víctima se guarda ya: si el servidor se cayera con el ladrón guardado (por ejemplo, al salir) y
+	-- la víctima no, la unidad quedaría en los dos.
+	task.spawn(DataService.saveAsync, victim)
 	if got.slot == nil then
 		Plots.place(thief, got.uid)
 	end

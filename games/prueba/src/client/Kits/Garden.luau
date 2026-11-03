@@ -20,12 +20,14 @@ local Tags = require(ReplicatedStorage.Shared.Kits.Tags)
 local KitTypes = require(ReplicatedStorage.Shared.Kits.Types)
 local Format = require(ReplicatedStorage.Shared.Lib.Format)
 local GardenShop = require(ReplicatedStorage.Shared.Lib.GardenShop)
+local PaidRandom = require(ReplicatedStorage.Shared.Lib.PaidRandom)
 local UIKit = require(ReplicatedStorage.Shared.UIKit)
 local Bus = require("../Bus")
 local HudController = require("../Controllers/HudController")
 local Sound = require("../UI/Sound")
 local KitState = require("./KitState")
 local KitUi = require("./KitUi")
+local Units = require("./Units")
 
 local Garden = {}
 
@@ -94,6 +96,22 @@ function Garden.start(_hud: HudController.Hud)
 					KitUi.buyProduct(growAll)
 				end } },
 			})
+		end
+		-- Aleatorio pago (Lib/PaidRandom): antes de comprar semillas, lo que puede salir al cosechar con la
+		-- suerte de ahora. A quien PolicyService se lo restringe, la cosecha sale sin azar (server/Kits/Garden).
+		local unitsCfg = KitConfig.units
+		if unitsCfg and player:GetAttribute("PaidRandomRestricted") ~= true then
+			local luckValue = player:GetAttribute("Mult_Luck")
+			local luck = if typeof(luckValue) == "number" and luckValue > 0 then luckValue else 1
+			local mutations, sizes = Units.variants()
+			local chance = cfg.mutationChance
+			if unitsCfg.mutations or (chance and chance > 0) then
+				local odds = if unitsCfg.mutations then PaidRandom.harvestOdds(chance, mutations, luck) else PaidRandom.mergeOdds(chance or 0, mutations)
+				table.insert(rows, { id = "MutationOdds", icon = "luck", title = UiText.HARVEST_MUTATIONS, detail = PaidRandom.line(odds), variant = "Purple", buttons = {} })
+			end
+			if unitsCfg.sizes then
+				table.insert(rows, { id = "SizeOdds", icon = "luck", title = UiText.HARVEST_SIZES, detail = PaidRandom.line(PaidRandom.harvestOdds(nil, sizes, luck)), variant = "Purple", buttons = {} })
+			end
 		end
 		local tilePrice = if s then s.nextTilePrice else nil
 		if tilePrice then

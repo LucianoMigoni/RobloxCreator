@@ -179,6 +179,15 @@ function UnitMath.variantChance(list: { Variant }, id: string?): number
 end
 
 -- Kilos al azar en el rango de la unidad, con los pesados más raros (como en los juegos de pesca).
+-- El peso medio de rollWeight (r² promedia 1/3): el que se da sin azar.
+function UnitMath.fixedWeight(def: Types.UnitDef): number?
+	local range = def.weight
+	if not range then
+		return nil
+	end
+	return math.floor((range.min + (range.max - range.min) / 3) * 10 + 0.5) / 10
+end
+
 function UnitMath.rollWeight(def: Types.UnitDef, random: () -> number): number?
 	local range = def.weight
 	if not range then

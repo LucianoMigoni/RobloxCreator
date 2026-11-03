@@ -30,6 +30,7 @@ export type AddOptions = {
 	size: string?,
 	weight: number?,
 	roll: boolean?, -- tirar mutación, tamaño y peso al azar con la suerte del jugador
+	fixed: boolean?, -- sin azar aunque `roll` (aleatorio pago para quien PolicyService lo restringe): Normal y peso medio
 	force: boolean?, -- aunque el inventario esté lleno (lo comprado con Robux siempre se entrega)
 	quiet: boolean?, -- sin aviso al servidor
 }
@@ -163,6 +164,11 @@ function Units.tier(kind: string): RarityConfig.Tier?
 end
 
 -- Mutación y tamaño al azar con la suerte del jugador (lo que la receta usa).
+-- ¿PolicyService le restringe el aleatorio pago? (atributo que pone ShopService al entrar)
+function Units.restricted(player: Player): boolean
+	return player:GetAttribute("PaidRandomRestricted") == true
+end
+
 function Units.rollVariants(player: Player): (string?, string?)
 	local cfg = config
 	if not cfg then
@@ -219,7 +225,9 @@ function Units.add(player: Player, kind: string, opts: AddOptions): (Unit?, stri
 		return nil, "FULL", false
 	end
 	local variant, size, weight = normal(opts.variant), normal(opts.size), opts.weight
-	if opts.roll then
+	if opts.fixed then
+		weight = weight or UnitMath.fixedWeight(def)
+	elseif opts.roll then
 		local rolledVariant, rolledSize = Units.rollVariants(player)
 		variant = variant or rolledVariant
 		size = size or rolledSize

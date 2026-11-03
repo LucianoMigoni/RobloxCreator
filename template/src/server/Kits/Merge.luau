@@ -109,7 +109,8 @@ function Merge.merge(player: Player, kind: string, variant: string?): (boolean, 
 		group = UnitPick.group(Units.list(player), kind, nil, cfg.count)
 		local mutation: string? = nil
 		local chance = cfg.mutationChance
-		if chance and rng:NextNumber() < chance then
+		-- Con chance de mutación es aleatorio pago (PaidRandom): a quien está restringido, sin azar.
+		if chance and not Units.restricted(player) and rng:NextNumber() < chance then
 			local mutations = Units.variants()
 			local pool = {}
 			for _, v in mutations do

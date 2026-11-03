@@ -12,11 +12,13 @@ local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local TweenService = game:GetService("TweenService")
 
+local EconomyConfig = require(ReplicatedStorage.Shared.Config.EconomyConfig)
 local KitConfig = require(ReplicatedStorage.Shared.Config.KitConfig)
 local RarityConfig = require(ReplicatedStorage.Shared.Config.RarityConfig)
 local UiText = require(ReplicatedStorage.Shared.Config.UiText)
 local KitTypes = require(ReplicatedStorage.Shared.Kits.Types)
 local Format = require(ReplicatedStorage.Shared.Lib.Format)
+local PaidRandom = require(ReplicatedStorage.Shared.Lib.PaidRandom)
 local Rarity = require(ReplicatedStorage.Shared.Lib.Rarity)
 local RollRules = require(ReplicatedStorage.Shared.Lib.RollRules)
 local UnitMath = require(ReplicatedStorage.Shared.Lib.UnitMath)
@@ -83,7 +85,7 @@ function Rolls.start(hud: HudController.Hud)
 	end
 
 	local function restricted(def: KitTypes.RollDef): boolean
-		return def.paidRandom == true and player:GetAttribute("PaidRandomRestricted") == true
+		return PaidRandom.roll(def, EconomyConfig.isPurchasable) and player:GetAttribute("PaidRandomRestricted") == true
 	end
 
 	-- Ventana ----------------------------------------------------------------------------------------

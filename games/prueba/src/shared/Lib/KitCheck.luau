@@ -533,14 +533,6 @@ local function checkRolls(ctx: Ctx)
 			number(ctx, path .. ".amounts[" .. j .. "].count", amount.count, 1, true)
 			pass(ctx, path .. ".amounts[" .. j .. "].pass", amount.pass)
 		end
-		local p = roll.price
-		if p and ctx.recipe.currencies then
-			for _, c in ctx.recipe.currencies do
-				if c.id == p.currency and c.purchasable and not roll.paidRandom then
-					add(ctx, path .. ".paidRandom", "se paga con '" .. c.id .. "', que se compra con Robux: marcarla paidRandom")
-				end
-			end
-		end
 	end
 end
 

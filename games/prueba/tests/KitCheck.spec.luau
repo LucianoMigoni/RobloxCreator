@@ -155,17 +155,6 @@ TestKit.run("KitCheck", {
 		expect(KitCheck.check(variant, KNOWN), "mutación 'Platinum' no existe")
 	end,
 
-	["lo que se paga con moneda comprada es aleatorio pago"] = function()
-		local recipe = mini()
-		recipe.currencies = { { id = "Tokens", symbol = "", icon = "gem", color = "#2EC5F5", start = 0, purchasable = true } }
-		recipe.leaderstats = nil
-		local rolls = recipe.rolls :: Types.RollsConfig
-		rolls.list[1].price = { currency = "Tokens", amount = 10 }
-		expect(KitCheck.check(recipe, KNOWN), "marcarla paidRandom")
-		rolls.list[1].paidRandom = true
-		equal(has(KitCheck.check(recipe, KNOWN), "paidRandom"), false)
-	end,
-
 	["la primera zona está abierta y las referencias existen"] = function()
 		local recipe = mini()
 		local zones = recipe.zones :: Types.ZonesConfig
