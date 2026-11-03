@@ -94,7 +94,9 @@ function Sound.play(name: string, pitch: number?)
 	s:Play()
 end
 
--- Anuncio con voz ("LEGENDARY!"): solo si la voz ya está subida.
+local lastVoice = -math.huge
+
+-- Anuncio con voz ("LEGENDARY!"): solo si la voz ya está subida, y una a la vez (VOICE_COOLDOWN).
 function Sound.voice(moment: string)
 	local key = AudioConfig.VOICES[moment]
 	if not key then
@@ -104,6 +106,11 @@ function Sound.voice(moment: string)
 	if not id or id == "" then
 		return
 	end
+	local now = os.clock()
+	if now - lastVoice < AudioConfig.VOICE_COOLDOWN then
+		return
+	end
+	lastVoice = now
 	local s = Instance.new("Sound")
 	s.SoundId = id
 	s.Volume = AudioConfig.VOICE_VOLUME

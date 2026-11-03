@@ -274,6 +274,7 @@ return {
 	ZONE_REBIRTH_PROGRESS = "%d / %d Rebirths",
 	STAGE_NOW = "Stage %d/%d",
 	STAGE_REACHED = "Stage %d!",
+	NEW_RECORD = "NEW RECORD! Stage %d",
 	YOU_WIN = "YOU WIN!",
 	RUN_GO = "GO GO GO!",
 	RUN_OVER = "RUN OVER!",

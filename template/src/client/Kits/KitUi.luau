@@ -292,11 +292,30 @@ function KitUi.showUnit(info: UnitInfo, source: string)
 		lines = { KitUi.unitLine(info) },
 		source = source,
 	})
+	KitUi.cheer(info)
 end
 
 local rarityOrder: { string } = {}
 for _, tier in RarityConfig.TIERS do
 	table.insert(rarityOrder, tier.id)
+end
+local CHEER_RANK = table.find(rarityOrder, if unitsConfig and unitsConfig.announceFrom then unitsConfig.announceFrom else "Legendary") or math.huge
+local LUCKY_MULT = 3 -- desde esta mutación ("Diamond" x3, "Rainbow", "Galaxy"): "SO LUCKY!"
+local mutationMult: { [string]: number } = {}
+for _, mutation in RarityConfig.MUTATIONS do
+	mutationMult[mutation.id] = mutation.mult
+end
+
+-- Voz de anunciador para lo raro (el nivel "celebración" de roblox-game-feel): la rareza desde la que se
+-- avisa a todo el servidor (`units.announceFrom`, "LEGENDARY!") o una mutación grande ("SO LUCKY!").
+function KitUi.cheer(info: UnitInfo)
+	local def = unitDefs[info.kind]
+	local rarity = if def then def.rarity else nil
+	if rarity and UnitMath.rank(rarityOrder, rarity) >= CHEER_RANK then
+		Sound.voice(rarity)
+	elseif info.variant and (mutationMult[info.variant] or 0) >= LUCKY_MULT then
+		Sound.voice("Lucky")
+	end
 end
 local POPUP_FROM = "Epic" -- desde esta rareza, lo conseguido seguido (peces, pilas, capturas) va en popup
 

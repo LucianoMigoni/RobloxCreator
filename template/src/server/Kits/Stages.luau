@@ -29,7 +29,7 @@ local KitWorld = require("./KitWorld")
 local Stats = require("./Stats")
 
 type StagesData = { stage: number, best: number, wins: number, revives: number }
-type Run = { stage: number, dead: boolean, freeUsed: number, reviving: boolean }
+type Run = { stage: number, dead: boolean, freeUsed: number, reviving: boolean, record: boolean }
 
 local Stages = {}
 
@@ -106,11 +106,17 @@ local function reach(player: Player, stage: number)
 	else
 		d.stage = stage
 	end
+	-- "NEW RECORD!" una vez por corrida, al pasar el mejor anterior (en el obby cada etapa nueva ya lo es).
+	local record = false
 	if stage > d.best then
+		if run and d.best > 0 and not run.record then
+			run.record = true
+			record = true
+		end
 		d.best = stage
 	end
 	Signals.track(player, "Stage", 1)
-	KitFx.send(player, "Stage", { stage = stage })
+	KitFx.send(player, "Stage", { stage = stage, record = record })
 	Signals.dirty(player)
 end
 
@@ -251,7 +257,7 @@ function Stages.start(_recipe: KitTypes.KitConfig)
 					endRun(player, false)
 				end
 				if not runs[player] and data(player) then
-					runs[player] = { stage = 0, dead = false, freeUsed = 0, reviving = false }
+					runs[player] = { stage = 0, dead = false, freeUsed = 0, reviving = false, record = false }
 					Signals.track(player, "RunStarted", 1)
 					KitFx.send(player, "RunStarted", {})
 					Signals.dirty(player)

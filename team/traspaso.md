@@ -378,9 +378,13 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
     - En los `.md`: rutas y funciones citadas que existen.
   - **Seguridad:** `PlantSeed` y `HarvestPlant` dejaban plantar y cosechar desde cualquier lugar, sin medir la distancia. Se sacaron: se planta y se cosecha con el prompt de la parcela, que la mide en el servidor.
   - **Botón LOCK** en la barra de acción, estando en la base, con la traba y la espera a la vista. Lo pedía la spec del juego de prueba y el remote `LockBase` existía sin pantalla.
-  - **Compras con monedas de `ShopConfig.ITEMS`** (con `InventoryService` y `data.inventory`): no tenían pantalla ni efecto desde que se rehízo la tienda, así que se sacaron. Lo que se compra con monedas lo dan los bloques.
-  - **Docs con nombres viejos**, corregidos: `OnboardingConfig`, `GameplayConfig`, `ShopService.hasPass` (es `ownsPass`), `GAME_PASSES` (es `PASSES`) y el ejemplo de `RequestPurchase`.
+  - **Compras con monedas de ShopConfig.ITEMS** (con InventoryService y data.inventory): no tenían pantalla ni efecto desde que se rehízo la tienda, así que se sacaron. Lo que se compra con monedas lo dan los bloques.
+  - **Docs con nombres viejos**, corregidos: OnboardingConfig, GameplayConfig, ShopService.hasPass (es `ShopService.ownsPass`), GAME_PASSES (es `PASSES`) y el ejemplo de RequestPurchase. Lo que ya no existe se escribe sin formato de código: el chequeo de los docs revisa lo que va entre comillas invertidas.
   - **`sync_template.py`:** borra lo que la plantilla borró, `--diff` muestra la configuración y la receta no se compara. `games/prueba` quedó al día con la herramienta.
+- **Revisión completa (#69), parte 2: voces de anunciador (2026-11-03).** Solo sonaban 2 de las 10 ("REBIRTH!" y "JACKPOT!").
+  - `KitUi.cheer`: la rareza desde `units.announceFrom` ("LEGENDARY!") o una mutación desde x3 ("SO LUCKY!"), en cada popup de unidad y en el mejor resultado de un huevo.
+  - "NEW RECORD!" la primera vez que una corrida pasa el mejor anterior; "DOUBLE MONEY!" cuando arranca un x2 de plata.
+  - `Sound.voice` espera `AudioConfig.VOICE_COOLDOWN` (2,5 s) entre voces. Tabla de qué voz suena dónde: `skills/roblox-game-feel/references/momentos.md`.
 
 ## 6. Qué existe hoy (mapa)
 

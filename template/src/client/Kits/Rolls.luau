@@ -423,6 +423,9 @@ function Rolls.start(hud: HudController.Hud)
 		else
 			Sound.play("Reveal")
 		end
+		if best then
+			KitUi.cheer({ kind = best.kind, variant = best.variant })
+		end
 		skip = false
 		local started = os.clock()
 		local wait = if quick then AUTO_SHOW_SECONDS else SHOW_SECONDS

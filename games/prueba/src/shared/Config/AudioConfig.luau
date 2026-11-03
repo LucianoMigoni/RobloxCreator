@@ -61,6 +61,7 @@ return {
 		Lucky = "so_lucky",
 	} :: { [string]: string },
 	VOICE_VOLUME = 0.8,
+	VOICE_COOLDOWN = 2.5, -- segundos entre voces: una sola a la vez, sin pisarse
 
 	-- Música por ambiente: el juego elige con Sound.playMusic("Lobby"). Volumen bajo: no tapa los efectos.
 	MUSIC_VOLUME = 0.25,

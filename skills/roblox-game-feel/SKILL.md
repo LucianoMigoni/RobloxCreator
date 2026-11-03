@@ -57,6 +57,9 @@ Que cada segundo se sienta bien, como en los hits (`skills/_shared/como-son-nues
   - ambiente por zona o evento con `Sound.playMusic`.
 - **Textos:** los de los avisos van en inglés (`UiText`) y sin texto dentro de imágenes.
 - **Voces:** las anunciadoras ("LEGENDARY!", "REBIRTH!") son de `assets/audio/hit-voices`. Sin subir, no suenan y el efecto alcanza.
+  - Una a la vez: `Sound.voice` espera `AudioConfig.VOICE_COOLDOWN` entre voces.
+  - Lo raro conseguido pasa por `KitUi.cheer` (rareza desde `announceFrom` o mutación grande).
+  - Dónde suena cada una: `references/momentos.md`, "Voces de anunciador".
 
 ## Checklist
 - [ ] Cada acción del jugador tiene sonido y animación.

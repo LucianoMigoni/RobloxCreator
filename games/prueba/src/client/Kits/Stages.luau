@@ -135,7 +135,12 @@ function Stages.start(hud: HudController.Hud)
 		if stage then
 			Sound.play("LevelUp")
 			Juice.pop(row, 0.15)
-			KitUi.notify(string.format(UiText.STAGE_REACHED, stage), "Info", "trophy")
+			if payload.record == true then
+				Sound.voice("NewRecord")
+				KitUi.notify(string.format(UiText.NEW_RECORD, stage), "Premium", "trophy")
+			else
+				KitUi.notify(string.format(UiText.STAGE_REACHED, stage), "Info", "trophy")
+			end
 		end
 	end)
 	Bus.on("Kit:Win", function(payload: any)

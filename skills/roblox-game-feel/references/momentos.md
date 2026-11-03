@@ -30,7 +30,7 @@ Lo que hace hoy cada momento del núcleo y de los bloques del armador (revisado 
 | Steal | `WasStolen`, `StealFailed` | `Error` | Aviso | Error |
 | Steal | `StealStopped` | `Reward` | Aviso | 2 |
 | Stats | Toque (TAP!) | `Click` | "+N" que sube y botón que late | 1 |
-| Stages | `Stage` | `LevelUp` | El contador de etapa late; aviso | 3 |
+| Stages | `Stage` | `LevelUp`; con `record`, voz "NEW RECORD!" | El contador de etapa late; aviso ("NEW RECORD! Stage 12" la primera vez que una corrida pasa el mejor) | 3–4 |
 | Stages | `Win` | `Victory` | Popup de premio y confeti | 4 |
 | Stages | `RunStarted`, `Revived` | `Whoosh`, `Reward` | Aviso | 2 |
 | Stages | `RunDied`, `RunEnded` | `Error`; resumen | Ventana de revivir; popup de resumen | Error, 3 |
@@ -47,9 +47,23 @@ Lo que hace hoy cada momento del núcleo y de los bloques del armador (revisado 
 | Items | `ItemUsed` | `Reward` | Aviso | 2 |
 | Zones | `ZoneOpened` | `LevelUp` | Popup "zona abierta" | 3 |
 
+## Voces de anunciador
+
+Suenan solo si la voz está subida (`AssetIds.voices`), una a la vez (`AudioConfig.VOICE_COOLDOWN`).
+
+| Voz | Cuándo | Dónde |
+|---|---|---|
+| "LEGENDARY!", "MYTHIC!", "SECRET!" (y "EPIC!" si la receta anuncia desde Epic) | Una unidad desde `units.announceFrom`: popup de unidad (robo, fusión, pesca, cosecha, captura) y el mejor resultado de un huevo | `KitUi.cheer` |
+| "SO LUCKY!" | Una mutación desde x3 (Diamond, Rainbow, Galaxy) | `KitUi.cheer` |
+| "NEW RECORD!" | La corrida pasa el mejor anterior (una vez por corrida) | `client/Kits/Stages` |
+| "DOUBLE MONEY!" | Arranca un impulso de plata x2 (comprado, ganado o del servidor) | `BoostsController` |
+| "REBIRTH!" | Renacer | `RebirthController` |
+| "JACKPOT!" | El premio grande de la ruleta | `SpinController` |
+
+"LEVEL UP!" queda para un juego con niveles propios.
+
 ## Ideas para el próximo pase
 
 - `Effects.floatingText` "+$X" sobre la placa de cobro y sobre lo vendido.
 - `Juice.countUp` en el contador del HUD cuando entra mucha plata de golpe.
-- Voz "NEW RECORD" al pasar el mejor de etapas.
 - `Effects.highlight` sobre la unidad que se está robando.

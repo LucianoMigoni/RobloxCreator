@@ -6,6 +6,7 @@
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
+local BoostConfig = require(ReplicatedStorage.Shared.Config.BoostConfig)
 local ShopConfig = require(ReplicatedStorage.Shared.Config.ShopConfig)
 local UiText = require(ReplicatedStorage.Shared.Config.UiText)
 local Format = require(ReplicatedStorage.Shared.Lib.Format)
@@ -115,7 +116,30 @@ function BoostsController.start(hud: Hud.Hud)
 		end
 		UIKit.open(window)
 	end)
+	-- "DOUBLE MONEY!" cuando arranca un impulso de plata (comprado, ganado o de todo el servidor). El primer
+	-- estado no cuenta: lo que ya tenía al entrar no es nuevo.
+	local active: { [string]: boolean }? = nil
+	local function moneyBoostStarted(state: Types.PlayerSnapshot): boolean
+		local now: { [string]: boolean } = {}
+		local started = false
+		for _, boost in state.boosts do
+			now[boost.id] = true
+			local def = BoostConfig.TIMED[boost.id] or BoostConfig.SERVER[boost.id]
+			if active and not active[boost.id] and def and def.stat == "Money" and def.value >= 2 then
+				started = true
+			end
+		end
+		active = now
+		return started
+	end
+	local first = PlayerState.get()
+	if first then
+		moneyBoostStarted(first)
+	end
 	PlayerState.Changed:Connect(function(state: Types.PlayerSnapshot)
+		if moneyBoostStarted(state) then
+			Sound.voice("DoubleMoney")
+		end
 		if UIKit.isOpen(window) then
 			render(state)
 		end
