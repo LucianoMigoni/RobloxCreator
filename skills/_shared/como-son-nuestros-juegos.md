@@ -97,6 +97,7 @@ Referencia completa con capturas de los hits en `hits-2026.md` §3.7. Lo que lle
 - Decoración con el catálogo (Kenney: naturaleza, fantasía, comida, navidad, cementerio...).
 - Iluminación cálida, cielo claro y niebla suave.
 - Temporada: Halloween, Navidad o verano se aplican como capa encima del mapa, sin rehacerlo.
+- **Lo arma el armador:** `MapKit` genera el mapa de la receta con el estilo de los hits (corrales con cerco o edificios, puestos con toldo a rayas, alfombra roja con arco, arcos de zona, muelles, tablas del mundo, cofre del grupo, ruleta, cartel de update y la unidad estrella gigante). Se mira sin Studio con `tools/render3d/mapview.cjs`; para hacerlo propio, se fija en Studio y se edita a mano (`roblox-game-kits`).
 
 ## 5. Recursos
 
@@ -114,7 +115,7 @@ Referencia completa con capturas de los hits en `hits-2026.md` §3.7. Lo que lle
   - sonidos y voces: ElevenLabs.
 
   Todo asset nuevo se registra con su licencia en el mismo cambio.
-- **Plantilla:** `template/` trae la economía, la retención, la tienda, los boosts y la UI estilo hit. Cada juego copia la plantilla y elige su kit de género.
+- **Plantilla y armador:** `template/` trae la economía, la retención, la tienda, los boosts, la UI estilo hit y el armador: 18 bloques de juego y nueve recetas de muestra, una por fórmula de hit (`roblox-game-kits`). Cada juego copia la plantilla y una receta, la hace propia, y trae las mejoras de la plantilla con `tools/sync_template.py`.
 
 ## 6. Monetización
 
@@ -192,8 +193,8 @@ Skill `roblox-campaigns` (fuentes en `anuncios-2026.md`). Lo esencial:
 
 1. Leer este documento, `CLAUDE.md` y `team/tareas.md`.
 2. Fase 1, idea (`roblox-ideation`): fórmula hit + giro propio, o idea externa adaptada; puntuar; decidir el público (chicos = plan para Kids y Select desde el día 1).
-3. Fase 2 (`roblox-game-cloner`): spec + copiar la plantilla + kit de género + mapa.
-4. Fases 3 a 7: UI estilo hit, monetización, seguridad, QA y cumplimiento, con sus skills.
+3. Fase 2, el armador (`roblox-game-kits`; `roblox-game-cloner` si no encaja en una fórmula): copiar la plantilla y la receta de la fórmula, hacerla propia (unidades, números, tienda, objetivos, mapa), ver el mapa sin Studio y ponerle arte con IA.
+4. Fases 3 a 7: UI estilo hit, monetización, seguridad, QA y cumplimiento, con sus skills. Antes de publicar, el pase de "jugo" (`roblox-game-feel`): cada momento con su sonido, animación y celebración.
 5. Fase 8, publicación (`roblox-publishing` + `vitrina-hits.md`): ícono, miniaturas, título, descripción y video.
 6. Campañas (`roblox-campaigns`): plan de lanzamiento con presupuesto, creatividades y reglas para cortar o escalar.
 7. Fases 9 y 10, métricas y live ops: un update por semana, eventos, temporadas y ofertas nuevas.
@@ -247,3 +248,14 @@ Para entender la intención detrás de cada regla:
   - "Que se asemeje a los top hits, sin ser copias literales, pero que use todo lo que usan ellos en tácticas, mecánicas y estándares", y enseguida: "no necesariamente evitando copiarlos". Es la segunda regla: se copia el diseño entero, no los assets con dueño.
   - "Apuntamos a público internacional, en USA está el dinero": inglés siempre, también en las voces (sección 1).
   - Herramientas: preguntó por Meshy, ForgeGUI, Blender y ChatGPT. Quedó: API de OpenAI para imágenes, Meshy directo y Blender para 3D, ElevenLabs para sonidos y voces, ForgeGUI no (`conectores.md`, "Qué usamos").
+- **2026-10-30 (Leonel):**
+  - Un armador genérico para hacer cualquier juego estilo top hit, no un juego puntual: bloques de juego, recetas y mapas (`roblox-game-kits`).
+  - Terminar todo, analizarlo y reportar qué hay que conectar (claves, conectores, cuentas): `team/pendientes.md`.
+  - Avisar con una imagen chica cada vez que se termina algo importante, y subir en cada hito.
+- **2026-11-02 (Leonel):**
+  - Con la clave de OpenAI, "esforzate con la UI, los íconos y toda la GUI": que todo sea lo más completo y lindo posible, como los top hits, mandando una prueba de cada tanda.
+  - "Estos íconos así son muy malos": un render base nunca es un ícono final; todo pasa por GPT Image.
+  - Las unidades, zonas e íconos de las recetas son ejemplos: cada juego trae los suyos.
+- **2026-11-03 (Leonel):**
+  - "Los mapas están muy básicos": investigar los mapas de *Steal An Egg* y de *Fish It!* (también con videos de gameplay) y subir el nivel del generador (sección 4).
+  - Las recetas y los mapas son muestras: cada juego los prepara y personaliza mucho más (la receta se hace propia y el mapa se fija en Studio para editarlo a mano).

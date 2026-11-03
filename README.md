@@ -6,6 +6,10 @@ Centro para crear juegos de Roblox rápido, en equipo y con IA (Claude Code, Cod
 |---|---|
 | Instalar todo en tu PC | [`SETUP.md`](SETUP.md) y después `setup.ps1` |
 | Saber cómo se trabaja (fases, skills, convenciones) | [`CLAUDE.md`](CLAUDE.md), que es la fuente de reglas para personas e IAs |
+| Saber qué juegos hacemos y cómo | [`skills/_shared/como-son-nuestros-juegos.md`](skills/_shared/como-son-nuestros-juegos.md) |
+| Armar un juego estilo top hit con el armador | [`skills/roblox-game-kits/SKILL.md`](skills/roblox-game-kits/SKILL.md) y el ejemplo [`games/prueba`](games/prueba/README.md) |
+| Retomar el trabajo en curso | [`team/traspaso.md`](team/traspaso.md) |
+| Ver qué claves, conectores, cuentas y pruebas faltan | [`team/pendientes.md`](team/pendientes.md) |
 | Ver qué falta construir del hub | [`ROADMAP.md`](ROADMAP.md) |
 | Tomar una tarea o ver quién hace qué | [`team/tareas.md`](team/tareas.md) y el flujo en [`team/README.md`](team/README.md) |
 | Entender por qué se decidió algo | [`team/decisiones.md`](team/decisiones.md) |

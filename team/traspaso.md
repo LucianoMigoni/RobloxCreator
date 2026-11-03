@@ -2,7 +2,7 @@
 
 Para la IA (o persona) que retome el trabajo desde un push, por ejemplo el Claude de Luciano si a Leonel se le acaban los tokens. **Leé este archivo entero antes de tocar nada:** acá está todo lo que pidió el usuario, cómo quiere que se trabaje, qué está hecho, qué se está haciendo y qué falta, para seguir igual que en el chat original.
 
-Última actualización: 2026-11-03, MapKit (#62) con el estilo de los hits, las nueve recetas (#63) el juego de prueba rehecho con el armador (#64) el skill del armador (#65) y el de game feel (#66) terminados; sigue poner al día la documentación (#67). Sesión original: Claude Code en la nube de Leonel, rama `leonelblumberg/quirky-dijkstra-2kxnwz`.
+Última actualización: 2026-11-03. Terminados: MapKit (#62) con el estilo de los hits, las nueve recetas (#63), el juego de prueba rehecho con el armador (#64), los skills del armador (#65) y de game feel (#66), los juegos al día con la plantilla (#66b) y la documentación al día (#67). Sigue la revisión completa (#69). Sesión original: Claude Code en la nube de Leonel, rama `leonelblumberg/quirky-dijkstra-2kxnwz`.
 
 ## 0. Cómo retomar, paso a paso
 
@@ -28,7 +28,7 @@ Para la IA (o persona) que retome el trabajo desde un push, por ejemplo el Claud
    Después, push.
 6. **Tabla de tareas:** el usuario quiere verla. En Claude Code, al empezar, crear con `TaskCreate` una tarea por fila de la sección 4 (con su número y estado: las ✅ como completadas) y actualizarla con `TaskUpdate` mientras se trabaja. Si pide "enumerame las tareas", mostrar solo la lista, sin comentarios.
 7. **Clave de OpenAI:** desde el 2026-11-02 está cargada en la configuración del entorno de la nube (la toman las sesiones nuevas). Al empezar, comprobar que exista solo por el nombre (`printenv | cut -d= -f1 | grep OPENAI`), nunca imprimir el valor, y usarla con `tools/imagegen.py` para todo lo visual (íconos, mascotas, miniaturas). Si no está, pedírsela al usuario por la configuración del entorno (`team/claves-ia.md`), no por el chat.
-8. **Dónde quedó:** la sección 4 marca la próxima tarea (la primera que no tiene ✅) y la sección 7 tiene el diseño ya decidido de los bloques que faltan del hito 2. Seguir ese diseño: es el que se venía usando.
+8. **Dónde quedó:** la sección 4 marca la próxima tarea (la primera que no tiene ✅). La sección 7 tiene el diseño ya decidido del armador: seguirlo, es el que se viene usando.
 
 ## 1. El objetivo
 
@@ -89,17 +89,17 @@ Estado: ✅ hecho · 🔄 en curso (sección 4) · 👤 depende de una persona.
 **2026-10-28: el giro a top hits**
 - ✅ "Cambiá todo lo que está ahora": cash grab, retención con animaciones de dopamina, colorido, adictivo, para chicos, cosas en pantalla, objetivos diarios, "características típicas de juegos de Roblox actuales" → plantilla v2/v3.
 - ✅ Investigar los hits (Steal An Egg, Fish It, Break and Steal an Egg, +1 Speed Keyboard Escape) → `skills/_shared/hits-2026.md`.
-- 🔄 "Añadí todas las skills, animaciones, conectores, todo lo que necesites (ejemplo Blender) y código reutilizable" → falta el código de juego reutilizable: el armador (sección 4).
-- 🔄 Usar ideas de juegos existentes fuera de Roblox adaptadas ("la aguja en un pajar") → receta SearchAndDig y guía de ideas externas en el skill del armador.
+- ✅ "Añadí todas las skills, animaciones, conectores, todo lo que necesites (ejemplo Blender) y código reutilizable" → el armador: 18 bloques, nueve recetas, MapKit y los skills `roblox-game-kits` y `roblox-game-feel`.
+- ✅ Usar ideas de juegos existentes fuera de Roblox adaptadas ("la aguja en un pajar") → receta SearchAndDig y "Ideas de fuera de Roblox" en `bloques.md`.
 - ✅ Rediseñar todo si hace falta; dejarlo lo más avanzado posible; foco en chicos; muchísimas microtransacciones.
-- 🔄 "Prestá atención en cómo diseñan los HUDs, cómo son los mapas" → HUD ✅; mapas: MapKit (sección 4).
-- 🔄 "Conseguí todo lo necesario para la construcción, recursos, animaciones" → recursos ✅; generadores de mapas: MapKit (sección 4).
+- ✅ "Prestá atención en cómo diseñan los HUDs, cómo son los mapas" → HUD (`hud-hits.md`) y mapas (MapKit, con el estilo de los hits).
+- ✅ "Conseguí todo lo necesario para la construcción, recursos, animaciones" → recursos y el generador de mapas (MapKit).
 - ✅ "No tiene que ser exactamente de un juego de pesca, lo que busco es que sean buenos para generar juegos del estilo top hit."
 - ✅ Usar todos los trucos (x2, bonus, retención, ruleta); pay-to-win, "lo más cash grab posible"; probabilidades chicas como los hits, no gigantes.
 - ✅ Conectar Rojo, Blender, ForgeGUI (evaluar), Meshy (evaluar), Obsidian (evaluar); los dos con todo conectado → `skills/_shared/conectores.md` y `SETUP.md`. 👤 Instalar en cada máquina.
 - ✅ Creador de campañas de publicidad (cómo funciona, qué rinde, cuánto poner, cómo llevarlas) → `roblox-campaigns`, `tools/campaigns.py`.
 - ✅ Imágenes, miniaturas y descripción para que hagan clic → `skills/_shared/vitrina-hits.md`, `tools/thumbs.py`, `tools/imagegen.py`.
-- ✅ "Anotá todo lo que estamos planteando para armar los juegos" → `skills/_shared/como-son-nuestros-juegos.md` (🔄 sumar lo del 29 y 30).
+- ✅ "Anotá todo lo que estamos planteando para armar los juegos" → `skills/_shared/como-son-nuestros-juegos.md` (al día al 2026-11-03).
 - ✅ Anuncios con premio a menores de 13: se ofrecen cada vez que Roblox lo permite, sin buscar vacíos (protección infantil) → decisión del 2026-10-28.
 
 **2026-10-29**
@@ -108,14 +108,14 @@ Estado: ✅ hecho · 🔄 en curso (sección 4) · 👤 depende de una persona.
 - ✅ Evaluar VFX Studio → `conectores.md` (opcional, solo para diseñar).
 - ✅ Herramientas: GPT Image y Nano Banana por API (no por suscripción), Meshy directo, Blender, ElevenLabs; ForgeGUI no. 👤 Claves (sección 8).
 - ✅ "Se ve muy IA... analizá el HUD de todos los top hits y replicalo" → `hud-hits.md` y UIKit v3. Pidió una muestra → enviada y aprobada como modelo: "El juego tiene que verse 10 veces mejor que eso. Pero está bien como modelo." "Tené cuidado con los espacios y las cosas superpuestas."
-- ✅ Íconos como los de los hits (sin dedos mal, no emoji 3D) → render propio + GPT Image 2.5. 🔄 Los que faltan, cuando esté la clave de OpenAI.
-- ✅ Investigar Chicken Farm y Ride a Dino → `hud-hits.md`. 🔄 Sus mecánicas en el armador (recetas MergeTycoon y RunAndCatch).
+- ✅ Íconos como los de los hits (sin dedos mal, no emoji 3D) → render propio + GPT Image 2.5. Los que faltaban se hicieron con la clave de OpenAI (2026-11-02).
+- ✅ Investigar Chicken Farm y Ride a Dino → `hud-hits.md`. Sus mecánicas quedaron en las recetas MergeTycoon y RunAndCatch.
 - 👤 "Quizás habría que conectarte ChatGPT y Gemini" → claves `OPENAI_API_KEY` y `GEMINI_API_KEY` (sección 8).
 
 **2026-10-30**
 - ✅ Tabla de tareas visible.
-- 🔄 "Qué tiene la app, qué falta?" → respondido; el plan está en la sección 4.
-- 🔄 Armador genérico para cualquier top hit, terminar todo, analizarlo y reportar qué conectar → sección 4.
+- ✅ "Qué tiene la app, qué falta?" → respondido; el plan está en la sección 4.
+- 🔄 Armador genérico para cualquier top hit, terminar todo, analizarlo y reportar qué conectar → armador hecho; faltan la revisión completa y el reporte final (sección 4).
 - 🔄 Traspaso completo y push en cada hito → este archivo.
 - ✅ "Añadí también las cosas que hay que hacer después: qué API keys necesitás (como ChatGPT y Google), qué conectores hay que poner, etc." → `team/pendientes.md` (tarea #71; se repite en el reporte final).
 - ✅ "Enumerame (únicamente) las tareas" → cuando pida la tabla, mostrar solo la lista de tareas, sin comentarios.
@@ -134,8 +134,10 @@ Estado: ✅ hecho · 🔄 en curso (sección 4) · 👤 depende de una persona.
 - ✅ "Esto es solo un ejemplo, no? Después cada juego puede ser de cualquier cosa" → sí: las unidades, zonas e íconos de las recetas son muestras; cada juego trae los suyos.
 
 **2026-11-03**
-- 🔄 "Continuá con todo lo que falta" → MapKit (#62) ✅; siguen las recetas, el juego de prueba, los skills, los docs, la revisión y el reporte final (sección 4).
+- 🔄 "Continuá con todo lo que falta" → MapKit, recetas, juego de prueba, skills y docs ✅; siguen la revisión y el reporte final (sección 4).
 - ✅ "Los mapas están muy básicos, investigá por ejemplo el de Steal An Egg. Pero bueno, si es una base únicamente, quizás tiene sentido" + "Buscá videos de gameplay si hace falta" + "Buscá del de pescar también" → miniaturas oficiales y fotogramas de videos de Steal An Egg, Steal a Brainrot y Fish It! (con `roblox_research.py` y `i.ytimg.com/vi/<id>/hq1-3.jpg`), y MapPlan rehecho con ese estilo (sección 5). Antes y después enviado al usuario.
+- ✅ "Esto sería simplemente un ejemplo, no? Después cada juego usa esto mucho más preparado y personalizado" → sí: las recetas y los mapas son muestras; cada juego copia la receta, la hace propia y fija el mapa en Studio para editarlo (decisión del 2026-11-03).
+- 🔄 "Continuá" → juegos al día con la plantilla (`tools/sync_template.py`) y documentación al día ✅; siguen la revisión completa y el reporte final.
 
 ## 4. Plan en curso
 
@@ -171,9 +173,9 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
 | 65 | Skill del armador y skills que lo usan | 7 | ✅ (2026-11-03) |
 | 66 | Skill de game feel | 7 | ✅ (2026-11-03) |
 | 66b | Juegos al día con la plantilla (`tools/sync_template.py`, `iconFallbacks`) | 7 | ✅ (2026-11-03) |
-| 67 | Poner al día CLAUDE.md, ROADMAP, guía central, hits-2026, README, tablero | 7 | **sigue esta** |
+| 67 | Poner al día CLAUDE.md, ROADMAP, guía central, hits-2026, README, tablero | 7 | ✅ (2026-11-03) |
 | 68 | Íconos que faltan | 7 | ✅ 27 de la UI y 9 mascotas con GPT Image (falta subirlos a Roblox) |
-| 69 | Revisión completa | 8 | pendiente |
+| 69 | Revisión completa | 8 | **sigue esta** |
 | 70 | Push y reporte final: qué conectar, claves, cuentas, pruebas | 8 | pendiente |
 | 71 | Lista de lo que hay que hacer después: claves, conectores, cuentas y pruebas (`team/pendientes.md`) | 1 | ✅ (mantenerla al día) |
 
@@ -361,6 +363,13 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
     - Respeta los archivos del núcleo que el juego hizo suyos a propósito: una ruta o patrón por línea en `games/<juego>/sync-ignore.txt`.
   - **`tools/check.py`:** corre su selftest y avisa, sin fallar, los juegos con el núcleo atrasado.
   - **Emojis de respaldo en la receta:** `iconFallbacks` (`{ pebble_pup = "🐶" }`), validado por KitCheck. Así `Icons.luau` es igual en todos los juegos y el juego de prueba quedó sin diferencias de núcleo.
+- **Documentación al día (#67, 2026-11-03).**
+  - **`CLAUDE.md`:** la estructura del juego con el armador y el mapa, el paso 9 de "Empezar un juego nuevo" (`sync_template.py`) y la herramienta nueva.
+  - **`ROADMAP.md`:** la fase D (juegos estilo top hit) con su estado, y C2 al día.
+  - **`como-son-nuestros-juegos.md`:** los mapas con MapKit, la plantilla con el armador, la fase 2 con el armador, el pase de jugo y los pedidos del 30/10 al 3/11.
+  - **`hits-2026.md`:** lo visto en los mapas de los hits, cada fórmula con su receta, y tres referencias que ya no existían (un skill `roblox-retention`, `client/Juice` y `ProductService`).
+  - **`README.md`:** la guía central, el armador, el traspaso y los pendientes.
+  - **`team/`:** tablero al día (Chicken Farm, Ride a Dino e íconos con OpenAI, hechos) y decisiones con la más nueva arriba.
 
 ## 6. Qué existe hoy (mapa)
 

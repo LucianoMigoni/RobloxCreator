@@ -65,6 +65,7 @@ El juego es una carpeta dentro de este repo, no un repo aparte (ver **Git y trab
 6. Conectar: `rojo serve` en la carpeta del juego → en Studio, pestaña Plugins → Rojo → **Connect** (localhost:34872). Activar el MCP de Studio (ver `skills/_shared/mcp-tools.md`).
 7. Commit, `git push -u origin <rama>` y Pull Request a `main` para que el otro integrante lo revise.
 8. Arrancar el pipeline en la fase 1 (o 2 si el concepto ya está decidido), cada fase en su rama y su PR.
+9. Mantenerlo al día: `python tools/sync_template.py games/<nombre-juego>` muestra las mejoras de la plantilla que le faltan y `--apply` las trae, sin tocar su `src/shared/Config/`.
 
 ### Herramientas
 Instalación en cada máquina: `SETUP.md` (y `setup.ps1`, que crea el enlace de skills y verifica todo). Versiones del equipo:
@@ -109,9 +110,9 @@ games/<juego>/
 ├── default.project.json      # Rojo
 ├── rokit.toml                # versión de Rojo (igual a la de la raíz)
 ├── src/
-│   ├── server/               # ServerScriptService: Main.server.luau arranca datos, economía, impulsos, retención, tienda, social y el kit
+│   ├── server/               # ServerScriptService: Main.server.luau arranca datos, economía, impulsos, retención, tienda, social, los bloques del armador (Kits/) y el mapa (Map/)
 │   ├── client/               # StarterPlayerScripts: Main.client.luau + Controllers/ (HUD y ventanas) + UI/ (Juice, Sound, Effects) + Kits/
-│   └── shared/               # ReplicatedStorage: Config/, Lib/, UIKit, Icons, Net, Types
+│   └── shared/               # ReplicatedStorage: Config/ (lo propio del juego: KitConfig es la receta), Lib/, Kits/ (tipos, etiquetas y recetas de muestra), UIKit, Icons, Net, Types
 ├── tests/                    # lógica pura probada con el CLI de Luau (la corre tools/check.py)
 └── docs/                     # spec.md, decisiones.md, métricas, auditorías
 ```

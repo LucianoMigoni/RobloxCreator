@@ -131,6 +131,31 @@ APIs (existencia verificada el 2026-10-24 en la referencia oficial, ninguna depr
 
 ---
 
+## Fase D — Juegos estilo top hit (giro del 2026-10-28)
+
+El hub pasó a hacer juegos estilo top hit para chicos (`skills/_shared/como-son-nuestros-juegos.md`). Detalle de cada paso en `team/traspaso.md`.
+
+- [x] D1. Investigación de los hits y guía central: `hits-2026.md`, `como-son-nuestros-juegos.md` y `algoritmo-descubrimiento.md`.
+- [x] D2. Recursos y herramientas estilo hit:
+  - íconos, partículas, sonidos y voces;
+  - imágenes con IA (`imagegen.py`, `thumbs.py`, `iconsheet.py`);
+  - vitrina y campañas (`roblox-publishing`, `roblox-campaigns`).
+- [x] D3. Plantilla v2/v3:
+  - núcleo de economía y retención: multimoneda, impulsos, diario, regalos, misiones, ruleta, códigos, ganancias sin conexión, renacer, índice, eventos, referidos e insignias;
+  - UI estilo hit: HUD de PC y táctil, tienda, índice y ventanas.
+- [x] D4. El armador (`roblox-game-kits`):
+  - 18 bloques de juego con su UI y sus productos;
+  - MapKit: el mapa estilo hit sale de la receta, con vista previa sin Studio;
+  - nueve recetas de muestra, una por fórmula.
+- [x] D5. Juego de prueba rehecho con el armador (`games/prueba`, *Steal & Fuse Critters*) y `tools/sync_template.py` para mantener los juegos al día.
+- [x] D6. Skills `roblox-game-kits` y `roblox-game-feel`, y la sección "Con el armador" en los demás.
+- [ ] D7. Probar en Studio la UI, los bloques, el mapa de cada receta y `games/prueba` con dos jugadores (`team/pendientes.md`).
+- [ ] D8. Claves, conectores y cuentas para publicar (`team/pendientes.md`), y el PR de la rama `leonelblumberg/quirky-dijkstra-2kxnwz`.
+- **Hecho cuando:**
+  - un juego nuevo se arma desde una receta en horas y pasa `tools/check.py`;
+  - corre en Studio con su mapa y su UI;
+  - sale publicado para 16+.
+
 ## Fase C — Cierre
 
 - [x] C1. Primer asset real en el catálogo (modelo low-poly hecho con Blender MCP, exportado, registrado en `index.json` + `LICENSES.md`, `catalog.py validate` OK).
@@ -155,5 +180,8 @@ APIs (existencia verificada el 2026-10-24 en la referencia oficial, ninguna depr
 | B3 | Hecho en lo que se puede verificar sin Studio: `roblox-monetization` (tácticas honestas con base oficial, auditoría ética de 12 reglas, regla automática contra textos de presión en `tools/check.py`) y `roblox-metrics-growth` (fuentes, diagnóstico síntoma→acción, `tools/analytics.py` contra la API oficial, probado con autotest y con la API real respondiendo 401 a una key falsa). La tienda de la plantilla pasa la auditoría automática y ya registra embudo de onboarding y eventos de economía (B1b) | leonel (IA) |
 | B4 | Implementado: `roblox-qa-performance` (checklist con bloqueantes, `perf_snapshot.luau` con APIs de `Stats` verificadas), `roblox-compliance` (cuestionario por categoría, Kids/Select, `PolicyService`, filtrado de texto), `roblox-publishing` (metadata, icono, miniaturas, plan de lanzamiento) y `roblox-liveops` (calendario, eventos, changelog), enlazados desde `CLAUDE.md`. Se sumó la regla de público alcanzable en ideación, spec y `CLAUDE.md`. `perf_snapshot.luau` corrido en Studio el 2026-10-26 (primera foto en `team/pruebas/`; teléfono base: Galaxy A06). Falta usarlos en `games/prueba/` (C2) | leonel (IA), luciano |
 | C1 | Hecho: `coin-gold-lowpoly-01` (Blender MCP, 288 triángulos, cerrada, sin N-gons), exportada con los ajustes oficiales y validada en el catálogo. Falta importarla y subirla desde Studio (tarea en el tablero) | luciano (con Claude) |
-| C2 | En curso: fase 1 hecha (`games/prueba/docs/concepto.md`, 4 conceptos con datos de Charts del 2026-10-26; estilo Steal a Brainrot / Grow a Garden sin clonar; recomendado Roba y Fusiona, 86/100, aprobado por Luciano). Fase 2: spec aprobada; hitos 1 (loop gris) y 2 (robo) hechos y probados en Studio; sigue el hito 3 | luciano (con Claude) |
+| C2 | En curso: fase 1 hecha (`games/prueba/docs/concepto.md`, 4 conceptos con datos de Charts del 2026-10-26; estilo Steal a Brainrot / Grow a Garden sin clonar; recomendado Roba y Fusiona, 86/100, aprobado por Luciano). Fase 2: spec aprobada; hitos 1 (loop gris) y 2 (robo) hechos y probados en Studio sobre la plantilla v1; el 2026-11-03 se rehízo con el armador (receta propia, mapa e íconos con IA). Falta probarlo en Studio con dos jugadores (D7) | luciano (con Claude), leonel (con Claude) |
+| D1–D6 | Hechos (2026-10-28 a 2026-11-03), con `tools/check.py` en verde | leonel (con Claude) |
+| D7 | Pendiente: pruebas en Studio (`team/pendientes.md`) | luciano, leonel |
+| D8 | Pendiente: claves, conectores, cuentas y PR | leonel, luciano |
 | C3 | Pendiente | |
