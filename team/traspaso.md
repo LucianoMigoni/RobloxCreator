@@ -170,6 +170,7 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
 | 64 | Rehacer `games/prueba` con el armador | 6 | ✅ (2026-11-03; falta probarlo en Studio) |
 | 65 | Skill del armador y skills que lo usan | 7 | ✅ (2026-11-03) |
 | 66 | Skill de game feel | 7 | ✅ (2026-11-03) |
+| 66b | Juegos al día con la plantilla (`tools/sync_template.py`, `iconFallbacks`) | 7 | ✅ (2026-11-03) |
 | 67 | Poner al día CLAUDE.md, ROADMAP, guía central, hits-2026, README, tablero | 7 | **sigue esta** |
 | 68 | Íconos que faltan | 7 | ✅ 27 de la UI y 9 mascotas con GPT Image (falta subirlos a Roblox) |
 | 69 | Revisión completa | 8 | pendiente |
@@ -351,12 +352,20 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
     - el empujón ahora suena y sacude.
   - **Juego de prueba:** se le pasaron a mano los mismos cambios de la plantilla.
 
-    Trampa: cada juego es una copia y no recibe solo las mejoras de la plantilla. Falta una herramienta para sincronizar el núcleo sin pisar lo propio del juego (ver §9).
+    Trampa: cada juego es una copia y no recibe solo las mejoras de la plantilla. Resuelto con `tools/sync_template.py` (ver §9).
+- **Juegos al día con la plantilla (2026-11-03).**
+  - **`tools/sync_template.py games/<juego>`:** compara el núcleo (`src/` y `tests/`, menos `src/shared/Config/`) con la plantilla.
+    - Copia lo nuevo o cambiado con `--apply`; sin `--apply`, solo lo muestra.
+    - Nunca toca la configuración del juego: la lista para revisarla a mano y dice qué claves nuevas de `UiText` le faltan.
+    - Avisa los archivos que el juego tiene y la plantilla no, sin borrarlos.
+    - Respeta los archivos del núcleo que el juego hizo suyos a propósito: una ruta o patrón por línea en `games/<juego>/sync-ignore.txt`.
+  - **`tools/check.py`:** corre su selftest y avisa, sin fallar, los juegos con el núcleo atrasado.
+  - **Emojis de respaldo en la receta:** `iconFallbacks` (`{ pebble_pup = "🐶" }`), validado por KitCheck. Así `Icons.luau` es igual en todos los juegos y el juego de prueba quedó sin diferencias de núcleo.
 
 ## 6. Qué existe hoy (mapa)
 
 - **Pipeline:** 11 skills en `skills/` (idea, diseño, UI, monetización, seguridad, QA, cumplimiento, publicación, campañas, métricas, live ops) y guías en `skills/_shared/`.
-- **Herramientas** (`tools/`): `check.py`, `roblox_research.py`, `assets_import.py`, `roblox_upload.py`, `imagegen.py`, `thumbs.py`, `iconsheet.py`, `vfx_textures.py`, `ui_textures.py`, `flat_icons.py`, `render3d/`, `campaigns.py`, `analytics.py`.
+- **Herramientas** (`tools/`): `check.py`, `sync_template.py`, `roblox_research.py`, `assets_import.py`, `roblox_upload.py`, `imagegen.py`, `thumbs.py`, `iconsheet.py`, `vfx_textures.py`, `ui_textures.py`, `flat_icons.py`, `render3d/`, `campaigns.py`, `analytics.py`.
 - **Recursos:** `assets/index.json` (~60 paquetes) y `assets/LICENSES.md`.
 - **Plantilla** (`template/`):
   - servidor: datos con bloqueo de sesión, remotes con validación y límite, economía multi-moneda, impulsos, premios, retención (diario, regalos por tiempo, misiones, ruleta, códigos, grupo, sin conexión, renacer, objetivos, índice por zonas), tienda (productos, pases, suscripción, regalos, anuncio con premio), eventos con horario, social;
@@ -468,7 +477,10 @@ Lista completa y con casillas en **`team/pendientes.md`** (pedido del usuario de
   - para leer una receta de afuera del repo, `mapview.cjs` la copia a `tools/render3d/map/.preview/`.
 - **Tests con tipos:** `tools/check.py` también revisa los tipos de `tests/`, así que valen las mismas trampas de luau-lsp.
 - **Comparar textos ya refinados:** después de `a.kind == "decor"`, luau-lsp toma `a.kind` como el literal "decor" y marca error al compararlo con otro ("Type "area" cannot be compared with "decor""). Juntarlos en un texto o usar variables nuevas.
-- **Juegos que se quedan atrás:** cada `games/<juego>` es una copia de la plantilla. Una mejora de la plantilla hay que pasarla a mano: copiar los archivos del núcleo que cambiaron, nunca `Config/KitConfig.luau` ni lo propio del juego. Pendiente: una herramienta `tools/sync_template.py` que lo haga y muestre las diferencias.
+- **Juegos que se quedan atrás:** cada `games/<juego>` es una copia de la plantilla y no recibe solo sus mejoras.
+  - `python tools/sync_template.py games/<juego>` muestra qué cambió y `--apply` copia el núcleo; nunca toca `src/shared/Config/`.
+  - `tools/check.py` avisa los juegos atrasados.
+  - Lo propio de un juego va en su `Config/` (la receta, con `iconFallbacks` para sus emojis). Un cambio del núcleo hecho solo en un juego se pierde en la próxima sincronización: llevarlo a la plantilla.
 - **Investigar un hit sin navegador:**
   - miniaturas oficiales: `thumbnails.roblox.com/v1/games/multiget/thumbnails?universeIds=<id>`;
   - ids de videos: `curl` de `youtube.com/results?search_query=...` con `"videoRenderer":{"videoId"`;

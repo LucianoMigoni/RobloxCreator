@@ -435,6 +435,9 @@ export type KitConfig = {
 	rebirth: RebirthConfig?,
 	quests: { Quest }?, -- reemplaza el pool de RetentionConfig.QUESTS
 	shop: KitShop?, -- pases y productos propios (x3/x8 huevos, cañas, "+10K Speed"...)
+	-- Emoji de respaldo de los íconos propios del juego (los de sus unidades) mientras no se suben las
+	-- imágenes: { pebble_pup = "🐶" }. Así Icons.luau queda igual en todos los juegos.
+	iconFallbacks: { [string]: string }?,
 	map: MapConfig?,
 }
 

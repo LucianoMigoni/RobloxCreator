@@ -75,6 +75,7 @@ Instalación en cada máquina: `SETUP.md` (y `setup.ps1`, que crea el enlace de 
 - **Conectores** (los dos integrantes los tienen): Blender (MCP oficial de Blender Lab), Meshy (`.mcp.json` del repo, clave en `MESHY_API_KEY`), Open Cloud (`tools/roblox_upload.py`), imágenes con IA (GPT Image y Nano Banana con `tools/imagegen.py`; Higgsfield opcional desde Claude), ElevenLabs (efectos y voces, conector de claude.ai) y Obsidian. Qué usamos para cada cosa y por qué ForgeGUI no: `skills/_shared/conectores.md`.
 - **Herramientas del hub** (`tools/`):
   - `check.py`: el chequeo de cada PR.
+  - `sync_template.py`: pasa a un juego las mejoras del núcleo de la plantilla sin tocar su configuración.
   - `roblox_research.py`: Charts, datos e imágenes de los hits.
   - `assets_import.py`: Kenney y Fluent al catálogo.
   - `roblox_upload.py`: subir assets.

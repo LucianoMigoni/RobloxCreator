@@ -37,7 +37,7 @@ Diseño completo de bloques, etiquetas del mapa y fórmulas: `references/bloques
       - ids en PascalCase, que no cambian después de publicar;
       - nombres en inglés y rarezas;
       - números: ingreso, valor, poder, nivel, peso y requisito;
-      - `icon`.
+      - `icon`; para un ícono propio, su emoji de respaldo en `iconFallbacks` de la receta (se ve hasta subir el ícono).
    3. **Economía:**
       - lo primero se paga con los $10 iniciales;
       - cuidar los primeros 10, 60 y 180 s (el algoritmo mira el rebote antes de 60 s: `skills/_shared/algoritmo-descubrimiento.md`);
@@ -99,6 +99,10 @@ Diseño completo de bloques, etiquetas del mapa y fórmulas: `references/bloques
 - **Nada de otros juegos:** nunca copiar su arte, sus nombres ni sus mapas; las fórmulas son mecánicas.
 - **Arte:** íconos y arte siempre terminados con IA; un render base nunca es final.
 - **Lo que falta va al backlog:** lo que la spec pide y el armador no tiene se anota en `games/<juego>/docs/decisiones.md`. Ese es el backlog del armador.
+- **El núcleo es de todos:**
+  - lo propio del juego va en `src/shared/Config/`;
+  - una mejora del núcleo se hace en la plantilla y se trae al juego con `python tools/sync_template.py games/<juego> --apply`, que nunca toca `Config/`;
+  - antes de cada fase, correrla sin `--apply` para ver si el juego quedó atrás.
 
 ## Salida
 - `games/<juego>/src/shared/Config/KitConfig.luau`, validada.

@@ -223,4 +223,12 @@ TestKit.run("KitCheck", {
 		expect(errors, "'Fame' no es una moneda")
 		expect(errors, "tema 'lava' no existe")
 	end,
+
+	["emojis de respaldo de los íconos"] = function()
+		local recipe = mini()
+		recipe.iconFallbacks = { kitty = "🐱" }
+		equal(#KitCheck.check(recipe, KNOWN), 0, "emoji válido")
+		recipe.iconFallbacks = { kitty = "" }
+		expect(KitCheck.check(recipe, KNOWN), "iconFallbacks.kitty: falta el texto")
+	end,
 })

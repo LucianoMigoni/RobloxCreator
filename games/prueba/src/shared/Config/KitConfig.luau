@@ -71,6 +71,17 @@ local recipe: Types.KitConfig = {
 		{ id = "collect", text = "Collect coins %s times", stat = "Collect", target = 20, reward = { currency = "Money", incomeMinutes = 5 } },
 		{ id = "push", text = "Push %s thieves", stat = "Push", target = 5, reward = { boost = "Money2x", seconds = 600 } },
 	} :: { Types.Quest },
+	-- Emoji de los critters hasta subir sus íconos (assets/ui/unit-icons/critters).
+	iconFallbacks = {
+		pebble_pup = "🐶",
+		mossling = "🌿",
+		bubblebug = "🐞",
+		zapfrog = "🐸",
+		cloud_kitty = "🐱",
+		lava_lizard = "🦎",
+		star_owl = "🦉",
+		crystal_dragon = "🐉",
+	},
 	map = {
 		theme = "meadow",
 		bases = "pen",

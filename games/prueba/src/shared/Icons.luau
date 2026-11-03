@@ -7,6 +7,7 @@
 -- cual. La configuración (monedas, impulsos, productos) guarda nombres de ícono, nunca ids.
 
 local AssetIds = require("./Config/AssetIds")
+local KitConfig = require("./Config/KitConfig")
 
 local Icons = {}
 
@@ -142,20 +143,12 @@ local EMOJI: { [string]: string } = {
 	panda = "🐼",
 	tiger = "🐯",
 	elephant = "🐘",
-	-- Critters de Steal & Fuse Critters (games/prueba).
-	pebble_pup = "🐶",
-	mossling = "🌿",
-	bubblebug = "🐞",
-	zapfrog = "🐸",
-	cloud_kitty = "🐱",
-	lava_lizard = "🦎",
-	star_owl = "🦉",
-	crystal_dragon = "🐉",
 }
 
 -- ¿Tiene emoji de respaldo? (los tests de las recetas lo piden para cada ícono que usan)
 function Icons.hasFallback(key: string): boolean
-	return EMOJI[key] ~= nil
+	local own = KitConfig.iconFallbacks
+	return EMOJI[key] ~= nil or (own ~= nil and own[key] ~= nil)
 end
 
 export type Resolved = { image: string?, text: string? }
@@ -172,7 +165,8 @@ function Icons.resolve(key: string?): Resolved
 	if id and id ~= "" then
 		return { image = id }
 	end
-	return { text = EMOJI[key] or key }
+	local own = KitConfig.iconFallbacks
+	return { text = EMOJI[key] or (if own then own[key] else nil) or key }
 end
 
 -- Ícono plano por nombre (assets/ui/icons-flat). `plain` = blanco liso, para la barra de Roblox o para

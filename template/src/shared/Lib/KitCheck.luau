@@ -1128,6 +1128,13 @@ local function checkRetention(ctx: Ctx)
 	if map and not table.find(KitCheck.THEMES, map.theme) then
 		add(ctx, "map.theme", "tema '" .. tostring(map.theme) .. "' no existe (" .. table.concat(KitCheck.THEMES, ", ") .. ")")
 	end
+	for key, emoji in ctx.recipe.iconFallbacks or ({} :: { [string]: string }) do
+		if typeof(key) ~= "string" or key == "" then
+			add(ctx, "iconFallbacks", "las claves son las de los íconos (\"pebble_pup\")")
+		else
+			text(ctx, "iconFallbacks." .. key, emoji)
+		end
+	end
 end
 
 -- Revisa la receta entera. Lista vacía = sana.

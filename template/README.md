@@ -46,6 +46,15 @@ Base que copia cada juego (`cp -r template games/<juego>`). Todo lo sensible pas
 - **Un bloque nuevo del armador:** un módulo en `src/server/Kits/` con `init`, `start` y, si hace falta, `snapshot`, `income` e `items`, sumado a `BLOCKS` de `server/Kits/Kits.luau`; su UI en `src/client/Kits/` con `start(hud)`, sumada a `BLOCKS` de `client/Kits/Kits.luau`. Las partes del mapa se encuentran por etiqueta (`Kits/Tags.luau`, `KitWorld.tagged`).
 - **Lógica pura nueva** (cálculos sin Roblox): módulo aparte requerido por ruta (`require("./X")`) y su `tests/X.spec.luau`.
 
+## Un juego hecho con la plantilla
+
+- **Lo propio del juego va en `src/shared/Config/`:** la receta, precios, textos y los emojis de sus íconos (`iconFallbacks` de la receta). Lo demás es el núcleo, igual en todos los juegos.
+- **Traer las mejoras de la plantilla:** `python tools/sync_template.py games/<juego>` muestra qué cambió y `--apply` copia el núcleo.
+  - Nunca toca `Config/`: la lista para revisarla a mano y dice qué textos nuevos de `UiText` faltan.
+  - `tools/check.py` avisa los juegos atrasados.
+- **Una mejora del núcleo** que hace falta en un juego se hace en la plantilla y se trae con la herramienta. Hecha solo en el juego, se pierde en la próxima sincronización.
+- **Un archivo del núcleo que el juego hace suyo a propósito** (por ejemplo, un HUD distinto): su ruta en `games/<juego>/sync-ignore.txt`, una por línea. La herramienta nunca lo copia y lo muestra como `[propio]`.
+
 ## Probar
 
 - Sin Studio: `python tools/check.py` desde la raíz del repo (tipos, tests, reglas).

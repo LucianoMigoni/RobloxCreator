@@ -166,7 +166,8 @@ def check_python_tools() -> list:
     scripts = [("assets/catalog.py", "selftest"), ("assets/catalog.py", "validate"), ("tools/analytics.py", "selftest"),
                ("tools/roblox_research.py", "selftest"), ("tools/roblox_upload.py", "selftest"),
                ("tools/assets_import.py", "selftest"), ("tools/campaigns.py", "selftest"),
-               ("tools/imagegen.py", "selftest"), ("tools/flat_icons.py", "selftest")]
+               ("tools/imagegen.py", "selftest"), ("tools/flat_icons.py", "selftest"),
+               ("tools/sync_template.py", "selftest")]
     # thumbs.py, iconsheet.py y vfx_textures.py necesitan Pillow: GitHub lo instala; en una PC sin Pillow se avisa y se omite.
     if importlib.util.find_spec("PIL"):
         scripts += [("tools/thumbs.py", "selftest"), ("tools/iconsheet.py", "selftest"), ("tools/storeart.py", "selftest"), ("tools/vfx_textures.py", "selftest"),
@@ -177,6 +178,7 @@ def check_python_tools() -> list:
         ok, out = run([sys.executable, script, cmd])
         if not ok:
             errors.append(f"{script} {cmd}: {out}")
+    behind_template()
     # El renderizador de modelos es JavaScript: con Node se revisa que el script compile.
     node = shutil.which("node")
     if node:
@@ -184,6 +186,22 @@ def check_python_tools() -> list:
         if not ok:
             errors.append(f"tools/render3d/render.cjs: {out}")
     return errors
+
+
+def behind_template() -> None:
+    """Avisa (sin fallar) los juegos con el núcleo atrasado respecto de la plantilla."""
+    spec = importlib.util.spec_from_file_location("sync_template", ROOT / "tools" / "sync_template.py")
+    sync = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(sync)
+    for game in rojo_projects():
+        if game.name == "template":
+            continue
+        result = sync.plan(ROOT / "template", game)
+        behind = len(result["add"]) + len(result["update"])
+        if behind or result["uitext"]:
+            rel = game.relative_to(ROOT).as_posix()
+            print(f"  (aviso: {rel} tiene {behind} archivo(s) del núcleo atrasados y {len(result['uitext'])} texto(s) de UiText"
+                  f" sin agregar: `python tools/sync_template.py {rel}`)")
 
 
 def check_json() -> list:

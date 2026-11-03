@@ -160,6 +160,7 @@ Vista previa de los mapas: `references/mapa/recetas.jpg`.
 | `quests` | Las misiones. Los eventos de `objectives`, `endless` y `quests` tienen que estar en `KitCheck.SIGNALS` o ser `"<Stat>Gained"`. |
 | `rebirth` | Moneda, costo y qué multiplica el renacer. En +1 Speed se paga con victorias y multiplica la velocidad. |
 | `shop` | Pases y productos propios. |
+| `iconFallbacks` | El emoji de cada ícono propio (`{ pebble_pup = "🐶" }`), que se ve hasta subir el ícono. Los de las nueve recetas ya están en `Icons.luau`. |
 | `map` | El mapa (ver "El mapa"). |
 
 ## Ideas de fuera de Roblox
