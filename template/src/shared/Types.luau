@@ -42,7 +42,6 @@ export type MultiplierView = { stat: string, kind: string, value: number, label:
 -- Los números que cambian cada segundo (monedas, ingreso) viajan aparte, como atributos del jugador.
 export type PlayerSnapshot = {
 	currencies: { [string]: number },
-	inventory: { string },
 	-- false si los datos no cargaron: el progreso de esta sesión no se guarda.
 	savesProgress: boolean,
 	multipliers: { MultiplierView },

@@ -30,11 +30,11 @@ Que ningún cliente pueda dar monedas, ítems, daño ni progreso que el servidor
 1. **Inventario.** Listar todos los remotes del juego (buscar `Remotes.onEvent`, `Remotes.onInvoke` y `Remotes.toClient` en `src/server`). En `games/<juego>/docs/seguridad.md`, una fila por remote: nombre, dirección, argumentos y validadores, límite, qué hace y qué verifica el handler.
 2. **Definir cada remote con `Remotes`**, nunca con `Instance.new("RemoteEvent")` ni `OnServerEvent` sueltos (`tools/check.py` lo marca como error):
    ```lua
-   Remotes.onInvoke("RequestPurchase", {
-   	args = { Validate.oneOf(ShopConfig.ITEM_IDS) },
-   	rate = { count = 3, perSeconds = 1 },
-   }, function(player, itemId)
-   	-- reglas del juego: saldo, distancia a la tienda, que no lo tenga ya...
+   Remotes.onInvoke("BuyUpgrade", {
+   	args = { Validate.oneOf(upgradeIds) },
+   	rate = { count = 6, perSeconds = 1 },
+   }, function(player, id)
+   	-- reglas del juego: saldo, nivel máximo, distancia a la estación si hace falta...
    end)
    ```
    - Validadores estrictos: ids de una lista (`oneOf`) antes que texto libre; números con `min`/`max`/`integer`; texto siempre con `maxLength`.

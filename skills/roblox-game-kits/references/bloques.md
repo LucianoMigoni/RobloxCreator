@@ -33,7 +33,7 @@ Cada bloque: `template/src/server/Kits/<Bloque>.luau` (servidor) y, cuando tiene
 | Bloque (clave) | Para qué (hits) | Mundo (etiquetas y atributos) | Remotes y acciones | Señales |
 |---|---|---|---|---|
 | **Units** (`units`) | Todo lo coleccionable: mascotas, criaturas, peces, cultivos, dados | — | `LockUnit(uid, on)` | `UnitGot`, `RareFound`, `Discover` |
-| **Plots** (`plots`) | Base que paga $/s (robar, fusión, tycoon) | `KitPlot` (Model) con `KitSlot` (`Index`), `KitCollectPad`, `KitSpawn`, `KitBarrier`, `KitLockButton`, `KitSlotShop` y una parte "Sign" | `PlaceUnit(uid, slot?)`, `StoreUnit(uid)`, `BuySlot()`, `LockBase()`; cobro al pisar el pad | `Collect`, `Place`, `SlotBought`, `Lock` |
+| **Plots** (`plots`) | Base que paga $/s (robar, fusión, tycoon) | `KitPlot` (Model) con `KitSlot` (`Index`), `KitCollectPad`, `KitSpawn`, `KitBarrier`, `KitLockButton`, `KitSlotShop` y una parte "Sign" | `PlaceUnit(uid, slot?)`, `StoreUnit(uid)`, `BuySlot()`, `LockBase()` (botón "LOCK" de la barra de acción, estando en la base); cobro al pisar el pad | `Collect`, `Place`, `SlotBought`, `Lock` |
 | **Belt** (`belt`) | Cinta compartida (*Steal a Brainrot*) | `KitBelt` (la cinta corre por su eje X) | prompt "Buy" | `UnitBought` |
 | **Steal** (`steal`) | Robar a otra base y llevarla a la propia | prompt "Steal" en cada unidad colocada (atributo `Owner`; `BeingStolen` mientras se la llevan) | prompt, `PushPlayer(userId)` | `StealStart`, `Steal`, `Stolen`, `Push` |
 | **Rolls** (`rolls`) | Huevos, dados, gacha, puestos de compra en tandas | `KitRollStation` (`Roll`): cartel y prompt "Open" que abre la ventana | `RequestRoll(id, count, auto?)` | `Roll`, `Hatch` |
@@ -44,7 +44,7 @@ Cada bloque: `template/src/server/Kits/<Bloque>.luau` (servidor) y, cuando tiene
 | **Zones** (`zones`) | Mundos y biomas con requisito | `KitGate` (`Zone`), `KitZone` (`Zone`, la región), `KitTeleport` (`Zone`) | `UnlockZone(id)`, prompt "Unlock" en la puerta | `ZoneUnlocked`, `Teleport` |
 | **Stages** (`stages`) | Escape y obby; corrida con resumen | `KitCheckpoint` (`Stage`), `KitWinPad`, `KitStageStart` | pisar; `Revive()`, `EndRun()` | `Stage`, `Win`, `RunStarted`, `RunEnded`, `Revive` |
 | **Fishing** (`fishing`) | Pesca | `KitWater` (`Pool`) | `CastLine()`, `ReelLine()`, `BuyRod(id)` | `Cast`, `Catch`, `RodBought` |
-| **Garden** (`garden`) | Cultivo con tienda que se repone | `KitGardenTile` (`Index`, dentro de la base) | `BuySeed(id, n)`, `SelectSeed(id)`, `PlantSeed(tile, id?)`, `HarvestPlant(tile)`, `BuyTile()`; prompt en cada parcela | `SeedBought`, `Plant`, `Harvest`, `TileBought` |
+| **Garden** (`garden`) | Cultivo con tienda que se repone | `KitGardenTile` (`Index`, dentro de la base) | `BuySeed(id, n)`, `SelectSeed(id)`, `BuyTile()`; plantar y cosechar con el prompt de cada parcela (distancia medida en el servidor) | `SeedBought`, `Plant`, `Harvest`, `TileBought` |
 | **Search** (`search`) | Pila con cosas escondidas (la aguja en el pajar) | `KitPile` (`Pile`), `KitDepositPad` | `DigPile()` (o el prompt), `BuyTool(id)`; depositar al pisar | `Dig`, `Found`, `Deposit`, `ToolBought` |
 | **Wild** (`wild`) | Capturar con requisito (dinos, huevos en nidos) | `KitWildSpawn` (`Pool` = número de `wild.spawns`, `Zone`) | prompt "Catch" (mantener; el servidor mide el tiempo) | `Capture` |
 | **Upgrades** (`upgrades`) | Mejoras por nivel; escalera de multiplicadores | `KitUpgradeStation` | `BuyUpgrade(id)` | `Upgrade` |

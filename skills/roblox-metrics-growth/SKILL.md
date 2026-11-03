@@ -28,7 +28,7 @@ Cada número en `metricas.md` lleva fuente y fecha. Nada se inventa ni se extrap
 ## Flujo
 
 **Modo mejora**
-1. Verificar que el embudo de onboarding refleje los primeros minutos reales del juego (`Config/OnboardingConfig.luau`): un paso por hito del primer minuto.
+1. Verificar que el embudo de onboarding refleje los primeros minutos reales del juego: son los primeros objetivos de la receta (`objectives` en `Config/KitConfig.luau`, hasta `ObjectiveConfig.FUNNEL_STEPS`), que `server/Retention/ObjectiveService.luau` registra con `LogOnboardingFunnelStepEvent`. Un paso por hito del primer minuto.
 2. Verificar que cada fuente y sumidero de monedas pase por `CurrencyService` con el tipo de transacción correcto, para que la economía se vea completa.
 3. Eventos propios solo si responden una pregunta concreta (`AnalyticsService:LogCustomEvent`). La API tiene un límite de eventos por minuto: registrar transacciones, no cada acción menor.
 4. Fijar objetivos iniciales por señal, comparando con el benchmark del panel cuando haya datos. Sin datos todavía: "medir la primera semana" y no un número inventado.

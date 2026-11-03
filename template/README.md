@@ -49,7 +49,7 @@ Base que copia cada juego (`cp -r template games/<juego>`). Todo lo sensible pas
 ## Un juego hecho con la plantilla
 
 - **Lo propio del juego va en `src/shared/Config/`:** la receta, precios, textos y los emojis de sus íconos (`iconFallbacks` de la receta). Lo demás es el núcleo, igual en todos los juegos.
-- **Traer las mejoras de la plantilla:** `python tools/sync_template.py games/<juego>` muestra qué cambió y `--apply` copia el núcleo.
+- **Traer las mejoras de la plantilla:** `python tools/sync_template.py games/<juego>` muestra qué cambió; `--apply` copia el núcleo y borra lo que la plantilla borró; `--diff` muestra los cambios de configuración para pasarlos a mano.
   - Nunca toca `Config/`: la lista para revisarla a mano y dice qué textos nuevos de `UiText` faltan.
   - `tools/check.py` avisa los juegos atrasados.
 - **Una mejora del núcleo** que hace falta en un juego se hace en la plantilla y se trae con la herramienta. Hecha solo en el juego, se pierde en la próxima sincronización.

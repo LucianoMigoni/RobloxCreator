@@ -28,7 +28,7 @@ Pagar puede dar ventajas importantes (decisión del 2026-10-26). El límite son 
 
 | Táctica | Hacerlo así | Nunca así |
 |---|---|---|
-| Multiplicadores (x2 dinero, x2 velocidad) | Game Pass con el efecto exacto en la descripción, aplicado en el servidor con `ShopService.hasPass` | Prometer un efecto que no se da, o uno que se apila de forma distinta a la anunciada |
+| Multiplicadores (x2 dinero, x2 velocidad) | Game Pass con el efecto exacto en la descripción, aplicado en el servidor con los `effects` del pase (`BoostService`) o `ShopService.ownsPass` | Prometer un efecto que no se da, o uno que se apila de forma distinta a la anunciada |
 | Más capacidad (espacios de base, inventario) | Pase o producto con el número exacto de espacios | Bajar a propósito la capacidad gratis de un juego ya publicado para empujar la compra |
 | Suerte paga (más probabilidad de rarezas o mutaciones) | Mostrar las probabilidades con y sin el impulso; si el resultado es aleatorio y se paga con Robux, aplicar las reglas 6 y 7 de la auditoría | Suerte paga sin probabilidades visibles, o ofrecida a jugadores con `ArePaidRandomItemsRestricted` |
 | Protección (traba de base más larga, escudo) | Efecto y duración exactos; el juego gratis conserva su protección mínima | Quitar la protección gratis para vender la paga |

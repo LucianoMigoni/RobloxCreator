@@ -23,9 +23,9 @@ Que el juego gane dinero sin engañar ni presionar a nadie. Pagar **puede dar ve
 3. **Economía de monedas:** fuentes y sumideros de la spec, con el tiempo hasta la primera compra. Los montos van en `Config/` y los cambios de saldo ya se registran como eventos de economía (`CurrencyService`), así que en Creator Analytics se ve si la economía se infla.
 4. **Precios en Robux:** precio inicial razonable, comparado con productos parecidos en juegos de referencia (con fuente). Después, las herramientas oficiales de optimización de precios y precios regionales. No inventar "precios óptimos".
 5. **Implementar sobre la plantilla:**
-   - Ítems con monedas → `ITEMS` de `Config/ShopConfig.luau`.
-   - Developer Products y Game Passes → crearlos en el Creator Dashboard y poner los ids en `PRODUCTS` y `GAME_PASSES`. `ShopService` ya otorga por `ProcessReceipt`, sin dar dos veces y solo con datos guardables.
-   - Beneficios de un pase → `ShopService.hasPass(player, attribute)` en el servidor.
+   - Lo que se compra con monedas → los bloques del armador, cada uno con su pantalla y su validación en el servidor: mejoras (`upgrades`), cañas y herramientas, semillas, huevos con precio en monedas (`rolls`), zonas y espacios de la base.
+   - Developer Products y Game Passes → crearlos en el Creator Dashboard y poner los ids en `PRODUCTS`, `PASSES` y `SUBSCRIPTIONS` de `Config/ShopConfig.luau` (o en `shop` de la receta). `ShopService` ya otorga por `ProcessReceipt`, sin dar dos veces y solo con datos guardables.
+   - Beneficios de un pase → `effects` del pase (multiplicadores que aplica `BoostService`) o, para otra regla, `ShopService.ownsPass(player, key)` en el servidor.
    - Ítems aleatorios pagos, comercio, anuncios o suscripciones → `PolicyService:GetPolicyInfoForPlayerAsync` en el servidor antes de ofrecerlos, y probabilidades visibles (reglas 6 y 7 de la auditoría).
    - Textos en `Config/UiText.luau`, sin presión.
 6. **UI de la tienda** con `roblox-ui-designer`: integrada, contextual (qué hace cada ítem) e invitante; verde para comprar y dorado para lo premium.

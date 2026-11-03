@@ -71,7 +71,6 @@ function PlayerStateService.snapshot(player: Player): Types.PlayerSnapshot?
 	end
 	return {
 		currencies = clone(data.currencies),
-		inventory = clone(data.inventory),
 		savesProgress = DataService.canSave(player),
 		multipliers = multipliers,
 		boosts = BoostService.active(player),

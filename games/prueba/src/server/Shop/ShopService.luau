@@ -21,9 +21,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local EconomyConfig = require(ReplicatedStorage.Shared.Config.EconomyConfig)
 local ShopConfig = require(ReplicatedStorage.Shared.Config.ShopConfig)
 local BoostService = require("../Boosts/BoostService")
-local CurrencyService = require("../Economy/CurrencyService")
 local DataService = require("../Data/DataService")
-local InventoryService = require("../Economy/InventoryService")
 local Remotes = require("../Net/Remotes")
 local Validate = require("../Net/Validate")
 local OfflineService = require("../Retention/OfflineService")
@@ -141,25 +139,6 @@ local function processReceipt(receiptInfo: { [string]: any }): Enum.ProductPurch
 	return Enum.ProductPurchaseDecision.NotProcessedYet
 end
 
--- Devuelve (true) o (false, código) para que el cliente muestre el motivo.
-local function buyItem(player: Player, itemId: string): (boolean, string?)
-	local item = ShopConfig.ITEMS[itemId]
-	if DataService.get(player) == nil then
-		return false, "LOADING"
-	end
-	if InventoryService.has(player, itemId) then
-		return false, "OWNED"
-	end
-	local currency = item.currency or EconomyConfig.MAIN
-	if not CurrencyService.spend(player, item.price, Enum.AnalyticsEconomyTransactionType.Shop, itemId, currency) then
-		return false, "NOT_ENOUGH"
-	end
-	InventoryService.add(player, itemId)
-	Signals.track(player, "Upgrade", 1)
-	Signals.dirty(player)
-	return true
-end
-
 local function validTarget(player: Player, targetId: number, passKey: string): (Player?, string?)
 	local target = Players:GetPlayerByUserId(targetId)
 	if not target or target == player then
@@ -267,10 +246,6 @@ local function onPlayerAdded(player: Player)
 end
 
 function ShopService.start()
-	local itemIds = {}
-	for id in ShopConfig.ITEMS do
-		table.insert(itemIds, id)
-	end
 	local giftable = {}
 	for _, product in ShopConfig.PRODUCTS do
 		if product.giftOf then
@@ -282,7 +257,6 @@ function ShopService.start()
 		table.insert(passKeys, key)
 	end
 	local userId = Validate.number({ min = 1, integer = true })
-	Remotes.onInvoke("RequestPurchase", { args = { Validate.oneOf(itemIds) }, rate = ShopConfig.PURCHASE_RATE }, buyItem)
 	Remotes.onInvoke("SetGiftTarget", { args = { userId, Validate.oneOf(giftable) }, rate = { count = 3, perSeconds = 2 } }, setGiftTarget)
 	Remotes.onInvoke("SendGiftToken", { args = { userId, Validate.oneOf(passKeys) }, rate = { count = 3, perSeconds = 2 } }, sendGiftToken)
 	Remotes.onInvoke("WatchRewardedAd", { args = {}, rate = { count = 1, perSeconds = 10 } }, watchAd)

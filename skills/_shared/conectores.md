@@ -74,7 +74,7 @@ Fijado en `rokit.toml` (raíz, `template/` y cada juego; `tools/check.py` exige 
 - **Cuidado (aviso oficial):** el servidor ejecuta en Blender el código que genera la IA, sin protecciones. Abrir solo archivos del proyecto y no tener abiertos `.blend` ajenos con datos importantes.
 - **Uso en el hub:** pasar modelos de Meshy o Kenney a estilo hit (colores planos saturados, contorno, escala de Roblox), fijar pivotes, partir en piezas animables, exportar FBX y renderizar fondos e íconos 3D. Pasos en el skill de assets 3D.
 
-Fuentes: https://www.blender.org/lab/mcp-server/, `readme.md`, `readme_tools.rst` y `mcp/manifest.json` del repo https://projects.blender.org/lab/blender_mcp (release v1.0.3 del 2026-09-11).
+Fuentes: https://www.blender.org/lab/mcp-server/, readme.md, readme_tools.rst y mcp/manifest.json del repo https://projects.blender.org/lab/blender_mcp (release v1.0.3 del 2026-09-11).
 
 ## Meshy (MCP oficial)
 

@@ -23,7 +23,7 @@ Los nombres y textos que ve el jugador están en inglés, tal cual van a verse (
 ## Idioma y público
 Todo lo que ve el jugador va en inglés, para público internacional (`CLAUDE.md`):
 - textos en `Config/UiText.luau`;
-- nombres de *critters* y productos en `Config/GameplayConfig.luau` y `Config/ShopConfig.luau`.
+- nombres de *critters* y productos en la receta, `Config/KitConfig.luau` (antes del armador: `GameplayConfig`), y en `Config/ShopConfig.luau`.
 
 Sin texto dentro de imágenes. El juego sale primero solo para 16+ (`team/decisiones.md`); el contenido es apto para todas las edades.
 
@@ -65,7 +65,7 @@ Un nivel por *critter*. Dos del mismo nivel se fusionan en el siguiente. Ingreso
 Si alguno de los dos *critters* fusionados tenía mutación, el resultado conserva la mejor de las dos y además tira su probabilidad (nunca se pierde una mutación al fusionar).
 
 ## Mecánicas
-Todos los números viven en `src/shared/Config/GameplayConfig.luau`, que se crea en el hito 1. Los cálculos puros (ingreso con multiplicadores, fusión con mutación, ganancia sin conexión, elección de nivel en la cinta) van en módulos sin Roblox, cada uno con su `tests/*.spec.luau`.
+Todos los números viven en la receta, `src/shared/Config/KitConfig.luau` (desde que el juego se rehízo con el armador, el 2026-11-03; antes, en `GameplayConfig`). Los cálculos puros (ingreso con multiplicadores, fusión con mutación, ganancia sin conexión, elección de nivel en la cinta) van en módulos sin Roblox, cada uno con su `tests/*.spec.luau`.
 
 | Id | Mecánica | Reglas y números (→ `GameplayConfig`) | Decide el servidor | Remote (validadores, límite) | Datos guardados |
 |---|---|---|---|---|---|
@@ -135,7 +135,7 @@ Pagar da ventajas importantes, dentro de las reglas oficiales (`skills/roblox-mo
 
 | Producto | Tipo | Efecto exacto (texto en la tienda) | Regla oficial que cumple |
 |---|---|---|---|
-| "2x Coins" | Game Pass | "Doubles all coins your critters make" | Efecto exacto, aplicado con `ShopService.hasPass` |
+| "2x Coins" | Game Pass | "Doubles all coins your critters make" | Efecto exacto, aplicado en el servidor con los `effects` del pase (`BoostService`) |
 | "+4 Pedestals" | Game Pass | "4 more pedestals in your base" | — |
 | "Long Lock" | Game Pass | "Your base lock lasts 120s instead of 60s" | La traba gratis se mantiene |
 | "Fast Thief" | Game Pass | "Carry stolen critters 1.5x faster" | — |

@@ -4,7 +4,7 @@
 --   servidores (Lib/GardenShop); cada jugador compra hasta lo que trae su tienda (BuySeed).
 -- - Parcelas KitGardenTile (atributo Index) dentro de su base: abiertas = `tiles` + compradas
 --   (BuyTile, `tilePrices`) + mejora "tiles", sin pasar `maxTiles` ni las que hay en el mapa.
--- - Plantar (prompt de la parcela o PlantSeed) con la semilla elegida (SelectSeed); crece con el reloj
+-- - Plantar (prompt de la parcela) con la semilla elegida (SelectSeed); crece con el reloj
 --   real, así que también sin conexión (`readyAt`); la mejora "grow" la acorta.
 -- - Cosechar da la unidad de la semilla (con peso y tamaño; mutación con `mutationChance`).
 -- Premios "Seed:<id>" (semillas) y "Garden:Skip" (todo lo plantado, listo; si no hay nada, la próxima
@@ -383,7 +383,6 @@ function Garden.start(_recipe: KitTypes.KitConfig)
 	for id in seeds do
 		table.insert(ids, id)
 	end
-	local tileIndex = Validate.number({ integer = true, min = 1, max = cfg.maxTiles })
 	Remotes.onInvoke("BuySeed", {
 		args = { Validate.oneOf(ids), Validate.number({ integer = true, min = 1, max = MAX_BATCH }) },
 		rate = { count = 5, perSeconds = 1 },
@@ -396,8 +395,8 @@ function Garden.start(_recipe: KitTypes.KitConfig)
 		end
 		return d ~= nil
 	end)
-	Remotes.onInvoke("PlantSeed", { args = { tileIndex, Validate.optional(Validate.oneOf(ids)) }, rate = { count = 8, perSeconds = 1 } }, Garden.plant)
-	Remotes.onInvoke("HarvestPlant", { args = { tileIndex }, rate = { count = 8, perSeconds = 1 } }, Garden.harvest)
+	-- Plantar y cosechar solo por el prompt de la parcela: KitWorld.onPrompt mide la distancia en el
+	-- servidor. Un remote sin distancia dejaría cosechar todo el mapa sin caminar.
 	Remotes.onInvoke("BuyTile", { args = {}, rate = { count = 3, perSeconds = 1 } }, buyTile)
 	KitWorld.tagged(Tags.GARDEN_TILE, addTile)
 	Plots.Assigned:Connect(function(player: Player)

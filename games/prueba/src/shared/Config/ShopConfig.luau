@@ -55,7 +55,6 @@ export type Subscription = {
 	attribute: string,
 }
 
-export type Item = { name: string, price: number, currency: string? }
 
 -- Oferta destacada arriba de la tienda (como el huevo de Halloween de Steal An Egg o el paquete de inicio
 -- de PS99): uno de PRODUCTS, con arte y reloj. `endsAt` (UTC, os.time) solo si de verdad termina: con
@@ -123,10 +122,6 @@ local config = {
 
 	FEATURED = { key = "StarterPack" } :: Featured?,
 
-	-- Compras con monedas del juego (cosméticos simples); los kits tienen sus propias tiendas.
-	ITEMS = {} :: { [string]: Item },
-
-	PURCHASE_RATE = { count = 3, perSeconds = 1 },
 	-- PurchaseIds recientes que se guardan para no otorgar dos veces la misma compra de Robux.
 	MAX_RECEIPTS = 100,
 }

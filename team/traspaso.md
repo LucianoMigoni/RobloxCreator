@@ -188,7 +188,7 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
   - `shared/Lib/KitCheck.luau` + `tests/KitCheck.spec.luau` (12 casos) + `tests/KitKnown.luau` (listas del núcleo para los tests): revisa ids, rarezas, monedas, pases, impulsos, referencias entre bloques, bloques que necesitan otros (`NEEDS`), premios por ítem (`KitCheck.ITEMS`: Unit, Roll, Item, Upgrade, Zone, Stat, Rod, Tool, Seed, Garden:Skip, Merge:Skip, Stages:Revive) y efectos de mejoras (`KitCheck.EFFECTS`). `KitCheck.BLOCKS` = orden de arranque.
   - `server/Kits/Kits.luau`: cargador. `BLOCKS` vacío hasta que cada bloque se suma con `{ key, init, start, snapshot?, income?, items? }`. Revisa la receta con las listas reales y avisa con `warn("[Kits] ...")`; registra un solo `setItemHandler` (despacha por prefijo), `setIncomeProvider` (suma) y `setKitProvider` (`state.kit.<key>`). `Main.server`: `Kits.init()` después de `Remotes.start()`, `Kits.start()` justo antes de `DataService.start()`.
   - `server/Kits/KitWorld.luau`: `tagged`, `text`/`number`/`inherited` (atributos), `part`, `position`, `ancestor`, `humanoid`, `root`, `near` (con margen de 8 studs), `playerFromPart`, `sign` (cartel HitSign desde el servidor), `prompt` + `onPrompt` (mide distancia y frena repeticiones), `onTouch` (pads).
-  - Cliente: `client/Kits/Kits.luau` (cargador de UI por bloque, `start(hud)`), `KitState.luau` (`get`/`on` de `state.kit.<bloque>`), `ActionBar.luau` (botones grandes abajo al centro; se reparten el ancho, atajo de teclado, mantener apretado repite). `Main.client` llama `Kits.start(hud)` (se fue `GameConfig.KIT`).
+  - Cliente: `client/Kits/Kits.luau` (cargador de UI por bloque, `start(hud)`), `KitState.luau` (`get`/`on` de `state.kit.<bloque>`), `ActionBar.luau` (botones grandes abajo al centro; se reparten el ancho, atajo de teclado, mantener apretado repite). `Main.client` llama `Kits.start(hud)` (ya no hay campo KIT en GameConfig).
   - Núcleo que ahora lee la receta: `EconomyConfig` (suma `currencies`, color con `Color3.fromHex`), `ObjectiveConfig.CHAIN` (`objectives`), `RetentionConfig.QUESTS.pool` (`quests`), `GameConfig.LEADERSTATS` (`leaderstats`); `LeaderboardService` muestra estadísticas del armador (atributo del jugador con el id de la estadística). `World.luau`: los carteles HitSign se redibujan si el servidor cambia sus atributos.
   - `team/pendientes.md` (claves, conectores, cuentas y pruebas) a pedido del usuario.
 - **Hito 1, parte 2 (2026-10-30): bloque Units.** Chequeo en verde.
@@ -357,7 +357,8 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
     Trampa: cada juego es una copia y no recibe solo las mejoras de la plantilla. Resuelto con `tools/sync_template.py` (ver §9).
 - **Juegos al día con la plantilla (2026-11-03).**
   - **`tools/sync_template.py games/<juego>`:** compara el núcleo (`src/` y `tests/`, menos `src/shared/Config/`) con la plantilla.
-    - Copia lo nuevo o cambiado con `--apply`; sin `--apply`, solo lo muestra.
+    - Copia lo nuevo o cambiado con `--apply` y borra lo que la plantilla borró (lo sabe por el historial de git); sin `--apply`, solo lo muestra.
+    - `--diff` muestra los cambios de la configuración de la plantilla (sin la receta) para pasarlos a mano.
     - Nunca toca la configuración del juego: la lista para revisarla a mano y dice qué claves nuevas de `UiText` le faltan.
     - Avisa los archivos que el juego tiene y la plantilla no, sin borrarlos.
     - Respeta los archivos del núcleo que el juego hizo suyos a propósito: una ruta o patrón por línea en `games/<juego>/sync-ignore.txt`.
@@ -370,6 +371,16 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
   - **`hits-2026.md`:** lo visto en los mapas de los hits, cada fórmula con su receta, y tres referencias que ya no existían (un skill `roblox-retention`, `client/Juice` y `ProductService`).
   - **`README.md`:** la guía central, el armador, el traspaso y los pendientes.
   - **`team/`:** tablero al día (Chicken Farm, Ride a Dino e íconos con OpenAI, hechos) y decisiones con la más nueva arriba.
+- **Revisión completa (#69), parte 1 (2026-11-03).**
+  - **Chequeo cruzado nuevo** (`tools/xref.py`, paso de `tools/check.py`): lo que los tipos no ven porque se nombra con un texto.
+    - Eventos KitFx con quien los escuche, remotes que el cliente usa y que existen, `Bus.call` con su `Bus.handle`, `Bus.on` con su `Bus.emit`.
+    - Sonidos, voces y música que existen en `AudioConfig`; íconos con emoji de respaldo.
+    - En los `.md`: rutas y funciones citadas que existen.
+  - **Seguridad:** `PlantSeed` y `HarvestPlant` dejaban plantar y cosechar desde cualquier lugar, sin medir la distancia. Se sacaron: se planta y se cosecha con el prompt de la parcela, que la mide en el servidor.
+  - **Botón LOCK** en la barra de acción, estando en la base, con la traba y la espera a la vista. Lo pedía la spec del juego de prueba y el remote `LockBase` existía sin pantalla.
+  - **Compras con monedas de `ShopConfig.ITEMS`** (con `InventoryService` y `data.inventory`): no tenían pantalla ni efecto desde que se rehízo la tienda, así que se sacaron. Lo que se compra con monedas lo dan los bloques.
+  - **Docs con nombres viejos**, corregidos: `OnboardingConfig`, `GameplayConfig`, `ShopService.hasPass` (es `ownsPass`), `GAME_PASSES` (es `PASSES`) y el ejemplo de `RequestPurchase`.
+  - **`sync_template.py`:** borra lo que la plantilla borró, `--diff` muestra la configuración y la receta no se compara. `games/prueba` quedó al día con la herramienta.
 
 ## 6. Qué existe hoy (mapa)
 

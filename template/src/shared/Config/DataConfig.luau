@@ -23,7 +23,6 @@ local DataConfig = {
 	-- Los kits agregan los suyos en `kits[<nombre>]` con DataService.registerKit (antes de start).
 	DEFAULT_DATA = {
 		currencies = {} :: { [string]: number }, -- EconomyConfig.CURRENCIES; DataService completa el saldo inicial
-		inventory = {} :: { string },
 		processedReceipts = {} :: { [string]: number }, -- PurchaseId → hora: compras de Robux ya otorgadas
 		firstPlayedAt = 0,
 		lastSeen = 0, -- os.time() del servidor al salir (ganancias sin conexión)

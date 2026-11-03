@@ -151,6 +151,7 @@ return {
 	PLOT_NO_SLOT = "No free slot! Buy more slots",
 	PLOT_LOCK = "LOCK",
 	PLOT_LOCKED = "LOCKED %s",
+	LOCK_READY_IN = "LOCK IN %s",
 	PLOT_DEFAULT = "Base",
 
 	-- Armador: prompts del mundo y avisos

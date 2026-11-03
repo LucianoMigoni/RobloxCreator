@@ -25,7 +25,7 @@ Pasar de "un juego como X" o de `docs/concepto.md` a `docs/spec.md` y a un juego
    - Datos nuevos → `DEFAULT_DATA` en `Config/DataConfig.luau`.
    - Números → un módulo en `src/shared/Config/` (p. ej. `GameplayConfig.luau`), nunca sueltos en la lógica.
    - Cada acción del jugador → un remote con `Remotes.onEvent`/`onInvoke`, con validadores y límite (`roblox-security`). El handler decide en el servidor (cooldown, distancia, saldo).
-   - Monedas → `CurrencyService.add/spend` con el tipo de transacción; ítems → `InventoryService`; tienda → `Config/ShopConfig.luau`; pasos de onboarding → `Config/OnboardingConfig.luau`.
+   - Monedas → `CurrencyService.add/spend` con el tipo de transacción; unidades y objetos → los bloques del armador (`Units`, `Items`; se guardan en `data.kits`); tienda → `Config/ShopConfig.luau`; pasos de onboarding → los primeros objetivos de la receta (`objectives` en `Config/KitConfig.luau`; `server/Retention/ObjectiveService.luau` los registra en el embudo, hasta `ObjectiveConfig.FUNNEL_STEPS`).
    - Cálculos puros (daño, recompensas, curvas de precio) → módulo sin Roblox con su `tests/*.spec.luau`.
 4. **Assets.** Primero el catálogo (`python assets/catalog.py search ...`). Si falta algo:
    - **Blender** (MCP `mcp__Blender__*`): Scene → Units → Unit System **None**; exportar FBX con **Apply Scalings: FBX Unit Scale**, Path Mode **Copy** y **Embed Textures**, sin **Add Leaf Bones**, sin **Bake Animation** si no hay animación (`/art/blender`, `/art/modeling/export-requirements`). glTF también sirve y no necesita ajustes de escala. Cada malla, como mucho 20 000 triángulos (`/art/modeling/specifications`).
