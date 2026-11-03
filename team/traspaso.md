@@ -2,7 +2,7 @@
 
 Para la IA (o persona) que retome el trabajo desde un push, por ejemplo el Claude de Luciano si a Leonel se le acaban los tokens. **Leé este archivo entero antes de tocar nada:** acá está todo lo que pidió el usuario, cómo quiere que se trabaje, qué está hecho, qué se está haciendo y qué falta, para seguir igual que en el chat original.
 
-Última actualización: 2026-11-03. Terminados: MapKit (#62) con el estilo de los hits, las nueve recetas (#63), el juego de prueba rehecho con el armador (#64), los skills del armador (#65) y de game feel (#66), los juegos al día con la plantilla (#66b) la documentación al día (#67), la revisión completa (#69) y el reporte final (#70). El plan del armador está terminado: lo que sigue son las pruebas en Studio, las claves y las cuentas de `team/pendientes.md`, y el PR cuando el usuario lo pida. Sesión original: Claude Code en la nube de Leonel, rama `leonelblumberg/quirky-dijkstra-2kxnwz`.
+Última actualización: 2026-11-03. Terminados: MapKit (#62) con el estilo de los hits, las nueve recetas (#63), el juego de prueba rehecho con el armador (#64), los skills del armador (#65) y de game feel (#66), los juegos al día con la plantilla (#66b) la documentación al día (#67), la revisión completa (#69) y el reporte final (#70). El plan del armador está terminado: lo que sigue son las pruebas en Studio, las claves y las cuentas, en orden y con los comandos en `team/paso-a-paso.md` (detalle en `team/pendientes.md`), y el PR cuando el usuario lo pida. Sesión original: Claude Code en la nube de Leonel, rama `leonelblumberg/quirky-dijkstra-2kxnwz`.
 
 ## 0. Cómo retomar, paso a paso
 
@@ -178,6 +178,7 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
 | 69 | Revisión completa | 8 | ✅ (2026-11-03): chequeo cruzado, seguridad, voces, aleatorio pago, backlog del juego |
 | 70 | Push y reporte final: qué conectar, claves, cuentas, pruebas | 8 | ✅ (2026-11-03): `team/pendientes.md` al día; lo que sigue depende de las personas (sección 8) |
 | 71 | Lista de lo que hay que hacer después: claves, conectores, cuentas y pruebas (`team/pendientes.md`) | 1 | ✅ (mantenerla al día) |
+| 72 | Guía paso a paso para las personas: qué hacer, instalar y correr, en orden (`team/paso-a-paso.md`) | 8 | ✅ (2026-11-03; mantenerla al día junto con `team/pendientes.md`) |
 
 ### Próximo paso: modelos 3D de los critters (cuando esté `MESHY_API_KEY`)
 
@@ -431,6 +432,10 @@ Las mascotas de cuatro patas no se rigean con Meshy, porque su rig es para human
     - Tiene selftest sin red en `check.py`.
   - **Blender:** el MCP necesita el Blender de una PC. En la nube va sin pantalla, instalado por el *setup script* del entorno (script en `conectores.md`). El modo automático no dejó bajarlo y ejecutarlo desde la sesión.
   - **Próximo paso con la clave:** la sección 4, "Próximo paso: modelos 3D de los critters".
+- **Guía paso a paso para las personas (#72, 2026-11-03).** El usuario pidió "un archivo con qué tengo que hacer, qué instalar y qué correr": `team/paso-a-paso.md`.
+  - Nueve pasos en orden (nube, PC, Studio, grupo, Dashboard, subidas, lanzamiento, después del lanzamiento y PR), con quién, tiempo, comandos y la frase para pedirle cada cosa a Claude.
+  - Verificado en `Roblox/creator-docs` ese día: Server & Clients y el botón Client/Server para probar, Experience Settings → Security para el acceso a API, grupo de 100 Robux, insignias en Engagement → Badges, y la venta fuera del juego (Monetization → Shop → Listed; ver `roblox-monetization`).
+  - Al resolver un punto, marcarlo en los dos archivos.
 
 ## 6. Qué existe hoy (mapa)
 
@@ -512,7 +517,7 @@ Para seguir igual (completa `bloques.md`):
 
 ## 8. Lo que depende de las personas
 
-Lista completa y con casillas en **`team/pendientes.md`** (pedido del usuario del 2026-10-30: "que api keys necesitás, qué conectores hay que poner, etc."). Mantenerla al día en cada hito y repetirla en el reporte final (#70). En resumen:
+En orden y con los comandos en **`team/paso-a-paso.md`**; lista completa y con casillas en **`team/pendientes.md`** (al marcar un punto, marcarlo en los dos) (pedido del usuario del 2026-10-30: "que api keys necesitás, qué conectores hay que poner, etc."). Mantenerla al día en cada hito y repetirla en el reporte final (#70). En resumen:
 
 - **Claves** (variables de entorno de cada PC o *Network secrets* del entorno de la nube; nunca en el repo ni en el chat): `OPENAI_API_KEY` (obligatoria para íconos y miniaturas), `GEMINI_API_KEY` (recomendada), `MESHY_API_KEY` (plan Pro), `ROBLOX_OPEN_CLOUD_API_KEY` + `ROBLOX_CREATOR_GROUP_ID`, `ROBLOX_ANALYTICS_API_KEY` y `ROBLOX_ADS_API_KEY`. En la nube: `OPENAI_API_KEY` cargada en el entorno el 2026-11-02 (probada); las demás, no. Gemini dio OR_BACR2_59 al activar la facturación.
 - **Conectores:** MCP de Roblox Studio, Rojo, MCP de Blender y MCP de Meshy en cada PC; ElevenLabs, Higgsfield y GitHub ya conectados en la cuenta de Leonel (Luciano los conecta en claude.ai). Meshy no arranca en la nube (`.mcp.json` usa `cmd`).

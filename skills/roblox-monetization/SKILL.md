@@ -25,6 +25,11 @@ Que el juego gane dinero sin engañar ni presionar a nadie. Pagar **puede dar ve
 5. **Implementar sobre la plantilla:**
    - Lo que se compra con monedas → los bloques del armador, cada uno con su pantalla y su validación en el servidor: mejoras (`upgrades`), cañas y herramientas, semillas, huevos con precio en monedas (`rolls`), zonas y espacios de la base.
    - Developer Products y Game Passes → crearlos en el Creator Dashboard y poner los ids en `PRODUCTS`, `PASSES` y `SUBSCRIPTIONS` de `Config/ShopConfig.luau` (o en `shop` de la receta). `ShopService` ya otorga por `ProcessReceipt`, sin dar dos veces y solo con datos guardables.
+   - **Venta fuera del juego** (verificado el 2026-11-03 en `production/monetization/developer-products.md` y en la página de pases): en Creator Hub → Monetization → Shop, lo marcado **Listed** también se vende en la página de inicio, en la búsqueda y después de comprar Robux, y el jugador entra con lo comprado.
+     - Listar lo de valor fijo: pases, gemas, una unidad.
+     - No listar lo aleatorio (las probabilidades se muestran en el juego, antes de pagar), lo que depende de la partida (terminar ya, revivir, regalos), lo de una sola vez, ni la plata que se calcula por lo que gana el jugador (a uno nuevo le rinde poco).
+     - `ShopService` ya cobra fuera de la partida: si el jugador no está, `ProcessReceipt` devuelve NotProcessedYet y Roblox lo vuelve a llamar cuando entra a un servidor del juego.
+     - Roblox sumó `MarketplaceService:BindReceiptHandler` como alternativa a ProcessReceipt, al que la referencia ahora llama *legacy*. ProcessReceipt sigue andando: lo que ningún handler toma cae en él.
    - Beneficios de un pase → `effects` del pase (multiplicadores que aplica `BoostService`) o, para otra regla, `ShopService.ownsPass(player, key)` en el servidor.
    - Ítems aleatorios pagos, comercio, anuncios o suscripciones → `PolicyService:GetPolicyInfoForPlayerAsync` en el servidor antes de ofrecerlos, y probabilidades visibles (reglas 6 y 7 de la auditoría).
    - Textos en `Config/UiText.luau`, sin presión.
@@ -58,6 +63,7 @@ Que el juego gane dinero sin engañar ni presionar a nadie. Pagar **puede dar ve
 - [ ] Textos sin presión (`tools/check.py` en verde).
 - [ ] Aleatorios pagos con todos los resultados y probabilidades, y con `PolicyService`.
 - [ ] Developer Products solo por `ProcessReceipt`; nada que valga Robux sin `canSave`.
+- [ ] En Monetization → Shop, **Listed** solo lo de valor fijo; nunca lo aleatorio.
 - [ ] Auditoría de `references/audit.md` aprobada y pegada en `docs/monetizacion.md`.
 
 ## Límites

@@ -20,7 +20,7 @@ Juego de prueba del hub. Concepto: `docs/concepto.md`; spec: `docs/spec.md`.
    - comprar en la cinta;
    - juntar en la placa verde;
    - fusionar dos iguales;
-   - robar de otra base (con dos jugadores: Test → Clients and Servers);
+   - robar de otra base (con dos jugadores: pestaña Test → menú desplegable → Server & Clients, con 2 clientes);
    - trabar la base y renacer.
 4. Para editar el mapa a mano:
    1. Durante Play, copiar `Workspace.Map`.

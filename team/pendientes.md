@@ -2,9 +2,11 @@
 
 Lo que el programa necesita de las personas y que Claude no puede hacer solo. Al resolver un punto, marcarlo `[x]` en el PR de la tarea. Pasos detallados de instalación: `SETUP.md` (los números de paso de abajo son los suyos).
 
+**El orden, con los comandos, está en `team/paso-a-paso.md`:** empezar por ahí. Son las mismas tareas: al marcar una casilla acá, marcarla también allá.
+
 **Regla de las claves:** nunca en el repo ni pegadas en el chat. Van en variables de entorno de cada PC (en CMD: `setx NOMBRE valor`, y después cerrar y abrir la terminal y Claude Code) o, para que Claude las use en las sesiones en la nube, en la configuración del entorno: menú del entorno en la barra de título de la sesión → **Edit** → **Network secrets** (en apps viejas, *API credentials*) o, si esa sección no está, como variable de entorno con el mismo nombre. La sesión siguiente las toma. Las claves de Roblox nunca se cargan en servicios de terceros (ForgeGUI, webs de IA).
 
-**Estado en la nube (revisado el 2026-10-30, solo por nombre de variable, nunca por valor):** el entorno no tiene ninguna de estas claves. Conectados en la cuenta de Leonel: ElevenLabs, Higgsfield y GitHub. El MCP de Meshy no arranca en la nube porque `.mcp.json` lo lanza con `cmd` (solo existe en Windows): en la nube, los modelos 3D con IA salen de Higgsfield (`generate_3d`).
+**Estado en la nube (revisado el 2026-11-03, solo por nombre de variable, nunca por valor):** el entorno tiene `OPENAI_API_KEY` y ninguna de las demás. Conectados en la cuenta de Leonel: ElevenLabs, Higgsfield y GitHub. El MCP de Meshy no arranca en la nube porque `.mcp.json` lo lanza con `cmd` (solo existe en Windows): en la nube, los modelos 3D salen de `tools/meshy.py` con `MESHY_API_KEY` como secreto del entorno (o de Higgsfield, con `generate_3d`).
 
 ## Lo mínimo para arrancar
 
@@ -14,7 +16,7 @@ Lo que el programa necesita de las personas y que Claude no puede hacer solo. Al
 - [ ] Prueba en Studio de la UI y de los bloques del armador (tarea de Luciano en `team/tareas.md`).
 - [ ] Productos y pases creados en el Creator Dashboard para el primer juego, con sus ids en `ShopConfig`.
 - [ ] Imágenes de esos pases y productos: las de `assets/ui/store-art` (qué va con cuál: `uses` de su `manifest.json`).
-- [ ] Insignias creadas en el Dashboard (Monetization → Badges; 5 gratis cada 24 h, después 100 Robux cada una) con nombre, descripción e imagen de `assets/ui/badge-art`, y sus ids en `BadgeConfig`.
+- [ ] Insignias creadas en el Dashboard (Engagement → Badges; 5 gratis cada 24 h, después 100 Robux cada una) con nombre, descripción e imagen de `assets/ui/badge-art`, y sus ids en `BadgeConfig`.
 - [ ] Subir a Roblox los íconos (`hud-icons`, `pet-icons`, `unit-icons`), las fotos de zona y el fondo de carga (`tools/roblox_upload.py`, con `ROBLOX_OPEN_CLOUD_API_KEY`) y poner los ids en `AssetIds` y `LoadingConfig.IMAGE`; mientras tanto el juego muestra emojis de respaldo.
 
 ## 1. Claves de API
@@ -60,6 +62,7 @@ Lo que se registra con `claude mcp add` en una PC no viaja a la nube: en la nube
 **En cada juego:**
 - [ ] *Max Players* del lugar = `plots.count` de la receta, si usa bases (una base por jugador).
 - [ ] Crear los Developer Products y Game Passes de `ShopConfig` (y los de los bloques activos) y pegar cada id en `productId` o `passId`. Con id 0 no se ofrecen. El precio real se pone en el Dashboard; `robux` es la referencia del diseño.
+- [ ] Venta fuera del juego: en Monetization → Shop, marcar **Listed** los pases y productos de valor fijo (pases, gemas, una unidad), para que también se vendan en la página de inicio, en la búsqueda y después de comprar Robux. Nunca los aleatorios, ni los que dependen de la partida o se compran una sola vez, ni la plata que se calcula por lo que gana el jugador (`roblox-monetization`).
 - [ ] Suscripción VIP (Monetization → Subscriptions): cobrarla **en Robux** (desde 49). La de moneda local pide cuenta verificada y no se ofrece en algunos países (Argentina entre ellos). Antes de activarla por primera vez se elige un nombre corto del juego que **no se puede cambiar**. Pegar el id en `ShopConfig.SUBSCRIPTIONS`.
 - [ ] Anuncio con premio: Roblox lo permite recién con el juego público, el cuestionario de madurez aprobado, un promedio de 2 000 visitantes únicos por mes y quien publica con 13+, 2FA y documento verificado. El premio es un Developer Product propio y nunca aleatorio. Hasta entonces, `ShopConfig.AD_REWARD.productId = 0`.
 - [ ] Cuestionario de madurez (Maturity & Compliance) completo. El juego sale primero solo para 16+; para menores de 16, los requisitos de la cuenta dueña y la evaluación de `roblox-compliance`.
