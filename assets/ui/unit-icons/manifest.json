@@ -1,375 +1,435 @@
 {
- "pack": "unit-icons",
- "kind": "icon",
- "count": 54,
- "source": "GPT Image 2.5 por la API de OpenAI (tools/imagegen.py, recetas unidades-*.json de skills/_shared/iconos/recetas, calidad high) con referencia de estilo propia (hoja de mascotas o referencia-estilo.png); cortados con tools/iconsheet.py",
- "license": "propio (generado con IA con referencias propias)",
- "author": "RobloxCreator",
- "created": "2026-11-02",
- "style": "Unidades estilo hit: criaturas de juguete con ojos grandes brillantes u objetos brillantes, contorno oscuro grueso, 512x512 con fondo transparente",
- "notes": "Unidades de muestra de las recetas (las mascotas de HatchAndCollect están en pet-icons). Cada juego hace las suyas con las mismas recetas. Subir con tools/roblox_upload.py y poner el rbxassetid en units.list[].icon.",
- "sheets": [
-  {
-   "group": "robo",
-   "recipe": "skills/_shared/iconos/recetas/unidades-robo.json",
-   "sheet": "unidades-robo-20261102-210937-1.png",
-   "sha256": "d159a4fd0ac0658e1efa138ceef576d0620bafd401f0081066e0ce72b94acc98"
-  },
-  {
-   "group": "peces",
-   "recipe": "skills/_shared/iconos/recetas/unidades-peces.json",
-   "sheet": "unidades-peces-20261102-210933-1.png",
-   "sha256": "6469a9235ea8dcb0d3d087c1fe959adbcc1b7e93ca7ea0b60cca026d42fbb226"
-  },
-  {
-   "group": "gallinas",
-   "recipe": "skills/_shared/iconos/recetas/unidades-gallinas.json",
-   "sheet": "unidades-gallinas-20261102-210931-1.png",
-   "sha256": "a51f7ade5fbcc8c8a283be6602ac367b9546894ee1961b5a21501b01747d8dd3"
-  },
-  {
-   "group": "dinos",
-   "recipe": "skills/_shared/iconos/recetas/unidades-dinos.json",
-   "sheet": "unidades-dinos-20261102-210936-1.png",
-   "sha256": "ddc54387821f0c5eb20549fd68574f2b64ad86afe6f7fc411c6d21bf25bb7672"
-  },
-  {
-   "group": "cultivos",
-   "recipe": "skills/_shared/iconos/recetas/unidades-cultivos.json",
-   "sheet": "unidades-cultivos-20261102-210932-1.png",
-   "sha256": "f0129a32db46bc13b0c02824bdc074ea20c21e33a1c07daac77de9e259d6ea8a"
-  },
-  {
-   "group": "tesoros",
-   "recipe": "skills/_shared/iconos/recetas/unidades-tesoros.json",
-   "sheet": "unidades-tesoros-20261102-210934-1.png",
-   "sha256": "cc74fd6e9d13756e7d646fb43666d0324fade71842deb071ab98ff4177acb1f9"
-  }
- ],
- "items": [
-  {
-   "name": "banana_buddy",
-   "file": "robo/banana_buddy.png",
-   "group": "robo",
-   "recipe": "StealAndPlace"
-  },
-  {
-   "name": "toast_pal",
-   "file": "robo/toast_pal.png",
-   "group": "robo",
-   "recipe": "StealAndPlace"
-  },
-  {
-   "name": "cactus_cowboy",
-   "file": "robo/cactus_cowboy.png",
-   "group": "robo",
-   "recipe": "StealAndPlace"
-  },
-  {
-   "name": "disco_donut",
-   "file": "robo/disco_donut.png",
-   "group": "robo",
-   "recipe": "StealAndPlace"
-  },
-  {
-   "name": "pizza_pirate",
-   "file": "robo/pizza_pirate.png",
-   "group": "robo",
-   "recipe": "StealAndPlace"
-  },
-  {
-   "name": "robo_pickle",
-   "file": "robo/robo_pickle.png",
-   "group": "robo",
-   "recipe": "StealAndPlace"
-  },
-  {
-   "name": "ninja_noodle",
-   "file": "robo/ninja_noodle.png",
-   "group": "robo",
-   "recipe": "StealAndPlace"
-  },
-  {
-   "name": "astro_avocado",
-   "file": "robo/astro_avocado.png",
-   "group": "robo",
-   "recipe": "StealAndPlace"
-  },
-  {
-   "name": "taco_king",
-   "file": "robo/taco_king.png",
-   "group": "robo",
-   "recipe": "StealAndPlace"
-  },
-  {
-   "name": "sardine",
-   "file": "peces/sardine.png",
-   "group": "peces",
-   "recipe": "Fishing"
-  },
-  {
-   "name": "clownfish",
-   "file": "peces/clownfish.png",
-   "group": "peces",
-   "recipe": "Fishing"
-  },
-  {
-   "name": "pufferfish",
-   "file": "peces/pufferfish.png",
-   "group": "peces",
-   "recipe": "Fishing"
-  },
-  {
-   "name": "salmon",
-   "file": "peces/salmon.png",
-   "group": "peces",
-   "recipe": "Fishing"
-  },
-  {
-   "name": "swordfish",
-   "file": "peces/swordfish.png",
-   "group": "peces",
-   "recipe": "Fishing"
-  },
-  {
-   "name": "octopus",
-   "file": "peces/octopus.png",
-   "group": "peces",
-   "recipe": "Fishing"
-  },
-  {
-   "name": "shark",
-   "file": "peces/shark.png",
-   "group": "peces",
-   "recipe": "Fishing"
-  },
-  {
-   "name": "golden_koi",
-   "file": "peces/golden_koi.png",
-   "group": "peces",
-   "recipe": "Fishing"
-  },
-  {
-   "name": "baby_kraken",
-   "file": "peces/baby_kraken.png",
-   "group": "peces",
-   "recipe": "Fishing"
-  },
-  {
-   "name": "chick",
-   "file": "gallinas/chick.png",
-   "group": "gallinas",
-   "recipe": "MergeTycoon"
-  },
-  {
-   "name": "hen",
-   "file": "gallinas/hen.png",
-   "group": "gallinas",
-   "recipe": "MergeTycoon"
-  },
-  {
-   "name": "rooster",
-   "file": "gallinas/rooster.png",
-   "group": "gallinas",
-   "recipe": "MergeTycoon"
-  },
-  {
-   "name": "golden_hen",
-   "file": "gallinas/golden_hen.png",
-   "group": "gallinas",
-   "recipe": "MergeTycoon"
-  },
-  {
-   "name": "robo_hen",
-   "file": "gallinas/robo_hen.png",
-   "group": "gallinas",
-   "recipe": "MergeTycoon"
-  },
-  {
-   "name": "ninja_hen",
-   "file": "gallinas/ninja_hen.png",
-   "group": "gallinas",
-   "recipe": "MergeTycoon"
-  },
-  {
-   "name": "wizard_hen",
-   "file": "gallinas/wizard_hen.png",
-   "group": "gallinas",
-   "recipe": "MergeTycoon"
-  },
-  {
-   "name": "king_rooster",
-   "file": "gallinas/king_rooster.png",
-   "group": "gallinas",
-   "recipe": "MergeTycoon"
-  },
-  {
-   "name": "cosmic_hen",
-   "file": "gallinas/cosmic_hen.png",
-   "group": "gallinas",
-   "recipe": "MergeTycoon"
-  },
-  {
-   "name": "baby_raptor",
-   "file": "dinos/baby_raptor.png",
-   "group": "dinos",
-   "recipe": "RunAndCatch"
-  },
-  {
-   "name": "stego",
-   "file": "dinos/stego.png",
-   "group": "dinos",
-   "recipe": "RunAndCatch"
-  },
-  {
-   "name": "trike",
-   "file": "dinos/trike.png",
-   "group": "dinos",
-   "recipe": "RunAndCatch"
-  },
-  {
-   "name": "ankylo",
-   "file": "dinos/ankylo.png",
-   "group": "dinos",
-   "recipe": "RunAndCatch"
-  },
-  {
-   "name": "ptero",
-   "file": "dinos/ptero.png",
-   "group": "dinos",
-   "recipe": "RunAndCatch"
-  },
-  {
-   "name": "parasaur",
-   "file": "dinos/parasaur.png",
-   "group": "dinos",
-   "recipe": "RunAndCatch"
-  },
-  {
-   "name": "spino",
-   "file": "dinos/spino.png",
-   "group": "dinos",
-   "recipe": "RunAndCatch"
-  },
-  {
-   "name": "trex",
-   "file": "dinos/trex.png",
-   "group": "dinos",
-   "recipe": "RunAndCatch"
-  },
-  {
-   "name": "crystal_rex",
-   "file": "dinos/crystal_rex.png",
-   "group": "dinos",
-   "recipe": "RunAndCatch"
-  },
-  {
-   "name": "carrot",
-   "file": "cultivos/carrot.png",
-   "group": "cultivos",
-   "recipe": "GrowGarden"
-  },
-  {
-   "name": "tomato",
-   "file": "cultivos/tomato.png",
-   "group": "cultivos",
-   "recipe": "GrowGarden"
-  },
-  {
-   "name": "corn",
-   "file": "cultivos/corn.png",
-   "group": "cultivos",
-   "recipe": "GrowGarden"
-  },
-  {
-   "name": "pumpkin",
-   "file": "cultivos/pumpkin.png",
-   "group": "cultivos",
-   "recipe": "GrowGarden"
-  },
-  {
-   "name": "watermelon",
-   "file": "cultivos/watermelon.png",
-   "group": "cultivos",
-   "recipe": "GrowGarden"
-  },
-  {
-   "name": "strawberry",
-   "file": "cultivos/strawberry.png",
-   "group": "cultivos",
-   "recipe": "GrowGarden"
-  },
-  {
-   "name": "dragon_fruit",
-   "file": "cultivos/dragon_fruit.png",
-   "group": "cultivos",
-   "recipe": "GrowGarden"
-  },
-  {
-   "name": "golden_apple",
-   "file": "cultivos/golden_apple.png",
-   "group": "cultivos",
-   "recipe": "GrowGarden"
-  },
-  {
-   "name": "rainbow_melon",
-   "file": "cultivos/rainbow_melon.png",
-   "group": "cultivos",
-   "recipe": "GrowGarden"
-  },
-  {
-   "name": "old_boot",
-   "file": "tesoros/old_boot.png",
-   "group": "tesoros",
-   "recipe": "SearchAndDig"
-  },
-  {
-   "name": "rubber_duck",
-   "file": "tesoros/rubber_duck.png",
-   "group": "tesoros",
-   "recipe": "SearchAndDig"
-  },
-  {
-   "name": "toy_robot",
-   "file": "tesoros/toy_robot.png",
-   "group": "tesoros",
-   "recipe": "SearchAndDig"
-  },
-  {
-   "name": "pearl",
-   "file": "tesoros/pearl.png",
-   "group": "tesoros",
-   "recipe": "SearchAndDig"
-  },
-  {
-   "name": "gold_ring",
-   "file": "tesoros/gold_ring.png",
-   "group": "tesoros",
-   "recipe": "SearchAndDig"
-  },
-  {
-   "name": "ancient_coin",
-   "file": "tesoros/ancient_coin.png",
-   "group": "tesoros",
-   "recipe": "SearchAndDig"
-  },
-  {
-   "name": "magic_crystal",
-   "file": "tesoros/magic_crystal.png",
-   "group": "tesoros",
-   "recipe": "SearchAndDig"
-  },
-  {
-   "name": "golden_needle",
-   "file": "tesoros/golden_needle.png",
-   "group": "tesoros",
-   "recipe": "SearchAndDig"
-  },
-  {
-   "name": "rainbow_needle",
-   "file": "tesoros/rainbow_needle.png",
-   "group": "tesoros",
-   "recipe": "SearchAndDig"
-  }
- ]
+  "pack": "unit-icons",
+  "kind": "icon",
+  "count": 63,
+  "source": "GPT Image 2.5 por la API de OpenAI (tools/imagegen.py, recetas unidades-*.json de skills/_shared/iconos/recetas, calidad high) con referencia de estilo propia (hoja de mascotas o referencia-estilo.png); cortados con tools/iconsheet.py",
+  "license": "propio (generado con IA con referencias propias)",
+  "author": "RobloxCreator",
+  "created": "2026-11-02",
+  "style": "Unidades estilo hit: criaturas de juguete con ojos grandes brillantes u objetos brillantes, contorno oscuro grueso, 512x512 con fondo transparente",
+  "notes": "Unidades de muestra de las recetas (las mascotas de HatchAndCollect están en pet-icons). Cada juego hace las suyas con las mismas recetas. Subir con tools/roblox_upload.py y poner el rbxassetid en units.list[].icon.",
+  "sheets": [
+    {
+      "group": "robo",
+      "recipe": "skills/_shared/iconos/recetas/unidades-robo.json",
+      "sheet": "unidades-robo-20261102-210937-1.png",
+      "sha256": "d159a4fd0ac0658e1efa138ceef576d0620bafd401f0081066e0ce72b94acc98"
+    },
+    {
+      "group": "peces",
+      "recipe": "skills/_shared/iconos/recetas/unidades-peces.json",
+      "sheet": "unidades-peces-20261102-210933-1.png",
+      "sha256": "6469a9235ea8dcb0d3d087c1fe959adbcc1b7e93ca7ea0b60cca026d42fbb226"
+    },
+    {
+      "group": "gallinas",
+      "recipe": "skills/_shared/iconos/recetas/unidades-gallinas.json",
+      "sheet": "unidades-gallinas-20261102-210931-1.png",
+      "sha256": "a51f7ade5fbcc8c8a283be6602ac367b9546894ee1961b5a21501b01747d8dd3"
+    },
+    {
+      "group": "dinos",
+      "recipe": "skills/_shared/iconos/recetas/unidades-dinos.json",
+      "sheet": "unidades-dinos-20261102-210936-1.png",
+      "sha256": "ddc54387821f0c5eb20549fd68574f2b64ad86afe6f7fc411c6d21bf25bb7672"
+    },
+    {
+      "group": "cultivos",
+      "recipe": "skills/_shared/iconos/recetas/unidades-cultivos.json",
+      "sheet": "unidades-cultivos-20261102-210932-1.png",
+      "sha256": "f0129a32db46bc13b0c02824bdc074ea20c21e33a1c07daac77de9e259d6ea8a"
+    },
+    {
+      "group": "tesoros",
+      "recipe": "skills/_shared/iconos/recetas/unidades-tesoros.json",
+      "sheet": "unidades-tesoros-20261102-210934-1.png",
+      "sha256": "cc74fd6e9d13756e7d646fb43666d0324fade71842deb071ab98ff4177acb1f9"
+    },
+    {
+      "group": "critters",
+      "recipe": "skills/_shared/iconos/recetas/unidades-critters.json",
+      "sheet": "unidades-critters-20261103-104947-1.png",
+      "sha256": "b1595f1204febe29a070e41a9ff26c68e7106799d7138a123803093af1b1e23c"
+    }
+  ],
+  "items": [
+    {
+      "name": "banana_buddy",
+      "file": "robo/banana_buddy.png",
+      "group": "robo",
+      "recipe": "StealAndPlace"
+    },
+    {
+      "name": "toast_pal",
+      "file": "robo/toast_pal.png",
+      "group": "robo",
+      "recipe": "StealAndPlace"
+    },
+    {
+      "name": "cactus_cowboy",
+      "file": "robo/cactus_cowboy.png",
+      "group": "robo",
+      "recipe": "StealAndPlace"
+    },
+    {
+      "name": "disco_donut",
+      "file": "robo/disco_donut.png",
+      "group": "robo",
+      "recipe": "StealAndPlace"
+    },
+    {
+      "name": "pizza_pirate",
+      "file": "robo/pizza_pirate.png",
+      "group": "robo",
+      "recipe": "StealAndPlace"
+    },
+    {
+      "name": "robo_pickle",
+      "file": "robo/robo_pickle.png",
+      "group": "robo",
+      "recipe": "StealAndPlace"
+    },
+    {
+      "name": "ninja_noodle",
+      "file": "robo/ninja_noodle.png",
+      "group": "robo",
+      "recipe": "StealAndPlace"
+    },
+    {
+      "name": "astro_avocado",
+      "file": "robo/astro_avocado.png",
+      "group": "robo",
+      "recipe": "StealAndPlace"
+    },
+    {
+      "name": "taco_king",
+      "file": "robo/taco_king.png",
+      "group": "robo",
+      "recipe": "StealAndPlace"
+    },
+    {
+      "name": "sardine",
+      "file": "peces/sardine.png",
+      "group": "peces",
+      "recipe": "Fishing"
+    },
+    {
+      "name": "clownfish",
+      "file": "peces/clownfish.png",
+      "group": "peces",
+      "recipe": "Fishing"
+    },
+    {
+      "name": "pufferfish",
+      "file": "peces/pufferfish.png",
+      "group": "peces",
+      "recipe": "Fishing"
+    },
+    {
+      "name": "salmon",
+      "file": "peces/salmon.png",
+      "group": "peces",
+      "recipe": "Fishing"
+    },
+    {
+      "name": "swordfish",
+      "file": "peces/swordfish.png",
+      "group": "peces",
+      "recipe": "Fishing"
+    },
+    {
+      "name": "octopus",
+      "file": "peces/octopus.png",
+      "group": "peces",
+      "recipe": "Fishing"
+    },
+    {
+      "name": "shark",
+      "file": "peces/shark.png",
+      "group": "peces",
+      "recipe": "Fishing"
+    },
+    {
+      "name": "golden_koi",
+      "file": "peces/golden_koi.png",
+      "group": "peces",
+      "recipe": "Fishing"
+    },
+    {
+      "name": "baby_kraken",
+      "file": "peces/baby_kraken.png",
+      "group": "peces",
+      "recipe": "Fishing"
+    },
+    {
+      "name": "chick",
+      "file": "gallinas/chick.png",
+      "group": "gallinas",
+      "recipe": "MergeTycoon"
+    },
+    {
+      "name": "hen",
+      "file": "gallinas/hen.png",
+      "group": "gallinas",
+      "recipe": "MergeTycoon"
+    },
+    {
+      "name": "rooster",
+      "file": "gallinas/rooster.png",
+      "group": "gallinas",
+      "recipe": "MergeTycoon"
+    },
+    {
+      "name": "golden_hen",
+      "file": "gallinas/golden_hen.png",
+      "group": "gallinas",
+      "recipe": "MergeTycoon"
+    },
+    {
+      "name": "robo_hen",
+      "file": "gallinas/robo_hen.png",
+      "group": "gallinas",
+      "recipe": "MergeTycoon"
+    },
+    {
+      "name": "ninja_hen",
+      "file": "gallinas/ninja_hen.png",
+      "group": "gallinas",
+      "recipe": "MergeTycoon"
+    },
+    {
+      "name": "wizard_hen",
+      "file": "gallinas/wizard_hen.png",
+      "group": "gallinas",
+      "recipe": "MergeTycoon"
+    },
+    {
+      "name": "king_rooster",
+      "file": "gallinas/king_rooster.png",
+      "group": "gallinas",
+      "recipe": "MergeTycoon"
+    },
+    {
+      "name": "cosmic_hen",
+      "file": "gallinas/cosmic_hen.png",
+      "group": "gallinas",
+      "recipe": "MergeTycoon"
+    },
+    {
+      "name": "baby_raptor",
+      "file": "dinos/baby_raptor.png",
+      "group": "dinos",
+      "recipe": "RunAndCatch"
+    },
+    {
+      "name": "stego",
+      "file": "dinos/stego.png",
+      "group": "dinos",
+      "recipe": "RunAndCatch"
+    },
+    {
+      "name": "trike",
+      "file": "dinos/trike.png",
+      "group": "dinos",
+      "recipe": "RunAndCatch"
+    },
+    {
+      "name": "ankylo",
+      "file": "dinos/ankylo.png",
+      "group": "dinos",
+      "recipe": "RunAndCatch"
+    },
+    {
+      "name": "ptero",
+      "file": "dinos/ptero.png",
+      "group": "dinos",
+      "recipe": "RunAndCatch"
+    },
+    {
+      "name": "parasaur",
+      "file": "dinos/parasaur.png",
+      "group": "dinos",
+      "recipe": "RunAndCatch"
+    },
+    {
+      "name": "spino",
+      "file": "dinos/spino.png",
+      "group": "dinos",
+      "recipe": "RunAndCatch"
+    },
+    {
+      "name": "trex",
+      "file": "dinos/trex.png",
+      "group": "dinos",
+      "recipe": "RunAndCatch"
+    },
+    {
+      "name": "crystal_rex",
+      "file": "dinos/crystal_rex.png",
+      "group": "dinos",
+      "recipe": "RunAndCatch"
+    },
+    {
+      "name": "carrot",
+      "file": "cultivos/carrot.png",
+      "group": "cultivos",
+      "recipe": "GrowGarden"
+    },
+    {
+      "name": "tomato",
+      "file": "cultivos/tomato.png",
+      "group": "cultivos",
+      "recipe": "GrowGarden"
+    },
+    {
+      "name": "corn",
+      "file": "cultivos/corn.png",
+      "group": "cultivos",
+      "recipe": "GrowGarden"
+    },
+    {
+      "name": "pumpkin",
+      "file": "cultivos/pumpkin.png",
+      "group": "cultivos",
+      "recipe": "GrowGarden"
+    },
+    {
+      "name": "watermelon",
+      "file": "cultivos/watermelon.png",
+      "group": "cultivos",
+      "recipe": "GrowGarden"
+    },
+    {
+      "name": "strawberry",
+      "file": "cultivos/strawberry.png",
+      "group": "cultivos",
+      "recipe": "GrowGarden"
+    },
+    {
+      "name": "dragon_fruit",
+      "file": "cultivos/dragon_fruit.png",
+      "group": "cultivos",
+      "recipe": "GrowGarden"
+    },
+    {
+      "name": "golden_apple",
+      "file": "cultivos/golden_apple.png",
+      "group": "cultivos",
+      "recipe": "GrowGarden"
+    },
+    {
+      "name": "rainbow_melon",
+      "file": "cultivos/rainbow_melon.png",
+      "group": "cultivos",
+      "recipe": "GrowGarden"
+    },
+    {
+      "name": "old_boot",
+      "file": "tesoros/old_boot.png",
+      "group": "tesoros",
+      "recipe": "SearchAndDig"
+    },
+    {
+      "name": "rubber_duck",
+      "file": "tesoros/rubber_duck.png",
+      "group": "tesoros",
+      "recipe": "SearchAndDig"
+    },
+    {
+      "name": "toy_robot",
+      "file": "tesoros/toy_robot.png",
+      "group": "tesoros",
+      "recipe": "SearchAndDig"
+    },
+    {
+      "name": "pearl",
+      "file": "tesoros/pearl.png",
+      "group": "tesoros",
+      "recipe": "SearchAndDig"
+    },
+    {
+      "name": "gold_ring",
+      "file": "tesoros/gold_ring.png",
+      "group": "tesoros",
+      "recipe": "SearchAndDig"
+    },
+    {
+      "name": "ancient_coin",
+      "file": "tesoros/ancient_coin.png",
+      "group": "tesoros",
+      "recipe": "SearchAndDig"
+    },
+    {
+      "name": "magic_crystal",
+      "file": "tesoros/magic_crystal.png",
+      "group": "tesoros",
+      "recipe": "SearchAndDig"
+    },
+    {
+      "name": "golden_needle",
+      "file": "tesoros/golden_needle.png",
+      "group": "tesoros",
+      "recipe": "SearchAndDig"
+    },
+    {
+      "name": "rainbow_needle",
+      "file": "tesoros/rainbow_needle.png",
+      "group": "tesoros",
+      "recipe": "SearchAndDig"
+    },
+    {
+      "name": "pebble_pup",
+      "file": "critters/pebble_pup.png",
+      "group": "critters",
+      "recipe": "StealAndFuseCritters (games/prueba)"
+    },
+    {
+      "name": "mossling",
+      "file": "critters/mossling.png",
+      "group": "critters",
+      "recipe": "StealAndFuseCritters (games/prueba)"
+    },
+    {
+      "name": "bubblebug",
+      "file": "critters/bubblebug.png",
+      "group": "critters",
+      "recipe": "StealAndFuseCritters (games/prueba)"
+    },
+    {
+      "name": "zapfrog",
+      "file": "critters/zapfrog.png",
+      "group": "critters",
+      "recipe": "StealAndFuseCritters (games/prueba)"
+    },
+    {
+      "name": "cloud_kitty",
+      "file": "critters/cloud_kitty.png",
+      "group": "critters",
+      "recipe": "StealAndFuseCritters (games/prueba)"
+    },
+    {
+      "name": "lava_lizard",
+      "file": "critters/lava_lizard.png",
+      "group": "critters",
+      "recipe": "StealAndFuseCritters (games/prueba)"
+    },
+    {
+      "name": "star_owl",
+      "file": "critters/star_owl.png",
+      "group": "critters",
+      "recipe": "StealAndFuseCritters (games/prueba)"
+    },
+    {
+      "name": "crystal_dragon",
+      "file": "critters/crystal_dragon.png",
+      "group": "critters",
+      "recipe": "StealAndFuseCritters (games/prueba)"
+    },
+    {
+      "name": "critter_egg",
+      "file": "critters/critter_egg.png",
+      "group": "critters",
+      "recipe": "StealAndFuseCritters (games/prueba)"
+    }
+  ]
 }

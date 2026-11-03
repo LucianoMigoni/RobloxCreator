@@ -1,0 +1,54 @@
+{
+ "source": "unidades-critters-20261103-104947-1.png",
+ "sha256": "b1595f1204febe29a070e41a9ff26c68e7106799d7138a123803093af1b1e23c",
+ "grid": "3x3",
+ "size": 512,
+ "created": "2026-11-03T10:50:00+00:00",
+ "items": [
+  {
+   "name": "pebble_pup",
+   "file": "pebble_pup.png",
+   "index": 1
+  },
+  {
+   "name": "mossling",
+   "file": "mossling.png",
+   "index": 2
+  },
+  {
+   "name": "bubblebug",
+   "file": "bubblebug.png",
+   "index": 3
+  },
+  {
+   "name": "zapfrog",
+   "file": "zapfrog.png",
+   "index": 4
+  },
+  {
+   "name": "cloud_kitty",
+   "file": "cloud_kitty.png",
+   "index": 5
+  },
+  {
+   "name": "lava_lizard",
+   "file": "lava_lizard.png",
+   "index": 6
+  },
+  {
+   "name": "star_owl",
+   "file": "star_owl.png",
+   "index": 7
+  },
+  {
+   "name": "crystal_dragon",
+   "file": "crystal_dragon.png",
+   "index": 8
+  },
+  {
+   "name": "critter_egg",
+   "file": "critter_egg.png",
+   "index": 9
+  }
+ ]
+}

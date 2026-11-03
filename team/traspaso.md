@@ -2,7 +2,7 @@
 
 Para la IA (o persona) que retome el trabajo desde un push, por ejemplo el Claude de Luciano si a Leonel se le acaban los tokens. **Leé este archivo entero antes de tocar nada:** acá está todo lo que pidió el usuario, cómo quiere que se trabaje, qué está hecho, qué se está haciendo y qué falta, para seguir igual que en el chat original.
 
-Última actualización: 2026-11-03, MapKit (#62) con el estilo de los hits y las nueve recetas (#63) terminados; sigue rehacer el juego de prueba con el armador (#64). Sesión original: Claude Code en la nube de Leonel, rama `leonelblumberg/quirky-dijkstra-2kxnwz`.
+Última actualización: 2026-11-03, MapKit (#62) con el estilo de los hits, las nueve recetas (#63) y el juego de prueba rehecho con el armador (#64) terminados; sigue el skill del armador (#65). Sesión original: Claude Code en la nube de Leonel, rama `leonelblumberg/quirky-dijkstra-2kxnwz`.
 
 ## 0. Cómo retomar, paso a paso
 
@@ -167,8 +167,8 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
 | 61 | UI de los bloques | 4 | ✅ (2026-11-02; falta probarla en Studio) |
 | 62 | MapKit | 5 | ✅ (2026-11-03; falta probarlo en Studio) |
 | 63 | Nueve recetas con objetivos, misiones y mapa | 5 | ✅ (2026-11-03) |
-| 64 | Rehacer `games/prueba` con el armador | 6 | **sigue esta** |
-| 65 | Skill del armador y skills que lo usan | 7 | pendiente |
+| 64 | Rehacer `games/prueba` con el armador | 6 | ✅ (2026-11-03; falta probarlo en Studio) |
+| 65 | Skill del armador y skills que lo usan | 7 | **sigue esta** |
 | 66 | Skill de game feel | 7 | pendiente |
 | 67 | Poner al día CLAUDE.md, ROADMAP, guía central, hits-2026, README, tablero | 7 | pendiente |
 | 68 | Íconos que faltan | 7 | ✅ 27 de la UI y 9 mascotas con GPT Image (falta subirlos a Roblox) |
@@ -319,6 +319,17 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
     - `tests/MapExpect.luau`: lo que cada bloque busca en el mapa (compartido con MapPlan.spec).
   - **Vista previa** de los nueve mapas en `skills/roblox-game-kits/references/mapa/recetas.jpg`; se mandó al usuario.
   - **Pedido del usuario:** "Esto sería simplemente un ejemplo, ¿no? Después cada juego usa esto mucho más preparado y personalizado, ¿no?". Respuesta: sí. Las recetas y su mapa son muestras de cada fórmula. Cada juego copia la receta, hace propio el contenido y fija el mapa en Studio para editarlo (`bloques.md`). Este flujo va en el skill del armador (#65).
+- **Juego de prueba rehecho con el armador (#64, 2026-11-03).** Chequeo en verde.
+  - `games/prueba`, "Steal & Fuse Critters", es ahora la plantilla actual con su receta en `src/shared/Config/KitConfig.luau`:
+    - 8 critters en niveles, con fusión de a 2;
+    - bases con traba, cinta con pesos de la spec, robo con empujón;
+    - el onboarding de la spec como objetivos;
+    - renacer propio y mapa con vitrina del Crystal Dragon.
+  - La versión anterior (servicio `Critters`, hitos 1 y 2) quedó en el historial de git.
+  - Cada mecánica de la spec y lo que el armador todavía no tiene está en `games/prueba/docs/decisiones.md`: cinta VIP, Lucky Fuse, Long Lock, Fast Thief, fusionador por base y renacer por critter.
+  - **Plantilla:** test nuevo `tests/KitConfig.spec.luau`. Revisa la receta activa de cada juego (KitCheck, mapa e íconos); en la plantilla, con "None", no hay nada que revisar.
+  - **Íconos:** 8 critters y un huevo con ChatGPT (receta `unidades-critters.json`) en `assets/ui/unit-icons/critters`; unit-icons queda con 63. Con emoji de respaldo en el `Icons.luau` del juego.
+  - **Docs:** `games/prueba/README.md` (cómo probarlo en Studio y cómo fijar el mapa) y vista previa del mapa en `games/prueba/docs/`.
 
 ## 6. Qué existe hoy (mapa)
 

@@ -1645,7 +1645,7 @@
       "path": "ui/unit-icons",
       "type": "pack",
       "packType": "icon",
-      "count": 54,
+      "count": 63,
       "tags": {
         "style": [
           "3d",
@@ -1669,7 +1669,8 @@
           "chicken",
           "treasure",
           "food",
-          "index"
+          "index",
+          "critter"
         ]
       },
       "robloxAssetId": null,

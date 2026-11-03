@@ -1,34 +1,34 @@
 # Steal & Fuse Critters (`games/prueba`)
 
-Juego de prueba del hub (C2). Concepto: `docs/concepto.md`; spec: `docs/spec.md`. Copiado de `template/` el 2026-10-26; lo de abajo describe la base heredada. Todo lo sensible pasa en el servidor; el cliente solo pide y muestra. Las reglas de seguridad están en `skills/roblox-security/SKILL.md`.
+Juego de prueba del hub. Concepto: `docs/concepto.md`; spec: `docs/spec.md`.
+
+**Rehecho con el armador el 2026-11-03.** Es una copia de la plantilla actual con su receta propia en `src/shared/Config/KitConfig.luau`. La receta usa estos bloques: unidades (8 critters en niveles), bases con traba, cinta compartida, robo y empujón, y fusión de dos iguales.
+
+- **Lo que pedía la spec y todavía no está en el armador:** `docs/decisiones.md`.
+- **Íconos de los critters:** hechos con ChatGPT, en `assets/ui/unit-icons/critters`. Mientras no se suban a Roblox, la UI muestra el emoji de respaldo de `src/shared/Icons.luau`.
+- **Mapa:** lo arma MapKit al arrancar. La vista previa sin Studio está en `docs/mapa-hero.jpg` y `docs/mapa-top.jpg`, y se genera así:
+  ```
+  node tools/render3d/mapview.cjs --recipe games/prueba/src/shared/Config/KitConfig.luau --out games/prueba/docs/mapa
+  ```
+
+## Probar en Studio
+
+1. `rokit install` y `rojo serve` en esta carpeta. En Studio: Plugins → Rojo → Connect.
+2. Play. El servidor arma el mapa: plaza, bases, cinta y cerros.
+3. Mirar el loop de la spec en orden:
+   - el objetivo de arriba guía cada paso;
+   - comprar en la cinta;
+   - juntar en la placa verde;
+   - fusionar dos iguales;
+   - robar de otra base (con dos jugadores: Test → Clients and Servers);
+   - trabar la base y renacer.
+4. Para editar el mapa a mano:
+   1. Durante Play, copiar `Workspace.Map`.
+   2. Parar y pegarlo en Workspace.
+   3. MapKit ya no arma otro y se puede decorar libremente; basta con mantener las etiquetas.
+
+El guardado de datos se prueba solo en una copia del lugar con *Enable Studio Access to API Services* (`skills/roblox-security`).
 
 ## Qué trae
 
-| Pieza | Archivo | Qué hace |
-|---|---|---|
-| Arranque | `src/server/Main.server.luau`, `src/client/Main.client.luau` | Inician los módulos en orden |
-| Datos | `src/server/Data/DataService.luau` | Guardado con bloqueo de sesión, autoguardado, guardado al salir y al cerrar |
-| Remotes | `src/server/Net/Remotes.luau` + `Validate` + `RateLimiter` | Única puerta del cliente: validación y límite de frecuencia |
-| Estado para el cliente | `src/server/PlayerStateService.luau` → `src/client/PlayerState.luau` | El cliente pide su estado al entrar y recibe cada cambio |
-| Monedas | `src/server/Economy/CurrencyService.luau` | Sumar y gastar con tope, con eventos de economía en AnalyticsService |
-| Inventario | `src/server/Economy/InventoryService.luau` | Ítems únicos del jugador |
-| Tienda | `src/server/Shop/ShopService.luau` | Compras con monedas, Developer Products (ProcessReceipt) y Game Passes |
-| Onboarding | `src/server/Onboarding/OnboardingService.luau` | Embudo de los primeros minutos en Creator Analytics |
-| UI | `src/shared/UIKit.luau`, `src/client/Controllers/` | HUD, tienda e inventario con el estilo del hub |
-| Configuración | `src/shared/Config/` | Precios, productos, pasos, textos, tiempos: nada de números sueltos en la lógica |
-| Tests | `tests/*.spec.luau` | Lógica pura (validación, saldo, recibos, bloqueo) con el CLI de Luau |
-
-## Cómo extenderla
-
-- **Un dato nuevo del jugador:** agregarlo a `DEFAULT_DATA` en `Config/DataConfig.luau`. Los jugadores existentes lo reciben al cargar (`Reconcile`). Si el cliente lo tiene que ver, sumarlo a `Types.PlayerSnapshot` y a `PlayerStateService.snapshot`.
-- **Un remote nuevo:** en el servicio que lo usa, con `Remotes.onEvent` u `onInvoke`: un validador por argumento y un límite (ver `skills/roblox-security`). En el cliente, `Net.event`/`Net.func`. Crearlo de otra forma hace fallar `tools/check.py`.
-- **Ganar monedas jugando:** `CurrencyService.add(player, monto, Enum.AnalyticsEconomyTransactionType.Gameplay, "<qué>")`. El monto lo decide el servidor, nunca el cliente.
-- **Un ítem de tienda:** `ITEMS` en `Config/ShopConfig.luau`. Un pack de Robux o un pase: crearlo en el Creator Dashboard y poner su id en `PRODUCTS` o `GAME_PASSES`; con id `0` no se muestra ni se otorga.
-- **Un paso de onboarding:** `STEPS` en `Config/OnboardingConfig.luau`. Los de servidor los marca `OnboardingService.complete`; los de cliente llegan por el remote `ReportOnboardingStep` y nunca dan premio.
-- **Una pantalla nueva:** un controlador en `src/client/Controllers/`, arrancado desde `Main.client.luau`, con `UIKit` (ver `skills/roblox-ui-designer`).
-- **Lógica pura nueva** (cálculos sin Roblox): módulo aparte requerido por ruta (`require("./X")`) y su `tests/X.spec.luau`.
-
-## Probar
-
-- Sin Studio: `python tools/check.py` desde la raíz del repo (tipos, tests, reglas).
-- En Studio: el flujo de prueba de `skills/roblox-security/SKILL.md` (auditoría, prueba de abuso, persistencia) y `audit_ui.luau` de `skills/roblox-ui-designer`. Los datos solo se guardan en un lugar publicado con acceso a API activado, y solo en una copia de prueba.
+Todo lo de la plantilla (`template/README.md`): núcleo de economía, retención, tienda, UI estilo hit y los 18 bloques del armador. Este juego activa solo los de su receta. Para cambiar números, nombres o el mapa, se edita `KitConfig.luau`; `tools/check.py` la valida con `tests/KitConfig.spec.luau`.

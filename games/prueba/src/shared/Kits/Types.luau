@@ -1,0 +1,441 @@
+--!strict
+-- Tipos de la receta del juego (Config/KitConfig): qué bloques de juego usa y cómo. Solo datos, sin
+-- tipos de Roblox (colores en hex), para que tests/Presets.spec.luau valide cada receta con el CLI de
+-- Luau. Qué hace cada bloque: skills/roblox-game-kits/references/bloques.md.
+
+local Objectives = require("../Lib/Objectives")
+local SharedTypes = require("../Types")
+
+export type Reward = SharedTypes.Reward
+export type ObjectiveDef = Objectives.Def
+
+-- Precio en una moneda de EconomyConfig.CURRENCIES (o de `currencies` de la receta).
+export type Price = { currency: string, amount: number }
+
+-- Un resultado posible de un sorteo (huevo, cinta, pesca, pila, salvajes) y su peso. La suerte
+-- multiplica el peso de las unidades desde la rareza `luckyFrom` de la receta.
+export type PoolEntry = { unit: string, weight: number }
+
+-- Moneda propia de la receta (victorias, toques, la moneda del evento). Se suma a EconomyConfig.
+export type CurrencyDef = {
+	id: string,
+	symbol: string, -- "$" → "$1.2K"; "" muestra solo el número
+	icon: string, -- shared/Icons
+	color: string, -- hex ("#FFD23A")
+	start: number,
+	purchasable: boolean, -- se vende por Robux (lo aleatorio que se paga con ella es aleatorio pago)
+}
+
+export type UnitDef = {
+	id: string, -- se guarda en los datos: no cambiarlo después de publicar
+	name: string, -- lo que ve el jugador (inglés)
+	rarity: string, -- RarityConfig.TIERS[].id
+	income: number?, -- $/s colocada en la base
+	value: number?, -- precio de venta (sin valor no se vende)
+	power: number?, -- equipada: suma al multiplicador de equip.stat (0.25 = +25 %)
+	tier: number?, -- lugar en la cadena de fusión por nivel (1, 2, 3...)
+	zone: string?, -- zona del índice y del mundo
+	weight: { min: number, max: number }?, -- kilos (peces): el valor escala con el peso
+	requirement: number?, -- salvajes: estadística mínima para capturarla
+	price: number?, -- precio en la cinta (sin esto: valor × belt.priceMultiplier)
+	icon: string?, -- shared/Icons o rbxassetid de su imagen
+	model: string?, -- modelo en ReplicatedStorage.Assets.Units (sin modelo: forma de color)
+	color: string?, -- color de la forma de reemplazo (hex)
+}
+
+export type IndexZone = { id: string, name: string, image: string?, reward: Reward? }
+
+-- Una unidad del jugador (data.kits.units.list). Normal = sin variant ni size.
+export type Unit = {
+	uid: number,
+	kind: string, -- id de units.list
+	variant: string?, -- mutación (RarityConfig.MUTATIONS): "Gold", "Rainbow"
+	size: string?, -- tamaño (RarityConfig.SIZES): "Big", "Huge"
+	weight: number?, -- kilos (peces)
+	slot: number?, -- colocada en ese espacio de su base (Plots)
+	equipped: boolean?, -- equipada (Equip)
+	locked: boolean?, -- cuidada por el jugador: no se vende ni se fusiona con "todo"
+}
+
+-- Lo que ve el cliente del bloque Units (state.kit.units).
+export type UnitsState = { list: { Unit }, max: number }
+
+export type UnitsConfig = {
+	label: string, -- título del inventario y del índice: "Pets", "Fish", "Critters"
+	list: { UnitDef },
+	mutations: boolean?, -- variantes de RarityConfig.MUTATIONS (Gold, Diamond, Rainbow, Galaxy)
+	sizes: boolean?, -- tamaños de RarityConfig.SIZES (Big, Huge)
+	maxInventory: number,
+	zones: { IndexZone }?, -- zonas del índice con su premio
+	announceFrom: string?, -- desde esta rareza se anuncia a todo el servidor ("Legendary")
+	luckyFrom: string?, -- desde esta rareza la suerte las vuelve más probables ("Rare")
+}
+
+export type PlotsConfig = {
+	label: string?, -- "Base", "Farm", "Pen": el cartel dice "Leo's Base"
+	count: number, -- bases por servidor: Max Players del juego tiene que ser este número
+	slots: number, -- espacios al empezar
+	maxSlots: number,
+	slotPrices: { number }?, -- precio de cada espacio extra, en orden (moneda principal)
+	collect: "pad" | "auto", -- pisar el pad para cobrar, o directo a la moneda
+	autoCollectPass: string?, -- pase (ShopConfig.PASSES) que cobra solo
+	lock: { seconds: number, cooldown: number }?, -- traba con láser (juegos de robar)
+	autoPlace: boolean?, -- lo que se consigue va solo al primer espacio libre
+	slotPass: string?, -- pase que suma espacios ("ExtraSlots")
+	passSlots: number?, -- cuántos suma ese pase
+}
+
+-- Lo que ve el cliente del bloque Plots (state.kit.plots).
+export type PlotsState = {
+	plot: string?, -- nombre del Model de su base (nil mientras no tiene)
+	slots: number, -- espacios abiertos
+	maxSlots: number,
+	nextPrice: number?, -- precio del próximo espacio (nil = no hay más para comprar)
+	stored: number, -- plata juntada esperando el cobro
+	auto: boolean, -- cobra solo (pase o modo "auto")
+	lockedUntil: number, -- os.time() en que se apaga la traba
+	lockReadyAt: number, -- desde cuándo se puede volver a trabar
+}
+
+export type BeltConfig = {
+	pool: { PoolEntry },
+	spawnEvery: number, -- segundos entre unidades
+	walkSeconds: number, -- lo que tarda en cruzar
+	priceMultiplier: number?, -- precio = valor × esto, si la unidad no tiene `price`
+	maxOnBelt: number?,
+}
+
+export type StealConfig = {
+	holdSeconds: number, -- mantener el prompt para robar
+	carrySpeed: number, -- multiplicador de velocidad mientras lleva algo (0.7)
+	protectNewSeconds: number, -- los jugadores nuevos no pierden nada al principio
+	recentSeconds: number, -- lo recién robado no se puede volver a robar enseguida
+	pushRange: number,
+	protectBest: boolean?, -- lo más valioso de cada base no se roba
+}
+
+export type RollAmount = { count: number, pass: string? } -- pass: ShopConfig.PASSES (Triple, Octo)
+
+export type RollDef = {
+	id: string,
+	name: string, -- "Common Egg"
+	price: Price?, -- sin precio: gratis cada `cooldown` segundos
+	cooldown: number?,
+	pool: { PoolEntry },
+	amounts: { RollAmount }, -- {1, 3, 8} (huevos) o {1, 5, 25, 100} (puestos de compra)
+	zone: string?,
+	paidRandom: boolean?, -- se paga con moneda comprada con Robux: PolicyService y probabilidades
+	look: string?, -- "egg", "dice", "chest", "pad": cómo se ve en el mundo y al revelar
+	toBase: boolean?, -- lo que sale va directo a la base (puestos de Chicken Farm)
+}
+
+export type RollsConfig = {
+	list: { RollDef },
+	autoPass: string?, -- pase de tirada automática
+	luckStat: string?, -- estadística de suerte de BoostService ("Luck")
+}
+
+-- Lo que sale de una tirada (para la animación del cliente) y lo que ve del bloque (state.kit.rolls).
+export type RollResult = { uid: number, kind: string, variant: string?, size: string?, isNew: boolean }
+export type RollsState = { nextFree: { [string]: number } }
+
+export type MergeConfig = {
+	mode: "tier" | "variant", -- tier: N iguales → el siguiente nivel; variant: N normales → 1 dorado...
+	count: number, -- cuántos iguales hacen falta
+	mutationChance: number?, -- tier: chance de que el resultado salga con mutación
+	variantChain: { string }?, -- variant: "Normal" → "Gold" → "Diamond" → "Rainbow"
+	seconds: number?, -- el resultado tarda en estar listo ("Finish Now" lo adelanta)
+	machine: boolean?, -- hay que estar en la máquina del mundo (KitMergeMachine) para fusionar
+}
+
+-- Lo que ve el cliente del bloque Merge (state.kit.merge): la fusión que se está haciendo.
+export type MergeState = { pending: { kind: string, variant: string?, size: string?, readyAt: number }?, skips: number }
+
+export type SellConfig = {
+	currency: string?, -- moneda que se cobra (la principal si falta)
+	multiplier: number?,
+	keepFrom: string?, -- "Sell all" no vende desde esta rareza
+	stat: string?, -- multiplicador de BoostService que se aplica (Money)
+	anywherePass: string?, -- pase para vender desde cualquier lado (sin él, en el puesto KitSellPad)
+}
+
+-- Lo que ve el cliente del bloque Sell (state.kit.sell).
+export type SellState = { anywhere: boolean }
+
+export type EquipConfig = {
+	slots: number,
+	maxSlots: number,
+	stat: string, -- lo que multiplican las equipadas (Money, Taps, Speed, Luck)
+	follow: boolean?, -- las equipadas siguen al jugador
+	slotPass: string?, -- pase que suma espacios
+	passSlots: number?,
+}
+
+-- Lo que ve el cliente del bloque Equip (state.kit.equip).
+export type EquipState = { slots: number, power: number }
+
+export type StatDef = {
+	id: string, -- "Speed", "Strength", "Taps"
+	label: string, -- se ve en el HUD
+	icon: string?,
+	currency: string?, -- las ganancias van a esta moneda (toques que se gastan) en vez de a la estadística
+	perStep: number?, -- por stud caminado (+1 Speed por paso)
+	perSecond: number?, -- por segundo, siempre
+	perClick: number?, -- por toque del botón de acción
+	clickRate: number?, -- toques por segundo como máximo
+	autoPass: string?, -- pase que toca solo
+	walkSpeed: { base: number, per: number, max: number }?, -- la estadística mueve al personaje
+	resetOnRebirth: boolean?,
+	multiplier: string?, -- estadística de BoostService que la multiplica (por defecto, su id)
+}
+
+-- Lo que ve el cliente del bloque Stats (state.kit.stats): valor de cada una y el tope elegido (0..1).
+export type StatsState = { values: { [string]: number }, caps: { [string]: number } }
+
+export type ZoneDef = {
+	id: string,
+	name: string, -- "Lake"
+	difficulty: string?, -- emoji sobre el nombre ("😐", "😟")
+	price: Price?, -- se compra
+	stat: { id: string, value: number }?, -- se abre sola al llegar ("Required ⚡ 3.7M")
+	rebirths: number?,
+	order: number,
+}
+
+export type ZonesConfig = { list: { ZoneDef } }
+
+-- Lo que ve el cliente del bloque Zones (state.kit.zones): las abiertas (abre sus puertas en local).
+export type ZonesState = { unlocked: { [string]: boolean } }
+
+export type StagesConfig = {
+	count: number,
+	reward: Price, -- por llegar al final
+	stat: string?, -- estadística que piden las etapas (velocidad para saltar los huecos)
+	requirements: { number }?, -- valor mínimo por etapa
+	run: { freeRevives: number, reviveProduct: string? }?, -- corrida con resumen y revivir
+	returnToStart: boolean?, -- al ganar vuelve al principio
+}
+
+-- Lo que ve el cliente del bloque Stages (state.kit.stages). `run` solo con corrida.
+export type StagesState = {
+	stage: number, -- etapa guardada (obby) o de la corrida
+	best: number,
+	wins: number,
+	revives: number, -- revivir comprados guardados
+	run: { active: boolean, dead: boolean, stage: number, freeLeft: number }?,
+}
+
+export type FishingRod = { id: string, name: string, luck: number, speed: number, price: Price? }
+
+export type FishingPool = { id: string, zone: string?, entries: { PoolEntry } }
+
+export type FishingConfig = {
+	pools: { FishingPool },
+	wait: { min: number, max: number }, -- segundos hasta la picada
+	reelSeconds: number, -- tiempo para recoger después de la picada
+	rods: { FishingRod }, -- la primera es la que se tiene al empezar
+	castRange: number?, -- distancia máxima al agua
+}
+
+-- Lo que ve el cliente del bloque Fishing (state.kit.fishing): caña puesta y cañas que tiene.
+export type FishingState = { rod: string, owned: { [string]: boolean } }
+
+export type Seed = {
+	id: string,
+	name: string,
+	unit: string, -- lo que se cosecha
+	price: Price,
+	grow: number, -- segundos hasta estar lista
+	stock: { min: number, max: number }, -- cuántas trae cada reposición
+	chance: number?, -- probabilidad de aparecer en la reposición (semillas raras)
+}
+
+export type GardenConfig = {
+	seeds: { Seed },
+	restock: number, -- segundos entre reposiciones de la tienda (reloj real)
+	tiles: number, -- parcelas al empezar
+	maxTiles: number,
+	tilePrices: { number }?,
+	mutationChance: number?,
+}
+
+-- Una planta en una parcela y lo que ve el cliente del bloque Garden (state.kit.garden).
+export type Plant = { seed: string, plantedAt: number, readyAt: number }
+export type GardenState = {
+	seeds: { [string]: number }, -- semillas que tiene
+	plants: { [string]: Plant }, -- parcela ("1", "2"...) → planta
+	tiles: number, -- parcelas abiertas
+	maxTiles: number,
+	nextTilePrice: number?,
+	shop: { endsAt: number, stock: { [string]: number }, bought: { [string]: number } },
+}
+
+export type Pile = {
+	id: string,
+	zone: string?,
+	entries: { PoolEntry },
+	findChance: number, -- chance de encontrar algo en cada golpe con poder 1
+	coins: Price?, -- monedas sueltas por golpe
+}
+
+export type SearchTool = { id: string, name: string, power: number, cooldown: number, price: Price? }
+
+export type SearchConfig = {
+	piles: { Pile },
+	tools: { SearchTool }, -- la primera es la que se tiene al empezar
+	bag: number, -- capacidad al empezar
+	depositCurrency: string?, -- al depositar se venden por su valor en esta moneda (si no, van al inventario)
+}
+
+-- Lo que se encontró y espera en la mochila, y lo que ve el cliente (state.kit.search).
+export type Found = { kind: string, variant: string?, size: string?, weight: number? }
+export type SearchState = { tool: string, owned: { [string]: boolean }, bag: { Found }, capacity: number }
+
+export type WildSpawn = { zone: string?, entries: { PoolEntry }, max: number, respawn: number }
+
+export type WildConfig = {
+	spawns: { WildSpawn },
+	stat: string?, -- estadística que se compara con `requirement` de la unidad
+	captureSeconds: number,
+	toBase: boolean?,
+}
+
+export type UpgradeDef = {
+	id: string,
+	name: string,
+	desc: string, -- "+25% Money per level" (inglés)
+	icon: string?,
+	-- Qué mejora: "stat:<Stat>" (multiplicador de BoostService: Money, Luck, Speed...) o uno de
+	-- Lib/KitCheck.EFFECTS: "slots", "equip", "inventory", "bag", "power", "tiles", "grow",
+	-- "walkSpeed", "reel", "capture".
+	effect: string,
+	per: number, -- cuánto suma cada nivel (en grow, reel y capture: fracción de tiempo menos)
+	kind: ("add" | "mult")?, -- para "stat:": suma (+per por nivel) o multiplica (×per por nivel)
+	maxLevel: number,
+	prices: { number }?, -- escalera explícita
+	base: number?, -- o precio = base × growth ^ nivel
+	growth: number?,
+	currency: string?,
+	robux: boolean?, -- se sube con productos "Upgrade:<id>" (escalera de Chicken Farm)
+}
+
+-- Lo que ve el cliente del bloque Upgrades (state.kit.upgrades): nivel de cada mejora.
+export type UpgradesState = { levels: { [string]: number } }
+
+export type Building = { id: string, name: string, price: Price, income: number, after: string? }
+
+export type TycoonConfig = { buildings: { Building } }
+
+-- Lo que ve el cliente del bloque Tycoon (state.kit.tycoon): edificios comprados.
+export type TycoonState = { built: { [string]: boolean } }
+
+export type ItemDef = {
+	id: string,
+	name: string,
+	icon: string,
+	seconds: number, -- cuánto dura el efecto
+	boost: string?, -- impulso de BoostConfig.TIMED que activa ("Luck2x")
+	walkSpeed: number?, -- multiplica la velocidad de caminar mientras dura (habilidad "Sprint")
+}
+
+export type ItemsConfig = { list: { ItemDef }, maxStack: number }
+
+-- Lo que ve el cliente del bloque Items (state.kit.items): cuántos tiene de cada uno.
+export type ItemsState = { counts: { [string]: number } }
+
+export type Quest = {
+	id: string,
+	text: string, -- %s = objetivo
+	stat: string,
+	target: number,
+	money: boolean?,
+	reward: Reward,
+}
+
+-- Lo que la receta vende por Robux: se suma a ShopConfig (mismos campos que ShopConfig.Product y
+-- Pass). Los ids se crean en el Creator Dashboard; con 0 no se ofrecen.
+export type ShopProduct = {
+	key: string,
+	productId: number,
+	name: string, -- inglés
+	desc: string, -- el efecto exacto, en inglés (regla oficial)
+	icon: string,
+	robux: number, -- precio de referencia del diseño
+	category: string, -- "Featured", "Boosts", "Currency", "Server", "Spins" o "Kit"
+	grant: { Reward },
+	random: boolean?, -- es o alimenta azar pago
+	once: boolean?,
+	tag: string?,
+}
+export type ShopEffect = { stat: string, kind: "mult" | "add", value: number }
+export type ShopPass = {
+	key: string,
+	passId: number,
+	name: string,
+	desc: string,
+	icon: string,
+	robux: number,
+	effects: { ShopEffect },
+	attribute: string, -- atributo del jugador mientras lo tiene ("PassTripleHatch")
+}
+export type KitShop = { products: { ShopProduct }?, passes: { ShopPass }? }
+
+export type MapConfig = {
+	theme: string, -- KitCheck.THEMES: "meadow", "beach", "candy", "farm", "jungle", "snow", "desert", "space", "city", "volcano", "underwater"
+	season: string?, -- "halloween", "christmas", "summer"
+	-- Puestos del lobby que abren una ventana (KitShopStand): "Shop", "Sell", "Upgrades", "Seeds", "Rods",
+	-- "Tools", "Index", "Spin", "Robux". Sin esto, MapPlan pone los que piden los bloques. Las ventanas que
+	-- están acá no ocupan lugar en el menú del HUD.
+	shops: { string }?,
+	-- Cintas de correr en cada zona (MapPlan): estadística y ganancia por segundo por zona, en orden.
+	treadmills: { stat: string, gains: { number } }?,
+	spin: boolean?, -- ruleta en el mundo
+	leaderboard: boolean?, -- tablas de posiciones
+	groupChest: boolean?,
+	nextUpdate: string?, -- texto del cartel NEXT UPDATE ("Saturday 3PM EST")
+	-- Cómo son las bases: "pen" (corral con cerco, como Steal An Egg; por defecto) o "building"
+	-- (paredes altas con vidrio, como Steal a Brainrot).
+	bases: string?,
+	-- Lo de alrededor: "hills" (cerros de fondo), "ocean" (mar; por defecto en playa, bajo el agua y con
+	-- pesca) o "none".
+	backdrop: string?,
+	-- Unidad gigante en un pedestal de la plaza (lo que todos quieren tener). Por defecto la última de
+	-- units.list; "" para ninguna.
+	showcase: string?,
+}
+
+export type RebirthConfig = { currency: string, base: number, growth: number, stat: string? }
+
+export type KitConfig = {
+	name: string, -- receta ("StealAndPlace") o nombre del juego
+	currencies: { CurrencyDef }?,
+	leaderstats: { string }?,
+	units: UnitsConfig?,
+	plots: PlotsConfig?,
+	belt: BeltConfig?,
+	steal: StealConfig?,
+	rolls: RollsConfig?,
+	merge: MergeConfig?,
+	sell: SellConfig?,
+	equip: EquipConfig?,
+	stats: { StatDef }?,
+	zones: ZonesConfig?,
+	stages: StagesConfig?,
+	fishing: FishingConfig?,
+	garden: GardenConfig?,
+	search: SearchConfig?,
+	wild: WildConfig?,
+	upgrades: { UpgradeDef }?,
+	tycoon: TycoonConfig?,
+	items: ItemsConfig?,
+	objectives: { Objectives.Def }?, -- reemplaza ObjectiveConfig.CHAIN
+	endless: Objectives.Endless?, -- reemplaza ObjectiveConfig.ENDLESS ("Earn $X" después de la cadena)
+	-- Renacer propio (reemplaza RetentionConfig.REBIRTH): moneda con la que se paga, costo y lo que
+	-- multiplica (por defecto "Money"). Para juegos sin plata: +1 Speed lo paga con victorias.
+	rebirth: RebirthConfig?,
+	quests: { Quest }?, -- reemplaza el pool de RetentionConfig.QUESTS
+	shop: KitShop?, -- pases y productos propios (x3/x8 huevos, cañas, "+10K Speed"...)
+	map: MapConfig?,
+}
+
+return {}

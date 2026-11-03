@@ -1,0 +1,20 @@
+{
+  "_que_es": "Critters de Steal & Fuse Critters (games/prueba), 2026-11-03. Referencia de estilo: la hoja de mascotas (assets/ui/pet-icons).",
+  "kind": "iconset",
+  "grid": "3x3",
+  "names": [
+    "pebble_pup",
+    "mossling",
+    "bubblebug",
+    "zapfrog",
+    "cloud_kitty",
+    "lava_lizard",
+    "star_owl",
+    "crystal_dragon",
+    "critter_egg"
+  ],
+  "ia": {
+    "aspect": "1:1",
+    "prompt": "Nine cute chunky baby creatures with big shiny eyes and happy faces, each standing on tiny stubby feet, in this order: 1) pebble_pup: a small grey puppy made of smooth round pebbles, 2) mossling: a round green moss blob creature with a little leaf sprout on its head, 3) bubblebug: a blue ladybug floating inside a shiny soap bubble, 4) zapfrog: a yellow frog with tiny lightning bolt marks on its back, 5) cloud_kitty: a white fluffy kitten shaped like a soft cloud, 6) lava_lizard: an orange-red lizard with glowing lava cracks on its skin, 7) star_owl: a purple owl with golden star patterns and starry eyes, 8) crystal_dragon: a small cyan dragon made of shiny crystal with little wings, 9) critter_egg: a big round spotted egg with colorful paw prints and no face."
+  }
+}

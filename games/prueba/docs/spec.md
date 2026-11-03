@@ -2,6 +2,9 @@
 
 Fecha: 2026-10-26 · Autor: Luciano (con Claude) · Concepto de origen: `docs/concepto.md` (Roba y Fusiona, 86/100) · Estado: **aprobada** por Luciano (2026-10-26) · Hitos 1 y 2 hechos
 
+> **Rehecho con el armador (2026-11-03).** Esta spec se implementa ahora con la receta `src/shared/Config/KitConfig.luau` sobre la plantilla actual. Las menciones a `GameplayConfig`, `Critters` y los hitos de abajo describen la primera versión, que quedó en el historial de git. Cómo cada mecánica se cumple con los bloques, y qué falta, está en `docs/decisiones.md`. Vista previa del mapa: `docs/mapa-hero.jpg`.
+
+
 Los nombres y textos que ve el jugador están en inglés, tal cual van a verse (entre comillas o en `código`). El resto es interno, en español.
 
 ## Referencia y diferenciación
