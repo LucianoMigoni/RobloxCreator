@@ -20,6 +20,9 @@ local PRESETS: { [string]: Types.KitConfig } = {
 	StealAndPlace = require("../src/shared/Kits/Presets/StealAndPlace"),
 	HatchAndCollect = require("../src/shared/Kits/Presets/HatchAndCollect"),
 	PlusOneEscape = require("../src/shared/Kits/Presets/PlusOneEscape"),
+	Fishing = require("../src/shared/Kits/Presets/Fishing"),
+	SearchAndDig = require("../src/shared/Kits/Presets/SearchAndDig"),
+	GrowGarden = require("../src/shared/Kits/Presets/GrowGarden"),
 }
 
 -- Plata con la que arranca un jugador en una moneda (las de la receta traen su `start`).
