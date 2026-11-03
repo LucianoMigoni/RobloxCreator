@@ -380,9 +380,14 @@ export type ShopPass = {
 export type KitShop = { products: { ShopProduct }?, passes: { ShopPass }? }
 
 export type MapConfig = {
-	theme: string, -- "meadow", "beach", "candy", "farm", "jungle", "snow", "desert", "space"
+	theme: string, -- KitCheck.THEMES: "meadow", "beach", "candy", "farm", "jungle", "snow", "desert", "space", "city", "volcano", "underwater"
 	season: string?, -- "halloween", "christmas", "summer"
-	shops: { string }?, -- tiendas del lobby: "Shop", "Sell", "Upgrades", "Seeds", "Robux"
+	-- Puestos del lobby que abren una ventana (KitShopStand): "Shop", "Sell", "Upgrades", "Seeds", "Rods",
+	-- "Tools", "Index", "Spin", "Robux". Sin esto, MapPlan pone los que piden los bloques. Las ventanas que
+	-- están acá no ocupan lugar en el menú del HUD.
+	shops: { string }?,
+	-- Cintas de correr en cada zona (MapPlan): estadística y ganancia por segundo por zona, en orden.
+	treadmills: { stat: string, gains: { number } }?,
 	spin: boolean?, -- ruleta en el mundo
 	leaderboard: boolean?, -- tablas de posiciones
 	groupChest: boolean?,

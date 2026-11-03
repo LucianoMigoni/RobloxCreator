@@ -1,0 +1,312 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>html, body { margin: 0; background: #000; } canvas { display: block; }</style>
+<script type="importmap">{"imports": {"three": "/three/build/three.module.js", "three/addons/": "/three/examples/jsm/"}}</script>
+</head>
+<body>
+<script type="module">
+// Vista previa del mapa de una receta (plan de template/src/shared/Lib/MapPlan, volcado a JSON por
+// dump.luau): las partes con las formas de Roblox (bloque, bola, cilindro en X, cuña alta atrás), los
+// carteles HitSign como los dibuja el juego y las tablas de posiciones con su lista de ejemplo. Solo
+// para mirar el armado: en Studio la luz y los materiales se ven mejor.
+import * as THREE from 'three';
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(1);
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+document.body.appendChild(renderer.domElement);
+
+const VARIANTS = {
+  Accept: ['#46D64B', '#23A62E'], Close: ['#FF3B4F', '#C81E32'], Premium: ['#FFD23A', '#F2A10F'],
+  Info: ['#2EC5F5', '#1B8FD6'], Neutral: ['#9AA0AD', '#6B7180'], Purple: ['#A35CFF', '#6E2BD6'],
+  Pink: ['#FF5C8A', '#E0245E'], Orange: ['#FFA62B', '#F06A10'], Cyan: ['#2FE0C8', '#11A89A'],
+  Panel: ['#2D2F3A', '#1F2029'], Light: ['#F2F4F8', '#CDD3E0'], Dark: ['#191A22', '#101116'],
+};
+const INK = '#1a1426';
+const FONT = "'Fredoka', 'DejaVu Sans', sans-serif";
+
+// Lo que los bloques ponen en el juego al arrancar (carteles del servidor), para que la vista se parezca.
+const SERVER_SIGNS = {
+  KitSellPad: () => ({ Text: 'SELL', Variant: 'Accept', Width: 10 }),
+  KitMergeMachine: () => ({ Text: 'MERGE', Variant: 'Premium', Width: 10 }),
+  KitStageStart: () => ({ Text: 'START', Variant: 'Accept', Width: 9 }),
+  KitWinPad: () => ({ Text: 'WIN!', Variant: 'Premium', Width: 10 }),
+  KitDepositPad: () => ({ Text: 'DEPOSIT', Variant: 'Accept', Width: 10 }),
+  KitUpgradeStation: () => ({ Text: 'UPGRADES', Variant: 'Orange', Width: 10 }),
+  KitRollStation: (a) => ({ Text: String(a.Roll || 'EGG').toUpperCase() + ' EGG', Variant: 'Purple', Width: 10 }),
+  KitTeleport: (a) => ({ Text: String(a.Zone || ''), Variant: 'Cyan', Width: 9 }),
+  KitGate: (a) => ({ Text: 'LOCKED ' + String(a.Zone || ''), Variant: 'Info', Width: 14 }),
+};
+
+function wedgeGeometry() {
+  // Cuña de Roblox: base entera, cara de atrás (+Z) alta y la pendiente que baja hacia adelante (−Z).
+  const A = [-0.5, -0.5, -0.5], B = [0.5, -0.5, -0.5], C = [0.5, -0.5, 0.5], D = [-0.5, -0.5, 0.5];
+  const E = [-0.5, 0.5, 0.5], F = [0.5, 0.5, 0.5];
+  const tris = [A, B, C, A, C, D, D, C, F, D, F, E, A, F, B, A, E, F, A, D, E, B, F, C];
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.Float32BufferAttribute(tris.flat(), 3));
+  g.computeVertexNormals();
+  return g;
+}
+
+const GEOMETRY = {
+  Block: new THREE.BoxGeometry(1, 1, 1),
+  Ball: new THREE.SphereGeometry(0.5, 32, 18),
+  Cylinder: new THREE.CylinderGeometry(0.5, 0.5, 1, 36).rotateZ(-Math.PI / 2), // eje X como en Roblox
+  Wedge: wedgeGeometry(),
+};
+
+// Textura de puntitos para los materiales con grano (pasto, arena, piedra, madera).
+function grain(kind) {
+  const c = document.createElement('canvas');
+  c.width = c.height = 64;
+  const g = c.getContext('2d');
+  // Casi blanco: la textura multiplica el color de la parte y solo le agrega grano.
+  g.fillStyle = '#f2f2f2';
+  g.fillRect(0, 0, 64, 64);
+  let seed = kind.length * 97;
+  const rand = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+  if (kind === 'WoodPlanks' || kind === 'Wood') {
+    for (let y = 0; y < 64; y += 8) {
+      g.fillStyle = y % 16 ? '#f4f4f4' : '#d6d6d6';
+      g.fillRect(0, y, 64, 7);
+    }
+  } else {
+    for (let i = 0; i < 260; i++) {
+      const v = 205 + Math.floor(rand() * 50);
+      g.fillStyle = `rgb(${v},${v},${v})`;
+      g.fillRect(Math.floor(rand() * 64), Math.floor(rand() * 64), 2, 2);
+    }
+  }
+  const t = new THREE.CanvasTexture(c);
+  t.wrapS = t.wrapT = THREE.RepeatWrapping;
+  t.colorSpace = THREE.SRGBColorSpace;
+  return t;
+}
+const GRAINS = {};
+
+function lighten(hex, amount) {
+  return '#' + new THREE.Color(hex).lerp(new THREE.Color('#ffffff'), amount).getHexString();
+}
+
+function material(p) {
+  const color = new THREE.Color(p.color);
+  const opacity = 1 - (p.transparency || 0);
+  const transparent = opacity < 1;
+  if (p.material === 'Neon') {
+    return new THREE.MeshBasicMaterial({ color: new THREE.Color(lighten(p.color, 0.15)), transparent, opacity });
+  }
+  if (p.material === 'ForceField') {
+    return new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.35, depthWrite: false });
+  }
+  if (p.material === 'Glass') {
+    return new THREE.MeshLambertMaterial({ color, transparent: true, opacity: Math.min(opacity, 0.75), emissive: color, emissiveIntensity: 0.25 });
+  }
+  const options = { color, transparent, opacity };
+  const kind = p.material;
+  if (['Grass', 'Sand', 'Slate', 'Ground', 'WoodPlanks', 'Wood', 'DiamondPlate'].includes(kind)) {
+    GRAINS[kind] = GRAINS[kind] || grain(kind);
+    const map = GRAINS[kind].clone();
+    map.needsUpdate = true;
+    const big = Math.max(p.size.x, p.size.z);
+    map.repeat.set(Math.max(1, p.size.x / 10), Math.max(1, (big === p.size.x ? p.size.z : p.size.z) / 10));
+    options.map = map;
+  }
+  return new THREE.MeshLambertMaterial(options);
+}
+
+// Cartel estilo hit: placa de color con contorno oscuro y texto blanco con borde.
+function signTexture(text, variant, w, h) {
+  const c = document.createElement('canvas');
+  c.width = w;
+  c.height = h;
+  const g = c.getContext('2d');
+  const [base, dark] = VARIANTS[variant] || VARIANTS.Accept;
+  const r = h * 0.28;
+  const pad = h * 0.08;
+  const path = () => {
+    g.beginPath();
+    g.roundRect(pad, pad, w - pad * 2, h - pad * 2, r);
+  };
+  path();
+  const grad = g.createLinearGradient(0, pad, 0, h - pad);
+  grad.addColorStop(0, lighten(base, 0.22));
+  grad.addColorStop(0.55, base);
+  grad.addColorStop(0.85, dark);
+  grad.addColorStop(1, dark);
+  g.fillStyle = grad;
+  g.fill();
+  g.lineWidth = h * 0.07;
+  g.strokeStyle = INK;
+  g.stroke();
+  let size = h * 0.56;
+  g.font = `700 ${size}px ${FONT}`;
+  while (g.measureText(text).width > w * 0.84 && size > 8) {
+    size -= 2;
+    g.font = `700 ${size}px ${FONT}`;
+  }
+  g.textAlign = 'center';
+  g.textBaseline = 'middle';
+  g.lineJoin = 'round';
+  g.lineWidth = size * 0.2;
+  g.strokeStyle = INK;
+  g.strokeText(text, w / 2, h * 0.52);
+  g.fillStyle = '#ffffff';
+  g.fillText(text, w / 2, h * 0.52);
+  const t = new THREE.CanvasTexture(c);
+  t.colorSpace = THREE.SRGBColorSpace;
+  t.anisotropy = 4;
+  return t;
+}
+
+function sign(scene, anchor, attrs) {
+  const width = attrs.Width || 12;
+  const height = width / 3.2;
+  const texture = signTexture(String(attrs.Text || ''), attrs.Variant, 512, 160);
+  const sprite = new THREE.Sprite(new THREE.SpriteMaterial({ map: texture, depthWrite: false }));
+  sprite.scale.set(width, height, 1);
+  sprite.position.set(anchor.pos.x, anchor.pos.y + anchor.size.y / 2 + height / 2 + 0.5, anchor.pos.z);
+  sprite.renderOrder = 10;
+  scene.add(sprite);
+}
+
+// Tabla de posiciones de ejemplo (en el juego la dibuja LeaderboardController con datos reales).
+function boardTexture(stat) {
+  const w = 512, h = 576;
+  const c = document.createElement('canvas');
+  c.width = w;
+  c.height = h;
+  const g = c.getContext('2d');
+  g.fillStyle = '#2D2F3A';
+  g.fillRect(0, 0, w, h);
+  const header = signTexture('TOP ' + String(stat).toUpperCase(), 'Premium', w - 20, 84).image;
+  g.drawImage(header, 10, 8);
+  const names = ['StarLord_99', 'PetKing', 'xXNoobXx', 'Luna', 'BigBrain', 'CoolKid', 'Zap', 'Mimi', 'Dino', 'Kai'];
+  for (let i = 0; i < 10; i++) {
+    const y = 100 + i * 46;
+    g.fillStyle = i < 3 ? ['#FFD23A', '#E6E9F0', '#FFA62B'][i] : '#191A22';
+    g.beginPath();
+    g.roundRect(16, y, w - 32, 40, 12);
+    g.fill();
+    g.font = `700 24px ${FONT}`;
+    g.textBaseline = 'middle';
+    g.fillStyle = i < 3 ? INK : '#ffffff';
+    g.textAlign = 'left';
+    g.fillText(`${i + 1}  ${names[i]}`, 30, y + 21);
+    g.textAlign = 'right';
+    g.fillStyle = i < 3 ? INK : '#78FF78';
+    g.fillText(`$${(9.8 - i * 0.9).toFixed(1)}M`, w - 30, y + 21);
+  }
+  const t = new THREE.CanvasTexture(c);
+  t.colorSpace = THREE.SRGBColorSpace;
+  return t;
+}
+
+function build(plan) {
+  const scene = new THREE.Scene();
+  const night = plan.palette && plan.palette.night;
+  scene.background = new THREE.Color(night ? '#1B1240' : '#8FD3FF');
+  scene.add(new THREE.HemisphereLight(night ? '#9A8CFF' : '#ffffff', night ? '#2A1E4E' : '#7FAF6A', night ? 1.4 : 1.6));
+  const sun = new THREE.DirectionalLight('#ffffff', night ? 1.2 : 2.1);
+  scene.add(sun);
+  scene.add(sun.target);
+
+  const groups = Object.fromEntries(plan.groups.map((g) => [g.key, g]));
+  const firstPart = {};
+  const bounds = new THREE.Box3();
+  for (const p of plan.parts) {
+    if (!firstPart[p.group]) firstPart[p.group] = p;
+    if ((p.transparency || 0) >= 1) continue;
+    const shape = p.mesh === 'Sphere' ? 'Ball' : p.shape || 'Block';
+    let mat = material(p);
+    if (p.attrs && p.attrs.Face && groups[p.group] && (groups[p.group].tags || []).includes('KitLeaderboard')) {
+      const face = new THREE.MeshBasicMaterial({ map: boardTexture(groups[p.group].attrs.Stat) });
+      mat = [mat, mat, mat, mat, mat, face]; // BoxGeometry: +X, −X, +Y, −Y, +Z, −Z (Front)
+    }
+    const mesh = new THREE.Mesh(GEOMETRY[shape], mat);
+    mesh.scale.set(p.size.x, p.size.y, p.size.z);
+    mesh.position.set(p.pos.x, p.pos.y, p.pos.z);
+    mesh.rotation.order = 'YXZ'; // Roblox: giro horizontal (rotY) y después el de costado (rotZ)
+    mesh.rotation.y = THREE.MathUtils.degToRad(p.rotY || 0);
+    mesh.rotation.z = THREE.MathUtils.degToRad(p.rotZ || 0);
+    const big = p.size.x * p.size.z > 40000;
+    mesh.castShadow = !big && p.material !== 'ForceField' && p.material !== 'Glass';
+    mesh.receiveShadow = true;
+    scene.add(mesh);
+    if (shape === 'Block' && !big && p.material !== 'Neon' && p.material !== 'ForceField' && Math.min(p.size.x, p.size.y, p.size.z) > 0.3) {
+      const edges = new THREE.LineSegments(new THREE.EdgesGeometry(GEOMETRY.Block), new THREE.LineBasicMaterial({ color: INK, transparent: true, opacity: 0.35 }));
+      mesh.add(edges);
+    }
+    mesh.updateMatrixWorld();
+    bounds.expandByObject(mesh);
+    // Carteles de partes sueltas (cintas de correr) y de lo que el servidor les pone a las etiquetas.
+    const tags = p.tags || [];
+    if (tags.includes('HitSign') && p.attrs) sign(scene, p, p.attrs);
+    for (const tag of tags) {
+      if (SERVER_SIGNS[tag]) sign(scene, p, SERVER_SIGNS[tag](p.attrs || {}));
+    }
+  }
+  for (const g of plan.groups) {
+    const tags = g.tags || [];
+    const anchor = firstPart[g.key];
+    if (!anchor) continue;
+    if (tags.includes('HitSign') && g.attrs) sign(scene, anchor, g.attrs);
+    for (const tag of tags) {
+      if (SERVER_SIGNS[tag]) sign(scene, anchor, SERVER_SIGNS[tag](g.attrs || {}));
+    }
+  }
+  // Sol alto desde un costado, con sombras sobre todo el mapa.
+  const center = bounds.getCenter(new THREE.Vector3());
+  const size = bounds.getSize(new THREE.Vector3());
+  const reach = Math.max(size.x, size.z) * 0.6;
+  sun.position.set(center.x - reach * 0.5, 400, center.z - reach * 0.8);
+  sun.target.position.copy(center);
+  sun.castShadow = true;
+  sun.shadow.mapSize.set(4096, 4096);
+  const cam = sun.shadow.camera;
+  cam.left = -reach; cam.right = reach; cam.top = reach; cam.bottom = -reach;
+  cam.near = 1; cam.far = 1200;
+  sun.shadow.bias = -0.0005;
+  return { scene, bounds };
+}
+
+window.renderMap = async (plan, view, width) => {
+  await document.fonts.ready;
+  const { scene, bounds } = build(plan);
+  const center = bounds.getCenter(new THREE.Vector3());
+  const size = bounds.getSize(new THREE.Vector3());
+  let camera;
+  let height;
+  if (view === 'top') {
+    // Desde arriba: +X a la derecha y −Z arriba (como la vista de arriba de Studio).
+    const aspect = size.x / size.z;
+    height = Math.round(Math.min(width / aspect, width * 1.4));
+    const halfW = Math.max(size.x / 2, (size.z / 2) * (width / height)) * 1.04;
+    const halfH = halfW * (height / width);
+    camera = new THREE.OrthographicCamera(-halfW, halfW, halfH, -halfH, 1, 2000);
+    camera.position.set(center.x, 800, center.z);
+    camera.up.set(0, 0, -1);
+    camera.lookAt(center.x, 0, center.z);
+  } else {
+    // Vista de héroe: desde arriba y atrás del spawn, mirando la plaza, las bases y las islas.
+    height = Math.round(width * 9 / 16);
+    camera = new THREE.PerspectiveCamera(42, width / height, 1, 4000);
+    const focus = new THREE.Vector3(30, 0, 25);
+    camera.position.set(-150, 175, -230);
+    camera.lookAt(focus);
+    scene.fog = new THREE.Fog(scene.background, 500, 1500);
+  }
+  renderer.setSize(width, height);
+  renderer.render(scene, camera);
+  return renderer.domElement.toDataURL('image/png');
+};
+
+const font = new FontFace('Fredoka', 'url(/fonts/fredoka/Fredoka-Variable.ttf)', { weight: '300 700' });
+font.load().then((f) => { document.fonts.add(f); window.__ready = true; }, () => { window.__ready = true; });
+</script>
+</body>
+</html>

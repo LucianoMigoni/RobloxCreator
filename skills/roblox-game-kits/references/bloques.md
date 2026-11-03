@@ -55,6 +55,48 @@ Premios por ítem (`Types.Reward.item`, de productos, ruleta, códigos, misiones
 
 Piezas comunes: `KitWorld` (etiquetas, prompts y pads con la distancia medida en el servidor, carteles, velocidad por factores), `Bonus` (efectos de las mejoras), `Gates` (zonas abiertas), `KitFx` (efectos al cliente), `UnitModel` (modelo de cada unidad).
 
+## El mapa
+
+`server/Map/MapKit.luau` arma el mapa de la receta al arrancar el servidor, solo si la receta trae `map` y el lugar **no** tiene una carpeta `Map` en Workspace. Un mapa hecho a mano gana siempre: basta con ponerle las mismas etiquetas y atributos.
+
+- **Plan como datos:** el plan sale de `shared/Lib/MapPlan.luau`, que es lógica pura y está probada en `tests/MapPlan.spec.luau`. Los tests revisan:
+  - que cada bloque encuentre lo suyo;
+  - que nada choque y que lo que se usa esté sobre un piso;
+  - que el mismo nombre de receta dé siempre el mismo mapa.
+- **Opciones de `map`:**
+
+  | Opción | Qué hace |
+  |---|---|
+  | `theme` | Uno de `KitCheck.THEMES`. Cada zona toma su bioma por el nombre ("Sunny Beach", "Snowy Peaks"). |
+  | `shops` | Ventanas con puesto en el lobby, de `KitCheck.SHOPS`. Sin esto, van las que piden los bloques activos, y esas ventanas dejan de ocupar lugar en el menú del HUD. |
+  | `treadmills` | `{ stat, gains }`: tres cintas de correr por isla, con la ganancia de cada zona. |
+  | `spin` | Ruleta en el mundo. |
+  | `leaderboard` | Tablas de los dos primeros `leaderstats`. |
+  | `groupChest` | Cofre del grupo. Se pone solo con `GameConfig.GROUP_ID`. |
+  | `nextUpdate` | Arco con el cartel "NEXT UPDATE: …". |
+- **Distribución:**
+  - **Plaza:** spawn en el centro, mirando a −Z, y cuatro pasos en cruz.
+  - **Alrededor de la plaza:** puestos, tablas, ruleta y cofre en anillos, mirando al centro.
+  - **Hacia −Z:** arco del cartel y la fila de venta, mejoras y fusión.
+  - **Hacia +Z:** las bases a los dos lados de una avenida con la cinta.
+  - **Hacia +X:** las islas de las zonas, con puentes y puertas. Adentro van las estaciones de tiradas junto al camino y cuatro lotes para cintas de correr, agua, pilas y salvajes.
+  - **Hacia −X:** las plataformas de etapas sobre el vacío, con huecos de 4 a 7 studs que se saltan caminando.
+- **Etiquetas del lobby (núcleo):**
+
+  | Etiqueta | Atributos | Qué hace |
+  |---|---|---|
+  | `KitShopStand` | `Window`, `Label` | Prompt local que abre esa ventana. "Robux" abre la tienda en la sección Currency. |
+  | `KitLeaderboard` | `Stat` | `Social/GlobalLeaderboardService` guarda y lee los mejores con OrderedDataStore, con los valores codificados con `Lib/Ranking`. Deja la lista en el atributo `Top`, y `LeaderboardController` la dibuja en la parte con atributo `Face`. |
+  | `KitGroupChest` | — | Prompt que cobra el premio por unirse al grupo (`Bus "ClaimGroup"`). |
+- **`KitZone`:** es una caja que cubre la zona. Al teletransportarse se llega al centro de su cara de abajo, así que esa cara tiene que estar en el piso.
+- **Vista previa sin Studio:**
+  - Comando: `node tools/render3d/mapview.cjs --recipe <receta.luau> --out <prefijo>`.
+  - Genera dos imágenes: `-hero.png` (en perspectiva) y `-top.png` (vista desde arriba).
+  - Sirve para revisar el armado y para mostrarlo en el PR.
+  - Ejemplos en `references/mapa/`:
+    - `completo-heroe.jpg` y `completo-arriba.jpg`: la receta de prueba con todo prendido.
+    - `temas.jpg`: robar en dulces, obby en el espacio y huevos en la playa.
+
 ## Las fórmulas, armadas
 
 | Receta | Bloques | Mapa |

@@ -4,8 +4,9 @@
 -- La primera (menor `order`) está siempre abierta. Una vez abierta, queda abierta (aunque la
 -- estadística baje al renacer).
 -- Partes (Kits/Tags): KitGate (atributo Zone) = la puerta, con cartel y prompt "Unlock" si se compra;
--- el cliente de quien la tiene abierta la atraviesa (choque local). KitZone (Zone) = la región: quien
--- entra sin tenerla abierta vuelve a su base (por si el cliente mintió). KitTeleport (Zone) = pad que
+-- el cliente de quien la tiene abierta la atraviesa (choque local). KitZone (Zone) = la región (una
+-- caja que cubre la zona, con su cara de abajo en el piso: ahí se llega): quien entra sin tenerla
+-- abierta vuelve a su base (por si el cliente mintió). KitTeleport (Zone) = pad que
 -- lleva a esa zona si está abierta. Registra Gates: tiradas, pesca, búsqueda, salvajes, cintas de
 -- correr y el índice preguntan por acá. Premio "Zone:<id>" = la abre.
 
@@ -150,7 +151,8 @@ local function arrival(id: string): CFrame?
 	for _, region in CollectionService:GetTagged(Tags.ZONE) do
 		local part = KitWorld.part(region)
 		if part and KitWorld.text(region, "Zone") == id then
-			return part.CFrame * CFrame.new(0, part.Size.Y / 2 + ARRIVAL_HEIGHT, 0)
+			-- Al centro de la cara de abajo de la región (el piso de la zona), un poco arriba.
+			return part.CFrame * CFrame.new(0, -part.Size.Y / 2 + ARRIVAL_HEIGHT, 0)
 		end
 	end
 	return nil

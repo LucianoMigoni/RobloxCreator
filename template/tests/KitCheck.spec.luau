@@ -216,11 +216,11 @@ TestKit.run("KitCheck", {
 		local recipe = mini()
 		recipe.currencies = { { id = "Gems", symbol = "", icon = "gem", color = "blue", start = 0, purchasable = false } }
 		recipe.leaderstats = { "Money", "Fame" }
-		recipe.map = { theme = "underwater" }
+		recipe.map = { theme = "lava" }
 		local errors = KitCheck.check(recipe, KNOWN)
 		expect(errors, "'Gems' ya es una moneda del núcleo")
 		expect(errors, "color en hex")
 		expect(errors, "'Fame' no es una moneda")
-		expect(errors, "tema 'underwater' no existe")
+		expect(errors, "tema 'lava' no existe")
 	end,
 })

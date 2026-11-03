@@ -2,7 +2,7 @@
 
 Para la IA (o persona) que retome el trabajo desde un push, por ejemplo el Claude de Luciano si a Leonel se le acaban los tokens. **Leé este archivo entero antes de tocar nada:** acá está todo lo que pidió el usuario, cómo quiere que se trabaje, qué está hecho, qué se está haciendo y qué falta, para seguir igual que en el chat original.
 
-Última actualización: 2026-11-02, UI de los bloques terminada (#61) y 36 íconos nuevos hechos con ChatGPT; sigue MapKit (#62). Sesión original: Claude Code en la nube de Leonel, rama `leonelblumberg/quirky-dijkstra-2kxnwz`.
+Última actualización: 2026-11-03, MapKit terminado (#62): mapa estilo hit armado por receta, tablas de posiciones del mundo, cofre del grupo y vista previa sin Studio; sigue las nueve recetas (#63). Sesión original: Claude Code en la nube de Leonel, rama `leonelblumberg/quirky-dijkstra-2kxnwz`.
 
 ## 0. Cómo retomar, paso a paso
 
@@ -129,6 +129,12 @@ Estado: ✅ hecho · 🔄 en curso (sección 4) · 👤 depende de una persona.
 - 👤 Gemini: la facturación de Google dio OR_BACR2_59 (sin arreglo oficial): queda para después, es opcional.
 - ✅ "Probá hacer una miniatura completa, tipo foto final con texto, como los top hits" → `skills/_shared/vitrina/ejemplos/despues-robo-dragon-gpt.jpg` (GPT Image 2.5 + `thumbs.py`).
 - ✅ UI de los bloques (#61) y íconos con ChatGPT (#68): ver la sección 5.
+- ✅ "Ahora que tenés ChatGPT, esforzate con la UI, los íconos y toda la GUI" + "Que todo sea lo más completo y lindo posible, como los top hits" + "Cuando hagas algo relevante, pasame una prueba" → arte de la tienda, pantalla de carga, íconos de unidades, fotos de zonas e insignias (sección 5), con una prueba de cada tanda.
+- ✅ "Estos íconos así son muy malos, todos los que sean así rehacelos" → eran los renders base sin pasar por GPT; se rehicieron todos con ChatGPT. Regla: un render base nunca es un ícono final.
+- ✅ "Esto es solo un ejemplo, no? Después cada juego puede ser de cualquier cosa" → sí: las unidades, zonas e íconos de las recetas son muestras; cada juego trae los suyos.
+
+**2026-11-03**
+- 🔄 "Continuá con todo lo que falta" → MapKit (#62) ✅; siguen las recetas, el juego de prueba, los skills, los docs, la revisión y el reporte final (sección 4).
 
 ## 4. Plan en curso
 
@@ -158,8 +164,8 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
 | 59 | Bloque Items | 3 | ✅ servidor |
 | 60 | Productos de cada bloque en la tienda | 4 | ✅ |
 | 61 | UI de los bloques | 4 | ✅ (2026-11-02; falta probarla en Studio) |
-| 62 | MapKit | 5 | **sigue esta** |
-| 63 | Nueve recetas con objetivos, misiones y mapa | 5 | pendiente |
+| 62 | MapKit | 5 | ✅ (2026-11-03; falta probarlo en Studio) |
+| 63 | Nueve recetas con objetivos, misiones y mapa | 5 | **sigue esta** |
 | 64 | Rehacer `games/prueba` con el armador | 6 | pendiente |
 | 65 | Skill del armador y skills que lo usan | 7 | pendiente |
 | 66 | Skill de game feel | 7 | pendiente |
@@ -239,6 +245,48 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
   - 27 íconos nuevos en `assets/ui/hud-icons` (63 en total): los que usa la UI y no tenían imagen (merge, tap, steps, pad, seed, base, map, battle, shield, check, spin, codes, luck, money_boost, friends, search, notifications, egg_gold) y los 9 huevos por rareza. 5 modelos nuevos en `tools/render3d/icons/models.js`; recetas `hud-e-armador`, `hud-f-armador`, `hud-g-huevos`.
   - 9 mascotas cúbicas en `assets/ui/pet-icons` (receta `mascotas.json`, base: renders de Kenney Cube Pets, CC0) para los íconos de unidad de las recetas.
   - Todo con la API de OpenAI (`tools/imagegen.py`, `gpt-image-2.5-flare`, calidad alta). Falta subirlos a Roblox (`tools/roblox_upload.py`, con la clave de Open Cloud): mientras tanto la UI muestra el emoji de respaldo.
+- **Más arte con ChatGPT (2026-11-02).** Cada tanda con su prueba enviada al usuario.
+  - **Tienda:**
+    - 27 imágenes para pases y productos en `assets/ui/store-art`; el campo `uses` de su `manifest.json` dice cuál va con cuál.
+    - `tools/storeart.py` corta las hojas y les pone el rótulo.
+  - **Pantalla de carga:**
+    - Código en `template/src/first/` (ReplicatedFirst): fondo, título dorado, progreso real, consejos y Skip.
+    - Fondo hecho con IA en `assets/ui/loading`.
+  - **Unidades y zonas:**
+    - 54 íconos de unidades de muestra de las nueve recetas en `assets/ui/unit-icons`.
+    - 9 fotos de zona en `assets/ui/zone-art`.
+  - **Insignias:**
+    - Código: `Config/BadgeConfig` (9 insignias con reglas) y `server/Social/Badges` (`AwardBadgeAsync`, marca en `data.badges`).
+    - 9 imágenes en `assets/ui/badge-art`.
+- **MapKit (#62, 2026-11-03).** Chequeo en verde.
+  - **Plan del mapa como datos:** `shared/Lib/MapPlan.luau`, probado en `tests/MapPlan.spec.luau` (10 casos con cuatro recetas de prueba). Dibuja:
+    - plaza con spawn y pasos en cruz;
+    - puestos, tablas, ruleta y cofre en anillos, mirando al centro;
+    - arco NEXT UPDATE;
+    - fila de venta, mejoras y fusión;
+    - bases a los lados de una avenida con la cinta, de tamaño según lo que llevan (espacios, parcelas y edificios del tycoon);
+    - islas de zonas con puentes, puertas, estaciones de tiradas y cuatro lotes para cintas de correr, agua, pilas y salvajes;
+    - etapas sobre el vacío con huecos que se saltan caminando;
+    - pisos flotantes con barranco, temas y biomas por nombre de zona, y decoración donde quede libre.
+  - **Huellas en el piso:** cada pieza reserva su lugar como un rectángulo girado. Los tests revisan:
+    - que nada choque y que lo que se usa esté sobre un piso;
+    - que cada bloque encuentre sus etiquetas y atributos;
+    - que no haya avisos y que el mismo nombre dé el mismo mapa.
+  - **`server/Map/MapKit.luau`:**
+    - arma el plan, con grupos por clave única, elipses con SpecialMesh y luz de hit;
+    - solo si la receta trae `map` y no hay una carpeta `Map` hecha a mano;
+    - sin `GameConfig.GROUP_ID` no pone el cofre.
+  - **Tablas de posiciones del mundo:**
+    - `server/Social/GlobalLeaderboardService` usa OrderedDataStore y guarda solo si el valor cambió, mirando el presupuesto antes de escribir. Los límites están verificados en creator-docs. En Studio sin acceso a la API muestra a los del servidor.
+    - Los valores se codifican con `Lib/Ranking`, que tiene su test.
+    - `client/Controllers/LeaderboardController` dibuja la tabla con medallas, foto (`rbxthumb`), nombre y valor, y resalta la fila propia.
+  - **Cofre del grupo:** prompt local en `SocialController` (`Bus "ClaimGroup"`). Ya cobrado, el cofre dice CLAIMED.
+  - **Puestos:** el de "Robux" abre la tienda en la sección Currency.
+  - **Zonas:** el teletransporte llega a la cara de abajo de la región `KitZone`; antes caía desde arriba de la caja.
+  - **Vista previa sin Studio:**
+    - Comando: `node tools/render3d/mapview.cjs --recipe <receta.luau> --out <prefijo>`. Vuelca el plan con `map/dump.luau` y lo dibuja con three.js, con los carteles del juego.
+    - Ejemplos en `skills/roblox-game-kits/references/mapa/`; se mandaron al usuario.
+  - **Documentación:** sección "El mapa" de `bloques.md`.
 
 ## 6. Qué existe hoy (mapa)
 
@@ -346,6 +394,14 @@ Lista completa y con casillas en **`team/pendientes.md`** (pedido del usuario de
 - **Heredoc sin comillas:** `python3 - <<EOF` ejecuta lo que esté entre comillas invertidas (`tools/x.py`) y lo borra del texto. Para escribir Markdown desde un script, `<<'EOF'` (con comillas).
 - **Recetas de íconos:** el autotest de `imagegen.py` cuenta los objetos por ") " en el prompt: nada de paréntesis dentro de las descripciones.
 - **ActionBar:** cada botón con su tecla; la misma tecla en dos botones visibles dispara los dos.
+- **Forma Ball:** Roblox la deja siempre pareja. Para una elipse (copa de árbol, huevo, roca): bloque con `SpecialMesh` tipo Sphere (`mesh = "Sphere"` en MapPlan); choca como caja.
+- **Cuñas:** la `WedgePart` es alta atrás (+Z) y baja hacia su frente (−Z). Un techo que baje hacia quien mira al puesto va girado 180 más que el mostrador.
+- **Huellas giradas:** para ver si dos cosas giradas chocan, comparar rectángulos girados (ejes separadores, `MapPlan.overlaps`), no las cajas que los contienen. Las cajas dan falsos choques y dejaban sin lugar a la mitad de los puestos.
+- **`require` del CLI de Luau:**
+  - la ruta tiene que empezar con `./` o `../`;
+  - no puede salir de la carpeta de arriba del todo;
+  - para leer una receta de afuera del repo, `mapview.cjs` la copia a `tools/render3d/map/.preview/`.
+- **Tests con tipos:** `tools/check.py` también revisa los tipos de `tests/`, así que valen las mismas trampas de luau-lsp.
 - **En la nube de Claude:**
   - create.roblox.com está bloqueado: la documentación sale del repo `Roblox/creator-docs`, por `raw.githubusercontent.com`;
   - las imágenes de esa documentación están en Git LFS y se bajan de `media.githubusercontent.com`;

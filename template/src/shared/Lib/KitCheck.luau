@@ -20,7 +20,8 @@ export type Known = {
 local KitCheck = {}
 
 -- Estilos de mapa de MapKit.
-KitCheck.THEMES = { "meadow", "beach", "candy", "farm", "jungle", "snow", "desert", "space", "city", "volcano" }
+KitCheck.THEMES = { "meadow", "beach", "candy", "farm", "jungle", "snow", "desert", "space", "city", "volcano", "underwater" }
+KitCheck.SHOPS = { "Shop", "Sell", "Upgrades", "Seeds", "Rods", "Tools", "Index", "Spin", "Robux" }
 
 -- Efectos de las mejoras (además de "stat:<Stat>") y el bloque que los usa.
 KitCheck.EFFECTS = {
@@ -1056,6 +1057,22 @@ local function checkRetention(ctx: Ctx)
 		end
 	end
 	local map = ctx.recipe.map
+	if map and map.shops then
+		for i, shop in map.shops do
+			if not table.find(KitCheck.SHOPS, shop) then
+				add(ctx, "map.shops[" .. i .. "]", "puesto '" .. tostring(shop) .. "' no existe (" .. table.concat(KitCheck.SHOPS, ", ") .. ")")
+			end
+		end
+	end
+	local treadmills = if map then map.treadmills else nil
+	if treadmills then
+		if not ctx.stats[treadmills.stat] then
+			add(ctx, "map.treadmills.stat", "la estadística '" .. treadmills.stat .. "' no está en stats")
+		end
+		if #treadmills.gains == 0 then
+			add(ctx, "map.treadmills.gains", "falta la ganancia de al menos una zona")
+		end
+	end
 	if map and not table.find(KitCheck.THEMES, map.theme) then
 		add(ctx, "map.theme", "tema '" .. tostring(map.theme) .. "' no existe (" .. table.concat(KitCheck.THEMES, ", ") .. ")")
 	end

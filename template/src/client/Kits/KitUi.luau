@@ -748,7 +748,10 @@ function KitUi.start(h: HudController.Hud)
 	watchTag(Tags.SHOP_STAND, function(instance: Instance)
 		local window = instance:GetAttribute("Window")
 		local label = instance:GetAttribute("Label")
-		if typeof(window) == "string" then
+		if window == "Robux" then
+			-- El puesto de Robux abre la tienda en la sección de moneda.
+			addStation(instance, "Shop", "Currency", if typeof(label) == "string" then label else nil)
+		elseif typeof(window) == "string" then
 			addStation(instance, window, nil, if typeof(label) == "string" then label else nil)
 		end
 	end)

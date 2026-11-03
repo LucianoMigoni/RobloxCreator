@@ -82,6 +82,14 @@ return {
 	REBIRTH_DONE = "Rebirths: %d",
 	NOT_MEMBER = "Join the group first, then claim!",
 	GROUP_INFO = "Join our group for a gift and +10% money forever!",
+	-- Cofre del grupo en el mundo (KitGroupChest).
+	CHEST_PROMPT = "Claim",
+	CHEST_OBJECT = "Group Gift",
+	CHEST_CLAIMED = "CLAIMED!",
+	-- Tablas de posiciones del mundo (KitLeaderboard).
+	TOP_BOARD = "TOP %s",
+	TOP_BOARD_UPDATES = "Updates every 2 minutes",
+	TOP_BOARD_EMPTY = "Be the first!",
 	QUEST_BONUS = "Finish all quests for a BONUS",
 	QUESTS_RESET = "New quests in %s",
 	EVENT_SOON = "%s in %s",

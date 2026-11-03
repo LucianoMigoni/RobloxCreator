@@ -68,6 +68,7 @@ Lo que se registra con `claude mcp add` en una PC no viaja a la nube: en la nube
 
 - [ ] UI v3: ventanas, HUD táctil (emulador de teléfono de Studio) y carteles del mundo (tarea de Luciano en `team/tareas.md`).
 - [ ] Cada bloque del armador, a medida que se terminan los hitos (`team/traspaso.md` §4).
+- [ ] El mapa que arma MapKit con una receta: que se vea como la vista previa (`skills/roblox-game-kits/references/mapa/`), que cada bloque encuentre lo suyo y que los puestos, la ruleta y el cofre abran lo que corresponde. Las tablas de posiciones del mundo se llenan con datos de todos los servidores solo con el lugar publicado (en una copia de prueba con *Enable Studio Access to API Services*); sin eso muestran a los jugadores del servidor.
 - [ ] El juego de prueba rehecho con el armador (`games/prueba`).
 - [ ] Guardado con dos ventanas de Studio a la vez (la segunda queda en "errored" mientras la primera tiene el bloqueo).
 
