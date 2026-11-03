@@ -75,6 +75,13 @@ Base: `skills/_shared/anuncios-2026.md` (cómo funciona Ads Manager hoy, costos 
    - Qué miniatura ganó y por qué, CPP, CTR y D7 por etapa, en `games/<juego>/docs/decisiones.md`.
    - Si sirve para otros juegos, también en `skills/_shared/anuncios-2026.md` con la fecha.
 
+## Con el armador (`roblox-game-kits`)
+- **Material propio para las creatividades:**
+  - los íconos de las unidades de la receta, hechos con IA;
+  - la unidad gigante del mapa (`map.showcase`);
+  - la vista previa del mapa (`tools/render3d/mapview.cjs`).
+- **Una campaña por update grande** (zona o unidades nuevas). La fecha del update va también en `map.nextUpdate`.
+
 ## Checklist
 - [ ] Vitrina lista: ícono, 3 a 5 miniaturas activas, video y descripción (`vitrina-hits.md`).
 - [ ] Rebote en 60 s y D1 revisados antes de gastar más que la prueba de humo.

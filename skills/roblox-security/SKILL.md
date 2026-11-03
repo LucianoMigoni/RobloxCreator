@@ -52,6 +52,11 @@ Que ningún cliente pueda dar monedas, ítems, daño ni progreso que el servidor
    4. Datos. Necesita un lugar publicado con **File → Experience Settings → Security → Enable Studio Access to API Services**. Studio usa las mismas DataStores que el juego publicado: activarlo **solo en una copia de prueba**, nunca en el juego en vivo. Jugar, cambiar algo, salir y volver a entrar: el cambio persiste. Con dos ventanas de Studio jugando el mismo lugar a la vez, la segunda debe quedar en "errored" mientras la primera tenga el bloqueo.
 8. **Escribir `docs/seguridad.md`** (inventario + resultados de 6 y 7) y mostrarlo al usuario. En el PR, pegar los reportes.
 
+## Con el armador (`roblox-game-kits`)
+- **Los remotes de los bloques** ya pasan por `Remotes.onInvoke` y `onEvent`, con validador y límite. Las distancias y los tiempos se miden en el servidor.
+- **Una opción o un bloque nuevo** sigue igual y se audita con este skill.
+- **La receta es solo datos:** KitCheck la valida al arrancar, con las monedas, rarezas y pases reales, y `tools/check.py` la revisa en cada PR.
+
 ## Checklist
 - [ ] Todo remote se crea con `Remotes` (`tools/check.py` en verde).
 - [ ] Cada argumento tiene validador; textos con tope; ids de una lista cuando se puede.

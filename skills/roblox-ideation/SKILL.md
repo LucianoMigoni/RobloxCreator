@@ -31,6 +31,15 @@ Elegir un concepto con buenas probabilidades: que enganche en el primer minuto, 
 6. **Recomendar** uno, con la hipótesis más riesgosa a validar primero en el prototipo (guía oficial *Prototyping*: encontrar la diversión antes de construir de más).
 7. **Escribir `docs/concepto.md`** y mostrarlo al usuario. Esperar su visto bueno (puerta de revisión) antes de pasar a `roblox-game-cloner`.
 
+## Con el armador (`roblox-game-kits`)
+- Cada concepto dice qué fórmula del armador usa (`skills/roblox-game-kits/references/bloques.md`, "Las fórmulas, armadas") y qué opciones o bloques le faltarían.
+- Cuánto cuesta construirlo:
+  - si entra en una receta, se arma en horas;
+  - si pide bloques nuevos, cuesta días.
+
+  Eso va en el puntaje de facilidad de construcción.
+- Para mostrar cómo se vería: la vista previa del mapa de su receta (`skills/roblox-game-kits/references/mapa/recetas.jpg`).
+
 ## Checklist
 - [ ] Cada dato numérico tiene fuente y fecha; lo no verificado está marcado como hipótesis.
 - [ ] De 3 a 5 conceptos, cada uno con todos los campos de la plantilla.

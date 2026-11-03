@@ -2,7 +2,7 @@
 
 Para la IA (o persona) que retome el trabajo desde un push, por ejemplo el Claude de Luciano si a Leonel se le acaban los tokens. **Leé este archivo entero antes de tocar nada:** acá está todo lo que pidió el usuario, cómo quiere que se trabaje, qué está hecho, qué se está haciendo y qué falta, para seguir igual que en el chat original.
 
-Última actualización: 2026-11-03, MapKit (#62) con el estilo de los hits, las nueve recetas (#63) y el juego de prueba rehecho con el armador (#64) terminados; sigue el skill del armador (#65). Sesión original: Claude Code en la nube de Leonel, rama `leonelblumberg/quirky-dijkstra-2kxnwz`.
+Última actualización: 2026-11-03, MapKit (#62) con el estilo de los hits, las nueve recetas (#63) el juego de prueba rehecho con el armador (#64) y el skill del armador (#65) terminados; sigue el skill de game feel (#66). Sesión original: Claude Code en la nube de Leonel, rama `leonelblumberg/quirky-dijkstra-2kxnwz`.
 
 ## 0. Cómo retomar, paso a paso
 
@@ -168,8 +168,8 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
 | 62 | MapKit | 5 | ✅ (2026-11-03; falta probarlo en Studio) |
 | 63 | Nueve recetas con objetivos, misiones y mapa | 5 | ✅ (2026-11-03) |
 | 64 | Rehacer `games/prueba` con el armador | 6 | ✅ (2026-11-03; falta probarlo en Studio) |
-| 65 | Skill del armador y skills que lo usan | 7 | **sigue esta** |
-| 66 | Skill de game feel | 7 | pendiente |
+| 65 | Skill del armador y skills que lo usan | 7 | ✅ (2026-11-03) |
+| 66 | Skill de game feel | 7 | **sigue esta** |
 | 67 | Poner al día CLAUDE.md, ROADMAP, guía central, hits-2026, README, tablero | 7 | pendiente |
 | 68 | Íconos que faltan | 7 | ✅ 27 de la UI y 9 mascotas con GPT Image (falta subirlos a Roblox) |
 | 69 | Revisión completa | 8 | pendiente |
@@ -330,6 +330,15 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
   - **Plantilla:** test nuevo `tests/KitConfig.spec.luau`. Revisa la receta activa de cada juego (KitCheck, mapa e íconos); en la plantilla, con "None", no hay nada que revisar.
   - **Íconos:** 8 critters y un huevo con ChatGPT (receta `unidades-critters.json`) en `assets/ui/unit-icons/critters`; unit-icons queda con 63. Con emoji de respaldo en el `Icons.luau` del juego.
   - **Docs:** `games/prueba/README.md` (cómo probarlo en Studio y cómo fijar el mapa) y vista previa del mapa en `games/prueba/docs/`.
+- **Skill del armador (#65, 2026-11-03).**
+  - **`skills/roblox-game-kits/SKILL.md`:**
+    - cuándo usarlo;
+    - flujo de nueve pasos: elegir la fórmula, copiar la receta, hacerla propia en orden (tema, unidades, economía, objetivos, tienda y mapa), validar, ver el mapa, arte con IA, probar en Studio, fijar el mapa y mostrar;
+    - cómo agregar una opción, un bloque o una receta;
+    - reglas y salida.
+  - **Sección "Con el armador"** en los demás skills: ideación, clonación, UI, monetización, seguridad, QA, publicación, live ops, métricas, cumplimiento y campañas.
+  - **`CLAUDE.md`:** la fase 2 del pipeline nombra al armador.
+  - **`template/README.md`:** las recetas, lo que reemplazan del núcleo y el mapa.
 
 ## 6. Qué existe hoy (mapa)
 

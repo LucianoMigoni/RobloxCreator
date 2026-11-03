@@ -40,6 +40,11 @@ Cada número en `metricas.md` lleva fuente y fecha. Nada se inventa ni se extrap
 4. **Acciones:** como mucho tres, cada una con la métrica que debería moverse, cuánto y la fecha de revisión (una o dos semanas, comparando los mismos días de la semana).
 5. **Escribir `docs/metricas.md`** (datos con fuente, diagnóstico, acciones) y mostrarlo. En la revisión, anotar qué pasó y si se mantiene el cambio.
 
+## Con el armador (`roblox-game-kits`)
+- **Embudo de onboarding:** son los primeros `ObjectiveConfig.FUNNEL_STEPS` objetivos de la receta, en Creator Analytics. Si los jugadores se caen en un paso, ese objetivo enseña mal o el loop se traba ahí.
+- **Duración de las sesiones:** las misiones y el `endless` de la receta son las palancas.
+- **Economía:** los eventos salen de `CurrencyService`, con el nombre de cada bloque.
+
 ## Checklist
 - [ ] Cada número tiene fuente y fecha; la API key no aparece en ningún archivo.
 - [ ] Embudo de onboarding y eventos de economía cubren el juego real.

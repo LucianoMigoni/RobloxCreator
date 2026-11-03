@@ -39,6 +39,14 @@ Pasar de "un juego como X" o de `docs/concepto.md` a `docs/spec.md` y a un juego
 8. **Verificar mecánica por mecánica** contra la tabla de la spec, en un playtest con el MCP: `start_stop_play`, `character_navigation` y `user_mouse_input` para jugar, `execute_luau` (Server) para leer el estado (monedas, inventario) y `get_console_output` sin errores. Anotar el resultado de cada mecánica (OK / falla y por qué) en `docs/spec.md`.
 9. **Mostrar** el juego (capturas con `screen_capture` para la vista 3D; para la UI, captura del usuario) y la tabla verificada. Esperar visto bueno.
 
+## Con el armador (`roblox-game-kits`)
+- **Si el concepto encaja en una fórmula,** la fase 2 se hace con `roblox-game-kits`: la spec lleva cada mecánica a un bloque y a una opción de la receta, en vez de escribir código nuevo.
+- **Lo que pide la spec y ningún bloque tiene:**
+  - si le sirve a otros juegos, va como opción nueva en un bloque;
+  - si es único, como código propio del juego sobre el núcleo;
+  - en los dos casos se anota en `docs/decisiones.md`.
+- **Verificar mecánica por mecánica igual,** siguiendo la cadena de objetivos de la receta. Ejemplo: `games/prueba` (`docs/decisiones.md`).
+
 ## Checklist
 - [ ] La spec dice qué se toma y qué no, y cuál es el giro propio.
 - [ ] Ningún título, logo, imagen, modelo, mapa ni place file de la referencia.

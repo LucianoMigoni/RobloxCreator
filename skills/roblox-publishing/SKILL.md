@@ -43,6 +43,10 @@ Verificado el 2026-10-25 en `/production/publishing/publish-games-and-places`, `
 6. **Publicar** (persona): subir icono y miniaturas, activar la personalización, lanzar. Anotar la fecha, la versión y el `UniverseId`.
 7. **Después:** `roblox-metrics-growth` a D1, D7 y D28, y la tabla **Thumbnail Performance** de la pestaña Home Page para ver qué miniatura gana en cada grupo.
 
+## Con el armador (`roblox-game-kits`)
+- **Vitrina:** los íconos de las unidades (hechos con IA) y la unidad gigante del mapa (`map.showcase`) son referencias propias para las miniaturas y el ícono (`skills/_shared/vitrina-hits.md`).
+- **`map.nextUpdate`** muestra en el mapa la fecha del próximo update. Mantenerla igual a la de la página del juego.
+
 ## Checklist
 - [ ] QA, cumplimiento y monetización sin bloqueantes.
 - [ ] Icono cuadrado ≥ 512×512, legible a 150×150.

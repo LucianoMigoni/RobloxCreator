@@ -33,6 +33,18 @@ Que el juego gane dinero sin engañar ni presionar a nadie. Pagar **puede dar ve
 8. **Probar en Studio:** comprar un ítem con monedas, comprar un Developer Product y un pase, y confirmar que el saldo, el inventario y el atributo del pase solo cambian cuando el servidor lo confirma.
 9. **Escribir `docs/monetizacion.md`** (catálogo, precios con su fuente, auditoría) y mostrarlo al usuario.
 
+## Con el armador (`roblox-game-kits`)
+- **Dónde van los pases y productos:**
+  - los de los bloques, en `ShopConfig` con `kit = "<bloque>"`: solo se ofrecen si ese bloque está en la receta;
+  - los propios del juego, en `shop` de la receta (KitCheck los valida).
+- **Formatos que ya funcionan:**
+  - una unidad directa: `"Unit:<id>[:<mutación>[:<tamaño>]]"` (no es aleatorio);
+  - tiradas: `"Roll:<tirada>"`;
+  - estadística: `"Stat:<stat>"` (+10K Speed);
+  - la escalera por Robux: una mejora con `robux = true` y el producto `"Upgrade:<id>"`;
+  - los pases x3 y x8, en `amounts` de cada tirada.
+- **Tiradas pagadas con una moneda que se compra con Robux:** `paidRandom = true`, con PolicyService y probabilidades a la vista.
+
 ## Checklist
 - [ ] Cada producto tiene un propósito claro y visible en el juego.
 - [ ] Cada ventaja paga dice su efecto exacto (x2, +3 espacios, +20 % de suerte) y el servidor da exactamente eso.

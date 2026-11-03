@@ -53,6 +53,21 @@ Detalle y fuentes en `references/technical-rules.md`.
 - Texto con `TextScaled` + `UITextSizeConstraint` (MinTextSize ≥ 9).
 - Animar con `UIScale` (no `Size`) para no romper el layout; nunca tweenear `Thickness` de un `UIStroke` sobre texto.
 
+## Con el armador (`roblox-game-kits`)
+- **Cada bloque ya trae su UI** en `template/src/client/Kits/`, con las piezas de `KitUi`:
+  - ventanas de lista;
+  - avisos de error por código;
+  - compras;
+  - puestos del mundo.
+
+  Un juego armado no necesita UI nueva salvo para su giro propio.
+- **Para la UI de un bloque nuevo:**
+  - `KitUi.listWindow`: filas que se actualizan en el lugar;
+  - `KitUi.ask`: el pedido, con su error;
+  - `KitUi.menuButton`: no repite en el HUD lo que ya tiene puesto en el mapa;
+  - `UIKit` para el estilo.
+- **Íconos de las unidades:** salen de `icon` en la receta. Hasta que se suben a Roblox, se ve el emoji de respaldo de `Icons.luau`.
+
 ## Checklist final
 - [ ] Se preguntó al usuario por sus assets de UI y se usaron si los dio.
 - [ ] Todo asset usado está en `assets/index.json` con licencia; ninguno copiado de otro juego.

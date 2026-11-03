@@ -45,6 +45,10 @@ Verificado el 2026-10-25 en `/production/promotion/content-maturity`, `/producti
 6. **Requisitos de cuenta** (persona): marcar en `team/tareas.md` lo que falte en la cuenta dueña del juego (verificación, 2FA, Plus/Premium o tarifa).
 7. **Escribir `docs/cumplimiento.md`** con el inventario, las respuestas propuestas, la etiqueta esperada, los textos filtrados, las políticas y los pendientes, y mostrarlo. **El cuestionario lo envía una persona** del equipo en el Creator Dashboard (**Publish settings → Content rating**) después de revisar las respuestas.
 
+## Con el armador (`roblox-game-kits`)
+- **Tiradas pagas:** las que se pagan con una moneda que se compra con Robux van con `paidRandom = true`. El bloque Rolls ya consulta PolicyService y muestra las probabilidades.
+- **Cuestionario de madurez:** responderlo según los bloques de la receta. Por ejemplo, robar y empujar en Steal no hacen daño y no hay chat propio ni intercambio entre jugadores.
+
 ## Checklist
 Ver `references/checklist.md`. Bloqueantes: cuestionario sin enviar o desactualizado, texto de jugadores sin filtrar, producto con política sin `PolicyService`, asset sin licencia comercial.
 

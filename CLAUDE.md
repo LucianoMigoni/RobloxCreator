@@ -30,7 +30,7 @@ Centro para crear juegos de Roblox rápido y con buenas probabilidades de éxito
 | # | Fase | Skill | Entrada | Salida en `games/<juego>/docs/` |
 |---|---|---|---|---|
 | 1 | Ideación y validación | `roblox-ideation` | Idea, género o nada | `concepto.md` (conceptos puntuados + recomendado) |
-| 2 | Clonación / diseño | `roblox-game-cloner` | Juego de referencia o descripción | `spec.md`, juego armado en Studio |
+| 2 | Clonación / diseño | `roblox-game-cloner` (o `roblox-game-kits`, el armador, si encaja en una fórmula de hit) | Juego de referencia o descripción | `spec.md`, receta en `Config/KitConfig.luau`, juego armado en Studio |
 | 3 | UI | `roblox-ui-designer` | `spec.md` (pantallas), assets del usuario | UI en Studio, `ui.md` |
 | 4 | Monetización | `roblox-monetization` | `spec.md`, economía | `monetizacion.md`, tienda auditada |
 | 5 | Seguridad | `roblox-security` | Código del juego | `seguridad.md` (auditoría) |
@@ -41,7 +41,7 @@ Centro para crear juegos de Roblox rápido y con buenas probabilidades de éxito
 | 9 | Métricas | `roblox-metrics-growth` | Juego publicado (o pre-lanzamiento en modo mejora) | `metricas.md` |
 | 10 | Live ops | `roblox-liveops` | Métricas + roadmap | `liveops.md`, changelogs |
 
-Las diez fases tienen su skill, y las campañas (8b) el suyo. Los skills citan la documentación oficial con la fecha en que se verificó: antes de una decisión grande (concepto, lanzamiento), volver a verificar lo que cambió.
+Las diez fases tienen su skill, y las campañas (8b) el suyo. El armador (`roblox-game-kits`) arma la fase 2 con bloques de juego y nueve recetas de top hits (`skills/roblox-game-kits/references/bloques.md`); los demás skills tienen una sección "Con el armador". Los skills citan la documentación oficial con la fecha en que se verificó: antes de una decisión grande (concepto, lanzamiento), volver a verificar lo que cambió.
 
 Saltos permitidos: un juego existente puede entrar en la fase 9 (modo mejora). `roblox-ui-designer` y `roblox-security` se vuelven a llamar cada vez que otra fase cree UI o RemoteEvents nuevos.
 

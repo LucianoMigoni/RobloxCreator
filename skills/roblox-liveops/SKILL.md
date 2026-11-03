@@ -39,6 +39,15 @@ Verificado el 2026-10-25 en `/production/game-design/liveops-essentials`, `/live
 6. **Changelog** (`references/changelog-template.md`) en `games/<juego>/docs/changelog/AAAA-MM-DD.md` y anuncio de update (≤ 60 caracteres).
 7. **Revisión** en la fecha: comparar la semana anterior con la siguiente (mismos días de la semana) y anotar si se mantiene, se ajusta o se revierte.
 
+## Con el armador (`roblox-game-kits`)
+- **Un update es casi siempre datos en la receta:**
+  - una zona nueva (el nombre le da el bioma);
+  - unidades nuevas;
+  - una tirada o un huevo;
+  - un evento;
+  - la fecha nueva en `map.nextUpdate`.
+- **Antes de anunciarlo:** la vista previa del mapa (`tools/render3d/mapview.cjs`) y los íconos nuevos hechos con IA.
+
 ## Checklist
 - [ ] Calendario de 4 a 8 semanas con dueño y fecha por entrega.
 - [ ] Cada update con métrica objetivo y fecha de revisión.

@@ -31,7 +31,18 @@ Base que copia cada juego (`cp -r template games/<juego>`). Todo lo sensible pas
   2. En el cliente, el kit da las piezas con `Bus.handle("IndexEntries", ...)`: `key`, `name`, `zone`, `variant`, `rarity`, `chance`, `detail`, `icon` o `model` (tipo `Entry` en `Controllers/IndexController.luau`).
 - **Carteles y flechas en el mundo:** en Studio, la etiqueta `HitSign` en una parte con los atributos `Text`, `Variant` e `Icon` pone el cartel. Desde el kit, `World.sign`/`World.tag` (`src/client/UI/World.luau`), y `Bus.call("ShowPath", parte)` dibuja las flechas hasta el objetivo (`nil` las saca).
 - **Una pantalla nueva:** un controlador en `src/client/Controllers/`, arrancado desde `Main.client.luau`, con `UIKit` (ver `skills/roblox-ui-designer`). Dentro de listas con scroll, el alto de filas y tarjetas sale de `UIKit.fitHeight`/`UIKit.row`, nunca de una escala vertical.
-- **La jugabilidad:** elegir una receta de `src/shared/Kits/Presets/` en `Config/KitConfig.luau` y editarla (unidades, precios, zonas, objetivos, misiones). La receta también puede traer monedas propias (`currencies`), objetivos (`objectives`), misiones (`quests`) y la tabla de jugadores (`leaderstats`): reemplazan las del núcleo. Al arrancar, el servidor la revisa y avisa cada problema en la consola (`[Kits]`).
+- **La jugabilidad:** copiar una de las nueve recetas de `src/shared/Kits/Presets/` a `Config/KitConfig.luau` y hacerla propia (unidades, precios, zonas, objetivos, misiones, tienda y mapa). Paso a paso: skill `roblox-game-kits`.
+  - **Lo que puede reemplazar del núcleo:**
+    - monedas propias (`currencies`);
+    - objetivos (`objectives` y `endless`);
+    - misiones (`quests`);
+    - renacer (`rebirth`);
+    - la tabla de jugadores (`leaderstats`).
+  - **Revisión:** `tests/KitConfig.spec.luau` la revisa en cada `tools/check.py`, y el servidor la vuelve a revisar al arrancar (avisa en la consola: `[Kits]`).
+- **El mapa:**
+  - lo arma `server/Map/MapKit.luau` desde `Lib/MapPlan.luau` cuando la receta trae `map` y el lugar no tiene una carpeta `Map`;
+  - vista previa sin Studio: `node tools/render3d/mapview.cjs --recipe <receta.luau> --out <prefijo>`;
+  - un mapa hecho a mano con las mismas etiquetas (`Kits/Tags.luau`) gana siempre.
 - **Un bloque nuevo del armador:** un módulo en `src/server/Kits/` con `init`, `start` y, si hace falta, `snapshot`, `income` e `items`, sumado a `BLOCKS` de `server/Kits/Kits.luau`; su UI en `src/client/Kits/` con `start(hud)`, sumada a `BLOCKS` de `client/Kits/Kits.luau`. Las partes del mapa se encuentran por etiqueta (`Kits/Tags.luau`, `KitWorld.tagged`).
 - **Lógica pura nueva** (cálculos sin Roblox): módulo aparte requerido por ruta (`require("./X")`) y su `tests/X.spec.luau`.
 
