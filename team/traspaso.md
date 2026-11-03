@@ -517,6 +517,7 @@ Lista completa y con casillas en **`team/pendientes.md`** (pedido del usuario de
   - para leer una receta de afuera del repo, `mapview.cjs` la copia a `tools/render3d/map/.preview/`.
 - **Tests con tipos:** `tools/check.py` también revisa los tipos de `tests/`, así que valen las mismas trampas de luau-lsp.
 - **Comparar textos ya refinados:** después de `a.kind == "decor"`, luau-lsp toma `a.kind` como el literal "decor" y marca error al compararlo con otro ("Type "area" cannot be compared with "decor""). Juntarlos en un texto o usar variables nuevas.
+- **Los docs también se chequean:** `tools/check.py` revisa las rutas y funciones citadas entre comillas invertidas en todos los `.md`. Correrlo después del último cambio, también si es solo de docs, y recién ahí commitear (el 2026-11-03 un commit quedó en rojo en GitHub por escribir en el traspaso un nombre recién borrado). Lo que ya no existe se escribe sin formato de código.
 - **Juegos que se quedan atrás:** cada `games/<juego>` es una copia de la plantilla y no recibe solo sus mejoras.
   - `python tools/sync_template.py games/<juego>` muestra qué cambió y `--apply` copia el núcleo; nunca toca `src/shared/Config/`.
   - `tools/check.py` avisa los juegos atrasados.
