@@ -25,7 +25,7 @@ Paso a paso corto para las de OpenAI y Google: `team/claves-ia.md`.
 |---|---|---|---|---|
 | `OPENAI_API_KEY` | Íconos, miniaturas y anuncios con GPT Image (`tools/imagegen.py`) | https://platform.openai.com/api-keys → *Create new secret key* | Saldo cargado en *Billing* (la suscripción de ChatGPT no sirve). Puede pedir verificar la organización para los modelos de imagen | Los dos y la nube |
 | `GEMINI_API_KEY` | Nano Banana Pro (Google), para comparar miniaturas | https://aistudio.google.com/apikey → *Create API key* | Proyecto con facturación activa; se paga por uso. Recomendada, no obligatoria | Los dos y la nube |
-| `MESHY_API_KEY` | Modelos y criaturas 3D con IA (MCP de Meshy) | https://www.meshy.ai/developers/keys (empieza con `msy_`) | Plan Pro, 20 USD/mes (la API no anda en el plan gratis) | Los dos (en Windows) |
+| `MESHY_API_KEY` | Modelos y criaturas 3D con IA (MCP de Meshy en las PCs; `tools/meshy.py` en la nube) | https://www.meshy.ai/developers/keys (empieza con `msy_`) | Plan Pro, 20 USD/mes, y créditos de API prepagos (la API no anda en el plan gratis). Los 8 critters: unos 120 créditos con Smart Topology | Los dos (en Windows) y la nube, como secreto del entorno (`skills/_shared/conectores.md`, Meshy) |
 | `ROBLOX_OPEN_CLOUD_API_KEY` y `ROBLOX_CREATOR_GROUP_ID` (o `ROBLOX_CREATOR_USER_ID`) | Subir íconos, texturas, sonidos y modelos (`tools/roblox_upload.py`) | Creator Dashboard → Open Cloud → API Keys | *assets* Read y Write, tu IP en *Accepted IP Addresses* y vencimiento. Gratis | Los dos |
 | `ROBLOX_ANALYTICS_API_KEY` | Métricas (`tools/analytics.py`) y rendimiento de miniaturas (`tools/campaigns.py thumbs`) | Creator Dashboard → Open Cloud → API Keys | `universe.analytics:read`. Gratis | Quien mire métricas |
 | `ROBLOX_ADS_API_KEY` | Campañas de Ads Manager (`tools/campaigns.py`): **gasta dinero real** con `--yes` | Creator Dashboard → Open Cloud → API Keys, **de tu usuario** (la API no acepta claves de grupo) | `ad.campaign:read`, `ad.campaign:write` y `ad.billing:read`; medio de pago en Ads Manager | Quien maneje campañas |
@@ -45,8 +45,10 @@ Las claves de Roblox conviene dejarlas solo en las PCs: con IP restringida no fu
 | GitHub | PRs y revisiones | `gh auth login` en cada PC; la app de Claude ya tiene acceso al repo | conectado | [ ] |
 | Obsidian + plugin Git | Leer y editar las notas del repo | Abrir el repo como vault e instalar *Git* (sección Obsidian de `SETUP.md`) | [ ] | [ ] |
 | REA (opcional) | Analizar juegos de referencia | `npx -y rea-agents@6.7.0 setup` (§10) | [ ] | [ ] |
+| Meshy en la nube | Que Claude en la web haga los modelos 3D | `MESHY_API_KEY` como secreto del entorno (menú del entorno → Edit → Network secrets) y créditos de API; usa `tools/meshy.py` | [ ] | — |
+| Blender en la nube | Que Claude en la web limpie y exporte modelos sin pantalla | El script de la sección Blender de `skills/_shared/conectores.md` en el *setup script* del entorno | [ ] | — |
 
-Lo que se registra con `claude mcp add` en una PC no viaja a la nube: en la nube solo andan los conectores de claude.ai y lo que está en `.mcp.json`. ForgeGUI se evaluó y no se usa (`skills/_shared/conectores.md`).
+Lo que se registra con `claude mcp add` en una PC no viaja a la nube: en la nube solo andan los conectores de claude.ai y lo que está en `.mcp.json`. El MCP de Meshy de `.mcp.json` está armado para Windows (`cmd /c`): en la nube se usa `tools/meshy.py`. ForgeGUI se evaluó y no se usa (`skills/_shared/conectores.md`).
 
 ## 3. Roblox: cuenta dueña y Creator Dashboard
 

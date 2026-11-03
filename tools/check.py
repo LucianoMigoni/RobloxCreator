@@ -167,7 +167,8 @@ def check_python_tools() -> list:
                ("tools/roblox_research.py", "selftest"), ("tools/roblox_upload.py", "selftest"),
                ("tools/assets_import.py", "selftest"), ("tools/campaigns.py", "selftest"),
                ("tools/imagegen.py", "selftest"), ("tools/flat_icons.py", "selftest"),
-               ("tools/sync_template.py", "selftest"), ("tools/xref.py", "selftest")]
+               ("tools/sync_template.py", "selftest"), ("tools/xref.py", "selftest"),
+               ("tools/meshy.py", "selftest")]
     # thumbs.py, iconsheet.py y vfx_textures.py necesitan Pillow: GitHub lo instala; en una PC sin Pillow se avisa y se omite.
     if importlib.util.find_spec("PIL"):
         scripts += [("tools/thumbs.py", "selftest"), ("tools/iconsheet.py", "selftest"), ("tools/storeart.py", "selftest"), ("tools/vfx_textures.py", "selftest"),

@@ -81,6 +81,7 @@ Instalación en cada máquina: `SETUP.md` (y `setup.ps1`, que crea el enlace de 
   - `assets_import.py`: Kenney y Fluent al catálogo.
   - `roblox_upload.py`: subir assets.
   - `imagegen.py`: la imagen de miniaturas, ícono y anuncios con IA, a partir de referencias del juego.
+  - `meshy.py`: modelos 3D con Meshy por su API, también desde la nube (el ícono de cada unidad es la referencia).
   - `thumbs.py`: textos encima, revisión y hoja de contacto de miniaturas e íconos.
   - `iconsheet.py`: corta las hojas de íconos hechas con IA en íconos sueltos con fondo transparente y arma la hoja de referencia (`skills/_shared/iconos/`).
   - `vfx_textures.py`: texturas de partículas, beams y trails estilo hit.

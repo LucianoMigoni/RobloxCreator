@@ -74,6 +74,18 @@ Fijado en `rokit.toml` (raíz, `template/` y cada juego; `tools/check.py` exige 
 - **Cuidado (aviso oficial):** el servidor ejecuta en Blender el código que genera la IA, sin protecciones. Abrir solo archivos del proyecto y no tener abiertos `.blend` ajenos con datos importantes.
 - **Uso en el hub:** pasar modelos de Meshy o Kenney a estilo hit (colores planos saturados, contorno, escala de Roblox), fijar pivotes, partir en piezas animables, exportar FBX y renderizar fondos e íconos 3D. Pasos en el skill de assets 3D.
 
+- **En la nube:** el MCP necesita el Blender abierto en una PC, y una sesión en la nube no llega a la PC. Para limpiar y exportar modelos alcanza Blender sin pantalla (`blender -b --python script.py`), que instala el *setup script* del entorno (menú del entorno → Edit → Setup script):
+  ```bash
+  if [ ! -x /opt/blender/blender ]; then
+    (apt-get update -qq && apt-get install -y -qq libegl1) || true
+    curl -fsSL -o /tmp/blender.tar.xz https://download.blender.org/release/Blender5.2/blender-5.2.3-linux-x64.tar.xz \
+      && mkdir -p /opt/blender && tar -xf /tmp/blender.tar.xz -C /opt/blender --strip-components=1 \
+      && ln -sf /opt/blender/blender /usr/local/bin/blender && rm -f /tmp/blender.tar.xz \
+      || echo "No se pudo instalar Blender"
+  fi
+  ```
+  Sin probar todavía (2026-11-03): el modo automático no dejó bajar y ejecutar Blender desde una sesión, y por eso lo instala el entorno. En el contenedor faltaba solo `libEGL`; las demás librerías ya estaban.
+
 Fuentes: https://www.blender.org/lab/mcp-server/, readme.md, readme_tools.rst y mcp/manifest.json del repo https://projects.blender.org/lab/blender_mcp (release v1.0.3 del 2026-09-11).
 
 ## Meshy (MCP oficial)
@@ -95,7 +107,13 @@ Fuentes: https://www.blender.org/lab/mcp-server/, readme.md, readme_tools.rst y 
   - El rig de Meshy es para humanoides. Las mascotas de cuatro patas se animan con el animador procedural de la plantilla (piezas separadas, como Kenney Cube Pets) o en Blender.
 - **Cuidado:** guarda todo en `meshy_output/` (ignorado por Git). Al repo solo pasa lo elegido, a `assets/3d/meshy/<nombre>/`. Revisar que cada criatura sea original: nada de personajes, marcas ni "brainrots" de otros juegos (`team/decisiones.md`).
 
-Fuentes: README de https://github.com/meshy-dev/meshy-mcp-server (v0.6.6 en npm, 2026-10-26), https://www.meshy.ai/pricing, https://docs.meshy.ai/en/api/pricing, https://www.meshy.ai/terms-of-use.
+- **En la nube (Claude Code en la web, verificado el 2026-11-03):**
+  - El MCP de `.mcp.json` arranca con `cmd /c` (Windows), así que no corre en la nube. Ahí se usa `tools/meshy.py`: la misma API, el mismo plan y la misma clave, sin MCP.
+  - La red de la nube ya llega a `api.meshy.ai`.
+  - La clave va como secreto del entorno, con el nombre `MESHY_API_KEY`: menú del entorno en la barra de título de la sesión → Edit → Network secrets. La toma una sesión nueva. Conviene una clave solo para la nube, con límite mensual de créditos y sin lista de IPs (en la nube cambian).
+  - Uso: `python tools/meshy.py batch assets/ui/unit-icons/<grupo> --out meshy_output/<grupo> --dry-run` muestra el costo; sin `--dry-run`, genera. Cada ícono hecho con GPT Image es la referencia de su modelo (Image to 3D acepta la imagen en base64).
+
+Fuentes: README de https://github.com/meshy-dev/meshy-mcp-server (v0.6.6 en npm, 2026-10-26), https://www.meshy.ai/pricing, https://docs.meshy.ai/en/api/pricing, https://www.meshy.ai/terms-of-use y, para la API, https://docs.meshy.ai/api/image-to-3d (2026-11-03).
 
 ## ForgeGUI (evaluado: no se conecta por ahora)
 

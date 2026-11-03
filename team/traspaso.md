@@ -179,6 +179,29 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
 | 70 | Push y reporte final: qué conectar, claves, cuentas, pruebas | 8 | ✅ (2026-11-03): `team/pendientes.md` al día; lo que sigue depende de las personas (sección 8) |
 | 71 | Lista de lo que hay que hacer después: claves, conectores, cuentas y pruebas (`team/pendientes.md`) | 1 | ✅ (mantenerla al día) |
 
+### Próximo paso: modelos 3D de los critters (cuando esté `MESHY_API_KEY`)
+
+Hoy cada unidad sin modelo se ve como una bola de su color. El usuario pidió conectar Meshy y Blender (2026-11-03).
+
+1. Comprobar la clave solo por el nombre (`printenv | cut -d= -f1 | grep MESHY`). Si no está: `skills/_shared/conectores.md`, Meshy, "En la nube".
+2. Ver el costo sin gastar:
+   `python tools/meshy.py batch assets/ui/unit-icons/critters --out meshy_output/critters --only pebble_pup,mossling,bubblebug,zapfrog,cloud_kitty,lava_lizard,star_owl,crystal_dragon --dry-run`.
+   Son 8 × 15 créditos con Smart Topology y 5.000 caras.
+3. Contarle el costo al usuario y generar sin `--dry-run`. Primero conviene uno solo de prueba (`image`).
+4. Mandarle al usuario las vistas previas (`<id>_preview.png` y las cuatro vistas) para que elija.
+5. Lo elegido pasa a `assets/3d/meshy/<id>/` (GLB, FBX, textura y el `.json` de la tarea). Se registra en `assets/index.json` con:
+   - `source: "ai-generated"`;
+   - `license: "Meshy Pro (propio)"`;
+   - `commercialUse: true`.
+
+   También va en `assets/LICENSES.md`. Al final, `python assets/catalog.py validate`.
+6. Si el entorno instaló Blender (`blender -b --version`): revisar la escala, poner el pivote abajo al centro y comprobar los triángulos (Roblox acepta hasta 20.000 por malla).
+7. Para el juego:
+   - en la receta, `model = "<Id>"` en cada unidad;
+   - en Studio, importar cada modelo con el 3D Importer (Scale Unit: Studs) y dejarlo en `ReplicatedStorage.Assets.Units` con ese nombre. Eso lo hacen ellos, o una sesión en su PC.
+
+Las mascotas de cuatro patas no se rigean con Meshy, porque su rig es para humanoides: se animan con código (saltitos y balanceo).
+
 ## 5. Bitácora de hitos
 
 - **Antes del armador (hasta el 2026-10-30, commit `0a79d17`):** UI estilo hit completa (UIKit v3, HUD de PC y táctil, tienda en una lista, índice por zonas con premio validado, carteles y flechas en el mundo, ventanas revisadas para el teléfono). Chequeo en verde en GitHub.
@@ -401,6 +424,13 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
   - Queda en su backlog: la cinta VIP, el escudo de 15 min, un fusionador por base, el renacer que pide una unidad y el álbum de variantes.
   - Tabla de lo que se vende desde los bloques: `skills/roblox-game-kits/references/bloques.md`.
   - **Cierre de la revisión:** `tools/check.py` en verde con el paso nuevo de referencias cruzadas, y la plantilla y `games/prueba` sin diferencias de núcleo.
+- **Meshy y Blender para la nube (2026-11-03).** El usuario preguntó cómo conectarlos.
+  - **Meshy:** la red de la nube llega a `api.meshy.ai` (probado). Falta la clave como secreto del entorno.
+    - El MCP de `.mcp.json` es para Windows (`cmd /c`), así que en la nube se usa `tools/meshy.py`: Image to 3D con el ícono como referencia.
+    - La herramienta espera con `Retry-After`, baja enseguida el modelo, la textura y las vistas, y siempre pide una malla que entra en Roblox (5.000 caras por defecto, máximo 20.000).
+    - Tiene selftest sin red en `check.py`.
+  - **Blender:** el MCP necesita el Blender de una PC. En la nube va sin pantalla, instalado por el *setup script* del entorno (script en `conectores.md`). El modo automático no dejó bajarlo y ejecutarlo desde la sesión.
+  - **Próximo paso con la clave:** la sección 4, "Próximo paso: modelos 3D de los critters".
 
 ## 6. Qué existe hoy (mapa)
 
