@@ -2,7 +2,7 @@
 
 Para la IA (o persona) que retome el trabajo desde un push, por ejemplo el Claude de Luciano si a Leonel se le acaban los tokens. **Leé este archivo entero antes de tocar nada:** acá está todo lo que pidió el usuario, cómo quiere que se trabaje, qué está hecho, qué se está haciendo y qué falta, para seguir igual que en el chat original.
 
-Última actualización: 2026-11-03. Terminados: MapKit (#62) con el estilo de los hits, las nueve recetas (#63), el juego de prueba rehecho con el armador (#64), los skills del armador (#65) y de game feel (#66), los juegos al día con la plantilla (#66b) y la documentación al día (#67). Sigue la revisión completa (#69). Sesión original: Claude Code en la nube de Leonel, rama `leonelblumberg/quirky-dijkstra-2kxnwz`.
+Última actualización: 2026-11-03. Terminados: MapKit (#62) con el estilo de los hits, las nueve recetas (#63), el juego de prueba rehecho con el armador (#64), los skills del armador (#65) y de game feel (#66), los juegos al día con la plantilla (#66b) la documentación al día (#67) y la revisión completa (#69). Sigue el reporte final (#70). Sesión original: Claude Code en la nube de Leonel, rama `leonelblumberg/quirky-dijkstra-2kxnwz`.
 
 ## 0. Cómo retomar, paso a paso
 
@@ -175,8 +175,8 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
 | 66b | Juegos al día con la plantilla (`tools/sync_template.py`, `iconFallbacks`) | 7 | ✅ (2026-11-03) |
 | 67 | Poner al día CLAUDE.md, ROADMAP, guía central, hits-2026, README, tablero | 7 | ✅ (2026-11-03) |
 | 68 | Íconos que faltan | 7 | ✅ 27 de la UI y 9 mascotas con GPT Image (falta subirlos a Roblox) |
-| 69 | Revisión completa | 8 | **sigue esta** |
-| 70 | Push y reporte final: qué conectar, claves, cuentas, pruebas | 8 | pendiente |
+| 69 | Revisión completa | 8 | ✅ (2026-11-03): chequeo cruzado, seguridad, voces, aleatorio pago, backlog del juego |
+| 70 | Push y reporte final: qué conectar, claves, cuentas, pruebas | 8 | **sigue esta** |
 | 71 | Lista de lo que hay que hacer después: claves, conectores, cuentas y pruebas (`team/pendientes.md`) | 1 | ✅ (mantenerla al día) |
 
 ## 5. Bitácora de hitos
@@ -394,6 +394,13 @@ Mismo orden que la tabla de tareas. Un hito = varias filas; al cerrar cada hito 
     - la fusión con `mutationChance` muestra "Merge Odds" y, a quien PolicyService se lo restringe, nunca le da mutación;
     - la tienda de semillas muestra las probabilidades de mutación y tamaño de la cosecha, y la cosecha de quien está restringido sale sin azar (`Units.add` con `fixed`).
     Detalle en `roblox-compliance`, "Con el armador".
+- **Revisión completa (#69), parte 4: lo que el juego de prueba pedía y el armador no tenía (2026-11-03).**
+  - `plots.lock.pass` + `passSeconds` ("Long Lock") y `steal.fastPass` + `fastSpeed` ("Fast Thief").
+  - Fusión: `merge.odds` (la probabilidad de cada mutación), `keepMutation` (no se pierde la mejor) y `merge.lucky` con el premio `"Merge:Lucky"` ("Lucky Fuse", cargas guardadas en los datos).
+  - `games/prueba` los usa, junto con "Buy a Zapfrog" (compra directa).
+  - Queda en su backlog: la cinta VIP, el escudo de 15 min, un fusionador por base, el renacer que pide una unidad y el álbum de variantes.
+  - Tabla de lo que se vende desde los bloques: `skills/roblox-game-kits/references/bloques.md`.
+  - **Cierre de la revisión:** `tools/check.py` en verde con el paso nuevo de referencias cruzadas, y la plantilla y `games/prueba` sin diferencias de núcleo.
 
 ## 6. Qué existe hoy (mapa)
 

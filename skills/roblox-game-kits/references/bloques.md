@@ -55,6 +55,19 @@ Premios por ítem (`Types.Reward.item`, de productos, ruleta, códigos, misiones
 
 Piezas comunes: `KitWorld` (etiquetas, prompts y pads con la distancia medida en el servidor, carteles, velocidad por factores), `Bonus` (efectos de las mejoras), `Gates` (zonas abiertas), `KitFx` (efectos al cliente), `UnitModel` (modelo de cada unidad).
 
+**Lo que se vende desde los bloques** (pases y productos de la receta o de `ShopConfig` con `kit`; el texto de cada uno dice el efecto exacto):
+
+| Opción | Qué hace | Ejemplo |
+|---|---|---|
+| `plots.autoCollectPass`, `plots.slotPass` + `passSlots` | Cobra solo; suma espacios | "Auto Collect", "+4 Slots" |
+| `plots.lock.pass` + `passSeconds` | La traba dura más | "Long Lock": 120 s en vez de 60 |
+| `steal.fastPass` + `fastSpeed` | Más rápido llevando lo robado | "Fast Thief": 0,7 → 1,05 |
+| `rolls.list[].amounts[].pass`, `rolls.autoPass` | Abrir de a 3 u 8; abrir solo | "Triple Hatch", "Auto Hatch" |
+| `merge.lucky` + premio `"Merge:Lucky"` | Las próximas fusiones con mejores probabilidades (aleatorio pago: producto con `random = true`) | "Lucky Fuse x10": Gold 15 % · Rainbow 3 % |
+| Premio `"Unit:<id>[:<mutación>]"` | Comprar una unidad directa (no es azar) | "Buy a Zapfrog" |
+
+La fusión por nivel puede tener probabilidades propias (`merge.odds`, el resto sale Normal) o una chance con el peso de cada mutación (`mutationChance`), y `keepMutation` para no perder nunca la mejor de las que se fusionan. "Merge Odds" muestra todo antes de fusionar.
+
 ## El mapa
 
 `server/Map/MapKit.luau` arma el mapa de la receta al arrancar el servidor, solo si la receta trae `map` y el lugar **no** tiene una carpeta `Map` en Workspace. Un mapa hecho a mano gana siempre: basta con ponerle las mismas etiquetas y atributos.

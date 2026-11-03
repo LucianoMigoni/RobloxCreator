@@ -213,6 +213,24 @@ TestKit.run("KitCheck", {
 		expect(errors, "tema 'lava' no existe")
 	end,
 
+	["probabilidades propias de la fusión y Lucky Fuse"] = function()
+		local recipe = mini()
+		recipe.merge = { mode = "tier", count = 2, odds = { Gold = 0.05, Rainbow = 0.01 }, lucky = { Gold = 0.15, Rainbow = 0.03 } }
+		local units = recipe.units :: Types.UnitsConfig
+		units.list[1].tier = 1
+		units.list[2].tier = 2
+		equal(#KitCheck.check(recipe, KNOWN), 0, "receta válida")
+		equal(KitCheck.item(recipe, KNOWN, "Merge:Lucky"), nil, "premio de cargas")
+		local merge = recipe.merge :: Types.MergeConfig
+		merge.odds = { Normal = 0.5, Gold = 0.6 }
+		local errors = KitCheck.check(recipe, KNOWN)
+		expect(errors, "merge.odds.Normal")
+		expect(errors, "suman 1 o más")
+		merge.odds = nil
+		merge.lucky = nil
+		TestKit.truthy(KitCheck.item(recipe, KNOWN, "Merge:Lucky"), "sin lucky no hay cargas")
+	end,
+
 	["emojis de respaldo de los íconos"] = function()
 		local recipe = mini()
 		recipe.iconFallbacks = { kitty = "🐱" }

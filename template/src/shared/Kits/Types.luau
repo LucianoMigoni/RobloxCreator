@@ -79,7 +79,8 @@ export type PlotsConfig = {
 	slotPrices: { number }?, -- precio de cada espacio extra, en orden (moneda principal)
 	collect: "pad" | "auto", -- pisar el pad para cobrar, o directo a la moneda
 	autoCollectPass: string?, -- pase (ShopConfig.PASSES) que cobra solo
-	lock: { seconds: number, cooldown: number }?, -- traba con láser (juegos de robar)
+	-- Traba con láser (juegos de robar). Con el pase `pass`, dura `passSeconds` ("Long Lock": 120 s en vez de 60).
+	lock: { seconds: number, cooldown: number, pass: string?, passSeconds: number? }?,
 	autoPlace: boolean?, -- lo que se consigue va solo al primer espacio libre
 	slotPass: string?, -- pase que suma espacios ("ExtraSlots")
 	passSlots: number?, -- cuántos suma ese pase
@@ -112,6 +113,8 @@ export type StealConfig = {
 	recentSeconds: number, -- lo recién robado no se puede volver a robar enseguida
 	pushRange: number,
 	protectBest: boolean?, -- lo más valioso de cada base no se roba
+	fastPass: string?, -- pase que acelera al que lleva algo robado ("Fast Thief")
+	fastSpeed: number?, -- multiplicador de velocidad con ese pase (1.05 = 1.5x de 0.7)
 }
 
 export type RollAmount = { count: number, pass: string? } -- pass: ShopConfig.PASSES (Triple, Octo)
@@ -142,14 +145,17 @@ export type RollsState = { nextFree: { [string]: number } }
 export type MergeConfig = {
 	mode: "tier" | "variant", -- tier: N iguales → el siguiente nivel; variant: N normales → 1 dorado...
 	count: number, -- cuántos iguales hacen falta
-	mutationChance: number?, -- tier: chance de que el resultado salga con mutación
+	mutationChance: number?, -- tier: chance de que el resultado salga con mutación (cuál, según su peso)
+	odds: { [string]: number }?, -- tier: o la probabilidad de cada mutación ({ Gold = 0.05, Rainbow = 0.01 }; el resto sale Normal)
+	keepMutation: boolean?, -- tier: el resultado conserva la mejor mutación de las que se fusionan
+	lucky: { [string]: number }?, -- tier: "Lucky Fuse": con cargas (premio "Merge:Lucky"), estas probabilidades en vez de `odds`
 	variantChain: { string }?, -- variant: "Normal" → "Gold" → "Diamond" → "Rainbow"
 	seconds: number?, -- el resultado tarda en estar listo ("Finish Now" lo adelanta)
 	machine: boolean?, -- hay que estar en la máquina del mundo (KitMergeMachine) para fusionar
 }
 
 -- Lo que ve el cliente del bloque Merge (state.kit.merge): la fusión que se está haciendo.
-export type MergeState = { pending: { kind: string, variant: string?, size: string?, readyAt: number }?, skips: number }
+export type MergeState = { pending: { kind: string, variant: string?, size: string?, readyAt: number }?, skips: number, lucky: number }
 
 export type SellConfig = {
 	currency: string?, -- moneda que se cobra (la principal si falta)

@@ -123,9 +123,9 @@ function Inventory.start(hud: HudController.Hud)
 	buySlot.Visible = false
 	-- Con chance de mutación, la fusión es aleatorio pago (Lib/PaidRandom): todos los resultados y su
 	-- probabilidad a un toque, antes de fusionar. A quien PolicyService lo restringe le sale siempre Normal.
-	local mutationChance = if mergeCfg and mergeCfg.mode == "tier" then mergeCfg.mutationChance else nil
+	local tierMerge = if mergeCfg and mergeCfg.mode == "tier" then mergeCfg else nil
 	local mergeOdds = topButton("MergeOdds", UiText.MERGE_ODDS, "Purple", "merge", 0)
-	mergeOdds.Visible = mutationChance ~= nil and mutationChance > 0
+	mergeOdds.Visible = tierMerge ~= nil and ((tierMerge.mutationChance or 0) > 0 or tierMerge.odds ~= nil or tierMerge.lucky ~= nil)
 	local oddsWindow = if mergeOdds.Visible then KitUi.listWindow({ name = "MergeOdds", title = UiText.MERGE_ODDS, icon = "merge", variant = "Purple" }) else nil
 	-- Los botones de arriba se reparten el ancho si son más de tres.
 	local topButtons = { equipBest, sellAll, finishNow, buySlot, mergeOdds }
@@ -678,18 +678,42 @@ function Inventory.start(hud: HudController.Hud)
 		KitUi.buyProduct("FinishMerge")
 	end)
 	mergeOdds.Activated:Connect(function()
-		local w = oddsWindow
-		if not w or not mutationChance then
+		local w, m = oddsWindow, tierMerge
+		if not w or not m then
 			return
 		end
 		Sound.play("Click")
-		local chance = if player:GetAttribute("PaidRandomRestricted") == true then 0 else mutationChance
+		local restricted = player:GetAttribute("PaidRandomRestricted") == true
+		local function oddsOf(lucky: boolean): { Rarity.Entry }
+			local luckyOdds = m.lucky
+			if lucky and luckyOdds then
+				return PaidRandom.fixedOdds(luckyOdds, mutations)
+			end
+			local odds = m.odds
+			if odds then
+				return PaidRandom.fixedOdds(odds, mutations)
+			end
+			return PaidRandom.mergeOdds(m.mutationChance or 0, mutations)
+		end
+		-- A quien PolicyService le restringe el aleatorio pago, la fusión nunca muta: 100 % Normal.
+		local base = if restricted then PaidRandom.fixedOdds({}, mutations) else oddsOf(false)
 		local rows: { KitUi.Row } = {}
-		for _, p in Rarity.percentages(PaidRandom.mergeOdds(chance, mutations)) do
+		for _, p in Rarity.percentages(base) do
 			table.insert(rows, { id = p.id, icon = "merge", title = p.id, titleColor = KitUi.variantColor(p.id), detail = p.text, buttons = {} })
 		end
+		if m.lucky and not restricted then
+			local charges = if mergeState then mergeState.lucky else 0
+			table.insert(rows, {
+				id = "Lucky",
+				icon = "luck",
+				title = string.format(UiText.LUCKY_FUSE_ODDS, charges),
+				detail = PaidRandom.line(oddsOf(true)),
+				variant = "Premium",
+				buttons = {},
+			})
+		end
 		w.setRows(rows)
-		w.setNote(UiText.MERGE_ODDS_NOTE)
+		w.setNote(if m.keepMutation then UiText.MERGE_ODDS_NOTE .. " " .. UiText.MERGE_KEEPS else UiText.MERGE_ODDS_NOTE)
 		w.open()
 	end)
 	buySlot.Activated:Connect(function()

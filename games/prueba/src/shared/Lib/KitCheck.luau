@@ -62,7 +62,7 @@ KitCheck.ITEMS = {
 	Tool = "search", -- Tool:<herramienta>
 	Seed = "garden", -- Seed:<semilla>
 	Garden = "garden", -- Garden:Skip (todo lo plantado, listo)
-	Merge = "merge", -- Merge:Skip (la fusión en curso, lista)
+	Merge = "merge", -- Merge:Skip (la fusión en curso, lista) y Merge:Lucky (una carga de Lucky Fuse)
 	Stages = "stages", -- Stages:Revive (una vida más en la corrida)
 } :: { [string]: string }
 
@@ -313,6 +313,10 @@ function KitCheck.item(recipe: Types.KitConfig, known: Known, item: string): str
 		end
 		return nil
 	end
+	if prefix == "Merge" and rest == "Lucky" then
+		local merge = recipe.merge
+		return if merge and merge.lucky then nil else "'" .. item .. "' necesita merge.lucky"
+	end
 	local fixed = if prefix == "Stages" then "Revive" else "Skip"
 	if rest ~= fixed then
 		return "'" .. item .. "': solo existe " .. prefix .. ":" .. fixed
@@ -471,6 +475,12 @@ local function checkPlots(ctx: Ctx)
 	if lock then
 		number(ctx, "plots.lock.seconds", lock.seconds, 1)
 		number(ctx, "plots.lock.cooldown", lock.cooldown, 0)
+		pass(ctx, "plots.lock.pass", lock.pass)
+		if (lock.pass == nil) ~= (lock.passSeconds == nil) then
+			add(ctx, "plots.lock", "pass y passSeconds van juntos")
+		elseif lock.passSeconds and lock.passSeconds <= lock.seconds then
+			add(ctx, "plots.lock.passSeconds", "tiene que durar más que seconds")
+		end
 	end
 end
 
@@ -502,6 +512,12 @@ local function checkSteal(ctx: Ctx)
 	number(ctx, "steal.protectNewSeconds", steal.protectNewSeconds, 0)
 	number(ctx, "steal.recentSeconds", steal.recentSeconds, 0)
 	number(ctx, "steal.pushRange", steal.pushRange, 0)
+	pass(ctx, "steal.fastPass", steal.fastPass)
+	if (steal.fastPass == nil) ~= (steal.fastSpeed == nil) then
+		add(ctx, "steal", "fastPass y fastSpeed van juntos")
+	elseif steal.fastSpeed and steal.fastSpeed <= steal.carrySpeed then
+		add(ctx, "steal.fastSpeed", "tiene que ser más rápido que carrySpeed")
+	end
 end
 
 local function checkRolls(ctx: Ctx)
@@ -545,6 +561,33 @@ local function checkMerge(ctx: Ctx)
 	number(ctx, "merge.count", merge.count, 2, true)
 	optionalNumber(ctx, "merge.mutationChance", merge.mutationChance, 0)
 	optionalNumber(ctx, "merge.seconds", merge.seconds, 0)
+	local function oddsTable(path: string, odds: { [string]: number }?)
+		if odds == nil then
+			return
+		end
+		if merge.mode ~= "tier" then
+			add(ctx, path, "solo en modo tier")
+		end
+		local total = 0
+		for id, p in odds do
+			if id == "Normal" or not ctx.mutations[id] then
+				add(ctx, path .. "." .. tostring(id), "mutación que no existe (Normal es lo que queda)")
+			end
+			if typeof(p) ~= "number" or p <= 0 or p >= 1 then
+				add(ctx, path .. "." .. tostring(id), "probabilidad entre 0 y 1 (0.05 = 5 %)")
+			else
+				total += p
+			end
+		end
+		if total >= 1 then
+			add(ctx, path, "las probabilidades suman 1 o más: no queda lugar para Normal")
+		end
+	end
+	oddsTable("merge.odds", merge.odds)
+	oddsTable("merge.lucky", merge.lucky)
+	if merge.odds and merge.mutationChance then
+		add(ctx, "merge", "odds o mutationChance, no los dos")
+	end
 	if merge.mode == "tier" then
 		local tiers: { [number]: string } = {}
 		local count = 0

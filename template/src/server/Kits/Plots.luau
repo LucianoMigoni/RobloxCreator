@@ -331,7 +331,12 @@ local function lock(player: Player)
 	if now < plot.lockReadyAt then
 		return
 	end
-	plot.lockedUntil = now + lockCfg.seconds
+	local seconds = lockCfg.seconds
+	local lockPass = lockCfg.pass
+	if lockPass and lockCfg.passSeconds and ShopService.ownsPass(player, lockPass) then
+		seconds = lockCfg.passSeconds
+	end
+	plot.lockedUntil = now + seconds
 	plot.lockReadyAt = plot.lockedUntil + lockCfg.cooldown
 	setBarriers(plot, true)
 	Signals.track(player, "Lock", 1)

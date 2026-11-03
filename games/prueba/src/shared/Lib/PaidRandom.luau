@@ -35,10 +35,14 @@ local function share(list: { Variant }, luck: number): { [string]: number }
 	return out
 end
 
+-- Solo los resultados posibles, en el orden de la configuración.
 local function entries(order: { Variant }, chances: { [string]: number }): { Rarity.Entry }
 	local out: { Rarity.Entry } = {}
 	for _, v in order do
-		table.insert(out, { id = v.id, weight = chances[v.id] or 0 })
+		local p = chances[v.id] or 0
+		if p > 0 then
+			table.insert(out, { id = v.id, weight = p })
+		end
 	end
 	return out
 end
@@ -56,6 +60,20 @@ function PaidRandom.mergeOdds(chance: number, mutations: { Variant }): { Rarity.
 	for id, p in share(pool, 1) do
 		chances[id] = chance * p
 	end
+	return entries(mutations, chances)
+end
+
+-- Fusión con la probabilidad de cada mutación (`odds` o `lucky`): el resto sale Normal.
+function PaidRandom.fixedOdds(odds: { [string]: number }, mutations: { Variant }): { Rarity.Entry }
+	local chances: { [string]: number } = {}
+	local total = 0
+	for _, v in mutations do
+		if v.id ~= "Normal" then
+			chances[v.id] = odds[v.id] or 0
+			total += chances[v.id]
+		end
+	end
+	chances.Normal = math.max(0, 1 - total)
 	return entries(mutations, chances)
 end
 

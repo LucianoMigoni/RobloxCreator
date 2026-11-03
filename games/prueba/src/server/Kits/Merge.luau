@@ -28,7 +28,7 @@ local KitWorld = require("./KitWorld")
 local Units = require("./Units")
 
 type Pending = { kind: string, variant: string?, size: string?, readyAt: number }
-type MergeData = { pending: Pending?, skips: number }
+type MergeData = { pending: Pending?, skips: number, lucky: number }
 
 local Merge = {}
 
@@ -54,6 +54,56 @@ local function nearMachine(player: Player): boolean
 		end
 	end
 	return false
+end
+
+local function multOf(variant: string?): number
+	for _, v in Units.variants() do
+		if v.id == variant then
+			return v.mult
+		end
+	end
+	return 1
+end
+
+-- La mutación del resultado (modo "tier"). Es aleatorio pago (Lib/PaidRandom): a quien PolicyService se
+-- lo restringe, nunca sale mutación (y no gasta cargas de Lucky Fuse).
+local function rollMutation(player: Player, cfg: KitTypes.MergeConfig, d: MergeData): string?
+	if Units.restricted(player) then
+		return nil
+	end
+	local odds = cfg.odds
+	local lucky = cfg.lucky
+	if lucky and d.lucky > 0 then
+		d.lucky -= 1
+		odds = lucky
+	end
+	if odds then
+		local r = rng:NextNumber()
+		local acc = 0
+		for _, v in Units.variants() do
+			local p = odds[v.id]
+			if p then
+				acc += p
+				if r < acc then
+					return v.id
+				end
+			end
+		end
+		return nil
+	end
+	local chance = cfg.mutationChance
+	if chance and rng:NextNumber() < chance then
+		local pool = {}
+		for _, v in Units.variants() do
+			if v.id ~= "Normal" then
+				table.insert(pool, v)
+			end
+		end
+		return UnitMath.rollVariant(pool, 1, function()
+			return rng:NextNumber()
+		end)
+	end
+	return nil
 end
 
 -- La unidad del nivel siguiente (modo "tier"), o nil si es la última.
@@ -107,20 +157,17 @@ function Merge.merge(player: Player, kind: string, variant: string?): (boolean, 
 			return false, "MAX"
 		end
 		group = UnitPick.group(Units.list(player), kind, nil, cfg.count)
-		local mutation: string? = nil
-		local chance = cfg.mutationChance
-		-- Con chance de mutación es aleatorio pago (PaidRandom): a quien está restringido, sin azar.
-		if chance and not Units.restricted(player) and rng:NextNumber() < chance then
-			local mutations = Units.variants()
-			local pool = {}
-			for _, v in mutations do
-				if v.id ~= "Normal" then
-					table.insert(pool, v)
+		if not group then
+			return false, "NOT_ENOUGH"
+		end
+		local mutation = rollMutation(player, cfg, d)
+		if cfg.keepMutation then
+			for _, uid in group do
+				local unit = Units.find(player, uid)
+				if unit and multOf(unit.variant) > multOf(mutation) then
+					mutation = unit.variant
 				end
 			end
-			mutation = UnitMath.rollVariant(pool, 1, function()
-				return rng:NextNumber()
-			end)
 		end
 		result = { kind = target, variant = mutation, readyAt = 0 }
 	else
@@ -159,10 +206,16 @@ function Merge.merge(player: Player, kind: string, variant: string?): (boolean, 
 end
 
 -- Premio "Merge:Skip": termina ya la fusión en curso; si no hay, queda guardado para la próxima.
-local function give(player: Player, _value: string, count: number): (boolean, Types.RewardLine?)
+-- Premio "Merge:Lucky": cargas de Lucky Fuse (las próximas fusiones usan `lucky`).
+local function give(player: Player, value: string, count: number): (boolean, Types.RewardLine?)
 	local d = data(player)
 	if not d then
 		return false, nil
+	end
+	if value == "Lucky" then
+		d.lucky += count
+		Signals.dirty(player)
+		return true, { icon = "luck", text = string.format(UiText.LUCKY_FUSES, count), kind = "item" }
 	end
 	if d.pending then
 		deliver(player, d)
@@ -177,7 +230,7 @@ end
 function Merge.init(recipe: KitTypes.KitConfig)
 	config = recipe.merge
 	if config then
-		DataService.registerKit("merge", { pending = nil, skips = 0 })
+		DataService.registerKit("merge", { pending = nil, skips = 0, lucky = 0 })
 	end
 end
 
@@ -209,7 +262,7 @@ end
 
 function Merge.snapshot(player: Player): KitTypes.MergeState?
 	local d = data(player)
-	return if d then { pending = d.pending, skips = d.skips } else nil
+	return if d then { pending = d.pending, skips = d.skips, lucky = d.lucky } else nil
 end
 
 Merge.items = { Merge = give }

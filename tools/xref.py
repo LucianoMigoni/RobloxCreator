@@ -230,7 +230,8 @@ def repo_index() -> set:
     return out
 
 
-API = re.compile(r"`([A-Z]\w*)[.:]([A-Za-z_]\w*)[^`]*`")
+# `Modulo.miembro` o `Modulo:metodo(...)`; "Merge:Lucky" sin paréntesis es un premio, no un método.
+API = re.compile(r"`([A-Z]\w*)(?:\.([A-Za-z_]\w*)|:([A-Za-z_]\w*)\()[^`]*`")
 
 
 def luau_modules() -> dict:
@@ -257,7 +258,8 @@ def check_docs() -> list:
         rel = md.relative_to(ROOT).as_posix()
         text = md.read_text(encoding="utf-8")
         for number, line in enumerate(text.splitlines(), 1):
-            for module, member in API.findall(line):
+            for module, dotted, method in API.findall(line):
+                member = dotted or method
                 # Nombres de archivo ("DataService.luau", "Main.client", "KitCheck.spec") y prefijos ("UiText.ERR_").
                 if member in ("luau", "server", "client", "spec", "md", "json") or member.endswith("_"):
                     continue

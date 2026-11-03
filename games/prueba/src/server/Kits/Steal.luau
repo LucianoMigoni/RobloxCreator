@@ -18,6 +18,7 @@ local KitTypes = require(ReplicatedStorage.Shared.Kits.Types)
 local UnitModel = require(ReplicatedStorage.Shared.Kits.UnitModel)
 local StealRules = require(ReplicatedStorage.Shared.Lib.StealRules)
 local DataService = require("../Data/DataService")
+local ShopService = require("../Shop/ShopService")
 local Remotes = require("../Net/Remotes")
 local Validate = require("../Net/Validate")
 local AnnounceService = require("../Social/AnnounceService")
@@ -174,7 +175,12 @@ local function start(thief: Player, victim: Player, uid: number, model: Model)
 	carrying[thief] = carry
 	carry.visual = attach(thief, unit)
 	model:SetAttribute("BeingStolen", thief.UserId)
-	KitWorld.setSpeedFactor(thief, SPEED_SOURCE, cfg.carrySpeed)
+	local speed = cfg.carrySpeed
+	local fastPass = cfg.fastPass
+	if fastPass and cfg.fastSpeed and ShopService.ownsPass(thief, fastPass) then
+		speed = cfg.fastSpeed
+	end
+	KitWorld.setSpeedFactor(thief, SPEED_SOURCE, speed)
 	local humanoid = KitWorld.humanoid(thief)
 	if humanoid then
 		table.insert(carry.connections, humanoid.Died:Connect(function()

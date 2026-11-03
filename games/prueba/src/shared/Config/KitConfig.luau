@@ -35,7 +35,7 @@ local recipe: Types.KitConfig = {
 		collect = "pad",
 		autoCollectPass = "AutoCollect",
 		autoPlace = true, -- lo comprado camina solo a un pedestal libre (M3)
-		lock = { seconds = 60, cooldown = 90 },
+		lock = { seconds = 60, cooldown = 90, pass = "LongLock", passSeconds = 120 }, -- M9 y el pase "Long Lock"
 		slotPass = "ExtraSlots", -- "+4 Pedestals"
 		passSlots = 4,
 	},
@@ -49,9 +49,17 @@ local recipe: Types.KitConfig = {
 			{ unit = "Bubblebug", weight = 5 },
 		} :: { Types.PoolEntry },
 	},
-	steal = { holdSeconds = 1.5, carrySpeed = 0.7, protectNewSeconds = 300, recentSeconds = 30, pushRange = 10, protectBest = true },
-	-- M6: dos del mismo nivel dan uno del siguiente, con chance de mutación (se muestra en la ventana).
-	merge = { mode = "tier", count = 2, mutationChance = 0.06 },
+	-- "Fast Thief": 1.5x más rápido llevando lo robado (0.7 → 1.05).
+	steal = { holdSeconds = 1.5, carrySpeed = 0.7, protectNewSeconds = 300, recentSeconds = 30, pushRange = 10, protectBest = true, fastPass = "FastThief", fastSpeed = 1.05 },
+	-- M6: dos del mismo nivel dan uno del siguiente. Mutaciones de la spec: Gold 5 % y Rainbow 1 % (con
+	-- "Lucky Fuse", 15 % y 3 %), y nunca se pierde la mejor de las que se fusionan. "Merge Odds" las muestra.
+	merge = {
+		mode = "tier",
+		count = 2,
+		odds = { Gold = 0.05, Rainbow = 0.01 },
+		lucky = { Gold = 0.15, Rainbow = 0.03 },
+		keepMutation = true,
+	},
 	rebirth = { currency = "Money", base = 150_000, growth = 3 },
 	-- El onboarding de la spec, como cadena de objetivos.
 	objectives = {
@@ -71,6 +79,20 @@ local recipe: Types.KitConfig = {
 		{ id = "collect", text = "Collect coins %s times", stat = "Collect", target = 20, reward = { currency = "Money", incomeMinutes = 5 } },
 		{ id = "push", text = "Push %s thieves", stat = "Push", target = 5, reward = { boost = "Money2x", seconds = 600 } },
 	} :: { Types.Quest },
+	-- Lo que vende este juego además de la tienda del núcleo, con el texto exacto de la spec. Los precios son
+	-- de referencia (los fija roblox-monetization en la fase 4) y los ids se completan en el Creator Dashboard.
+	shop = {
+		passes = {
+			{ key = "LongLock", passId = 0, name = "Long Lock", desc = "Your base lock lasts 120s instead of 60s", icon = "lock", robux = 149, effects = {}, attribute = "PassLongLock" },
+			{ key = "FastThief", passId = 0, name = "Fast Thief", desc = "Carry stolen critters 1.5x faster", icon = "speed", robux = 199, effects = {}, attribute = "PassFastThief" },
+		} :: { Types.ShopPass },
+		products = {
+			-- Aleatorio pago (cambia las probabilidades de la fusión): `random` lo esconde a quien PolicyService se lo restringe.
+			{ key = "LuckyFuse10", productId = 0, name = "Lucky Fuse x10", desc = "Your next 10 fuses: Gold 15% · Rainbow 3%", icon = "luck", robux = 49, category = "Kit", random = true, grant = { { item = "Merge:Lucky", count = 10 } } },
+			-- Compra directa (no es azar).
+			{ key = "BuyZapfrog", productId = 0, name = "Zapfrog", desc = "Get 1 Zapfrog now", icon = "zapfrog", robux = 99, category = "Kit", grant = { { item = "Unit:Zapfrog" } } },
+		} :: { Types.ShopProduct },
+	},
 	-- Emoji de los critters hasta subir sus íconos (assets/ui/unit-icons/critters).
 	iconFallbacks = {
 		pebble_pup = "🐶",

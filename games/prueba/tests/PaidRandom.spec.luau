@@ -70,6 +70,15 @@ TestKit.run("PaidRandom", {
 		equal(near(chance(odds, "Gold"), 0.05 * 60 / 80 + 0.95 * 120 / 1160), true, "Gold")
 	end,
 
+	["la fusión con probabilidades propias: el resto es Normal"] = function()
+		local odds = PaidRandom.fixedOdds({ Gold = 0.05, Rainbow = 0.01 }, MUTATIONS)
+		equal(near(sum(odds), 1), true, "suman 1")
+		equal(near(chance(odds, "Normal"), 0.94), true, "Normal 94 %")
+		equal(chance(odds, "Diamond"), -1, "lo que no puede salir no se muestra")
+		equal(PaidRandom.line(odds), "Normal 94% · Gold 5% · Rainbow 1%")
+		equal(near(chance(PaidRandom.fixedOdds({}, MUTATIONS), "Normal"), 1), true, "sin azar: 100 % Normal")
+	end,
+
 	["la línea muestra todo y suma 100 %"] = function()
 		local line = PaidRandom.line(PaidRandom.mergeOdds(0.06, MUTATIONS))
 		equal(line, "Normal 94% · Gold 4.5% · Diamond 1.125% · Rainbow 0.3% · Galaxy 0.075%")
